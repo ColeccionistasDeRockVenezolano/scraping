@@ -1,0 +1,23 @@
+{
+  "section": "jazz",
+  "dryRun": false,
+  "note": "Sincopa jazz: créditos de pista, tercera pasada tras renumerar las caras B ya aceptadas (pedido de Brian 2026-10-02)",
+  "kinds": {
+    "track_credit": {
+      "identities": 1032,
+      "claims": 6294,
+      "verdicts": {
+        "puente": 1032
+      },
+      "applied": 1,
+      "unchanged": 5,
+      "stillCandidate": 6288,
+      "dismissed": 0,
+      "failed": 0
+    }
+  },
+  "holds": [],
+  "duplicateFlags": [],
+  "errors": [],
+  "runId": 11444
+}

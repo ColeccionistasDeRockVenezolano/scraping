@@ -1,0 +1,4568 @@
+{
+  "section": "rock_pop",
+  "dryRun": false,
+  "note": "Sincopa rock_pop: cuarta pasada de discos y pistas (regla «otro número» y pistas madre del adapter 1.3.1)",
+  "kinds": {
+    "album": {
+      "identities": 44,
+      "claims": 248,
+      "verdicts": {
+        "hold:titulo-casi-igual-mismo-padre": 25,
+        "approve:auto-match": 6,
+        "hold:titulo-igual-con-contradiccion": 10,
+        "hold:varios-con-el-mismo-titulo": 1,
+        "same:titulo-casi-igual-mismo-repertorio": 1,
+        "same:mismo-titulo-mismo-artista": 1
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 6,
+      "dismissed": 0,
+      "failed": 2
+    },
+    "track": {
+      "identities": 1425,
+      "claims": 3515,
+      "verdicts": {
+        "approve:auto-match": 247,
+        "hold:titulo-casi-igual-mismo-padre": 76,
+        "hold:varios-con-el-mismo-titulo": 10,
+        "different:sin-coincidencia": 180,
+        "same:mismo-titulo-mismo-disco": 531,
+        "hold:padre-sin-resolver": 347,
+        "same:titulo-casi-igual-misma-posicion": 15,
+        "hold:titulo-igual-con-contradiccion": 7,
+        "different:sin-decision-er-sin-parecido": 12
+      },
+      "applied": 2,
+      "unchanged": 1,
+      "stillCandidate": 1029,
+      "dismissed": 0,
+      "failed": 537
+    }
+  },
+  "holds": [
+    {
+      "kind": "album",
+      "identityRaw": "Ad Intra::The Attic (EP)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "1819 «The Attic»",
+      "claims": 1
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Ad Intra::We Aren't Ready To Take Off (EP)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "3634 «We Aren't Ready To Take Off»",
+      "claims": 1
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Aditus::Juegos del Azar",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "3014 «Juegos de Azar»",
+      "claims": 1
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Agni Mogollón::Gina y Agny",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "3566 «Gina y Agny 3»",
+      "claims": 1
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Agresión::Silent Smile (EP)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "3392 «Silent Smile»",
+      "claims": 1
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Gillman::Levántate y Pelea 40 Aniversario",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "4150 «Levántate y Pelea - 40 Aniversario»: el ER vio una contradicción (año, duración…)",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "4216 «Limón Limonero 40 Años 40 Exitos»; 453 «Limón Limonero»; 3021 «40 Años, 40 Éxitos»",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Los Mentas::U.E.L.M. \"Unidad Educativa Los Mentas\"",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "600 «U.E.L.M: Unidad Educativa»; 3390 «U.E.L.M.»; 3360 «Unidad Educativa Los Mentas»",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Témpano::El Fin De La Infancia / Childhood's End",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "4528 «El Fin de La Infancia»; 362 «Childhood's End / El Fin De La Infancia»",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Karina::14 Exitos de Karina Serie Lo Máximo",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "4332 «14 Exitos - Serie Lo Máximo»; 3417 «Exitos»; 4319 «Karina»",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Rudy La Scala::16 Grandes Exitos / Serie Lo Máximo",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "3655 «16 Grandes Exitos (Lo Máximo)»; 3653 «Grandes Exitos»",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Los Pixel::Cuánto Cuesta",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "606 «Cuanto Cuesta»: el ER vio una contradicción (año, duración…)",
+      "claims": 7
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Karina::32 Grandes Exitos Serie 32",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "4324 «32 Grandes Exitos»; 3417 «Exitos»",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Kiara::Exitos - The Universal Masters Collection",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "4345 «Exitos (Universal Masters Collection)»; 4344 «Exitos»",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "4148 «Tributo A Los Desconocidos»: el ER vio una contradicción (año, duración…)",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Gillman::Cuauhtemoc",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "2125 «Cuauhtemoc»: el ER vio una contradicción (año, duración…)",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Jorge Aguilar::Aguilar (Spanish Version)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "4292 «Aguilar»",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "4247 «Ilan Chester En Vivo»; 4246 «Ilan En Vivo»; 13578 «Ilan Chester ‎– En Vivo! Gira Nacional Del Amor Venezolano»",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Neblina::Una Canción De Navidad",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "3597 «Una Canción De Navidad (CD single)»",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Gillman::Tesoros 40 Aniversario",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "4141 «Tesoros»",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Gillman::Presente",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "4143 «Presente»: el ER vio una contradicción (año, duración…)",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Gusanos::Días De Furia",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "255 «Días De Furia»: el ER vio una contradicción (año, duración…)",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Gillman::Inevitable",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "2139 «Inevitable»: el ER vio una contradicción (año, duración…)",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Grupo C::Grupo C Canta Edgar Castro",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "4174 «Grupo C»; 2697 «Canta Edgar Castro»",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Gillman::El Guerrero",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "2150 «El Guerrero»: el ER vio una contradicción (año, duración…)",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Gillman::Levántate y Pelea",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "2152 «Levantate y Pelea»: el ER vio una contradicción (año, duración…)",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Los Mentas::Arriba Carajo 15 Años En Vivo",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "2273 «Arriba Carajo»; 3361 «En Vivo»",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Gillman::Escalofrío",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "450 «Escalofrío»: el ER vio una contradicción (año, duración…)",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Various Artists::Rock",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "640 «Rock: \"El Compilado\" Vol. 1»; 656 «Rock: \"El Compilado\" Vol. 2»; 1543 «Rock contra la dictadura. Venezuela, volumen 02»",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Various Artists::Serie Lo Máximo 19 Exitos de Donde Son Los Cantantes Vol. 2",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "4656 «Serie Lo Máximo»",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Spiteri::Spiteri",
+      "rule": "varios-con-el-mismo-titulo",
+      "detail": "ya hay 2 con ese título bajo el mismo padre: 51, 653",
+      "claims": 1
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Aditus::Lo Mejor de Aditus Colección del Milenio",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "3638 «Lo Mejor de Aditus»; 3642 «Lo Mejor de Aditus (Milenio)»",
+      "claims": 4
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Aditus::25 Aniversario Y La Historia Continúa Serie 32",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "4619 «25 Aniversario»; 2134 «25 aniversario / Serie 32»; 5524 «La historia continúa/Serie 32»",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Aditus::Ni En Concierto Ni En Estudio Sino Todo Lo Contrario",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "3643 «Ni En Concierto Ni En Estudio...»; 4624 «Ni En Concierto»",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Caramelos de Cianuro::Flor De Fuego (Special Edition)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "140 «Flor De Fuego»",
+      "claims": 7
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Distrust::Behold The Zombie Nation",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "4688 «Behold The Zombie»; 1741 «Behold The Zombie Nation Ep»",
+      "claims": 8
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Impala::40 Años 40 Exitos::Introducción Al Surf",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "15396 «Corina, Introducción al surf»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Impala::40 Años 40 Exitos::Do Wah Diddy Diddy",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "15408 «Do wah diddy»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Epitafio::III Op3ris T3rtium::Pánico",
+      "rule": "varios-con-el-mismo-titulo",
+      "detail": "ya hay 2 con ese título bajo el mismo padre: 32521, 32445",
+      "claims": 8
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Témpano::Nowhere NowHere::NowHere",
+      "rule": "varios-con-el-mismo-titulo",
+      "detail": "ya hay 2 con ese título bajo el mismo padre: 32536, 32555",
+      "claims": 8
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Francisco::Calle Furia::Calle Furia (Acoustic Version)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "32579 «Calle Furia»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Levántate y Pelea 40 Aniversario::Corazón De Rock Pesado",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Levántate y Pelea 40 Aniversario::Levántate y Pelea",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Levántate y Pelea 40 Aniversario::Los Gusanos Del Poder",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Levántate y Pelea 40 Aniversario::El Poeta",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Levántate y Pelea 40 Aniversario::El Rock & Roll De La Amistad",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Levántate y Pelea 40 Aniversario::Intro",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Levántate y Pelea 40 Aniversario::La Historia Del Anticristo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Levántate y Pelea 40 Aniversario::Víctima De La Sociedad",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Levántate y Pelea 40 Aniversario::Represión Latinoamericana",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Levántate y Pelea 40 Aniversario::Desempleado",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Levántate y Pelea 40 Aniversario::Agonía (Q.E.P.D)",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Levántate y Pelea 40 Aniversario::Un Niño Nace",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Levántate y Pelea 40 Aniversario::Calles Violentas (De La Gran Ciudad)",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Levántate y Pelea 40 Aniversario::Juicio Final",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Supersónicos::Más de Los Supersónicos::Lana",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "20796 «Más, Lana, Romance en Rusia»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Supersónicos::Más de Los Supersónicos::Romance En Rusia",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "20796 «Más, Lana, Romance en Rusia»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Limón Limonero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Mis Costumbres",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Lady Madona",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Reacciona - Come On React",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Juego De Palabras",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Tú Me Quieres",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::En El Club",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Ritmo De La Lluvia",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::La Plaza",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Carita Mimada",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Cansado De Esperar",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Obla Di Obla Da",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Hoy Lo Supe",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Belinda",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Deborah",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Todo El Mundo Ama",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::O Quizás Simplemente Te Regale Una Rosa",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::No Puedo Quitar Mis Ojos De Ti",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Eres De Mí",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::La Nave Del Olvido",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Feliz Feliz",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Un Vaso De Vino",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Ella Es",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Mamá Regó El Azúcar En Mí",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Te Llamo A Ti",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Ayúdame Mujer",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Extraños En La Noche",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Stella",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Si Es De Noche",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Mi Querido Amor",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Yo Recuerdo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::She's Come Again",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Puedes Decirlo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Más Que Amor",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Julio",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Mi Viejo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Carmen",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Birin Bao",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Dios Esta Triste",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Un Hombre, Un Niño",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Bésame y Adiós",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Te He Perdido",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Más Vivo & En Vivo::Rey Dinero",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "33030 «El Rey Dinero»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Más Vivo & En Vivo::Procesión De Satanás",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "33036 «La Procesión De»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Más Vivo & En Vivo::Loco Por El Rock & Roll / Misión Cumplida",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "157615 «Loco Por El Rock And Roll / Misión Cumplida»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Mentas::U.E.L.M. \"Unidad Educativa Los Mentas\"::U.E.L.M.",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Mentas::U.E.L.M. \"Unidad Educativa Los Mentas\"::Alegría",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Mentas::U.E.L.M. \"Unidad Educativa Los Mentas\"::El Balón",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Mentas::U.E.L.M. \"Unidad Educativa Los Mentas\"::Bistec",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Mentas::U.E.L.M. \"Unidad Educativa Los Mentas\"::La Foto",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Mentas::U.E.L.M. \"Unidad Educativa Los Mentas\"::Música Electrónica",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Mentas::U.E.L.M. \"Unidad Educativa Los Mentas\"::Cacería",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Mentas::U.E.L.M. \"Unidad Educativa Los Mentas\"::La Trampa",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Mentas::U.E.L.M. \"Unidad Educativa Los Mentas\"::Shawarma Mixto",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Mentas::U.E.L.M. \"Unidad Educativa Los Mentas\"::El Clavo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Mentas::U.E.L.M. \"Unidad Educativa Los Mentas\"::Lucas Attack",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Mentas::U.E.L.M. \"Unidad Educativa Los Mentas\"::La Cooperativa",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ricardo Montaner::Prohibido Olvidar::No Me Puedo Aguantar (Dance)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "33416 «No Me Puedo Aguantar»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Yordano::Yordano Hoy - En Vivo::Como Se Deja De Querer",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "40422 «Como se deja querer»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::14 Exitos de Karina Serie Lo Máximo::Desde Mi Ventana",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::14 Exitos de Karina Serie Lo Máximo::Sin Ti",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::14 Exitos de Karina Serie Lo Máximo::A Quién",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::14 Exitos de Karina Serie Lo Máximo::Por Nada",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::14 Exitos de Karina Serie Lo Máximo::La Noche Es Mágica",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::14 Exitos de Karina Serie Lo Máximo::Sé Cómo Duele",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::14 Exitos de Karina Serie Lo Máximo::Morirme De Amor",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::14 Exitos de Karina Serie Lo Máximo::Borrón y Cuenta Nueva",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::14 Exitos de Karina Serie Lo Máximo::Sálvame",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::14 Exitos de Karina Serie Lo Máximo::No Puedo Vivir Sin Amor",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::14 Exitos de Karina Serie Lo Máximo::Nunca Te Olvidaré",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::14 Exitos de Karina Serie Lo Máximo::Orgullo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::14 Exitos de Karina Serie Lo Máximo::All You Need To Know",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::14 Exitos de Karina Serie Lo Máximo::Hold Me",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Impala::The Impala and Their Music::Poison Of Love",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "15545 «So I Am, Poison of Love»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Impala::The Impala and Their Music::You're My Girl",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "15555 «You Are my Girl»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Franco de Vita::Mil Y Una Historias En Vivo::Popurri: Aquí Estas Otra Ves / Ya Lo He Vivido /",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "34911 «Popurri: Aquí Estas Otra Ves / Ya Lo He Vivido / Si Quieres Decir Adiós / Y Te Pienso / Sólo Importas Tú / Te Recordaré»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Raimundo Rodulfo::To LIVE a Dream (Official Bootleg)::Esperanza",
+      "rule": "varios-con-el-mismo-titulo",
+      "detail": "ya hay 2 con ese título bajo el mismo padre: 34827, 34851",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rudy La Scala::Mi Alma Es Tropical::Tu Dulce Flor",
+      "rule": "varios-con-el-mismo-titulo",
+      "detail": "ya hay 2 con ese título bajo el mismo padre: 36013, 36046",
+      "claims": 6
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Kiara::32 Grandes Exitos Serie 32::No",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "78956 «No Me Importa Nada»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "María Conchita Alonso::Soy::Soy",
+      "rule": "varios-con-el-mismo-titulo",
+      "detail": "ya hay 8 con ese título bajo el mismo padre: 36357, 36363, 36369, 36375, 36393, 36398, 36404, 36411",
+      "claims": 32
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Pixel::Cuánto Cuesta::Cuánto Cuesta",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Pixel::Cuánto Cuesta::Días Grises",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Pixel::Cuánto Cuesta::Excusas y Razones",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Pixel::Cuánto Cuesta::Falsas Promesas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Pixel::Cuánto Cuesta::La Vida Es Un Tren",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Pixel::Cuánto Cuesta::M.A.L.O.",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Pixel::Cuánto Cuesta::Nada Es Lo Que Parece",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Pixel::Cuánto Cuesta::Por Ahora No Estás",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Pixel::Cuánto Cuesta::Sin Pensar En Ti",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Pixel::Cuánto Cuesta::Temible Adicción",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Pixel::Cuánto Cuesta::Sólo Por Hoy",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Pixel::Cuánto Cuesta::Una Salida",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Pixel::Cuánto Cuesta::Te Olvidarás De Mi",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::Renacer::Déjame Libre",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "36225 «Déjame Libre (Rudy La Scala)»",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rudy La Scala::En Cuerpo y Alma::Como Te Extraño",
+      "rule": "varios-con-el-mismo-titulo",
+      "detail": "ya hay 2 con ese título bajo el mismo padre: 37623, 37653",
+      "claims": 8
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Malanga::Sr. Malanga::Cuando Se Rompe Un Corazón",
+      "rule": "varios-con-el-mismo-titulo",
+      "detail": "ya hay 2 con ese título bajo el mismo padre: 37404, 37434",
+      "claims": 8
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Carlos Pérez Soto::Juan Carlos Pérez Soto::Atarme A La Luna",
+      "rule": "varios-con-el-mismo-titulo",
+      "detail": "ya hay 2 con ese título bajo el mismo padre: 38087, 38103",
+      "claims": 10
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::La Marcha De Los Desconocidos",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::Carrera Con El Diablo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::Civilizados Para Matar",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::La Legión",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::Venceré",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::La Batalla De Carabobo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::Qué Es El Proyecto HAARP?",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::Proyecto H.A.A.R.P.",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::Ya No Siento Nada",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::El Curandero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::Valiente",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::Misión Cumplida",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::Burn On The Flame",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::Razamanaz",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::Tom Sawyer",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::Sabbath Bloody Sabbath",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::Somos",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Cuauhtemoc::El Despertar",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Cuauhtemoc::La Nueva Era",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Cuauhtemoc::La Red",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Cuauhtemoc::La Ola Crece",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Cuauhtemoc::Inquisición",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Cuauhtemoc::El Regreso Del Guerrero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Cuauhtemoc::El Regreso",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Cuauhtemoc::Guaicaipuro Cuauhtemoc",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Cuauhtemoc::Avestruz",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Cuauhtemoc::Contaminación",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Cuauhtemoc::Castillo Sobre El Mar",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Cuauhtemoc::El Esequibo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Cuauhtemoc::Pobre Diablo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Cuauhtemoc::Así Eres Tú",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Cuauhtemoc::Resistiré",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gore Priest::Beneath Eternal Oceans of Melancholy::Darkness Arrives",
+      "rule": "varios-con-el-mismo-titulo",
+      "detail": "ya hay 2 con ese título bajo el mismo padre: 42571, 42583",
+      "claims": 8
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Jorge Aguilar::Aguilar (Spanish Version)::Extranjero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Jorge Aguilar::Aguilar (Spanish Version)::Soy Para Tí",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Jorge Aguilar::Aguilar (Spanish Version)::Hemos Esperado Mucho Tiempo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Jorge Aguilar::Aguilar (Spanish Version)::La Mujer Que Vive En Mi",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Jorge Aguilar::Aguilar (Spanish Version)::No Nena",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Jorge Aguilar::Aguilar (Spanish Version)::Estar Dentro De Tí",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Jorge Aguilar::Aguilar (Spanish Version)::Que Prefieres Hoy",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Jorge Aguilar::Aguilar (Spanish Version)::Buenos Tiempos",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Dama Antañona",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Cuando No Sé De Ti",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Tú Boca Tu Boca",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Anhelante",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Criollísima",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Presagio",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Golosinas Criollas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::El Papagayo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::El San Pedro",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Mi Tripón",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Alumbra Cocuyito",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Arrullo Para Un Negrito",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Para Mí No Más",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::A Pasarla Bien",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Por Alguien Como Tú",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Palabras Del Alma",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Es Verdad",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Eres Una En Un Millón",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Sabe A Calidad",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Un Querer Como El Tuyo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Para Siempre",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Historia De Un Buen Día",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Canto Al Avila",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Contigo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::Karina::Dejaré",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "37750 «Dejaré (Juan Carlos Pérez Soto)»",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sentimiento Muerto::Aunque Usted No Lo Quiera::Culebrón",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "6301 «Culebrón (Cabello/Troconis)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sentimiento Muerto::Aunque Usted No Lo Quiera::Estado: Alucinando",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "6306 «Estado: Alucinando (Cabello/Troconis)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sentimiento Muerto::Aunque Usted No Lo Quiera::Descargar",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "6311 «Descargar (Cabello/Troconis)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sentimiento Muerto::Aunque Usted No Lo Quiera::Ganas",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "6318 «Ganas (Cabello/Troconis)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sentimiento Muerto::Aunque Usted No Lo Quiera::Un Agradable Calor",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "6323 «Un Agradable Calor (Cabello/Troconis/Jiménez)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sentimiento Muerto::Aunque Usted No Lo Quiera::Nuevas Sensaciones",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "6328 «Nuevas Sensaciones (Cabello/Dagnino)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sentimiento Muerto::Aunque Usted No Lo Quiera::Siete Mares",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "6336 «Siete Mares (Dagnino)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sentimiento Muerto::Aunque Usted No Lo Quiera::El Delito",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "6342 «El Delito (Cabello/Troconis)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sentimiento Muerto::Aunque Usted No Lo Quiera::Alerta",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "6348 «Alerta (Cabello/Troconis)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sentimiento Muerto::Aunque Usted No Lo Quiera::Cabeza",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "6353 «Cabeza (Cabello/Troconis/Jiménez)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sentimiento Muerto::Aunque Usted No Lo Quiera::Qué Es Lo Que Te Pasa",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "6359 «¿Qué Es Lo Que Te Pasa? (Cabello/Troconis)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sentimiento Muerto::Aunque Usted No Lo Quiera::Un Tono",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "6365 «Un Tono (Dagnino/Jiménez/G. Atilano)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sentimiento Muerto::Aunque Usted No Lo Quiera::Una Mirada Dice Todo y Dice Nada",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "6367 «Una Mirada Dice Todo y Dice Nada (Cabello/Schafer)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sentimiento Muerto::Aunque Usted No Lo Quiera::Resiste",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "6375 «Resiste (Cabello/Troconis)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Frank Quintero::Horas de Vuelo::Feeling",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "79208 «Feeling (La Fe Perdida)»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tesoros 40 Aniversario::El Vagón De La Muerte",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tesoros 40 Aniversario::Valiente",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tesoros 40 Aniversario::Guardianes Del Metal",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tesoros 40 Aniversario::El Tirano Aguirre",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tesoros 40 Aniversario::El Poema Negro",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tesoros 40 Aniversario::María Lionza",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tesoros 40 Aniversario::Buscador De Horizontes",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tesoros 40 Aniversario::Guaicaipuro Cuauhtemoc",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tesoros 40 Aniversario::Resucité",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tesoros 40 Aniversario::Los Visitantes",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tesoros 40 Aniversario::Evil",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tesoros 40 Aniversario::Karl Meyer Baldó",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tesoros 40 Aniversario::Karl Meyer, El Pionero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tesoros 40 Aniversario::Libera Tu Mente",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tesoros 40 Aniversario::Linda Barinas / El Adiós",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tesoros 40 Aniversario::Good Times, Bad Times / Communication Breakdown",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tesoros 40 Aniversario::Bird Of Prey",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tesoros 40 Aniversario::Aqualung",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tesoros 40 Aniversario::I Don't Need No Doctor",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tesoros 40 Aniversario::Highway Star",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tesoros 40 Aniversario::Under The Sun",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tesoros 40 Aniversario::Doctor, Doctor",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tesoros 40 Aniversario::Set Me Free",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tesoros 40 Aniversario::Hole In The Sky",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tesoros 40 Aniversario::Victim Of Changes",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tesoros 40 Aniversario::Are you Ready?",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tesoros 40 Aniversario::Stormbringer",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tesoros 40 Aniversario::Running Free",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tesoros 40 Aniversario::Burn on The Flame",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tesoros 40 Aniversario::Tom Sawyer",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Presente::Presente (Intro)",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Presente::Vendí Mi Alma Al Rock N' Roll",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Presente::Escorias Del Rock Nacional",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Presente::Tyranosaurus Rex",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Presente::Nuevo Orden Mundial",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Presente::La Envidia...Te Matara!",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Presente::No Es Ficción (Es El Reinicio)",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Presente::100 Años y Aquí Estoy",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Presente::El Psicópata",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Presente::Rompe Las Cadenas Ya!",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Presente::La Parca",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Presente::Te Esperaré En Mi Tumba",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Presente::Batalla De Carabobo 2021",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Presente::Cities On Flame With Rock N' Roll",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Presente::Rock The Nation",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Presente::Riding With The Angels",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Presente::Death & Glory",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Presente::Angel Witch",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Corte::Codigo Demente::Boom Chakataka",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "5203 «Boom Chakataca»",
+      "claims": 9
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Kiara::Como Un Huracán::Azúcar (Extended Version)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "40806 «Azúcar»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Chevynovas::Música En Vara::Shack Dag Du Papa",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "846 «Shag Dag Du Papa»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Mentas::Hasta Que Los Bares Nos Separen::El Peo (End)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "5419 «El Peo»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Mentas::Hasta Que Los Bares Nos Separen::Intro",
+      "rule": "varios-con-el-mismo-titulo",
+      "detail": "ya hay 3 con ese título bajo el mismo padre: 6823, 6824, 5397",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gusanos::Días De Furia::Saludos Desde El Lado Oscuro",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gusanos::Días De Furia::Un Día De Furia",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gusanos::Días De Furia::El Lado Prohibido",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gusanos::Días De Furia::Por Las Esquinas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gusanos::Días De Furia::Nada En La Frente",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gusanos::Días De Furia::Del Barrio Sur",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gusanos::Días De Furia::La Canción Del Reprimido",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gusanos::Días De Furia::Agujero Negro",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gusanos::Días De Furia::A Ella No Le Gusta El Rock & Roll",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gusanos::Días De Furia::Trampas Al Silencio",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gusanos::Días De Furia::Un Sueño Extraño",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gusanos::Días De Furia::Yo Mejor Me Voy",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gusanos::Días De Furia::Yanomami Global Age",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Mochuelo::Mochuelo::Me Desenfocas (Mix)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "4499 «Me Desenfocas»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Mochuelo::Mochuelo::Mi Guerra (Mix)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "4511 «Mi Guerra»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Okills::Reiniciando Transmisión::Nube",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "1790 «Nube/Segundo»; 1837 «Nube (Pocz Remix)»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Franco de Vita::Fuera De Este Mundo::Tocando el Cielo (Unplugged)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "5235 «Tocando El Cielo»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Franco de Vita::Voces A Mi Alrededor::Calido y Frio (Unplugged Version)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "2192 «Cálido y Frío»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Escalofrío II ...La Conclusión::Relato De Dr. Kanoche",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "140167 «Relato de Dr Kanoche»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Escalofrío II ...La Conclusión::Doctor Kanoche",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "140168 «Doctor Kanoche»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Escalofrío II ...La Conclusión::Relato de Dorangel Vargas \"El Comegente\"",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "140183 «Relato de Dorangel Vargas El Comegente»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Escalofrío II ...La Conclusión::Relato De Zombi",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "140185 «Relato de Zombi»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Escalofrío II ...La Conclusión::Zombi",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "140186 «Zombi»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Escalofrío II ...La Conclusión::Ogre Battle",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "140189 «Ogre Battle»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Escalofrío II ...La Conclusión::Country Girl",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "140190 «Country Girl»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "G::25 Años::El Anticristo",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "79309 «La Historia De Anticristo»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Equilibrio Vital::Kazmor El Prisionero::Mi Canción (Part II)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "15645 «Mi Canción II»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Inevitable::Inevitable (Instrumental) Intro",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Inevitable::El Arbol De La Vida",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Inevitable::La Fuerza De La Unión",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Inevitable::La Leyenda Del Holandés Errante",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Inevitable::Vanderdecker",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Inevitable::No Tendrán Cuartel",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Inevitable::El Angel Guardián",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Inevitable::Reacciona Señor",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Inevitable::El Mito de María Lionza",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Inevitable::María Lionza",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Inevitable::Agonia '2007",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Inevitable::Guardianes Del Metal '2007",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Inevitable::Los Visitantes (Fenómeno O.V.N.I.) '2007",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Inevitable::Mosaico De \"Escalofrio\"",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero Sus Exitos::Lady Madona",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "18548 «Lady madonna»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero Sus Exitos::Mamá Rego Azucar En Mi",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "18556 «Mamá regó el azúcar en mí»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo C::Grupo C Canta Edgar Castro::Busco Mi Destino",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo C::Grupo C Canta Edgar Castro::Una Visión",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo C::Grupo C Canta Edgar Castro::Por La Expresión De Tu Rostro",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo C::Grupo C Canta Edgar Castro::No Queda Nada",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo C::Grupo C Canta Edgar Castro::Tu Nombre Es Amor",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo C::Grupo C Canta Edgar Castro::Culto Al Amor (Instrumental)",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo C::Grupo C Canta Edgar Castro::Quiero Escribir Tu Nombre",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo C::Grupo C Canta Edgar Castro::Yo Existo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo C::Grupo C Canta Edgar Castro::Vive",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo C::Grupo C Canta Edgar Castro::El Amor y La Paz",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo C::Grupo C Canta Edgar Castro::Viniendo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo C::Grupo C Canta Edgar Castro::Quiero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ivo::Ivo::Quiero",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "29363 «Quiero ser feliz»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ivo::Ivo::Ya No Quiero Enamorarme",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "29913 «No»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Telecaster::Los Telecaster::Dandy Boy (Radio Version)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "16489 «Dandy Boy»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo Bota::Grupo Bota::Papa Low",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "28432 «Papa Low Dos»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Trino Mora::El Tremendo Romántico::Encontré Un Amor",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "28619 «Encontré el amor»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Trino Mora::El Tremendo Romántico::Recuerdos De Ayer",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "28612 «Recuerdo del ayer»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Frank Quintero::Pájaros y Estrellas::Estrella De Orion",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "40172 «Pájaros y Estrellas I (a.Estrella de Orión b.Señora Luna)»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::El Guerrero::Impostores",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::El Guerrero::El Guerrero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::El Guerrero::Dime",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::El Guerrero::Rock Para El Mundo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::El Guerrero::Las Nenas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::El Guerrero::La Serenata Del Estrangulador",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::El Guerrero::Guardianes Del Metal",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::El Guerrero::No Inventemos Más",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Levántate y Pelea::Corazón De Rock Pesado",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Levántate y Pelea::Levántate y Pelea",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Levántate y Pelea::Víctima De La Sociedad",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Levántate y Pelea::La Historia Del Anticristo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Levántate y Pelea::El Poeta",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Levántate y Pelea::El Rock'n Roll De La Amistad",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Levántate y Pelea::Agonía (Q.E.P.D.)",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Mentas::Arriba Carajo 15 Años En Vivo::U.E.L.M.",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Mentas::Arriba Carajo 15 Años En Vivo::Pistoleros Del Infierno",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Mentas::Arriba Carajo 15 Años En Vivo::La Cooperativa",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Mentas::Arriba Carajo 15 Años En Vivo::On My Way",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Mentas::Arriba Carajo 15 Años En Vivo::Bistec",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Mentas::Arriba Carajo 15 Años En Vivo::Motosierra",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Mentas::Arriba Carajo 15 Años En Vivo::Cacería",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Mentas::Arriba Carajo 15 Años En Vivo::Tomar",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Mentas::Arriba Carajo 15 Años En Vivo::El Ron",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Mentas::Arriba Carajo 15 Años En Vivo::Carne Con Papas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Mentas::Arriba Carajo 15 Años En Vivo::Burundanga",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Mentas::Arriba Carajo 15 Años En Vivo::El Clavo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Mentas::Arriba Carajo 15 Años En Vivo::La Foto",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Mentas::Arriba Carajo 15 Años En Vivo::Cachifa De Haití",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Mentas::Arriba Carajo 15 Años En Vivo::Mundo Porno",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Mentas::Arriba Carajo 15 Años En Vivo::Jhonny Ramone",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Mentas::Arriba Carajo 15 Años En Vivo::Música Electrónica",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Mentas::Arriba Carajo 15 Años En Vivo::La Vinotinto",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Mentas::Arriba Carajo 15 Años En Vivo::El Kiosco",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Mentas::Arriba Carajo 15 Años En Vivo::Shawarma Mixto",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Mentas::Arriba Carajo 15 Años En Vivo::Sopa Seco y Jugo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Frank Quintero::Agua Dulce::Leñador",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "42137 «Jazz, El Leñador»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Frank Quintero::Agua Dulce::Jugando Solitario",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "42141 «Jugando al Solitario»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Escalofrío::Escalofrío (Introducción)",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Escalofrío::Relato Del Poema Negro",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Escalofrío::El Poema Negro",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Escalofrío::Cuento Del Silbón",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Escalofrío::El Silbón",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Escalofrío::Cuento De La Sayona",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Escalofrío::La Sayona",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Escalofrío::Cuento Del Pez Nicolás",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Escalofrío::Pez Nicolás",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Escalofrío::Cuento del Tirano Aguirre",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Escalofrío::El Tirano Aguirre",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Escalofrío::Cuento Del Carretón",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Escalofrío::El Carretón",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Escalofrío::Relato Del Extraño Caso De Petare",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Escalofrío::El Extraño Caso De Petare",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Escalofrío::Cuento Del Hachador",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Escalofrío::El Hachador",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Escalofrío::Escalofrío (Final)",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Escalofrío::El Vagón De La Muerte",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Escalofrío::Nada Es Eterno",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Escalofrío::Children Of The Grave",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Escalofrío::Resistiré",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Spias::Tres Cruces::El Ratón (Versión Radio)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "6290 «El Ratón»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Epitafio::Dying Out::Satanic Diabolical Dispositions",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "7562 «Satanic Diabolical Dispositions (World Damnation Zardonic Remix)»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Guerra Santa::La Sombra De Un Bufón::Don't Talk to Strangers",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "13768 «Don't Talk To Strangers (Dio Cover)»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Misma Gente::Luz y Fuerza::Canción de La Calle",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "12864 «La canción de la calle»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Okills::La Ultima Mudanza::Si Tú y Yo Fuéramos Novios",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "34986 «Tú»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Regardless::What It Was Independent::Poor Miss Wilder",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "41446 «The night that Mr Bradford lost his mind: I. Poor Miss Wilder, II. Inside the abyss that is Bradford's mind»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Regardless::What It Was Independent::Inside the Abyss That Is Bradford's Mind",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "41446 «The night that Mr Bradford lost his mind: I. Poor Miss Wilder, II. Inside the abyss that is Bradford's mind»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Rock::No Me Fallen",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Rock::Dueño De Tu Destino",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Rock::No Creo En La Guerra",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Rock::Trata",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Rock::Apartate",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Rock::Tu Lo Sabes Bien",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Rock::Juan Sebastian",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Rock::Esto Es Por Amor",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Rock::Si Supiera Mi Abuelita",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Serie Lo Máximo 19 Exitos de Donde Son Los Cantantes Vol. 2::Echa Pa' Lla",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Serie Lo Máximo 19 Exitos de Donde Son Los Cantantes Vol. 2::Mueve Un Pie",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Serie Lo Máximo 19 Exitos de Donde Son Los Cantantes Vol. 2::Manantial De Corazón",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Serie Lo Máximo 19 Exitos de Donde Son Los Cantantes Vol. 2::Amándote",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Serie Lo Máximo 19 Exitos de Donde Son Los Cantantes Vol. 2::Pero Te Amo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Serie Lo Máximo 19 Exitos de Donde Son Los Cantantes Vol. 2::Selva Del Tiempo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Serie Lo Máximo 19 Exitos de Donde Son Los Cantantes Vol. 2::Por Qué Será",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Serie Lo Máximo 19 Exitos de Donde Son Los Cantantes Vol. 2::Amor Sin Medida",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Serie Lo Máximo 19 Exitos de Donde Son Los Cantantes Vol. 2::Amores De Provincia",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Serie Lo Máximo 19 Exitos de Donde Son Los Cantantes Vol. 2::No Hay Cielo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Serie Lo Máximo 19 Exitos de Donde Son Los Cantantes Vol. 2::Ritmo En Tres Colores",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Serie Lo Máximo 19 Exitos de Donde Son Los Cantantes Vol. 2::Puro Deseo De Amar",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Serie Lo Máximo 19 Exitos de Donde Son Los Cantantes Vol. 2::Tengo Corazón",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Serie Lo Máximo 19 Exitos de Donde Son Los Cantantes Vol. 2::Perla Negra",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Serie Lo Máximo 19 Exitos de Donde Son Los Cantantes Vol. 2::Si Tú Te Vas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Serie Lo Máximo 19 Exitos de Donde Son Los Cantantes Vol. 2::Niña Hermosa",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Serie Lo Máximo 19 Exitos de Donde Son Los Cantantes Vol. 2::Cuando Yo Amo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Serie Lo Máximo 19 Exitos de Donde Son Los Cantantes Vol. 2::Ladrón De Tu Amor",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Serie Lo Máximo 19 Exitos de Donde Son Los Cantantes Vol. 2::A Flor De Piel",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Lobin Ejnay::Cuando Yo Era Pavo::Potpourri Los Claners",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "17454 «Potpourrit Los Claners»",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Lobin Ejnay::Cuando Yo Era Pavo::I'll Follow The Sun",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "17455 «I´ll follow the sun»",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Lobin Ejnay::Cuando Yo Era Pavo::I'll Be Back",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "17463 «I´ll be back»",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Spiteri::Spiteri::Muchacha",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "675 «Muchacha (Demo)»",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Aditus::Juegos de Azar::Háblame De Ti",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "18444 «Crisis, Háblame de Tí»",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Carlos Moreán::Carlos Moreán::Regresa A Mí (Come On Back To Me)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "24626 «Regresa A Mí»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Edgar Alexander::Edgar Alexander::Por Qué No Llorar",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "28798 «Porque no llorar»",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Impala::Nuevamente Los Impala::Oportunidad de Edgar",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "15586 «Oportunidad»",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Winda::Huellas::Huellas (Acoustic Version)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "21324 «Huellas»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Solares::Cruel (Instinto de Morder)::Atardecer (Remixed by Jaime Verdaguer)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "6825 «Atardecer»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Caramelos de Cianuro::Flor De Fuego (Special Edition)::Llegada a L.A.",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Caramelos de Cianuro::Flor De Fuego (Special Edition)::Greenberg",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Caramelos de Cianuro::Flor De Fuego (Special Edition)::Grabación Día 1",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Caramelos de Cianuro::Flor De Fuego (Special Edition)::Día Libre",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Caramelos de Cianuro::Flor De Fuego (Special Edition)::Grabación Día 4",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Caramelos de Cianuro::Flor De Fuego (Special Edition)::Asunto Sexual",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Caramelos de Cianuro::Flor De Fuego (Special Edition)::Las Estrellas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Caramelos de Cianuro::Flor De Fuego (Special Edition)::Galipán CCS",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Caramelos de Cianuro::Flor De Fuego (Special Edition)::Oscar D' León",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Caramelos de Cianuro::Flor De Fuego (Special Edition)::Grandmaster",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Caramelos de Cianuro::Flor De Fuego (Special Edition)::L.A. Viaje 2",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Caramelos de Cianuro::Flor De Fuego (Special Edition)::Cheerleaders",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Caramelos de Cianuro::Flor De Fuego (Special Edition)::Arte",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Caramelos de Cianuro::Flor De Fuego (Special Edition)::Fin de Mezcla",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Caramelos de Cianuro::Flor De Fuego (Special Edition)::Créditos",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Frank Quintero::De Noche y Con Poca Luz::Preludio de Mediodia",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "42148 «Preludio de Mediodia, Mediodia»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Frank Quintero::De Noche y Con Poca Luz::Sueño De Medianoche Part III/Dirgni",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "42150 «Dirgni, Sueño De Medianoche III»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Frank Quintero::De Noche y Con Poca Luz::Preludio",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "42148 «Preludio de Mediodia, Mediodia»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ficción::Sobre La Cresta De La Ola::La Mula",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "14631 «Suite De Las Siete Vírgenes y La Mula (Parte a: La Mula, Parte b: Las siete vírgenes)»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ficción::Sobre La Cresta De La Ola::Las Siete Vírgenes",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "14631 «Suite De Las Siete Vírgenes y La Mula (Parte a: La Mula, Parte b: Las siete vírgenes)»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Viva Una Experiencia Psicotomimética::Since You've Been Gone",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "622 «Sweet Sweet Baby (Since You've Been Gone)»",
+      "claims": 3
+    }
+  ],
+  "duplicateFlags": [],
+  "errors": [
+    {
+      "kind": "album",
+      "identityRaw": "Desorden Público::DP18 En Concierto",
+      "error": "el claim 1974365 ya apunta a 169, no a 13972"
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Desorden Público::Guarachando En Navidad Volumen 1",
+      "error": "el claim 2215488 ya apunta a 4692, no a 13968"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Franco De Vita::Serie Milenium 21::Fantasia",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Franco De Vita::Serie Milenium 21::Promesas",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Franco De Vita::Serie Milenium 21::Esta Vez",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Franco De Vita::Serie Milenium 21::Plaza Del Centro",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Franco De Vita::Serie Milenium 21::Latino",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Franco De Vita::Serie Milenium 21::Esto Es America",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Franco De Vita::Serie Milenium 21::Sexo",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Franco De Vita::Serie Milenium 21::Extranjero",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Franco De Vita::Serie Milenium 21::Te Equivocaste Conmigo",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Franco De Vita::Serie Milenium 21::No Hay Cielo",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Franco De Vita::Serie Milenium 21::Somos Tres",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Más Vivo & En Vivo::Rock Nacional",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Más Vivo & En Vivo::El Rockero",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Más Vivo & En Vivo::Libertad",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Yordano::Yordano Hoy - En Vivo::Dias De Junio",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::32 Grandes Exitos Serie 32::La Noche Es Mágica",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::32 Grandes Exitos Serie 32::A Quién",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::32 Grandes Exitos Serie 32::Desde Mi Ventana",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::32 Grandes Exitos Serie 32::Nunca Te Olvidaré",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::32 Grandes Exitos Serie 32::Sin Máscara",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::32 Grandes Exitos Serie 32::Qué Extraño Es El Amor",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::32 Grandes Exitos Serie 32::No Puedo Vivir Sin Amor",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::32 Grandes Exitos Serie 32::Tu Porque Tu",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::32 Grandes Exitos Serie 32::No Sé",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::32 Grandes Exitos Serie 32::Déjame Libre",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::32 Grandes Exitos Serie 32::Como Olvidar",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::32 Grandes Exitos Serie 32::Ayudame",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::32 Grandes Exitos Serie 32::En El Amor",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::32 Grandes Exitos Serie 32::Sueños De Cristal",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::32 Grandes Exitos Serie 32::Amante De Tu Ayer",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::32 Grandes Exitos Serie 32::Me Rompiste El Corazón",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::CD Colección::El Circo",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::CD Colección::Vida Rural",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::CD Colección::El Destino",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::CD Colección::Es Verdad",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::CD Colección::Yo Me Voy",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::CD Colección::Verte Otra Vez",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::CD Colección::Cuanta Fortuna",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::CD Colección::De Corazón",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::CD Colección::Vivir Contigo y Sin Ti",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::CD Colección::Amor y Lluvia",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::CD Colección::El Carrousel",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::CD Colección::Canto Al Avila",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Yordano::Noches de Luna / Yordano en Concierto::Locos De Amor",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Yordano::Noches de Luna / Yordano en Concierto::A La Hora Que Sea",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Yordano::Noches de Luna / Yordano en Concierto::En Un Beso La Vida",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Yordano::Noches de Luna / Yordano en Concierto::Hablame De Amor",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Yordano::Noches de Luna / Yordano en Concierto::Hoy Vamos a Salir",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Yordano::Noches de Luna / Yordano en Concierto::Media Luna",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Yordano::Noches de Luna / Yordano en Concierto::Promesas De Hotel",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Yordano::Noches de Luna / Yordano en Concierto::No Voy a Mover Un Dedo",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Yordano::Noches de Luna / Yordano en Concierto::Chatarra De Amor",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Yordano::Noches de Luna / Yordano en Concierto::Hoy todo Vuela",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Yordano::Noches de Luna / Yordano en Concierto::Plomo y Gris",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Frank Quintero::30 Grandes Exitos de Oro::Dar Por Igual",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Frank Quintero::30 Grandes Exitos de Oro::Feeling",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Mendoza::The Arabian Mystery::Secretos De Amor",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Mendoza::The Arabian Mystery::War Of Lies (Anything Is True)",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Mendoza::The Arabian Mystery::Amarte Por Siempre",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Mendoza::The Arabian Mystery::Hamlet",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Mendoza::The Arabian Mystery::Ciudad Paraíso",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Mendoza::The Arabian Mystery::Arabian Mystery",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Mendoza::The Arabian Mystery::Judas Innocent",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Mendoza::The Arabian Mystery::Camino Celestial",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Mendoza::The Arabian Mystery::Cortinas De Humo",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Mendoza::The Arabian Mystery::La Magia Del Poder",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Mendoza::The Arabian Mystery::9 de Noviembre",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Mendoza::The Arabian Mystery::Moto Perpetuo",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Mendoza::The Arabian Mystery::Atomic Fly",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::32 Grandes Exitos Serie 32::Abran Paso",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::32 Grandes Exitos Serie 32::Es Verdad",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::32 Grandes Exitos Serie 32::Vale La Pena Esperar",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::32 Grandes Exitos Serie 32::El Circo",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::32 Grandes Exitos Serie 32::Vida Rural",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::32 Grandes Exitos Serie 32::Daniela",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::32 Grandes Exitos Serie 32::Marea De La Mar",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::32 Grandes Exitos Serie 32::Por Alguien Como Tú",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::32 Grandes Exitos Serie 32::Contigo",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::32 Grandes Exitos Serie 32::Dime Si Lo Notas",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::32 Grandes Exitos Serie 32::Vivir Contigo y Sin Tí",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::32 Grandes Exitos Serie 32::Soledad",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::32 Grandes Exitos Serie 32::Máquina",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::32 Grandes Exitos Serie 32::Yo Me Voy",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::32 Grandes Exitos Serie 32::Verte Otra Vez",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::32 Grandes Exitos Serie 32::Eres Una En Un Millón",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Mariana Vega::Te Busco::Ni Tú Ni Nadie",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ricardo Montaner::Todo y Nada::Nada",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Corte::Codigo Demente::Zona Peligrosa",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Corte::Codigo Demente::Iluminada",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Corte::Codigo Demente::Latinas",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Corte::Codigo Demente::Malicia",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Corte::Codigo Demente::Reflexión",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Corte::Codigo Demente::No Hay Competencia",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Corte::Codigo Demente::Black Chacal",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Corte::Codigo Demente::Alto Rango",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Corte::Codigo Demente::Rush",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Corte::Codigo Demente::Código Demente",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Corte::Codigo Demente::Me Voy Pero Vuelvo Pronto",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Tecupae::Tiempo::Me Enamore",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Tecupae::Tiempo::Mentirosa",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Tecupae::Tiempo::Abusadora",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Epitafio::Years Of Dominion::The Chosen",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Mulato::Solo Exitos Serie Premium::Echa Pa'lla",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Chevynovas::Música En Vara::Not A Song",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Chevynovas::Música En Vara::El Sol",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Chevynovas::Música En Vara::Chevy Shakers",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Chevynovas::Música En Vara::Do You Love Me?",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Chevynovas::Música En Vara::La Guaracha",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Chevynovas::Música En Vara::Sing Pao",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Chevynovas::Música En Vara::La Culebra",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Dagnino::Biorritmos::Dejó Las Llaves",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ohmio::6101::Plástico",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Okills::Reiniciando Transmisión::Gritarte",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Okills::Reiniciando Transmisión::De Qué Sirve",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Franco de Vita::Voces A Mi Alrededor::Calido y Frio",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Franco de Vita::Voces A Mi Alrededor::Sin Tanto Espacio",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Franco de Vita::Voces A Mi Alrededor::Con un Poco de Ti",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Franco de Vita::Voces A Mi Alrededor::Voces a Mi Alrededor",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Tomates Fritos::Molly::Saquenme De Aqui",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Tomates Fritos::Molly::Shelby",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Tomates Fritos::Molly::Quiero Tenerla",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Malanga::Acústico::Mil Copas",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Malanga::Acústico::Déjala",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Malanga::Acústico::Si Tú No Estás",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Malanga::Acústico::Mai Lof",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Malanga::Acústico::De Caracas A Madrid",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Equilibrio Vital::Kazmor El Prisionero::Yellenik",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Equilibrio Vital::Kazmor El Prisionero::Inocentes Perdidos",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Equilibrio Vital::Kazmor El Prisionero::Sudyenin",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Equilibrio Vital::Kazmor El Prisionero::Tempestad",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Equilibrio Vital::Kazmor El Prisionero::Mirando Al Horizonte",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Equilibrio Vital::Kazmor El Prisionero::Campanas Al Viento",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Equilibrio Vital::Kazmor El Prisionero::Volver",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Franco De Vita::Grandes Exitos::Aqui Estas Otra Vez",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Guillermo Carrasco::Visual::Ojalá",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Guillermo Carrasco::Visual::Alégrate",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ivo::Ivo::Imagíname",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Trino Mora::El Tremendo Romántico::Corazón Feliz",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Trino Mora::El Tremendo Romántico::Tengo Que Ser Yo",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Trino Mora::El Tremendo Romántico::No Olvides Recordarme",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Equilibrio Vital::Continuidad Por Siempre::Retorno",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Impala::Los Impala::Muevanse Todos",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Frank Quintero::Agua Dulce::Aire y Fuego",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Frank Quintero::Agua Dulce::Malena (A golpe de Tambor)",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Frank Quintero::Agua Dulce::Agua Dulce",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Famasloop::Casa 4::Al Revés",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Famasloop::Casa 4::De Fuego En Fuego",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Famasloop::Casa 4::Chamo Pol La Casa",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Enfasis::Vencer o Morir::Caminata Nocturna",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Enfasis::Vencer o Morir::No Sueñes Más",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Enfasis::Vencer o Morir::Como Equipaje LLevo El Dolor",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Enfasis::Vencer o Morir::Vencer o Morir",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Epitafio::Dying Out::Faith",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Epitafio::Dying Out::Adoration",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Epitafio::Dying Out::God",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Epitafio::Dying Out::Control Planning Scheduling",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Epitafio::Dying Out::World Damnation",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Epitafio::Dying Out::Outro",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Equilibrio Vital::Tributo a Marcos Chacón::El Emigrante",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Equilibrio Vital::Tributo a Marcos Chacón::Aliento y Esperanza",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Equilibrio Vital::Tributo a Marcos Chacón::A Mi Padre",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Equilibrio Vital::Tributo a Marcos Chacón::Armonias Con El Infinito",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gastonia::La Nimiedad De La Existencia::Razones",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gastonia::La Nimiedad De La Existencia::No Existe Adiós",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grand Bite::Al Borde Del Precipicio No Moriré::Cangrejo",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grand Bite::Al Borde Del Precipicio No Moriré::Reincidirás",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grand Bite::Al Borde Del Precipicio No Moriré::De Cuello Blanco",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Guerra Santa::La Sombra De Un Bufón::Hijos De Dios",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Guerra Santa::La Guerra Apenas Empieza...!::La Guerra Apenas Empieza",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Guerra Santa::La Guerra Apenas Empieza...!::Fortaleza Del Terror",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Guerra Santa::La Guerra Apenas Empieza...!::Alzados En Almas",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Guerra Santa::La Guerra Apenas Empieza...!::La Sonata Del Adiós",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Guerra Santa::La Guerra Apenas Empieza...!::Tan Cerca y Tan Lejos",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Misma Gente::Luz y Fuerza::Las Cosas de Mi Amiga",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Misma Gente::Luz y Fuerza::Sinceramente",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Misma Gente::Luz y Fuerza::Pobre Diablo",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Misma Gente::Luz y Fuerza::El Negro Luis",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Melancólicos Anónimos::Inscripciones Abiertas::Cuentos De Hadas",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Melancólicos Anónimos::Inscripciones Abiertas::Aunque Perdí",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Melancólicos Anónimos::Inscripciones Abiertas::Tonada De La Gatita Amor",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Melancólicos Anónimos::Inscripciones Abiertas::No Creo En Los \"Te Quiero\"",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Melancólicos Anónimos::Inscripciones Abiertas::Ya Veremos",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Melancólicos Anónimos::Inscripciones Abiertas::Tonto",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Nocturnal Hollow::Deathless And Fleshless::Beyond Death",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Nocturnal Hollow::Deathless And Fleshless::The Blackest Sorrow",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Nocturnal Hollow::Demonical Euphony::Sawed To The Bone",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Nocturnal Hollow::Demonical Euphony::Ashes Remains",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Nocturnal Hollow::The Nuances Of Death::Raven Eyes",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Nocturnal Hollow::The Nuances Of Death::Praise the Unbless",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Nocturnal Hollow::The Nuances Of Death::Warmarch",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Nocturnal Hollow::The Nuances Of Death::Martyrs Path",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Radio Clip::Radio Clip::Mirame de Nuevo",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Radio Clip::Radio Clip::En La Ciudad",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Resistencia::Zodíaco::Aries",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Resistencia::Zodíaco::Tauro",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Resistencia::Zodíaco::Geminis",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Resistencia::Zodíaco::Cáncer",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Resistencia::Zodíaco::Leo",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    }
+  ],
+  "runId": 11712,
+  "evidenceVerdicts": [
+    {
+      "kind": "album",
+      "identityRaw": "Desorden Público::DP18 En Concierto",
+      "rule": "titulo-casi-igual-mismo-repertorio",
+      "targetId": 13972,
+      "detail": "DP18 {\"13972\":{\"shared\":28,\"total\":32,\"core\":31}}"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vocal Song::Memories::Dime",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 38015,
+      "detail": "Dime (Balada)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Banda de Casablanca::El Sueño::I Don't Need No Doctor",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 15384,
+      "detail": "I Don´t Need no Doctor"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Fuga::Fuga::Día De Parada",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 9045,
+      "detail": "El Día de Parada"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sangre::Sangre::We'll Live a Little Bit More",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 16094,
+      "detail": "We´ll live a little bit more"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Spiteri::Spiteri::El Interior Del Alma",
+      "rule": "sin-decision-er-sin-parecido",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Spiteri::Spiteri::Verano Dspués De Invierno",
+      "rule": "sin-decision-er-sin-parecido",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Spiteri::Spiteri::Dejalo Ya, Me haces Perder El Tiempo",
+      "rule": "sin-decision-er-sin-parecido",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Aditus::Juegos de Azar::Crisis",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 18444,
+      "detail": "Crisis, Háblame de Tí"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Alexis Rossell::Alexis Rossell y su Venezuela Joven::Orinoco",
+      "rule": "sin-decision-er-sin-parecido",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Alexis Rossell::Alexis Rossell y su Venezuela Joven::Crepúsculo",
+      "rule": "sin-decision-er-sin-parecido",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Alexis Rossell::Torbellino::Paseito Oriental",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 15186,
+      "detail": "Paseito Criental"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Alexis Rossell::... Es Navidad::Selección Navideña Internacional",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 15180,
+      "detail": "Selección Navideña Interrnacional"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arkangel::No Más Apariencias::Pasajero Como El Viento",
+      "rule": "sin-decision-er-sin-parecido",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arkangel::No Más Apariencias::No Puedes Reprocharme",
+      "rule": "sin-decision-er-sin-parecido",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Azúcar Cacao y Leche::Azúcar Cacao y Leche Vol. II::Tal Como Lo Dijo",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 29233,
+      "detail": "Tal como lo dijo D'asid O'Anik"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Caramelos de Cianuro::Cuentos Para Adultos::Chan Chaca Chan",
+      "rule": "sin-decision-er-sin-parecido",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Darts::De Etiqueta::No Te Importa",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 30647,
+      "detail": "No te importe"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Escenarío Juvenil::Cuando Mueren Las Estrellas",
+      "rule": "sin-decision-er-sin-parecido",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Escenarío Juvenil::I've Got You",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 25801,
+      "detail": "I've Got You (Sonny Bono)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Escenarío Juvenil::Otro Amor",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 25802,
+      "detail": "Otro Amor (You Got To Me)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Claners::Yeah Yeah Yeah!::Zambesi",
+      "rule": "sin-decision-er-sin-parecido",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Colina::Amanecer::Don't Take Friends Away",
+      "rule": "sin-decision-er-sin-parecido",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Cronos::Al Fin Una Victoria::Buscando Perdón",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 42441,
+      "detail": "Buscando el perdón"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Misma Gente::A La Calle::Oportunidad (Una Historia de Malandros)",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 12866,
+      "detail": "Oportunidad"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Misma Gente::A La Calle::Canción Corta",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 12871,
+      "detail": "Canción Corta. Canción de Amor Para Una Niña Triste"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Delia::Chicano::Porque Te Quiero",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 30692,
+      "detail": "Por qué te quiero"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Impala::Conozca a Los Impala::My Bonny",
+      "rule": "sin-decision-er-sin-parecido",
+      "detail": ""
+    }
+  ]
+}

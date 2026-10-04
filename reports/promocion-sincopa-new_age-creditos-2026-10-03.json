@@ -1,0 +1,45 @@
+{
+  "section": "new_age",
+  "dryRun": false,
+  "note": "Sincopa new_age: créditos y membresías tras resolver discos, pistas, artistas y personas retenidas (runs 11602–11665)",
+  "kinds": {
+    "artist_membership": {
+      "identities": 0,
+      "claims": 0,
+      "verdicts": {},
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "album_credit": {
+      "identities": 123,
+      "claims": 615,
+      "verdicts": {
+        "puente": 123
+      },
+      "applied": 50,
+      "unchanged": 200,
+      "stillCandidate": 365,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "track_credit": {
+      "identities": 49,
+      "claims": 294,
+      "verdicts": {
+        "puente": 49
+      },
+      "applied": 4,
+      "unchanged": 20,
+      "stillCandidate": 270,
+      "dismissed": 0,
+      "failed": 0
+    }
+  },
+  "holds": [],
+  "duplicateFlags": [],
+  "errors": [],
+  "runId": 11666
+}

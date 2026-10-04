@@ -1,0 +1,601 @@
+{
+  "section": "traditional",
+  "dryRun": true,
+  "note": "Sincopa traditional: promoción masiva por reglas",
+  "kinds": {
+    "album": {
+      "identities": 29,
+      "claims": 230,
+      "verdicts": {
+        "same:revision-ingesta-titulo": 13,
+        "same:revision-ingesta-edicion": 2,
+        "different:revision-ingesta-otro-disco": 4,
+        "approve:auto-match": 5,
+        "hold:padre-sin-resolver": 2,
+        "different:titulo-casi-igual-otro-repertorio": 2,
+        "same:revision-ingesta-repertorio": 1
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "track": {
+      "identities": 346,
+      "claims": 1408,
+      "verdicts": {
+        "different:titulo-casi-igual-otro-numero": 1,
+        "different:sin-coincidencia": 182,
+        "hold:titulo-casi-igual-mismo-padre": 16,
+        "approve:auto-match": 19,
+        "different:solo-coincide-bajo-otro-padre": 37,
+        "hold:padre-sin-resolver": 32,
+        "same:titulo-casi-igual-misma-posicion": 3,
+        "hold:titulo-igual-con-contradiccion": 23,
+        "same:mismo-titulo-mismo-disco": 33
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    }
+  },
+  "holds": [
+    {
+      "kind": "album",
+      "identityRaw": "Grupo::Música Tradicional Venezolana",
+      "rule": "padre-sin-resolver",
+      "detail": "el artista del disco aún no está en el core",
+      "claims": 16
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Grupo::Grupo Taburete",
+      "rule": "padre-sin-resolver",
+      "detail": "el artista del disco aún no está en el core",
+      "claims": 8
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Serenata Guayanesa::Una Amistad de 25 Años::- A la Una",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "156482 «Una Serenata para Serenata»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Anselmo López::El Rey De La Bandola Guacamaya Records &::Pajarillo Nº 3",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "63705 «El Pajarillo»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::El Cangrejo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::El Perico",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::Madre Selva",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::El Porteño",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::Rosa De Amor",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::Los Hijos De La Noche",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::La Garragata",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::Los Vitocos",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::El Violinista",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::Mónica Pérez",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::El Vaivén De La Negra",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::Carmela",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Taburete::Celos De Un Parrandero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Taburete::Gloria",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Taburete::La Gallina",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Taburete::Feliz Navidad",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Taburete::Sancocho E' Guesito",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Taburete::El Cocoye Coya y Mocho Carrillo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Taburete::El Gavilan",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Taburete::Los Viudos",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Taburete::Que Morena",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Taburete::La Tortuga",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::La Mona",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::El Billetero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::Noches Caraqueñas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::El Burro Bragaote",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::El Portugues",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::Las Cocineras",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::Las Golondrinas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::La Chiva",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::Noches En Calma",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Música Tradicional Venezolana::El Chivo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Serenata Guayanesa::40 Años 40 Exitos Vol. 2::Calypso de El Callao Nº 2",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "64690 «Calypso de El Callao»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Serenata Guayanesa::40 Años 40 Exitos Vol. 2::La Zapoara",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "64682 «Pesca De Zapoara»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Serenata Guayanesa::40 Años 40 Exitos Vol. 2::La Paloma",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "64678 «Casta Paloma»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Reynaldo Armas::Luis Silva Serie Platinum::Es Que Te Quiero",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "66214 «La Quiero y Qué?»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Serenata Guayanesa::Bolívar Canta a Bolívar::Joropo De Bolívar Para Simón",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "84487 «Simón, Simón»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Serenata Guayanesa::Bolívar Canta a Bolívar::Angostura",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "84488 «Fragmento 1 (Del Discurso de Angostura)»; 157863 «Fragmento 2 (Del Discurso de Angostura)»; 157864 «Fragmento 3 (Del Discurso de Angostura)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Serenata Guayanesa::Bolívar Canta a Bolívar::Bolívar",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "84489 «Gaita a Bolívar»; 84492 «Bolívar, Gran Héroe (Poem)»; 84497 «Un Canto Para Bolívar (Poem)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Serenata Guayanesa::Bolívar Canta a Bolívar::Este Niño Don Simón",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "84487 «Simón, Simón»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Simón En Gaita En Salsa::Gaita Llanera",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "153106 «Gaita Llanera»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Simón En Gaita En Salsa::Abran La Puerta",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "153107 «Abran la Puerta»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Simón En Gaita En Salsa::Doña Cuatricentenaria",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "153108 «Doña Cuatricentenaria»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Simón En Gaita En Salsa::Tilin Tingolin",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "153109 «Tilin Tingolin»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Simón En Gaita En Salsa::Matrimonio No",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "153110 «Matrimonio No»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Simón En Gaita En Salsa::Mister Bugalu",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "153111 «Mister Bugalu»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Simón En Gaita En Salsa::La Palma De Coco",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "153112 «La Palma de Coco»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Simón En Gaita En Salsa::Carro Por Puesto",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "153113 «Carro por Puesto»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Simón En Gaita En Salsa::Simón No Tiene Trabajo",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "153114 «Simon No Tiene Trabajo»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Golpe y Pasaje Caballo Viejo::El Beso",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "153010 «El beso»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Golpe y Pasaje Caballo Viejo::Romance En la Lejania",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "153011 «Romance en la lejanía»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Golpe y Pasaje Caballo Viejo::El Preso",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "153014 «El preso»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Golpe y Pasaje Caballo Viejo::Lección De Canto",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "153015 «Lección de canto»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Golpe y Pasaje Caballo Viejo::Caballo Viejo",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "153016 «Caballo viejo»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Golpe y Pasaje Caballo Viejo::Mercedes",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "153018 «Mercedes»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Amorosamente::Palabras De Mujer",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "84716 «Mujer»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz-Mis Tonadas 16 Grandes Exitos::La Pena Del Becerrero",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "153237 «La Pena Del Becerrero»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz-Mis Tonadas 16 Grandes Exitos::Tonada De Las Espigas",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "153238 «Tonada De Las Espigas»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz-Mis Tonadas 16 Grandes Exitos::Voy A Buscar La Palmera",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "153241 «Voy A Buscar La Palmera»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz-Mis Tonadas 16 Grandes Exitos::Así Es Mi Tierra",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "153243 «Así Es Mi Tierra»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz-Mis Tonadas 16 Grandes Exitos::Guillermina",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "153244 «Guillermina»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz-Mis Tonadas 16 Grandes Exitos::Tonadas",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "153245 «Tonadas»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz-Mis Tonadas 16 Grandes Exitos::Canto De Ordeño",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "153246 «Canto De Ordeño»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz-Mis Tonadas 16 Grandes Exitos::Tricolor",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "153248 «Tricolor»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::El Cuarto y El Interés",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "153125 «El Cuatro y el Intéres»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::Regalo De Dios (Canto A La Madre)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "153131 «Regalo de Dios»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::40 Años 40 Exitos::Caballo Viejo (Cuenta y Canta)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "153135 «Caballo Viejo»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Grandes Exitos::Tonada Del Cabestrero",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "84639 «Tonada Del Cabrestero»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Quinteto Contrapunto::Música Popular y Folklórica de Venezuela 32 Grandes Exitos::La Bella",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "68221 «Bella Rosa»",
+      "claims": 5
+    }
+  ],
+  "duplicateFlags": [],
+  "errors": [],
+  "evidenceVerdicts": [
+    {
+      "kind": "album",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 5",
+      "rule": "titulo-casi-igual-otro-repertorio",
+      "detail": "{\"15276\":{\"shared\":0,\"total\":15,\"core\":12},\"15330\":{\"shared\":0,\"total\":15,\"core\":12},\"15348\":{\"shared\":0,\"total\":15,\"core\":16}}"
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Simón Díaz::Muy Venezolano Vol. 6",
+      "rule": "titulo-casi-igual-otro-repertorio",
+      "detail": "{\"15276\":{\"shared\":0,\"total\":12,\"core\":12},\"15330\":{\"shared\":0,\"total\":12,\"core\":12},\"15348\":{\"shared\":0,\"total\":12,\"core\":16}}"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Serenata Guayanesa::Una Amistad de 25 Años::MIX No.3",
+      "rule": "titulo-casi-igual-otro-numero",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Simón En Gaita En Salsa::La Gaita De Las Cuñas Nº 2",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 153105,
+      "detail": "Gaitas de las Cuñas, No. 2"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz-Mis Tonadas 16 Grandes Exitos::Tonada Del Cabrestero",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 153240,
+      "detail": "Tonada del Cabestrero"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Díaz::Serie Lo Máximo Simón Díaz-Mis Tonadas 16 Grandes Exitos::La Flor Del Apamate",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 153247,
+      "detail": "La Flor De Apamate"
+    }
+  ]
+}

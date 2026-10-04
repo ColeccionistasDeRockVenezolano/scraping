@@ -1,0 +1,125 @@
+{
+  "dryRun": false,
+  "runId": 11459,
+  "identities": 306,
+  "alreadyInAlbum": 284,
+  "appendAtEnd": 0,
+  "left": 22,
+  "superseded": 285,
+  "approved": 16,
+  "appended": 0,
+  "failed": 3,
+  "appendList": [],
+  "leftList": [
+    {
+      "identity": "Aldemaro Romero::Onda Nueva Vocal::Pais Tropical",
+      "url": "https://sincopa.com/ethnic/cdinfo1/aldro_onda_vocal1.htm",
+      "reason": "sin título"
+    },
+    {
+      "identity": "Franco De Vita::Grandes Exitos::Aqui Estas Otra Vez",
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/francodvita_grandesexitos.htm",
+      "reason": "sin título"
+    },
+    {
+      "identity": "Franco De Vita::Serie Milenium 21::Esta Vez",
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/francodvita_seriemilenium21.htm",
+      "reason": "el disco no está resuelto en el core"
+    },
+    {
+      "identity": "Franco De Vita::Serie Milenium 21::Esto Es America",
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/francodvita_seriemilenium21.htm",
+      "reason": "el disco no está resuelto en el core"
+    },
+    {
+      "identity": "Franco De Vita::Serie Milenium 21::Extranjero",
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/francodvita_seriemilenium21.htm",
+      "reason": "el disco no está resuelto en el core"
+    },
+    {
+      "identity": "Franco De Vita::Serie Milenium 21::Fantasia",
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/francodvita_seriemilenium21.htm",
+      "reason": "el disco no está resuelto en el core"
+    },
+    {
+      "identity": "Franco De Vita::Serie Milenium 21::Latino",
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/francodvita_seriemilenium21.htm",
+      "reason": "el disco no está resuelto en el core"
+    },
+    {
+      "identity": "Franco De Vita::Serie Milenium 21::No Hay Cielo",
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/francodvita_seriemilenium21.htm",
+      "reason": "el disco no está resuelto en el core"
+    },
+    {
+      "identity": "Franco De Vita::Serie Milenium 21::Plaza Del Centro",
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/francodvita_seriemilenium21.htm",
+      "reason": "el disco no está resuelto en el core"
+    },
+    {
+      "identity": "Franco De Vita::Serie Milenium 21::Promesas",
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/francodvita_seriemilenium21.htm",
+      "reason": "el disco no está resuelto en el core"
+    },
+    {
+      "identity": "Franco De Vita::Serie Milenium 21::Sexo",
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/francodvita_seriemilenium21.htm",
+      "reason": "el disco no está resuelto en el core"
+    },
+    {
+      "identity": "Franco De Vita::Serie Milenium 21::Somos Tres",
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/francodvita_seriemilenium21.htm",
+      "reason": "el disco no está resuelto en el core"
+    },
+    {
+      "identity": "Franco De Vita::Serie Milenium 21::Te Equivocaste Conmigo",
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/francodvita_seriemilenium21.htm",
+      "reason": "el disco no está resuelto en el core"
+    },
+    {
+      "identity": "Gastonia::La Nimiedad De La Existencia::No Existe Adiós",
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/gastonia_1lanimiedad.htm",
+      "reason": "sin título"
+    },
+    {
+      "identity": "Karina::32 Grandes Exitos Serie 32::A Quién",
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/karina_serie32.htm",
+      "reason": "el disco no está resuelto en el core"
+    },
+    {
+      "identity": "Karina::32 Grandes Exitos Serie 32::Qué Extraño Es El Amor",
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/karina_serie32.htm",
+      "reason": "el disco no está resuelto en el core"
+    },
+    {
+      "identity": "Los Impala::Los Impala::Muevanse Todos",
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/impala_09_1996.htm",
+      "reason": "sin título"
+    },
+    {
+      "identity": "Los Impala::The Impala and Their Music::Te Llevare Al Altar",
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/impala_05theirmusic.htm",
+      "reason": "sin título"
+    },
+    {
+      "identity": "Yordano::Yordano Hoy - En Vivo::Dias De Junio",
+      "url": "https://sincopa.com/rock_pop/cdinfo_rock/yordano_hoyenvivo.htm",
+      "reason": "sin título"
+    },
+    {
+      "identity": "Aldemaro Romero::Dinner In Caracas::Serenata",
+      "url": "https://sincopa.com/ethnic/cdinfo1/aldro_dinnerccs_lp.htm",
+      "reason": "error: duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "identity": "Guaco::Esto Es Guaco::Venite Pa' Maracaibo",
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/guaco/guaco_1983estoesguaco.htm",
+      "reason": "error: duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "identity": "Rondalla Venezolana con El Mariachi Tapatio::Serenata A Venezuela::Tu Amor Fue Una Ilusión",
+      "url": "https://sincopa.com/traditional/cdinfo2/rondalla_vzlana/rondalla_mariachitapatio_lp.htm",
+      "reason": "error: duplicate key value violates unique constraint \"tracks_position_uk\""
+    }
+  ]
+}

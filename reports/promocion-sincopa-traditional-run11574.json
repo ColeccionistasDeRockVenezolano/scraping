@@ -1,0 +1,23 @@
+{
+  "section": "traditional",
+  "dryRun": false,
+  "note": "Sincopa traditional: créditos de pista de las fichas con caras renumeradas",
+  "kinds": {
+    "track_credit": {
+      "identities": 930,
+      "claims": 5592,
+      "verdicts": {
+        "puente": 930
+      },
+      "applied": 4,
+      "unchanged": 32,
+      "stillCandidate": 5664,
+      "dismissed": 0,
+      "failed": 0
+    }
+  },
+  "holds": [],
+  "duplicateFlags": [],
+  "errors": [],
+  "runId": 11574
+}

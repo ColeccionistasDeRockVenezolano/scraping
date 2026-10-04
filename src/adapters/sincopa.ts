@@ -2,13 +2,14 @@ import { load, type CheerioAPI } from "cheerio";
 import type { AnyNode } from "domhandler";
 import type { PageRef, RawRecord, SourceAdapter, StoredPage } from "./contracts.js";
 import { absoluteUrl, clean, contentImages, excerpt } from "./shared.js";
+import { SINCOPA_IDENTITY_SUFFIX } from "./sincopa-identity-overrides.js";
 
 // Este adaptador tiene su propia versión porque el HTML FrontPage de Sincopa
 // requiere reglas específicas. 1.1.0 corrige los encabezados multilínea y
 // evita confundir fichas detalladas de sencillos con la tabla de discografía.
 // 1.2.0 abre todas las secciones del sitio (jazz, latin pop, clásica, new age,
 // tradicional, étnica): usan la misma plantilla de ficha que rock/pop.
-const SINCOPA_ADAPTER_VERSION = "1.2.0";
+const SINCOPA_ADAPTER_VERSION = "1.3.4";
 
 // Sincopa es HTML de FrontPage: tablas anidadas, sin clases ni encabezados
 // semánticos. Toda su semántica está codificada en el color de fuente:
@@ -51,6 +52,14 @@ function splitByBr($: CheerioAPI, html: string): string[] {
  * pista solo se distingue por su color dorado. Leer la celda como texto
  * plano perdía todas las pistas menos la primera.
  */
+/**
+ * Encabezado de cara de un vinilo o casete: «Side B», «Lado A», «Cara 2»,
+ * también con rótulo («Side B - Irakere», «Side B (Studio)»). Un fragmento que
+ * además trae una pista numerada («01- …») no es solo un encabezado.
+ */
+const SIDE_HEADER = /^(?:side|lado|cara)\s*[a-d1-4](?![\p{L}\d])/iu;
+const isSideHeader = (text: string): boolean => SIDE_HEADER.test(text) && !/\d{1,3}\s*[-.]\s/u.test(text);
+
 function fragmentsByBr($: CheerioAPI, html: string): Array<ReturnType<CheerioAPI>> {
   return html
     .split(/<br\s*\/?>/i)
@@ -146,9 +155,13 @@ function albumHeaderPairs($: CheerioAPI): Map<string, string> {
 
       const valueCell = $(cells[index + 1]!);
       const values = splitByBr($, valueCell.html() ?? "");
+      // Las fichas de jazz, clásica, new age, étnica y latin pop añaden un
+      // «Instrument:» entre Company y Genre. Sin contarlo, el ancla desde el
+      // final se corre una línea: el sello pasa a título y el instrumento a
+      // sello («Bach To Venezuela Independent» / sello «Violin»).
       const trailingLabels = labels.slice(titleAt + 1)
-        .filter((label): label is "company" | "genre" | "release year" =>
-          label === "company" || label === "genre" || label === "release year");
+        .filter((label): label is "company" | "instrument" | "genre" | "release year" =>
+          label === "company" || label === "instrument" || label === "genre" || label === "release year");
       const titleEnd = values.length - trailingLabels.length;
       if (titleEnd <= 1) continue;
       const join = (from: number, to: number) => clean(values.slice(from, to).filter(Boolean).join(" "));
@@ -259,10 +272,13 @@ function named(value: string): boolean {
   return /[\p{L}\p{N}]/u.test(value);
 }
 
-/** Solo coma y "&": partir por " y " rompería nombres propios en español. */
+/**
+ * Coma, "&", "+" y "/" (Brian, 2026-10-02: «Lennon/McCartney» son dos
+ * autores). Partir por " y " rompería nombres propios en español.
+ */
 function splitNames(value: string): string[] {
   return value
-    .split(/\s*(?:,|&|\+)\s*/)
+    .split(/\s*(?:,|&|\+|\/)\s*/)
     .map((part) => clean(part))
     .filter((part) => part.length > 1 && part.length <= 200 && named(part));
 }
@@ -482,6 +498,11 @@ export class SincopaAdapter implements SourceAdapter {
     const evidence = (selector: string, text: string, position?: number) => ({
       url, selector, excerpt: excerpt(text), ...(position === undefined ? {} : { position }),
     });
+    // «Grupo Mango::Mango» de 1975 y de 1976: la identidad lleva un sufijo cuando
+    // otro disco distinto del mismo artista comparte título (1.3.2). Solo cambia
+    // la identidad; el título del disco sigue siendo el de la ficha.
+    const suffix = SINCOPA_IDENTITY_SUFFIX[url];
+    const key = suffix === undefined ? title : `${title} (${suffix})`;
 
     const albumFields: RawRecord["fields"] = [
       { field: "title", value: title, evidence: evidence("td", title) },
@@ -504,7 +525,7 @@ export class SincopaAdapter implements SourceAdapter {
     // corrobora la identidad ya extraída de la ficha.
     const cover = firstImageOfKind(page, url, "cover");
     if (cover) albumFields.push({ field: "cover_url", value: cover.url, evidence: evidence("img", cover.alt || cover.url) });
-    records.push(this.record("album", artist ? `${artist}::${title}` : title, albumFields));
+    records.push(this.record("album", artist ? `${artist}::${key}` : key, albumFields));
 
     // La ficha de disco AFIRMA su artista ("Artist: Fusión IV"), no solo lo
     // menciona: sin reclamarlo como entidad el álbum no puede existir en el
@@ -524,14 +545,40 @@ export class SincopaAdapter implements SourceAdapter {
 
     // Pistas: "01- Título (Compositor)". El título va en dorado; el compositor
     // entre paréntesis es un crédito de la pista, nunca una membresía.
+    // Un vinilo trae «Side A» / «Side B» y la cara B vuelve a empezar en 01:
+    // el core numera el disco corrido (la B sigue en 5, 6…), así que tras un
+    // encabezado de cara que REINICIA la cuenta se suma lo ya numerado. Si la
+    // fuente ya numera corrido, no se toca; sin caras, el número va tal cual.
+    let lastNumber = 0;
+    let sideStart: number | undefined;
+    let offset = 0;
     rowsUnderSection(page, /tracks?|pistas?|temas?/i).forEach((row) => {
       const cell = page(row).find("td").first();
       fragmentsByBr(page, cell.html() ?? "").forEach((fragment, position) => {
       const text = clean(fragment.text());
       if (!text) return;
-      const trackTitle = goldenTitle(fragment);
+      if (isSideHeader(text)) {
+        if (lastNumber > 0) sideStart = lastNumber;
+        return;
+      }
+      // «01- Mosaico Nº 1» (Billo's, Guaco, Venezuelan Suite): la pista que
+      // agrupa un popurrí va en otro color y debajo vienen sus partes
+      // («a- Ojos Malvados») en dorado. Con número impreso y sin dorado, el
+      // título es lo que sigue al número, sin duración ni arreglista.
+      const plain = /^\d{1,3}\s*[-.–—\u0096]\s*(\S.*)$/u.exec(text)?.[1]
+        ?.replace(/\s*\(\s*(?:arr|arranged|arreglo|arreglos)\b[^)]*\)/giu, "")
+        .replace(/\s*\(?\d{1,2}[:.][0-5]\d\)?\s*$/u, "").trim();
+      const trackTitle = goldenTitle(fragment) || plain || "";
       if (!trackTitle) return;
-      const number = /^(\d{1,3})\s*[-.]/.exec(text)?.[1];
+      // «01 Amaranto (Lester Paredes) 4.04»: número sin guion, solo si el título no empieza por cifra.
+      const printed = /^(\d{1,3})\s*[-.–—\u0096]/u.exec(text)?.[1]
+        ?? (/^\d/u.test(trackTitle) ? undefined : /^(\d{1,3})\s+(?=\S)/u.exec(text)?.[1]);
+      if (printed !== undefined && sideStart !== undefined) {
+        offset = Number(printed) <= sideStart ? sideStart : 0;
+        sideStart = undefined;
+      }
+      const number = printed === undefined || offset === 0 ? printed : String(Number(printed) + offset);
+      if (number !== undefined) lastNumber = Math.max(lastNumber, Number(number));
       const where = evidence("tr td", text, position);
       const trackFields: RawRecord["fields"] = [
         { field: "title", value: trackTitle, evidence: where },
@@ -541,26 +588,45 @@ export class SincopaAdapter implements SourceAdapter {
       if (number) trackFields.push({ field: "track_number", value: number, evidence: where });
       const seconds = durationSeconds(text);
       if (seconds !== undefined) trackFields.push({ field: "duration_seconds", value: String(seconds), evidence: where });
-      records.push(this.record("track", artist ? `${artist}::${title}::${trackTitle}` : `${title}::${trackTitle}`, trackFields));
+      records.push(this.record("track", artist ? `${artist}::${key}::${trackTitle}` : `${key}::${trackTitle}`, trackFields));
 
       // El compositor va entre paréntesis; la duración lo sigue y no forma
       // parte del crédito.
       const composer = /\(([^)]+)\)(?:\s*\d{1,2}:[0-5]\d)?\s*$/.exec(text)?.[1];
-      const credited = composer ? clean(composer) : "";
-      if (credited && named(credited)) {
+      // Varios autores van separados por «/»: un crédito por cada uno.
+      const authors = composer ? composer.split(/\s*\/\s*/).map((part) => clean(part)) : [];
+      for (const credited of authors) {
+        if (!credited || !named(credited)) continue;
         records.push(this.record("person", credited, [{ field: "name", value: credited, evidence: where }]));
+        // Con sufijo de identidad, el disco del crédito es el de la ficha y no
+        // el homónimo del mismo artista: el puente lo busca por «artista::disco».
         const composerCredit: RawRecord["fields"] = [
-          { field: "album_title", value: title, evidence: where },
+          { field: "album_title", value: key, evidence: where },
           { field: "track_title", value: trackTitle, evidence: where },
           { field: "credited_name", value: credited, evidence: where },
           { field: "credit_role", value: "composer", evidence: where },
           { field: "credit_scope", value: "track", evidence: where },
         ];
         if (artist) composerCredit.push({ field: "artist_name", value: artist, evidence: where });
-        records.push(this.record("track_credit", `${title}::${trackTitle}::${credited}`, composerCredit));
+        records.push(this.record("track_credit", `${key}::${trackTitle}::${credited}`, composerCredit));
       }
       });
     });
+    // Errata de la ficha: el mismo número dos veces y ninguno para el siguiente
+    // («03, 03, 05», Mayra Martí 1984): la segunda pista es la siguiente.
+    const numbers = records.filter((record) => record.entityKind === "track")
+      .map((record) => record.fields.find((field) => field.field === "track_number"))
+      .filter((field): field is NonNullable<typeof field> => field !== undefined);
+    const printed = new Set(numbers.map((field) => Number(field.value)));
+    const seen = new Set<number>();
+    for (const field of numbers) {
+      const value = Number(field.value);
+      if (seen.has(value) && !printed.has(value + 1)) {
+        field.value = String(value + 1).padStart(String(field.value).length, "0");
+        printed.add(value + 1);
+      }
+      seen.add(Number(field.value));
+    }
 
     // Créditos del disco. Un crédito acotado con "(tracks NN)" es de pista;
     // el resto es de álbum. Ninguno se convierte jamás en membresía de banda:
@@ -572,7 +638,7 @@ export class SincopaAdapter implements SourceAdapter {
         const scope = credit.tracks ? "track" : "album";
         records.push(this.record("person", credit.name, [{ field: "name", value: credit.name, evidence: where }]));
         const fields: RawRecord["fields"] = [
-          { field: "album_title", value: title, evidence: where },
+          { field: "album_title", value: key, evidence: where },
           { field: "credited_name", value: credit.name, evidence: where },
           { field: "credit_role", value: credit.role, evidence: where },
           { field: "credit_scope", value: scope, evidence: where },
@@ -581,7 +647,7 @@ export class SincopaAdapter implements SourceAdapter {
         if (credit.tracks) fields.push({ field: "track_numbers", value: credit.tracks, evidence: where });
         records.push(this.record(
           scope === "track" ? "track_credit" : "album_credit",
-          `${title}::${credit.name}::${credit.role}`,
+          `${key}::${credit.name}::${credit.role}`,
           fields,
         ));
       }

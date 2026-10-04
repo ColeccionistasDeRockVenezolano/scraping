@@ -1,0 +1,35 @@
+{
+  "section": "ethnic",
+  "dryRun": false,
+  "note": "Sincopa ethnic: pistas de las fichas separadas de discos mezclados (adapter 1.3.2, Brian 2026-10-03)",
+  "kinds": {
+    "album": {
+      "identities": 0,
+      "claims": 0,
+      "verdicts": {},
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "track": {
+      "identities": 41,
+      "claims": 157,
+      "verdicts": {
+        "different:solo-coincide-bajo-otro-padre": 28,
+        "different:sin-coincidencia": 6,
+        "same:mismo-titulo-mismo-disco": 7
+      },
+      "applied": 27,
+      "unchanged": 105,
+      "stillCandidate": 25,
+      "dismissed": 0,
+      "failed": 0
+    }
+  },
+  "holds": [],
+  "duplicateFlags": [],
+  "errors": [],
+  "runId": 11739
+}

@@ -4,10 +4,14 @@
 // rastreo ya se hizo aparte. Cada lote es un run propio (deshacible por run).
 // La deduplicación de claims no depende de la versión del extractor: lo ya
 // ingerido se reutiliza y no cambia el estado de la cola.
-//   tsx scripts/ingest-sincopa-stored.ts [--section=jazz,latin_pop,...] [--batch=40] [--except-rock]
+//   tsx scripts/ingest-sincopa-stored.ts [--section=jazz,latin_pop,...] [--batch=40] [--except-rock] [--only-unseen] [--urls-file=reports/x.txt]
+// `--urls-file` limita la corrida a las URL listadas (una por línea): reingesta dirigida tras corregir el adapter.
+// `--only-unseen` salta las páginas que ya tienen claims: reingerir una página vieja con el
+// extractor actual puede leer distinto un título multilínea y chocar con sus claims de entonces.
 // Sin --section recorre las secciones no rock primero y rock/pop al final.
+import { readFileSync } from "node:fs";
 import { SincopaAdapter } from "../src/adapters/sincopa.js";
-import { closeDb } from "../src/db/client.js";
+import { closeDb, getPool } from "../src/db/client.js";
 import { withCandidateSnapshot } from "../src/er/repository.js";
 import { ingestAdapterSnapshots, loadStoredAdapterPages } from "../src/ingest/runner.js";
 
@@ -21,6 +25,20 @@ async function main(): Promise<void> {
   const pages = (await loadStoredAdapterPages("sincopa", adapter))
     .filter((page) => (only ? only.includes(sectionOf(page.url)) : true))
     .filter((page) => !(process.argv.includes("--except-rock") && sectionOf(page.url) === "rock_pop"));
+  const urlsFile = arg("urls-file");
+  if (urlsFile !== undefined) {
+    const wanted = new Set(readFileSync(urlsFile, "utf8").split("\n").map((line) => line.trim()).filter(Boolean));
+    pages.splice(0, pages.length, ...pages.filter((page) => wanted.has(page.url)));
+    console.log(JSON.stringify({ urlsFile, pages: pages.length, wanted: wanted.size }));
+  }
+  if (process.argv.includes("--only-unseen")) {
+    const seen = new Set((await getPool().query<{ id: string }>(
+      `SELECT DISTINCT c.raw_page_id::text AS id FROM ingest.claims c JOIN ingest.sources s ON s.id=c.source_id
+        WHERE s.slug='sincopa' AND c.raw_page_id IS NOT NULL`)).rows.map((row) => Number(row.id)));
+    const before = pages.length;
+    pages.splice(0, pages.length, ...pages.filter((page) => page.rawPageId === undefined || !seen.has(page.rawPageId)));
+    console.log(JSON.stringify({ onlyUnseen: true, pages: pages.length, skipped: before - pages.length }));
+  }
   // Primero lo que se pidió ampliar; el rock ya cargado, al final.
   pages.sort((a, b) => Number(sectionOf(a.url) === "rock_pop") - Number(sectionOf(b.url) === "rock_pop"));
   const started = Date.now();

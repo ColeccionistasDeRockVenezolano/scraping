@@ -1,0 +1,227 @@
+{
+  "section": "rock_pop",
+  "dryRun": false,
+  "note": "Sincopa rock_pop: pistas de popurrí y números con raya que el adapter 1.3.0 no leía (reingesta runs 11688–11697, adapter 1.3.1)",
+  "kinds": {
+    "album": {
+      "identities": 9,
+      "claims": 23,
+      "verdicts": {
+        "same:mismo-titulo-mismo-artista": 7,
+        "approve:auto-match": 2
+      },
+      "applied": 1,
+      "unchanged": 19,
+      "stillCandidate": 2,
+      "dismissed": 0,
+      "failed": 1
+    },
+    "track": {
+      "identities": 63,
+      "claims": 206,
+      "verdicts": {
+        "different:sin-coincidencia": 23,
+        "hold:titulo-casi-igual-mismo-padre": 14,
+        "approve:auto-match": 1,
+        "same:mismo-titulo-mismo-disco": 21,
+        "same:titulo-casi-igual-misma-posicion": 2,
+        "different:solo-coincide-bajo-otro-padre": 2
+      },
+      "applied": 3,
+      "unchanged": 37,
+      "stillCandidate": 80,
+      "dismissed": 0,
+      "failed": 13
+    }
+  },
+  "holds": [
+    {
+      "kind": "track",
+      "identityRaw": "Frank Quintero::Pájaros y Estrellas::Estrella De Orion",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "40172 «Pájaros y Estrellas I (a.Estrella de Orión b.Señora Luna)»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Regardless::What It Was Independent::Poor Miss Wilder",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "41446 «The night that Mr Bradford lost his mind: I. Poor Miss Wilder, II. Inside the abyss that is Bradford's mind»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Regardless::What It Was Independent::Inside the Abyss That Is Bradford's Mind",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "41446 «The night that Mr Bradford lost his mind: I. Poor Miss Wilder, II. Inside the abyss that is Bradford's mind»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Lobin Ejnay::Cuando Yo Era Pavo::Potpourri Los Claners",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "17454 «Potpourrit Los Claners»",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Lobin Ejnay::Cuando Yo Era Pavo::I'll Follow The Sun",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "17455 «I´ll follow the sun»",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Lobin Ejnay::Cuando Yo Era Pavo::I'll Be Back",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "17463 «I´ll be back»",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Carlos Moreán::Carlos Moreán::Regresa A Mí (Come On Back To Me)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "24626 «Regresa A Mí»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Frank Quintero::De Noche y Con Poca Luz::Preludio de Mediodia",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "42148 «Preludio de Mediodia, Mediodia»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Frank Quintero::De Noche y Con Poca Luz::Mediodia",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "42148 «Preludio de Mediodia, Mediodia»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Frank Quintero::De Noche y Con Poca Luz::Sueño De Medianoche Part III/Dirgni",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "42150 «Dirgni, Sueño De Medianoche III»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Frank Quintero::De Noche y Con Poca Luz::Preludio",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "42148 «Preludio de Mediodia, Mediodia»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ficción::Sobre La Cresta De La Ola::La Mula",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "14631 «Suite De Las Siete Vírgenes y La Mula (Parte a: La Mula, Parte b: Las siete vírgenes)»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ficción::Sobre La Cresta De La Ola::Las Siete Vírgenes",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "14631 «Suite De Las Siete Vírgenes y La Mula (Parte a: La Mula, Parte b: Las siete vírgenes)»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Viva Una Experiencia Psicotomimética::Since You've Been Gone",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "622 «Sweet Sweet Baby (Since You've Been Gone)»",
+      "claims": 3
+    }
+  ],
+  "duplicateFlags": [],
+  "errors": [
+    {
+      "kind": "album",
+      "identityRaw": "Desorden Público::Guarachando En Navidad Volumen 1",
+      "error": "el claim 2215488 ya apunta a 4692, no a 13968"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Banda de Casablanca::El Sueño::Háblame",
+      "error": "el claim 1829085 ya apunta a 15359, no a 15362"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Banda de Casablanca::El Sueño::25 or 6 to 4",
+      "error": "el claim 1829086 ya apunta a 15368, no a 15364"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Banda de Casablanca::El Sueño::I Don't Need No Doctor",
+      "error": "el claim 1829087 ya apunta a 15360, no a 15384"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Banda de Casablanca::El Sueño::Esta Rutina",
+      "error": "el claim 1829088 ya apunta a 15367, no a 15383"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Lobin Ejnay::Cuando Yo Era Pavo::Tell Me Why",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Frank Quintero::De Noche y Con Poca Luz::De Noche y Con Poca Luz",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Frank Quintero::De Noche y Con Poca Luz::Muchacha Timida",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Frank Quintero::De Noche y Con Poca Luz::Tonto Romántico",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Frank Quintero::De Noche y Con Poca Luz::Señora Luna",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Frank Quintero::De Noche y Con Poca Luz::Canción Para Ti",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Frank Quintero::De Noche y Con Poca Luz::Profundo En Mi Corazón",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Frank Quintero::De Noche y Con Poca Luz::Estas En Mi",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Viva Una Experiencia Psicotomimética::Una Noche En Satín Blanco",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    }
+  ],
+  "runId": 11704,
+  "evidenceVerdicts": [
+    {
+      "kind": "track",
+      "identityRaw": "La Banda de Casablanca::El Sueño::I Don't Need No Doctor",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 15384,
+      "detail": "I Don´t Need no Doctor"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Frank Quintero::De Noche y Con Poca Luz::Sueño De Medianoche",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 42145,
+      "detail": "Sueño De Medianoche I and II"
+    }
+  ]
+}

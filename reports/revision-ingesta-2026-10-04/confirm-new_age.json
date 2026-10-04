@@ -1,0 +1,87 @@
+{
+  "section": "new_age",
+  "dryRun": false,
+  "note": "Revisión de ingesta 2026-10-04 (Brian): promover discos y pistas pendientes con ER; zona gris decidida por repertorio (overrides.json)",
+  "kinds": {
+    "album": {
+      "identities": 0,
+      "claims": 0,
+      "verdicts": {},
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "track": {
+      "identities": 14,
+      "claims": 48,
+      "verdicts": {
+        "approve:auto-match": 3,
+        "dismiss:revision-ingesta-parte-de-popurri": 1,
+        "same:revision-ingesta-titulo-contenido": 8,
+        "same:revision-ingesta-errata": 2
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 3,
+      "dismissed": 1,
+      "failed": 10
+    }
+  },
+  "holds": [],
+  "duplicateFlags": [],
+  "errors": [
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Continuvm::Continuvm... Y Salió El Sol",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::2012::Surical Kingdom Rave",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::2012::Ground Zero Jam Sesion",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Redunjusta::23 jhnohm",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Redunjusta::Flesh Frogs",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Redunjusta::Desarollo V",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Redunjusta::Eulogy",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Redunjusta::Increado",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Redunjusta::Reza's Dream",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Redunjusta::The Seer Mix",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    }
+  ],
+  "runId": 11962
+}

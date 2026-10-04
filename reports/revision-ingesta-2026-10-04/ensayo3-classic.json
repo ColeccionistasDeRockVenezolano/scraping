@@ -1,0 +1,38 @@
+{
+  "section": "classic",
+  "dryRun": true,
+  "note": "Sincopa classic: promoción masiva por reglas",
+  "kinds": {
+    "album": {
+      "identities": 2,
+      "claims": 12,
+      "verdicts": {
+        "same:revision-ingesta-titulo": 2
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "track": {
+      "identities": 82,
+      "claims": 267,
+      "verdicts": {
+        "different:sin-coincidencia": 72,
+        "same:revision-ingesta-a-mano": 1,
+        "approve:auto-match": 2,
+        "same:revision-ingesta-titulo-contenido": 1,
+        "different:revision-ingesta-otra-pista": 6
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    }
+  },
+  "holds": [],
+  "duplicateFlags": [],
+  "errors": []
+}

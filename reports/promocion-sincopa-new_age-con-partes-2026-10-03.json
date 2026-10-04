@@ -1,0 +1,41 @@
+{
+  "section": "new_age",
+  "dryRun": false,
+  "note": "Sincopa new_age: pistas de popurrí y números con raya que el adapter 1.3.0 no leía (reingesta runs 11688–11697, adapter 1.3.1)",
+  "kinds": {
+    "album": {
+      "identities": 0,
+      "claims": 0,
+      "verdicts": {},
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "track": {
+      "identities": 1,
+      "claims": 5,
+      "verdicts": {
+        "hold:titulo-casi-igual-mismo-padre": 1
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    }
+  },
+  "holds": [
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Continuvm::Continuvm... Y Salió El Sol",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "18045 «Continuvm»; 19530 «Y Salió el Sol»",
+      "claims": 5
+    }
+  ],
+  "duplicateFlags": [],
+  "errors": [],
+  "runId": 11701
+}

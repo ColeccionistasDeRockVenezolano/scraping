@@ -1,0 +1,111 @@
+{
+  "section": "new_age",
+  "dryRun": true,
+  "note": "Sincopa new_age: promoción masiva por reglas",
+  "kinds": {
+    "album": {
+      "identities": 0,
+      "claims": 0,
+      "verdicts": {},
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "track": {
+      "identities": 14,
+      "claims": 48,
+      "verdicts": {
+        "approve:auto-match": 3,
+        "hold:titulo-casi-igual-mismo-padre": 11
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    }
+  },
+  "holds": [
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Solar Concert For Bhagavan::Shangri-La",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "19529 «I ching, Shangri-la»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Continuvm::Continuvm... Y Salió El Sol",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "18045 «Continuvm»; 19530 «Y Salió el Sol»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::2012::Surical Kingdom Rave",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "17655 «Suricat Kingdom Rave»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::2012::Ground Zero Jam Sesion",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "17659 «Ground Zero Jam Session»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Redunjusta::23 jhnohm",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "2001 «23 Jhnohm (Jhno Remix)»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Redunjusta::Flesh Frogs",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "2006 «Flesh Frogs (Paul Godwin Remix)»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Redunjusta::Desarollo V",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "2011 «Desarollo V (Miguel Noya Remix)»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Redunjusta::Eulogy",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "2030 «Eulogy (Paul Godwin Remix)»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Redunjusta::Increado",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "2042 «Increado (Miguel Noya Remix)»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Redunjusta::Reza's Dream",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "2048 «Reza's Dream (Reza Remix)»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Redunjusta::The Seer Mix",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "2054 «The Seer Mix (Seer Remix)»",
+      "claims": 4
+    }
+  ],
+  "duplicateFlags": [],
+  "errors": []
+}

@@ -1,0 +1,226 @@
+{
+  "section": "new_age",
+  "dryRun": false,
+  "note": "Sincopa new_age: un crédito por autor en «A/B»; partes sueltas solo con enlace seguro (pedido de Brian 2026-10-02)",
+  "kinds": {
+    "person": {
+      "identities": 33,
+      "claims": 34,
+      "verdicts": {
+        "hold:no-es-una-persona:multiple_people": 1,
+        "hold:no-es-una-persona:organization_like": 5,
+        "hold:no-es-una-persona:agrupacion-o-lugar": 1,
+        "hold:no-es-una-persona:parentesis-de-titulo": 1,
+        "approve:auto-match": 8,
+        "different:homonimo-sin-proyecto-comun": 2,
+        "hold:parte-de-credito-multiple:sin-enlace-seguro": 12,
+        "different:sin-coincidencia": 3
+      },
+      "applied": 5,
+      "unchanged": 10,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "album_credit": {
+      "identities": 4,
+      "claims": 20,
+      "verdicts": {
+        "puente": 4
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 20,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "track_credit": {
+      "identities": 30,
+      "claims": 180,
+      "verdicts": {
+        "puente": 30
+      },
+      "applied": 13,
+      "unchanged": 65,
+      "stillCandidate": 102,
+      "dismissed": 0,
+      "failed": 0
+    }
+  },
+  "holds": [
+    {
+      "kind": "person",
+      "identityRaw": "Brain Gain Unlimited - A.C. Tañerla",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudio Sonofolk",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Ra Visual Sound",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "R.V.S. Records",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "R.V.S. Records Estudios",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Tweety Studios",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Uranium Records",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Dance of the Birds of Paradise",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "detail": "solo aparece como paréntesis final de títulos de pista; puede ser un subtítulo o una traducción",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "H. Parry",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "W. Blake",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "R. Gonsalves",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "A. Salas",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "O. Martínez",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J.V. Belisario",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "L. Jiménez",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "C. Sardi",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "A. Belloso",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J.I. Sucre",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "A. Gómez",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "F. Gómez",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    }
+  ],
+  "duplicateFlags": [
+    {
+      "kind": "person",
+      "identityRaw": "Roger Fernay",
+      "rule": "homonimo-sin-proyecto-comun",
+      "flag": {
+        "reason": "homonimo-exacto",
+        "otherIds": [
+          12624
+        ],
+        "otherNames": [
+          "Roger Fernay"
+        ]
+      },
+      "targetId": 38998
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Sebastian Ayala",
+      "rule": "homonimo-sin-proyecto-comun",
+      "flag": {
+        "reason": "homonimo-exacto",
+        "otherIds": [
+          1219
+        ],
+        "otherNames": [
+          "Sebastián Ayala"
+        ]
+      },
+      "targetId": 39002
+    }
+  ],
+  "errors": [],
+  "runId": 11539
+}

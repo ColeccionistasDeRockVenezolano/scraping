@@ -1,0 +1,23 @@
+{
+  "section": "rock_pop",
+  "dryRun": false,
+  "note": "Sincopa rock_pop: créditos de pista de las fichas con caras renumeradas",
+  "kinds": {
+    "track_credit": {
+      "identities": 1739,
+      "claims": 10554,
+      "verdicts": {
+        "puente": 1739
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 10590,
+      "dismissed": 0,
+      "failed": 0
+    }
+  },
+  "holds": [],
+  "duplicateFlags": [],
+  "errors": [],
+  "runId": 11576
+}

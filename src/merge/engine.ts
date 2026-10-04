@@ -161,6 +161,20 @@ async function wasAsserted(client: PoolClient, spec: EntitySpec, targetId: numbe
 }
 
 async function attachClaim(client: PoolClient, claimId: number, spec: EntitySpec, targetId: number, status: "accepted" | "candidate" | "conflict" = "accepted"): Promise<void> {
+  // La misma ficha puede volver con otra identidad (el adapter cambió cómo lee
+  // el título) y el mismo valor: el gemelo ya está pegado a la entidad, y
+  // pegar este rompería claims_dedupe_uk. Queda superseded, sin destino.
+  const { rows: [twin] } = await client.query<{ id: string }>(`
+    SELECT o.id::text FROM ingest.claims o JOIN ingest.claims c ON c.id=$2
+     WHERE o.${spec.targetColumn}=$1 AND o.id<>c.id AND o.source_id=c.source_id
+       AND coalesce(o.raw_page_id,0)=coalesce(c.raw_page_id,0) AND coalesce(o.seed_upload_id,0)=coalesce(c.seed_upload_id,0)
+       AND o.entity_kind=c.entity_kind AND o.field=c.field AND o.raw_hash=c.raw_hash
+     LIMIT 1`, [targetId, claimId]);
+  if (twin) {
+    await client.query(`UPDATE ingest.claims SET status='superseded',updated_at=now(),notes=concat_ws(' · ',notes,$2::text) WHERE id=$1`,
+      [claimId, `mismo valor que el claim ${twin.id}, ya en la entidad ${targetId}`]);
+    return;
+  }
   await client.query(`UPDATE ingest.claims SET ${spec.targetColumn}=$1,status=$2,updated_at=now() WHERE id=$3`, [targetId, status, claimId]);
 }
 
@@ -216,19 +230,30 @@ async function resolutionReview(client: PoolClient, claimId: number, decisionId:
     track: decision.kind === "TRACK" ? target ?? null : null,
     artist: decision.kind === "ARTIST" ? target ?? null : null,
   };
+  const values = [
+    kind, claimId, decision.action === "POSSIBLE_MATCH" ? 7 : 6,
+    columns.person, columns.organization, columns.album, columns.track, columns.artist,
+    json({ resolutionDecisionId: decisionId, action: decision.action, score: decision.score, explanation: decision.explanation, features: decision.features, aiProposal: decision.aiProposal ?? null, aiFailure: decision.aiFailure ?? null }),
+  ];
+  // Cada nuevo intento de merge produce otra decisión del ER. La revisión
+  // abierta del mismo claim y tipo se actualiza con la última en vez de
+  // abrir una segunda.
   const existing = await client.query<{ id: string }>(`
-    SELECT id FROM ingest.review_queue WHERE claim_a_id=$1 AND status IN ('open','in_progress')
-      AND payload->>'resolutionDecisionId'=$2::text ORDER BY id LIMIT 1`, [claimId, decisionId]);
-  if (existing.rows[0]?.id) return Number(existing.rows[0].id);
+    SELECT id FROM ingest.review_queue WHERE claim_a_id=$1 AND kind=$2::ingest.review_kind AND status IN ('open','in_progress')
+       AND payload ? 'resolutionDecisionId'
+     ORDER BY id LIMIT 1`, [claimId, kind]);
+  if (existing.rows[0]?.id) {
+    await client.query(`
+      UPDATE ingest.review_queue
+         SET priority=$2,person_a_id=$3,organization_a_id=$4,album_id=$5,track_id=$6,artist_a_id=$7,payload=$8::jsonb,updated_at=now()
+       WHERE id=$1`, [Number(existing.rows[0].id), ...values.slice(2)]);
+    return Number(existing.rows[0].id);
+  }
   const saved = await client.query<{ id: string }>(`
     INSERT INTO ingest.review_queue(
       kind,claim_a_id,priority,person_a_id,organization_a_id,album_id,track_id,artist_a_id,payload,notes
     ) VALUES($1::ingest.review_kind,$2,$3,$4,$5,$6,$7,$8,$9::jsonb,'ER no autorizo auto-merge')
-    RETURNING id`, [
-    kind, claimId, decision.action === "POSSIBLE_MATCH" ? 7 : 6,
-    columns.person, columns.organization, columns.album, columns.track, columns.artist,
-    json({ resolutionDecisionId: decisionId, action: decision.action, score: decision.score, explanation: decision.explanation, features: decision.features, aiProposal: decision.aiProposal ?? null, aiFailure: decision.aiFailure ?? null }),
-  ]);
+    RETURNING id`, values);
   return Number(saved.rows[0]!.id);
 }
 
@@ -293,11 +318,16 @@ function explicitDecision(input: ResolutionInput, id: number, canonical: string)
 
 // `reviewDecisionId` falta cuando la decisión no sale de la Mesa sino de una
 // petición directa del operador a la API (crear una ficha homónima a sabiendas).
+//
+// `reference` nombra el origen cuando no es ni la Mesa ni una petición suelta:
+// la promoción masiva por reglas (src/review/bulk-policy.ts) la usa para que el
+// rastro diga QUÉ regla y QUÉ lote decidieron, no «una petición del operador».
 export type HumanResolutionOverride =
-  | { verdict: "same"; targetId: number; reviewDecisionId?: number; decidedBy: string }
-  | { verdict: "different"; reviewDecisionId?: number; decidedBy: string };
+  | { verdict: "same"; targetId: number; reviewDecisionId?: number; decidedBy: string; reference?: string }
+  | { verdict: "different"; reviewDecisionId?: number; decidedBy: string; reference?: string };
 
 function humanReference(override: HumanResolutionOverride): string {
+  if (override.reference !== undefined) return override.reference;
   return override.reviewDecisionId === undefined ? "una petición del operador" : `review_decision ${override.reviewDecisionId}`;
 }
 

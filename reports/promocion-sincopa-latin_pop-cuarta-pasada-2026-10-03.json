@@ -1,0 +1,703 @@
+{
+  "section": "latin_pop",
+  "dryRun": false,
+  "note": "Sincopa latin_pop: cuarta pasada de discos y pistas (regla «otro número» y pistas madre del adapter 1.3.1)",
+  "kinds": {
+    "album": {
+      "identities": 11,
+      "claims": 25,
+      "verdicts": {
+        "hold:padre-sin-resolver": 1,
+        "approve:auto-match": 9,
+        "hold:titulo-casi-igual-mismo-padre": 1
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 9,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "track": {
+      "identities": 461,
+      "claims": 1950,
+      "verdicts": {
+        "hold:padre-sin-resolver": 22,
+        "different:sin-coincidencia": 362,
+        "hold:titulo-casi-igual-mismo-padre": 56,
+        "different:titulo-casi-igual-otro-numero": 7,
+        "approve:auto-match": 1,
+        "same:mismo-titulo-mismo-disco": 13
+      },
+      "applied": 4,
+      "unchanged": 6,
+      "stillCandidate": 1618,
+      "dismissed": 0,
+      "failed": 11
+    }
+  },
+  "holds": [
+    {
+      "kind": "album",
+      "identityRaw": "Juan Carlos::Baila",
+      "rule": "padre-sin-resolver",
+      "detail": "el artista del disco aún no está en el core",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Daiquiri::La Historia Lo Mejor del Chamo Candela",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "6919 «La Historia»",
+      "claims": 8
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Carlos::Baila::Baila Con Tu Sabrosura",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Carlos::Baila::Asesina A Sueldo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Carlos::Baila::Te Di Mi Amor",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Carlos::Baila::Cínica",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Carlos::Baila::Nada Pasó",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Carlos::Baila::Te Prohibó",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Carlos::Baila::Por Qué",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Carlos::Baila::Era Su Primer Beso",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Carlos::Baila::Cínica Remix",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Nancy Ramos::Esta Parranda Te La Debía::La Parranda",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "84073 «Esta Parranda Te La Debía»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::No Vale La Pena",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "144875 «Mosaico No. 13: No Vale la Pena / la Mora / Qui Madame / el Muerto Se Fue de Rumba»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::La Mora",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "144875 «Mosaico No. 13: No Vale la Pena / la Mora / Qui Madame / el Muerto Se Fue de Rumba»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::El Muerto Se Fué De Rumba",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "144875 «Mosaico No. 13: No Vale la Pena / la Mora / Qui Madame / el Muerto Se Fue de Rumba»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Muchos Besos",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "144877 «Mosaico No. 14: Muchos Besos / Que Me Importa / Amor Ciego / Se Va Covadonga / Anabacoa»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Qué Me Importa",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "144877 «Mosaico No. 14: Muchos Besos / Que Me Importa / Amor Ciego / Se Va Covadonga / Anabacoa»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Amor Ciego",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "144877 «Mosaico No. 14: Muchos Besos / Que Me Importa / Amor Ciego / Se Va Covadonga / Anabacoa»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Se Va Covadonga",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "144877 «Mosaico No. 14: Muchos Besos / Que Me Importa / Amor Ciego / Se Va Covadonga / Anabacoa»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Anabacoa",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "144877 «Mosaico No. 14: Muchos Besos / Que Me Importa / Amor Ciego / Se Va Covadonga / Anabacoa»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Nuestras Vidas",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "144876 «Mosaico N 15 Nuestras Vidas; Cuatro Personas; Reflexion; Uno Dos Y Tres; Ay Mama Ines»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Cuatro Personas",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "144876 «Mosaico N 15 Nuestras Vidas; Cuatro Personas; Reflexion; Uno Dos Y Tres; Ay Mama Ines»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Reflexión",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "144876 «Mosaico N 15 Nuestras Vidas; Cuatro Personas; Reflexion; Uno Dos Y Tres; Ay Mama Ines»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Uno Dos Tres",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "144876 «Mosaico N 15 Nuestras Vidas; Cuatro Personas; Reflexion; Uno Dos Y Tres; Ay Mama Ines»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Ay! Mamá Inés",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "144876 «Mosaico N 15 Nuestras Vidas; Cuatro Personas; Reflexion; Uno Dos Y Tres; Ay Mama Ines»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Qué Te Pasa?",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "144878 «Mosaico N 16 Que Te Pasa / El Cantante / Note Importe Saber / Bumba / Cutiro»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::El Cantante",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "144878 «Mosaico N 16 Que Te Pasa / El Cantante / Note Importe Saber / Bumba / Cutiro»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Bumba",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "144878 «Mosaico N 16 Que Te Pasa / El Cantante / Note Importe Saber / Bumba / Cutiro»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Cutiro",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "144878 «Mosaico N 16 Que Te Pasa / El Cantante / Note Importe Saber / Bumba / Cutiro»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Así Quería Verte",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "144879 «Mosaico N 17 20 Años / Asi Queria Verte / Perfidia / Sun Sun Babae / El Carbonero»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Perfidia",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "144879 «Mosaico N 17 20 Años / Asi Queria Verte / Perfidia / Sun Sun Babae / El Carbonero»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Sun Sun Babae",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "144879 «Mosaico N 17 20 Años / Asi Queria Verte / Perfidia / Sun Sun Babae / El Carbonero»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::El Carbonero",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "144879 «Mosaico N 17 20 Años / Asi Queria Verte / Perfidia / Sun Sun Babae / El Carbonero»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Alma De Niño",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "144880 «Mosaico N 18 Alma De Niño / Como Arrullo / Entre Tu Y Yo / Cosita Linda / Se Acabo»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Entre Tú y Yo",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "144880 «Mosaico N 18 Alma De Niño / Como Arrullo / Entre Tu Y Yo / Cosita Linda / Se Acabo»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Cosita Linda",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "144880 «Mosaico N 18 Alma De Niño / Como Arrullo / Entre Tu Y Yo / Cosita Linda / Se Acabo»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Se Acabó",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "144880 «Mosaico N 18 Alma De Niño / Como Arrullo / Entre Tu Y Yo / Cosita Linda / Se Acabo»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Daiquiri::La Historia Lo Mejor del Chamo Candela::Chamo Candela",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Daiquiri::La Historia Lo Mejor del Chamo Candela::Puro Deseo De Amar",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Daiquiri::La Historia Lo Mejor del Chamo Candela::La Casa Del Ritmo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Daiquiri::La Historia Lo Mejor del Chamo Candela::Zambo Montuno",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Daiquiri::La Historia Lo Mejor del Chamo Candela::Morir De Amor",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Daiquiri::La Historia Lo Mejor del Chamo Candela::Caribe Soy",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Daiquiri::La Historia Lo Mejor del Chamo Candela::Pa’ Fricasé",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Daiquiri::La Historia Lo Mejor del Chamo Candela::Agua Que No Has De Beber",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Daiquiri::La Historia Lo Mejor del Chamo Candela::Caso Perdido",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Daiquiri::La Historia Lo Mejor del Chamo Candela::Mi Son Montuno",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Daiquiri::La Historia Lo Mejor del Chamo Candela::Como El Viento",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Daiquiri::La Historia Lo Mejor del Chamo Candela::Vente Conmigo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Daiquiri::La Historia Lo Mejor del Chamo Candela::Conga Popular",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Guaco::Guacomania::Intro Masculino",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "142016 «Guacomania 1: Intro Masculino / El Billetero / Para Ella / Pastelero»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Guaco::Guacomania::El Billetero",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "142016 «Guacomania 1: Intro Masculino / El Billetero / Para Ella / Pastelero»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Guaco::Guacomania::Para Ella",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "142016 «Guacomania 1: Intro Masculino / El Billetero / Para Ella / Pastelero»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Guaco::Guacomania::Pastelero",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "142016 «Guacomania 1: Intro Masculino / El Billetero / Para Ella / Pastelero»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Guaco::Guacomania::Maracucha",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "142017 «Guacomania 2: Maracucha / Noche Sensacional / Disco Guaco»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Guaco::Guacomania::Noche Sensacional",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "142017 «Guacomania 2: Maracucha / Noche Sensacional / Disco Guaco»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Guaco::Guacomania::Disco Guaco",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "142017 «Guacomania 2: Maracucha / Noche Sensacional / Disco Guaco»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Guaco::Guacomania::Homenaje a Jesús Lozano",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "142018 «Guacomania 3: Homenaje A Jesus Lozano / Noviazgo En Noche Buena / La Diferencia»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Guaco::Guacomania::Noviazgo En Noche Buena",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "142018 «Guacomania 3: Homenaje A Jesus Lozano / Noviazgo En Noche Buena / La Diferencia»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Guaco::Guacomania::La Diferencia",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "142018 «Guacomania 3: Homenaje A Jesus Lozano / Noviazgo En Noche Buena / La Diferencia»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Guaco::Guacomania::Venite Pa' Maracaibo",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "142019 «Guacomania 4: Venite Pa Maracaibo / A Patinar / Maracaibo Linda / Lola Y Su Perola»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Guaco::Guacomania::A Patinar",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "142019 «Guacomania 4: Venite Pa Maracaibo / A Patinar / Maracaibo Linda / Lola Y Su Perola»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Guaco::Guacomania::Maracaibo Linda",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "142019 «Guacomania 4: Venite Pa Maracaibo / A Patinar / Maracaibo Linda / Lola Y Su Perola»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Guaco::Guacomania::Lola y Su Perola",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "142019 «Guacomania 4: Venite Pa Maracaibo / A Patinar / Maracaibo Linda / Lola Y Su Perola»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Guaco::Guacomania::Guaco y Tambora",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "142020 «Guacomania 5: Guaco Y Tambora / Linda Caraqueña / Sandunguera»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Guaco::Guacomania::Linda Caraqueña",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "142020 «Guacomania 5: Guaco Y Tambora / Linda Caraqueña / Sandunguera»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Guaco::Guacomania::Sandunguera",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "142020 «Guacomania 5: Guaco Y Tambora / Linda Caraqueña / Sandunguera»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Guaco::Guacomania::Intro Femenino",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "142021 «Guacomania 6: Intro Femenino / Las Pulgas / Aguilas Del Zulia / Parranda De Navidad»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Guaco::Guacomania::Las Pulgas",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "142021 «Guacomania 6: Intro Femenino / Las Pulgas / Aguilas Del Zulia / Parranda De Navidad»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Guaco::Guacomania::Aguilas Del Zulia",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "142021 «Guacomania 6: Intro Femenino / Las Pulgas / Aguilas Del Zulia / Parranda De Navidad»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Guaco::Guacomania::Parranda De Navidad",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "142021 «Guacomania 6: Intro Femenino / Las Pulgas / Aguilas Del Zulia / Parranda De Navidad»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Guaco::Super Guaco Serie 32::Las Caraqueñas",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "56990 «Me Gustan Las Caraqueñas»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Guaco::Super Guaco Serie 32::Regalame Tu Amor",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "56985 «Amor Amor»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Dementes::40 Años, 40 Exitos::Floro",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "58546 «La Perrita De Floro»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Mayra Martí::40 Años 40 Exitos::Lejania",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "59525 «Tu Lejanía»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Mirtha Pérez::40 Años 40 Exitos::No",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "59883 «Yo No Quiero Una Mañana»; 155929 «Ya No Importas Nada»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Punto Sur::40 Años 40 Exitos::Yo",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "60424 «Yo Vivo Mi Vida»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sexteto Juventud::40 Años 40 Exitos::Guasanco No. 3",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "60762 «Guasanco»; 60780 «Guasanco No. 2»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Esteban Demián::Subyugante::Desgarrado (Remix Version)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "157359 «Desgarrado»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::Mosaico Nº 14",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "144877 «Mosaico No. 14: Muchos Besos / Que Me Importa / Amor Ciego / Se Va Covadonga / Anabacoa»",
+      "claims": 4
+    }
+  ],
+  "duplicateFlags": [],
+  "errors": [
+    {
+      "kind": "track",
+      "identityRaw": "Mayra Martí::Mayra Martí::Ya Lo He Intentado Todo",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Conjunto Ingeniería::Conjunto Ingeniería::Mambo Silbado",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sexteto Juventud::Cocinando Salsa::Mi Niña Quiere Una Cuna",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sexteto Juventud::Cocinando Salsa::Culpable",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Billo's Caracas Boys::Paula::Jardinero",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Billo's Caracas Boys::Paula::Solamente Una Vez",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Billo's Caracas Boys::Paula::Don Quijote",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Billo's Caracas Boys::Paula::Amor De Mis Amores",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Billo's Caracas Boys::Billo 72::Tres Perlas",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Billo's Caracas Boys::Billo 72::Una Flor Para Mascar",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Billo's Caracas Boys::Fiesta Con Billo::Brisa, Mar y Arena",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    }
+  ],
+  "runId": 11708,
+  "evidenceVerdicts": [
+    {
+      "kind": "track",
+      "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Del 13 al 18::20 Años",
+      "rule": "titulo-casi-igual-otro-numero",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Billo's Caracas Boys::Serie 32 Super Exitos de Billo's::Mosaico a La Billo's Nº 1",
+      "rule": "titulo-casi-igual-otro-numero",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Billo's Caracas Boys::Gold::Mosaico Nº 2",
+      "rule": "titulo-casi-igual-otro-numero",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Trina Medina::En Vivo!::Medley 3",
+      "rule": "titulo-casi-igual-otro-numero",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Trina Medina::En Vivo!::Medley 4",
+      "rule": "titulo-casi-igual-otro-numero",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol.III::Mosaico Nº 20",
+      "rule": "titulo-casi-igual-otro-numero",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Billo's Caracas Boys::Mosaicos A La Billo Vol.III::Mosaico Nº 21",
+      "rule": "titulo-casi-igual-otro-numero",
+      "detail": ""
+    }
+  ]
+}

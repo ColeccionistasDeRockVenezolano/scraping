@@ -1,0 +1,2969 @@
+{
+  "dryRun": false,
+  "runId": 11460,
+  "persons": 328,
+  "byAction": {
+    "borrar": 199,
+    "convertir": 9,
+    "revisar": 37,
+    "dejar": 12,
+    "reasignar": 71
+  },
+  "applied": 277,
+  "failed": 2,
+  "creditsMoved": 165,
+  "creditsRemoved": 280,
+  "notes": 60,
+  "errors": [
+    {
+      "id": 19843,
+      "name": "Acoustic Recording Service",
+      "error": "el catálogo no autoriza crear organization «Acoustic Recording Service»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "id": 37813,
+      "name": "La Otra Gente",
+      "error": "el catálogo no autoriza crear artist «La Otra Gente»: REVIEW: no se modifica el canonico"
+    }
+  ],
+  "plan": [
+    {
+      "id": 18739,
+      "name": "Night Flight Over Tokyo",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18750,
+      "name": "Oda Solar de los Animales",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18751,
+      "name": "Deep Blue",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18752,
+      "name": "The Encounter",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18753,
+      "name": "In The Gardens",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18754,
+      "name": "Hellish Machines",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18757,
+      "name": "Saturn's Rings Song",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18758,
+      "name": "Vuelo Nocturno sobre Tokyo",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18759,
+      "name": "Primitive Hallucinatory Ecstasy",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18760,
+      "name": "Cosmic Whales",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18761,
+      "name": "Kali's Dance",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18762,
+      "name": "Continium...and the Sun Rose",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18763,
+      "name": "Blue Mountains of Turkain",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18764,
+      "name": "Torrential Waters Prelude",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18765,
+      "name": "Dignified Idiots Blue Tango",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18767,
+      "name": "Full Moon",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18768,
+      "name": "Heavy Traffic",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18769,
+      "name": "Little Indian Summer",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18770,
+      "name": "Blue Moon Valley Raga",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18771,
+      "name": "Tranquility Sea",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18772,
+      "name": "Interlunium",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18773,
+      "name": "Rending The Mind Veil",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18774,
+      "name": "Black Moon Warriors",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18775,
+      "name": "Crucifixion",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18776,
+      "name": "Virtual Synchronicity",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18777,
+      "name": "Biosonic woods",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18778,
+      "name": "Resounding petroglyphs",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18779,
+      "name": "The erotronic ritual dance",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18780,
+      "name": "Pink Dolphins on silky waters",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18781,
+      "name": "Scanning on the celestial shadows",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18782,
+      "name": "Pijiguao's festivities",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18783,
+      "name": "The sacred stone axe",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18784,
+      "name": "Friend or enemy",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18785,
+      "name": "Don't kill me",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18786,
+      "name": "The forbidden land",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18787,
+      "name": "Solar cities of the future",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18788,
+      "name": "Seismic Surf",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18789,
+      "name": "Sea of Japan",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18790,
+      "name": "Red Algae's Lullaby",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18791,
+      "name": "dancing Sandbar",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18792,
+      "name": "Jelly Fish",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18793,
+      "name": "Dragons of Abyss",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18794,
+      "name": "Mediterranean Waters",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18795,
+      "name": "Agony & Ecstasy",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18799,
+      "name": "El Salto Angel",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18800,
+      "name": "Carora",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18801,
+      "name": "Vivaldi's Spring",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18802,
+      "name": "Unpluged and live",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "borrar",
+      "why": "rótulo sin persona («Live», «Bonus Track», «3rd Mov»)"
+    },
+    {
+      "id": 18803,
+      "name": "Live",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "borrar",
+      "why": "rótulo sin persona («Live», «Bonus Track», «3rd Mov»)"
+    },
+    {
+      "id": 18807,
+      "name": "Song of Whales",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18810,
+      "name": "Mother Ganga",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18821,
+      "name": "Ethnosonics Lab",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "action": "convertir",
+      "to": "organization",
+      "organizationType": "recording_studio",
+      "why": "estudio"
+    },
+    {
+      "id": 18822,
+      "name": "Ft. Eidoscognito",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "revisar",
+      "why": "«Eidoscognito» es una sola palabra: no se crea sin enlace seguro"
+    },
+    {
+      "id": 18823,
+      "name": "Patanemo Bay",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18824,
+      "name": "El último Upadesa",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18825,
+      "name": "live in concert",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "borrar",
+      "why": "rótulo sin persona («Live», «Bonus Track», «3rd Mov»)"
+    },
+    {
+      "id": 18833,
+      "name": "Ukraine",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18834,
+      "name": "The Refugees Song",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18835,
+      "name": "Overture",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18836,
+      "name": "Finale",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18845,
+      "name": "Live Looping Improvisation",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "borrar",
+      "why": "rótulo sin persona («Live», «Bonus Track», «3rd Mov»)"
+    },
+    {
+      "id": 18849,
+      "name": "Parque de La Vida",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18850,
+      "name": "Aliento del Amanecer",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18851,
+      "name": "La Voz del Arroyo",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18852,
+      "name": "Pequeño Gran Bosque",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18853,
+      "name": "Lluvia Virgen",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18854,
+      "name": "Ocaso",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18865,
+      "name": "anon. French 10th Cent.",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18866,
+      "name": "Saladino",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18867,
+      "name": "anon. French 12th Cent.",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18874,
+      "name": "Spain",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18875,
+      "name": "North Sea",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18877,
+      "name": "Africa",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18878,
+      "name": "U.S.A.",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18879,
+      "name": "France",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18880,
+      "name": "Brazil",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18881,
+      "name": "Greece",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18882,
+      "name": "Alaska",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18884,
+      "name": "Caribbean Sea",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18885,
+      "name": "Peru",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18903,
+      "name": "Aries",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18904,
+      "name": "Tauro",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18905,
+      "name": "Géminis",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18906,
+      "name": "Cáncer",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18907,
+      "name": "Leo",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18908,
+      "name": "Virgo",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18909,
+      "name": "Libra",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18910,
+      "name": "Escorpio",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18911,
+      "name": "Sagitario",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18912,
+      "name": "Capricornio",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18913,
+      "name": "Acuario",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18914,
+      "name": "Piscis",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18915,
+      "name": "Bonus Track",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "borrar",
+      "why": "rótulo sin persona («Live», «Bonus Track», «3rd Mov»)"
+    },
+    {
+      "id": 18917,
+      "name": "tan Fredericks",
+      "rule": "no-es-una-persona:parece-un-titulo",
+      "action": "dejar",
+      "why": "la ficha de Sincopa trae el nombre cortado; no hay otra fuente"
+    },
+    {
+      "id": 18922,
+      "name": "mar Oliveros",
+      "rule": "no-es-una-persona:parece-un-titulo",
+      "action": "dejar",
+      "why": "la ficha de Sincopa trae el nombre cortado; no hay otra fuente"
+    },
+    {
+      "id": 18938,
+      "name": "Epilog",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18984,
+      "name": "deux",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 18985,
+      "name": "Shangai-Anonimus",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19004,
+      "name": "CCS-IBZ",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19005,
+      "name": "radiola mix",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "borrar",
+      "why": "rótulo sin persona («Live», «Bonus Track», «3rd Mov»)"
+    },
+    {
+      "id": 19015,
+      "name": "Feat. Gaèlica",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Gaèlica",
+      "role": {
+        "creditType": "guest",
+        "role": "Invitado"
+      },
+      "why": "rótulo «Feat.» pegado al nombre",
+      "resolved": {
+        "kind": "artist",
+        "id": 103
+      }
+    },
+    {
+      "id": 19016,
+      "name": "Feat. Nana Cadavieco",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Nana Cadavieco",
+      "role": {
+        "creditType": "guest",
+        "role": "Invitado"
+      },
+      "why": "rótulo «Feat.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 3493
+      }
+    },
+    {
+      "id": 19017,
+      "name": "Feat. Elisa Rego",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Elisa Rego",
+      "role": {
+        "creditType": "guest",
+        "role": "Invitado"
+      },
+      "why": "rótulo «Feat.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 2572
+      }
+    },
+    {
+      "id": 19018,
+      "name": "Feat. Maruja Muci",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Maruja Muci",
+      "role": {
+        "creditType": "guest",
+        "role": "Invitado"
+      },
+      "why": "rótulo «Feat.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 19021
+      }
+    },
+    {
+      "id": 19019,
+      "name": "Feat. Sumito Estévez",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Sumito Estévez",
+      "role": {
+        "creditType": "guest",
+        "role": "Invitado"
+      },
+      "why": "rótulo «Feat.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 19023
+      }
+    },
+    {
+      "id": 19020,
+      "name": "Ernesto Schweinburger a.ka. tropi69",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Ernesto Schweinburger",
+      "alias": "tropi69",
+      "why": "nombre con su alias (a.k.a.)",
+      "resolved": {
+        "kind": "person",
+        "id": 1108
+      }
+    },
+    {
+      "id": 19027,
+      "name": "de Chuao",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19028,
+      "name": "Te Llama",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19029,
+      "name": "Interludio",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "borrar",
+      "why": "rótulo sin persona («Live», «Bonus Track», «3rd Mov»)"
+    },
+    {
+      "id": 19030,
+      "name": "All Night Long",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19034,
+      "name": "Pamir",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19041,
+      "name": "The Incoming Race Part I",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "borrar",
+      "why": "rótulo sin persona («Live», «Bonus Track», «3rd Mov»)"
+    },
+    {
+      "id": 19042,
+      "name": "The Incoming Race Part II",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "borrar",
+      "why": "rótulo sin persona («Live», «Bonus Track», «3rd Mov»)"
+    },
+    {
+      "id": 19058,
+      "name": "Voyeurs With Wings",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19065,
+      "name": "Bonus Tracks",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "borrar",
+      "why": "rótulo sin persona («Live», «Bonus Track», «3rd Mov»)"
+    },
+    {
+      "id": 19085,
+      "name": "Suite Miroirs",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19086,
+      "name": "Goyescas",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19112,
+      "name": "Ensamble Gurrufío",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "action": "convertir",
+      "to": "artist",
+      "why": "agrupación ya catalogada"
+    },
+    {
+      "id": 19114,
+      "name": "Sala Ríos Reyna",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "action": "convertir",
+      "to": "organization",
+      "organizationType": "other",
+      "why": "sala de conciertos del Teresa Carreño"
+    },
+    {
+      "id": 19170,
+      "name": "Adagio-Allegretto-Adagio",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19171,
+      "name": "Andante-Allegretto",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19172,
+      "name": "Allegro Molto",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19188,
+      "name": "The Presentiment",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19189,
+      "name": "The Death",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19198,
+      "name": "Leggiero",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19199,
+      "name": "Cadenza",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19282,
+      "name": "Largo",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19283,
+      "name": "Presto",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19284,
+      "name": "Allegro",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19311,
+      "name": "Folklore Oriental",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "action": "borrar",
+      "why": "origen de la pieza, no autor («Polo Margariteño (Folklore Oriental)»)"
+    },
+    {
+      "id": 19453,
+      "name": "Danza Del Molinero",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19473,
+      "name": "Chilean Dance",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19474,
+      "name": "Preludio",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19475,
+      "name": "Arr: Vicente Emilio Sojo",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Vicente Emilio Sojo",
+      "role": {
+        "creditType": "other",
+        "role": "Arreglos"
+      },
+      "why": "rótulo «Arr.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 19382
+      }
+    },
+    {
+      "id": 19487,
+      "name": "Recop: Vicente Emilio Sojo",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Vicente Emilio Sojo",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 19382
+      }
+    },
+    {
+      "id": 19573,
+      "name": "Arr: Albert Hernández",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Albert Hernández",
+      "role": {
+        "creditType": "other",
+        "role": "Arreglos"
+      },
+      "why": "rótulo «Arr.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 19593
+      }
+    },
+    {
+      "id": 19574,
+      "name": "Arr: Miguel Astor",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Miguel Astor",
+      "role": {
+        "creditType": "other",
+        "role": "Arreglos"
+      },
+      "why": "rótulo «Arr.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 19216
+      }
+    },
+    {
+      "id": 19608,
+      "name": "Arr: Julián Gómez Giraldo",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Julián Gómez Giraldo",
+      "role": {
+        "creditType": "other",
+        "role": "Arreglos"
+      },
+      "why": "rótulo «Arr.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "rename": true
+      }
+    },
+    {
+      "id": 19616,
+      "name": "Aria con Grillos",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19617,
+      "name": "Confesión",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19669,
+      "name": "Dance Air",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19670,
+      "name": "Waltz Time",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19671,
+      "name": "Lullaby",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19672,
+      "name": "The Gentleman With The Wig",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19673,
+      "name": "The Harpsichord",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19674,
+      "name": "Prelude",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19675,
+      "name": "Fugue",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19676,
+      "name": "The Knife Grinder",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19677,
+      "name": "The Cradle",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19678,
+      "name": "The Birds",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19679,
+      "name": "The Girl From The Blacksmith's",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19680,
+      "name": "The Blacksmith",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19681,
+      "name": "The Fountain",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19682,
+      "name": "Serenade In The Spanish Style",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19683,
+      "name": "Concert Study",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19684,
+      "name": "Pictures Of The Plains",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19688,
+      "name": "Nocturne",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19689,
+      "name": "Chaplin",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19690,
+      "name": "Our Lady of Sorrow",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19691,
+      "name": "Cinematographical Sequence",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19692,
+      "name": "Magic Dream",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19693,
+      "name": "Waltz for Dulcinea",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19695,
+      "name": "At Dawn in Santa Marta",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19696,
+      "name": "Register",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19697,
+      "name": "The Little Peruvian Girl",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19698,
+      "name": "Tuy Valleys",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19699,
+      "name": "A Cha-Cha-Cha For Madalit",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19704,
+      "name": "Petite Valse",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19731,
+      "name": "1st mov",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "borrar",
+      "why": "rótulo sin persona («Live», «Bonus Track», «3rd Mov»)"
+    },
+    {
+      "id": 19732,
+      "name": "3rd Mov",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "borrar",
+      "why": "rótulo sin persona («Live», «Bonus Track», «3rd Mov»)"
+    },
+    {
+      "id": 19780,
+      "name": "Arr: D. d Los Reyes",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "revisar",
+      "why": "«D. d Los Reyes» lleva iniciales: no se crea sin enlace seguro"
+    },
+    {
+      "id": 19787,
+      "name": "Arr: A. Lauro",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "revisar",
+      "why": "«A. Lauro» lleva iniciales: no se crea sin enlace seguro"
+    },
+    {
+      "id": 19813,
+      "name": "Gaita",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19814,
+      "name": "Canción",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19820,
+      "name": "Largo-Piú Mosso-Lento",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 19843,
+      "name": "Acoustic Recording Service",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "action": "convertir",
+      "to": "organization",
+      "organizationType": "recording_studio",
+      "why": "estudio"
+    },
+    {
+      "id": 19981,
+      "name": "Tico y Tumbáo",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 20062,
+      "name": "Arr: V.E. Sojo",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Vicente Emilio Sojo",
+      "role": {
+        "creditType": "other",
+        "role": "Arreglos"
+      },
+      "why": "rótulo «Arr.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 19382
+      }
+    },
+    {
+      "id": 20130,
+      "name": "Ollewood Mix Room",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "convertir",
+      "to": "organization",
+      "organizationType": "recording_studio",
+      "why": "estudio"
+    },
+    {
+      "id": 20140,
+      "name": "Rec. Un Solo Pueblo",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Un Solo Pueblo",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "artist",
+        "id": 3857
+      }
+    },
+    {
+      "id": 20178,
+      "name": "Bachianas Brasileiras Nº 4",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 20266,
+      "name": "Din, Din, Din",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 20446,
+      "name": "Detail by Angel Peña",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Angel Peña",
+      "why": "rótulo «Detail by» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "rename": true
+      }
+    },
+    {
+      "id": 20450,
+      "name": "Symphony Nº 2",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 20451,
+      "name": "Detail by Gonzalo Endara Crow",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Gonzalo Endara Crow",
+      "why": "rótulo «Detail by» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "rename": true
+      }
+    },
+    {
+      "id": 20452,
+      "name": "La Noche",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 20453,
+      "name": "Romance del Pescador",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 20454,
+      "name": "Los Sortilegios",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 20455,
+      "name": "Elegía de la Guitarra",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 20456,
+      "name": "Spes vitae",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 20457,
+      "name": "Seguidillas",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 20458,
+      "name": "Farruca",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 20459,
+      "name": "Jota",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "action": "borrar",
+      "why": "título entre paréntesis de una pista"
+    },
+    {
+      "id": 20569,
+      "name": "Recop. Vicente E. Sojo",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Vicente Emilio Sojo",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 19382
+      }
+    },
+    {
+      "id": 20579,
+      "name": "Recop. Francisco Carreño",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Francisco Carreño",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 19932
+      }
+    },
+    {
+      "id": 20605,
+      "name": "Recop. Pablo Romero",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Pablo Romero",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "rename": true
+      }
+    },
+    {
+      "id": 21302,
+      "name": "piano solo",
+      "rule": "no-es-una-persona:parece-un-titulo",
+      "action": "borrar",
+      "why": "rótulo de la versión («(piano solo)»)"
+    },
+    {
+      "id": 22471,
+      "name": "Lyrics: Andrés Eloy Blanco",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Andrés Eloy Blanco",
+      "role": {
+        "creditType": "writer",
+        "role": "Letra"
+      },
+      "why": "rótulo «Lyrics» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 27957
+      }
+    },
+    {
+      "id": 25125,
+      "name": "Donida/Mogol",
+      "rule": "no-es-una-persona:multiple_people",
+      "action": "revisar",
+      "why": "varias personas en una: va con la regla de créditos «A/B»"
+    },
+    {
+      "id": 26137,
+      "name": "Comp: Vicente Emilio Sojo",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Vicente Emilio Sojo",
+      "role": {
+        "creditType": "composer",
+        "role": "composer"
+      },
+      "why": "rótulo «Comp.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 19382
+      }
+    },
+    {
+      "id": 26479,
+      "name": "Recop: VE Sojo",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Vicente Emilio Sojo",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 19382
+      }
+    },
+    {
+      "id": 26612,
+      "name": "Recop. Un Solo Pueblo",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Un Solo Pueblo",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "artist",
+        "id": 3857
+      }
+    },
+    {
+      "id": 26674,
+      "name": "Rec. B. Frómeta",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "B. Frómeta",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 26671
+      }
+    },
+    {
+      "id": 26733,
+      "name": "Marchisio/Santiago",
+      "rule": "no-es-una-persona:multiple_people",
+      "action": "revisar",
+      "why": "varias personas en una: va con la regla de créditos «A/B»"
+    },
+    {
+      "id": 26779,
+      "name": "Recop: Oswaldo Oropeza",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Oswaldo Oropeza",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 25682
+      }
+    },
+    {
+      "id": 26791,
+      "name": "Angel Condercuri/Marú",
+      "rule": "no-es-una-persona:multiple_people",
+      "action": "revisar",
+      "why": "varias personas en una: va con la regla de créditos «A/B»"
+    },
+    {
+      "id": 27047,
+      "name": "Vinicio/Rico",
+      "rule": "no-es-una-persona:multiple_people",
+      "action": "revisar",
+      "why": "varias personas en una: va con la regla de créditos «A/B»"
+    },
+    {
+      "id": 27460,
+      "name": "Recopilación: Carreño",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "revisar",
+      "why": "«Carreño» es una sola palabra: no se crea sin enlace seguro"
+    },
+    {
+      "id": 27642,
+      "name": "Lennon/McCartney",
+      "rule": "no-es-una-persona:multiple_people",
+      "action": "revisar",
+      "why": "varias personas en una: va con la regla de créditos «A/B»"
+    },
+    {
+      "id": 27767,
+      "name": "d.r.a.",
+      "rule": "no-es-una-persona:parece-un-titulo",
+      "action": "borrar",
+      "why": "rótulo de derechos («(D.R.A.)»), no autor"
+    },
+    {
+      "id": 28490,
+      "name": "Rec. Iván Pérez Rossi",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "revisar",
+      "why": "hay 2 personas llamadas «Iván Pérez Rossi» y un artista homónimo"
+    },
+    {
+      "id": 28669,
+      "name": "Comp. J. A. López",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "J. A. López",
+      "role": {
+        "creditType": "composer",
+        "role": "composer"
+      },
+      "why": "rótulo «Comp.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 26669
+      }
+    },
+    {
+      "id": 28768,
+      "name": "Recop. de J.A. López",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "J.A. López",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 26669
+      }
+    },
+    {
+      "id": 28969,
+      "name": "Recop. O. Oropeza",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "O. Oropeza",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 28190
+      }
+    },
+    {
+      "id": 29364,
+      "name": "Herrero/Armenteros",
+      "rule": "no-es-una-persona:multiple_people",
+      "action": "revisar",
+      "why": "varias personas en una: va con la regla de créditos «A/B»"
+    },
+    {
+      "id": 29427,
+      "name": "Testa/Renis",
+      "rule": "no-es-una-persona:multiple_people",
+      "action": "revisar",
+      "why": "varias personas en una: va con la regla de créditos «A/B»"
+    },
+    {
+      "id": 29500,
+      "name": "Comp: Un Solo Pueblo",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Un Solo Pueblo",
+      "role": {
+        "creditType": "composer",
+        "role": "composer"
+      },
+      "why": "rótulo «Comp.» pegado al nombre",
+      "resolved": {
+        "kind": "artist",
+        "id": 3857
+      }
+    },
+    {
+      "id": 29640,
+      "name": "Recop. Gilberto Iriarte",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Gilberto Iriarte",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "rename": true
+      }
+    },
+    {
+      "id": 30058,
+      "name": "Rec. Modesta Bor",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Modesta Bor",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 19499
+      }
+    },
+    {
+      "id": 30265,
+      "name": "Recop. V. Emilio Sojo",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Vicente Emilio Sojo",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 19382
+      }
+    },
+    {
+      "id": 30508,
+      "name": "Comp: Carlos Martinsky",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Carlos Martinsky",
+      "role": {
+        "creditType": "composer",
+        "role": "composer"
+      },
+      "why": "rótulo «Comp.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "rename": true
+      }
+    },
+    {
+      "id": 30575,
+      "name": "Recop: José del Pilar Rivera",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "José del Pilar Rivera",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "rename": true
+      }
+    },
+    {
+      "id": 30937,
+      "name": "Comp: Gilberto Iriarte",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Gilberto Iriarte",
+      "role": {
+        "creditType": "composer",
+        "role": "composer"
+      },
+      "why": "rótulo «Comp.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "rename": true
+      }
+    },
+    {
+      "id": 30938,
+      "name": "Comp: Francisco Pacheco",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "revisar",
+      "why": "hay 2 personas llamadas «Francisco Pacheco» y un artista homónimo"
+    },
+    {
+      "id": 30996,
+      "name": "Rec. Vicente E. Sojo",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Vicente Emilio Sojo",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 19382
+      }
+    },
+    {
+      "id": 31027,
+      "name": "Comp. D.R.",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "borrar",
+      "why": "«Comp. D.R.»: derechos reservados, no autor"
+    },
+    {
+      "id": 31028,
+      "name": "Comp. Jesús Rosas Marcano",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "revisar",
+      "why": "hay 2 personas llamadas «Jesús Rosas Marcano»"
+    },
+    {
+      "id": 31068,
+      "name": "Recop: Oswaldo Lares",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Oswaldo Lares",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 30347
+      }
+    },
+    {
+      "id": 31105,
+      "name": "Recop: Modesta Bor",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Modesta Bor",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 19499
+      }
+    },
+    {
+      "id": 31195,
+      "name": "Comp: Omar Villán",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Omar Villán",
+      "role": {
+        "creditType": "composer",
+        "role": "composer"
+      },
+      "why": "rótulo «Comp.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 30854
+      }
+    },
+    {
+      "id": 31247,
+      "name": "Comp. Los Araucanos",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "revisar",
+      "why": "«Los Araucanos» parece un grupo que no está catalogado como artista"
+    },
+    {
+      "id": 31248,
+      "name": "Comp. F. R. Yribera",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "revisar",
+      "why": "«F. R. Yribera» lleva iniciales: no se crea sin enlace seguro"
+    },
+    {
+      "id": 31298,
+      "name": "Comp. Angel C. Loyola",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Angel C. Loyola",
+      "role": {
+        "creditType": "composer",
+        "role": "composer"
+      },
+      "why": "rótulo «Comp.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 20593
+      }
+    },
+    {
+      "id": 31335,
+      "name": "Recop. Los Golperos Del Tocuyo",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "revisar",
+      "why": "«Los Golperos Del Tocuyo» parece un grupo que no está catalogado como artista"
+    },
+    {
+      "id": 31340,
+      "name": "Comp: Felix Campos",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Felix Campos",
+      "role": {
+        "creditType": "composer",
+        "role": "composer"
+      },
+      "why": "rótulo «Comp.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "rename": true
+      }
+    },
+    {
+      "id": 31379,
+      "name": "Recop: Juan Estévez",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "revisar",
+      "why": "hay 3 personas llamadas «Juan Estévez»"
+    },
+    {
+      "id": 31426,
+      "name": "Recop: Eduardo Martínez",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "revisar",
+      "why": "hay 2 personas llamadas «Eduardo Martínez»"
+    },
+    {
+      "id": 31478,
+      "name": "Recop. Convenezuela",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Convenezuela",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "artist",
+        "id": 3812
+      }
+    },
+    {
+      "id": 31481,
+      "name": "Recop. Alberto Vera",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Alberto Vera",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "rename": true
+      }
+    },
+    {
+      "id": 31482,
+      "name": "Recop. Ramón Cerezo",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Ramón Cerezo",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 31483
+      }
+    },
+    {
+      "id": 31574,
+      "name": "Recop: Hernán Marín",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "revisar",
+      "why": "hay 2 personas llamadas «Hernán Marín» y un artista homónimo"
+    },
+    {
+      "id": 31600,
+      "name": "Comp. Vicente E. Sojo",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Vicente Emilio Sojo",
+      "role": {
+        "creditType": "composer",
+        "role": "composer"
+      },
+      "why": "rótulo «Comp.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 19382
+      }
+    },
+    {
+      "id": 31629,
+      "name": "Comp. Oswaldo Lares",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Oswaldo Lares",
+      "role": {
+        "creditType": "composer",
+        "role": "composer"
+      },
+      "why": "rótulo «Comp.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 30347
+      }
+    },
+    {
+      "id": 31670,
+      "name": "Recop: Gualberto Ibarreto",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "revisar",
+      "why": "hay 2 personas llamadas «Gualberto Ibarreto» y un artista homónimo"
+    },
+    {
+      "id": 31674,
+      "name": "Recop. Guilllermina-Gualberto Ibarreto",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "revisar",
+      "why": "«Guilllermina-Gualberto Ibarreto» parece un grupo que no está catalogado como artista"
+    },
+    {
+      "id": 31770,
+      "name": "Recop: Reinaldo López",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "revisar",
+      "why": "hay 3 personas llamadas «Reinaldo López»"
+    },
+    {
+      "id": 31772,
+      "name": "Recop: Jesús R. González",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Jesús R. González",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 21871
+      }
+    },
+    {
+      "id": 31775,
+      "name": "Recop: Giovanni Márquez",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Giovanni Márquez",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 31787
+      }
+    },
+    {
+      "id": 31778,
+      "name": "Recop: Fernando Galindez",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Fernando Galindez",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 33914
+      }
+    },
+    {
+      "id": 31822,
+      "name": "Compilation: Modesta Bor",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Modesta Bor",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 19499
+      }
+    },
+    {
+      "id": 31839,
+      "name": "Zona P/Mouseñadores",
+      "rule": "no-es-una-persona:multiple_people",
+      "action": "revisar",
+      "why": "varias personas en una: va con la regla de créditos «A/B»"
+    },
+    {
+      "id": 31879,
+      "name": "Rec. Vicente Emilio Sojo",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Vicente Emilio Sojo",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 19382
+      }
+    },
+    {
+      "id": 31909,
+      "name": "Compilation: Juan Vicente Torrealba",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Juan Vicente Torrealba",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 4456
+      }
+    },
+    {
+      "id": 31955,
+      "name": "hijo",
+      "rule": "no-es-una-persona:parece-un-titulo",
+      "action": "dejar",
+      "why": "apodo de un músico («Bass: hijo»)"
+    },
+    {
+      "id": 31980,
+      "name": "Recop. Experimental Barlovento",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "revisar",
+      "why": "«Experimental Barlovento» parece un grupo que no está catalogado como artista"
+    },
+    {
+      "id": 31982,
+      "name": "Recop. Pueblo de Naiguatá",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "borrar",
+      "why": "«Recop.» de un lugar («Pueblo de Naiguatá»): queda como nota"
+    },
+    {
+      "id": 32014,
+      "name": "Recop. Costa del Litoral Central",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "borrar",
+      "why": "«Recop.» de un lugar («Costa del Litoral Central»): queda como nota"
+    },
+    {
+      "id": 32060,
+      "name": "Recop: Ignacio Figueredo",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Ignacio Figueredo",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 19268
+      }
+    },
+    {
+      "id": 32176,
+      "name": "Recop: José Antonio Calcaño",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "revisar",
+      "why": "hay 3 personas llamadas «José Antonio Calcaño»"
+    },
+    {
+      "id": 32201,
+      "name": "Comp: A. Pérez Piñango",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "revisar",
+      "why": "«A. Pérez Piñango» lleva iniciales: no se crea sin enlace seguro"
+    },
+    {
+      "id": 32202,
+      "name": "Comp: Quinto Criollo",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Quinto Criollo",
+      "role": {
+        "creditType": "composer",
+        "role": "composer"
+      },
+      "why": "rótulo «Comp.» pegado al nombre",
+      "resolved": {
+        "kind": "artist",
+        "id": 3845
+      }
+    },
+    {
+      "id": 32205,
+      "name": "Comp: UDAF",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "revisar",
+      "why": "«UDAF» es una sola palabra: no se crea sin enlace seguro"
+    },
+    {
+      "id": 32206,
+      "name": "Recop: UDAF",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "revisar",
+      "why": "«UDAF» es una sola palabra: no se crea sin enlace seguro"
+    },
+    {
+      "id": 32405,
+      "name": "Recop. Hugo Blanco",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Hugo Blanco",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 761
+      }
+    },
+    {
+      "id": 32409,
+      "name": "Eliseo Herrera/De La Colina",
+      "rule": "no-es-una-persona:multiple_people",
+      "action": "revisar",
+      "why": "varias personas en una: va con la regla de créditos «A/B»"
+    },
+    {
+      "id": 32412,
+      "name": "Recop: Aquiles Nazoa",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Aquiles Nazoa",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 30876
+      }
+    },
+    {
+      "id": 32413,
+      "name": "Recop: Ignacio \"Indio\" Figueredo",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Ignacio \"Indio\" Figueredo",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 31290
+      }
+    },
+    {
+      "id": 32445,
+      "name": "Recop: Tambor Urbano",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Tambor Urbano",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "artist",
+        "id": 3854
+      }
+    },
+    {
+      "id": 32473,
+      "name": "Recop. Pueblo de Cabure",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "borrar",
+      "why": "«Recop.» de un lugar («Pueblo de Cabure»): queda como nota"
+    },
+    {
+      "id": 32474,
+      "name": "Recop. Pueblo de Birongo",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "borrar",
+      "why": "«Recop.» de un lugar («Pueblo de Birongo»): queda como nota"
+    },
+    {
+      "id": 32475,
+      "name": "Recop. Juan Estéban García",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Juan Estéban García",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 31650
+      }
+    },
+    {
+      "id": 32477,
+      "name": "Recop. Pueblo de Cuyagua",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "borrar",
+      "why": "«Recop.» de un lugar («Pueblo de Cuyagua»): queda como nota"
+    },
+    {
+      "id": 32478,
+      "name": "Recop. Anselmo López",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Anselmo López",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 31268
+      }
+    },
+    {
+      "id": 32479,
+      "name": "Recop. Pueblo de San Rafael de Mucuchies",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "borrar",
+      "why": "«Recop.» de un lugar («Pueblo de San Rafael de Mucuchies»): queda como nota"
+    },
+    {
+      "id": 32481,
+      "name": "Recop. Pedro León",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Pedro León",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "rename": true
+      }
+    },
+    {
+      "id": 32482,
+      "name": "Recop. Pueblo de Turiamo",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "borrar",
+      "why": "«Recop.» de un lugar («Pueblo de Turiamo»): queda como nota"
+    },
+    {
+      "id": 32483,
+      "name": "Recop. Melchor Centeno",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Melchor Centeno",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 27457
+      }
+    },
+    {
+      "id": 32484,
+      "name": "Recop. Adelis Silva",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Adelis Silva",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "rename": true
+      }
+    },
+    {
+      "id": 32485,
+      "name": "Recop. Carlos Small",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Carlos Small",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "rename": true
+      }
+    },
+    {
+      "id": 32486,
+      "name": "Recop. Cruz Quinal",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Cruz Quinal",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 31641
+      }
+    },
+    {
+      "id": 32491,
+      "name": "Recop. Daniel Gil",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "revisar",
+      "why": "hay 2 personas llamadas «Daniel Gil»"
+    },
+    {
+      "id": 32492,
+      "name": "Recop. Exeario Basabe",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Exeario Basabe",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "rename": true
+      }
+    },
+    {
+      "id": 32521,
+      "name": "Recop. Pueblo de Naiguata",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "borrar",
+      "why": "«Recop.» de un lugar («Pueblo de Naiguata»): queda como nota"
+    },
+    {
+      "id": 32552,
+      "name": "Compilation: Olga Camacho",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Olga Camacho",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "rename": true
+      }
+    },
+    {
+      "id": 32663,
+      "name": "Design M Design W",
+      "rule": "no-es-una-persona:parece-un-titulo",
+      "action": "convertir",
+      "to": "organization",
+      "organizationType": "other",
+      "why": "estudio de diseño gráfico"
+    },
+    {
+      "id": 32824,
+      "name": "Recp. Vicente Emilio Sojo",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Vicente Emilio Sojo",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 19382
+      }
+    },
+    {
+      "id": 32996,
+      "name": "Miller/Blakut",
+      "rule": "no-es-una-persona:multiple_people",
+      "action": "revisar",
+      "why": "varias personas en una: va con la regla de créditos «A/B»"
+    },
+    {
+      "id": 33003,
+      "name": "Compilation: Vicente Emilio Sojo",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Vicente Emilio Sojo",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 19382
+      }
+    },
+    {
+      "id": 33228,
+      "name": "Potpourri",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "borrar",
+      "why": "rótulo sin persona («Live», «Bonus Track», «3rd Mov»)"
+    },
+    {
+      "id": 33790,
+      "name": "Rec. Freddy Reyna",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Freddy Reyna",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 2343
+      }
+    },
+    {
+      "id": 33907,
+      "name": "Recop: Freddy Reyna",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Freddy Reyna",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 2343
+      }
+    },
+    {
+      "id": 34493,
+      "name": "Recopilación: Vicente Emilio Sojo",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "reasignar",
+      "target": "Vicente Emilio Sojo",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "why": "rótulo «Recop.» pegado al nombre",
+      "resolved": {
+        "kind": "person",
+        "id": 19382
+      }
+    },
+    {
+      "id": 34628,
+      "name": "María Conchita Alonso/K.C. Porter",
+      "rule": "no-es-una-persona:multiple_people",
+      "action": "revisar",
+      "why": "varias personas en una: va con la regla de créditos «A/B»"
+    },
+    {
+      "id": 34916,
+      "name": "free",
+      "rule": "no-es-una-persona:parece-un-titulo",
+      "action": "borrar",
+      "why": "rótulo («(free)», improvisación libre)"
+    },
+    {
+      "id": 35325,
+      "name": "Acoustic",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "borrar",
+      "why": "rótulo sin persona («Live», «Bonus Track», «3rd Mov»)"
+    },
+    {
+      "id": 36374,
+      "name": "Lyrics: Z. Matousek",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "revisar",
+      "why": "«Z. Matousek» lleva iniciales: no se crea sin enlace seguro"
+    },
+    {
+      "id": 36375,
+      "name": "Lyrics: V. Fiol",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "revisar",
+      "why": "«V. Fiol» lleva iniciales: no se crea sin enlace seguro"
+    },
+    {
+      "id": 36376,
+      "name": "Lyrics: I. Gastaminza",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "revisar",
+      "why": "«I. Gastaminza» lleva iniciales: no se crea sin enlace seguro"
+    },
+    {
+      "id": 37172,
+      "name": "Cuento",
+      "rule": "no-es-una-persona:rotulo",
+      "action": "borrar",
+      "why": "rótulo sin persona («Live», «Bonus Track», «3rd Mov»)"
+    },
+    {
+      "id": 37409,
+      "name": "Juan Carlos y Fernando",
+      "rule": "no-es-una-persona:multiple_people",
+      "action": "revisar",
+      "why": "varias personas en una: va con la regla de créditos «A/B»"
+    },
+    {
+      "id": 22716,
+      "name": "\"Green Rectangles on Black\"",
+      "rule": "entre-comillas",
+      "action": "borrar",
+      "why": "título de la obra de portada"
+    },
+    {
+      "id": 23475,
+      "name": "\"Three People\"",
+      "rule": "entre-comillas",
+      "action": "borrar",
+      "why": "título de los dibujos de portada"
+    },
+    {
+      "id": 23476,
+      "name": "\"Three Figures\"",
+      "rule": "entre-comillas",
+      "action": "borrar",
+      "why": "título de los dibujos de portada"
+    },
+    {
+      "id": 12244,
+      "name": "\"Identical Twins\"",
+      "rule": "entre-comillas",
+      "action": "dejar",
+      "why": "apodo entre comillas de una persona real"
+    },
+    {
+      "id": 7456,
+      "name": "\"La Ultima Cruzada\"",
+      "rule": "entre-comillas",
+      "action": "borrar",
+      "why": "gira: «Recorded Live during Tour: “La Ultima Cruzada”»"
+    },
+    {
+      "id": 8175,
+      "name": "\"La Pequeña Sofia\"",
+      "rule": "entre-comillas",
+      "action": "dejar",
+      "why": "apodo entre comillas de una persona real"
+    },
+    {
+      "id": 27515,
+      "name": "\"El Chiky\"",
+      "rule": "entre-comillas",
+      "action": "dejar",
+      "why": "apodo entre comillas de una persona real"
+    },
+    {
+      "id": 27516,
+      "name": "\"Tony\"",
+      "rule": "entre-comillas",
+      "action": "dejar",
+      "why": "apodo entre comillas de una persona real"
+    },
+    {
+      "id": 26590,
+      "name": "\"Boleros\"",
+      "rule": "entre-comillas",
+      "action": "borrar",
+      "why": "título de una edición anterior del disco"
+    },
+    {
+      "id": 26619,
+      "name": "Los Hijos De Alfredo",
+      "rule": "entre-comillas",
+      "action": "convertir",
+      "to": "artist",
+      "why": "agrupación (acordeones)"
+    },
+    {
+      "id": 27859,
+      "name": "Los Cancilleres Del Sabor",
+      "rule": "entre-comillas",
+      "action": "convertir",
+      "to": "artist",
+      "why": "orquesta"
+    },
+    {
+      "id": 18931,
+      "name": "\"Von Frau\"",
+      "rule": "entre-comillas",
+      "action": "dejar",
+      "why": "apodo entre comillas de una persona real"
+    },
+    {
+      "id": 18939,
+      "name": "\"Olivares\"",
+      "rule": "entre-comillas",
+      "action": "dejar",
+      "why": "apodo entre comillas de una persona real"
+    },
+    {
+      "id": 20023,
+      "name": "\"Paseo En El Parque\"",
+      "rule": "entre-comillas",
+      "action": "borrar",
+      "why": "título de la obra de portada"
+    },
+    {
+      "id": 31737,
+      "name": "\"Fachadas Típicas de Venezuela\"",
+      "rule": "entre-comillas",
+      "action": "borrar",
+      "why": "título de la obra de portada"
+    },
+    {
+      "id": 31939,
+      "name": "\"Ferrusquilla\"",
+      "rule": "entre-comillas",
+      "action": "dejar",
+      "why": "apodo entre comillas de una persona real"
+    },
+    {
+      "id": 31964,
+      "name": "\"Palmarital Del Estero\"",
+      "rule": "entre-comillas",
+      "action": "borrar",
+      "why": "título de la obra de portada"
+    },
+    {
+      "id": 32061,
+      "name": "\"El elegante Braulio\"",
+      "rule": "entre-comillas",
+      "action": "borrar",
+      "why": "subtítulo de la pista entre paréntesis"
+    },
+    {
+      "id": 34623,
+      "name": "\"Una Fan Enamorada\"",
+      "rule": "entre-comillas",
+      "action": "borrar",
+      "why": "disco de origen: «Musicians on: “Una Fan Enamorada”»"
+    },
+    {
+      "id": 33817,
+      "name": "\"Mi Tío Pánfilo\"",
+      "rule": "entre-comillas",
+      "action": "borrar",
+      "why": "título de la obra de portada"
+    },
+    {
+      "id": 33821,
+      "name": "\"En Plena Faena\"",
+      "rule": "entre-comillas",
+      "action": "borrar",
+      "why": "título de la obra de portada"
+    },
+    {
+      "id": 36821,
+      "name": "\"Camina\"",
+      "rule": "entre-comillas",
+      "action": "borrar",
+      "why": "disco de origen de las pistas"
+    },
+    {
+      "id": 36824,
+      "name": "\"Puño y Letra\"",
+      "rule": "entre-comillas",
+      "action": "borrar",
+      "why": "disco de origen de la pista"
+    },
+    {
+      "id": 36827,
+      "name": "\"El Primero Siempre Es Rápido\"",
+      "rule": "entre-comillas",
+      "action": "borrar",
+      "why": "disco de origen de las pistas"
+    },
+    {
+      "id": 36883,
+      "name": "\"El Brayan\"",
+      "rule": "entre-comillas",
+      "action": "dejar",
+      "why": "apodo entre comillas de una persona real"
+    },
+    {
+      "id": 37813,
+      "name": "La Otra Gente",
+      "rule": "entre-comillas",
+      "action": "convertir",
+      "to": "artist",
+      "why": "agrupación (coros)"
+    },
+    {
+      "id": 37902,
+      "name": "\"Mitosis\"",
+      "rule": "entre-comillas",
+      "action": "borrar",
+      "why": "título de la obra de portada"
+    },
+    {
+      "id": 37991,
+      "name": "\"Tricky\"",
+      "rule": "entre-comillas",
+      "action": "dejar",
+      "why": "apodo entre comillas de una persona real"
+    }
+  ]
+}

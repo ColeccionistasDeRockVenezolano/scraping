@@ -1,0 +1,2090 @@
+{
+  "section": "jazz",
+  "dryRun": true,
+  "note": "Sincopa jazz: promoción masiva por reglas",
+  "kinds": {
+    "organization": {
+      "identities": 10,
+      "claims": 66,
+      "verdicts": {
+        "hold:nombre-casi-igual": 8,
+        "hold:mismo-nombre-en-el-core": 1,
+        "same:mismo-nombre-sin-tildes": 1
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "artist": {
+      "identities": 1,
+      "claims": 1,
+      "verdicts": {
+        "hold:nombre-casi-igual": 1
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "person": {
+      "identities": 286,
+      "claims": 421,
+      "verdicts": {
+        "hold:no-es-una-persona:multiple_people": 17,
+        "hold:no-es-una-persona:rotulo": 17,
+        "approve:auto-match": 5,
+        "hold:no-es-una-persona:parece-un-titulo": 4,
+        "hold:parte-de-credito-multiple:sin-enlace-seguro": 243
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    }
+  },
+  "holds": [
+    {
+      "kind": "organization",
+      "identityRaw": "Universal Music Latino",
+      "rule": "nombre-casi-igual",
+      "detail": "322 «Universal»",
+      "claims": 4
+    },
+    {
+      "kind": "organization",
+      "identityRaw": "G&A Productions",
+      "rule": "nombre-casi-igual",
+      "detail": "1552 «GS Productions»",
+      "claims": 4
+    },
+    {
+      "kind": "organization",
+      "identityRaw": "Kokopelli",
+      "rule": "nombre-casi-igual",
+      "detail": "1322 «Kokopelli Studios»; 1352 «Kokopelli Sound Studios»",
+      "claims": 2
+    },
+    {
+      "kind": "organization",
+      "identityRaw": "León",
+      "rule": "mismo-nombre-en-el-core",
+      "detail": "1830 «LEON»",
+      "claims": 2
+    },
+    {
+      "kind": "organization",
+      "identityRaw": "RCA/Antor",
+      "rule": "nombre-casi-igual",
+      "detail": "1001 «RCA»",
+      "claims": 24
+    },
+    {
+      "kind": "organization",
+      "identityRaw": "A Records",
+      "rule": "nombre-casi-igual",
+      "detail": "215 «AMZ Records»; 1537 «Djax Records»; 22 «Pilla Records»",
+      "claims": 16
+    },
+    {
+      "kind": "organization",
+      "identityRaw": "Mercury-Polydor",
+      "rule": "nombre-casi-igual",
+      "detail": "3 «Polydor»",
+      "claims": 4
+    },
+    {
+      "kind": "organization",
+      "identityRaw": "EMI-Rodven",
+      "rule": "nombre-casi-igual",
+      "detail": "350 «EMI»",
+      "claims": 4
+    },
+    {
+      "kind": "organization",
+      "identityRaw": "Records",
+      "rule": "nombre-casi-igual",
+      "detail": "173 «TMV Records»; 215 «AMZ Records»; 371 «H2Q Records»",
+      "claims": 2
+    },
+    {
+      "kind": "artist",
+      "identityRaw": "Oscar",
+      "rule": "nombre-casi-igual",
+      "detail": "186 «Oscar Fanega»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Carlos Daniel Palacios, Ricardo Quintero, Joe Ruíz, Carlin Rodríguez",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Edgar Macias version",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Alberto Lazo version",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Pedrito López version",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Information track with Partitures & Video for Computers",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "José Ramoncini, Gustavo Aranguren, Lazaro Cardozo & Vicente Freijeiro",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Eliel Rivero, Johan Muñoz & José Rada",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Julio Flores Evencio Villamizar Horacio Mogollón Konstantin Klichtornyi",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Nat D. Ayer - Seimour Brown",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Lionel Hampton - Sonny Burke - Johnny Mercer",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "María Luisa Escobar - Alberto Naranjo",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J. Wiener, M. Lanjean",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "of The Berklee College of Music",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Pablo Camacaro - Arr: Victor Mestas",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "acanao Music",
+      "rule": "no-es-una-persona:parece-un-titulo",
+      "detail": "empieza en minúscula o lleva varias palabras en minúscula: parece un título o un texto suelto",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Edú Lobo/Guarnieri",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "crédito con varios nombres separados por «/»",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "from \"El Diablo Suelto\" by Heraclio Fernández",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Vocalise (Armando y Leonardo Lovera)",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "B. & M. Gibb",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Rafael \"Gallo\" Velásquez (track",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Tany Gil (CD1: 8 - CD2: 6)",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Ariel Ramirez y Felix Luna",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Work of the painter Adib Casta",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Marcus Vinicius Da Fonseca María Eugenia Atilano",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "aúl Monsalve",
+      "rule": "no-es-una-persona:parece-un-titulo",
+      "detail": "empieza en minúscula o lleva varias palabras en minúscula: parece un título o un texto suelto",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "aolo Mendonca",
+      "rule": "no-es-una-persona:parece-un-titulo",
+      "detail": "empieza en minúscula o lleva varias palabras en minúscula: parece un título o un texto suelto",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "rian Dezoretz",
+      "rule": "no-es-una-persona:parece-un-titulo",
+      "detail": "empieza en minúscula o lleva varias palabras en minúscula: parece un título o un texto suelto",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "(Live recording to two-track machine)",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J. Tizol",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "I. Mills - C. Curet",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Weill",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "E.Y. Harburg",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Hanley",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "MacDonald",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Hickman",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "I. Mills",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Arr. José \"Cholo\" Ortiz",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 23
+    },
+    {
+      "kind": "person",
+      "identityRaw": "A. Borregales",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J. Vega",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Arr: Eduardo Cabrera",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 27
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Guaraldi",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "L. Carrión",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Eleazar L. Contreras",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 4
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Gates",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Arr: Aníbal Abreu",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 4
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Jorge R. Ortiz",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Chapuscaux",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J. Coblán",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Parrish",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Hammerstein",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "A.J. Lerner",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Loewe",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J. Fred",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "H. Gillespie",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "V. Young",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "W. King",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "E. van Alstyne",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Arlen",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Harburg",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Lennon",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 4
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Tunai",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "María J. Riera",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "R. Gomez",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "I. Carreño",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Mills",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Bigard",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Davis",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Franco",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Vatro",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "E. Gil",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "M. Arturo",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "B. Palombo",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Carlos J. Maitín",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "A. Melo",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "M. Romero",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "M. Mores",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "E. S. Discépolo",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Carpenter",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Dunlop",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Version by A. Carrasquero",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "D.R.",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J. Cuba",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J. Feliciano",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "T. Berrios",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "N. Jiménez",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J. Garland",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "A. Razaf",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Gillespie",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "G. Piloto",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "A. Vera",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Louiguy",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Ageron",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "L. Arcaráz",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "M. Montes",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Luis F. Vega",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 5
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Bricuse",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Newley",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Hart",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 5
+    },
+    {
+      "kind": "person",
+      "identityRaw": "G. Ragos",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J. Parker",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "D. Gasparre",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Schwartz",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Dietz",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Folklore",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 5
+    },
+    {
+      "kind": "person",
+      "identityRaw": "M. Portmann",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "N. Rangell",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Levant",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Heyman",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 5
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Cahn",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Stordahl",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Weston",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Young",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "A. Daly",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Canning",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Graydon",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Jarreau",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "M. Blitzstein",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "B. Brecht",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "K. Weill",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "\"Monchito\" J.J. Hernández",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "A. Malerba",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "R. Sciammarella",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J. Ruiz",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J. Durán",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "N. Fernández",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "L. Martínez",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "F. Pacheco",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Valentin",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Barreto",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Burke",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Webster",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "McShaw",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "K. Richards",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "W. Michaljlow",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J.F. Coots",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "S. Cahn",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J. Mohr",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "M. Tormé",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "R. Wells",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "M. Parish",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "L. Anderson",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Mandel",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Hampton",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Mercer",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Lane",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "McCartney",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "G. Goffin",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "G. Miller",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "P. Louiseau",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "L. Kusik",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "E. Snyder",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "I. Gershwin",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Fain",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "C. Moncada",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "F. Lapardi",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Joban",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "W. Gross",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J. Lawrence",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Arr R. Gonzalez",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Arr Andy Durán",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Arr R. González",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Arr Oscar Maggi",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "S. Burke",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "P. F. Webster",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Cooley",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Davenport",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "G. Weiss",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "G. Shearing",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "C. Fischer",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "F. Laine",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "L. Hart",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Kern",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "S. Simmons",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "F. Marks",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Washington",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "L. Feather",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "L. Hampton",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Withing",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Moret",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "B.Y. Forster",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Green",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Sour",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Eyton",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "D. Heyward",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Hanighen",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Monk",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Morgan",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Carmichael",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Gorrell",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Drake",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Fisher",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Higginbothan",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Haven",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Coots",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Floklore",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "P. Cremonesi",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "A. Valsiglio",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "D. Foster",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "W. Champlin",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Paparelli",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "I. Higginbotham",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "E. Drake",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "D. Fisher",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Cazuza",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Adu",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Hale",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Matthewman",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Porter",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Espino",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "A. Cleveland",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "R. Benson",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "H. Zaret",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "A. North",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Dozier",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Holland",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Pugh",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Whitfield",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Lins",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Martins",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Gamble",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Huff",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Richard J. Rudolph",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "K. Gamble",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "L. Huff",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "E. Gilbert",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Jean M. Mobillin De Scarano",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Alfons F. Kettner",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Bide",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Marcal",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Fragos",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Gasparre",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Kander",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Ebb",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J. Hadar",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "U. Ofek",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J. Fred Coots",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Bernier",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Weil",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Alberts",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Smit",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Verwey",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Rosales",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "E. Anderson",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "T. Grouya",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "N. H. Brown",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "G. Kham",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "B. Petkere",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J. Young",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "M. Dennis",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "E. Brent",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "B. Haggart",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J. Burke",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "V. Schertszinger",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J. Mercer",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "R. Burns",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "W. Hernan",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Goodman",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Webb",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Sampson",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Razaf",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Monslave",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "M. Masser",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "G. D. Weiss",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "A. Paz",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "C. Mucano",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Kaper",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "S. Cooke",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Mullens",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "F. Mullens",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "A. de Oliveira",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J. Mandel",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "P. Ramlee",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "S. Sudarmaji",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Ferrante",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Kennedy",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Segal",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Larr",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Livingston",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Evans",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Klenner",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "M. blitztein",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    }
+  ],
+  "duplicateFlags": [],
+  "errors": []
+}

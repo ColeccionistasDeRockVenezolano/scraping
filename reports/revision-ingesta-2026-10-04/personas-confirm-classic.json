@@ -1,0 +1,367 @@
+{
+  "section": "classic",
+  "dryRun": false,
+  "note": "Revisión de ingesta 2026-10-04 (Brian): promoción por reglas de lo que ya tiene destino",
+  "kinds": {
+    "organization": {
+      "identities": 8,
+      "claims": 64,
+      "verdicts": {
+        "hold:nombre-casi-igual": 7,
+        "hold:mismo-nombre-en-el-core": 1
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "artist": {
+      "identities": 0,
+      "claims": 0,
+      "verdicts": {},
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "person": {
+      "identities": 47,
+      "claims": 65,
+      "verdicts": {
+        "hold:no-es-una-persona:multiple_people": 16,
+        "hold:no-es-una-persona:rotulo": 7,
+        "approve:auto-match": 3,
+        "hold:parte-de-credito-multiple:sin-enlace-seguro": 14,
+        "different:solo-coincidencias-debiles": 3,
+        "dismiss:basura:duration": 4
+      },
+      "applied": 3,
+      "unchanged": 4,
+      "stillCandidate": 0,
+      "dismissed": 4,
+      "failed": 0
+    }
+  },
+  "holds": [
+    {
+      "kind": "organization",
+      "identityRaw": "Espiral/Polydor",
+      "rule": "nombre-casi-igual",
+      "detail": "3 «Polydor»",
+      "claims": 2
+    },
+    {
+      "kind": "organization",
+      "identityRaw": "EMI-Odeon",
+      "rule": "nombre-casi-igual",
+      "detail": "350 «EMI»",
+      "claims": 16
+    },
+    {
+      "kind": "organization",
+      "identityRaw": "Circulo Musical",
+      "rule": "mismo-nombre-en-el-core",
+      "detail": "980 «Círculo Musical»",
+      "claims": 4
+    },
+    {
+      "kind": "organization",
+      "identityRaw": "El Universal",
+      "rule": "nombre-casi-igual",
+      "detail": "322 «Universal»",
+      "claims": 4
+    },
+    {
+      "kind": "organization",
+      "identityRaw": "EMI Classic",
+      "rule": "nombre-casi-igual",
+      "detail": "350 «EMI»",
+      "claims": 10
+    },
+    {
+      "kind": "organization",
+      "identityRaw": "Produciones León",
+      "rule": "nombre-casi-igual",
+      "detail": "1824 «Producciones León»",
+      "claims": 18
+    },
+    {
+      "kind": "organization",
+      "identityRaw": "EMI Classics",
+      "rule": "nombre-casi-igual",
+      "detail": "350 «EMI»",
+      "claims": 8
+    },
+    {
+      "kind": "organization",
+      "identityRaw": "EMI Music - Germany",
+      "rule": "nombre-casi-igual",
+      "detail": "350 «EMI»",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Sandrah Silvio, Claudia Galavis, Andrea Imaginario, Virginia Largo, Yuruani Lavado, Mariaelena Muro, Anna Rosa Rodríguez, Verónica Sosa & Cristina Vogeler",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "José Félix Ribas Concert Hall (Teatro Teresa Carreño)",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 7
+    },
+    {
+      "kind": "person",
+      "identityRaw": "\"Gallos de Pelea\" by Hugo Serrano",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "\"A Spanish Festival\" by John Frederick Lewis",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Schola Cantorum de Caracas Cantoría Alberto Grau",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Gloria De Los Angeles Trevino Ruiz",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "from Suite Popular Brasileña",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 5
+    },
+    {
+      "kind": "person",
+      "identityRaw": "A. González y Fernández",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Salle Pierre-Mercure du Centre Pierre Péladeau",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "from Symphony No. 9 In D Minor - Finale",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Guiomar Narváez * Luisa Elena Paesano **",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "versión a 4 Manos",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "versión a 2 Pianos",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Dúo Juan Bautista Plaza: Beatriz Klein",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "I. Meserón y Aranda",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "\"La Crucifixion\" by Jan van Eick (Detalle: Jerusalén)",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "\"Toros Coleados\" by Andrés Antonio Alvarez",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Compañía Nacional de Ópera \"Alfredo Sadel\"",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Lorenzo Camejo José Luis Presa Alberto Espinoza",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Luis F. Ramón y Rivera",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "parece una lista de varias personas",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Recop. Luis Felipe Ramón y Rivera",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Folklore",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 4
+    },
+    {
+      "kind": "person",
+      "identityRaw": "L: Manuel F. Rugeles",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Juan R. Jiménez",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Castelnovo",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Tedesco",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Lennon",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "McCartney",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Gregorio J. Timote",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Zequeinha",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Ortiz",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Mirkin",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Diezo",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Cabral",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J. Sebastian Bach",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "E. Chirinos",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Andrade",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "apellido o apodo suelto de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    }
+  ],
+  "duplicateFlags": [],
+  "errors": [],
+  "runId": 11969
+}

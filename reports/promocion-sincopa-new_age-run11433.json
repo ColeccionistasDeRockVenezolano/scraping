@@ -1,0 +1,1147 @@
+{
+  "section": "new_age",
+  "dryRun": false,
+  "note": "Sincopa new_age: tercera pasada de pistas y créditos tras renumerar las caras B ya aceptadas (pedido de Brian 2026-10-02)",
+  "kinds": {
+    "track": {
+      "identities": 197,
+      "claims": 732,
+      "verdicts": {
+        "hold:padre-sin-resolver": 95,
+        "hold:titulo-casi-igual-mismo-padre": 39,
+        "different:sin-coincidencia": 37,
+        "hold:sin-decision-er": 22,
+        "approve:auto-match": 2,
+        "hold:titulo-igual-con-contradiccion": 2
+      },
+      "applied": 1,
+      "unchanged": 3,
+      "stillCandidate": 130,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "track_credit": {
+      "identities": 51,
+      "claims": 306,
+      "verdicts": {
+        "puente": 51
+      },
+      "applied": 1,
+      "unchanged": 5,
+      "stillCandidate": 300,
+      "dismissed": 0,
+      "failed": 0
+    }
+  },
+  "holds": [
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Xen::Now You Know",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Xen::Held Apart",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Xen::Xen",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Xen::Sad Bitch",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Xen::Sisters",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Xen::Slit Thru",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Xen::Failed",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Xen::Family Violence",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Xen::Thievery",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Xen::Lonely Thugg",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Xen::Fish",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Xen::Wound",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Xen::Bullet Chained",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Xen::Tongue",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Xen::Promise",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Alive",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Mutant",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Vanity",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Sinner",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Anger",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Sever",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Beacon",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Snakes",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Else",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Umbilical",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Hymn",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Front Load",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Gratitud",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::En",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Siren Interlude",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Extent",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Envelopeped",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Faggot",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Soichiro",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Peonies",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Arca::Piel",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Arca::Anoche",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Arca::Saunter",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Arca::Urchin",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Arca::Reverie",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Arca::Castration",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Arca::Sin Rumbo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Arca::Coraje",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Arca::Whip",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Arca::Desafío",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Arca::Fugaces",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Arca::Miel",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Arca::Child",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::En Sabana Grande Tambien Hay::Piraña Latin Session (Radio Hit)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "5967 «Piraña Latin Session (Radio Cut)»; 5923 «Piraña Latin Session»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Vacilón Dans La Chambre::Conexión Guairística en el Love Boat",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "16820 «Conexión guairística en love boat»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Vacilón Dans La Chambre::Hippie Session 2069",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "16822 «Hippie session»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Vacilón Dans La Chambre::Mérida c'est la Ville!",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "19071 «Mérida c´est la ville»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Folklore No-Tradicional Venezolano # 4::Criollo Sunshine Trip",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "16765 «Criollo sunshipe trip»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Folklore No-Tradicional Venezolano # 4::Baby Bom-bay Vibes",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "16774 «Baby bom-bay»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Folklore No-Tradicional Venezolano # 4::Exterlude Maraichers_Paris",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "19062 «Exterlude maraiches Paris»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Folklore No-Tradicional Venezolano # 4::Joropo's Latin Love Kit",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "16771 «Joropo´s latin love kit»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Folklore No-Tradicional Venezolano # 4::The Ca.cha.pa Non Acoustic Session",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "16786 «The ca.cha.pa no acoustic session»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Coctel # 5: Cacao, Mujer y Beats::Exterlude Criollotz # 5",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "16761 «Exterlude Crioloottz # 5»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Cuentos De Ada 6::Free Fresa Sun.dance Lovers",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "18542 «Free fresa sundance lovers»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Cuentos De Ada 6::Adara Primavera Nº1",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "16733 «Adara primavera Nº 1»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Cuentos De Ada 6::Can bass Love Canvas?",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 2
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Cuentos De Ada 6::I' Hornocity, Loop Candela!",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 2
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Cuentos De Ada 6::Song.ata Costera Song.era",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 2
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Cuentos De Ada 6::Sensei. Chóng e'ivissa",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "16748 «Sensei chong e´ivissa»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Colores De Ideas 7::Para:Lupe DEL:Chino",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Colores De Ideas 7::HELLO. My name is Mars",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Colores De Ideas 7::mini.lude para llevar",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Colores De Ideas 7::Turn Me ON. It's FREE",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Colores De Ideas 7::All Alone 365º",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Colores De Ideas 7::Le tropi.cal blues symphony A-",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Colores De Ideas 7::Believe & Create.#Follow me",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Colores De Ideas 7::CARACAS: te quiero _ _ _ _ _",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Colores De Ideas 7::over.SURVIVE.me",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Colores De Ideas 7::L.E.V.A.N.T.A_te",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Colores De Ideas 7::hora, loca & ron confessions",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Colores De Ideas 7::Ay! Juana BESO.le X 7",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Colores De Ideas 7::Ex.terlude Informatique.Automatique 24",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Colores De Ideas 7::Two thumbs ING session",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Colores De Ideas 7::Cuento bossa en tocoto MAYOR",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Upadesa::Mar De La Tristeza",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "18081 «Mar de Tristeza»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Viveka::Hiperspacio",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "18065 «Hiperespacio»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Solar Concert For Bhagavan::I Ching",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "19529 «I ching, Shangri-la»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Solar Concert For Bhagavan::Shangri-La",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "19529 «I ching, Shangri-la»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Continuvm::Saturn Rings Song",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "18040 «Saturn Ring Song»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Continuvm::Pequeño Concierto Para Dharma",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 2
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Continuvm::La Danza De Kali",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 2
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Continuvm::Continuvm... Y Salió El Sol",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "18045 «Continuvm»; 19530 «Y Salió el Sol»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Impresiones Etnosonicas::Ballenas Cosmicas",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "17965 «Ballenas Cósmicas»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Impresiones Etnosonicas::Extasis Primitivo",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "19524 «Éxtasis Primitivo»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::The Golden Flame::Birland II",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "17989 «Birdland II»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::2012::Mediterrance",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "17266 «Mediterranee»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::2012::Surical Kingdom Rave",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "17655 «Suricat Kingdom Rave»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::2012::2012 The Maya Omen",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::2012::Ground Zero Jam Sesion",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "17659 «Ground Zero Jam Session»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::2012::Back In White",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::2012::Eclipse Rojo",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Aqua after 2012::Iguana Falls",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Aqua after 2012::Afrikaans Roots",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Aqua after 2012::Hey You",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Aqua after 2012::Flying Home",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Aqua after 2012::Henry VIII Wives Excerpts",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Aqua after 2012::Werewolves",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Aqua after 2012::Yoi Boys Under The Rainbow",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Aqua after 2012::Gangama (Mother Ganga)",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Aqua after 2012::Quetzalcoalt",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Aqua after 2012::Empty Room",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Aqua after 2012::Close To The Edge",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Aqua after 2012::Ambigramas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Aqua After 2012 Drums Of Love::Doors Of Wisdom",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Aqua After 2012 Drums Of Love::Kalima",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Aqua After 2012 Drums Of Love::Mahasamadhi",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Aqua After 2012 Drums Of Love::Taboo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Aqua After 2012 Drums Of Love::Sat Sang",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Aqua After 2012 Drums Of Love::Return To Turkain Mountains",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Aqua After 2012 Drums Of Love::Sivaji Cosmic Dance",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Aqua After 2012 Drums Of Love::Thousand Candles For Mankind",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Aqua After 2012 Drums Of Love::Gopala Dance",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Aqua After 2012 Drums Of Love::Lord Ganesha Kingdom",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Aqua After 2012 Drums Of Love::Ghats Of Life",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Aqua After 2012 Drums Of Love::Kumbah Mela",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Neurosinergy::Acis Rain In The Backyard",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "17010 «Acid rain in the Backyard»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Neurosinergy::Metropolitan Train",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "17025 «Metropolitanan Train»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Upadesa Reloaded::Upadesa Reloaded",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Upadesa Reloaded::Milk Shake",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Upadesa Reloaded::The Red Robots Marching On",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Upadesa Reloaded::Acid Batucada",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Upadesa Reloaded::Late Night In Pampatar",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Upadesa Reloaded::Melting Pot Jam",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Upadesa Reloaded::Dancing In Heaven",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Upadesa Reloaded::Escarabajos",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Notdunjusta::Chet's Dream",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "19553 «Chet´s Dream»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Notdunjusta::Marriage Between Zones, Zone 3",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "19557 «The Marriage Between Two Zones (Zone 3)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Notdunjusta::Marriage Between Zones, Zones 4 & 5",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "19556 «The Marriage Between Two Zones (Zone 4 and 5)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Notdunjusta::Nicolas & Drisana",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "19554 «Nicholas and Drisana»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Redunjusta::Marriage Between Two Zones, Zone 3",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "1976 «Marriage Between Zones: Zone 3»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Redunjusta::Marriage Between Two Zones, Zones 4 & 5",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "1981 «Marriage Between Zones: Zones 4 & 5»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Redunjusta::Nicolas and Drisana",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "1988 «Nicolas & Drisana»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Redunjusta::23 jhnohm",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "2001 «23 Jhnohm (Jhno Remix)»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Redunjusta::Flesh Frogs",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "2006 «Flesh Frogs (Paul Godwin Remix)»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Redunjusta::Desarollo V",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "2011 «Desarollo V (Miguel Noya Remix)»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Redunjusta::Departures on a Sacred Hymn of the Sirians",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Redunjusta::Unit 33 Smokes a Beedee",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Redunjusta::Eulogy",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "2030 «Eulogy (Paul Godwin Remix)»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Redunjusta::Increado",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "2042 «Increado (Miguel Noya Remix)»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Redunjusta::Reza's Dream",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "2048 «Reza's Dream (Reza Remix)»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Redunjusta::The Seer Mix",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "2054 «The Seer Mix (Seer Remix)»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Upadesa::Upadesa",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Viveka::Satori",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Viveka::Padre Cosmico",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Viveka::Viveka",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Viveka::Alianza",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Viveka::Travesia Parafónica",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Viveka::Isla Tropical",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Viveka::Primer Día De Luz",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Viveka::Tigre Blanco De Rewa",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Impresiones Etnosonicas::Jesús de Nazareth",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Impresiones Etnosonicas::Delirium",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Impresiones Etnosonicas::Sirius y Las Ballenas",
+      "rule": "sin-decision-er",
+      "detail": "la identidad no tiene decisión de ER registrada",
+      "claims": 1
+    }
+  ],
+  "duplicateFlags": [],
+  "errors": [],
+  "runId": 11433
+}

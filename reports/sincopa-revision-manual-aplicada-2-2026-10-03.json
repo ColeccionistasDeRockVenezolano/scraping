@@ -1,0 +1,55 @@
+{
+  "dryRun": false,
+  "runId": 11586,
+  "decisions": 2,
+  "applied": 2,
+  "review": 0,
+  "failed": 0,
+  "creditsMoved": 5,
+  "creditsDropped": 2,
+  "created": [
+    "artista 4328 «Los Araucanos»"
+  ],
+  "errors": [],
+  "plan": [
+    {
+      "id": 30938,
+      "op": "homonimo",
+      "name": "Comp: Francisco Pacheco",
+      "credits": 6,
+      "bare": "Francisco Pacheco",
+      "role": {
+        "creditType": "composer",
+        "role": "composer"
+      },
+      "target": 20566,
+      "candidates": [
+        {
+          "id": 1709,
+          "evidence": []
+        },
+        {
+          "id": 20566,
+          "evidence": [
+            "mismo disco",
+            "mismo artista"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 31247,
+      "op": "grupo",
+      "name": "Los Araucanos",
+      "also": [
+        31232
+      ],
+      "person": "Comp. Los Araucanos",
+      "credits": 1,
+      "role": {
+        "creditType": "composer",
+        "role": "composer"
+      }
+    }
+  ]
+}

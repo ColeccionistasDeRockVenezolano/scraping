@@ -1,0 +1,613 @@
+{
+  "section": "jazz",
+  "dryRun": false,
+  "note": "Sincopa jazz: cuarta pasada de discos y pistas (regla «otro número» y pistas madre del adapter 1.3.1)",
+  "kinds": {
+    "album": {
+      "identities": 9,
+      "claims": 61,
+      "verdicts": {
+        "different:titulo-casi-igual-otro-repertorio": 1,
+        "hold:titulo-casi-igual-mismo-padre": 5,
+        "hold:titulo-igual-con-contradiccion": 2,
+        "hold:padre-sin-resolver": 1
+      },
+      "applied": 4,
+      "unchanged": 9,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "track": {
+      "identities": 90,
+      "claims": 374,
+      "verdicts": {
+        "hold:varios-con-el-mismo-titulo": 2,
+        "same:mismo-titulo-mismo-disco": 18,
+        "hold:titulo-casi-igual-mismo-padre": 11,
+        "approve:auto-match": 1,
+        "different:sin-coincidencia": 6,
+        "hold:padre-sin-resolver": 46,
+        "different:solo-coincide-bajo-otro-padre": 6
+      },
+      "applied": 19,
+      "unchanged": 30,
+      "stillCandidate": 10,
+      "dismissed": 0,
+      "failed": 18
+    }
+  },
+  "holds": [
+    {
+      "kind": "album",
+      "identityRaw": "María Rivas::Café Negrito (World-Latin)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "5558 «Café Negrito»",
+      "claims": 5
+    },
+    {
+      "kind": "album",
+      "identityRaw": "María Rivas::Aquador (Chill-Out)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "5554 «Aquador»",
+      "claims": 5
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Rigel Mitxelena::Bártok's Room",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "483 «Bartok's Room»: el ER vio una contradicción (año, duración…)",
+      "claims": 5
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Virgilio Araque Reyes::Virgilio Araque En Concierto",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "2373 «En Concierto»",
+      "claims": 5
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Oscar::Cuidao Con Los Escalones",
+      "rule": "padre-sin-resolver",
+      "detail": "el artista del disco aún no está en el core",
+      "claims": 7
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Rigel Mitxelena::Bartók's Room",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "483 «Bartok's Room»: el ER vio una contradicción (año, duración…)",
+      "claims": 7
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Rigel Mitxelena::Música De Película",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "15283 «Música De Película (Rock)»",
+      "claims": 7
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Rigel Mitxelena::Volumen 1 Junta Parroquial",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "15285 «Volumen1: Junta Parroquial»",
+      "claims": 7
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::El Negro José",
+      "rule": "varios-con-el-mismo-titulo",
+      "detail": "ya hay 2 con ese título bajo el mismo padre: 6829, 6483",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::Tema de Amor",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "6528 «Temas De Amor»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::De Conde a Principal",
+      "rule": "varios-con-el-mismo-titulo",
+      "detail": "ya hay 2 con ese título bajo el mismo padre: 6828, 6489",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::Carretera",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "6586 «Carretera: Edgar Macías Solo»; 6594 «Carretera: Alberto Lazo Solo»; 6597 «Carretera: Pedro López Solo»",
+      "claims": 15
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gonzalo Micó::Juegos de Playa::Juegos de Playa, How sad it was",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "50215 «Juegos de Playa»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Oscar::Cuidao Con Los Escalones::Cuidao Con Los Escalones",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Oscar::Cuidao Con Los Escalones::Ojos De Una Noche",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Oscar::Cuidao Con Los Escalones::En Noviembre",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Oscar::Cuidao Con Los Escalones::Caracas Alto Barranco",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Oscar::Cuidao Con Los Escalones::Flaicito Al Cuadro",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Oscar::Cuidao Con Los Escalones::Flaquitud",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Oscar::Cuidao Con Los Escalones::Take Five",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Oscar::Cuidao Con Los Escalones::Lluvia En La Tarde",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Oscar::Cuidao Con Los Escalones::Para Elisa",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Oscar::Cuidao Con Los Escalones::L.D.L.M.",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Oscar::Cuidao Con Los Escalones::Refractions",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Oscar::Cuidao Con Los Escalones::The 60's Never Die",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ed Calle::Mamblue::Luz De Luna (Moonlight)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "51572 «Moonlight (Luz De Luna)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ed Calle::Mamblue::Cortadito con Bajo (Cortadito)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "51575 «Cortadito»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ed Calle::Mamblue::Isla Urbana (Urban Island)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "51571 «Urban Island (Isla Urbana)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ed Calle::Mamblue::Por De Lado (Sidewinder)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "51576 «Sidewinder (Por De Lado)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ed Calle::Mamblue::Otoño (Autumn)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "51577 «Autumn (Otoño)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ed Calle::Mamblue::San Sebastián (Radio Version)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "51573 «San Sebastián»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ed Calle::Mamblue::Arroz y Frijoles (Rice & Beans) (Radio version)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "51567 «Rice & Beans (Arroz y Frijoles)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ed Calle::Mamblue::Arroz y Frijoles (Rice & Beans) (Extended Version)",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "51567 «Rice & Beans (Arroz y Frijoles)»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Bartók's Room::Artilugio (Florilégio Artefáctico)",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Bartók's Room::I",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Bartók's Room::El Ojo-Dido",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Bartók's Room::Song For Bartók",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Bartók's Room::Inside",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Bartók's Room::Twiggy Pig",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Bartók's Room::The Last Dodo Bird",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Bartók's Room::Street Jam (Jam-eo En La Calle)",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Bartók's Room::Uranus",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Bartók's Room::Final Chat: Colubre",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Música De Película::Meet Mr. Alex",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Música De Película::Dumpin' Banana",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Música De Película::Riddin' With Angelica",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Música De Película::Barry Juais",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Música De Película::Pa'l Malecón",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Música De Película::Struggle",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Música De Película::Pelsígnate",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Música De Película::Melbourne-Choroní",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Música De Película::Floyd's Theme",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Música De Película::Poca Mantequilla",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Música De Película::Spider's Theme",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Música De Película::Floyd & Fiona",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Música De Película::The Date",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Música De Película::Groovy Bacon",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Música De Película::Dead At Last",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Volumen 1 Junta Parroquial::Comamos Juntos (Come Together)",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Volumen 1 Junta Parroquial::K-OS",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Volumen 1 Junta Parroquial::Cangrejo Volador",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Volumen 1 Junta Parroquial::Come Como Eres (Come As You Are)",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Volumen 1 Junta Parroquial::Cangrejo Reprise",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Volumen 1 Junta Parroquial::Zamuro",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Volumen 1 Junta Parroquial::Nadie Como Tú",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Volumen 1 Junta Parroquial::El Ojo-di 2.0",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rigel Mitxelena::Volumen 1 Junta Parroquial::Gilbert Belt",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    }
+  ],
+  "duplicateFlags": [],
+  "errors": [
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::Catuche",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::Calor",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::Cimarrón",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::Mi Niño No Me Quiere",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::El Catire",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::Señora Chabuca Granda",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::No Necesito de Ti",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::Doña Mentira",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::De Repente",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::Dos Golondrinas",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Jazz Desde Aldemaro::Mambo Timbal",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Suka - Jazz En Directo::Sukkah",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Suka - Jazz En Directo::A La Espera",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Suka - Jazz En Directo::CCS Hip",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Suka - Jazz En Directo::Tukeke",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Suka - Jazz En Directo::Pablo De Caracas",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Suka - Jazz En Directo::Solar",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Gil::Suka - Jazz En Directo::Otra Vez",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    }
+  ],
+  "runId": 11706,
+  "evidenceVerdicts": [
+    {
+      "kind": "album",
+      "identityRaw": "Coral Lombana::Jazz Rojo Coral Vol.2",
+      "rule": "titulo-casi-igual-otro-repertorio",
+      "detail": "{\"15279\":{\"shared\":0,\"total\":10,\"core\":10}}"
+    }
+  ]
+}

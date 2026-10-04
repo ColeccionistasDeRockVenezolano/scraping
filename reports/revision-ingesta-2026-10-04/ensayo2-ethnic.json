@@ -1,0 +1,415 @@
+{
+  "section": "ethnic",
+  "dryRun": true,
+  "note": "Sincopa ethnic: promoción masiva por reglas",
+  "kinds": {
+    "album": {
+      "identities": 8,
+      "claims": 57,
+      "verdicts": {
+        "same:revision-ingesta-titulo": 2,
+        "different:revision-ingesta-otro-disco": 1,
+        "approve:auto-match": 2,
+        "hold:padre-sin-resolver": 3
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "track": {
+      "identities": 98,
+      "claims": 410,
+      "verdicts": {
+        "different:sin-coincidencia": 35,
+        "hold:titulo-casi-igual-mismo-padre": 1,
+        "different:solo-coincide-bajo-otro-padre": 1,
+        "approve:auto-match": 8,
+        "hold:varios-con-el-mismo-titulo": 1,
+        "hold:padre-sin-resolver": 48,
+        "same:mismo-titulo-mismo-disco": 4
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    }
+  },
+  "holds": [
+    {
+      "kind": "album",
+      "identityRaw": "Grupo::Grupo Raíces De Venezuela",
+      "rule": "padre-sin-resolver",
+      "detail": "el artista del disco aún no está en el core",
+      "claims": 16
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Grupo::Grupo Raíces",
+      "rule": "padre-sin-resolver",
+      "detail": "el artista del disco aún no está en el core",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Grupo::Raices",
+      "rule": "padre-sin-resolver",
+      "detail": "el artista del disco aún no está en el core",
+      "claims": 8
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Aldemaro Romero::40 Años 40 Exitos::A La Orilla De La Carretera",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "69073 «Carretera»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::En Vivo! Ofrenda::Interludio",
+      "rule": "varios-con-el-mismo-titulo",
+      "detail": "ya hay 2 con ese título bajo el mismo padre: 6831, 4504",
+      "claims": 6
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces de Venezuela::Recordando Al Poeta",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces de Venezuela::El Alacrán",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces de Venezuela::Toto",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces de Venezuela::Apure En Un Viaje",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces de Venezuela::Mis Anhelos",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces de Venezuela::Cara E' Tiple",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces de Venezuela::Saltarin",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces de Venezuela::Los Potes De San Andres",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces de Venezuela::Las Lomas Del Viento",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces de Venezuela::Pico Del Aguila",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces de Venezuela::Mañanitas Navideñas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces de Venezuela::Mesa Bolivar",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces::Raices",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces::Pico Del Aguila",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces::Mi Llavecita",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces::Séptimo Amigo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces::La Negra Cachumba",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces::Pueblo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces::Don Luis",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces::Chuao",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces::Laberinto",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces::El Chingo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Raices::Pajarillo y Chipola",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Raices::Cuando Duerme Caracas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Raices::Señor Jou",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Raices::Tonada Al Atardecer",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Raices::Guayana",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Raices::El Parrillero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Raices::Saludo A Barinas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Raices::Dialogo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Raices::Patatín Patatán",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Raices::Llanerita",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Raices::Pasaje Indio",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Raices::Linda Zuliana",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces De Venezuela::La Totuviola",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces De Venezuela::El Tristón",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces De Venezuela::Surcando El Paso",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces De Venezuela::Onda Romántica",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces De Venezuela::Mi Estrella",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces De Venezuela::Pequeña Venecia",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces De Venezuela::La Negra Sereta",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces De Venezuela::Retazos Criollos",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces De Venezuela::Raices Llaneras II",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces De Venezuela::Salud! Amigo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces De Venezuela::Panal De Arena",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces De Venezuela::El Profe",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces De Venezuela::Pasaje De La Esperanza",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces De Venezuela::En El Ocaso",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    }
+  ],
+  "duplicateFlags": [],
+  "errors": []
+}

@@ -243,6 +243,148 @@ describe("adapters funcionales de las fuentes autorizadas", () => {
     expect(claims.some((claim) => claim.entityKind === "organization" && claim.rawValue === "58/56")).toBe(false);
   });
 
+  it("Sincopa cuenta la fila «Instrument:» de las fichas de jazz y clásica: no es el sello", () => {
+    const adapter = adapterFor({ slug: "sincopa", siteType: "database" });
+    if (!adapter?.extractSnapshot) throw new Error("adapter Sincopa faltante");
+    const body = `
+      <table><tr>
+        <td>Artist:<br>Album Title:<br>Company:<br>Instrument:<br>Genre:<br>Release Year:</td>
+        <td><b>Daniela Padrón</b><br>Bach To Venezuela<br>Independent<br>Violin<br>Classical/World<br>2016 (CD)</td>
+      </tr></table>`;
+    const records = adapter.extractSnapshot({
+      url: "https://fixture.invalid/classic/cdinfo_class/daniela_padron/danielapadron1_bachtovzla.htm",
+      kind: "html", rawPageId: 1, body,
+    });
+    const claims = records.flatMap(normalizeRecord);
+
+    expect(claims.some((claim) => claim.entityKind === "album" && claim.field === "title" && claim.rawValue === "Bach To Venezuela")).toBe(true);
+    expect(claims.some((claim) => claim.entityKind === "album" && claim.field === "label" && claim.rawValue === "Independent")).toBe(true);
+    expect(claims.some((claim) => claim.entityKind === "album" && claim.field === "genre" && claim.rawValue === "Classical/World")).toBe(true);
+    expect(claims.some((claim) => claim.entityKind === "organization" && claim.rawValue === "Violin")).toBe(false);
+  });
+
+  it("Sincopa numera corrido un vinilo cuya cara B vuelve a empezar en 01", () => {
+    const adapter = adapterFor({ slug: "sincopa", siteType: "database" });
+    if (!adapter?.extractSnapshot) throw new Error("adapter Sincopa faltante");
+    const fixture = (sideB: string) => `
+      <table><tr>
+        <td>Artist:<br>Album Title:<br>Company:<br>Genre:<br>Release Year:</td>
+        <td><b>Bienmesabe</b><br>Para Siempre<br>CBS/Columbia<br>Latin-Fusion<br>1985 (LP)</td>
+      </tr></table>
+      <table><tr><td bgcolor="#FFCC00"><b>Tracks</b></td></tr></table>
+      <table><tr><td>
+        <font color="#FFFFCC">Side A</font><font color="#FFFFFF"><br>
+        01- </font><font color="#FFCC00">Las Maracuchas </font><font color="#FFFFFF">(Manuel Urbina) 3:40<br>
+        02- </font><font color="#FFCC00">Siete Minutos </font><font color="#FFFFFF">(Alí Aguero) 4:19<br><br></font>
+        <font color="#FFFFCC">Side B - Estudio</font><font color="#FFFFFF"><br>
+        ${sideB}
+      </td></tr></table>`;
+    const numbers = (body: string) => adapter.extractSnapshot!({
+      url: "https://fixture.invalid/latin_pop/cdinfo_latin/bienmesabe_parasiempre.htm", kind: "html", rawPageId: 1, body,
+    }).flatMap(normalizeRecord)
+      .filter((claim) => claim.entityKind === "track" && claim.field === "track_number")
+      .map((claim) => claim.rawValue);
+
+    expect(numbers(fixture(`01- </font><font color="#FFCC00">Dejala Que Baile </font><font color="#FFFFFF">(Manuel Urbina) 3:25<br>
+        02- </font><font color="#FFCC00">No Es Nada </font><font color="#FFFFFF">(Edgar Salazar) 3:02</font>`)))
+      .toEqual(["01", "02", "3", "4"]);
+    expect(numbers(fixture(`03- </font><font color="#FFCC00">Dejala Que Baile </font><font color="#FFFFFF">(Manuel Urbina) 3:25<br>
+        04- </font><font color="#FFCC00">No Es Nada </font><font color="#FFFFFF">(Edgar Salazar) 3:02</font>`)))
+      .toEqual(["01", "02", "03", "04"]);
+  });
+
+  it("Sincopa lee la pista de un popurrí en otro color y el número sin guion", () => {
+    const adapter = adapterFor({ slug: "sincopa", siteType: "database" });
+    if (!adapter?.extractSnapshot) throw new Error("adapter Sincopa faltante");
+    const tracks = (list: string) => adapter.extractSnapshot!({
+      url: "https://fixture.invalid/latin_pop/cdinfo_latin/billos/billos_09_mosaicos1.htm", kind: "html", rawPageId: 1, body: `
+      <table><tr>
+        <td>Artist:<br>Album Title:<br>Company:<br>Genre:<br>Release Year:</td>
+        <td><b>Billo's Caracas Boys</b><br>Mosaicos A La Billo<br>Velvet<br>Latin<br>1975 (LP)</td>
+      </tr></table>
+      <table><tr><td bgcolor="#FFCC00"><b>Tracks</b></td></tr></table>
+      <table><tr><td>${list}</td></tr></table>`,
+    }).flatMap(normalizeRecord)
+      .filter((claim) => claim.entityKind === "track" && (claim.field === "title" || claim.field === "track_number"))
+      .map((claim) => `${claim.field}=${claim.rawValue}`);
+
+    expect(tracks(`<font color="#FFFFCC">Side A</font><font color="#FFFFFF"><br>
+        01- </font><font color="#FFFFCC">Mosaico Nº 1</font><font color="#FFFFFF"><br>
+        &nbsp;&nbsp; a- </font><font color="#FFCC00">Ojos Malvados </font><font color="#FFFFFF">(C. Soladrigas)<br>
+        &nbsp;&nbsp; b- </font><font color="#FFCC00">La Negra Leonor </font><font color="#FFFFFF">(Antonio Fernández)</font>`))
+      .toEqual(["title=Mosaico Nº 1", "track_number=01", "title=Ojos Malvados", "title=La Negra Leonor"]);
+    expect(tracks(`<font color="#FFFFFF">01
+        </font><font color="#FFCC00">Amaranto
+        </font><font color="#FFFFFF">(Lester Paredes) 4.04</font><font color="#FFFFFF"><br>
+        02–
+        </font><font color="#FFCC00">Tulalita
+        </font><font color="#FFFFFF">(Lester Paredes) 3.13</font><font color="#FFFFFF"><br>
+        03
+        </font><font color="#FFCC00">24 Horas
+        </font><font color="#FFFFFF">(Lester Paredes) 3.13</font>`))
+      .toEqual(["title=Amaranto", "track_number=01", "title=Tulalita", "track_number=02", "title=24 Horas"]);
+  });
+
+  it("Sincopa añade el sufijo de identidad a un disco homónimo de otro año (Mango 1975), sin tocar el título", () => {
+    const adapter = adapterFor({ slug: "sincopa", siteType: "database" });
+    if (!adapter?.extractSnapshot) throw new Error("adapter Sincopa faltante");
+    const body = `
+      <table><tr>
+        <td>Artist:<br>Album Title:<br>Company:<br>Genre:<br>Release Year:</td>
+        <td><b>Grupo Mango</b><br>Mango<br>Velvet<br>Latin<br>1975 (LP)</td>
+      </tr></table>
+      <table><tr><td bgcolor="#FFCC00"><b>Tracks</b></td></tr></table>
+      <table><tr><td>01- </font><font color="#FFCC00">Juanita </font><font color="#FFFFFF">(Jesús Maña)</font></td></tr></table>`;
+    const records = (url: string) => adapter.extractSnapshot!({ url, kind: "html", rawPageId: 1, body });
+    const split = records("https://sincopa.com/latin_pop/cdinfo_latin/mango/mango_1975.htm");
+    expect(split.filter((record) => record.entityKind === "album").map((record) => record.identity)).toEqual(["Grupo Mango::Mango (1975)"]);
+    expect(split.filter((record) => record.entityKind === "track").map((record) => record.identity)).toEqual(["Grupo Mango::Mango (1975)::Juanita"]);
+    expect(split.find((record) => record.entityKind === "album")!.fields.find((field) => field.field === "title")?.value).toBe("Mango");
+    // El crédito apunta al disco de la ficha, no al homónimo del mismo artista.
+    expect(split.find((record) => record.entityKind === "track_credit")!.fields.find((field) => field.field === "album_title")?.value).toBe("Mango (1975)");
+    expect(records("https://fixture.invalid/latin_pop/cdinfo_latin/mango/otro.htm").filter((record) => record.entityKind === "album")
+      .map((record) => record.identity)).toEqual(["Grupo Mango::Mango"]);
+  });
+
+  it("Sincopa da un crédito por autor cuando el paréntesis los separa con «/»", () => {
+    const adapter = adapterFor({ slug: "sincopa", siteType: "database" });
+    if (!adapter?.extractSnapshot) throw new Error("adapter Sincopa faltante");
+    const body = `
+      <table><tr>
+        <td>Artist:<br>Album Title:<br>Company:<br>Genre:<br>Release Year:</td>
+        <td><b>Syriak</b><br>Dentro De Los Cuentos Del Día<br>Independiente<br>Rock<br>1997 (CD)</td>
+      </tr></table>
+      <table><tr><td bgcolor="#FFCC00"><b>Tracks</b></td></tr></table>
+      <table><tr><td><font color="#FFFFFF">
+        01- </font><font color="#FFCC00">Baile De Locos </font><font color="#FFFFFF">(Syriak / Carlos Vilchez) 3:40<br>
+        02- </font><font color="#FFCC00">Día Tras Día </font><font color="#FFFFFF">(Roberto Tarzieris)</font>
+      </td></tr></table>`;
+    const claims = adapter.extractSnapshot({ url: "https://fixture.invalid/rock_pop/cdinfo_rock/syriak.htm", kind: "html", rawPageId: 1, body }).flatMap(normalizeRecord);
+    const composers = claims.filter((claim) => claim.entityKind === "track_credit" && claim.field === "credited_name").map((claim) => claim.rawValue);
+    expect(composers).toEqual(["Syriak", "Carlos Vilchez", "Roberto Tarzieris"]);
+    expect(claims.filter((claim) => claim.entityKind === "person").map((claim) => claim.rawValue)).not.toContain("Syriak / Carlos Vilchez");
+  });
+
+  it("Sincopa corrige un número repetido cuando falta el siguiente («03, 03, 05»)", () => {
+    const adapter = adapterFor({ slug: "sincopa", siteType: "database" });
+    if (!adapter?.extractSnapshot) throw new Error("adapter Sincopa faltante");
+    const body = `
+      <table><tr>
+        <td>Artist:<br>Album Title:<br>Company:<br>Genre:<br>Release Year:</td>
+        <td><b>Mayra Martí</b><br>Mayra Martí<br>Sonográfica<br>Pop<br>1984 (LP)</td>
+      </tr></table>
+      <table><tr><td bgcolor="#FFCC00"><b>Tracks</b></td></tr></table>
+      <table><tr><td><font color="#FFFFFF">
+        03- </font><font color="#FFCC00">Y Yo Lo Amaba </font><br>
+        <font color="#FFFFFF">03- </font><font color="#FFCC00">Mi Mundo Cambió </font><br>
+        <font color="#FFFFFF">05- </font><font color="#FFCC00">Yo Suponía </font>
+      </td></tr></table>`;
+    const numbers = adapter.extractSnapshot({ url: "https://fixture.invalid/latin_pop/cdinfo_latin/mayramarti.htm", kind: "html", rawPageId: 1, body })
+      .filter((record) => record.entityKind === "track")
+      .map((record) => `${record.fields.find((field) => field.field === "track_number")?.value} ${record.fields.find((field) => field.field === "title")?.value}`);
+    expect(numbers).toEqual(["03 Y Yo Lo Amaba", "04 Mi Mundo Cambió", "05 Yo Suponía"]);
+  });
+
   it("Sincopa no trata una ficha detallada de sencillo como año, álbum y sello", () => {
     const adapter = adapterFor({ slug: "sincopa", siteType: "database" });
     if (!adapter?.extractSnapshot) throw new Error("adapter Sincopa faltante");

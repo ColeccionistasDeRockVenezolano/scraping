@@ -1,0 +1,68 @@
+{
+  "section": "rock_pop",
+  "dryRun": false,
+  "note": "Sincopa rock_pop: pistas de las fichas separadas de discos mezclados (adapter 1.3.3, Brian 2026-10-03)",
+  "kinds": {
+    "album": {
+      "identities": 0,
+      "claims": 0,
+      "verdicts": {},
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "track": {
+      "identities": 238,
+      "claims": 1023,
+      "verdicts": {
+        "different:sin-coincidencia": 64,
+        "same:mismo-titulo-mismo-disco": 53,
+        "different:solo-coincide-bajo-otro-padre": 117,
+        "different:titulo-casi-igual-otro-numero": 1,
+        "same:titulo-casi-igual-misma-posicion": 2,
+        "hold:titulo-casi-igual-mismo-padre": 1
+      },
+      "applied": 239,
+      "unchanged": 775,
+      "stillCandidate": 5,
+      "dismissed": 0,
+      "failed": 0
+    }
+  },
+  "holds": [
+    {
+      "kind": "track",
+      "identityRaw": "Ivo::Ivo (1978)::Quiero",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "158341 «Quiero Ser Feliz»",
+      "claims": 4
+    }
+  ],
+  "duplicateFlags": [],
+  "errors": [],
+  "runId": 11762,
+  "evidenceVerdicts": [
+    {
+      "kind": "track",
+      "identityRaw": "Ambar::(María Conchita Alonso) Love Maniac (ambar_1lovemaniac)::Sweet Lover (Part 2)",
+      "rule": "titulo-casi-igual-otro-numero",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Impala::Los Impala y Su Música (impala_05sumusica)::Mi Corazón Comienzá a Amar",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 15553,
+      "detail": "Mi Corazón Comenzó a Amar"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Impala::Los Impala y Su Música (impala_05sumusica)::Cada Vez Que Vienes a Mi",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 15561,
+      "detail": "Cada Vez que Viene a Mi"
+    }
+  ]
+}

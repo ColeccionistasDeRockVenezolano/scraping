@@ -1,0 +1,33 @@
+{
+  "section": "rock_pop",
+  "dryRun": false,
+  "note": "Sincopa rock_pop: pistas de popurrí y números con raya que el adapter 1.3.0 no leía (reingesta run 11678, adapter 1.3.1)",
+  "kinds": {
+    "album": {
+      "identities": 0,
+      "claims": 0,
+      "verdicts": {},
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "track": {
+      "identities": 20,
+      "claims": 72,
+      "verdicts": {
+        "different:sin-coincidencia": 20
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 72,
+      "dismissed": 0,
+      "failed": 0
+    }
+  },
+  "holds": [],
+  "duplicateFlags": [],
+  "errors": [],
+  "runId": 11681
+}

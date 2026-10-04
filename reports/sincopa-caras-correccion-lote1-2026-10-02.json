@@ -1,0 +1,1188 @@
+{
+  "dryRun": false,
+  "runId": 11403,
+  "pages": 1266,
+  "staleCandidates": 6643,
+  "missingNew": 0,
+  "rejected": 6625,
+  "reviewsClosed": 13034,
+  "acceptedWrong": 196,
+  "acceptedWrongList": [
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/los_cunaos5.htm",
+      "identity": "Los Cuñaos::Los Cuñaos Vol.5::Mi Canción",
+      "core": "05",
+      "page": "01"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/los_cunaos5.htm",
+      "identity": "Los Cuñaos::Los Cuñaos Vol.5::Ademas y Ademas",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/los_cunaos5.htm",
+      "identity": "Los Cuñaos::Los Cuñaos Vol.5::Mi Canción",
+      "core": "01",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/los_cunaos5.htm",
+      "identity": "Los Cuñaos::Los Cuñaos Vol.5::Mi Canción",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_1956recitaldguitare1.htm",
+      "identity": "Alirio Díaz::Récital De Guitare Nº 1::Norteña",
+      "core": "04",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_1956recitaldguitare1.htm",
+      "identity": "Alirio Díaz::Récital De Guitare Nº 1::Valse Vénézuelienne",
+      "core": "05",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_1956recitaldguitare1.htm",
+      "identity": "Alirio Díaz::Récital De Guitare Nº 1::El Testamento De Amelia",
+      "core": "06",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_1957recitaldguitare2.htm",
+      "identity": "Alirio Díaz::Récital De Guitare Nº 2::Villano",
+      "core": "05",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_1957recitaldguitare2.htm",
+      "identity": "Alirio Díaz::Récital De Guitare Nº 2::Etude Nº 7",
+      "core": "06",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_1957recitaldguitare2.htm",
+      "identity": "Alirio Díaz::Récital De Guitare Nº 2::Aconquija",
+      "core": "07",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_66solosdguitarra.htm",
+      "identity": "Alirio Díaz::Solos De Guitarra::Valse Op. 8 Nº 4",
+      "core": "01",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_66solosdguitarra.htm",
+      "identity": "Alirio Díaz::Solos De Guitarra::Aire De Samba",
+      "core": "03",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_66solosdguitarra.htm",
+      "identity": "Alirio Díaz::Solos De Guitarra::Cueca",
+      "core": "05",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_66solosdguitarra.htm",
+      "identity": "Alirio Díaz::Solos De Guitarra::Pais De Abanico",
+      "core": "06",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_66solosdguitarra.htm",
+      "identity": "Alirio Díaz::Solos De Guitarra::Medallón Antiguo",
+      "core": "07",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_66solosdguitarra.htm",
+      "identity": "Alirio Díaz::Solos De Guitarra::Preludio Nº 1, Op. 5",
+      "core": "08",
+      "page": "12"
+    },
+    {
+      "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_68playsbach.htm",
+      "identity": "Alirio Díaz::Plays Bach::Bourrée 1 & 2",
+      "core": "05",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_68playsbach.htm",
+      "identity": "Alirio Díaz::Plays Bach::Gigue",
+      "core": "06",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_recital.htm",
+      "identity": "Alirio Díaz::Recital::Homenaje",
+      "core": "03",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_recital.htm",
+      "identity": "Alirio Díaz::Recital::Guasa",
+      "core": "05",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_recital.htm",
+      "identity": "Alirio Díaz::Recital::Cinco Piezas Infantiles",
+      "core": "06",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_melodiaslarenses_lp.htm",
+      "identity": "Alirio Díaz::Interpreta Melodías Larenses::Canción Caroreña",
+      "core": "08",
+      "page": "05"
+    },
+    {
+      "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_melodiaslarenses_lp.htm",
+      "identity": "Alirio Díaz::Interpreta Melodías Larenses::Las Perdices",
+      "core": "05",
+      "page": "14"
+    },
+    {
+      "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_melodiaslarenses_lp.htm",
+      "identity": "Alirio Díaz::Interpreta Melodías Larenses::Canción Caroreña",
+      "core": "05",
+      "page": "17"
+    },
+    {
+      "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_melodiaslarenses_lp.htm",
+      "identity": "Alirio Díaz::Interpreta Melodías Larenses::Canción Caroreña",
+      "core": "08",
+      "page": "17"
+    },
+    {
+      "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_76conciertogtryorq.htm",
+      "identity": "Alirio Díaz::Concierto Para Guitarra y Orquesta::Ella No Me Ama",
+      "core": "04",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_76conciertogtryorq.htm",
+      "identity": "Alirio Díaz::Concierto Para Guitarra y Orquesta::Galeron",
+      "core": "05",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_76conciertogtryorq.htm",
+      "identity": "Alirio Díaz::Concierto Para Guitarra y Orquesta::Sonata No. 2",
+      "core": "06",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_76conciertogtryorq.htm",
+      "identity": "Alirio Díaz::Concierto Para Guitarra y Orquesta::Sonata No. 5",
+      "core": "07",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/classic/cdinfo_class/aliriodiaz_76conciertogtryorq.htm",
+      "identity": "Alirio Díaz::Concierto Para Guitarra y Orquesta::Danza De La Suite Para Orquesta",
+      "core": "08",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/classic/cdinfo_class/alirio_diaz/aliriodiaz_86italia.htm",
+      "identity": "Alirio Díaz::Italia - Con Autores Clásicos y Populares Italianos::Dos Sonatas",
+      "core": "04",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/classic/cdinfo_class/alirio_diaz/aliriodiaz_86italia.htm",
+      "identity": "Alirio Díaz::Italia - Con Autores Clásicos y Populares Italianos::Canzonetta De Salvator Rosa",
+      "core": "05",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/jazz/cdinfo/aqba_aquilesmusic.htm",
+      "identity": "Aquiles Báez::Aquiles Báez y Su Música::La Casa Azul",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/new_age/cdinfo_age/rada_armagedon.htm",
+      "identity": "Angel Rada::Armagedon & The Third Wave Revolution::Alien Bazaar",
+      "core": "05",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/los_kenya/loskenya_2rara.htm",
+      "identity": "Los Kenya::Ra! Ra!::Chocolate",
+      "core": "05",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/chelique_sarabia/chelique_14lagarzanegra.htm",
+      "identity": "Chelique Sarabia::La Garza Negra y De Hierro::Despertar Es Nacer",
+      "core": "05",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/matecha_74miquerencia.htm",
+      "identity": "María Teresa Chacín::Mi Querencia::Soñando Despiertos",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/serenata/sg_100alejandro_vargas.htm",
+      "identity": "Various Artists::Alejandro Vargas Cien Años De Canto Special Edition for:::Casta Paloma",
+      "core": "01",
+      "page": "04"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/serenata/sg_100alejandro_vargas.htm",
+      "identity": "Various Artists::Alejandro Vargas Cien Años De Canto Special Edition for:::Casta Paloma",
+      "core": "04",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/serenata/sg_100alejandro_vargas.htm",
+      "identity": "Various Artists::Alejandro Vargas Cien Años De Canto Special Edition for:::Casta Paloma",
+      "core": "01",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/serenata/sg_100alejandro_vargas.htm",
+      "identity": "Various Artists::Alejandro Vargas Cien Años De Canto Special Edition for:::El sapo",
+      "core": "03",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/serenata/sg_100alejandro_vargas.htm",
+      "identity": "Various Artists::Alejandro Vargas Cien Años De Canto Special Edition for:::Mi Linda Muchachita",
+      "core": "04",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/jazz/cdinfo/febri_conexionjazz.htm",
+      "identity": "Federico Britos Ruiz::Conexión Jazz::Blues Force",
+      "core": "04",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/jazz/cdinfo/febri_conexionjazz.htm",
+      "identity": "Federico Britos Ruiz::Conexión Jazz::Okey Paganini",
+      "core": "05",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/matecha_90asi.htm",
+      "identity": "María Teresa Chacín::Así::Caminemos",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/jose_luis_rodriguez/joseluis_89tengoderecho.htm",
+      "identity": "José Luis Rodríguez::Tengo Derecho A Ser Feliz::Si Queremos Podemos",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/jose_luis_rodriguez/joseluis_91pumaenritmo1.htm",
+      "identity": "José Luis Rodríguez::El Puma En Ritmo::Mi Novia De Escuela",
+      "core": "02",
+      "page": "01"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/jose_luis_rodriguez/joseluis_91pumaenritmo1.htm",
+      "identity": "José Luis Rodríguez::El Puma En Ritmo::Mi Novia De Escuela",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/jose_luis_rodriguez/joseluis_91pumaenritmo1.htm",
+      "identity": "José Luis Rodríguez::El Puma En Ritmo::Mi Novia De Escuela",
+      "core": "02",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/jose_luis_rodriguez/joseluis_91pumaenritmo1.htm",
+      "identity": "José Luis Rodríguez::El Puma En Ritmo::Viva El Amor",
+      "core": "03",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/jose_luis_rodriguez/joseluis_91pumaenritmo1.htm",
+      "identity": "José Luis Rodríguez::El Puma En Ritmo::Viva El Amor",
+      "core": "03",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/jose_luis_rodriguez/joseluis_91pumaenritmo1.htm",
+      "identity": "José Luis Rodríguez::El Puma En Ritmo::Cuanto Te Quiero",
+      "core": "04",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/jose_luis_rodriguez/joseluis_91pumaenritmo1.htm",
+      "identity": "José Luis Rodríguez::El Puma En Ritmo::Cuanto Te Quiero",
+      "core": "04",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/jose_luis_rodriguez/joseluis_91pumaenritmo1.htm",
+      "identity": "José Luis Rodríguez::El Puma En Ritmo::Viva La Noche",
+      "core": "05",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/oscar_d_leon/oscardleon_1982eldiscobolo.htm",
+      "identity": "Oscar D' León::El Discóbolo::El Derecho De Nacer",
+      "core": "04",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/oscar_d_leon/oscardleon_1983condulzura.htm",
+      "identity": "Oscar D' León::Con Dulzura::De Ti Depende",
+      "core": "04",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/mayra_marti/mayramarti_84mayramarti.htm",
+      "identity": "Mayra Martí::Mayra Martí::Ya Lo He Intentado Todo",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/nancy_ramos/nancyramos_lanavidadesnuestra.htm",
+      "identity": "Nancy Ramos::La Navidad Es Nuestra::Mosaico Navideño",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/natusha/natusha_3remix.htm",
+      "identity": "Natusha::Re-Mix::Que Nos Dejen En Paz",
+      "core": "03",
+      "page": "02"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/natusha/natusha_3remix.htm",
+      "identity": "Natusha::Re-Mix::Que Nos Dejen En Paz",
+      "core": "02",
+      "page": "03"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/natusha/natusha_3remix.htm",
+      "identity": "Natusha::Re-Mix::Una Pena Tengo Yo",
+      "core": "05",
+      "page": "04"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/natusha/natusha_3remix.htm",
+      "identity": "Natusha::Re-Mix::Una Pena Tengo Yo",
+      "core": "04",
+      "page": "05"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/natusha/natusha_3remix.htm",
+      "identity": "Natusha::Re-Mix::Tu La Tienes Que Pagar",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/natusha/natusha_3remix.htm",
+      "identity": "Natusha::Re-Mix::Tu La Tienes Que Pagar",
+      "core": "02",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/natusha/natusha_3remix.htm",
+      "identity": "Natusha::Re-Mix::El Meneito",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/gramcko/billos_paula.htm",
+      "identity": "Billo's Caracas Boys::Paula::Caraqueñita",
+      "core": "05",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/gramcko/billos_paula.htm",
+      "identity": "Billo's Caracas Boys::Paula::La Pachanga",
+      "core": "06",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discomoda/billos_01_comunicando.htm",
+      "identity": "Billo's Caracas Boys::Comunicando::Mi Caballo",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/fonograma/billos_510_ysumusica.htm",
+      "identity": "Billo's Caracas Boys::Billo y Su Música::Mi Cunde",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_561_billo77_5.htm",
+      "identity": "Billo's Caracas Boys::Billo 77 ½::Paisaje",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_561_billo77_5.htm",
+      "identity": "Billo's Caracas Boys::Billo 77 ½::No Me Dejan Divertir",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_565_billo79_5.htm",
+      "identity": "Billo's Caracas Boys::Billo 79 ½ En Discoteca \"El Gran Mosaico\"::Gitana",
+      "core": "14",
+      "page": "27"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/discoteca/billos_565_billo79_5.htm",
+      "identity": "Billo's Caracas Boys::Billo 79 ½ En Discoteca \"El Gran Mosaico\"::La Casa De Fernando",
+      "core": "15",
+      "page": "28"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/disqueras_unidas/billos_182_lanotadbillos.htm",
+      "identity": "Billo's Caracas Boys::La Nota De Billo's::Morenito De Maracay",
+      "core": "05",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/velvet/billos_2350_lamedallita.htm",
+      "identity": "Billo's Caracas Boys::La Medallita::Caña Brava",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/billos/rca_victor/billos_23091_aquellosboleros.htm",
+      "identity": "Billo's Caracas Boys::Aquellos Boleros De Billo's::Amar y Sufrir",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/canelita_medina/canelita_88bailableyconclase.htm",
+      "identity": "Canelita Medina::Bailable y Con Clase::Son 1",
+      "core": "05",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/chelique_sarabia/chelique_10mediahoracon.htm",
+      "identity": "Chelique Sarabia::1/2 Hora Con Chelique::Tema Despedida",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/matecha_64quisierapreguntar.htm",
+      "identity": "María Teresa Chacín con Chelique Sarabia::Quisiera Preguntar::Brisas Del Zulia",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/conjunto_ingenieria/conjuntoingenieria_1conjuntoingenieria.htm",
+      "identity": "Conjunto Ingeniería::Conjunto Ingeniería::Mambo Silbado",
+      "core": "01",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/conjunto_ingenieria/conjuntoingenieria_4conjuntoingenieria.htm",
+      "identity": "Conjunto Ingeniería::Conjunto Ingeniería::Eso",
+      "core": "06",
+      "page": "12"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/oscar_d_leon/oscardleon_1979elmasgrande.htm",
+      "identity": "Oscar D' León::El Más Grande::Tu Son",
+      "core": "04",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/dimension_latina/dimensionlatina_10_780kilosdsalsa.htm",
+      "identity": "Dimensión Latina::Dimensión Latina 78 780 Kilos De Salsa::Aunque El Tiempo",
+      "core": "05",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/dimension_latina/dimensionlatina_21_10anos.htm",
+      "identity": "Dimensión Latina::10 Años Repartiendo Salsa::Dos Letras",
+      "core": "05",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/guaco/guaco_1972estagaitasi.htm",
+      "identity": "Guaco::Esta Gaita Si Esta En Algo::Bubú Guaco",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/guaco/guaco_1979.htm",
+      "identity": "Guaco::Guaco 79::Nuestro Derecho",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/guaco/guaco_1981.htm",
+      "identity": "Guaco::Guaco 81::Aguilas Del Zulia",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/guaco/guaco_1982.htm",
+      "identity": "Guaco::Guaco 82::Parranda De Navidad",
+      "core": "05",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/guaco/guaco_1983estoesguaco.htm",
+      "identity": "Guaco::Esto Es Guaco::Venite Pa' Maracaibo",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/guaco/guaco_1983estoesguaco.htm",
+      "identity": "Guaco::Esto Es Guaco::El Billetero",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/guaco/guaco_1984guacoesguaco.htm",
+      "identity": "Guaco::Guaco Es Guaco::Rumba De Tambores",
+      "core": "05",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/guaco/guaco_1985.htm",
+      "identity": "Guaco::Guaco 85::Guaco-Loquero",
+      "core": "05",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/hugo_blanco/hugoblanco_099selecnavidena.htm",
+      "identity": "Hugo Blanco::Selección Navideña::Merengue De Navidad",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/hugo_blanco/hugoblanco_331bailables10.htm",
+      "identity": "Hugo Blanco::Bailables Nº 10::Arco Iris",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/hugo_blanco/hugoblanco_371bailables11.htm",
+      "identity": "Hugo Blanco::Bailables Nº 11::Mani Tostado",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/hugo_blanco/hugoblanco_445bailables12.htm",
+      "identity": "Hugo Blanco::Bailables Nº 12::Arena Caliente",
+      "core": "05",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/hugo_blanco/hugoblanco_elsabord.htm",
+      "identity": "Hugo Blanco::El Sabor De Hugo Blanco::Un Padre Nuestro En La Playa",
+      "core": "10",
+      "page": "19"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/hugo_blanco/hugoblanco_elsabord.htm",
+      "identity": "Hugo Blanco::El Sabor De Hugo Blanco::Cumbia Con Arpa",
+      "core": "11",
+      "page": "20"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/hugo_blanco/hugoblanco_elsabord.htm",
+      "identity": "Hugo Blanco::El Sabor De Hugo Blanco::Si Te Vas, Te Vas",
+      "core": "12",
+      "page": "21"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/hugo_blanco/hugoblanco_elsabord.htm",
+      "identity": "Hugo Blanco::El Sabor De Hugo Blanco::Corazón De Fresa",
+      "core": "13",
+      "page": "22"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/hugo_blanco/hugoblanco_elsabord.htm",
+      "identity": "Hugo Blanco::El Sabor De Hugo Blanco::Estoy Prendido",
+      "core": "14",
+      "page": "23"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/jose_luis_rodriguez/joseluis_72elhombreenlacima.htm",
+      "identity": "José Luis Rodríguez::El Hombre En La Cima::No Pudes Dejarme",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/jose_luis_rodriguez/joseluis_89senorabonita.htm",
+      "identity": "José Luis Rodríguez::Señora Bonita::El Siquisiri",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/jose_luis_rodriguez/joseluis_ayerhoysiempre_88.htm",
+      "identity": "José Luis Rodríguez::Ayer, Hoy y Siempre::Amalia Rosa",
+      "core": "08",
+      "page": "15"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/los_blanco/losblanco_32inmemorian.htm",
+      "identity": "L::In Memorian::Ubícate En El Concepto",
+      "core": "05",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/los_blanco/losblanco_ysusgrandesexitos.htm",
+      "identity": "L::Los Blanco y Sus Grandes Exitos::Potpurri No. 1",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/los_blanco/losblanco_ysusgrandesexitos.htm",
+      "identity": "L::Los Blanco y Sus Grandes Exitos::Potpurri No. 1",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/los_blanco/losblanco_ysusgrandesexitos.htm",
+      "identity": "L::Los Blanco y Sus Grandes Exitos::Potpurri No. 2",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/los_blanco/losblanco_ysusgrandesexitos.htm",
+      "identity": "L::Los Blanco y Sus Grandes Exitos::Potpurri No. 2",
+      "core": "02",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/los_blanco/losblanco_ysusgrandesexitos.htm",
+      "identity": "L::Los Blanco y Sus Grandes Exitos::Potpurri No. 3",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/los_blanco/losblanco_ysusgrandesexitos.htm",
+      "identity": "L::Los Blanco y Sus Grandes Exitos::Potpurri No. 3",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/los_blanco/losblanco_ysusgrandesexitos.htm",
+      "identity": "L::Los Blanco y Sus Grandes Exitos::Potpurri No. 4",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/los_blanco/losblanco_ysusgrandesexitos.htm",
+      "identity": "L::Los Blanco y Sus Grandes Exitos::Potpurri No. 4",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/los_blanco/losblanco_ysusgrandesexitos.htm",
+      "identity": "L::Los Blanco y Sus Grandes Exitos::Potpurri No. 5",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/los_blanco/losblanco_ysusgrandesexitos.htm",
+      "identity": "L::Los Blanco y Sus Grandes Exitos::Potpurri No. 5",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/los_blanco/losblanco_soloexitos.htm",
+      "identity": "L::Solo Exitos !!!::Mezcla A Lo Blanco II",
+      "core": "05",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/los_dementes/dementes_1966alertamundollegan.htm",
+      "identity": "Los Dementes::Alerta Mundo Llegan... \"The Crazy Men\"::Descarga A Lo Ray",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/los_dementes/dementes_1992dinerollamadinero.htm",
+      "identity": "Los Dementes::Dinero Llama Dinero::Melenco",
+      "core": "04",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/melodicos/melodicos_dcm258_esvictor.htm",
+      "identity": "Los Melódicos::Es Victor Con Los Melódicos::Ocanasordi",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/melodicos/melodicos_dcm763_recuerdos17.htm",
+      "identity": "Los Melódicos::Recuerdos 17 / La Murga y Los Nuevos Exitos::La Escoba",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/melodicos/melodicos_dcm820_recuerdos20.htm",
+      "identity": "Los Melódicos::Recuerdos Nº 20::Nube Negra",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/los_terricolas/terricolas_0845teamare.htm",
+      "identity": "Los Terrícolas::Te Amaré::Un Precioso Sueño",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/los_terricolas/terricolas_0927unacarta.htm",
+      "identity": "Los Terrícolas::Una Carta::Como Dos Huerfanitos",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/los_terricolas/terricolas_1080consentidosdamerica.htm",
+      "identity": "Los Terrícolas::Consentidos De América::Vete Pronto",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/matecha_74aguinaldos.htm",
+      "identity": "María Teresa Chacín::Aguinaldos Que No Se Olvidan::Nace El Niño",
+      "core": "05",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/matecha_74aguinaldos.htm",
+      "identity": "María Teresa Chacín::Aguinaldos Que No Se Olvidan::Parranda",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/mirla_castellanos/mirla_78_mirla79.htm",
+      "identity": "Mirla Castellanos::Mirla 79::Al Atardecer",
+      "core": "05",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/mirla_castellanos/mirla_79engrande1980.htm",
+      "identity": "Mirla Castellanos::Mirla En Grande 1980::Mi Pueblo",
+      "core": "05",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/mirla_castellanos/mirla_92venezuela.htm",
+      "identity": "Mirla Castellanos::Venezuela::Venezuela",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/mirtha_perez/mirtha_79interpretavirginialopez.htm",
+      "identity": "Mirtha Pérez::Interpreta a Virginia López::Esperame En El Cielo",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/mirtha_perez/mirtha_80exitosdsiempre.htm",
+      "identity": "Mirtha Pérez::Exitos De Siempre::Amor Perdido",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/mirtha_perez/mirtha_85conhugoblanco.htm",
+      "identity": "Mirtha Pérez::Mirtha Con El Conjunto De Hugo Blanco::Hoy Hable De Tí",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/mirtha_perez/mirtha_87inmensamentetuya.htm",
+      "identity": "Mirtha Pérez::Inmensamente Tuya::Cuando Se Acaben Las Lagrimas",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/nancy_ramos/nancyramos_tambiennavidad2.htm",
+      "identity": "Nancy Ramos::Tambien Es Navidad Vol. 2::Adeste Fidelis",
+      "core": "05",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/nancy_ramos/nancyramos_80tuyyo.htm",
+      "identity": "Nancy Ramos::Tu y Yo::Aires De Tango",
+      "core": "05",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/nancy_ramos/nancyramos_siempresnavidad.htm",
+      "identity": "Nancy Ramos::Siempre Es Navidad::Navidad",
+      "core": "06",
+      "page": "05"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/nancy_ramos/nancyramos_siempresnavidad.htm",
+      "identity": "Nancy Ramos::Siempre Es Navidad::Corre Caballito",
+      "core": "05",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/nancy_ramos/nancyramos_siempresnavidad.htm",
+      "identity": "Nancy Ramos::Siempre Es Navidad::Navidad",
+      "core": "05",
+      "page": "12"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/nancy_ramos/nancyramos_siempresnavidad.htm",
+      "identity": "Nancy Ramos::Siempre Es Navidad::Navidad",
+      "core": "06",
+      "page": "12"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/roberto_antonio/robertoantonio_03mix.htm",
+      "identity": "Roberto Antonio::Roberto Antonio Mix::Tantas Palabras",
+      "core": "07",
+      "page": "13"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/sexteto_juventud/6ttojuventud_lajuvenimpone.htm",
+      "identity": "Sexteto Juventud::La Juventud Se Impone::Mi Calvario",
+      "core": "05",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/sexteto_juventud/6ttojuventud_elsonido.htm",
+      "identity": "Sexteto Juventud::El Sonido Del Sexteto::Oye Este Consejo",
+      "core": "05",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/sexteto_juventud/6ttojuventud_cocinandosalsa.htm",
+      "identity": "Sexteto Juventud::Cocinando Salsa::Mi Niña Quiere Una Cuna",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/sexteto_juventud/6ttojuventud_cocinandosalsa.htm",
+      "identity": "Sexteto Juventud::Cocinando Salsa::Culpable",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/sexteto_juventud/6ttojuventud_brujeria.htm",
+      "identity": "Sexteto Juventud::Brujería::Corazón De Araña Negra",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/soledad_74soledadenvivo.htm",
+      "identity": "Soledad Bravo::Soledad Bravo En Vivo::Padre Nuestro (Recitado)",
+      "core": "09",
+      "page": "17"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/soledad_74cantovzla1.htm",
+      "identity": "Soledad Bravo::Cantos De Venezuela::Malagueña",
+      "core": "04",
+      "page": "01"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/soledad_74cantovzla1.htm",
+      "identity": "Soledad Bravo::Cantos De Venezuela::Allá Viene Un Corazón",
+      "core": "01",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/soledad_74cantovzla1.htm",
+      "identity": "Soledad Bravo::Cantos De Venezuela::Cantos de Pilón",
+      "core": "03",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/soledad_74cantovzla1.htm",
+      "identity": "Soledad Bravo::Cantos De Venezuela::Malagueña",
+      "core": "01",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/soledad_74cantovzla1.htm",
+      "identity": "Soledad Bravo::Cantos De Venezuela::Malagueña",
+      "core": "04",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/soledad_75cantopoesia.htm",
+      "identity": "Soledad Bravo::Canto La Poesía De Mis Compañeros::Guitarra",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/soledad_75cantopoesia.htm",
+      "identity": "Soledad Bravo::Canto La Poesía De Mis Compañeros::Coplas De La Amapola",
+      "core": "07",
+      "page": "12"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/soledad_76nuevatrova2.htm",
+      "identity": "Soledad Bravo::Canciones De La Nueva Trova Cubana Vol. 2::Mariposas",
+      "core": "05",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/soledad_77alberti.htm",
+      "identity": "Soledad Bravo::Soledad Bravo/Rafael Alberti::Balada Del Posible Regreso",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/soledad_77alberti.htm",
+      "identity": "Soledad Bravo::Soledad Bravo/Rafael Alberti::Balada Del Paraná",
+      "core": "07",
+      "page": "12"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/soledad_77alberti.htm",
+      "identity": "Soledad Bravo::Soledad Bravo/Rafael Alberti::Yo Mataba A Los Murciélagos",
+      "core": "08",
+      "page": "13"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/soledad_85.htm",
+      "identity": "Soledad Bravo::Soledad Bravo::Clara Vena",
+      "core": "04",
+      "page": "01"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/soledad_85.htm",
+      "identity": "Soledad Bravo::Soledad Bravo::Yo Vivo Enamorado",
+      "core": "01",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/soledad_85.htm",
+      "identity": "Soledad Bravo::Soledad Bravo::Clara Vena",
+      "core": "04",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/soledad_85.htm",
+      "identity": "Soledad Bravo::Soledad Bravo::Clara Vena",
+      "core": "01",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/latin_pop/cdinfo_latin/tania/tania_74incomparable.htm",
+      "identity": "Tania::Incomparable!::A Puerto Rico",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/adilia_castillo/adiliacastillo_lomejord.htm",
+      "identity": "Adilia Castillo::Lo Mejor de Adilia Castillo::Lucero De Los Llanos",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/adilia_castillo/adiliacastillo_elregresod.htm",
+      "identity": "Adilia Castillo::El Regreso De Adilia Castillo::Seis Numerao",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/anselmo_lopez/anselmolpez_tipico.htm",
+      "identity": "Anselmo López & Joseito Romero::Típico En Cuerdas::La Chipola",
+      "core": "02",
+      "page": "01"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/anselmo_lopez/anselmolpez_tipico.htm",
+      "identity": "Anselmo López & Joseito Romero::Típico En Cuerdas::La Chipola",
+      "core": "01",
+      "page": "02"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/anselmo_lopez/anselmolpez_tipico.htm",
+      "identity": "Anselmo López & Joseito Romero::Típico En Cuerdas::Caminito Del Palmar",
+      "core": "01",
+      "page": "13"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/gual_ibarreto_04.htm",
+      "identity": "Gualberto Ibarreto::Vol. 4::El Diablo Suelto",
+      "core": "05",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/serenata/sg_10years_hits.htm",
+      "identity": "Serenata Guayanesa::10 Años De Exitos::La Chacalera",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/serenata/sg_bolivar1.htm",
+      "identity": "Serenata Guayanesa::Bolívar En Un Canto Vol. I::Zumba que Zumba",
+      "core": "01",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/hildemaro_rodriguez/hildemarorodriguez_1hildemarorodriguez.htm",
+      "identity": "Hildemaro Rodríguez::Hildemaro Rodríguez::Y Si Tú No Estas",
+      "core": "05",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/jv_torrealba/jvt_torrealberos500.htm",
+      "identity": "Los Torrealberos Juan Vicente Torrealba::La Música Más Pura y Bella de Venezuela::La Llanura",
+      "core": "02",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/jv_torrealba/jvt_torrealberos503.htm",
+      "identity": "Los Torrealberos Juan Vicente Torrealba::La Música Más Pura y Bella de Venezuela::Sueño Llanero",
+      "core": "04",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/jv_torrealba/jvt_cincoestrellas.htm",
+      "identity": "Los Torrealberos Juan Vicente Torrealba::Cinco Estrellas::Maracaibo",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/jv_torrealba/jvt_estampasllaneras.htm",
+      "identity": "Juan Vicente Torrealba::Estampas Llaneras::Glosa Del Amor Desnudo",
+      "core": "05",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/jv_torrealba/jvt_estampasllaneras.htm",
+      "identity": "Juan Vicente Torrealba::Estampas Llaneras::La Negra Del Maraquero",
+      "core": "06",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/jv_torrealba/jvt_suitetorrealbera.htm",
+      "identity": "Juan Vicente Torrealba::Suite Torrealbera::Barlovento",
+      "core": "05",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/jv_torrealba/jvt_estampida_elect2.htm",
+      "identity": "Juan Vicente Torrealba::Estampida Electrónica Vol. 2::Sueño Azul",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/jv_torrealba/jvt_merenguesvzlanos.htm",
+      "identity": "Juan Vicente Torrealba::Merengues Venezolanos::Carmen - El Porteño",
+      "core": "05",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/sardina_naiguata/sardinanaiguata_vol1.htm",
+      "identity": "La Sardina De Naiguatá::La Sardina De Naiguatá::La Paloma",
+      "core": "02",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/sardina_naiguata/sardinanaiguata_vol1_84.htm",
+      "identity": "La Sardina De Naiguatá::La Sardina De Naiguatá (Edición Especial) Carnaval 84::La Paloma",
+      "core": "03",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/luis_silva/luissilva_86alguientespera.htm",
+      "identity": "Luis Silva::Alguien Te Espera::Un Bohemio y Una Estampa",
+      "core": "05",
+      "page": "9"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/luis_silva/luissilva_87aquienolevagustar.htm",
+      "identity": "Luis Silva::A Quien No Le Va A Gustar::Porta Voz De Mi Folklor",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/reyna_lucero/reynalucero_84nohaytierra.htm",
+      "identity": "Reyna Lucero::No Hay Tierra Como Mi Tierra::No Llores Cariño",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/reynaldo_armas/reyarmas_17amoryenvidia.htm",
+      "identity": "Reynaldo Armas::El Amor y La Envidia::El Ultimo Heredero",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/reynaldo_armas/reyarmas_22lamanzana.htm",
+      "identity": "Reynaldo Armas::La Manzana::Buscando Tu Querer",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/reynaldo_armas/reynaldoarmas_40superexitosd.htm",
+      "identity": "Reynaldo Armas::Los 40 Super Exitos::Soledad",
+      "core": "11",
+      "page": "31"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/reynaldo_armas/reynaldoarmas_40superexitosd.htm",
+      "identity": "Reynaldo Armas::Los 40 Super Exitos::Ni Fronteras, Ni Palabras",
+      "core": "12",
+      "page": "32"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/rondalla_vzlana/rondalla_mariachitapatio_lp.htm",
+      "identity": "Rondalla Venezolana con El Mariachi Tapatio::Serenata A Venezuela::Por El Camino",
+      "core": "02",
+      "page": "8"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/rondalla_vzlana/rondalla_mariachitapatio_lp.htm",
+      "identity": "Rondalla Venezolana con El Mariachi Tapatio::Serenata A Venezuela::Linda Merideña",
+      "core": "04",
+      "page": "10"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/rondalla_vzlana/rondalla_mariachitapatio_lp.htm",
+      "identity": "Rondalla Venezolana con El Mariachi Tapatio::Serenata A Venezuela::Tu Amor Fue Una Ilusión",
+      "core": "05",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/simondiaz_gaitas73_candidato.htm",
+      "identity": "Simón Díaz y Hugo Blanco::La Gaita De Las Cuñas::La Batalla Del Sancocho",
+      "core": "03",
+      "page": "5"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/simondiaz_gaitas73_candidato.htm",
+      "identity": "Simón Díaz y Hugo Blanco::La Gaita De Las Cuñas::La Vecina De Al Lado",
+      "core": "04",
+      "page": "6"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/simondiaz_gaitas73_candidato.htm",
+      "identity": "Simón Díaz y Hugo Blanco::La Gaita De Las Cuñas::Carlos Andrés y Lorenzo",
+      "core": "05",
+      "page": "7"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/1solo_pueblo/1solopueblo_vol1.htm",
+      "identity": "Un Solo Pueblo::La Música de Un Solo Pueblo Vol. 1::Estribillo De Pascua",
+      "core": "06",
+      "page": "11"
+    },
+    {
+      "url": "https://sincopa.com/traditional/cdinfo2/1solo_pueblo/1solopueblo_1990_lamusica.htm",
+      "identity": "Un Solo Pueblo::La Música de Venezuela Un Solo Pueblo::Mi Barquito Marinero",
+      "core": "05",
+      "page": "9"
+    }
+  ]
+}

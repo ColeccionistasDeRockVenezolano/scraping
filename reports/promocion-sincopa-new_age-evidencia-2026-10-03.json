@@ -1,0 +1,1324 @@
+{
+  "section": "new_age",
+  "dryRun": false,
+  "note": "Sincopa new_age: segunda pasada con evidencia del core (repertorio del disco, posición de la pista, decisión del ER anterior al homónimo)",
+  "kinds": {
+    "organization": {
+      "identities": 0,
+      "claims": 0,
+      "verdicts": {},
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "artist": {
+      "identities": 1,
+      "claims": 3,
+      "verdicts": {
+        "same:mismo-nombre-sin-tildes": 1
+      },
+      "applied": 0,
+      "unchanged": 3,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "person": {
+      "identities": 62,
+      "claims": 110,
+      "verdicts": {
+        "hold:no-es-una-persona:organization_like": 38,
+        "hold:no-es-una-persona:agrupacion-o-lugar": 6,
+        "hold:no-es-una-persona:multiple_people": 3,
+        "hold:no-es-una-persona:parentesis-de-titulo": 3,
+        "hold:no-es-una-persona:rotulo": 1,
+        "hold:parte-de-credito-multiple:sin-enlace-seguro": 11
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "album": {
+      "identities": 7,
+      "claims": 76,
+      "verdicts": {
+        "different:titulo-casi-igual-otro-repertorio": 2,
+        "hold:titulo-casi-igual-mismo-padre": 1,
+        "same:titulo-casi-igual-mismo-repertorio": 1,
+        "hold:padre-sin-resolver": 3
+      },
+      "applied": 10,
+      "unchanged": 26,
+      "stillCandidate": 3,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "track": {
+      "identities": 182,
+      "claims": 709,
+      "verdicts": {
+        "hold:padre-sin-resolver": 60,
+        "same:titulo-casi-igual-misma-posicion": 33,
+        "different:sin-coincidencia": 52,
+        "hold:titulo-casi-igual-mismo-padre": 13,
+        "same:mismo-titulo-mismo-disco": 17,
+        "approve:auto-match": 2,
+        "hold:titulo-igual-con-contradiccion": 2,
+        "different:solo-coincide-bajo-otro-padre": 3
+      },
+      "applied": 51,
+      "unchanged": 210,
+      "stillCandidate": 134,
+      "dismissed": 0,
+      "failed": 0
+    }
+  },
+  "holds": [
+    {
+      "kind": "person",
+      "identityRaw": "Estudios AMBDAR",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudio de Rubén Pérez",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Deejay Productions",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Brain Gain Unlimited - A.C. Tañerla",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudio Sonofolk",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Interlinea Concepto Digital - Margarita Island",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Ra Visual Sound",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "R.V.S. Records",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "R.V.S. Records Estudios",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Tweety Studios",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Vinicio Adames' Studio",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Uranium Records",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 7
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Dance of the Birds of Paradise",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "detail": "solo aparece como paréntesis final de títulos de pista; puede ser un subtítulo o una traducción",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Silent running of the mythical jaguar",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "detail": "solo aparece como paréntesis final de títulos de pista; puede ser un subtítulo o una traducción",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Le Garage Studio",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios Transmillenium Inc.",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios Quota",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Quasar Studios KGD",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Uraniun Records",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 6
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Ethnosonics Studio",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "The Serbian Electrosymphonic Orchestra",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "The Farm Studios",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "The Pavillion Auditorium of Varanasi University",
+      "rule": "no-es-una-persona:multiple_people",
+      "detail": "demasiados tokens para un nombre",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Alchemy Mastering",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Grupo Tees 22 S.A.",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "The Small Studio",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 4
+    },
+    {
+      "kind": "person",
+      "identityRaw": "World's Production",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 4
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Runes Music Studio",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "World Production",
+      "rule": "no-es-una-persona:agrupacion-o-lugar",
+      "detail": "el nombre es de una agrupación, institución o lugar",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Venus Mastering",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios Hara",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios OM",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios de San Fernando",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "OM Studios",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios Habitat",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 5
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Alcione Studios",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Hara Studios",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Playa Studios",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Habitat Studios",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Radio Hit",
+      "rule": "no-es-una-persona:parentesis-de-titulo",
+      "detail": "solo aparece como paréntesis final de títulos de pista; puede ser un subtítulo o una traducción",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Klandestino Studio",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 8
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Feat. Tropi & Nana Cadavieco",
+      "rule": "no-es-una-persona:rotulo",
+      "detail": "rótulo o número en el lugar del nombre (Feat., Arr:, Bonus Track, tracks 1-4, un año)",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Tumbador Estudios",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Estudios MAN",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "NEWdOG Records",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 2
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Dungeon Recording Studio",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 3
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Victor Castillo Studio",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Joensa Estudios",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Latin World Studios",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 4
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Amasónica Estudios",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 4
+    },
+    {
+      "kind": "person",
+      "identityRaw": "Valhalla Studios",
+      "rule": "no-es-una-persona:organization_like",
+      "detail": "contiene una palabra de estudio, sello o productora",
+      "claims": 4
+    },
+    {
+      "kind": "person",
+      "identityRaw": "H. Parry",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "W. Blake",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "R. Gonsalves",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "A. Salas",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J.V. Belisario",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "L. Jiménez",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "C. Sardi",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "A. Belloso",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "J.I. Sucre",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "A. Gómez",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "person",
+      "identityRaw": "F. Gómez",
+      "rule": "parte-de-credito-multiple:sin-enlace-seguro",
+      "detail": "nombre con iniciales de un crédito con varios autores: solo con enlace seguro a una persona existente",
+      "claims": 1
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Angel Rada::Aqua After 2012 Drums Of Love",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "2822 «2012»; 15246 «Aqua after 2012»",
+      "claims": 13
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Arca::Xen",
+      "rule": "padre-sin-resolver",
+      "detail": "el artista del disco aún no está en el core",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Arca::Mutant",
+      "rule": "padre-sin-resolver",
+      "detail": "el artista del disco aún no está en el core",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Arca::Arca",
+      "rule": "padre-sin-resolver",
+      "detail": "el artista del disco aún no está en el core",
+      "claims": 8
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Xen::Now You Know",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Xen::Held Apart",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Xen::Xen",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Xen::Sad Bitch",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Xen::Sisters",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Xen::Slit Thru",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Xen::Failed",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Xen::Family Violence",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Xen::Thievery",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Xen::Lonely Thugg",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Xen::Fish",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Xen::Wound",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Xen::Bullet Chained",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Xen::Tongue",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Xen::Promise",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Alive",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Mutant",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Vanity",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Sinner",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Anger",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Sever",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Beacon",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Snakes",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Else",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Umbilical",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Hymn",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Front Load",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Gratitud",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::En",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Siren Interlude",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Extent",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Envelopeped",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Faggot",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Soichiro",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Mutant::Peonies",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Arca::Piel",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Arca::Anoche",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Arca::Saunter",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Arca::Urchin",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Arca::Reverie",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Arca::Castration",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Arca::Sin Rumbo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Arca::Coraje",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Arca::Whip",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Arca::Desafío",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Arca::Fugaces",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Arca::Miel",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arca::Arca::Child",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Cuentos De Ada 6::Sensei. Chóng e'ivissa",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "16748 «Sensei chong e´ivissa»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Solar Concert For Bhagavan::Shangri-La",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "19529 «I ching, Shangri-la»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Continuvm::Continuvm... Y Salió El Sol",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "18045 «Continuvm»; 19530 «Y Salió el Sol»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Impresiones Etnosonicas::Ballenas Cosmicas",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "17965 «Ballenas Cósmicas»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Impresiones Etnosonicas::Extasis Primitivo",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "19524 «Éxtasis Primitivo»: el ER vio una contradicción (año, duración…)",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::2012::Surical Kingdom Rave",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "17655 «Suricat Kingdom Rave»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::2012::Ground Zero Jam Sesion",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "17659 «Ground Zero Jam Session»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Aqua After 2012 Drums Of Love::Doors Of Wisdom",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Aqua After 2012 Drums Of Love::Kalima",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Aqua After 2012 Drums Of Love::Mahasamadhi",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Aqua After 2012 Drums Of Love::Taboo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Aqua After 2012 Drums Of Love::Sat Sang",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Aqua After 2012 Drums Of Love::Return To Turkain Mountains",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Aqua After 2012 Drums Of Love::Sivaji Cosmic Dance",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Aqua After 2012 Drums Of Love::Thousand Candles For Mankind",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Aqua After 2012 Drums Of Love::Gopala Dance",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Aqua After 2012 Drums Of Love::Lord Ganesha Kingdom",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Aqua After 2012 Drums Of Love::Ghats Of Life",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Aqua After 2012 Drums Of Love::Kumbah Mela",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Redunjusta::23 jhnohm",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "2001 «23 Jhnohm (Jhno Remix)»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Redunjusta::Flesh Frogs",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "2006 «Flesh Frogs (Paul Godwin Remix)»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Redunjusta::Desarollo V",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "2011 «Desarollo V (Miguel Noya Remix)»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Redunjusta::Eulogy",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "2030 «Eulogy (Paul Godwin Remix)»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Redunjusta::Increado",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "2042 «Increado (Miguel Noya Remix)»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Redunjusta::Reza's Dream",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "2048 «Reza's Dream (Reza Remix)»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Redunjusta::The Seer Mix",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "2054 «The Seer Mix (Seer Remix)»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Oscar Caraballo::Yesterday Is Tomorrow::All Good People",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "45559 «All Good People Suite»",
+      "claims": 3
+    }
+  ],
+  "duplicateFlags": [],
+  "errors": [],
+  "runId": 11607,
+  "evidenceVerdicts": [
+    {
+      "kind": "album",
+      "identityRaw": "Angel Rada::Aqua after 2012",
+      "rule": "titulo-casi-igual-otro-repertorio",
+      "detail": "{\"2822\":{\"shared\":0,\"total\":12,\"core\":13}}"
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Angel Rada::Upadesa Reloaded",
+      "rule": "titulo-casi-igual-otro-repertorio",
+      "detail": "{\"2945\":{\"shared\":0,\"total\":8,\"core\":7}}"
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Masseratti 2lts::Colores De Ideas 7",
+      "rule": "titulo-casi-igual-mismo-repertorio",
+      "targetId": 2744,
+      "detail": "Colores de ideas {\"2744\":{\"shared\":9,\"total\":15,\"core\":15}}"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::En Sabana Grande Tambien Hay::Piraña Latin Session (Radio Hit)",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 5967,
+      "detail": "Piraña Latin Session (Radio Cut)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Vacilón Dans La Chambre::Conexión Guairística en el Love Boat",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 16820,
+      "detail": "Conexión guairística en love boat"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Vacilón Dans La Chambre::Hippie Session 2069",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 16822,
+      "detail": "Hippie session"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Vacilón Dans La Chambre::Mérida c'est la Ville!",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 19071,
+      "detail": "Mérida c´est la ville"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Folklore No-Tradicional Venezolano # 4::Criollo Sunshine Trip",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 16765,
+      "detail": "Criollo sunshipe trip"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Folklore No-Tradicional Venezolano # 4::Baby Bom-bay Vibes",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 16774,
+      "detail": "Baby bom-bay"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Folklore No-Tradicional Venezolano # 4::Exterlude Maraichers_Paris",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 19062,
+      "detail": "Exterlude maraiches Paris"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Folklore No-Tradicional Venezolano # 4::Joropo's Latin Love Kit",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 16771,
+      "detail": "Joropo´s latin love kit"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Folklore No-Tradicional Venezolano # 4::The Ca.cha.pa Non Acoustic Session",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 16786,
+      "detail": "The ca.cha.pa no acoustic session"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Coctel # 5: Cacao, Mujer y Beats::Exterlude Criollotz # 5",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 16761,
+      "detail": "Exterlude Crioloottz # 5"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Cuentos De Ada 6::Free Fresa Sun.dance Lovers",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 18542,
+      "detail": "Free fresa sundance lovers"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Cuentos De Ada 6::Adara Primavera Nº1",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 16733,
+      "detail": "Adara primavera Nº 1"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Colores De Ideas 7::Le tropi.cal blues symphony A-",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 16715,
+      "detail": "Le tropi.cal blues symphony"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Colores De Ideas 7::Believe & Create.#Follow me",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 16719,
+      "detail": "Believe & Create"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Colores De Ideas 7::hora, loca & ron confessions",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 18527,
+      "detail": "Hora, loca, ron confessions"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Colores De Ideas 7::Ay! Juana BESO.le X 7",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 16716,
+      "detail": "Ay!Juana BESO le X7"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Colores De Ideas 7::Ex.terlude Informatique.Automatique 24",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 16721,
+      "detail": "Ex.terlunde Informatique Automatique 24"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Masseratti 2lts::Colores De Ideas 7::Cuento bossa en tocoto MAYOR",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 16724,
+      "detail": "Cuento bosa en tocoto MAYOR."
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Upadesa::Mar De La Tristeza",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 18081,
+      "detail": "Mar de Tristeza"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Viveka::Hiperspacio",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 18065,
+      "detail": "Hiperespacio"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Solar Concert For Bhagavan::I Ching",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 19529,
+      "detail": "I ching, Shangri-la"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Continuvm::Saturn Rings Song",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 18040,
+      "detail": "Saturn Ring Song"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::The Golden Flame::Birland II",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 17989,
+      "detail": "Birdland II"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::2012::Mediterrance",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 17266,
+      "detail": "Mediterranee"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Neurosinergy::Acis Rain In The Backyard",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 17010,
+      "detail": "Acid rain in the Backyard"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Angel Rada::Neurosinergy::Metropolitan Train",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 17025,
+      "detail": "Metropolitanan Train"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Notdunjusta::Chet's Dream",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 19553,
+      "detail": "Chet´s Dream"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Notdunjusta::Marriage Between Zones, Zone 3",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 19557,
+      "detail": "The Marriage Between Two Zones (Zone 3)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Notdunjusta::Marriage Between Zones, Zones 4 & 5",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 19556,
+      "detail": "The Marriage Between Two Zones (Zone 4 and 5)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Notdunjusta::Nicolas & Drisana",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 19554,
+      "detail": "Nicholas and Drisana"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Redunjusta::Marriage Between Two Zones, Zone 3",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 1976,
+      "detail": "Marriage Between Zones: Zone 3"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Redunjusta::Marriage Between Two Zones, Zones 4 & 5",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 1981,
+      "detail": "Marriage Between Zones: Zones 4 & 5"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Dogon::Redunjusta::Nicolas and Drisana",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 1988,
+      "detail": "Nicolas & Drisana"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "decidedAt": "2026-10-03",
+  "evidence": "Homónimos que dejó la revisión manual de Sincopa (reports/sincopa-revision-manual-2026-10-02.md). Brian aprobó fusionar los pares con proyecto común; la ficha con rótulo se resuelve después con scripts/resolve-sincopa-manual-review.ts.",
+  "corrections": [
+    { "op": "merge", "keep": { "id": 20644, "name": "Iván Pérez Rossi" }, "drop": { "id": 911, "name": "Iván Pérez Rossi" }, "keepDropNameAsAlias": false, "why": "los dos son miembros de Serenata Guayanesa" },
+    { "op": "merge", "keep": { "id": 32526, "name": "Jesús Rosas Marcano" }, "drop": { "id": 9650, "name": "Jesús Rosas Marcano" }, "keepDropNameAsAlias": false, "why": "los dos acreditados como compositor en discos de Carlos Baute" }
+  ]
+}

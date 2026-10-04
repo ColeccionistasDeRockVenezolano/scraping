@@ -1,0 +1,362 @@
+{
+  "section": "classic",
+  "dryRun": false,
+  "note": "Sincopa classic: tercera pasada tras resolver artistas abiertos (run 11650), con evidencia del core (repertorio del disco, posición de la pista, decisión del ER anterior al homónimo)",
+  "kinds": {
+    "album": {
+      "identities": 25,
+      "claims": 218,
+      "verdicts": {
+        "hold:titulo-casi-igual-mismo-padre": 3,
+        "different:sin-coincidencia": 17,
+        "different:solo-coincide-bajo-otro-padre": 1,
+        "same:mismo-titulo-mismo-artista:decision-er-anterior": 4
+      },
+      "applied": 76,
+      "unchanged": 122,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "track": {
+      "identities": 527,
+      "claims": 1929,
+      "verdicts": {
+        "different:sin-coincidencia": 361,
+        "hold:padre-sin-resolver": 30,
+        "hold:titulo-casi-igual-mismo-padre": 6,
+        "same:mismo-titulo-mismo-disco": 3,
+        "different:solo-coincide-bajo-otro-padre": 127
+      },
+      "applied": 289,
+      "unchanged": 508,
+      "stillCandidate": 993,
+      "dismissed": 0,
+      "failed": 3
+    }
+  },
+  "holds": [
+    {
+      "kind": "album",
+      "identityRaw": "Orquesta Sinfónica Venezuela (OSV)::Concierto De Las Tres Esferas",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "5980 «I Concurso de Composición Sinfónica \"Concierto De Las Tres Esferas\"»",
+      "claims": 5
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Danzón - Música de Latinoamerica",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "5921 «Danzón»",
+      "claims": 7
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "15304 «Lo Mejor de Venezuela Suite»",
+      "claims": 8
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Danzón - Música de Latinoamerica::Danzón Nº 2",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Danzón - Música de Latinoamerica::Danzón Nº 3 for Flute, Guitar & Orchestra",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Danzón - Música de Latinoamerica::La Muerte Del Angel",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Danzón - Música de Latinoamerica::Danzón Nº 4",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Danzón - Música de Latinoamerica::Melodia en La",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Danzón - Música de Latinoamerica::Ten Presente El Presente",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Danzón - Música de Latinoamerica::Suite Onda Nueva",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Alirio Díaz::Solos De Guitarra::Valse No. 4",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "45904 «Valse Op. 8 Nº 4»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Alirio Díaz::Classic Portraits The Best Of Alirio Díaz::Fantasía",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "46059 «Fantasia XXXVIII»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Simón Bolívar Symphony Orchestra of Venezuela::Revueltas, Orbón & Ginastera::The Return of The Fishermen with Their Dead Friend",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "84040 «The Fishermen»",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Suite Central::Tristeza Moruna",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "157099 «Tristeza»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Mar De La Virgen Bonita",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Canchunchu Florido",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Noches Larenses",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Chaparralito",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Desvelo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Brisas Del Zulia",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Soberana",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Andino",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Fulgida Luna",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Puerto Cabello",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Esta Noche Serena",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Concierto En La Llanura",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Carora",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Hendrina",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::María Elena",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Guitarra Larense",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::La Veragacha",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Lluvia",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Moliendo Café",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Juliana",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Desesperanza",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Caracas Vieja",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Venezuela Suite (Series)::Lo Mejor de Venezuela Suite Vol. 2::Algo Sublime",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gabriela Montero::Montero: Piano Concerto No. 1 Ravel: Piano Concerto in G Major::Piano Concerto No. 1 'Latin' Concerto",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "47491 «Piano Concerto No. 1 \"Latin\": I. Mambo (Live)»; 47492 «Piano Concerto No. 1 \"Latin\": II. Andante Moderato (Live)»; 47493 «Piano Concerto No. 1 \"Latin\": III. Allegro Venezolano (Live)»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gabriela Montero::Montero: Piano Concerto No. 1 Ravel: Piano Concerto in G Major::Piano Concerto in G Major, M. 83",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "47494 «Piano Concerto in G Major, M. 83: I. Allegramente (Live)»; 47495 «Piano Concerto in G Major, M. 83: II. Adagio Assai (Live)»; 47496 «Piano Concerto in G Major, M. 83: III. Presto (Live)»",
+      "claims": 3
+    }
+  ],
+  "duplicateFlags": [],
+  "errors": [
+    {
+      "kind": "track",
+      "identityRaw": "Alirio Díaz::Recital::Guasa",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Alirio Díaz::Recital::Homenaje",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Alirio Díaz::Recital::Cinco Piezas Infantiles",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    }
+  ],
+  "runId": 11652,
+  "evidenceVerdicts": [
+    {
+      "kind": "album",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Beethoven",
+      "rule": "mismo-titulo-mismo-artista:decision-er-anterior",
+      "targetId": 5918,
+      "detail": "Beethoven"
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Venezuela Sinfónica",
+      "rule": "mismo-titulo-mismo-artista:decision-er-anterior",
+      "targetId": 5919,
+      "detail": "Venezuela Sinfónica"
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Tchaikosvky Espectacular",
+      "rule": "mismo-titulo-mismo-artista:decision-er-anterior",
+      "targetId": 5920,
+      "detail": "Tchaikosvky Espectacular"
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Orquesta Sinfónica Gran Mariscal de Ayacucho::Navidad Sinfónica",
+      "rule": "mismo-titulo-mismo-artista:decision-er-anterior",
+      "targetId": 5922,
+      "detail": "Navidad Sinfónica"
+    }
+  ]
+}

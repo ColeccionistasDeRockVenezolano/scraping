@@ -1,0 +1,56 @@
+{
+  "dryRun": false,
+  "runId": 11596,
+  "decisions": 4,
+  "applied": 4,
+  "review": 0,
+  "failed": 0,
+  "creditsMoved": 6,
+  "creditsDropped": 0,
+  "created": [],
+  "errors": [],
+  "plan": [
+    {
+      "id": 28490,
+      "op": "retirar",
+      "why": "ficha vacía: su crédito es de un disco que aún no está en el core; 911 y 20644 ya fusionados",
+      "name": "Rec. Iván Pérez Rossi",
+      "credits": 0
+    },
+    {
+      "id": 31028,
+      "op": "enlazar",
+      "target": 32526,
+      "why": "el compositor Jesús Rosas Marcano (79 créditos); no hay otro que componga",
+      "name": "Comp. Jesús Rosas Marcano",
+      "credits": 3,
+      "bare": "Jesús Rosas Marcano",
+      "role": {
+        "creditType": "composer",
+        "role": "composer"
+      }
+    },
+    {
+      "id": 31379,
+      "op": "rol",
+      "name": "Recop: Juan Estévez",
+      "credits": 2,
+      "bare": "Juan Estévez",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      }
+    },
+    {
+      "id": 32176,
+      "op": "rol",
+      "name": "Recop: José Antonio Calcaño",
+      "credits": 1,
+      "bare": "José Antonio Calcaño",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      }
+    }
+  ]
+}

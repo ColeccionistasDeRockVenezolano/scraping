@@ -1,0 +1,637 @@
+{
+  "section": "ethnic",
+  "dryRun": false,
+  "note": "Sincopa ethnic: tercera pasada tras resolver artistas abiertos (run 11650), con evidencia del core (repertorio del disco, posición de la pista, decisión del ER anterior al homónimo)",
+  "kinds": {
+    "album": {
+      "identities": 18,
+      "claims": 135,
+      "verdicts": {
+        "different:sin-coincidencia": 5,
+        "same:titulo-casi-igual-mismo-repertorio": 1,
+        "hold:titulo-casi-igual-mismo-padre": 3,
+        "approve:auto-match": 3,
+        "same:mismo-titulo-mismo-artista:decision-er-anterior": 3,
+        "hold:padre-sin-resolver": 3
+      },
+      "applied": 27,
+      "unchanged": 47,
+      "stillCandidate": 6,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "track": {
+      "identities": 402,
+      "claims": 1550,
+      "verdicts": {
+        "different:sin-coincidencia": 308,
+        "hold:titulo-casi-igual-mismo-padre": 4,
+        "different:solo-coincide-bajo-otro-padre": 7,
+        "approve:auto-match": 9,
+        "hold:padre-sin-resolver": 58,
+        "same:mismo-titulo-mismo-disco": 8,
+        "hold:titulo-igual-con-contradiccion": 6,
+        "same:mismo-titulo-mismo-disco:decision-er-anterior": 1,
+        "hold:varios-con-el-mismo-titulo": 1
+      },
+      "applied": 150,
+      "unchanged": 270,
+      "stillCandidate": 816,
+      "dismissed": 0,
+      "failed": 5
+    }
+  },
+  "holds": [
+    {
+      "kind": "album",
+      "identityRaw": "C4 Trío::C4 Trío y Desorden Público - Pa' Fuera",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "129 «C4 Trío»; 4686 «Desorden Público»",
+      "claims": 5
+    },
+    {
+      "kind": "album",
+      "identityRaw": "C4 Trío::C4 Trío y Luis Enrique - Tiempo al Tiempo",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "129 «C4 Trío»",
+      "claims": 5
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Gaélica::Paz: Una Navidad Celta En Venezuela",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "2534 «Celta en Venezuela»",
+      "claims": 13
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Grupo::Grupo Raíces De Venezuela",
+      "rule": "padre-sin-resolver",
+      "detail": "el artista del disco aún no está en el core",
+      "claims": 16
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Grupo::Grupo Raíces",
+      "rule": "padre-sin-resolver",
+      "detail": "el artista del disco aún no está en el core",
+      "claims": 8
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Grupo::Raices",
+      "rule": "padre-sin-resolver",
+      "detail": "el artista del disco aún no está en el core",
+      "claims": 8
+    },
+    {
+      "kind": "track",
+      "identityRaw": "5nFusion::Papasónica::Guayana Es",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "68277 «Guayana»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "5nFusion::Papasónica::Guayana Gentil",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "68277 «Guayana»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "5nFusion::Papasónica::Gracias Guayana",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "68277 «Guayana»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Aldemaro Romero::40 Años 40 Exitos::A La Orilla De La Carretera",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "69073 «Carretera»",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gaélica::Paz: Una Navidad Celta En Venezuela::Adeste Fideles",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gaélica::Paz: Una Navidad Celta En Venezuela::Jigs:",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gaélica::Paz: Una Navidad Celta En Venezuela::Noche De Paz (Silent Knight)",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gaélica::Paz: Una Navidad Celta En Venezuela::Niño Jesús Llanero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gaélica::Paz: Una Navidad Celta En Venezuela::Reels:",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gaélica::Paz: Una Navidad Celta En Venezuela::El Tamborilero (The Little Drummer Boy)",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gaélica::Paz: Una Navidad Celta En Venezuela::Parranda Celta:",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gaélica::Paz: Una Navidad Celta En Venezuela::Reels II:",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gaélica::Paz: Una Navidad Celta En Venezuela::Niño Lindo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gaélica::Paz: Una Navidad Celta En Venezuela::Una Gaita Con Gaita",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "C4 Trío::C4 Trío y Rafael \"Pollo\" Brito - De Repente::Y Deja",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "136502 «Y deja»: el ER vio una contradicción (año, duración…)",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "C4 Trío::C4 Trío y Rafael \"Pollo\" Brito - De Repente::Isn't She Lovely",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "136503 «Isn’t She Lovely»: el ER vio una contradicción (año, duración…)",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "C4 Trío::C4 Trío y Rafael \"Pollo\" Brito - De Repente::El Tresillo",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "136504 «El tresillo»: el ER vio una contradicción (año, duración…)",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "C4 Trío::C4 Trío y Rafael \"Pollo\" Brito - De Repente::Déjala Bailar - Seis Por Derecho",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "136506 «Déjala bailar / Seis por derecho»: el ER vio una contradicción (año, duración…)",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "C4 Trío::C4 Trío y Rafael \"Pollo\" Brito - De Repente::Hasta Que Vuelvas",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "136508 «Hasta que vuelvas»: el ER vio una contradicción (año, duración…)",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "C4 Trío::C4 Trío y Rafael \"Pollo\" Brito - De Repente::Lucerito - El Acertijo",
+      "rule": "titulo-igual-con-contradiccion",
+      "detail": "136509 «Lucerito / El acertijo»: el ER vio una contradicción (año, duración…)",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Vytas Brenner::En Vivo! Ofrenda::Interludio",
+      "rule": "varios-con-el-mismo-titulo",
+      "detail": "ya hay 2 con ese título bajo el mismo padre: 6831, 4504",
+      "claims": 6
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces de Venezuela::Recordando Al Poeta",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces de Venezuela::El Alacrán",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces de Venezuela::Toto",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces de Venezuela::Apure En Un Viaje",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces de Venezuela::Mis Anhelos",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces de Venezuela::Cara E' Tiple",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces de Venezuela::Saltarin",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces de Venezuela::Los Potes De San Andres",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces de Venezuela::Las Lomas Del Viento",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces de Venezuela::Pico Del Aguila",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces de Venezuela::Mañanitas Navideñas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces de Venezuela::Mesa Bolivar",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces::Raices",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces::Pico Del Aguila",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces::Mi Llavecita",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces::Séptimo Amigo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces::La Negra Cachumba",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces::Pueblo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces::Don Luis",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces::Chuao",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces::Laberinto",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces::El Chingo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 4
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Raices::Pajarillo y Chipola",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Raices::Cuando Duerme Caracas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Raices::Señor Jou",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Raices::Tonada Al Atardecer",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Raices::Guayana",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Raices::El Parrillero",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Raices::Saludo A Barinas",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Raices::Dialogo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Raices::Patatín Patatán",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Raices::Llanerita",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Raices::Pasaje Indio",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Raices::Linda Zuliana",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces De Venezuela::La Totuviola",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces De Venezuela::El Tristón",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces De Venezuela::Surcando El Paso",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces De Venezuela::Onda Romántica",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces De Venezuela::Mi Estrella",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces De Venezuela::Pequeña Venecia",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces De Venezuela::La Negra Sereta",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces De Venezuela::Retazos Criollos",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces De Venezuela::Raices Llaneras II",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces De Venezuela::Salud! Amigo",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces De Venezuela::Panal De Arena",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces De Venezuela::El Profe",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces De Venezuela::Pasaje De La Esperanza",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo::Grupo Raíces De Venezuela::En El Ocaso",
+      "rule": "padre-sin-resolver",
+      "detail": "el disco de la pista aún no está en el core",
+      "claims": 5
+    }
+  ],
+  "duplicateFlags": [],
+  "errors": [
+    {
+      "kind": "track",
+      "identityRaw": "Aldemaro Romero::Onda Nueva Vocal::Pais Tropical",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Aldemaro Romero::Dinner in Caracas::Serenata",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Aldemaro Romero::Dinner In Caracas::Dama Antañona",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Aldemaro Romero::Dinner In Caracas::Fúlgida Luna",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo Raíces de Venezuela::Grupo Raíces de Venezuela::Visión Cultural",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    }
+  ],
+  "runId": 11659,
+  "evidenceVerdicts": [
+    {
+      "kind": "album",
+      "identityRaw": "C4 Trío::C4 Trío y Rafael \"Pollo\" Brito - De Repente",
+      "rule": "titulo-casi-igual-mismo-repertorio",
+      "targetId": 14865,
+      "detail": "De repente {\"129\":{\"shared\":0,\"total\":10,\"core\":14},\"14865\":{\"shared\":10,\"total\":10,\"core\":10}}"
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Los Sinverguenzas::20.20 (Veinte Años 2000-2020)",
+      "rule": "mismo-titulo-mismo-artista:decision-er-anterior",
+      "targetId": 9746,
+      "detail": "20.20 (Veinte Años 2000-2020)"
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Los Sinverguenzas::Bichoneando",
+      "rule": "mismo-titulo-mismo-artista:decision-er-anterior",
+      "targetId": 9742,
+      "detail": "Bichoneando"
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Los Sinverguenzas::Desde Otro Lugar",
+      "rule": "mismo-titulo-mismo-artista:decision-er-anterior",
+      "targetId": 9743,
+      "detail": "Desde Otro Lugar"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "C4 Trío::C4 Trío y Rafael \"Pollo\" Brito - De Repente::Océano",
+      "rule": "mismo-titulo-mismo-disco:decision-er-anterior",
+      "targetId": 136505,
+      "detail": "Océano"
+    }
+  ]
+}

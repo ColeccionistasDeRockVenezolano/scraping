@@ -1,0 +1,1517 @@
+{
+  "section": "rock_pop",
+  "dryRun": false,
+  "note": "Revisión de ingesta 2026-10-04 (Brian): promover discos y pistas pendientes con ER; zona gris decidida por repertorio (overrides.json)",
+  "kinds": {
+    "album": {
+      "identities": 44,
+      "claims": 248,
+      "verdicts": {
+        "same:revision-ingesta-titulo": 6,
+        "different:revision-ingesta-otro-disco": 4,
+        "approve:auto-match": 6,
+        "same:revision-ingesta-repertorio": 23,
+        "same:mismo-titulo-mismo-artista": 2,
+        "same:revision-ingesta-edicion": 2,
+        "same:titulo-casi-igual-mismo-repertorio": 1
+      },
+      "applied": 52,
+      "unchanged": 157,
+      "stillCandidate": 29,
+      "dismissed": 0,
+      "failed": 3
+    },
+    "track": {
+      "identities": 1283,
+      "claims": 2924,
+      "verdicts": {
+        "approve:auto-match": 246,
+        "dismiss:revision-ingesta-parte-de-popurri": 14,
+        "same:revision-ingesta-titulo-contenido": 38,
+        "same:revision-ingesta-repetida-en-el-disco": 10,
+        "different:sin-coincidencia": 86,
+        "same:mismo-titulo-mismo-disco": 703,
+        "different:revision-ingesta-otra-version": 12,
+        "different:solo-coincide-bajo-otro-padre": 78,
+        "same:revision-ingesta-a-mano": 8,
+        "same:revision-ingesta-errata": 12,
+        "same:revision-ingesta-mismo-titulo": 5,
+        "dismiss:revision-ingesta-titulo-truncado": 1,
+        "same:titulo-casi-igual-misma-posicion": 56,
+        "different:revision-ingesta-otra-pista": 4,
+        "different:sin-decision-er-sin-parecido": 10
+      },
+      "applied": 123,
+      "unchanged": 962,
+      "stillCandidate": 706,
+      "dismissed": 15,
+      "failed": 626
+    }
+  },
+  "holds": [],
+  "duplicateFlags": [],
+  "errors": [
+    {
+      "kind": "album",
+      "identityRaw": "Témpano::El Fin De La Infancia / Childhood's End",
+      "error": "el claim 1511616 ya apunta a 4528, no a 362"
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Desorden Público::DP18 En Concierto",
+      "error": "el claim 1974365 ya apunta a 169, no a 13972"
+    },
+    {
+      "kind": "album",
+      "identityRaw": "Desorden Público::Guarachando En Navidad Volumen 1",
+      "error": "el claim 2215488 ya apunta a 4692, no a 13968"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Impala::40 Años 40 Exitos::Do Wah Diddy Diddy",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Epitafio::III Op3ris T3rtium::Pánico",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Témpano::Nowhere NowHere::NowHere",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Franco De Vita::Serie Milenium 21::Fantasia",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Franco De Vita::Serie Milenium 21::Promesas",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Franco De Vita::Serie Milenium 21::Esta Vez",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Franco De Vita::Serie Milenium 21::Plaza Del Centro",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Franco De Vita::Serie Milenium 21::Latino",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Franco De Vita::Serie Milenium 21::Esto Es America",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Franco De Vita::Serie Milenium 21::Sexo",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Franco De Vita::Serie Milenium 21::Extranjero",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Franco De Vita::Serie Milenium 21::Te Equivocaste Conmigo",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Franco De Vita::Serie Milenium 21::No Hay Cielo",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Franco De Vita::Serie Milenium 21::Somos Tres",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Un Vaso De Vino",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Ella Es",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Mamá Regó El Azúcar En Mí",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Te Llamo A Ti",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Ayúdame Mujer",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Extraños En La Noche",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Stella",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Si Es De Noche",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Mi Querido Amor",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Yo Recuerdo",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::She's Come Again",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Puedes Decirlo",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Más Que Amor",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Julio",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Mi Viejo",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Carmen",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Birin Bao",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Dios Esta Triste",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Un Hombre, Un Niño",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Bésame y Adiós",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Henry Stephen::Mi Limon, Mi Limonero 40 Años 40 Exitos::Te He Perdido",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Más Vivo & En Vivo::Rock Nacional",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Más Vivo & En Vivo::El Rockero",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Más Vivo & En Vivo::Libertad",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Más Vivo & En Vivo::Rey Dinero",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Más Vivo & En Vivo::Loco Por El Rock & Roll / Misión Cumplida",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Yordano::Yordano Hoy - En Vivo::Como Se Deja De Querer",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Yordano::Yordano Hoy - En Vivo::Dias De Junio",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Franco de Vita::Mil Y Una Historias En Vivo::Popurri: Aquí Estas Otra Ves / Ya Lo He Vivido /",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "María Conchita Alonso::Soy::Soy",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Pixel::Cuánto Cuesta::Sólo Por Hoy",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Pixel::Cuánto Cuesta::Una Salida",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::32 Grandes Exitos Serie 32::La Noche Es Mágica",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::32 Grandes Exitos Serie 32::A Quién",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::32 Grandes Exitos Serie 32::Desde Mi Ventana",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::32 Grandes Exitos Serie 32::Nunca Te Olvidaré",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::32 Grandes Exitos Serie 32::Sin Máscara",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::32 Grandes Exitos Serie 32::Qué Extraño Es El Amor",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::32 Grandes Exitos Serie 32::No Puedo Vivir Sin Amor",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::32 Grandes Exitos Serie 32::Tu Porque Tu",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::32 Grandes Exitos Serie 32::No Sé",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::32 Grandes Exitos Serie 32::Déjame Libre",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::32 Grandes Exitos Serie 32::Como Olvidar",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::32 Grandes Exitos Serie 32::Ayudame",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::32 Grandes Exitos Serie 32::En El Amor",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::32 Grandes Exitos Serie 32::Sueños De Cristal",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::32 Grandes Exitos Serie 32::Amante De Tu Ayer",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::32 Grandes Exitos Serie 32::Me Rompiste El Corazón",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::Renacer::Déjame Libre",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Rudy La Scala::En Cuerpo y Alma::Como Te Extraño",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Malanga::Sr. Malanga::Cuando Se Rompe Un Corazón",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Juan Carlos Pérez Soto::Juan Carlos Pérez Soto::Atarme A La Luna",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::CD Colección::El Circo",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::CD Colección::Vida Rural",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::CD Colección::El Destino",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::CD Colección::Es Verdad",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::CD Colección::Yo Me Voy",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::CD Colección::Verte Otra Vez",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::CD Colección::Cuanta Fortuna",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::CD Colección::De Corazón",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::CD Colección::Vivir Contigo y Sin Ti",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::CD Colección::Amor y Lluvia",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::CD Colección::El Carrousel",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::CD Colección::Canto Al Avila",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Yordano::Noches de Luna / Yordano en Concierto::Locos De Amor",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Yordano::Noches de Luna / Yordano en Concierto::A La Hora Que Sea",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Yordano::Noches de Luna / Yordano en Concierto::En Un Beso La Vida",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Yordano::Noches de Luna / Yordano en Concierto::Hablame De Amor",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Yordano::Noches de Luna / Yordano en Concierto::Hoy Vamos a Salir",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Yordano::Noches de Luna / Yordano en Concierto::Media Luna",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Yordano::Noches de Luna / Yordano en Concierto::Promesas De Hotel",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Yordano::Noches de Luna / Yordano en Concierto::No Voy a Mover Un Dedo",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Yordano::Noches de Luna / Yordano en Concierto::Chatarra De Amor",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Yordano::Noches de Luna / Yordano en Concierto::Hoy todo Vuela",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Yordano::Noches de Luna / Yordano en Concierto::Plomo y Gris",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gore Priest::Beneath Eternal Oceans of Melancholy::Darkness Arrives",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Frank Quintero::30 Grandes Exitos de Oro::Dar Por Igual",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Frank Quintero::30 Grandes Exitos de Oro::Feeling",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Para Mí No Más",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::A Pasarla Bien",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Por Alguien Como Tú",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Palabras Del Alma",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Es Verdad",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Eres Una En Un Millón",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Sabe A Calidad",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Un Querer Como El Tuyo",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Para Siempre",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Historia De Un Buen Día",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Canto Al Avila",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Contigo",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Karina::Karina::Dejaré",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Mendoza::The Arabian Mystery::Secretos De Amor",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Mendoza::The Arabian Mystery::War Of Lies (Anything Is True)",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Mendoza::The Arabian Mystery::Amarte Por Siempre",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Mendoza::The Arabian Mystery::Hamlet",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Mendoza::The Arabian Mystery::Ciudad Paraíso",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Mendoza::The Arabian Mystery::Arabian Mystery",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Mendoza::The Arabian Mystery::Judas Innocent",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Mendoza::The Arabian Mystery::Camino Celestial",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Mendoza::The Arabian Mystery::Cortinas De Humo",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Mendoza::The Arabian Mystery::La Magia Del Poder",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Mendoza::The Arabian Mystery::9 de Noviembre",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Mendoza::The Arabian Mystery::Moto Perpetuo",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Mendoza::The Arabian Mystery::Atomic Fly",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::32 Grandes Exitos Serie 32::Abran Paso",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::32 Grandes Exitos Serie 32::Es Verdad",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::32 Grandes Exitos Serie 32::Vale La Pena Esperar",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::32 Grandes Exitos Serie 32::El Circo",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::32 Grandes Exitos Serie 32::Vida Rural",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::32 Grandes Exitos Serie 32::Daniela",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::32 Grandes Exitos Serie 32::Marea De La Mar",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::32 Grandes Exitos Serie 32::Por Alguien Como Tú",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::32 Grandes Exitos Serie 32::Contigo",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::32 Grandes Exitos Serie 32::Dime Si Lo Notas",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::32 Grandes Exitos Serie 32::Vivir Contigo y Sin Tí",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::32 Grandes Exitos Serie 32::Soledad",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::32 Grandes Exitos Serie 32::Máquina",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::32 Grandes Exitos Serie 32::Yo Me Voy",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::32 Grandes Exitos Serie 32::Verte Otra Vez",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::32 Grandes Exitos Serie 32::Eres Una En Un Millón",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Mariana Vega::Te Busco::Ni Tú Ni Nadie",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sentimiento Muerto::Aunque Usted No Lo Quiera::Culebrón",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sentimiento Muerto::Aunque Usted No Lo Quiera::Estado: Alucinando",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sentimiento Muerto::Aunque Usted No Lo Quiera::Descargar",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sentimiento Muerto::Aunque Usted No Lo Quiera::Ganas",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sentimiento Muerto::Aunque Usted No Lo Quiera::Un Agradable Calor",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sentimiento Muerto::Aunque Usted No Lo Quiera::Nuevas Sensaciones",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sentimiento Muerto::Aunque Usted No Lo Quiera::Siete Mares",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sentimiento Muerto::Aunque Usted No Lo Quiera::El Delito",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sentimiento Muerto::Aunque Usted No Lo Quiera::Alerta",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sentimiento Muerto::Aunque Usted No Lo Quiera::Cabeza",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sentimiento Muerto::Aunque Usted No Lo Quiera::Qué Es Lo Que Te Pasa",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sentimiento Muerto::Aunque Usted No Lo Quiera::Un Tono",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sentimiento Muerto::Aunque Usted No Lo Quiera::Una Mirada Dice Todo y Dice Nada",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sentimiento Muerto::Aunque Usted No Lo Quiera::Resiste",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ricardo Montaner::Todo y Nada::Nada",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Frank Quintero::Horas de Vuelo::Feeling",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Corte::Codigo Demente::Zona Peligrosa",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Corte::Codigo Demente::Iluminada",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Corte::Codigo Demente::Latinas",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Corte::Codigo Demente::Malicia",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Corte::Codigo Demente::Boom Chakataka",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Corte::Codigo Demente::Reflexión",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Corte::Codigo Demente::No Hay Competencia",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Corte::Codigo Demente::Black Chacal",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Corte::Codigo Demente::Alto Rango",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Corte::Codigo Demente::Rush",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Corte::Codigo Demente::Código Demente",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Corte::Codigo Demente::Me Voy Pero Vuelvo Pronto",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Tecupae::Tiempo::Me Enamore",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Tecupae::Tiempo::Mentirosa",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Tecupae::Tiempo::Abusadora",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Epitafio::Years Of Dominion::The Chosen",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Mulato::Solo Exitos Serie Premium::Echa Pa'lla",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Chevynovas::Música En Vara::Not A Song",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Chevynovas::Música En Vara::El Sol",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Chevynovas::Música En Vara::Chevy Shakers",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Chevynovas::Música En Vara::Do You Love Me?",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Chevynovas::Música En Vara::Shack Dag Du Papa",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Chevynovas::Música En Vara::La Guaracha",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Chevynovas::Música En Vara::Sing Pao",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Chevynovas::Música En Vara::La Culebra",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Mentas::Hasta Que Los Bares Nos Separen::Intro",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gusanos::Días De Furia::La Canción Del Reprimido",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gusanos::Días De Furia::Agujero Negro",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gusanos::Días De Furia::A Ella No Le Gusta El Rock & Roll",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Pablo Dagnino::Biorritmos::Dejó Las Llaves",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ohmio::6101::Plástico",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Okills::Reiniciando Transmisión::Gritarte",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Okills::Reiniciando Transmisión::De Qué Sirve",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Franco de Vita::Voces A Mi Alrededor::Calido y Frio",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Franco de Vita::Voces A Mi Alrededor::Sin Tanto Espacio",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Franco de Vita::Voces A Mi Alrededor::Con un Poco de Ti",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Franco de Vita::Voces A Mi Alrededor::Voces a Mi Alrededor",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Tomates Fritos::Molly::Saquenme De Aqui",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Tomates Fritos::Molly::Shelby",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Malanga::Acústico::Mil Copas",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Malanga::Acústico::Déjala",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Malanga::Acústico::Si Tú No Estás",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Malanga::Acústico::Mai Lof",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Malanga::Acústico::De Caracas A Madrid",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Equilibrio Vital::Kazmor El Prisionero::Yellenik",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Equilibrio Vital::Kazmor El Prisionero::Inocentes Perdidos",
+      "error": "duplicate key value violates unique constraint \"tracks_position_uk\""
+    }
+  ],
+  "runId": 11965,
+  "evidenceVerdicts": [
+    {
+      "kind": "album",
+      "identityRaw": "Desorden Público::DP18 En Concierto",
+      "rule": "titulo-casi-igual-mismo-repertorio",
+      "targetId": 13972,
+      "detail": "DP18 {\"13972\":{\"shared\":28,\"total\":32,\"core\":31}}"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::La Marcha De Los Desconocidos",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 42554,
+      "detail": "La marcha de los desconocidos (Intro)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::Carrera Con El Diablo",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 42555,
+      "detail": "Carrera con el diablo (Gun cover)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::Civilizados Para Matar",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 42556,
+      "detail": "Civilizados para matar (Budgie cover)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::La Legión",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 42557,
+      "detail": "La legión (UFO cover)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::Venceré",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 42558,
+      "detail": "Venceré (Blue Öyster Cult cover)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::La Batalla De Carabobo",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 42559,
+      "detail": "La batalla de Carabobo (Thin Lizzy cover)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::Ya No Siento Nada",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 42562,
+      "detail": "Ya no siento nada (Captain Beyond cover)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::El Curandero",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 42563,
+      "detail": "El curandero (The Sensational Alex Harvey Band cover)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::Valiente",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 42564,
+      "detail": "Valiente (Riot cover)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::Misión Cumplida",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 42565,
+      "detail": "Misión cumplida (The Godz cover)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::Burn On The Flame",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 42566,
+      "detail": "Burn on the Flame (Sweet cover)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::Razamanaz",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 42567,
+      "detail": "Razamanaz (Nazareth cover)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::Tom Sawyer",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 42568,
+      "detail": "Tom Sawyer (Rush cover)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::Sabbath Bloody Sabbath",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 42569,
+      "detail": "Sabbath Bloody Sabbath (Black Sabbath cover)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tributo A Los Desconocidos::Somos",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 42570,
+      "detail": "Somos (Resistencia cover)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Cuauhtemoc::El Regreso Del Guerrero",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 18876,
+      "detail": "El Regreso Del Guerrero (Intro)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Cuauhtemoc::Castillo Sobre El Mar",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 18879,
+      "detail": "Castillos Sobre El Mar"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Cuauhtemoc::Resistiré",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 18886,
+      "detail": "Resistiré (Baron Rojo cover)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Dama Antañona",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 137581,
+      "detail": "Dama Antañona (En Vivo)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Cuando No Sé De Ti",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 137582,
+      "detail": "Cuando No Se De Ti (En Vivo)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Criollísima",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 137585,
+      "detail": "Criollisima (En Vivo)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Presagio",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 137586,
+      "detail": "Presagio (En Vivo)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Golosinas Criollas",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 137587,
+      "detail": "Golosinas Criollas (En Vivo)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::El Papagayo",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 137588,
+      "detail": "El Papagayo (En Vivo)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::El San Pedro",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 137589,
+      "detail": "El San Pedro (En Vivo)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Mi Tripón",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 137590,
+      "detail": "Mi Tripon (En Vivo)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Alumbra Cocuyito",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 137591,
+      "detail": "Alumbra Cocuyito (En Vivo)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Ilan Chester::Ilan Chester en Vivo Gira Nacional del Amor Venezolano::Arrullo Para Un Negrito",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 137592,
+      "detail": "Arrullo Para Un Negrito (En Vivo)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tesoros 40 Aniversario::Guardianes Del Metal",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 42510,
+      "detail": "Guardianos del metal"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tesoros 40 Aniversario::Evil",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 42518,
+      "detail": "Evil (Cactus cover)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tesoros 40 Aniversario::Libera Tu Mente",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 42521,
+      "detail": "Libera tu mente (Trino Mora cover)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Tesoros 40 Aniversario::Linda Barinas / El Adiós",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 42522,
+      "detail": "Linda Barinas / El adiós (Eladio Tarife cover)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Inevitable::La Leyenda Del Holandés Errante",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 18849,
+      "detail": "La leyenda del Holandés errante (Cuento)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Inevitable::El Mito de María Lionza",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 18845,
+      "detail": "El mito de María Lionza (Cuento)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Inevitable::Los Visitantes (Fenómeno O.V.N.I.) '2007",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 18848,
+      "detail": "Los visitantes (2007) *"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Inevitable::Mosaico De \"Escalofrio\"",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 18850,
+      "detail": "Mosaico \"Escalofrío\" Sinfónico *"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo C::Grupo C Canta Edgar Castro::Por La Expresión De Tu Rostro",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 40136,
+      "detail": "Por la expresión de mi rostro"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Grupo C::Grupo C Canta Edgar Castro::Culto Al Amor (Instrumental)",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 40153,
+      "detail": "Culto al amor"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::El Guerrero::La Serenata Del Estrangulador",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 19005,
+      "detail": "La Serenata Del Estrrangulador"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Levántate y Pelea::Levántate y Pelea",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 19013,
+      "detail": "Levante Y Pelea"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Levántate y Pelea::El Rock'n Roll De La Amistad",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 19012,
+      "detail": "El Rock'n'Roll De La Amistad"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Gillman::Levántate y Pelea::Agonía (Q.E.P.D.)",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 19018,
+      "detail": "Agonia (QEPD)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Banda de Casablanca::El Sueño::I Don't Need No Doctor",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 15384,
+      "detail": "I Don´t Need no Doctor"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Fuga::Fuga::Día De Parada",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 9045,
+      "detail": "El Día de Parada"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Sangre::Sangre::We'll Live a Little Bit More",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 16094,
+      "detail": "We´ll live a little bit more"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Spiteri::Spiteri::Verano Dspués De Invierno",
+      "rule": "sin-decision-er-sin-parecido",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Aditus::Juegos de Azar::Crisis",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 18444,
+      "detail": "Crisis, Háblame de Tí"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Alexis Rossell::Alexis Rossell y su Venezuela Joven::Orinoco",
+      "rule": "sin-decision-er-sin-parecido",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Alexis Rossell::Alexis Rossell y su Venezuela Joven::Crepúsculo",
+      "rule": "sin-decision-er-sin-parecido",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Alexis Rossell::Torbellino::Paseito Oriental",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 15186,
+      "detail": "Paseito Criental"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Alexis Rossell::... Es Navidad::Selección Navideña Internacional",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 15180,
+      "detail": "Selección Navideña Interrnacional"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arkangel::No Más Apariencias::Pasajero Como El Viento",
+      "rule": "sin-decision-er-sin-parecido",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Arkangel::No Más Apariencias::No Puedes Reprocharme",
+      "rule": "sin-decision-er-sin-parecido",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Azúcar Cacao y Leche::Azúcar Cacao y Leche Vol. II::Tal Como Lo Dijo",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 29233,
+      "detail": "Tal como lo dijo D'asid O'Anik"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Caramelos de Cianuro::Cuentos Para Adultos::Chan Chaca Chan",
+      "rule": "sin-decision-er-sin-parecido",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Darts::De Etiqueta::No Te Importa",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 30647,
+      "detail": "No te importe"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Escenarío Juvenil::Cuando Mueren Las Estrellas",
+      "rule": "sin-decision-er-sin-parecido",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Escenarío Juvenil::I've Got You",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 25801,
+      "detail": "I've Got You (Sonny Bono)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Various Artists::Escenarío Juvenil::Otro Amor",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 25802,
+      "detail": "Otro Amor (You Got To Me)"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Claners::Yeah Yeah Yeah!::Zambesi",
+      "rule": "sin-decision-er-sin-parecido",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Colina::Amanecer::Don't Take Friends Away",
+      "rule": "sin-decision-er-sin-parecido",
+      "detail": ""
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Cronos::Al Fin Una Victoria::Buscando Perdón",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 42441,
+      "detail": "Buscando el perdón"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Misma Gente::A La Calle::Oportunidad (Una Historia de Malandros)",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 12866,
+      "detail": "Oportunidad"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "La Misma Gente::A La Calle::Canción Corta",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 12871,
+      "detail": "Canción Corta. Canción de Amor Para Una Niña Triste"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Delia::Chicano::Porque Te Quiero",
+      "rule": "titulo-casi-igual-misma-posicion",
+      "targetId": 30692,
+      "detail": "Por qué te quiero"
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Los Impala::Conozca a Los Impala::My Bonny",
+      "rule": "sin-decision-er-sin-parecido",
+      "detail": ""
+    }
+  ]
+}

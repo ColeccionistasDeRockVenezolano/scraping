@@ -1,0 +1,35 @@
+{
+  "section": "rock_pop",
+  "dryRun": false,
+  "note": "Sincopa rock_pop: pistas de la ficha dueña que no tenían lugar, tras mover el repertorio del disco separado y renumerar (Brian 2026-10-03)",
+  "kinds": {
+    "album": {
+      "identities": 0,
+      "claims": 0,
+      "verdicts": {},
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "track": {
+      "identities": 24,
+      "claims": 93,
+      "verdicts": {
+        "different:sin-coincidencia": 22,
+        "approve:auto-match": 1,
+        "different:solo-coincide-bajo-otro-padre": 1
+      },
+      "applied": 23,
+      "unchanged": 69,
+      "stillCandidate": 1,
+      "dismissed": 0,
+      "failed": 0
+    }
+  },
+  "holds": [],
+  "duplicateFlags": [],
+  "errors": [],
+  "runId": 11771
+}

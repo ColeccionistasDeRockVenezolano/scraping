@@ -1,0 +1,477 @@
+{
+  "dryRun": false,
+  "runId": 11585,
+  "decisions": 27,
+  "applied": 21,
+  "review": 4,
+  "failed": 2,
+  "creditsMoved": 37,
+  "created": [
+    "artista 4325 «Los Golperos Del Tocuyo»",
+    "artista 4326 «Experimental Barlovento»",
+    "organización 2350 «Acoustic Recording Service»",
+    "artista 4327 «La Otra Gente»"
+  ],
+  "errors": [
+    {
+      "id": 30938,
+      "error": "ya existe un crédito de este acreditado con la misma función en esta obra (id 62268); retíralo o cambia antes el rol o el tipo"
+    },
+    {
+      "id": 31247,
+      "error": "el catálogo no autoriza crear artist «Los Araucanos»: REVIEW: no se modifica el canonico"
+    }
+  ],
+  "plan": [
+    {
+      "id": 18822,
+      "op": "rol",
+      "name": "Ft. Eidoscognito",
+      "credits": 1,
+      "bare": "Eidoscognito",
+      "role": {
+        "creditType": "guest",
+        "role": "Invitado"
+      }
+    },
+    {
+      "id": 19780,
+      "op": "rol",
+      "name": "Arr: D. d Los Reyes",
+      "credits": 2,
+      "bare": "D. d Los Reyes",
+      "role": {
+        "creditType": "other",
+        "role": "Arreglos"
+      }
+    },
+    {
+      "id": 19787,
+      "op": "rol",
+      "name": "Arr: A. Lauro",
+      "credits": 1,
+      "bare": "A. Lauro",
+      "role": {
+        "creditType": "other",
+        "role": "Arreglos"
+      }
+    },
+    {
+      "id": 27460,
+      "op": "rol",
+      "name": "Recopilación: Carreño",
+      "credits": 1,
+      "bare": "Carreño",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      }
+    },
+    {
+      "id": 31248,
+      "op": "rol",
+      "name": "Comp. F. R. Yribera",
+      "credits": 1,
+      "bare": "F. R. Yribera",
+      "role": {
+        "creditType": "composer",
+        "role": "composer"
+      }
+    },
+    {
+      "id": 32201,
+      "op": "rol",
+      "name": "Comp: A. Pérez Piñango",
+      "credits": 1,
+      "bare": "A. Pérez Piñango",
+      "role": {
+        "creditType": "composer",
+        "role": "composer"
+      }
+    },
+    {
+      "id": 32205,
+      "op": "rol",
+      "name": "Comp: UDAF",
+      "credits": 1,
+      "bare": "UDAF",
+      "role": {
+        "creditType": "composer",
+        "role": "composer"
+      }
+    },
+    {
+      "id": 32206,
+      "op": "rol",
+      "into": 32205,
+      "name": "Recop: UDAF",
+      "credits": 1,
+      "bare": "UDAF",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      }
+    },
+    {
+      "id": 36374,
+      "op": "rol",
+      "name": "Lyrics: Z. Matousek",
+      "credits": 1,
+      "bare": "Z. Matousek",
+      "role": {
+        "creditType": "writer",
+        "role": "Letra"
+      }
+    },
+    {
+      "id": 36375,
+      "op": "rol",
+      "name": "Lyrics: V. Fiol",
+      "credits": 5,
+      "bare": "V. Fiol",
+      "role": {
+        "creditType": "writer",
+        "role": "Letra"
+      }
+    },
+    {
+      "id": 36376,
+      "op": "rol",
+      "name": "Lyrics: I. Gastaminza",
+      "credits": 2,
+      "bare": "I. Gastaminza",
+      "role": {
+        "creditType": "writer",
+        "role": "Letra"
+      }
+    },
+    {
+      "id": 28490,
+      "op": "homonimo",
+      "name": "Rec. Iván Pérez Rossi",
+      "credits": 0,
+      "bare": "Iván Pérez Rossi",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "review": "ningún homónimo comparte disco ni artista",
+      "candidates": [
+        {
+          "id": 911,
+          "evidence": []
+        },
+        {
+          "id": 20644,
+          "evidence": []
+        }
+      ]
+    },
+    {
+      "id": 30938,
+      "op": "homonimo",
+      "name": "Comp: Francisco Pacheco",
+      "credits": 6,
+      "bare": "Francisco Pacheco",
+      "role": {
+        "creditType": "composer",
+        "role": "composer"
+      },
+      "target": 20566,
+      "candidates": [
+        {
+          "id": 1709,
+          "evidence": []
+        },
+        {
+          "id": 20566,
+          "evidence": [
+            "mismo disco",
+            "mismo artista"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 31028,
+      "op": "homonimo",
+      "name": "Comp. Jesús Rosas Marcano",
+      "credits": 3,
+      "bare": "Jesús Rosas Marcano",
+      "role": {
+        "creditType": "composer",
+        "role": "composer"
+      },
+      "review": "ningún homónimo comparte disco ni artista",
+      "candidates": [
+        {
+          "id": 9650,
+          "evidence": []
+        },
+        {
+          "id": 32526,
+          "evidence": []
+        }
+      ]
+    },
+    {
+      "id": 31379,
+      "op": "homonimo",
+      "name": "Recop: Juan Estévez",
+      "credits": 2,
+      "bare": "Juan Estévez",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "review": "ningún homónimo comparte disco ni artista",
+      "candidates": [
+        {
+          "id": 13874,
+          "evidence": []
+        },
+        {
+          "id": 23293,
+          "evidence": []
+        },
+        {
+          "id": 23319,
+          "evidence": []
+        }
+      ]
+    },
+    {
+      "id": 31426,
+      "op": "homonimo",
+      "name": "Recop: Eduardo Martínez",
+      "credits": 2,
+      "bare": "Eduardo Martínez",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "target": 3907,
+      "candidates": [
+        {
+          "id": 3907,
+          "evidence": [
+            "mismo artista"
+          ]
+        },
+        {
+          "id": 33162,
+          "evidence": []
+        }
+      ]
+    },
+    {
+      "id": 31574,
+      "op": "homonimo",
+      "name": "Recop: Hernán Marín",
+      "credits": 5,
+      "bare": "Hernán Marín",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "target": 24616,
+      "candidates": [
+        {
+          "id": 24616,
+          "evidence": [
+            "mismo disco",
+            "mismo artista"
+          ]
+        },
+        {
+          "id": 31053,
+          "evidence": []
+        }
+      ]
+    },
+    {
+      "id": 31670,
+      "op": "homonimo",
+      "name": "Recop: Gualberto Ibarreto",
+      "credits": 5,
+      "bare": "Gualberto Ibarreto",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "target": 21200,
+      "candidates": [
+        {
+          "id": 619,
+          "evidence": []
+        },
+        {
+          "id": 21200,
+          "evidence": [
+            "mismo disco",
+            "mismo artista"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 31770,
+      "op": "homonimo",
+      "name": "Recop: Reinaldo López",
+      "credits": 2,
+      "bare": "Reinaldo López",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "target": 5800,
+      "candidates": [
+        {
+          "id": 5800,
+          "evidence": [
+            "mismo artista"
+          ]
+        },
+        {
+          "id": 16573,
+          "evidence": []
+        },
+        {
+          "id": 18100,
+          "evidence": []
+        }
+      ]
+    },
+    {
+      "id": 32176,
+      "op": "homonimo",
+      "name": "Recop: José Antonio Calcaño",
+      "credits": 1,
+      "bare": "José Antonio Calcaño",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "review": "ningún homónimo comparte disco ni artista",
+      "candidates": [
+        {
+          "id": 6195,
+          "evidence": []
+        },
+        {
+          "id": 15669,
+          "evidence": []
+        },
+        {
+          "id": 16048,
+          "evidence": []
+        }
+      ]
+    },
+    {
+      "id": 32491,
+      "op": "homonimo",
+      "name": "Recop. Daniel Gil",
+      "credits": 3,
+      "bare": "Daniel Gil",
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "target": 30434,
+      "candidates": [
+        {
+          "id": 13947,
+          "evidence": []
+        },
+        {
+          "id": 30434,
+          "evidence": [
+            "mismo artista"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 31247,
+      "op": "grupo",
+      "name": "Los Araucanos",
+      "also": [
+        31232
+      ],
+      "person": "Comp. Los Araucanos",
+      "credits": 1,
+      "role": {
+        "creditType": "composer",
+        "role": "composer"
+      }
+    },
+    {
+      "id": 31335,
+      "op": "grupo",
+      "name": "Los Golperos Del Tocuyo",
+      "person": "Recop. Los Golperos Del Tocuyo",
+      "credits": 1,
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      }
+    },
+    {
+      "id": 31980,
+      "op": "grupo",
+      "name": "Experimental Barlovento",
+      "person": "Recop. Experimental Barlovento",
+      "credits": 0,
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      }
+    },
+    {
+      "id": 31674,
+      "op": "duo",
+      "keepAs": "Guillermina",
+      "partner": "Gualberto Ibarreto",
+      "name": "Recop. Guilllermina-Gualberto Ibarreto",
+      "credits": 1,
+      "role": {
+        "creditType": "other",
+        "role": "Recopilación"
+      },
+      "partnerLink": {
+        "target": 21200,
+        "candidates": [
+          {
+            "id": 619,
+            "evidence": []
+          },
+          {
+            "id": 21200,
+            "evidence": [
+              "mismo disco",
+              "mismo artista"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 19843,
+      "op": "convertir",
+      "to": "organization",
+      "name": "Acoustic Recording Service",
+      "organizationType": "recording_studio",
+      "person": "Acoustic Recording Service",
+      "credits": 1
+    },
+    {
+      "id": 37813,
+      "op": "convertir",
+      "to": "artist",
+      "name": "La Otra Gente",
+      "person": "\"La Otra Gente\"",
+      "credits": 1
+    }
+  ]
+}

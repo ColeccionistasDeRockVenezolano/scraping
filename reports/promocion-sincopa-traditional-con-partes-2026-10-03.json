@@ -1,0 +1,58 @@
+{
+  "section": "traditional",
+  "dryRun": false,
+  "note": "Sincopa traditional: pistas de popurrí y números con raya que el adapter 1.3.0 no leía (reingesta runs 11688–11697, adapter 1.3.1)",
+  "kinds": {
+    "album": {
+      "identities": 0,
+      "claims": 0,
+      "verdicts": {},
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 0,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "track": {
+      "identities": 18,
+      "claims": 56,
+      "verdicts": {
+        "different:titulo-casi-igual-otro-numero": 1,
+        "different:sin-coincidencia": 15,
+        "hold:titulo-casi-igual-mismo-padre": 2
+      },
+      "applied": 0,
+      "unchanged": 0,
+      "stillCandidate": 49,
+      "dismissed": 0,
+      "failed": 0
+    }
+  },
+  "holds": [
+    {
+      "kind": "track",
+      "identityRaw": "Serenata Guayanesa::Una Amistad de 25 Años::- A la Una",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "156482 «Una Serenata para Serenata»",
+      "claims": 3
+    },
+    {
+      "kind": "track",
+      "identityRaw": "Anselmo López::El Rey De La Bandola Guacamaya Records &::Pajarillo Nº 3",
+      "rule": "titulo-casi-igual-mismo-padre",
+      "detail": "63705 «El Pajarillo»",
+      "claims": 4
+    }
+  ],
+  "duplicateFlags": [],
+  "errors": [],
+  "runId": 11702,
+  "evidenceVerdicts": [
+    {
+      "kind": "track",
+      "identityRaw": "Serenata Guayanesa::Una Amistad de 25 Años::MIX No.3",
+      "rule": "titulo-casi-igual-otro-numero",
+      "detail": ""
+    }
+  ]
+}
