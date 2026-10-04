@@ -1,0 +1,71 @@
+# Sincopa: artistas truncados a una letra (confirm, run 11807)
+
+Sincopa: artista con el nombre truncado a una letra fusionado en el real, con sus discos duplicados (Brian, 2026-10-03)
+
+- disco 15400 «Los Blanco» sin gemelo: pasa con la ficha 3790 al artista real
+- disco 8186 «Los Blanco» → 7295 «Los Blanco» (Los Blanco / Sexteto Los Blanco): 0 pistas unidas, 12 movidas, 0 créditos
+- disco 8187 «Sensacional!» → 7296 «Sensacional!» (Los Blanco / Sexteto Los Blanco): 0 pistas unidas, 12 movidas, 0 créditos
+- disco 8188 «En Acción» → 7297 «En Acción» (Los Blanco / Sexteto Los Blanco): 0 pistas unidas, 12 movidas, 0 créditos
+- disco 8189 «Vol. 5» → 7298 «Vol. 5» (Los Blanco / Sexteto Los Blanco): 0 pistas unidas, 12 movidas, 0 créditos
+- disco 8190 «Enchufen Ese Pick Up» → 7299 «Enchufen Ese Pick Up» (Los Blanco / Sexteto Los Blanco): 0 pistas unidas, 12 movidas, 0 créditos
+- disco 8191 «Volando» → 7300 «Volando» (Los Blanco / Sexteto Los Blanco): 0 pistas unidas, 12 movidas, 0 créditos
+- disco 8192 «Aqui Estamos...!» → 7301 «Aqui Estamos! - Vol. III» (Los Blanco / Sexteto Los Blanco): 0 pistas unidas, 12 movidas, 0 créditos
+- disco 8193 «Siempre Arriba» → 7302 «Siempre Arriba» (Los Blanco / Sexteto Los Blanco): 0 pistas unidas, 12 movidas, 0 créditos
+- disco 8194 «Bailando y Gozando» → 7303 «Bailando y Gozando» (Los Blanco / Sexteto Los Blanco): 0 pistas unidas, 12 movidas, 0 créditos
+- disco 8195 «La Candela» → 7304 «La Candela» (Los Blanco / Sexteto Los Blanco): 0 pistas unidas, 12 movidas, 0 créditos
+- disco 8196 «A Torear Bailando» → 7305 «A Torear Bailando» (Los Blanco / Sexteto Los Blanco): 0 pistas unidas, 12 movidas, 0 créditos
+- disco 8197 «Estás... Sabrosa!» → 7306 «Estás Sabrosa» (Los Blanco / Sexteto Los Blanco): 0 pistas unidas, 12 movidas, 0 créditos
+- disco 8198 «El Haragán» → 7307 «El Haragán» (Los Blanco / Sexteto Los Blanco): 0 pistas unidas, 11 movidas, 0 créditos
+- disco 8199 «Dando En El Blanco Con....Los Blanco» → 7308 «Dando En El Blanco» (Los Blanco / Sexteto Los Blanco): 0 pistas unidas, 12 movidas, 0 créditos
+- disco 8200 «Por La Puerta Grande» → 7309 «Por La Puerta Grande» (Los Blanco / Sexteto Los Blanco): 0 pistas unidas, 12 movidas, 0 créditos
+- disco 8201 «¡Para Todo El Mundo!» → 7310 «Para Todo El Mundo» (Los Blanco / Sexteto Los Blanco): 0 pistas unidas, 11 movidas, 0 créditos
+- disco 8202 «20 Años Bailando Con... Los Blanco» → 7311 «20 Años Bailando Con Los Blanco» (Los Blanco / Sexteto Los Blanco): 0 pistas unidas, 12 movidas, 0 créditos
+- disco 8203 «Arreglan Esto...Correcto!» → 7312 «Arreglan Esto...Correcto!» (Los Blanco / Sexteto Los Blanco): 0 pistas unidas, 12 movidas, 0 créditos
+- disco 8204 «Pegando Duro» → 7313 «Pegando Duro» (Los Blanco / Sexteto Los Blanco): 0 pistas unidas, 11 movidas, 0 créditos
+- disco 8205 «Tocan Sabroso» → 7314 «Tocan Sabroso» (Los Blanco / Sexteto Los Blanco): 0 pistas unidas, 8 movidas, 0 créditos
+- disco 8206 «Fiesta Caliente» → 7315 «Fiesta Caliente» (Los Blanco / Sexteto Los Blanco): 0 pistas unidas, 10 movidas, 0 créditos
+- disco 8207 «Candela y Fuego» → 7316 «Candela y Fuego» (Los Blanco / Sexteto Los Blanco): 0 pistas unidas, 10 movidas, 0 créditos
+- disco 8208 «El Mecánico» → 7317 «El Mecánico» (Los Blanco / Sexteto Los Blanco): 0 pistas unidas, 9 movidas, 0 créditos
+- disco 8209 «Por La Caña'» → 7318 «Por La Caña'» (Los Blanco / Sexteto Los Blanco): 0 pistas unidas, 9 movidas, 0 créditos
+- disco 8210 «El Poder De Los Blanco» → 7319 «El Poder De Los Blanco» (Los Blanco / Sexteto Los Blanco): 0 pistas unidas, 8 movidas, 0 créditos
+- disco 8211 «Gózala» → 7320 «Gózala» (Los Blanco / Sexteto Los Blanco): 0 pistas unidas, 10 movidas, 0 créditos
+- disco 8212 «Puuuro Sabor!» → 7321 «Puuuro Sabor!» (Los Blanco / Sexteto Los Blanco): 0 pistas unidas, 10 movidas, 0 créditos
+- disco 8213 «La Fiesta De Los Blanco» → 7322 «La Fiesta De Los Blanco» (Los Blanco / Sexteto Los Blanco): 0 pistas unidas, 10 movidas, 0 créditos
+- disco 8214 «Pa' Bailar» → 7323 «Pa' Bailar» (Los Blanco / Sexteto Los Blanco): 0 pistas unidas, 10 movidas, 0 créditos
+- disco 8215 «In Memorian» → 7325 «In Memorian» (Los Blanco / Sexteto Los Blanco): 0 pistas unidas, 9 movidas, 0 créditos
+- disco 8217 «Dìceselo!» → 7327 «Díceselo» (Los Blanco / Sexteto Los Blanco): 0 pistas unidas, 10 movidas, 0 créditos
+- disco 8218 «56 Aniversario Vol.1» → 7328 «56 Aniversario Vol.1» (Los Blanco / Sexteto Los Blanco): 0 pistas unidas, 10 movidas, 0 créditos
+- disco 8219 «Los Blanco y Sus Grandes Exitos» → 7329 «Y Sus Grandes Exitos» (Los Blanco / Sexteto Los Blanco): 0 pistas unidas, 5 movidas, 0 créditos
+- disco 8220 «Solo Exitos !!!» → 7330 «Solo Exitos» (Los Blanco / Sexteto Los Blanco): 0 pistas unidas, 9 movidas, 0 créditos
+- disco 8222 «El Ritmo De Los Blanco» → 7332 «El Ritmo De Los Blanco (USA)» (Los Blanco / Sexteto Los Blanco): 0 pistas unidas, 12 movidas, 0 créditos
+- disco 8223 «Los Blanco En Acción Vol. 1» → 7333 «Los Blanco En Acción Vol. 1» (Los Blanco / Sexteto Los Blanco): 0 pistas unidas, 20 movidas, 0 créditos
+- disco 8224 «Los Blanco En Acción Vol. 2» → 7334 «Los Blanco En Acción Vol. 2» (Los Blanco / Sexteto Los Blanco): 0 pistas unidas, 20 movidas, 0 créditos
+- disco 8225 «40 Años 40 Exitos» → 7335 «40 Años 40 Exitos» (Los Blanco / Sexteto Los Blanco): 0 pistas unidas, 40 movidas, 0 créditos
+- disco 8226 «Los Blanco En Acción Vol. 3» → 7336 «Los Blanco En Acción Vol. 3» (Los Blanco / Sexteto Los Blanco): 0 pistas unidas, 20 movidas, 0 créditos
+- disco 9922 «Elisa Rego» → 4028 «Elisa Rego» (Elisa Rego): 0 pistas unidas, 8 movidas, 0 créditos
+- disco 9924 «Temperamental» → 4027 «Temperamental» (Elisa Rego): 0 pistas unidas, 11 movidas, 0 créditos
+- disco 9933 «Vale La Pena» → 4031 «Vale La Pena» (Elisa Rego): 0 pistas unidas, 10 movidas, 0 créditos
+- disco 9934 «De Amor y Deseo» → 4026 «De Amor y Deseo» (Elisa Rego): 0 pistas unidas, 14 movidas, 0 créditos
+- disco 9936 «Diario de Transición» → 4361 «Diario De Transición» (La Fé): 0 pistas unidas, 10 movidas, 0 créditos
+- disco 9938 «Rockola» → 4029 «Rockola» (Elisa Rego): 0 pistas unidas, 10 movidas, 0 créditos
+- disco 9940 «De Colección» → 4369 «De Colección» (Laberinto): 17 pistas unidas, 0 movidas, 0 créditos
+- disco 9953 «15 Años» → 2135 «15 años» (Paul Gillman): 19 pistas unidas, 0 movidas, 0 créditos
+- disco 9954 «Vivo & En Vivo» → 2020 «Vivo y en Vivo» (Paul Gillman): 15 pistas unidas, 0 movidas, 0 créditos
+- disco 9955 «25 Años» → 2133 «25 años» (Paul Gillman): 15 pistas unidas, 14 movidas, 0 créditos
+- disco 9956 «El Regreso Del Guerrero» → 2157 «El Regreso del Guerrero» (Paul Gillman): 12 pistas unidas, 2 movidas, 0 créditos
+- disco 9957 «Lo Inédito» → 3059 «Lo Inédito» (Paul Gillman): 13 pistas unidas, 1 movidas, 0 créditos
+- disco 9961 «Lo Más Duro» → 3060 «Lo Más Duro» (Paul Gillman): 12 pistas unidas, 1 movidas, 0 créditos
+- disco 9962 «Nueve Cinco» → 2188 «Nueve Cinco» (La Fé): 0 pistas unidas, 10 movidas, 0 créditos
+- disco 9970 «Live» → 1240 «Live» (Laberinto): 14 pistas unidas, 0 movidas, 0 créditos
+- disco 9982 «Laberinto» → 73 «Laberinto» (Laberinto): 5 pistas unidas, 0 movidas, 2 créditos
+- disco 9983 «Priority» → 233 «Priority» (Laberinto): 10 pistas unidas, 0 movidas, 3 créditos
+- disco 9984 «Freakeao» → 232 «Freakeao» (Laberinto): 11 pistas unidas, 0 movidas, 4 créditos
+- disco 9985 «Another Style» → 230 «Another Style» (Laberinto): 11 pistas unidas, 0 movidas, 3 créditos
+- disco 9986 «Decada» → 231 «Decada» (Laberinto): 11 pistas unidas, 0 movidas, 3 créditos
+- disco 9987 «The World Might Suck» → 1237 «The World Might Suck» (Laberinto): 9 pistas unidas, 0 movidas, 0 créditos
+- disco 9988 «Mask Of A Thousand Faces» → 1239 «Mask of a Thousand Faces» (Laberinto): 10 pistas unidas, 0 movidas, 0 créditos
+- disco 15278 «"El Zeppy" Alberto Lewis» → 4628 «"El Zeppy" Alberto Lewis» (Al Zeppy): 6 pistas unidas, 6 movidas, 0 créditos
+- artista 3790 «L» → 3719 «Los Blanco / Sexteto Los Blanco»: 104 movidos, campos —
+- artista 4041 «E» → 1928 «Elisa Rego»: 12 movidos, campos —
+- artista 4046 «G» → 1951 «Paul Gillman»: 13 movidos, campos —
+- artista 4329 «A» → 1861 «Al Zeppy»: 3 movidos, campos —
