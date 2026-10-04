@@ -23,6 +23,82 @@ SEQ = {"vol", "volume", "volumen", "pt", "parte", "part", "acto", "apendice", "a
 STOP = {"de", "del", "la", "el", "los", "las", "y", "e", "and", "the", "of", "a"}
 ROMAN = {"i": "1", "ii": "2", "iii": "3", "iv": "4", "v": "5", "vi": "6", "vii": "7", "viii": "8", "ix": "9", "x": "10"}
 
+# ---------------------------------------------------------------------------
+# Adjudicación fina (2026-10-04, revisión asistida de los paquetes v1): propuesta
+# por fila con nota propia; las claves sin entrada usan el veredicto automático.
+#   Discos    → clave f"{norm(titulo)}|{anio_rym}".
+#   Homónimos → clave = rym_name exacto.
+# ---------------------------------------------------------------------------
+ADJ_USADAS = set()
+
+ADJ_DISCOS = {
+    # misma obra (variante/subtítulo/numeración — adjudicado a mano con la evidencia del careo)
+    "bruno ep|2008": ("misma", "«EP» es sufijo del mismo release (Bruno, 2008)"),
+    "dead by vitriol|2008": ("misma", "typo Dead/Death; misma obra (Vitriol, 2008)"),
+    "novo color vivo en vivo|2015": ("misma", "subtítulo («centro cultural chacao 2015»); mismo release"),
+    "psyops part two|2020": ("misma", "«Part Two» = «II» (numeración); misma obra (Cardopusher 2020)"),
+    # obras distintas (título/año difieren del álbum del catálogo)
+    "las nuevas tendencias apendice b sulphur|2012": ("otra", "continuación: Apéndice B vs Apéndice A (Aurum)"),
+    "territorio apache vol 2 champion sound|2024": ("otra", "Vol.2 con subtítulo; el catálogo es el Vol.1 (2023)"),
+    "billo vs dimension|1976": ("otra", "compilación distinta de la del catálogo (2001)"),
+    "dimension vs billo|1975": ("otra", "compilación (1975) distinta del álbum 1972 del catálogo"),
+    "billo s vs dimension latina|1977": ("otra", "compilación distinta de la del catálogo (2001)"),
+    "bruno remixed|2010": ("otra", "EP de remixes: release distinto del EP original"),
+    "v completar 2024|2023": ("otra", "single 2023 vs «Completar» 2018 (Zeta)"),
+    "parentesis vol 2 descanso en la torre|2020": ("otra", "Vol.2 con subtítulo propio vs el Vol.1 (2019)"),
+    "the power of distance|2019": ("otra", "obra distinta del catálogo («The Sirius Expeditions» 1998)"),
+    "salsa brava|1975": ("otra", "álbum distinto del del catálogo («Sabor a Salsa» 1982)"),
+    "nota negra|2025": ("otra", "single 2025 vs «Notas En Mi Habitación» 2010"),
+    "remixes bizarros|2014": ("otra", "release de remixes propio (vs «Remix…Gran Sabana» 2015)"),
+    "the chronos anomaly|2013": ("otra", "obra distinta del catálogo («The Last Invocation / Reptile» 2011)"),
+    "apa y can|2013": ("otra", "mixtape 2013 vs álbum «Apache» 2020"),
+    "tiempo al tiempo|2019": ("otra", "álbum 2019 vs «Tiembla / Allá Cayó» 2015"),
+    "live from red lion recording studio|2025": ("otra", "show distinto («Live in Boston» 2026)"),
+    "el pacto de richie|2023": ("otra", "single 2023 vs «El Primer Viaje del Mago» 2022"),
+    "el escape de la torre|2019": ("otra", "single 2019 vs «El Primer Viaje del Mago» 2022"),
+    "el ultimo disaster en caracas en vivo|2025": ("otra", "single en vivo 2025 vs álbum 2022"),
+    "paranpanpan el mala suerte|1976": ("otra", "single 1976 vs álbum «Para Siempre!» 1981"),
+    "la corte del fuzz|2017": ("otra", "obra distinta del catálogo («La Caza de las Bruxas EP» 2017)"),
+    "live session 2021|2022": ("otra", "show distinto («Live in Boston» 2026)"),
+    "el silencio del espejo|2023": ("otra", "single 2023 vs «El Primer Viaje del Mago» 2022"),
+    "another self|2023": ("otra", "single 2023 vs «Answer Machine» 2008"),
+    "no vas a caer|2014": ("otra", "EP 2014 vs «No nos [ J ] más» 2015"),
+    # dudosos reales → a ojo de Brian (título/año/sim no deciden)
+    "colorado|2014": ("revisar", "¿typo de «Coloreado» (2016) o EP distinto (Dolli)?"),
+    "soldier of hell reborn|2016": ("revisar", "¿reedición ampliada de «Soldier of Hell» (2011) o secuela?"),
+    "night and daydream|1978": ("revisar", "el catálogo trae el doble «Wheels Of Time / Night And Daydream»"),
+    "gorilla business en vivo desde recoveco records|2024": ("revisar", "¿sesión en vivo distinta del single «Gorilla Business» 2024?"),
+    "the black album|2000": ("revisar", "¿mismo que «Black» 1999 (Metrozubdivision)?"),
+    "biofonia ii voces de la tierra|2025": ("revisar", "¿secuela o reedición de «Biophony / Life Voices» 2023?"),
+    "tembla|2024": ("revisar", "¿typo de «Tiembla» o álbum distinto (2015 vs 2024)? (C4 Trío)"),
+    "juan peyote|1997": ("revisar", "¿«J.P» (1997) es este mismo disco homónimo? (2 filas en cola)"),
+}
+
+ADJ_HOM = {
+    # alias (variante ortográfica evidente por forma del nombre / evidencia de discos)
+    "Rafael Mussett": ("alias", "typo (T doble): Rafael Musset"),
+    "Carlos Huertas": ("alias", "plural/singular: Carlos Huerta"),
+    "Fredy Reyna": ("alias", "typo (D doble): Freddy Reyna"),
+    "Francisco Tejera": ("alias", "inicial media: Francisco M. Tejera"),
+    "Neblinna": ("alias", "typo (N doble): Neblina"),
+    "Acero Plastiko": ("alias", "typo K/C + disco en común (ContraSistema)"),
+    "Miguel A. Ferrer": ("alias", "inicial media: Miguel Ferrer"),
+    "La Banda Casablanca": ("alias", "artículo («de») + disco en común (El sueño)"),
+    "Aloisio": ("alias", "variante ortográfica: Aloisi"),
+    # dudosos reales → a ojo de Brian (identidad no decidible por forma del nombre)
+    "Gustavo Elis": ("revisar", "«Elis» vs «Celís»: verificar identidad"),
+    "Miguel Farías": ("revisar", "«Farías» vs «Arias»: no es variante evidente; verificar identidad"),
+    "Rebelión": ("revisar", "¿traducción/variante de «Rebellion»? verificar"),
+    "Mariano Álvarez": ("revisar", "«Mariano» vs «Mario»: nombres distintos; verificar"),
+    "Jota Rodríguez": ("revisar", "«Jota» vs «Joan»: verificar identidad"),
+    "Raquel González": ("revisar", "«Raquel» vs «Rael»: nombres distintos; verificar"),
+    "Carlitos Flores": ("revisar", "diminutivo de Carlos; verificar identidad"),
+    "Adriana": ("revisar", "«Adriana» vs «Adrián»: verificar"),
+    "La Cruz": ("revisar", "«La Cruz» vs «L. Cruz»: verificar"),
+}
+
+ADJ_HOM_DEFAULT = {"alias_probable": "alias", "alias_dudoso": "revisar", "distinto_probable": "sin_accion"}
+
 
 def norm(s):
     s = unicodedata.normalize("NFKD", s or "").encode("ascii", "ignore").decode().lower()
@@ -127,6 +203,10 @@ def paquete_discos():
                 clase, veredicto = "typo_probable", "misma"
             else:
                 clase, veredicto = "dudoso", "revisar"
+        k_adj = f"{norm(titulo)}|{n.get('anio', '')}"
+        propuesta, nota_fina = ADJ_DISCOS.get(k_adj, (veredicto, ""))
+        if k_adj in ADJ_DISCOS:
+            ADJ_USADAS.add(k_adj)
         nota = f"ratio {ratio}"
         if clase == "misma_escritura":
             nota += "; misma obra (puntuación/mayúsculas)"
@@ -140,11 +220,13 @@ def paquete_discos():
             "pistas_rym": n.get("ev_tracks", ""), "rym_href": n.get("rym_href", ""),
             "cat_album_id": cand_id, "cat_titulo": cat_title, "cat_anio": cat_year,
             "clase": clase, "veredicto_sugerido": veredicto, "nota": nota,
+            "propuesta": propuesta, "nota_fina": nota_fina,
             "fuente": f"review_queue#{rv['rid']}+er_decision#{rv['did']}+albums#{cand_id or '-'}+dossier-discos.jsonl",
             "decision": ""})
     filas.sort(key=lambda f: (f["veredicto_sugerido"], -float(f["score_er"])))
     escribir("careo-discos", filas)
     print("  veredictos:", dict(Counter(f["veredicto_sugerido"] for f in filas)))
+    print("  propuesta: ", dict(Counter(f["propuesta"] for f in filas)))
 
 
 # ------------------------------------------------------------------ paquete 2
@@ -190,6 +272,9 @@ def paquete_homonimos():
             veredicto = "alias_dudoso"
         else:
             veredicto = "distinto_probable"
+        propuesta, nota_fina = ADJ_HOM.get(r["rym_name"], (ADJ_HOM_DEFAULT[veredicto], ""))
+        if r["rym_name"] in ADJ_HOM:
+            ADJ_USADAS.add("hom:" + r["rym_name"])
         nota = f"sim {sim:.2f}"
         if solape:
             nota += f"; {solape} discos coinciden: {', '.join(ej)}"
@@ -203,11 +288,13 @@ def paquete_homonimos():
             "ev_formado": r["ev_formed"] or "", "ev_generos": r["ev_genres"], "ev_discos": r["ev_n_discos"],
             "ev_miembro_de": r["miembro_de"],
             "discos_solapan": solape, "veredicto_sugerido": veredicto, "nota": nota,
+            "propuesta": propuesta, "nota_fina": nota_fina,
             "fuente": f"dossier-nuevos.jsonl#revisar_homonimo + BD cats#{cat_id}",
             "decision": ""})
     filas.sort(key=lambda f: -f["cat_sim"])
     escribir("careo-homonimos", filas)
     print("  veredictos:", dict(Counter(f["veredicto_sugerido"] for f in filas)))
+    print("  propuesta: ", dict(Counter(f["propuesta"] for f in filas)))
 
 
 # ------------------------------------------------------------------ paquete 3
@@ -241,3 +328,7 @@ if __name__ == "__main__":
     print("== paquete 3: descartes ==")
     paquete_descartes()
     print("listo (solo lectura; nada escrito en la BD)")
+    faltan_d = sorted(k for k in ADJ_DISCOS if k not in ADJ_USADAS)
+    faltan_h = sorted(k for k in ADJ_HOM if ("hom:" + k) not in ADJ_USADAS)
+    print("ADJ_DISCOS sin cruzar:", faltan_d if faltan_d else "ninguna")
+    print("ADJ_HOM sin cruzar:   ", faltan_h if faltan_h else "ninguna")

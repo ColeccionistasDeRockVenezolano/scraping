@@ -1,55 +1,79 @@
 # Paquetes de revisión — etapa 4 (para tu confirmación)
 
 Construidos el 2026-10-04 con `scripts/etapa4-altas-2026-10-03/paquetes-revision.py` (solo lectura;
-re-ejecutable: `python3 scripts/etapa4-altas-2026-10-03/paquetes-revision.py`). **Nada aplicado a la BD.**
+re-ejecutable). Refinados (v2): cada fila lleva **`propuesta`** (veredicto con nota propia) además del
+`sugerido` automático; la columna `decision` queda libre para que corrijas lo que quieras.
+
+**Nada aplicado a la BD.** Resumen: de 395 filas, **385 tienen propuesta** y **18 filas piden tu ojo**
+(8 dudas de discos + 9 identidades + Juan Peyote duplicado en cola = 18 filas / 17 decisiones).
 
 ## Paquete 1 · `careo-discos.tsv|.jsonl` — los 49 discos en cola (album_match)
 
-Cada fila: disco RYM (título/año/tipo/pistas) **vs** álbum del catálogo (id/título/año), clase y
-**veredicto sugerido**:
-
-| veredicto | n | qué son |
+| propuesta | n | qué son |
 |---|---|---|
-| `misma` | 7 | variantes de escritura/typo de la misma obra («Mutant Dubstep Vol. 2»≅«Volume 2») |
-| `otra` | 4 | secuencias distintas (Acto I/II, Split 01/02/03, «Nada que perder 2») |
-| `revisar` | 38 | pares a ojo (ratio 0,70–0,95; p. ej. «Colorado» vs «Coloreado») |
+| `misma` | 11 | variantes/typos/subtítulos de la misma obra (7 auto + 4 refinadas: Bruno EP, Dead by Vitriol, Novo color vivo, Psyops Part Two=II) |
+| `otra` | 29 | obras distintas del álbum del catálogo (4 auto + 25 refinadas: secuencias/apéndices, singles vs álbumes, compilaciones distintas…) |
+| `revisar` | 9 | las 8 dudas reales que van a tu ojo (Juan Peyote aparece 2 veces en cola) |
 
-**Cómo se cierra (tras tu confirmación)**: se registra el veredicto en la Mesa
-(`ingest.review_decisions`: `same`/`different`) y se aplica **con alcance a estos 49 reviews**
-(`applyReviewDecisions(note, {reviewIds})`, run reversible por el diario). `same` = el claim RYM se
-adjunta al álbum existente (sin ficha nueva; puede completar año); `different` = se crea el álbum nuevo.
-Sin aplicar nada, los 49 siguen *open* en la cola.
+### Las 8 dudas (para tu ojo)
+
+| disco RYM | vs catálogo | pregunta |
+|---|---|---|
+| Colorado (2014, EP) — Dolli | «Coloreado» (2016) | ¿typo de título o EP distinto? |
+| Soldier of Hell Reborn (2016) | «Soldier of Hell» (2011) | ¿reedición ampliada o secuela? |
+| Night and Daydream (1978) — Ananta | «Wheels Of Time / Night And Daydream» (1978) | ¿es una mitad del doble del catálogo? |
+| Gorilla Business (En vivo, Recoveco Rec.) (2024) | «Gorilla Business» (2024) | ¿sesión en vivo distinta del single? |
+| The Black Album (2000) — Metrozubdivision | «Black» (1999) | ¿mismo? |
+| Biofonía II: Voces de la Tierra (2025) — M. Noya | «Biophony / Life Voices» (2023) | ¿secuela distinta o reedición? |
+| Tembla (2024) — C4 Trío | «Tiembla / Allá Cayó» (2015) | ¿typo o álbum distinto? |
+| Juan Peyote (1997) ×2 filas | «J.P» (1997) | ¿«J.P» es este disco homónimo? |
+
+**Cierre**: veredicto a la Mesa (`same`/`different`) + `applyReviewDecisions` con alcance a estos
+reviews (run reversible). `same` adjunta el claim al álbum existente; `different` crea el álbum nuevo.
+Sin aplicar, los 49 siguen *open*.
 
 ## Paquete 2 · `careo-homonimos.tsv|.jsonl` — 77 pares «¿es la misma ficha?»
 
-| veredicto | n | lectura |
+| propuesta | n | lectura |
 |---|---|---|
-| `alias_probable` | 5 | «Gypsy Ska»-style: casi seguro la misma ficha → alias |
-| `alias_dudoso` | 13 | sim 0,93–0,97 (ojo: «Miguel Farías» vs «Miguel Arias» NO es prueba) |
-| `distinto_probable` | 59 | sim <0,93: casi siempre otra persona/banda → sin acción |
+| `alias` | 9 | variante ortográfica evidente / disco en común (abajo) |
+| `revisar` | 9 | identidad no decidible por forma del nombre → tu ojo |
+| `sin_accion` | 59 | distintas con alta confianza (sim <0,93) — se anotan, nada que hacer |
 
-Cada fila trae a los dos lados (nombre/id de la ficha viva, fecha de creación, sim), la evidencia
-capturada (formed/born, géneros, discos, «Member of») y, si el lado es artista, cuántos discos
-coinciden con los del candidato.
+### Los 9 alias propuestos
 
-**Cierre**: los `alias_probable` que confirmes → alta de alias (`createAlias` + run, camino de la
-web); los `distinto_probable` → nada (se anotan); los dudosos → tu ojo.
+| RYM (alias) | ficha del catálogo | por qué |
+|---|---|---|
+| Rafael Mussett | [32223] Rafael Musset | typo (T doble) |
+| Carlos Huertas | [27138] Carlos Huerta | plural/singular |
+| Fredy Reyna | [2343] Freddy Reyna | typo (D doble) |
+| Francisco Tejera | [20054] Francisco M. Tejera | inicial media |
+| Neblinna | [1831] Neblina | typo (N doble) |
+| Acero Plastiko | [1620] Acero Plastico | K/C + disco en común («ContraSistema») |
+| Miguel A. Ferrer | [3348] Miguel Ferrer | inicial media |
+| La Banda Casablanca | [1404] La Banda de Casablanca | artículo «de» + disco común («El sueño») |
+| Aloisio | [12252] Aloisi | variante ortográfica |
 
-**Nota**: eran 79; 2 («GypsySka Orquesta», «North 95») salieron al corregir un bug del cruce
-compacto del dossier — ya figuraban en el catálogo con otro espaciado y ahora se reportan
-`ya_artista` (bug corregido en `dossier-nuevos.py`; ninguna fila aplicada del lote 1 estaba afectada).
+### Las 9 identidades (para tu ojo)
 
-## Paquete 3 · `descartes.tsv|.jsonl` — descartes masivos
+Gustavo Elis vs [36298] Gustavo Celís · Miguel Farías vs [1165] Miguel Arias · Rebelión vs [914]
+Rebellion · Mariano Álvarez vs [26500] Mario Alvarez · Jota Rodríguez vs [14271] Joan Rodriguez ·
+Raquel González vs [7943] Rael González · Carlitos Flores vs [25703] Carlos Flores · Adriana vs
+[25762] Adrián · La Cruz vs [24932] L. Cruz.
 
-- **246** personas «sin evidencia musical» (0 géneros, 0 discos, ficha vacía): cineastas, animadores,
-  políticos… del barrido de localidades (Chalbaud, Bendayán, Vigas, de la Cerda…).
-- **23** fríos sin ninguna señal (stubs vacíos).
-- **Cierre**: con tu OK se marcan «descartado (sin alta)» en el dossier; no hay nada que escribir en
-  la BD (nunca se crearon).
+**Cierre**: alias confirmados → `createAlias` + run (camino de la web); el resto se anota.
+
+## Paquete 3 · `descartes.tsv|.jsonl` — descartes masivos (269)
+
+- **246** personas «sin evidencia musical» (0 géneros, 0 discos: cineastas, animadores, políticos… del
+  barrido de localidades) + **23** fríos sin señales.
+- **Cierre**: con tu OK se marcan «descartado (sin alta)» en el dossier; no hay nada que escribir en la
+  BD (nunca se crearon).
 
 ## Cómo confirmar
 
-1. **Rápido**: respóndeme por paquete — p. ej. «paquete 1 y 2 como sugerido», «de los homónimos, estos
-   cambian: …», «descartes OK».
-2. **Con lupa**: edita la columna `decision` de los TSV (valores: `misma`/`otra`/`revisar`,
-   `alias`/`distinto`/`revisar`, `descartar`) y me avisas; yo aplico lo confirmado.
+1. **Rápido**: «OK paquete 1/2/3» (o «OK todo») → aplico la columna `propuesta` tal cual; las filas en
+   `revisar` quedan parqueadas hasta que las mires (no bloquean nada).
+2. **Con lupa**: edita `decision` en el TSV y me avisas; aplico solo lo confirmado.
+
+Todo cierre va por runs reversibles; nada se escribe en la BD sin tu OK.
