@@ -1,0 +1,3629 @@
+{
+ "generado": "2026-10-04T04:58:22.396Z",
+ "plan": "reports/etapa4-altas-2026-10-03/plan-lote3.jsonl",
+ "runs": [
+  11824,
+  11826,
+  11827,
+  11828,
+  11829,
+  11830,
+  11834
+ ],
+ "creadas": [
+  {
+   "clave": "rym-nuevos:artist:gustavo-casas-y-los-que-buscan",
+   "tipo": "artist",
+   "id": 5777,
+   "nombre": "Gustavo Casas y los Que Buscan"
+  },
+  {
+   "clave": "rym-nuevos:artist:nelson-morales",
+   "tipo": "artist",
+   "id": 5778,
+   "nombre": "Nelson Morales"
+  },
+  {
+   "clave": "rym-nuevos:artist:levy-rossell",
+   "tipo": "artist",
+   "id": 5779,
+   "nombre": "Levy Rossell"
+  },
+  {
+   "clave": "rym-nuevos:artist:lilatari",
+   "tipo": "artist",
+   "id": 5780,
+   "nombre": "LILATARI"
+  },
+  {
+   "clave": "rym-nuevos:artist:luidig-ochoa",
+   "tipo": "artist",
+   "id": 5781,
+   "nombre": "Luidig Ochoa"
+  },
+  {
+   "clave": "rym-nuevos:artist:manuel-guzman",
+   "tipo": "artist",
+   "id": 5782,
+   "nombre": "Manuel Guzman"
+  },
+  {
+   "clave": "rym-nuevos:artist:dejavu",
+   "tipo": "artist",
+   "id": 5783,
+   "nombre": "Dejavú"
+  },
+  {
+   "clave": "rym-nuevos:artist:utsush",
+   "tipo": "artist",
+   "id": 5784,
+   "nombre": "utsush"
+  },
+  {
+   "clave": "rym-nuevos:artist:stangah",
+   "tipo": "artist",
+   "id": 5785,
+   "nombre": "STANGAH"
+  },
+  {
+   "clave": "rym-nuevos:artist:perucho-conde",
+   "tipo": "artist",
+   "id": 5786,
+   "nombre": "Perucho Conde"
+  },
+  {
+   "clave": "rym-nuevos:artist:xix-3",
+   "tipo": "artist",
+   "id": 5787,
+   "nombre": "XIX"
+  },
+  {
+   "clave": "rym-nuevos:artist:feral-nox-1",
+   "tipo": "artist",
+   "id": 5788,
+   "nombre": "Feral Nox"
+  },
+  {
+   "clave": "rym-nuevos:artist:replinter",
+   "tipo": "artist",
+   "id": 5789,
+   "nombre": "Replinter"
+  },
+  {
+   "clave": "rym-nuevos:artist:proxima-estacion",
+   "tipo": "artist",
+   "id": 5790,
+   "nombre": "Próxima Estación"
+  },
+  {
+   "clave": "rym-nuevos:artist:reymar-perdomo",
+   "tipo": "artist",
+   "id": 5791,
+   "nombre": "Reymar Perdomo"
+  },
+  {
+   "clave": "rym-nuevos:artist:the-cure-for-anxiety",
+   "tipo": "artist",
+   "id": 5792,
+   "nombre": "The Cure for Anxiety"
+  },
+  {
+   "clave": "rym-nuevos:artist:dorancel-daga",
+   "tipo": "artist",
+   "id": 5793,
+   "nombre": "Doráncel Daga"
+  },
+  {
+   "clave": "rym-nuevos:artist:yung-iverson",
+   "tipo": "artist",
+   "id": 5794,
+   "nombre": "Yung Iverson"
+  },
+  {
+   "clave": "rym-nuevos:artist:vicentico-rodriguez",
+   "tipo": "artist",
+   "id": 5795,
+   "nombre": "Vicentico Rodríguez"
+  },
+  {
+   "clave": "rym-nuevos:artist:satosgang",
+   "tipo": "artist",
+   "id": 5796,
+   "nombre": "satosgang"
+  },
+  {
+   "clave": "rym-nuevos:artist:nieves",
+   "tipo": "artist",
+   "id": 5797,
+   "nombre": "Nieves"
+  },
+  {
+   "clave": "rym-nuevos:artist:evaluna-montaner",
+   "tipo": "artist",
+   "id": 5798,
+   "nombre": "Evaluna Montaner"
+  },
+  {
+   "clave": "rym-nuevos:artist:la-torre-de-babiel",
+   "tipo": "artist",
+   "id": 5799,
+   "nombre": "La Torre de Babiel"
+  },
+  {
+   "clave": "rym-nuevos:artist:treizy",
+   "tipo": "artist",
+   "id": 5800,
+   "nombre": "Treizy"
+  },
+  {
+   "clave": "rym-nuevos:artist:letra-emece",
+   "tipo": "artist",
+   "id": 5801,
+   "nombre": "Letra Emece"
+  },
+  {
+   "clave": "rym-nuevos:artist:yadam",
+   "tipo": "artist",
+   "id": 5802,
+   "nombre": "Yadam"
+  },
+  {
+   "clave": "rym-nuevos:artist:celestial-theory",
+   "tipo": "artist",
+   "id": 5803,
+   "nombre": "Celestial Theory"
+  },
+  {
+   "clave": "rym-nuevos:artist:gilberto-perez",
+   "tipo": "artist",
+   "id": 5804,
+   "nombre": "Gilberto Perez"
+  },
+  {
+   "clave": "rym-nuevos:artist:suei",
+   "tipo": "artist",
+   "id": 5805,
+   "nombre": "suei"
+  },
+  {
+   "clave": "rym-nuevos:artist:el-cafe-atomico",
+   "tipo": "artist",
+   "id": 5806,
+   "nombre": "El Café Atómico"
+  },
+  {
+   "clave": "rym-nuevos:artist:soos-days",
+   "tipo": "artist",
+   "id": 5807,
+   "nombre": "Soos Days"
+  },
+  {
+   "clave": "rym-nuevos:artist:tomas-montilla",
+   "tipo": "artist",
+   "id": 5808,
+   "nombre": "Tomás Montilla"
+  },
+  {
+   "clave": "rym-nuevos:artist:emily-galaviz",
+   "tipo": "artist",
+   "id": 5809,
+   "nombre": "Emily Galaviz"
+  },
+  {
+   "clave": "rym-nuevos:artist:pepe-camarillo",
+   "tipo": "artist",
+   "id": 5810,
+   "nombre": "Pepe Camarillo"
+  },
+  {
+   "clave": "rym-nuevos:artist:johnny-herrera",
+   "tipo": "artist",
+   "id": 5811,
+   "nombre": "Johnny Herrera"
+  },
+  {
+   "clave": "rym-nuevos:artist:andrea-maramara",
+   "tipo": "artist",
+   "id": 5812,
+   "nombre": "Andrea Maramara"
+  },
+  {
+   "clave": "rym-nuevos:artist:orquesta-pasion-juvenil",
+   "tipo": "artist",
+   "id": 5813,
+   "nombre": "Orquesta Pasión Juvenil"
+  },
+  {
+   "clave": "rym-nuevos:artist:_dlm",
+   "tipo": "artist",
+   "id": 5814,
+   "nombre": "//DLM"
+  },
+  {
+   "clave": "rym-nuevos:artist:yorghaki",
+   "tipo": "artist",
+   "id": 5815,
+   "nombre": "Yorghaki"
+  },
+  {
+   "clave": "rym-nuevos:artist:emmanuel-abraham",
+   "tipo": "artist",
+   "id": 5816,
+   "nombre": "Emmanuel Abraham"
+  },
+  {
+   "clave": "rym-nuevos:artist:king-pride",
+   "tipo": "artist",
+   "id": 5817,
+   "nombre": "King Pride"
+  },
+  {
+   "clave": "rym-nuevos:artist:romina-palmisano",
+   "tipo": "artist",
+   "id": 5818,
+   "nombre": "Romina Palmisano"
+  },
+  {
+   "clave": "rym-nuevos:artist:alaya-1",
+   "tipo": "artist",
+   "id": 5819,
+   "nombre": "Alaya"
+  },
+  {
+   "clave": "rym-nuevos:artist:adso-alejandro",
+   "tipo": "artist",
+   "id": 5820,
+   "nombre": "Adso Alejandro"
+  },
+  {
+   "clave": "rym-nuevos:artist:jeeiph",
+   "tipo": "artist",
+   "id": 5821,
+   "nombre": "Jeeiph"
+  },
+  {
+   "clave": "rym-nuevos:artist:moises_velasquez",
+   "tipo": "artist",
+   "id": 5822,
+   "nombre": "Moisés Velásquez"
+  },
+  {
+   "clave": "rym-nuevos:artist:empty-stomach",
+   "tipo": "artist",
+   "id": 5823,
+   "nombre": "Empty Stomach"
+  },
+  {
+   "clave": "rym-nuevos:artist:rosa-esber",
+   "tipo": "artist",
+   "id": 5824,
+   "nombre": "Rosa Esber"
+  },
+  {
+   "clave": "rym-nuevos:artist:capitan-mostacho",
+   "tipo": "artist",
+   "id": 5825,
+   "nombre": "Capitán Mostacho"
+  },
+  {
+   "clave": "rym-nuevos:artist:musiana",
+   "tipo": "artist",
+   "id": 5826,
+   "nombre": "MUSIANA"
+  },
+  {
+   "clave": "rym-nuevos:artist:chivin",
+   "tipo": "artist",
+   "id": 5827,
+   "nombre": "Chivin"
+  },
+  {
+   "clave": "rym-nuevos:artist:carmen-alicia-lara",
+   "tipo": "artist",
+   "id": 5828,
+   "nombre": "Carmen Alicia Lara"
+  },
+  {
+   "clave": "rym-nuevos:artist:yoangel-torrealba",
+   "tipo": "artist",
+   "id": 5829,
+   "nombre": "Yoangel Torrealba"
+  },
+  {
+   "clave": "rym-nuevos:artist:el-carrao-de-palmarito",
+   "tipo": "artist",
+   "id": 5830,
+   "nombre": "El Carrao de Palmarito"
+  },
+  {
+   "clave": "rym-nuevos:artist:tripulangel",
+   "tipo": "artist",
+   "id": 5831,
+   "nombre": "Tripulangel"
+  },
+  {
+   "clave": "rym-nuevos:artist:moncho-y-su-banda",
+   "tipo": "artist",
+   "id": 5832,
+   "nombre": "Moncho y su Banda"
+  },
+  {
+   "clave": "rym-nuevos:artist:michi-sanz",
+   "tipo": "artist",
+   "id": 5833,
+   "nombre": "Michi Sanz"
+  },
+  {
+   "clave": "rym-nuevos:artist:friman",
+   "tipo": "artist",
+   "id": 5834,
+   "nombre": "Friman"
+  },
+  {
+   "clave": "rym-nuevos:artist:reggi-el-autentico",
+   "tipo": "artist",
+   "id": 5835,
+   "nombre": "Reggi el Auténtico"
+  },
+  {
+   "clave": "rym-nuevos:artist:la-banda-show",
+   "tipo": "artist",
+   "id": 5836,
+   "nombre": "La Banda Show"
+  },
+  {
+   "clave": "rym-nuevos:artist:mangus",
+   "tipo": "artist",
+   "id": 5837,
+   "nombre": "Mangus"
+  },
+  {
+   "clave": "rym-nuevos:artist:miguelito-diaz",
+   "tipo": "artist",
+   "id": 5838,
+   "nombre": "Miguelito Díaz"
+  },
+  {
+   "clave": "rym-nuevos:artist:guillermo-william-marquez-corao",
+   "tipo": "artist",
+   "id": 5839,
+   "nombre": "Guillermo William Márquez Corao"
+  },
+  {
+   "clave": "rym-nuevos:artist:alicia-machado",
+   "tipo": "artist",
+   "id": 5840,
+   "nombre": "Alicia Machado"
+  },
+  {
+   "clave": "rym-nuevos:artist:greygerm",
+   "tipo": "artist",
+   "id": 5841,
+   "nombre": "GreyGerm"
+  },
+  {
+   "clave": "rym-nuevos:artist:samuel-acosta",
+   "tipo": "artist",
+   "id": 5842,
+   "nombre": "Samuel Acosta"
+  },
+  {
+   "clave": "rym-nuevos:artist:waru7k",
+   "tipo": "artist",
+   "id": 5843,
+   "nombre": "Waru7k"
+  },
+  {
+   "clave": "rym-nuevos:artist:kazugi",
+   "tipo": "artist",
+   "id": 5844,
+   "nombre": "Kazugi"
+  },
+  {
+   "clave": "rym-nuevos:artist:v-rod",
+   "tipo": "artist",
+   "id": 5845,
+   "nombre": "V Rod"
+  },
+  {
+   "clave": "rym-nuevos:artist:sergio-rosales",
+   "tipo": "artist",
+   "id": 5846,
+   "nombre": "Sergio Rosales"
+  },
+  {
+   "clave": "rym-nuevos:artist:lery-cattleya",
+   "tipo": "artist",
+   "id": 5847,
+   "nombre": "Lery Cattleya"
+  },
+  {
+   "clave": "rym-nuevos:artist:vict-molina",
+   "tipo": "artist",
+   "id": 5848,
+   "nombre": "Vict Molina"
+  },
+  {
+   "clave": "rym-nuevos:artist:lara-project",
+   "tipo": "artist",
+   "id": 5849,
+   "nombre": "Lara Project"
+  },
+  {
+   "clave": "rym-nuevos:artist:samuel-sahlieh",
+   "tipo": "artist",
+   "id": 5850,
+   "nombre": "Samuel Sahlieh"
+  },
+  {
+   "clave": "rym-nuevos:artist:grupo-cuyagua",
+   "tipo": "artist",
+   "id": 5851,
+   "nombre": "Grupo Cuyagua"
+  },
+  {
+   "clave": "rym-nuevos:artist:tar-majenye",
+   "tipo": "artist",
+   "id": 5852,
+   "nombre": "Tar Majenye"
+  },
+  {
+   "clave": "rym-nuevos:artist:panchito-prin",
+   "tipo": "artist",
+   "id": 5853,
+   "nombre": "Panchito Prin"
+  },
+  {
+   "clave": "rym-nuevos:artist:ferraz",
+   "tipo": "artist",
+   "id": 5854,
+   "nombre": "Ferraz"
+  },
+  {
+   "clave": "rym-nuevos:artist:badborn",
+   "tipo": "artist",
+   "id": 5855,
+   "nombre": "Badborn"
+  },
+  {
+   "clave": "rym-nuevos:artist:mari-la-carajita",
+   "tipo": "artist",
+   "id": 5856,
+   "nombre": "Mari la Carajita"
+  },
+  {
+   "clave": "rym-nuevos:artist:chico-mono-y-sus-monitos",
+   "tipo": "artist",
+   "id": 5857,
+   "nombre": "Chico Mono y sus monitos"
+  },
+  {
+   "clave": "rym-nuevos:artist:mikaela-monet",
+   "tipo": "artist",
+   "id": 5858,
+   "nombre": "Mikaela Monet"
+  },
+  {
+   "clave": "rym-nuevos:artist:85-dba",
+   "tipo": "artist",
+   "id": 5859,
+   "nombre": "85 DBA"
+  },
+  {
+   "clave": "rym-nuevos:artist:seji-morto",
+   "tipo": "artist",
+   "id": 5860,
+   "nombre": "Seji Morto"
+  },
+  {
+   "clave": "rym-nuevos:artist:briella",
+   "tipo": "artist",
+   "id": 5861,
+   "nombre": "Briella"
+  },
+  {
+   "clave": "rym-nuevos:artist:damaso-delgado",
+   "tipo": "artist",
+   "id": 5862,
+   "nombre": "Dámaso Delgado"
+  },
+  {
+   "clave": "rym-nuevos:artist:adrian-guacaran",
+   "tipo": "artist",
+   "id": 5863,
+   "nombre": "Adrian Guacaran"
+  },
+  {
+   "clave": "rym-nuevos:artist:cornelio-salazar",
+   "tipo": "artist",
+   "id": 5864,
+   "nombre": "Cornelio Salazar"
+  },
+  {
+   "clave": "rym-nuevos:artist:giovanni-guzzo",
+   "tipo": "artist",
+   "id": 5865,
+   "nombre": "Giovanni Guzzo"
+  },
+  {
+   "clave": "rym-nuevos:artist:lu-marie",
+   "tipo": "artist",
+   "id": 5866,
+   "nombre": "Lú Marié"
+  },
+  {
+   "clave": "rym-nuevos:artist:erika-needs",
+   "tipo": "artist",
+   "id": 5867,
+   "nombre": "Erika Needs"
+  },
+  {
+   "clave": "rym-nuevos:artist:aurora-dream",
+   "tipo": "artist",
+   "id": 5868,
+   "nombre": "Aurora Dream"
+  },
+  {
+   "clave": "rym-nuevos:artist:dell-soda",
+   "tipo": "artist",
+   "id": 5869,
+   "nombre": "Dell Soda"
+  },
+  {
+   "clave": "rym-nuevos:artist:atipico",
+   "tipo": "artist",
+   "id": 5870,
+   "nombre": "Atípico"
+  },
+  {
+   "clave": "rym-nuevos:artist:luis-edgardo-ramirez",
+   "tipo": "artist",
+   "id": 5871,
+   "nombre": "Luis Edgardo Ramírez"
+  },
+  {
+   "clave": "rym-nuevos:artist:meruva",
+   "tipo": "artist",
+   "id": 5872,
+   "nombre": "Meruva"
+  },
+  {
+   "clave": "rym-nuevos:artist:aun-no-hija",
+   "tipo": "artist",
+   "id": 5873,
+   "nombre": "Aún no Hija"
+  },
+  {
+   "clave": "rym-nuevos:artist:astrid-celeste",
+   "tipo": "artist",
+   "id": 5874,
+   "nombre": "Astrid Celeste"
+  },
+  {
+   "clave": "rym-nuevos:artist:chaparro",
+   "tipo": "artist",
+   "id": 5875,
+   "nombre": "Chaparro"
+  },
+  {
+   "clave": "rym-nuevos:artist:tony-monserrat",
+   "tipo": "artist",
+   "id": 5876,
+   "nombre": "Tony Monserrat"
+  },
+  {
+   "clave": "rym-nuevos:artist:robert-tiamo",
+   "tipo": "artist",
+   "id": 5877,
+   "nombre": "Robert Tiamo"
+  },
+  {
+   "clave": "rym-nuevos:artist:niko-la-fabrica",
+   "tipo": "artist",
+   "id": 5878,
+   "nombre": "Niko la Fábrica"
+  },
+  {
+   "clave": "rym-nuevos:artist:alboa",
+   "tipo": "artist",
+   "id": 5879,
+   "nombre": "Alboa"
+  },
+  {
+   "clave": "rym-nuevos:artist:pussidiq",
+   "tipo": "artist",
+   "id": 5880,
+   "nombre": "pussidiq"
+  },
+  {
+   "clave": "rym-nuevos:artist:rui-gabriel",
+   "tipo": "artist",
+   "id": 5881,
+   "nombre": "Rui Gabriel"
+  },
+  {
+   "clave": "rym-nuevos:artist:flayme",
+   "tipo": "artist",
+   "id": 5882,
+   "nombre": "Flayme"
+  },
+  {
+   "clave": "rym-nuevos:artist:mr-pauer",
+   "tipo": "artist",
+   "id": 5883,
+   "nombre": "Mr. Pauer"
+  },
+  {
+   "clave": "rym-nuevos:artist:rafael-payare",
+   "tipo": "artist",
+   "id": 5884,
+   "nombre": "Rafael Payare"
+  },
+  {
+   "clave": "rym-nuevos:artist:salas-1",
+   "tipo": "artist",
+   "id": 5885,
+   "nombre": "SALAS"
+  },
+  {
+   "clave": "rym-nuevos:artist:fabro",
+   "tipo": "artist",
+   "id": 5886,
+   "nombre": "Fabro"
+  },
+  {
+   "clave": "rym-nuevos:artist:cesar-castro",
+   "tipo": "artist",
+   "id": 5887,
+   "nombre": "César Castro"
+  },
+  {
+   "clave": "rym-nuevos:artist:gretchen-g",
+   "tipo": "artist",
+   "id": 5888,
+   "nombre": "Gretchen G"
+  },
+  {
+   "clave": "rym-nuevos:artist:jorge-ostos",
+   "tipo": "artist",
+   "id": 5889,
+   "nombre": "Jorge Ostos"
+  },
+  {
+   "clave": "rym-nuevos:artist:manu-heredia",
+   "tipo": "artist",
+   "id": 5890,
+   "nombre": "Manu Heredia"
+  },
+  {
+   "clave": "rym-nuevos:artist:luca_pisaroni",
+   "tipo": "artist",
+   "id": 5891,
+   "nombre": "Luca Pisaroni"
+  },
+  {
+   "clave": "rym-nuevos:artist:manira",
+   "tipo": "artist",
+   "id": 5892,
+   "nombre": "Manira"
+  },
+  {
+   "clave": "rym-nuevos:artist:vera-delacruz",
+   "tipo": "artist",
+   "id": 5893,
+   "nombre": "Vera Delacruz"
+  },
+  {
+   "clave": "rym-nuevos:artist:scarlett-linares",
+   "tipo": "artist",
+   "id": 5894,
+   "nombre": "Scarlett Linares"
+  },
+  {
+   "clave": "rym-nuevos:artist:francelin-casanas",
+   "tipo": "artist",
+   "id": 5895,
+   "nombre": "Francelín Casañas"
+  },
+  {
+   "clave": "rym-nuevos:artist:luis_conny",
+   "tipo": "artist",
+   "id": 5896,
+   "nombre": "Luis Conny"
+  },
+  {
+   "clave": "rym-nuevos:artist:maria-teresa-acosta",
+   "tipo": "artist",
+   "id": 5897,
+   "nombre": "María Teresa Acosta"
+  },
+  {
+   "clave": "rym-nuevos:artist:grecia-limperani",
+   "tipo": "artist",
+   "id": 5898,
+   "nombre": "Grecia Limperani"
+  },
+  {
+   "clave": "rym-nuevos:artist:coringta",
+   "tipo": "artist",
+   "id": 5899,
+   "nombre": "CORINGTA"
+  },
+  {
+   "clave": "rym-nuevos:artist:venezuela-strings-recording-ensemble",
+   "tipo": "artist",
+   "id": 5900,
+   "nombre": "Venezuela Strings Recording Ensemble"
+  },
+  {
+   "clave": "rym-nuevos:artist:contemplando-el-cielo",
+   "tipo": "artist",
+   "id": 5901,
+   "nombre": "Contemplando el Cielo"
+  },
+  {
+   "clave": "rym-nuevos:artist:bill_quick",
+   "tipo": "artist",
+   "id": 5902,
+   "nombre": "Bill Quick"
+  },
+  {
+   "clave": "rym-nuevos:artist:dj_yirvin",
+   "tipo": "artist",
+   "id": 5903,
+   "nombre": "DJ Yirvin"
+  },
+  {
+   "clave": "rym-nuevos:artist:genaro_salinas",
+   "tipo": "artist",
+   "id": 5904,
+   "nombre": "Genaro Salinas"
+  },
+  {
+   "clave": "rym-nuevos:artist:oh_dulceari",
+   "tipo": "artist",
+   "id": 5905,
+   "nombre": "OH!DULCEARi"
+  },
+  {
+   "clave": "rym-nuevos:artist:yunglian-mediocre-broke-boi",
+   "tipo": "artist",
+   "id": 5906,
+   "nombre": "YUNGLiAN MEDiOCRE BROKE BOi"
+  },
+  {
+   "clave": "rym-nuevos:artist:eldese",
+   "tipo": "artist",
+   "id": 5907,
+   "nombre": "Eldese"
+  },
+  {
+   "clave": "rym-nuevos:artist:realengos",
+   "tipo": "artist",
+   "id": 5908,
+   "nombre": "Realengos"
+  },
+  {
+   "clave": "rym-nuevos:artist:hector-murga",
+   "tipo": "artist",
+   "id": 5909,
+   "nombre": "Héctor Murga"
+  },
+  {
+   "clave": "rym-nuevos:artist:aldo_dona",
+   "tipo": "artist",
+   "id": 5910,
+   "nombre": "Aldo Donà"
+  },
+  {
+   "clave": "rym-nuevos:artist:noer-pierkhan",
+   "tipo": "artist",
+   "id": 5911,
+   "nombre": "Noer Pierkhan"
+  },
+  {
+   "clave": "rym-nuevos:artist:kiko-mendive",
+   "tipo": "artist",
+   "id": 5912,
+   "nombre": "Kiko Mendive"
+  },
+  {
+   "clave": "rym-nuevos:artist:alberto-aguila",
+   "tipo": "artist",
+   "id": 5913,
+   "nombre": "Alberto Aguilá"
+  },
+  {
+   "clave": "rym-nuevos:artist:herminia-martinez",
+   "tipo": "artist",
+   "id": 5914,
+   "nombre": "Herminia Martínez"
+  },
+  {
+   "clave": "rym-nuevos:artist:migue-mori",
+   "tipo": "artist",
+   "id": 5915,
+   "nombre": "MIGUE MORI"
+  },
+  {
+   "clave": "rym-nuevos:artist:bob-bissonnette",
+   "tipo": "artist",
+   "id": 5916,
+   "nombre": "Bob Bissonnette"
+  },
+  {
+   "clave": "rym-nuevos:artist:nk-profeta",
+   "tipo": "artist",
+   "id": 5917,
+   "nombre": "NK Profeta"
+  },
+  {
+   "clave": "rym-nuevos:artist:sebastian-bauza-bueno",
+   "tipo": "artist",
+   "id": 5918,
+   "nombre": "Sebastián Bauza-Bueno"
+  },
+  {
+   "clave": "rym-nuevos:artist:octubrxlibrv",
+   "tipo": "artist",
+   "id": 5919,
+   "nombre": "OCTUBRXLIBRV"
+  },
+  {
+   "clave": "rym-nuevos:artist:gona",
+   "tipo": "artist",
+   "id": 5920,
+   "nombre": "Gona"
+  },
+  {
+   "clave": "rym-nuevos:artist:efrain-amaya",
+   "tipo": "artist",
+   "id": 5921,
+   "nombre": "Efraín Amaya"
+  },
+  {
+   "clave": "rym-nuevos:artist:samy-hawk",
+   "tipo": "artist",
+   "id": 5922,
+   "nombre": "Samy Hawk"
+  },
+  {
+   "clave": "rym-nuevos:artist:nakary",
+   "tipo": "artist",
+   "id": 5923,
+   "nombre": "Nakary"
+  },
+  {
+   "clave": "rym-nuevos:artist:somalunar",
+   "tipo": "artist",
+   "id": 5924,
+   "nombre": "Somalunar"
+  },
+  {
+   "clave": "rym-nuevos:artist:motiff",
+   "tipo": "artist",
+   "id": 5925,
+   "nombre": "Motiff"
+  },
+  {
+   "clave": "rym-nuevos:artist:bolivar-caribano",
+   "tipo": "artist",
+   "id": 5926,
+   "nombre": "Bolívar Caribano"
+  },
+  {
+   "clave": "rym-nuevos:artist:lan-liu",
+   "tipo": "artist",
+   "id": 5927,
+   "nombre": "Lan Liu"
+  },
+  {
+   "clave": "rym-nuevos:artist:ugoluna",
+   "tipo": "artist",
+   "id": 5928,
+   "nombre": "Ugoluna"
+  },
+  {
+   "clave": "rym-nuevos:artist:from-fiction",
+   "tipo": "artist",
+   "id": 5929,
+   "nombre": "From Fiction"
+  },
+  {
+   "clave": "rym-nuevos:artist:rms_f1",
+   "tipo": "artist",
+   "id": 5930,
+   "nombre": "RMS"
+  },
+  {
+   "clave": "rym-nuevos:artist:christian-vasquez",
+   "tipo": "artist",
+   "id": 5931,
+   "nombre": "Christian Vásquez"
+  },
+  {
+   "clave": "rym-nuevos:artist:maye",
+   "tipo": "artist",
+   "id": 5932,
+   "nombre": "Maye"
+  },
+  {
+   "clave": "rym-nuevos:artist:as1",
+   "tipo": "artist",
+   "id": 5933,
+   "nombre": "AS1"
+  },
+  {
+   "clave": "rym-nuevos:artist:mestiza",
+   "tipo": "artist",
+   "id": 5934,
+   "nombre": "Mestiza"
+  },
+  {
+   "clave": "rym-nuevos:artist:verkhead",
+   "tipo": "artist",
+   "id": 5935,
+   "nombre": "Verkhead"
+  },
+  {
+   "clave": "rym-nuevos:artist:lele-pons",
+   "tipo": "artist",
+   "id": 5936,
+   "nombre": "Lele Pons"
+  },
+  {
+   "clave": "rym-nuevos:artist:lecon",
+   "tipo": "artist",
+   "id": 5937,
+   "nombre": "Lecon"
+  },
+  {
+   "clave": "rym-nuevos:artist:just-art-dead",
+   "tipo": "artist",
+   "id": 5938,
+   "nombre": "Just Art Dead"
+  },
+  {
+   "clave": "rym-nuevos:artist:vince-vinyl",
+   "tipo": "artist",
+   "id": 5939,
+   "nombre": "Vince Vinyl"
+  },
+  {
+   "clave": "rym-nuevos:artist:nicolas-maduro",
+   "tipo": "artist",
+   "id": 5940,
+   "nombre": "Nicolás Maduro"
+  },
+  {
+   "clave": "rym-nuevos:artist:markem",
+   "tipo": "artist",
+   "id": 5941,
+   "nombre": "Markem"
+  },
+  {
+   "clave": "rym-nuevos:artist:saunter-1",
+   "tipo": "artist",
+   "id": 5942,
+   "nombre": "Saunter"
+  },
+  {
+   "clave": "rym-nuevos:artist:vodini",
+   "tipo": "artist",
+   "id": 5943,
+   "nombre": "Vodini"
+  },
+  {
+   "clave": "rym-nuevos:artist:artico",
+   "tipo": "artist",
+   "id": 5944,
+   "nombre": "Ártico"
+  },
+  {
+   "clave": "rym-nuevos:artist:jambene",
+   "tipo": "artist",
+   "id": 5945,
+   "nombre": "Jambene"
+  },
+  {
+   "clave": "rym-nuevos:artist:khali-issis",
+   "tipo": "artist",
+   "id": 5946,
+   "nombre": "Kháli Issis"
+  },
+  {
+   "clave": "rym-nuevos:artist:zen-p",
+   "tipo": "artist",
+   "id": 5947,
+   "nombre": "Zen P"
+  },
+  {
+   "clave": "rym-nuevos:artist:undying-truth",
+   "tipo": "artist",
+   "id": 5948,
+   "nombre": "UNDYING TRUTH"
+  },
+  {
+   "clave": "rym-nuevos:artist:patricia-zavala",
+   "tipo": "artist",
+   "id": 5949,
+   "nombre": "Patricia Zavala"
+  },
+  {
+   "clave": "rym-nuevos:artist:alejandro-planchart",
+   "tipo": "artist",
+   "id": 5950,
+   "nombre": "Alejandro Planchart"
+  },
+  {
+   "clave": "rym-nuevos:artist:nombres-ocultos",
+   "tipo": "artist",
+   "id": 5951,
+   "nombre": "Nombres Ocultos"
+  },
+  {
+   "clave": "rym-nuevos:artist:garee",
+   "tipo": "artist",
+   "id": 5952,
+   "nombre": "Garee"
+  },
+  {
+   "clave": "rym-nuevos:artist:marti-ann",
+   "tipo": "artist",
+   "id": 5953,
+   "nombre": "Marti Ann"
+  },
+  {
+   "clave": "rym-nuevos:artist:enrique-bencomo",
+   "tipo": "artist",
+   "id": 5954,
+   "nombre": "Enrique Bencomo"
+  },
+  {
+   "clave": "rym-nuevos:artist:laura-chimaras",
+   "tipo": "artist",
+   "id": 5955,
+   "nombre": "Laura Chimaras"
+  },
+  {
+   "clave": "rym-nuevos:artist:hibai-rekondo",
+   "tipo": "artist",
+   "id": 5956,
+   "nombre": "Hibai Rekondo"
+  },
+  {
+   "clave": "rym-nuevos:artist:rafael-lanzetta",
+   "tipo": "artist",
+   "id": 5957,
+   "nombre": "Rafael Lanzetta"
+  },
+  {
+   "clave": "rym-nuevos:artist:aseari",
+   "tipo": "artist",
+   "id": 5958,
+   "nombre": "Aseari"
+  },
+  {
+   "clave": "rym-nuevos:artist:andres-levell",
+   "tipo": "artist",
+   "id": 5959,
+   "nombre": "Andrés Levell"
+  },
+  {
+   "clave": "rym-nuevos:artist:nancy-fabiola-herrera",
+   "tipo": "artist",
+   "id": 5960,
+   "nombre": "Nancy Fabiola Herrera"
+  },
+  {
+   "clave": "rym-nuevos:artist:safety-trance",
+   "tipo": "artist",
+   "id": 5961,
+   "nombre": "Safety Trance"
+  },
+  {
+   "clave": "rym-nuevos:artist:los-pures",
+   "tipo": "artist",
+   "id": 5962,
+   "nombre": "Los Pures"
+  },
+  {
+   "clave": "rym-nuevos:artist:victor-porfidio",
+   "tipo": "artist",
+   "id": 5963,
+   "nombre": "Victor Porfidio"
+  },
+  {
+   "clave": "rym-nuevos:artist:johnthvhk",
+   "tipo": "artist",
+   "id": 5964,
+   "nombre": "JohnThvhk"
+  },
+  {
+   "clave": "rym-nuevos:artist:banny-kosta",
+   "tipo": "artist",
+   "id": 5965,
+   "nombre": "Banny Kosta"
+  },
+  {
+   "clave": "rym-nuevos:artist:carlos-montilla",
+   "tipo": "artist",
+   "id": 5966,
+   "nombre": "Carlos Montilla"
+  },
+  {
+   "clave": "rym-nuevos:artist:saul-guanipa",
+   "tipo": "artist",
+   "id": 5967,
+   "nombre": "Saul Guanipa"
+  },
+  {
+   "clave": "rym-nuevos:artist:soraya_benitez",
+   "tipo": "artist",
+   "id": 5968,
+   "nombre": "Soraya Benitez"
+  },
+  {
+   "clave": "rym-nuevos:artist:hein-van-der-gaag",
+   "tipo": "artist",
+   "id": 5969,
+   "nombre": "Hein van der Gaag"
+  },
+  {
+   "clave": "rym-nuevos:artist:reynaldo_hahn",
+   "tipo": "artist",
+   "id": 5970,
+   "nombre": "Reynaldo Hahn"
+  },
+  {
+   "clave": "rym-nuevos:artist:ag-wild",
+   "tipo": "artist",
+   "id": 5971,
+   "nombre": "AG Wild"
+  },
+  {
+   "clave": "rym-nuevos:artist:giorgio-maulini",
+   "tipo": "artist",
+   "id": 5972,
+   "nombre": "Giorgio Maulini"
+  },
+  {
+   "clave": "rym-nuevos:artist:zamora-2",
+   "tipo": "artist",
+   "id": 5973,
+   "nombre": "Zamora"
+  },
+  {
+   "clave": "rym-nuevos:artist:eddie_le_baron",
+   "tipo": "artist",
+   "id": 5974,
+   "nombre": "Eddie Le Baron"
+  },
+  {
+   "clave": "rym-nuevos:artist:nani-2",
+   "tipo": "artist",
+   "id": 5975,
+   "nombre": "Nani"
+  },
+  {
+   "clave": "rym-nuevos:artist:ahvistetabien",
+   "tipo": "artist",
+   "id": 5976,
+   "nombre": "ahvistetabien"
+  },
+  {
+   "clave": "rym-nuevos:artist:harry-zimmerman",
+   "tipo": "artist",
+   "id": 5977,
+   "nombre": "Harry Zimmerman"
+  },
+  {
+   "clave": "rym-nuevos:artist:simone-angel",
+   "tipo": "artist",
+   "id": 5978,
+   "nombre": "Simone Angel"
+  },
+  {
+   "clave": "rym-nuevos:artist:zuri-nativa",
+   "tipo": "artist",
+   "id": 5979,
+   "nombre": "Zuri Nativa"
+  },
+  {
+   "clave": "rym-nuevos:artist:susan-cagle",
+   "tipo": "artist",
+   "id": 5980,
+   "nombre": "Susan Cagle"
+  },
+  {
+   "clave": "rym-nuevos:artist:dmaduro",
+   "tipo": "artist",
+   "id": 5981,
+   "nombre": "D'Maduro"
+  },
+  {
+   "clave": "rym-nuevos:artist:lesley-vos",
+   "tipo": "artist",
+   "id": 5982,
+   "nombre": "Lesley Vos"
+  },
+  {
+   "clave": "rym-nuevos:artist:ishanna",
+   "tipo": "artist",
+   "id": 5983,
+   "nombre": "Ishanna"
+  },
+  {
+   "clave": "rym-nuevos:artist:juan-serrano",
+   "tipo": "artist",
+   "id": 5984,
+   "nombre": "Juan Serrano"
+  },
+  {
+   "clave": "rym-nuevos:artist:la-costa",
+   "tipo": "artist",
+   "id": 5985,
+   "nombre": "La Costa"
+  },
+  {
+   "clave": "rym-nuevos:artist:dhaddy-brokke",
+   "tipo": "artist",
+   "id": 5986,
+   "nombre": "Dhaddy Brokke"
+  },
+  {
+   "clave": "rym-nuevos:artist:blue_haze_f1",
+   "tipo": "artist",
+   "id": 5987,
+   "nombre": "Blue Haze"
+  },
+  {
+   "clave": "rym-nuevos:artist:paul-connor",
+   "tipo": "artist",
+   "id": 5988,
+   "nombre": "Paul Connor"
+  },
+  {
+   "clave": "rym-nuevos:artist:the-rabbit-hole-project",
+   "tipo": "artist",
+   "id": 5989,
+   "nombre": "The Rabbit Hole Project"
+  },
+  {
+   "clave": "rym-nuevos:artist:alacran_f2",
+   "tipo": "artist",
+   "id": 5990,
+   "nombre": "Alacrán"
+  },
+  {
+   "clave": "rym-nuevos:artist:smiley_f2",
+   "tipo": "artist",
+   "id": 5991,
+   "nombre": "Smiley"
+  },
+  {
+   "clave": "rym-nuevos:artist:rufo_wever",
+   "tipo": "artist",
+   "id": 5992,
+   "nombre": "Rufo Wever"
+  },
+  {
+   "clave": "rym-nuevos:artist:roykey-wydh",
+   "tipo": "artist",
+   "id": 5993,
+   "nombre": "Roykey Wydh"
+  },
+  {
+   "clave": "rym-nuevos:artist:padu-del-caribe",
+   "tipo": "artist",
+   "id": 5994,
+   "nombre": "Padú del Caribe"
+  },
+  {
+   "clave": "rym-nuevos:artist:susan-justice",
+   "tipo": "artist",
+   "id": 5995,
+   "nombre": "Susan Justice"
+  },
+  {
+   "clave": "rym-nuevos:artist:greg-hobson",
+   "tipo": "artist",
+   "id": 5996,
+   "nombre": "Greg Hobson"
+  },
+  {
+   "clave": "rym-nuevos:artist:lloyd-and-the-joys",
+   "tipo": "artist",
+   "id": 5997,
+   "nombre": "Lloyd and the Joys"
+  },
+  {
+   "clave": "rym-nuevos:artist:marlon-titre",
+   "tipo": "artist",
+   "id": 5998,
+   "nombre": "Marlon Titre"
+  },
+  {
+   "clave": "rym-nuevos:artist:jose-aquilino-sanchez",
+   "tipo": "artist",
+   "id": 5999,
+   "nombre": "Jose Aquilino Sanchez"
+  },
+  {
+   "clave": "rym-nuevos:artist:garcia-gomez",
+   "tipo": "artist",
+   "id": 6000,
+   "nombre": "García Gomez"
+  },
+  {
+   "clave": "rym-nuevos:artist:carze",
+   "tipo": "artist",
+   "id": 6001,
+   "nombre": "Carzé"
+  },
+  {
+   "clave": "rym-nuevos:artist:majandra-delfino",
+   "tipo": "artist",
+   "id": 6002,
+   "nombre": "Majandra Delfino"
+  },
+  {
+   "clave": "rym-nuevos:artist:el-potro-alvarez",
+   "tipo": "artist",
+   "id": 6003,
+   "nombre": "El Potro Álvarez"
+  },
+  {
+   "clave": "rym-nuevos:artist:jorgelia",
+   "tipo": "artist",
+   "id": 6004,
+   "nombre": "Jorgelia"
+  },
+  {
+   "clave": "rym-nuevos:artist:tito_coral",
+   "tipo": "artist",
+   "id": 6005,
+   "nombre": "Tito Coral"
+  },
+  {
+   "clave": "rym-nuevos:artist:edicson_ruiz",
+   "tipo": "artist",
+   "id": 6006,
+   "nombre": "Edicson Ruiz"
+  },
+  {
+   "clave": "rym-nuevos:artist:jan_wagner",
+   "tipo": "artist",
+   "id": 6007,
+   "nombre": "Jan Wagner"
+  },
+  {
+   "clave": "rym-nuevos:artist:hobart_earle",
+   "tipo": "artist",
+   "id": 6008,
+   "nombre": "Hobart Earle"
+  },
+  {
+   "clave": "rym-nuevos:artist:sergio-tiempo",
+   "tipo": "artist",
+   "id": 6009,
+   "nombre": "Sergio Tiempo"
+  },
+  {
+   "clave": "rym-nuevos:artist:dru-flecha",
+   "tipo": "artist",
+   "id": 6010,
+   "nombre": "Dru Flecha"
+  },
+  {
+   "clave": "rym-nuevos:artist:desidere",
+   "tipo": "artist",
+   "id": 6011,
+   "nombre": "Desidere"
+  },
+  {
+   "clave": "rym-nuevos:artist:corina-smith",
+   "tipo": "artist",
+   "id": 6012,
+   "nombre": "Corina Smith"
+  },
+  {
+   "clave": "rym-nuevos:artist:kobi-cantillo",
+   "tipo": "artist",
+   "id": 6013,
+   "nombre": "Kobi Cantillo"
+  },
+  {
+   "clave": "rym-nuevos:artist:andremustdie",
+   "tipo": "artist",
+   "id": 6014,
+   "nombre": "andremustdie"
+  },
+  {
+   "clave": "rym-nuevos:artist:daniela-barranco",
+   "tipo": "artist",
+   "id": 6015,
+   "nombre": "Daniela Barranco"
+  },
+  {
+   "clave": "rym-nuevos:artist:dj-loopy",
+   "tipo": "artist",
+   "id": 6016,
+   "nombre": "DJ Loopy"
+  },
+  {
+   "clave": "rym-nuevos:artist:weed420",
+   "tipo": "artist",
+   "id": 6017,
+   "nombre": "Weed420"
+  },
+  {
+   "clave": "rym-nuevos:artist:marianella",
+   "tipo": "artist",
+   "id": 6018,
+   "nombre": "Marianella"
+  },
+  {
+   "clave": "rym-nuevos:artist:elizabeth-ayoub",
+   "tipo": "artist",
+   "id": 6019,
+   "nombre": "Elizabeth Ayoub"
+  },
+  {
+   "clave": "rym-nuevos:artist:dn-tato",
+   "tipo": "artist",
+   "id": 6020,
+   "nombre": "DN Tato"
+  },
+  {
+   "clave": "rym-nuevos:artist:joaquin_mendoza_sebastian",
+   "tipo": "artist",
+   "id": 6021,
+   "nombre": "Joaquín Mendoza Sebastián"
+  },
+  {
+   "clave": "rym-nuevos:artist:sixthdagger",
+   "tipo": "artist",
+   "id": 6022,
+   "nombre": "Sixthdagger"
+  },
+  {
+   "clave": "rym-nuevos:artist:liliana-rodriguez-morillo",
+   "tipo": "artist",
+   "id": 6023,
+   "nombre": "Liliana Rodríguez Morillo"
+  },
+  {
+   "clave": "rym-nuevos:artist:alberto-conde",
+   "tipo": "artist",
+   "id": 6024,
+   "nombre": "Alberto Conde"
+  },
+  {
+   "clave": "rym-nuevos:artist:jorge_sanchez_chiong",
+   "tipo": "artist",
+   "id": 6025,
+   "nombre": "Jorge Sánchez-Chiong"
+  },
+  {
+   "clave": "rym-nuevos:artist:arturo-annecchino",
+   "tipo": "artist",
+   "id": 6026,
+   "nombre": "Arturo Annecchino"
+  },
+  {
+   "clave": "rym-nuevos:artist:cosmo-de-la-fuente",
+   "tipo": "artist",
+   "id": 6027,
+   "nombre": "Cosmo de la Fuente"
+  },
+  {
+   "clave": "rym-nuevos:artist:ooyah",
+   "tipo": "artist",
+   "id": 6028,
+   "nombre": "OOYAH"
+  },
+  {
+   "clave": "rym-nuevos:artist:osos-del-sol",
+   "tipo": "artist",
+   "id": 6029,
+   "nombre": "Osos del sol"
+  },
+  {
+   "clave": "rym-nuevos:artist:aran-one",
+   "tipo": "artist",
+   "id": 6030,
+   "nombre": "Aran One"
+  },
+  {
+   "clave": "rym-nuevos:artist:mario-puglia",
+   "tipo": "artist",
+   "id": 6031,
+   "nombre": "Mario Puglia"
+  },
+  {
+   "clave": "rym-nuevos:artist:el-forever",
+   "tipo": "artist",
+   "id": 6032,
+   "nombre": "El Forever"
+  },
+  {
+   "clave": "rym-nuevos:artist:alan-wittels",
+   "tipo": "artist",
+   "id": 6033,
+   "nombre": "Alan Wittels"
+  },
+  {
+   "clave": "rym-nuevos:artist:daniella-barbarito",
+   "tipo": "artist",
+   "id": 6034,
+   "nombre": "Daniella Barbarito"
+  },
+  {
+   "clave": "rym-nuevos:artist:mj-nebreda",
+   "tipo": "artist",
+   "id": 6035,
+   "nombre": "MJ Nebreda"
+  },
+  {
+   "clave": "rym-nuevos:artist:luis-carreno",
+   "tipo": "artist",
+   "id": 6036,
+   "nombre": "Luis Carreño"
+  },
+  {
+   "clave": "rym-nuevos:artist:lil-scars-2",
+   "tipo": "artist",
+   "id": 6037,
+   "nombre": "Lil Scars"
+  },
+  {
+   "clave": "rym-nuevos:artist:kai-tak",
+   "tipo": "artist",
+   "id": 6038,
+   "nombre": "Kai Tak"
+  },
+  {
+   "clave": "rym-nuevos:artist:nico-manzano",
+   "tipo": "artist",
+   "id": 6039,
+   "nombre": "Nico Manzano"
+  },
+  {
+   "clave": "rym-nuevos:artist:lasmanz",
+   "tipo": "artist",
+   "id": 6040,
+   "nombre": "Lasmanz"
+  },
+  {
+   "clave": "rym-nuevos:artist:dave-ruthwell",
+   "tipo": "artist",
+   "id": 6041,
+   "nombre": "Dave Ruthwell"
+  },
+  {
+   "clave": "rym-nuevos:artist:peche",
+   "tipo": "artist",
+   "id": 6042,
+   "nombre": "Peche"
+  },
+  {
+   "clave": "rym-nuevos:artist:jhoanypz-jhoanypz",
+   "tipo": "artist",
+   "id": 6043,
+   "nombre": "Jhoanypz Jhoanypz"
+  },
+  {
+   "clave": "rym-nuevos:artist:orquesta-discotheque",
+   "tipo": "artist",
+   "id": 6044,
+   "nombre": "Orquesta Discotheque"
+  },
+  {
+   "clave": "rym-nuevos:artist:domingo-hindoyan",
+   "tipo": "artist",
+   "id": 6045,
+   "nombre": "Domingo Hindoyan"
+  },
+  {
+   "clave": "rym-nuevos:artist:mida",
+   "tipo": "artist",
+   "id": 6046,
+   "nombre": "Mida"
+  },
+  {
+   "clave": "rym-nuevos:artist:freddy-sheinfeld",
+   "tipo": "artist",
+   "id": 6047,
+   "nombre": "Freddy Sheinfeld"
+  },
+  {
+   "clave": "rym-nuevos:artist:nirse-gonzalez",
+   "tipo": "artist",
+   "id": 6048,
+   "nombre": "Nirse González"
+  },
+  {
+   "clave": "rym-nuevos:artist:manana-el-espacio",
+   "tipo": "artist",
+   "id": 6049,
+   "nombre": "Mañana el Espacio"
+  },
+  {
+   "clave": "rym-nuevos:artist:elodie-bouny",
+   "tipo": "artist",
+   "id": 6050,
+   "nombre": "Elodie Bouny"
+  },
+  {
+   "clave": "rym-nuevos:artist:nicole_aiff",
+   "tipo": "artist",
+   "id": 6051,
+   "nombre": "nicole.aiff"
+  },
+  {
+   "clave": "rym-nuevos:artist:sarc-the-east-face",
+   "tipo": "artist",
+   "id": 6052,
+   "nombre": "SARC THE EAST FACE"
+  },
+  {
+   "clave": "rym-nuevos:artist:tona-granado",
+   "tipo": "artist",
+   "id": 6053,
+   "nombre": "Toña Granado"
+  },
+  {
+   "clave": "rym-nuevos:artist:chantals",
+   "tipo": "artist",
+   "id": 6054,
+   "nombre": "Chantals"
+  },
+  {
+   "clave": "rym-nuevos:artist:la-nina-brava",
+   "tipo": "artist",
+   "id": 6055,
+   "nombre": "la niña brava"
+  },
+  {
+   "clave": "rym-nuevos:artist:alextrip-sands",
+   "tipo": "artist",
+   "id": 6056,
+   "nombre": "AlexTrip Sands"
+  },
+  {
+   "clave": "rym-nuevos:artist:orquesta-la-juniors",
+   "tipo": "artist",
+   "id": 6057,
+   "nombre": "Orquesta La Junior's"
+  },
+  {
+   "clave": "rym-nuevos:artist:yeyo-y-los-simepagan-boys",
+   "tipo": "artist",
+   "id": 6058,
+   "nombre": "Yeyo y Los Simepagan Boys"
+  },
+  {
+   "clave": "rym-nuevos:artist:louis-bpm",
+   "tipo": "artist",
+   "id": 6059,
+   "nombre": "Louis BPM"
+  },
+  {
+   "clave": "rym-nuevos:artist:neyson-d",
+   "tipo": "artist",
+   "id": 6060,
+   "nombre": "Neyson D"
+  },
+  {
+   "clave": "rym-nuevos:artist:selva-volcan",
+   "tipo": "artist",
+   "id": 6061,
+   "nombre": "Selva Volcán"
+  },
+  {
+   "clave": "rym-nuevos:artist:lexxter",
+   "tipo": "artist",
+   "id": 6062,
+   "nombre": "Lexxter"
+  },
+  {
+   "clave": "rym-nuevos:artist:trias-gb-1",
+   "tipo": "artist",
+   "id": 6063,
+   "nombre": "Trias GB"
+  },
+  {
+   "clave": "rym-nuevos:artist:natalia-auli",
+   "tipo": "artist",
+   "id": 6064,
+   "nombre": "Natalia Auli"
+  },
+  {
+   "clave": "rym-nuevos:artist:bulanger",
+   "tipo": "artist",
+   "id": 6065,
+   "nombre": "BULANGER"
+  },
+  {
+   "clave": "rym-nuevos:artist:cordillera-905",
+   "tipo": "artist",
+   "id": 6066,
+   "nombre": "Cordillera 905"
+  },
+  {
+   "clave": "rym-nuevos:artist:romulo-caicedo",
+   "tipo": "artist",
+   "id": 6067,
+   "nombre": "Rómulo Caicedo"
+  },
+  {
+   "clave": "rym-nuevos:artist:yahaira",
+   "tipo": "artist",
+   "id": 6068,
+   "nombre": "Yahaira"
+  },
+  {
+   "clave": "rym-nuevos:artist:fiallo",
+   "tipo": "artist",
+   "id": 6069,
+   "nombre": "Fiallo"
+  },
+  {
+   "clave": "rym-nuevos:artist:uzur",
+   "tipo": "artist",
+   "id": 6070,
+   "nombre": "Uzur"
+  },
+  {
+   "clave": "rym-nuevos:artist:oriol-rangel",
+   "tipo": "artist",
+   "id": 6071,
+   "nombre": "Oriol Rangel"
+  },
+  {
+   "clave": "rym-nuevos:artist:jessi-uribe",
+   "tipo": "artist",
+   "id": 6072,
+   "nombre": "Jessi Uribe"
+  },
+  {
+   "clave": "rym-nuevos:artist:jaison-neutra",
+   "tipo": "artist",
+   "id": 6073,
+   "nombre": "Jaison Neutra"
+  },
+  {
+   "clave": "rym-nuevos:artist:juan-pablo-cediel",
+   "tipo": "artist",
+   "id": 6074,
+   "nombre": "Juan Pablo Cediel"
+  },
+  {
+   "clave": "rym-nuevos:artist:fatiniza",
+   "tipo": "artist",
+   "id": 6075,
+   "nombre": "Fatiniza"
+  },
+  {
+   "clave": "rym-nuevos:artist:sergio-cote-barco",
+   "tipo": "artist",
+   "id": 6076,
+   "nombre": "Sergio Cote Barco"
+  },
+  {
+   "clave": "rym-nuevos:artist:crrdr",
+   "tipo": "artist",
+   "id": 6077,
+   "nombre": "CRRDR"
+  },
+  {
+   "clave": "rym-nuevos:artist:santa-trinidad-rap",
+   "tipo": "artist",
+   "id": 6078,
+   "nombre": "Santa Trinidad Rap"
+  },
+  {
+   "clave": "rym-nuevos:artist:aida-cortes",
+   "tipo": "artist",
+   "id": 6079,
+   "nombre": "Aida Cortes"
+  },
+  {
+   "clave": "rym-nuevos:artist:oscar_acevedo",
+   "tipo": "artist",
+   "id": 6080,
+   "nombre": "Oscar Acevedo"
+  },
+  {
+   "clave": "rym-nuevos:artist:lunale",
+   "tipo": "artist",
+   "id": 6081,
+   "nombre": "Lunalé"
+  },
+  {
+   "clave": "rym-nuevos:artist:yolanda-perez-manzano",
+   "tipo": "artist",
+   "id": 6082,
+   "nombre": "Yolanda Pérez Manzano"
+  },
+  {
+   "clave": "rym-nuevos:artist:lafer",
+   "tipo": "artist",
+   "id": 6083,
+   "nombre": "Lafér"
+  },
+  {
+   "clave": "rym-nuevos:artist:oswin_chin_behilia",
+   "tipo": "artist",
+   "id": 6084,
+   "nombre": "Oswin Chin Behilia"
+  },
+  {
+   "clave": "rym-nuevos:artist:jandino_asporaat",
+   "tipo": "artist",
+   "id": 6085,
+   "nombre": "Jandino Asporaat"
+  },
+  {
+   "clave": "rym-nuevos:artist:ori-4",
+   "tipo": "artist",
+   "id": 6086,
+   "nombre": "ORI"
+  },
+  {
+   "clave": "rym-nuevos:artist:andy-callister",
+   "tipo": "artist",
+   "id": 6087,
+   "nombre": "Andy Callister"
+  },
+  {
+   "clave": "rym-nuevos:artist:urban-menace",
+   "tipo": "artist",
+   "id": 6088,
+   "nombre": "Urban Menace"
+  },
+  {
+   "clave": "rym-nuevos:artist:shirma_rouse",
+   "tipo": "artist",
+   "id": 6089,
+   "nombre": "Shirma Rouse"
+  },
+  {
+   "clave": "rym-nuevos:artist:pappa_bear",
+   "tipo": "artist",
+   "id": 6090,
+   "nombre": "Pappa Bear"
+  },
+  {
+   "clave": "rym-nuevos:artist:tania_kross",
+   "tipo": "artist",
+   "id": 6091,
+   "nombre": "Tania Kross"
+  },
+  {
+   "clave": "rym-nuevos:artist:bboy-puff",
+   "tipo": "artist",
+   "id": 6092,
+   "nombre": "Bboy Puff"
+  },
+  {
+   "clave": "rym-nuevos:artist:gideon-luciana",
+   "tipo": "artist",
+   "id": 6093,
+   "nombre": "Gideon Luciana"
+  },
+  {
+   "clave": "rym-nuevos:artist:lou_prince",
+   "tipo": "artist",
+   "id": 6094,
+   "nombre": "Lou Prince"
+  },
+  {
+   "clave": "rym-nuevos:artist:kinderen-van-de-zesde-klas-van-het-jeanne-darc-college",
+   "tipo": "artist",
+   "id": 6095,
+   "nombre": "Kinderen van de Zesde Klas van het Jeanne d'Arc-College"
+  },
+  {
+   "clave": "rym-nuevos:artist:the-singing-teachers",
+   "tipo": "artist",
+   "id": 6096,
+   "nombre": "The Singing Teachers"
+  },
+  {
+   "clave": "rym-nuevos:artist:julian_b__coco",
+   "tipo": "artist",
+   "id": 6097,
+   "nombre": "Julian B. Coco"
+  },
+  {
+   "clave": "rym-nuevos:artist:wim_statius_muller",
+   "tipo": "artist",
+   "id": 6098,
+   "nombre": "Wim Statius Muller"
+  },
+  {
+   "clave": "rym-nuevos:artist:jacobo-palm",
+   "tipo": "artist",
+   "id": 6099,
+   "nombre": "Jacobo Palm"
+  },
+  {
+   "clave": "rym-nuevos:artist:christiana-bohorquez",
+   "tipo": "artist",
+   "id": 6100,
+   "nombre": "Christiana Bohorquez"
+  },
+  {
+   "clave": "rym-nuevos:artist:ophelia-7",
+   "tipo": "artist",
+   "id": 6101,
+   "nombre": "Ophélia"
+  },
+  {
+   "clave": "rym-nuevos:artist:de-aruba-zusjes",
+   "tipo": "artist",
+   "id": 6102,
+   "nombre": "De Aruba Zusjes"
+  },
+  {
+   "clave": "rym-nuevos:artist:lucas-eli",
+   "tipo": "artist",
+   "id": 6103,
+   "nombre": "Lucas Eli"
+  },
+  {
+   "clave": "rym-nuevos:artist:kris-berry",
+   "tipo": "artist",
+   "id": 6104,
+   "nombre": "Kris Berry"
+  },
+  {
+   "clave": "rym-nuevos:artist:hotel-6",
+   "tipo": "artist",
+   "id": 6105,
+   "nombre": "Hotel"
+  },
+  {
+   "clave": "rym-nuevos:artist:menoles",
+   "tipo": "artist",
+   "id": 6106,
+   "nombre": "Menoles"
+  },
+  {
+   "clave": "rym-nuevos:artist:annia-linares",
+   "tipo": "artist",
+   "id": 6107,
+   "nombre": "Annia Linares"
+  },
+  {
+   "clave": "rym-nuevos:artist:angelo-milli",
+   "tipo": "artist",
+   "id": 6108,
+   "nombre": "Angelo Milli"
+  },
+  {
+   "clave": "rym-nuevos:artist:claudia-prieto",
+   "tipo": "artist",
+   "id": 6109,
+   "nombre": "Claudia Prieto"
+  },
+  {
+   "clave": "rym-nuevos:artist:leo-diaz",
+   "tipo": "artist",
+   "id": 6110,
+   "nombre": "Leo Díaz"
+  },
+  {
+   "clave": "rym-nuevos:artist:conjunto-santa-anita",
+   "tipo": "artist",
+   "id": 6111,
+   "nombre": "Conjunto Santa Anita"
+  },
+  {
+   "clave": "rym-nuevos:artist:molero",
+   "tipo": "artist",
+   "id": 6112,
+   "nombre": "Molero"
+  },
+  {
+   "clave": "rym-nuevos:artist:conjunto-blanco-y-negro",
+   "tipo": "artist",
+   "id": 6113,
+   "nombre": "Conjunto Blanco y Negro"
+  },
+  {
+   "clave": "rym-nuevos:artist:carlos-trewher",
+   "tipo": "artist",
+   "id": 6114,
+   "nombre": "Carlos Trewher"
+  },
+  {
+   "clave": "rym-nuevos:artist:emnl",
+   "tipo": "artist",
+   "id": 6115,
+   "nombre": "emnl"
+  },
+  {
+   "clave": "rym-nuevos:artist:the-slow-glow",
+   "tipo": "artist",
+   "id": 6116,
+   "nombre": "The Slow Glow"
+  },
+  {
+   "clave": "rym-nuevos:artist:annybell",
+   "tipo": "artist",
+   "id": 6117,
+   "nombre": "Annybell"
+  },
+  {
+   "clave": "rym-nuevos:artist:wight-garden",
+   "tipo": "artist",
+   "id": 6118,
+   "nombre": "Wight Garden"
+  },
+  {
+   "clave": "rym-nuevos:artist:maryo-2",
+   "tipo": "artist",
+   "id": 6119,
+   "nombre": "Mary'O"
+  },
+  {
+   "clave": "rym-nuevos:artist:alan-anderson",
+   "tipo": "artist",
+   "id": 6120,
+   "nombre": "Alan Anderson"
+  },
+  {
+   "clave": "rym-nuevos:artist:kyrie-seiko",
+   "tipo": "artist",
+   "id": 6121,
+   "nombre": "Kyrie Seiko"
+  },
+  {
+   "clave": "rym-nuevos:artist:monica-rodriguez",
+   "tipo": "artist",
+   "id": 6122,
+   "nombre": "Mónica Rodríguez"
+  },
+  {
+   "clave": "rym-nuevos:artist:date-x-muerto",
+   "tipo": "artist",
+   "id": 6123,
+   "nombre": "Date X Muerto"
+  },
+  {
+   "clave": "rym-nuevos:artist:karmen-koe",
+   "tipo": "artist",
+   "id": 6124,
+   "nombre": "Karmen Koe"
+  },
+  {
+   "clave": "rym-nuevos:artist:caceres-1",
+   "tipo": "artist",
+   "id": 6125,
+   "nombre": "Caceres"
+  },
+  {
+   "clave": "rym-nuevos:artist:maria_mulata_f1",
+   "tipo": "artist",
+   "id": 6126,
+   "nombre": "María Mulata"
+  },
+  {
+   "clave": "rym-nuevos:artist:juan-farfan",
+   "tipo": "artist",
+   "id": 6127,
+   "nombre": "Juan Farfán"
+  },
+  {
+   "clave": "rym-nuevos:artist:mighty-composer",
+   "tipo": "artist",
+   "id": 6128,
+   "nombre": "Mighty Composer"
+  },
+  {
+   "clave": "rym-nuevos:artist:daisy-voisin",
+   "tipo": "artist",
+   "id": 6129,
+   "nombre": "Daisy Voisin"
+  },
+  {
+   "clave": "rym-nuevos:artist:lord_brynner",
+   "tipo": "artist",
+   "id": 6130,
+   "nombre": "Lord Brynner"
+  },
+  {
+   "clave": "rym-nuevos:artist:mighty_duke",
+   "tipo": "artist",
+   "id": 6131,
+   "nombre": "Mighty Duke"
+  },
+  {
+   "clave": "rym-nuevos:artist:sandra-browne-1",
+   "tipo": "artist",
+   "id": 6132,
+   "nombre": "Sandra Browne"
+  },
+  {
+   "clave": "rym-nuevos:artist:naya-george",
+   "tipo": "artist",
+   "id": 6133,
+   "nombre": "Naya George"
+  },
+  {
+   "clave": "rym-nuevos:artist:fay_ann_lyons",
+   "tipo": "artist",
+   "id": 6134,
+   "nombre": "Fay-Ann Lyons"
+  },
+  {
+   "clave": "rym-nuevos:artist:earl_rodney",
+   "tipo": "artist",
+   "id": 6135,
+   "nombre": "Earl Rodney"
+  },
+  {
+   "clave": "rym-nuevos:artist:superblue",
+   "tipo": "artist",
+   "id": 6136,
+   "nombre": "Superblue"
+  },
+  {
+   "clave": "rym-nuevos:artist:blue_boy",
+   "tipo": "artist",
+   "id": 6137,
+   "nombre": "Blue Boy"
+  },
+  {
+   "clave": "rym-nuevos:artist:iwer-george",
+   "tipo": "artist",
+   "id": 6138,
+   "nombre": "Iwer George"
+  },
+  {
+   "clave": "rym-nuevos:artist:clive-zanda-alexander",
+   "tipo": "artist",
+   "id": 6139,
+   "nombre": "Clive \"Zanda\" Alexander"
+  },
+  {
+   "clave": "rym-nuevos:artist:vilma-ali",
+   "tipo": "artist",
+   "id": 6140,
+   "nombre": "Vilma Ali"
+  },
+  {
+   "clave": "rym-nuevos:artist:les_charles",
+   "tipo": "artist",
+   "id": 6141,
+   "nombre": "Les Charles"
+  },
+  {
+   "clave": "rym-nuevos:artist:drupatee-ramgoonai",
+   "tipo": "artist",
+   "id": 6142,
+   "nombre": "Drupatee Ramgoonai"
+  },
+  {
+   "clave": "rym-nuevos:artist:sundar-popo",
+   "tipo": "artist",
+   "id": 6143,
+   "nombre": "Sundar Popo"
+  },
+  {
+   "clave": "rym-nuevos:artist:ramdeo-seelochan",
+   "tipo": "artist",
+   "id": 6144,
+   "nombre": "Ramdeo Seelochan"
+  },
+  {
+   "clave": "rym-nuevos:artist:aries_vigoth",
+   "tipo": "artist",
+   "id": 6145,
+   "nombre": "Aries Vigoth"
+  },
+  {
+   "clave": "rym-nuevos:artist:nohaycielos",
+   "tipo": "artist",
+   "id": 6146,
+   "nombre": "NOHAYCIELOS"
+  },
+  {
+   "clave": "rym-nuevos:artist:lienzos",
+   "tipo": "artist",
+   "id": 6147,
+   "nombre": "Lienzos"
+  },
+  {
+   "clave": "rym-nuevos:artist:osha-big-humo",
+   "tipo": "artist",
+   "id": 6148,
+   "nombre": "Osha Big Humo"
+  },
+  {
+   "clave": "rym-nuevos:artist:rip_sakura",
+   "tipo": "artist",
+   "id": 6149,
+   "nombre": "rip_sakura"
+  },
+  {
+   "clave": "rym-nuevos:artist:sunn",
+   "tipo": "artist",
+   "id": 6150,
+   "nombre": "sunn"
+  },
+  {
+   "clave": "rym-nuevos:artist:anguera",
+   "tipo": "artist",
+   "id": 6151,
+   "nombre": "Anguera"
+  },
+  {
+   "clave": "rym-nuevos:artist:sofia-shizuko",
+   "tipo": "artist",
+   "id": 6152,
+   "nombre": "Sofía Shizuko"
+  },
+  {
+   "clave": "rym-nuevos:artist:lexestasolo",
+   "tipo": "artist",
+   "id": 6153,
+   "nombre": "lexestasolo"
+  },
+  {
+   "clave": "rym-nuevos:artist:bear_bones__lay_low",
+   "tipo": "artist",
+   "id": 6154,
+   "nombre": "Bear Bones, Lay Low"
+  },
+  {
+   "clave": "rym-nuevos:artist:el-abor",
+   "tipo": "artist",
+   "id": 6155,
+   "nombre": "El $abor"
+  },
+  {
+   "clave": "rym-nuevos:artist:babybleid",
+   "tipo": "artist",
+   "id": 6156,
+   "nombre": "BABYBLEID"
+  },
+  {
+   "clave": "rym-nuevos:artist:flautas_del_chiguire",
+   "tipo": "artist",
+   "id": 6157,
+   "nombre": "Flautas del chigüire"
+  },
+  {
+   "clave": "rym-nuevos:artist:cinema-doom",
+   "tipo": "artist",
+   "id": 6158,
+   "nombre": "Cinema Doom"
+  },
+  {
+   "clave": "rym-nuevos:artist:charlie_carr",
+   "tipo": "artist",
+   "id": 6159,
+   "nombre": "Charlie Carr"
+  },
+  {
+   "clave": "rym-nuevos:artist:alleh",
+   "tipo": "artist",
+   "id": 6160,
+   "nombre": "Alleh"
+  },
+  {
+   "clave": "rym-nuevos:artist:contra-marcha-punk-hxc",
+   "tipo": "artist",
+   "id": 6161,
+   "nombre": "Contra Marcha Punk HxC"
+  },
+  {
+   "clave": "rym-nuevos:artist:joux",
+   "tipo": "artist",
+   "id": 6162,
+   "nombre": "Joux"
+  },
+  {
+   "clave": "rym-nuevos:artist:zarinovak",
+   "tipo": "artist",
+   "id": 6163,
+   "nombre": "Zarinovak"
+  },
+  {
+   "clave": "rym-nuevos:artist:verycherrii",
+   "tipo": "artist",
+   "id": 6164,
+   "nombre": "VeryCherrii"
+  },
+  {
+   "clave": "rym-nuevos:artist:luis-miguel-mussett",
+   "tipo": "artist",
+   "id": 6165,
+   "nombre": "Luis Miguel Mussett"
+  },
+  {
+   "clave": "rym-nuevos:artist:species-infected",
+   "tipo": "artist",
+   "id": 6166,
+   "nombre": "Species Infected"
+  },
+  {
+   "clave": "rym-nuevos:artist:hello-mr-klaus",
+   "tipo": "artist",
+   "id": 6167,
+   "nombre": "Hello Mr. Klaus"
+  },
+  {
+   "clave": "rym-nuevos:artist:young-denky",
+   "tipo": "artist",
+   "id": 6168,
+   "nombre": "Young Denky"
+  },
+  {
+   "clave": "rym-nuevos:artist:0xtkk",
+   "tipo": "artist",
+   "id": 6169,
+   "nombre": "0xtkk"
+  },
+  {
+   "clave": "rym-nuevos:artist:darkohm",
+   "tipo": "artist",
+   "id": 6170,
+   "nombre": "Darkohm"
+  },
+  {
+   "clave": "rym-nuevos:artist:ag-sixteen",
+   "tipo": "artist",
+   "id": 6171,
+   "nombre": "AG SixTeen"
+  },
+  {
+   "clave": "rym-nuevos:artist:king-stephen",
+   "tipo": "artist",
+   "id": 6172,
+   "nombre": "King Stephen"
+  },
+  {
+   "clave": "rym-nuevos:artist:sir-di-alex",
+   "tipo": "artist",
+   "id": 6173,
+   "nombre": "Sir Di Alex"
+  },
+  {
+   "clave": "rym-nuevos:artist:the-madman-alex",
+   "tipo": "artist",
+   "id": 6174,
+   "nombre": "The Madman Alex"
+  },
+  {
+   "clave": "rym-nuevos:artist:subliminal-terry",
+   "tipo": "artist",
+   "id": 6175,
+   "nombre": "Subliminal Terry"
+  },
+  {
+   "clave": "rym-nuevos:artist:maxplay",
+   "tipo": "artist",
+   "id": 6176,
+   "nombre": "Maxplay"
+  },
+  {
+   "clave": "rym-nuevos:artist:vincent_nuit",
+   "tipo": "artist",
+   "id": 6177,
+   "nombre": "Vincent Nuit"
+  },
+  {
+   "clave": "rym-nuevos:artist:nina-romero",
+   "tipo": "artist",
+   "id": 6178,
+   "nombre": "Nina Romero"
+  },
+  {
+   "clave": "rym-nuevos:artist:cherlatte",
+   "tipo": "artist",
+   "id": 6179,
+   "nombre": "Cherlatte"
+  },
+  {
+   "clave": "rym-nuevos:artist:carlitos-calebra",
+   "tipo": "artist",
+   "id": 6180,
+   "nombre": "Carlitos Calebra"
+  },
+  {
+   "clave": "rym-nuevos:artist:agu-1",
+   "tipo": "artist",
+   "id": 6181,
+   "nombre": "AGU!"
+  },
+  {
+   "clave": "rym-nuevos:artist:lolita-de-sola",
+   "tipo": "artist",
+   "id": 6182,
+   "nombre": "Lolita De Sola"
+  },
+  {
+   "clave": "rym-nuevos:artist:tayko",
+   "tipo": "artist",
+   "id": 6183,
+   "nombre": "Tayko"
+  },
+  {
+   "clave": "rym-nuevos:artist:nebula_karbenogg",
+   "tipo": "artist",
+   "id": 6184,
+   "nombre": "Nebula Karbenogg"
+  },
+  {
+   "clave": "rym-nuevos:artist:lyfer",
+   "tipo": "artist",
+   "id": 6185,
+   "nombre": "Lyfer"
+  },
+  {
+   "clave": "rym-nuevos:artist:noixes",
+   "tipo": "artist",
+   "id": 6186,
+   "nombre": "Noixes"
+  },
+  {
+   "clave": "rym-nuevos:artist:rapisarda",
+   "tipo": "artist",
+   "id": 6187,
+   "nombre": "Rapisarda"
+  },
+  {
+   "clave": "rym-nuevos:artist:kelly-abarca",
+   "tipo": "artist",
+   "id": 6188,
+   "nombre": "Kelly Abarca"
+  },
+  {
+   "clave": "rym-nuevos:artist:revenue-1",
+   "tipo": "artist",
+   "id": 6189,
+   "nombre": "revenue"
+  },
+  {
+   "clave": "rym-nuevos:artist:sunset-1986",
+   "tipo": "artist",
+   "id": 6190,
+   "nombre": "Sunset 1986"
+  },
+  {
+   "clave": "rym-nuevos:artist:daylens-and-george",
+   "tipo": "artist",
+   "id": 6191,
+   "nombre": "Daylens & George"
+  },
+  {
+   "clave": "rym-nuevos:artist:blure",
+   "tipo": "artist",
+   "id": 6192,
+   "nombre": "Blure"
+  },
+  {
+   "clave": "rym-nuevos:artist:washe",
+   "tipo": "artist",
+   "id": 6193,
+   "nombre": "Washé"
+  },
+  {
+   "clave": "rym-nuevos:artist:lalter",
+   "tipo": "artist",
+   "id": 6194,
+   "nombre": "Lalter"
+  },
+  {
+   "clave": "rym-nuevos:artist:vulkan-1",
+   "tipo": "artist",
+   "id": 6195,
+   "nombre": "VulKan"
+  },
+  {
+   "clave": "rym-nuevos:artist:helios-martinez-dominguez",
+   "tipo": "artist",
+   "id": 6196,
+   "nombre": "Helios Martinez Dominguez"
+  },
+  {
+   "clave": "rym-nuevos:artist:belfort",
+   "tipo": "artist",
+   "id": 6197,
+   "nombre": "Belfort"
+  },
+  {
+   "clave": "rym-nuevos:artist:ipostal",
+   "tipo": "artist",
+   "id": 6198,
+   "nombre": "Ipostal"
+  },
+  {
+   "clave": "rym-nuevos:artist:joanna_karamazov",
+   "tipo": "artist",
+   "id": 6199,
+   "nombre": "Joanna Karamazov"
+  },
+  {
+   "clave": "rym-nuevos:artist:doktor_rheal",
+   "tipo": "artist",
+   "id": 6200,
+   "nombre": "Doktor Rheal"
+  },
+  {
+   "clave": "rym-nuevos:artist:oscarcito",
+   "tipo": "artist",
+   "id": 6201,
+   "nombre": "Oscarcito"
+  },
+  {
+   "clave": "rym-nuevos:artist:putaliscious",
+   "tipo": "artist",
+   "id": 6202,
+   "nombre": "Putaliscious"
+  },
+  {
+   "clave": "rym-nuevos:artist:yua-bits",
+   "tipo": "artist",
+   "id": 6203,
+   "nombre": "Yua Bits"
+  },
+  {
+   "clave": "rym-nuevos:artist:voyager-12",
+   "tipo": "artist",
+   "id": 6204,
+   "nombre": "Voyager"
+  },
+  {
+   "clave": "rym-nuevos:artist:jorge-andres",
+   "tipo": "artist",
+   "id": 6205,
+   "nombre": "jorge andrés"
+  },
+  {
+   "clave": "rym-nuevos:artist:andy-alent",
+   "tipo": "artist",
+   "id": 6206,
+   "nombre": "Andy Alent"
+  },
+  {
+   "clave": "rym-nuevos:artist:royallive",
+   "tipo": "artist",
+   "id": 6207,
+   "nombre": "RoyalLive"
+  },
+  {
+   "clave": "rym-nuevos:artist:el-mago",
+   "tipo": "artist",
+   "id": 6208,
+   "nombre": "El Mago"
+  },
+  {
+   "clave": "rym-nuevos:artist:memory-twin",
+   "tipo": "artist",
+   "id": 6209,
+   "nombre": "memory twin"
+  },
+  {
+   "clave": "rym-nuevos:artist:pico-mifes",
+   "tipo": "artist",
+   "id": 6210,
+   "nombre": "Pico Mifés"
+  },
+  {
+   "clave": "rym-nuevos:artist:elvis-trofia",
+   "tipo": "artist",
+   "id": 6211,
+   "nombre": "Elvis Trofia"
+  },
+  {
+   "clave": "rym-nuevos:artist:skisia2",
+   "tipo": "artist",
+   "id": 6212,
+   "nombre": "Skisia2"
+  },
+  {
+   "clave": "rym-nuevos:artist:otrebor",
+   "tipo": "artist",
+   "id": 6213,
+   "nombre": "Otrebor"
+  },
+  {
+   "clave": "rym-nuevos:artist:pedro-el-colita",
+   "tipo": "artist",
+   "id": 6214,
+   "nombre": "Pedro el Colita"
+  },
+  {
+   "clave": "rym-nuevos:artist:junior-caldera",
+   "tipo": "artist",
+   "id": 6215,
+   "nombre": "Junior Caldera"
+  },
+  {
+   "clave": "rym-nuevos:artist:dj-rosmel",
+   "tipo": "artist",
+   "id": 6216,
+   "nombre": "DJ Rosmel"
+  },
+  {
+   "clave": "rym-nuevos:artist:byakko",
+   "tipo": "artist",
+   "id": 6217,
+   "nombre": "Byakko"
+  },
+  {
+   "clave": "rym-nuevos:artist:3m5",
+   "tipo": "artist",
+   "id": 6218,
+   "nombre": "3m5"
+  },
+  {
+   "clave": "rym-nuevos:artist:dj-sueldominimo",
+   "tipo": "artist",
+   "id": 6219,
+   "nombre": "DJ SUELDOminimo"
+  },
+  {
+   "clave": "rym-nuevos:artist:las-lineas-de-nazca",
+   "tipo": "artist",
+   "id": 6220,
+   "nombre": "Las Lineas de Nazca"
+  },
+  {
+   "clave": "rym-nuevos:artist:juanrutina",
+   "tipo": "artist",
+   "id": 6221,
+   "nombre": "juanrutina"
+  },
+  {
+   "clave": "rym-nuevos:artist:oreste-2",
+   "tipo": "artist",
+   "id": 6222,
+   "nombre": "Oreste"
+  },
+  {
+   "clave": "rym-nuevos:artist:kid-problema",
+   "tipo": "artist",
+   "id": 6223,
+   "nombre": "Kid Problema"
+  },
+  {
+   "clave": "rym-nuevos:artist:sabita-seinshin",
+   "tipo": "artist",
+   "id": 6224,
+   "nombre": "Sabita Seinshin"
+  },
+  {
+   "clave": "rym-nuevos:artist:thealbertoz",
+   "tipo": "artist",
+   "id": 6225,
+   "nombre": "THEALBERTOZ"
+  },
+  {
+   "clave": "rym-nuevos:artist:vir-martialis",
+   "tipo": "artist",
+   "id": 6226,
+   "nombre": "Vir Martialis"
+  },
+  {
+   "clave": "rym-nuevos:artist:antidolby",
+   "tipo": "artist",
+   "id": 6227,
+   "nombre": "Antidolby"
+  },
+  {
+   "clave": "rym-nuevos:artist:boikido",
+   "tipo": "artist",
+   "id": 6228,
+   "nombre": "Boikido"
+  },
+  {
+   "clave": "rym-nuevos:artist:jemimemu",
+   "tipo": "artist",
+   "id": 6229,
+   "nombre": "Jemimemu"
+  },
+  {
+   "clave": "rym-nuevos:artist:yvng-tavo",
+   "tipo": "artist",
+   "id": 6230,
+   "nombre": "Yvng Tavo"
+  },
+  {
+   "clave": "rym-nuevos:artist:la-serpiente-solar",
+   "tipo": "artist",
+   "id": 6231,
+   "nombre": "La Serpiente Solar"
+  },
+  {
+   "clave": "rym-nuevos:artist:mariafer",
+   "tipo": "artist",
+   "id": 6232,
+   "nombre": "Mariafer"
+  },
+  {
+   "clave": "rym-nuevos:artist:the-back-room",
+   "tipo": "artist",
+   "id": 6233,
+   "nombre": "The Back Room"
+  },
+  {
+   "clave": "rym-nuevos:artist:postales-de-amaranta",
+   "tipo": "artist",
+   "id": 6234,
+   "nombre": "postales de amaranta"
+  },
+  {
+   "clave": "rym-nuevos:artist:okubo",
+   "tipo": "artist",
+   "id": 6235,
+   "nombre": "Okubo"
+  },
+  {
+   "clave": "rym-nuevos:artist:t-izzy",
+   "tipo": "artist",
+   "id": 6236,
+   "nombre": "T Izzy"
+  },
+  {
+   "clave": "rym-nuevos:artist:joss-4",
+   "tipo": "artist",
+   "id": 6237,
+   "nombre": "Joss"
+  },
+  {
+   "clave": "rym-nuevos:artist:kandido",
+   "tipo": "artist",
+   "id": 6238,
+   "nombre": "Kandido"
+  },
+  {
+   "clave": "rym-nuevos:artist:jeon",
+   "tipo": "artist",
+   "id": 6239,
+   "nombre": "Jeon"
+  },
+  {
+   "clave": "rym-nuevos:artist:the_isle_project",
+   "tipo": "artist",
+   "id": 6240,
+   "nombre": "The Isle Project"
+  },
+  {
+   "clave": "rym-nuevos:artist:esmeralda-3",
+   "tipo": "artist",
+   "id": 6241,
+   "nombre": "Esmeralda"
+  },
+  {
+   "clave": "rym-nuevos:artist:amy-sorinio",
+   "tipo": "artist",
+   "id": 6242,
+   "nombre": "Amy Sorinio"
+  },
+  {
+   "clave": "rym-nuevos:artist:camerata-renacentista-de-caracas",
+   "tipo": "artist",
+   "id": 6243,
+   "nombre": "Camerata Renacentista de Caracas"
+  },
+  {
+   "clave": "rym-nuevos:artist:cinema-gore",
+   "tipo": "artist",
+   "id": 6244,
+   "nombre": "Cinema Gore"
+  },
+  {
+   "clave": "rym-nuevos:artist:velesa",
+   "tipo": "artist",
+   "id": 6245,
+   "nombre": "Velesa"
+  },
+  {
+   "clave": "rym-nuevos:artist:l-a-t",
+   "tipo": "artist",
+   "id": 6246,
+   "nombre": "L A T"
+  },
+  {
+   "clave": "rym-nuevos:artist:hxist",
+   "tipo": "artist",
+   "id": 6247,
+   "nombre": "HXIST"
+  },
+  {
+   "clave": "rym-nuevos:artist:three-corners",
+   "tipo": "artist",
+   "id": 6248,
+   "nombre": "Three Corners"
+  },
+  {
+   "clave": "rym-nuevos:artist:sikozis",
+   "tipo": "artist",
+   "id": 6249,
+   "nombre": "Sikozis"
+  },
+  {
+   "clave": "rym-nuevos:artist:j_p_m_r",
+   "tipo": "artist",
+   "id": 6250,
+   "nombre": "J.P.M.R"
+  },
+  {
+   "clave": "rym-nuevos:artist:matter-5",
+   "tipo": "artist",
+   "id": 6251,
+   "nombre": "Matter"
+  },
+  {
+   "clave": "rym-nuevos:artist:high-drizzy",
+   "tipo": "artist",
+   "id": 6252,
+   "nombre": "high drizzy"
+  },
+  {
+   "clave": "rym-nuevos:artist:witchkings-of-angmar",
+   "tipo": "artist",
+   "id": 6253,
+   "nombre": "Witchkings of Angmar"
+  },
+  {
+   "clave": "rym-nuevos:artist:ancestral-warchants",
+   "tipo": "artist",
+   "id": 6254,
+   "nombre": "Ancestral Warchants"
+  },
+  {
+   "clave": "rym-nuevos:artist:jessie24",
+   "tipo": "artist",
+   "id": 6255,
+   "nombre": "Jessie24"
+  },
+  {
+   "clave": "rym-nuevos:artist:villa-6",
+   "tipo": "artist",
+   "id": 6256,
+   "nombre": "Villa"
+  },
+  {
+   "clave": "rym-nuevos:artist:diego-barrios",
+   "tipo": "artist",
+   "id": 6257,
+   "nombre": "Diego Barrios"
+  },
+  {
+   "clave": "rym-nuevos:artist:segunda-mano",
+   "tipo": "artist",
+   "id": 6258,
+   "nombre": "Segunda mano"
+  },
+  {
+   "clave": "rym-nuevos:artist:carrizal",
+   "tipo": "artist",
+   "id": 6259,
+   "nombre": "Carrizal"
+  },
+  {
+   "clave": "rym-nuevos:artist:leddy-manzano",
+   "tipo": "artist",
+   "id": 6260,
+   "nombre": "Leddy Manzano"
+  },
+  {
+   "clave": "rym-nuevos:artist:dibo-d",
+   "tipo": "artist",
+   "id": 6261,
+   "nombre": "Dibo D"
+  },
+  {
+   "clave": "rym-nuevos:artist:scaper",
+   "tipo": "artist",
+   "id": 6262,
+   "nombre": "Scäper"
+  },
+  {
+   "clave": "rym-nuevos:artist:gabio",
+   "tipo": "artist",
+   "id": 6263,
+   "nombre": "Gabio"
+  },
+  {
+   "clave": "rym-nuevos:artist:johnny-sunrise",
+   "tipo": "artist",
+   "id": 6264,
+   "nombre": "Johnny Sunrise"
+  },
+  {
+   "clave": "rym-nuevos:artist:pm-7",
+   "tipo": "artist",
+   "id": 6265,
+   "nombre": "pm"
+  },
+  {
+   "clave": "rym-nuevos:artist:anarcoguarachero",
+   "tipo": "artist",
+   "id": 6266,
+   "nombre": "Anarcoguarachero"
+  },
+  {
+   "clave": "rym-nuevos:artist:la-comunidad-internacional",
+   "tipo": "artist",
+   "id": 6267,
+   "nombre": "La Comunidad Internacional"
+  },
+  {
+   "clave": "rym-nuevos:artist:southkhand",
+   "tipo": "artist",
+   "id": 6268,
+   "nombre": "Söuthkhänd"
+  },
+  {
+   "clave": "rym-nuevos:artist:marcelo-beroy",
+   "tipo": "artist",
+   "id": 6269,
+   "nombre": "Marcelo Beroy"
+  },
+  {
+   "clave": "rym-nuevos:person:jass_carnival",
+   "tipo": "person",
+   "id": 40092,
+   "nombre": "Jass Carnival"
+  },
+  {
+   "clave": "rym-nuevos:person:sigmatus",
+   "tipo": "person",
+   "id": 40093,
+   "nombre": "Sigmatus"
+  },
+  {
+   "clave": "rym-nuevos:person:carlos_giffoni",
+   "tipo": "person",
+   "id": 40094,
+   "nombre": "Carlos Giffoni"
+  },
+  {
+   "clave": "rym-nuevos:person:mc-ardilla",
+   "tipo": "person",
+   "id": 40095,
+   "nombre": "MC Ardilla"
+  },
+  {
+   "clave": "rym-nuevos:person:dann-n---az",
+   "tipo": "person",
+   "id": 40096,
+   "nombre": "Dann Niggaz"
+  },
+  {
+   "clave": "rym-nuevos:person:trainer-1",
+   "tipo": "person",
+   "id": 40097,
+   "nombre": "Trainer"
+  },
+  {
+   "clave": "rym-nuevos:person:luzmira-zerpa",
+   "tipo": "person",
+   "id": 40098,
+   "nombre": "Luzmira Zerpa"
+  },
+  {
+   "clave": "rym-nuevos:person:julian_bert",
+   "tipo": "person",
+   "id": 40099,
+   "nombre": "Julian Ber't"
+  },
+  {
+   "clave": "rym-nuevos:person:hocus-potus",
+   "tipo": "person",
+   "id": 40100,
+   "nombre": "Hocus Potus"
+  },
+  {
+   "clave": "rym-nuevos:person:yexza-lara",
+   "tipo": "person",
+   "id": 40101,
+   "nombre": "Yexza Lara"
+  },
+  {
+   "clave": "rym-nuevos:person:dejota2021",
+   "tipo": "person",
+   "id": 40102,
+   "nombre": "Dejota2021"
+  },
+  {
+   "clave": "rym-nuevos:person:gegga",
+   "tipo": "person",
+   "id": 40103,
+   "nombre": "Gegga"
+  },
+  {
+   "clave": "rym-nuevos:person:ricardo_luque",
+   "tipo": "person",
+   "id": 40104,
+   "nombre": "Ricardo Luque"
+  },
+  {
+   "clave": "rym-nuevos:person:sk0ll",
+   "tipo": "person",
+   "id": 40105,
+   "nombre": "sk0ll"
+  },
+  {
+   "clave": "rym-nuevos:person:chinolamafia",
+   "tipo": "person",
+   "id": 40106,
+   "nombre": "ChinoLaMafia"
+  },
+  {
+   "clave": "rym-nuevos:person:nonstay",
+   "tipo": "person",
+   "id": 40107,
+   "nombre": "Nonstay"
+  },
+  {
+   "clave": "rym-nuevos:person:jess-allanic",
+   "tipo": "person",
+   "id": 40108,
+   "nombre": "Jess Allanic"
+  },
+  {
+   "clave": "rym-nuevos:person:willie-deville",
+   "tipo": "person",
+   "id": 40109,
+   "nombre": "Willie DeVille"
+  },
+  {
+   "clave": "rym-nuevos:person:san-11",
+   "tipo": "person",
+   "id": 40110,
+   "nombre": "SAN"
+  },
+  {
+   "clave": "rym-nuevos:person:hc-dendoh",
+   "tipo": "person",
+   "id": 40111,
+   "nombre": "HC Dendoh"
+  },
+  {
+   "clave": "rym-nuevos:person:jesus-david-milano-melgarejo",
+   "tipo": "person",
+   "id": 40112,
+   "nombre": "Jesus David Milano Melgarejo"
+  },
+  {
+   "clave": "rym-nuevos:person:no_ram",
+   "tipo": "person",
+   "id": 40113,
+   "nombre": "nO_ram"
+  },
+  {
+   "clave": "rym-nuevos:person:emiliano-hernandez-santana",
+   "tipo": "person",
+   "id": 40114,
+   "nombre": "Emiliano Hernandez-Santana"
+  },
+  {
+   "clave": "rym-nuevos:person:-1",
+   "tipo": "person",
+   "id": 40115,
+   "nombre": "니콜 [Nicole]"
+  },
+  {
+   "clave": "rym-nuevos:person:nenadeagua",
+   "tipo": "person",
+   "id": 40116,
+   "nombre": "Nenadeagua"
+  },
+  {
+   "clave": "rym-nuevos:person:chris-baietta",
+   "tipo": "person",
+   "id": 40117,
+   "nombre": "Chris Baietta"
+  },
+  {
+   "clave": "rym-nuevos:person:yva_las_vegass",
+   "tipo": "person",
+   "id": 40118,
+   "nombre": "Yva Las Vegass"
+  },
+  {
+   "clave": "rym-nuevos:person:jaxxtone",
+   "tipo": "person",
+   "id": 40119,
+   "nombre": "Jaxxtone"
+  },
+  {
+   "clave": "rym-nuevos:person:omar-rudberg",
+   "tipo": "person",
+   "id": 40120,
+   "nombre": "Omar Rudberg"
+  },
+  {
+   "clave": "rym-nuevos:person:pat-wictor",
+   "tipo": "person",
+   "id": 40121,
+   "nombre": "Pat Wictor"
+  },
+  {
+   "clave": "rym-nuevos:person:chuchu-bermudas",
+   "tipo": "person",
+   "id": 40122,
+   "nombre": "Chuchú Bermudas"
+  },
+  {
+   "clave": "rym-nuevos:person:cronig",
+   "tipo": "person",
+   "id": 40123,
+   "nombre": "Cronig"
+  },
+  {
+   "clave": "rym-nuevos:person:lino_rocha",
+   "tipo": "person",
+   "id": 40124,
+   "nombre": "Lino Rocha"
+  },
+  {
+   "clave": "rym-nuevos:person:caterinetta_lescano",
+   "tipo": "person",
+   "id": 40125,
+   "nombre": "Caterinetta Lescano"
+  },
+  {
+   "clave": "rym-nuevos:person:knotchej",
+   "tipo": "person",
+   "id": 40126,
+   "nombre": "Knotchej"
+  },
+  {
+   "clave": "rym-nuevos:person:nichess-one",
+   "tipo": "person",
+   "id": 40127,
+   "nombre": "Nichess One"
+  },
+  {
+   "clave": "rym-nuevos:person:kid606",
+   "tipo": "person",
+   "id": 40128,
+   "nombre": "Kid606"
+  },
+  {
+   "clave": "rym-nuevos:person:la-zaga",
+   "tipo": "person",
+   "id": 40129,
+   "nombre": "La Zaga"
+  },
+  {
+   "clave": "rym-nuevos:person:durban-betancourt-laverde",
+   "tipo": "person",
+   "id": 40130,
+   "nombre": "Durban Betancourt-Laverde"
+  },
+  {
+   "clave": "rym-nuevos:person:claire-pereira",
+   "tipo": "person",
+   "id": 40131,
+   "nombre": "Claire Pereira"
+  },
+  {
+   "clave": "rym-nuevos:person:rudy-regalado",
+   "tipo": "person",
+   "id": 40132,
+   "nombre": "Rudy Regalado"
+  },
+  {
+   "clave": "rym-nuevos:person:jorge-isaac",
+   "tipo": "person",
+   "id": 40133,
+   "nombre": "Jorge Isaac"
+  },
+  {
+   "clave": "rym-nuevos:person:sophia-aslanides",
+   "tipo": "person",
+   "id": 40134,
+   "nombre": "Sophia Aslanides"
+  },
+  {
+   "clave": "rym-nuevos:person:bobby-farrell",
+   "tipo": "person",
+   "id": 40135,
+   "nombre": "Bobby Farrell"
+  },
+  {
+   "clave": "rym-nuevos:person:roger-peterson",
+   "tipo": "person",
+   "id": 40136,
+   "nombre": "Roger Peterson"
+  },
+  {
+   "clave": "rym-nuevos:person:christiaan-hulsebos",
+   "tipo": "person",
+   "id": 40137,
+   "nombre": "Christiaan Hulsebos"
+  },
+  {
+   "clave": "rym-nuevos:person:julio_wilson",
+   "tipo": "person",
+   "id": 40138,
+   "nombre": "Julio Wilson"
+  },
+  {
+   "clave": "rym-nuevos:person:dave_benton",
+   "tipo": "person",
+   "id": 40139,
+   "nombre": "Dave Benton"
+  },
+  {
+   "clave": "rym-nuevos:person:euson",
+   "tipo": "person",
+   "id": 40140,
+   "nombre": "Euson"
+  },
+  {
+   "clave": "rym-nuevos:person:pete_philly",
+   "tipo": "person",
+   "id": 40141,
+   "nombre": "Pete Philly"
+  },
+  {
+   "clave": "rym-nuevos:person:leslie_vaughn",
+   "tipo": "person",
+   "id": 40142,
+   "nombre": "Leslie Vaughn"
+  },
+  {
+   "clave": "rym-nuevos:person:reg-isidore",
+   "tipo": "person",
+   "id": 40143,
+   "nombre": "Reg Isidore"
+  },
+  {
+   "clave": "rym-nuevos:person:d_rock",
+   "tipo": "person",
+   "id": 40144,
+   "nombre": "D-Rock"
+  },
+  {
+   "clave": "rym-nuevos:person:spooky_f4",
+   "tipo": "person",
+   "id": 40145,
+   "nombre": "Spooky"
+  },
+  {
+   "clave": "rym-nuevos:person:spartacus_r",
+   "tipo": "person",
+   "id": 40146,
+   "nombre": "Spartacus R"
+  },
+  {
+   "clave": "rym-nuevos:person:marva-hodge",
+   "tipo": "person",
+   "id": 40147,
+   "nombre": "Marva Hodge"
+  },
+  {
+   "clave": "rym-nuevos:person:fellow_f1",
+   "tipo": "person",
+   "id": 40148,
+   "nombre": "Fellow"
+  },
+  {
+   "clave": "rym-nuevos:person:kevin-schuit",
+   "tipo": "person",
+   "id": 40149,
+   "nombre": "Kevin Schuit"
+  },
+  {
+   "clave": "rym-nuevos:person:wally-warning",
+   "tipo": "person",
+   "id": 40150,
+   "nombre": "Wally Warning"
+  },
+  {
+   "clave": "rym-nuevos:person:willy_latino",
+   "tipo": "person",
+   "id": 40151,
+   "nombre": "Willy Latino"
+  },
+  {
+   "clave": "rym-nuevos:person:lucho-nelson",
+   "tipo": "person",
+   "id": 40152,
+   "nombre": "Lucho Nelson"
+  },
+  {
+   "clave": "rym-nuevos:person:rize-1200",
+   "tipo": "person",
+   "id": 40153,
+   "nombre": "Rize 1200"
+  },
+  {
+   "clave": "rym-nuevos:person:yani-martinelli",
+   "tipo": "person",
+   "id": 40154,
+   "nombre": "Yani Martinelli"
+  },
+  {
+   "clave": "rym-nuevos:person:chema-animal-perez",
+   "tipo": "person",
+   "id": 40155,
+   "nombre": "Chema \"Animal\" Pérez"
+  },
+  {
+   "clave": "rym-nuevos:person:mikel-erentxun",
+   "tipo": "person",
+   "id": 40156,
+   "nombre": "Mikel Erentxun"
+  },
+  {
+   "clave": "rym-nuevos:person:jose-rafael-guzman",
+   "tipo": "person",
+   "id": 40157,
+   "nombre": "Jose Rafael Guzmán"
+  },
+  {
+   "clave": "rym-nuevos:person:yma_america",
+   "tipo": "person",
+   "id": 40158,
+   "nombre": "Yma America"
+  },
+  {
+   "clave": "rym-nuevos:person:ricardo-rodriguez-miranda",
+   "tipo": "person",
+   "id": 40159,
+   "nombre": "Ricardo Rodriguez Miranda"
+  },
+  {
+   "clave": "rym-nuevos:person:el-mini",
+   "tipo": "person",
+   "id": 40160,
+   "nombre": "El Mini"
+  },
+  {
+   "clave": "rym-nuevos:person:jacky-schreiber",
+   "tipo": "person",
+   "id": 40161,
+   "nombre": "Jacky Schreiber"
+  },
+  {
+   "clave": "rym-nuevos:person:carlos-pocz",
+   "tipo": "person",
+   "id": 40162,
+   "nombre": "Carlos Pocz"
+  },
+  {
+   "clave": "rym-nuevos:person:slic",
+   "tipo": "person",
+   "id": 40163,
+   "nombre": "Slic"
+  },
+  {
+   "clave": "rym-nuevos:person:rebecca-roger-cruz",
+   "tipo": "person",
+   "id": 40164,
+   "nombre": "Rebecca Roger Cruz"
+  },
+  {
+   "clave": "rym-nuevos:person:luislo",
+   "tipo": "person",
+   "id": 40165,
+   "nombre": "LuisLo"
+  },
+  {
+   "clave": "rym-nuevos:person:lucas-de-paiva",
+   "tipo": "person",
+   "id": 40166,
+   "nombre": "Lucas de Paiva"
+  },
+  {
+   "clave": "rym-nuevos:person:ashdrown",
+   "tipo": "person",
+   "id": 40167,
+   "nombre": "AshDrown"
+  },
+  {
+   "clave": "rym-nuevos:person:jean_carlo_centeno",
+   "tipo": "person",
+   "id": 40168,
+   "nombre": "Jean Carlo Centeno"
+  },
+  {
+   "clave": "rym-nuevos:person:00neaj",
+   "tipo": "person",
+   "id": 40169,
+   "nombre": "00neaj"
+  },
+  {
+   "clave": "rym-nuevos:person:diego-caicedo",
+   "tipo": "person",
+   "id": 40170,
+   "nombre": "Diego Caicedo"
+  },
+  {
+   "clave": "rym-nuevos:person:laura-roman",
+   "tipo": "person",
+   "id": 40171,
+   "nombre": "Laura Román"
+  },
+  {
+   "clave": "rym-nuevos:person:lyda_zamora",
+   "tipo": "person",
+   "id": 40172,
+   "nombre": "Lyda Zamora"
+  },
+  {
+   "clave": "rym-nuevos:person:maria-cristina-plata",
+   "tipo": "person",
+   "id": 40173,
+   "nombre": "María Cristina Plata"
+  },
+  {
+   "clave": "rym-nuevos:person:alfonso-guerrero",
+   "tipo": "person",
+   "id": 40174,
+   "nombre": "Alfonso Guerrero"
+  },
+  {
+   "clave": "rym-nuevos:person:sierra811",
+   "tipo": "person",
+   "id": 40175,
+   "nombre": "Sierra811"
+  },
+  {
+   "clave": "rym-nuevos:person:adriana-lizcano",
+   "tipo": "person",
+   "id": 40176,
+   "nombre": "Adriana Lizcano"
+  },
+  {
+   "clave": "rym-nuevos:person:teto-ocampo",
+   "tipo": "person",
+   "id": 40177,
+   "nombre": "Teto Ocampo"
+  },
+  {
+   "clave": "rym-nuevos:person:martin_dowser",
+   "tipo": "person",
+   "id": 40178,
+   "nombre": "Martin Dowser"
+  },
+  {
+   "clave": "rym-nuevos:person:guillermo-marchena",
+   "tipo": "person",
+   "id": 40179,
+   "nombre": "Guillermo Marchena"
+  },
+  {
+   "clave": "rym-nuevos:person:theu-boermans",
+   "tipo": "person",
+   "id": 40180,
+   "nombre": "Theu Boermans"
+  },
+  {
+   "clave": "rym-nuevos:person:peter-prommel",
+   "tipo": "person",
+   "id": 40181,
+   "nombre": "Peter Prommel"
+  },
+  {
+   "clave": "rym-nuevos:person:mc-pester",
+   "tipo": "person",
+   "id": 40182,
+   "nombre": "MC Pester"
+  },
+  {
+   "clave": "rym-nuevos:person:martin_verdonk",
+   "tipo": "person",
+   "id": 40183,
+   "nombre": "Martin Verdonk"
+  },
+  {
+   "clave": "rym-nuevos:person:franky-douglas",
+   "tipo": "person",
+   "id": 40184,
+   "nombre": "Franky Douglas"
+  },
+  {
+   "clave": "rym-nuevos:person:julien-coco",
+   "tipo": "person",
+   "id": 40185,
+   "nombre": "Julien Coco"
+  },
+  {
+   "clave": "rym-nuevos:person:tony-sherman",
+   "tipo": "person",
+   "id": 40186,
+   "nombre": "Tony Sherman"
+  },
+  {
+   "clave": "rym-nuevos:person:mildred_douglas",
+   "tipo": "person",
+   "id": 40187,
+   "nombre": "Mildred Douglas"
+  },
+  {
+   "clave": "rym-nuevos:person:dickery-dock",
+   "tipo": "person",
+   "id": 40188,
+   "nombre": "Dickery Dock"
+  },
+  {
+   "clave": "rym-nuevos:person:sam-vloemans",
+   "tipo": "person",
+   "id": 40189,
+   "nombre": "Sam Vloemans"
+  },
+  {
+   "clave": "rym-nuevos:person:jasmine-sendar",
+   "tipo": "person",
+   "id": 40190,
+   "nombre": "Jasmine Sendar"
+  },
+  {
+   "clave": "rym-nuevos:person:luti-samson",
+   "tipo": "person",
+   "id": 40191,
+   "nombre": "Luti Samson"
+  },
+  {
+   "clave": "rym-nuevos:person:benjamin-fox-casey",
+   "tipo": "person",
+   "id": 40192,
+   "nombre": "Benjamin Fox Casey"
+  },
+  {
+   "clave": "rym-nuevos:person:manao",
+   "tipo": "person",
+   "id": 40193,
+   "nombre": "Manao"
+  },
+  {
+   "clave": "rym-nuevos:person:yojaira-saudita",
+   "tipo": "person",
+   "id": 40194,
+   "nombre": "Yojaira Saudita"
+  },
+  {
+   "clave": "rym-nuevos:person:maria-concepcion-gutierrez-lobo",
+   "tipo": "person",
+   "id": 40195,
+   "nombre": "María Concepción Gutiérrez Lobo"
+  },
+  {
+   "clave": "rym-nuevos:person:ernesto-montiel-1",
+   "tipo": "person",
+   "id": 40196,
+   "nombre": "Ernesto Montiel"
+  },
+  {
+   "clave": "rym-nuevos:person:blaxx-1",
+   "tipo": "person",
+   "id": 40197,
+   "nombre": "Blaxx"
+  },
+  {
+   "clave": "rym-nuevos:person:the-tiger",
+   "tipo": "person",
+   "id": 40198,
+   "nombre": "The Tiger"
+  },
+  {
+   "clave": "rym-nuevos:person:lord-shorty",
+   "tipo": "person",
+   "id": 40199,
+   "nombre": "Lord Shorty"
+  }
+ ],
+ "review": [
+  {
+   "clave": "rym-nuevos:artist:leo-diaz-1",
+   "existingId": 6110,
+   "detalle": "ya existe (ER)"
+  }
+ ],
+ "errors": []
+}

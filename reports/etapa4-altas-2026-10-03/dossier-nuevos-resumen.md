@@ -89,3 +89,15 @@ terminar la extracción — no bloquea) y después el motor de altas en seco.
   124 sin tipo · 9 homónimos restantes) **+ 18 filas finas parqueadas** (9 de discos + 9 identidades
   del careo — ver `paquetes-revision.md`).
 - Recuento de hoy: 643 cubiertos (`ya_*`) · 337 resueltos por el paquete · 611 pendientes = 1.591.
+
+## Cierre total (2026-10-04, madrugada) — 0 pendientes
+
+- Las **18 filas parqueadas se resolvieron** (9 discos: run 11818; 9 identidades: sin alias,
+  registradas) y los **611 restantes se aplicaron como lote 3** (601 fichas creadas, runs
+  11824–11834; 369 solo_artist · 124 tipos · 108 personas · 1 banda). Detalle:
+  `resolucion-final-etapa4.md`.
+- Regenerado hoy: **ya_persona 378 · ya_artista 756 · ya_ambos 96 · ya_persona_alias 11 ·
+  ya_artista_alias 4 · descartado 269 · sin_accion_confirmado 68 · alias_confirmado 9 =
+  1.591/1.591 · 0 pendientes**. Paquetes de revisión regenerados: 0 filas cada uno.
+- Único resto de la etapa 4: discos de «nuevos» (fase 2 de captura — 996/~7.250 a 01:39,
+  ETA ~1 día; lote 2 al cerrar, excluyendo filas «Appears On»).

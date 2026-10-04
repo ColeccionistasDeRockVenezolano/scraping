@@ -4,11 +4,11 @@ Construidos el 2026-10-04 con `scripts/etapa4-altas-2026-10-03/paquetes-revision
 re-ejecutable). Refinados (v2): cada fila lleva **`propuesta`** (veredicto con nota propia) además del
 `sugerido` automático; la columna `decision` queda libre para que corrijas lo que quieras.
 
-**Estado: CONFIRMADO y APLICADO (2026-10-04, «OK todo» de Brian).** Se aplicó la columna `propuesta`
-de las 385 filas: 40 discos (11 «misma» / 29 «otra»; runs 11766 + 11778) · 9 alias (runs 11786–11794)
-· 269 descartes y 59 «sin acción» anotados en `decisiones-2026-10-04.jsonl` (overlay del dossier).
-Las **18 filas en `revisar` quedaron parqueadas** (9 de discos + 9 identidades) — sin bloquear.
-(Detalle: `lote1-aplicado-resumen.md` y `hallazgos-lote1-appears-on.md`.)
+**Estado: TODO RESUELTO (2026-10-04 madrugada).** Confirmado y aplicado: 40 discos del careo
+(runs 11766+11778) + 9 parqueadas (run 11818) · 9 alias (runs 11786–11794) · 269 descartes y
+68 «sin acción» anotados (overlay) · los 611 restantes resueltos como lote 3 (601 fichas,
+runs 11824–11834). **Los tres paquetes regeneran vacíos (0 filas).** Detalle:
+`resolucion-final-etapa4.md`, `lote1-aplicado-resumen.md`, `hallazgos-lote1-appears-on.md`.
 
 ## Paquete 1 · `careo-discos.tsv|.jsonl` — los 49 discos en cola (album_match)
 

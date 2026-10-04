@@ -1,48 +1,38 @@
 {
- "generado": "2026-10-03 23:25:39",
+ "generado": "2026-10-04 02:01:41",
  "total": 1591,
  "por_accion": {
-  "ya_persona": 270,
-  "revisar_persona_solista": 369,
+  "ya_persona": 378,
+  "ya_artista": 756,
   "descartado": 269,
-  "revisar_tipo": 124,
-  "ya_artista": 264,
   "ya_ambos": 96,
-  "revisar_persona": 108,
   "ya_persona_alias": 11,
-  "revisar_homonimo": 9,
+  "sin_accion_confirmado": 68,
   "alias_confirmado": 9,
-  "sin_accion_confirmado": 59,
-  "alta_persona_miembro": 1,
-  "ya_artista_alias": 2
+  "ya_artista_alias": 4
  },
  "clase_x_accion": {
   "D_sin_senal": {
    "ya_ambos": 65,
-   "ya_artista": 42,
+   "ya_artista": 535,
    "ya_artista_alias": 1,
    "ya_persona": 121,
    "ya_persona_alias": 4,
-   "revisar_homonimo": 6,
-   "revisar_persona_solista": 369,
-   "revisar_tipo": 124,
    "alias_confirmado": 6,
-   "sin_accion_confirmado": 38,
+   "sin_accion_confirmado": 44,
    "descartado": 269
   },
   "D": {
    "ya_ambos": 18,
    "ya_artista": 1,
-   "ya_persona": 109,
+   "ya_persona": 217,
    "ya_persona_alias": 2,
-   "revisar_homonimo": 2,
-   "revisar_persona": 108,
-   "sin_accion_confirmado": 10
+   "sin_accion_confirmado": 12
   },
   "E_banda_con_instrumentos": {
    "ya_ambos": 11,
-   "ya_artista": 212,
-   "ya_artista_alias": 1,
+   "ya_artista": 210,
+   "ya_artista_alias": 3,
    "ya_persona": 1
   },
   "A_ya_en_catalogo": {
@@ -50,16 +40,15 @@
    "ya_artista": 9
   },
   "C_miembro_de_banda_catalogo": {
+   "ya_artista": 1,
    "ya_persona": 37,
    "ya_persona_alias": 5,
-   "alta_persona_miembro": 1,
    "sin_accion_confirmado": 1
   },
   "A_probable": {
    "ya_persona": 1,
-   "revisar_homonimo": 1,
    "alias_confirmado": 3,
-   "sin_accion_confirmado": 1
+   "sin_accion_confirmado": 2
   },
   "B_near_miss_revisar": {
    "ya_persona": 1,
@@ -70,25 +59,25 @@
  "frescura_catalogo": {
   "artist": {
    "2026-09-11": 4,
-   "2026-09-13": 18,
+   "2026-09-13": 20,
    "2026-09-24": 1,
    "2026-10-01": 5,
    "2026-10-02": 80,
    "2026-10-03": 55,
-   "2026-10-04": 217
+   "2026-10-04": 709
   },
   "person": {
-   "2026-09-13": 40,
+   "2026-09-13": 39,
    "2026-09-14": 2,
    "2026-09-22": 2,
-   "2026-10-01": 23,
-   "2026-10-02": 302,
+   "2026-10-01": 19,
+   "2026-10-02": 307,
    "2026-10-03": 29,
-   "2026-10-04": 49
+   "2026-10-04": 157
   }
  },
  "matches_creados_desde_2026-10-01": {
-  "artist": 357,
-  "person": 403
+  "artist": 849,
+  "person": 512
  }
 }

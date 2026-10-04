@@ -141,6 +141,11 @@ def tsv(v):
 
 
 def escribir(nombre, filas):
+    if not filas:
+        print(f"{nombre}: 0 filas (todo resuelto)")
+        for ext in ("tsv", "jsonl"):
+            open(f"{OUT}/{nombre}.{ext}", "w", encoding="utf-8").close()
+        return
     with open(f"{OUT}/{nombre}.tsv", "w", encoding="utf-8") as fh:
         fh.write("\t".join(filas[0].keys()) + "\n")
         for f in filas:
@@ -160,6 +165,9 @@ def paquete_discos():
       FROM ingest.review_queue rq
       WHERE rq.claim_a_id IN (SELECT id FROM ingest.claims WHERE run_id IN ({RUNS}))
         AND rq.kind='album_match' AND rq.status='open' ORDER BY rq.id""")
+    if not rev:
+        escribir("careo-discos", [])
+        return
     dids = [r["did"] for r in rev if r["did"] and r["did"].isdigit()]
     dec = {r["id"]: r for r in sqlj(f"""
       SELECT id::text AS id, input_name_original,
@@ -234,6 +242,9 @@ def paquete_discos():
 def paquete_homonimos():
     rows = [json.loads(l) for l in open(f"{OUT}/dossier-nuevos.jsonl", encoding="utf-8")]
     hom = [r for r in rows if r["accion_sugerida"] == "revisar_homonimo"]
+    if not hom:
+        escribir("careo-homonimos", [])
+        return
     # solapamiento de discografía (solo lado artista)
     art_ids = sorted({str(r["cat_artist_id"]) for r in hom if r.get("cat_artist_id")})
     als = {}
