@@ -347,7 +347,8 @@ function resolveOne(names: Names, raw: string, why: string[]): Part | undefined 
   if (stripLabel(name) !== undefined || /^(?:bonus|instrumental|reprise|radio|extended|alt\.?|vocal|live|en vivo|demo|intro|outro)\b/iu.test(name)) {
     why.push(`«${raw}»: rótulo sin nombre`); return undefined;
   }
-  if (orgish(name)) {
+  // «J. F. Coral» no es un coro: con iniciales que encajan en una persona, sigue el camino de persona.
+  if (orgish(name) && !(needsSafeLink(name) && names.loose(name).length > 0)) {
     const target = convertTarget(name);
     if (target === undefined) { why.push(`«${raw}»: fragmento`); return undefined; }
     return { target };

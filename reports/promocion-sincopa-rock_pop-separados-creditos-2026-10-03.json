@@ -1,0 +1,35 @@
+{
+  "section": "rock_pop",
+  "dryRun": false,
+  "note": "Sincopa rock_pop: créditos de las fichas separadas de discos mezclados (adapter 1.3.3, Brian 2026-10-03)",
+  "kinds": {
+    "album_credit": {
+      "identities": 254,
+      "claims": 1270,
+      "verdicts": {
+        "puente": 254
+      },
+      "applied": 81,
+      "unchanged": 1134,
+      "stillCandidate": 55,
+      "dismissed": 0,
+      "failed": 0
+    },
+    "track_credit": {
+      "identities": 231,
+      "claims": 1392,
+      "verdicts": {
+        "puente": 231
+      },
+      "applied": 138,
+      "unchanged": 834,
+      "stillCandidate": 420,
+      "dismissed": 0,
+      "failed": 0
+    }
+  },
+  "holds": [],
+  "duplicateFlags": [],
+  "errors": [],
+  "runId": 11763
+}
