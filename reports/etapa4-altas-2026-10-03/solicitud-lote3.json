@@ -1,0 +1,3509 @@
+{
+ "nota": "Lote 3 etapa 4 «Altas» — resolución de los buckets de revisión del dossier (soloistas, tipos, personas-miembro). Veredictos asistidos 2026-10-04; crear con OK de Brian.",
+ "casos": [
+  {
+   "tipo": "artist",
+   "artist_type": "band",
+   "rym_href": "/artist/gustavo-casas-y-los-que-buscan",
+   "motivo": "lote 3: banda con nombre tipo persona (excluida por guarda en el lote 1)"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/nelson-morales",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/levy-rossell",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/lilatari",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/luidig-ochoa",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/manuel-guzman",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/dejavu",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/utsush",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (4 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/stangah",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/perucho-conde",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (3 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/xix-3",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (9 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/feral-nox-1",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (4 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/replinter",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (4 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/proxima-estacion",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/reymar-perdomo",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/the-cure-for-anxiety",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/dorancel-daga",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (4 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/yung-iverson",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (38 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/vicentico-rodriguez",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/satosgang",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (11 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/nieves",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/evaluna-montaner",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (9 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/la-torre-de-babiel",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/treizy",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/letra-emece",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/yadam",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (5 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/celestial-theory",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 2 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/gilberto-perez",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (21 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/suei",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (40 lanzamientos, 3 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/el-cafe-atomico",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (23 lanzamientos, 6 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/soos-days",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/tomas-montilla",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/emily-galaviz",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (6 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/pepe-camarillo",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/johnny-herrera",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (3 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/andrea-maramara",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/orquesta-pasion-juvenil",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/_dlm",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (15 lanzamientos, 2 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/yorghaki",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (14 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/emmanuel-abraham",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (7 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/king-pride",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (5 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/romina-palmisano",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (6 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/alaya-1",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/adso-alejandro",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (22 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/jeeiph",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (21 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/moises_velasquez",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/empty-stomach",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (6 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/rosa-esber",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (4 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/capitan-mostacho",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (6 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/musiana",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/chivin",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 2 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/carmen-alicia-lara",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/yoangel-torrealba",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (3 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/el-carrao-de-palmarito",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (6 lanzamientos, 2 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/tripulangel",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/moncho-y-su-banda",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/michi-sanz",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (4 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/friman",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (9 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/reggi-el-autentico",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/la-banda-show",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/mangus",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (5 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/miguelito-diaz",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/guillermo-william-marquez-corao",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/alicia-machado",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/greygerm",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/samuel-acosta",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (9 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/waru7k",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (7 lanzamientos, 2 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/kazugi",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/v-rod",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (5 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/sergio-rosales",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/lery-cattleya",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (3 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/vict-molina",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/lara-project",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (18 lanzamientos, 2 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/samuel-sahlieh",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/grupo-cuyagua",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/tar-majenye",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (4 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/panchito-prin",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/ferraz",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (10 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/badborn",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (7 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/mari-la-carajita",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (7 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/chico-mono-y-sus-monitos",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/mikaela-monet",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/85-dba",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (8 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/seji-morto",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (4 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/briella",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (4 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/damaso-delgado",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/adrian-guacaran",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/cornelio-salazar",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/giovanni-guzzo",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (4 lanzamientos, 2 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/lu-marie",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (3 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/erika-needs",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/aurora-dream",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/dell-soda",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (34 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/atipico",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/luis-edgardo-ramirez",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (7 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/meruva",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (6 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/aun-no-hija",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/astrid-celeste",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/chaparro",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (3 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/tony-monserrat",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/robert-tiamo",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (15 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/niko-la-fabrica",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (5 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/alboa",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (13 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/pussidiq",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (8 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/rui-gabriel",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (4 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/flayme",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (8 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/mr-pauer",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (4 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/rafael-payare",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (4 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/salas-1",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (3 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/fabro",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/cesar-castro",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (13 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/gretchen-g",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (5 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/jorge-ostos",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (11 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/manu-heredia",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/luca_pisaroni",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (17 lanzamientos, 6 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/manira",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/vera-delacruz",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (5 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/scarlett-linares",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/francelin-casanas",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/luis_conny",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/maria-teresa-acosta",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/grecia-limperani",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/coringta",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (4 lanzamientos, 2 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/venezuela-strings-recording-ensemble",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/contemplando-el-cielo",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 2 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/bill_quick",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (4 lanzamientos, 2 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/dj_yirvin",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (11 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/genaro_salinas",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (8 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/oh_dulceari",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (15 lanzamientos, 4 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/yunglian-mediocre-broke-boi",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (31 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/eldese",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/realengos",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/hector-murga",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/aldo_dona",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (5 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/noer-pierkhan",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/kiko-mendive",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (10 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/alberto-aguila",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/herminia-martinez",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/migue-mori",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/bob-bissonnette",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/nk-profeta",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (7 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/sebastian-bauza-bueno",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (24 lanzamientos, 6 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/octubrxlibrv",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (7 lanzamientos, 3 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/gona",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (8 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/efrain-amaya",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/samy-hawk",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/nakary",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/somalunar",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/motiff",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/bolivar-caribano",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/lan-liu",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (18 lanzamientos, 3 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/ugoluna",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/from-fiction",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/rms_f1",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/christian-vasquez",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/maye",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (19 lanzamientos, 3 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/as1",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (9 lanzamientos, 2 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/mestiza",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/verkhead",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/lele-pons",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (14 lanzamientos, 2 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/lecon",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (3 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/just-art-dead",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (3 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/vince-vinyl",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/nicolas-maduro",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/markem",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (9 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/saunter-1",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/vodini",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (8 lanzamientos, 2 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/artico",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/jambene",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (19 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/khali-issis",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (9 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/zen-p",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (8 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/undying-truth",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/patricia-zavala",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (3 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/alejandro-planchart",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/nombres-ocultos",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (3 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/garee",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (3 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/marti-ann",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/enrique-bencomo",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/laura-chimaras",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/hibai-rekondo",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/rafael-lanzetta",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/aseari",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/andres-levell",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (10 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/nancy-fabiola-herrera",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (3 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/safety-trance",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (35 lanzamientos, 3 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/los-pures",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/victor-porfidio",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (9 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/johnthvhk",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/banny-kosta",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/carlos-montilla",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/saul-guanipa",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/soraya_benitez",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/hein-van-der-gaag",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (5 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/reynaldo_hahn",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (3 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/ag-wild",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/giorgio-maulini",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (8 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/zamora-2",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/eddie_le_baron",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (4 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/nani-2",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (11 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/ahvistetabien",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (3 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/harry-zimmerman",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (5 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/simone-angel",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (4 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/zuri-nativa",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (5 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/susan-cagle",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/dmaduro",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/lesley-vos",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (3 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/ishanna",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/juan-serrano",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (9 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/la-costa",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (7 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/dhaddy-brokke",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (4 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/blue_haze_f1",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/paul-connor",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (4 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/the-rabbit-hole-project",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 2 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/alacran_f2",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/smiley_f2",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/rufo_wever",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/roykey-wydh",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (4 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/padu-del-caribe",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (5 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/susan-justice",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/greg-hobson",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/lloyd-and-the-joys",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/marlon-titre",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (3 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/jose-aquilino-sanchez",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/garcia-gomez",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (4 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/carze",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (11 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/majandra-delfino",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/el-potro-alvarez",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (3 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/jorgelia",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/tito_coral",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (5 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/edicson_ruiz",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (6 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/jan_wagner",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (8 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/hobart_earle",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/sergio-tiempo",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (9 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/dru-flecha",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (3 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/desidere",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/corina-smith",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (21 lanzamientos, 4 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/kobi-cantillo",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (5 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/andremustdie",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/daniela-barranco",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (4 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/dj-loopy",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (10 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/weed420",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (26 lanzamientos, 6 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/marianella",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/elizabeth-ayoub",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/dn-tato",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/joaquin_mendoza_sebastian",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (9 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/sixthdagger",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (17 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/liliana-rodriguez-morillo",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/alberto-conde",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/jorge_sanchez_chiong",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/arturo-annecchino",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (3 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/cosmo-de-la-fuente",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/ooyah",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/osos-del-sol",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/aran-one",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (3 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/mario-puglia",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/el-forever",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/alan-wittels",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/daniella-barbarito",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (6 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/mj-nebreda",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (26 lanzamientos, 3 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/luis-carreno",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/lil-scars-2",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/kai-tak",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/nico-manzano",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/lasmanz",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/dave-ruthwell",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/peche",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/jhoanypz-jhoanypz",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/orquesta-discotheque",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/domingo-hindoyan",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (7 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/mida",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/freddy-sheinfeld",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/nirse-gonzalez",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/manana-el-espacio",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 2 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/elodie-bouny",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/nicole_aiff",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (3 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/sarc-the-east-face",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (4 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/tona-granado",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/chantals",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/la-nina-brava",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/alextrip-sands",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (3 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/orquesta-la-juniors",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/yeyo-y-los-simepagan-boys",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/louis-bpm",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (3 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/neyson-d",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/selva-volcan",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/lexxter",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 2 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/trias-gb-1",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/natalia-auli",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/bulanger",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (4 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/cordillera-905",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (12 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/romulo-caicedo",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (3 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/yahaira",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (3 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/fiallo",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (3 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/uzur",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/oriol-rangel",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/jessi-uribe",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (4 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/jaison-neutra",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/juan-pablo-cediel",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/fatiniza",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/sergio-cote-barco",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (3 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/crrdr",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (60 lanzamientos, 5 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/santa-trinidad-rap",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/aida-cortes",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (12 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/oscar_acevedo",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/lunale",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (23 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/yolanda-perez-manzano",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/lafer",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/oswin_chin_behilia",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (4 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/jandino_asporaat",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (4 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/ori-4",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/andy-callister",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/urban-menace",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (5 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/shirma_rouse",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/pappa_bear",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (5 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/tania_kross",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/bboy-puff",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 2 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/gideon-luciana",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/lou_prince",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (8 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/kinderen-van-de-zesde-klas-van-het-jeanne-darc-college",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/the-singing-teachers",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/julian_b__coco",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/wim_statius_muller",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/jacobo-palm",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/christiana-bohorquez",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/ophelia-7",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (3 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/de-aruba-zusjes",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/lucas-eli",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (3 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/kris-berry",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (13 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/hotel-6",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (4 lanzamientos, 2 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/menoles",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (10 lanzamientos, 2 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/annia-linares",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (4 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/angelo-milli",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (3 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/claudia-prieto",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/leo-diaz",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/conjunto-santa-anita",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/molero",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 3 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/conjunto-blanco-y-negro",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/carlos-trewher",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/emnl",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (4 lanzamientos, 2 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/the-slow-glow",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/leo-diaz-1",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/annybell",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/wight-garden",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (3 lanzamientos, 2 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/maryo-2",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/alan-anderson",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/kyrie-seiko",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (10 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/monica-rodriguez",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/date-x-muerto",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (6 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/karmen-koe",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/caceres-1",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/maria_mulata_f1",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (5 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/juan-farfan",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/mighty-composer",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/daisy-voisin",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (3 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/lord_brynner",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (16 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/mighty_duke",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (11 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/sandra-browne-1",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/naya-george",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/fay_ann_lyons",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (12 lanzamientos, 2 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/earl_rodney",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/superblue",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (8 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/blue_boy",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (5 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/iwer-george",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (15 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/clive-zanda-alexander",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (4 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/vilma-ali",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/les_charles",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (2 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/drupatee-ramgoonai",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (10 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/sundar-popo",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (15 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/ramdeo-seelochan",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 1 géneros) → solo_artist"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/aries_vigoth",
+   "motivo": "lote 3: persona con nacimiento y discografía propia (1 lanzamientos, 0 géneros) → solo_artist"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/jass_carnival",
+   "motivo": "lote 3: persona miembro de banda (I; d;  )"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/sigmatus",
+   "motivo": "lote 3: persona miembro de banda (H; a; i)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/carlos_giffoni",
+   "motivo": "lote 3: persona miembro de banda (D; e; a)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/mc-ardilla",
+   "motivo": "lote 3: persona miembro de banda (Z; a; c)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/dann-n---az",
+   "motivo": "lote 3: persona miembro de banda (B; a; s)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/trainer-1",
+   "motivo": "lote 3: persona miembro de banda (E; l; e)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/luzmira-zerpa",
+   "motivo": "lote 3: persona miembro de banda (C; a; s)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/julian_bert",
+   "motivo": "lote 3: persona miembro de banda (T; h; e)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/hocus-potus",
+   "motivo": "lote 3: persona miembro de banda (r; a; s)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/yexza-lara",
+   "motivo": "lote 3: persona miembro de banda (B; l; a)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/dejota2021",
+   "motivo": "lote 3: persona miembro de banda (T; h; e)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/gegga",
+   "motivo": "lote 3: persona miembro de banda (E; l;  )"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/ricardo_luque",
+   "motivo": "lote 3: persona miembro de banda (C; u; b)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/sk0ll",
+   "motivo": "lote 3: persona miembro de banda (M; i; S)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/chinolamafia",
+   "motivo": "lote 3: persona miembro de banda (O; S; G)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/nonstay",
+   "motivo": "lote 3: persona miembro de banda (E; l;  )"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/jess-allanic",
+   "motivo": "lote 3: persona miembro de banda (C; a; l)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/willie-deville",
+   "motivo": "lote 3: persona miembro de banda (1; 2; ')"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/san-11",
+   "motivo": "lote 3: persona miembro de banda (E; l;  )"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/hc-dendoh",
+   "motivo": "lote 3: persona miembro de banda (M; i;  )"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/jesus-david-milano-melgarejo",
+   "motivo": "lote 3: persona miembro de banda (V; e; n)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/no_ram",
+   "motivo": "lote 3: persona miembro de banda (J; a; b)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/emiliano-hernandez-santana",
+   "motivo": "lote 3: persona miembro de banda (O; i; l)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/니콜-1",
+   "motivo": "lote 3: persona miembro de banda (A; T; T)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/nenadeagua",
+   "motivo": "lote 3: persona miembro de banda (V; e; r)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/chris-baietta",
+   "motivo": "lote 3: persona miembro de banda (E; q; u)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/yva_las_vegass",
+   "motivo": "lote 3: persona miembro de banda (S; w; e)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/jaxxtone",
+   "motivo": "lote 3: persona miembro de banda (D; u; i)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/omar-rudberg",
+   "motivo": "lote 3: persona miembro de banda (T; h; e)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/pat-wictor",
+   "motivo": "lote 3: persona miembro de banda (B; r; o)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/chuchu-bermudas",
+   "motivo": "lote 3: persona miembro de banda (L; i; s)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/cronig",
+   "motivo": "lote 3: persona miembro de banda (A; r; m)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/lino_rocha",
+   "motivo": "lote 3: persona miembro de banda (S; a; l)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/caterinetta_lescano",
+   "motivo": "lote 3: persona miembro de banda (T; r; i)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/knotchej",
+   "motivo": "lote 3: persona miembro de banda (L; C; 6)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/nichess-one",
+   "motivo": "lote 3: persona miembro de banda (F; i; n)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/kid606",
+   "motivo": "lote 3: persona miembro de banda (A; r; i)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/la-zaga",
+   "motivo": "lote 3: persona miembro de banda (B; a; s)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/durban-betancourt-laverde",
+   "motivo": "lote 3: persona miembro de banda (T; h; e)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/claire-pereira",
+   "motivo": "lote 3: persona miembro de banda (C; i; n)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/rudy-regalado",
+   "motivo": "lote 3: persona miembro de banda (C; a; r)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/jorge-isaac",
+   "motivo": "lote 3: persona miembro de banda (W; a; t)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/sophia-aslanides",
+   "motivo": "lote 3: persona miembro de banda (B; l; o)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/bobby-farrell",
+   "motivo": "lote 3: persona miembro de banda (B; o; n)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/roger-peterson",
+   "motivo": "lote 3: persona miembro de banda (I; n; t)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/christiaan-hulsebos",
+   "motivo": "lote 3: persona miembro de banda (D; e;  )"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/julio_wilson",
+   "motivo": "lote 3: persona miembro de banda (L; u; c)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/dave_benton",
+   "motivo": "lote 3: persona miembro de banda (D; a; v)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/euson",
+   "motivo": "lote 3: persona miembro de banda (K; r; e)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/pete_philly",
+   "motivo": "lote 3: persona miembro de banda (P; e; t)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/leslie_vaughn",
+   "motivo": "lote 3: persona miembro de banda (R; e; a)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/reg-isidore",
+   "motivo": "lote 3: persona miembro de banda (J; u; l)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/d_rock",
+   "motivo": "lote 3: persona miembro de banda (2;  ; B)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/spooky_f4",
+   "motivo": "lote 3: persona miembro de banda (S; p; o)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/spartacus_r",
+   "motivo": "lote 3: persona miembro de banda (O; s; i)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/marva-hodge",
+   "motivo": "lote 3: persona miembro de banda (M; a; r)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/fellow_f1",
+   "motivo": "lote 3: persona miembro de banda (D; a; t)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/kevin-schuit",
+   "motivo": "lote 3: persona miembro de banda (b; a; d)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/wally-warning",
+   "motivo": "lote 3: persona miembro de banda (S; n; o)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/willy_latino",
+   "motivo": "lote 3: persona miembro de banda (M; e; n)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/lucho-nelson",
+   "motivo": "lote 3: persona miembro de banda (O; r; q)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/rize-1200",
+   "motivo": "lote 3: persona miembro de banda (T; h; e)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/yani-martinelli",
+   "motivo": "lote 3: persona miembro de banda (N; a; v)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/chema-animal-perez",
+   "motivo": "lote 3: persona miembro de banda (L; o; s)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/mikel-erentxun",
+   "motivo": "lote 3: persona miembro de banda (D; u; n)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/jose-rafael-guzman",
+   "motivo": "lote 3: persona miembro de banda (E; s; p)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/yma_america",
+   "motivo": "lote 3: persona miembro de banda (C; u; b)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/ricardo-rodriguez-miranda",
+   "motivo": "lote 3: persona miembro de banda (L; ';  )"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/el-mini",
+   "motivo": "lote 3: persona miembro de banda (K; e; f)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/jacky-schreiber",
+   "motivo": "lote 3: persona miembro de banda (S; e; c)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/carlos-pocz",
+   "motivo": "lote 3: persona miembro de banda (.; .; .)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/slic",
+   "motivo": "lote 3: persona miembro de banda (C; o; m)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/rebecca-roger-cruz",
+   "motivo": "lote 3: persona miembro de banda (P; a; r)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/luislo",
+   "motivo": "lote 3: persona miembro de banda (Ç; a; n)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/lucas-de-paiva",
+   "motivo": "lote 3: persona miembro de banda (4; 0; %)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/ashdrown",
+   "motivo": "lote 3: persona miembro de banda (N; e; u)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/jean_carlo_centeno",
+   "motivo": "lote 3: persona miembro de banda (B; i; n)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/00neaj",
+   "motivo": "lote 3: persona miembro de banda (O; S; G)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/diego-caicedo",
+   "motivo": "lote 3: persona miembro de banda (D; i; s)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/laura-roman",
+   "motivo": "lote 3: persona miembro de banda (D; u; r)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/lyda_zamora",
+   "motivo": "lote 3: persona miembro de banda (M; o; n)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/maria-cristina-plata",
+   "motivo": "lote 3: persona miembro de banda (T; r; a)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/alfonso-guerrero",
+   "motivo": "lote 3: persona miembro de banda (R; o; n)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/sierra811",
+   "motivo": "lote 3: persona miembro de banda (O; p; p)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/adriana-lizcano",
+   "motivo": "lote 3: persona miembro de banda (L; a;  )"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/teto-ocampo",
+   "motivo": "lote 3: persona miembro de banda (L; a;  )"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/martin_dowser",
+   "motivo": "lote 3: persona miembro de banda (H; u; s)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/guillermo-marchena",
+   "motivo": "lote 3: persona miembro de banda (H; e; a)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/theu-boermans",
+   "motivo": "lote 3: persona miembro de banda (T; h; e)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/peter-prommel",
+   "motivo": "lote 3: persona miembro de banda (C; o; n)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/mc-pester",
+   "motivo": "lote 3: persona miembro de banda (D; e;  )"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/martin_verdonk",
+   "motivo": "lote 3: persona miembro de banda (B; a; t)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/franky-douglas",
+   "motivo": "lote 3: persona miembro de banda (T; h; e)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/julien-coco",
+   "motivo": "lote 3: persona miembro de banda (U; t; r)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/tony-sherman",
+   "motivo": "lote 3: persona miembro de banda (R; e; a)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/mildred_douglas",
+   "motivo": "lote 3: persona miembro de banda (F; r; u)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/dickery-dock",
+   "motivo": "lote 3: persona miembro de banda (C; a; k)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/sam-vloemans",
+   "motivo": "lote 3: persona miembro de banda (B; e; l)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/jasmine-sendar",
+   "motivo": "lote 3: persona miembro de banda (B; i; b)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/luti-samson",
+   "motivo": "lote 3: persona miembro de banda (L; o; s)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/benjamin-fox-casey",
+   "motivo": "lote 3: persona miembro de banda (P; A; C)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/manao",
+   "motivo": "lote 3: persona miembro de banda (D; a; g)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/yojaira-saudita",
+   "motivo": "lote 3: persona miembro de banda (T; H; E)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/maria-concepcion-gutierrez-lobo",
+   "motivo": "lote 3: persona miembro de banda (M; a; l)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/ernesto-montiel-1",
+   "motivo": "lote 3: persona miembro de banda (E; l;  )"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/blaxx-1",
+   "motivo": "lote 3: persona miembro de banda (A; t; l)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/the-tiger",
+   "motivo": "lote 3: persona miembro de banda (K; e; s)"
+  },
+  {
+   "tipo": "person",
+   "rym_href": "/artist/lord-shorty",
+   "motivo": "lote 3: persona miembro de banda (L; o; r)"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/nohaycielos",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "band",
+   "rym_href": "/artist/lienzos",
+   "motivo": "lote 3: clasificación de primera pasada (band) sobre 9 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/osha-big-humo",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/rip_sakura",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 4 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/sunn",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 2 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/anguera",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/sofia-shizuko",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/lexestasolo",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 8 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/bear_bones__lay_low",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 36 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/el-abor",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/babybleid",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 4 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "band",
+   "rym_href": "/artist/flautas_del_chiguire",
+   "motivo": "lote 3: clasificación de primera pasada (band) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "band",
+   "rym_href": "/artist/cinema-doom",
+   "motivo": "lote 3: clasificación de primera pasada (band) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/charlie_carr",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/alleh",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 16 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "band",
+   "rym_href": "/artist/contra-marcha-punk-hxc",
+   "motivo": "lote 3: clasificación de primera pasada (band) sobre 3 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/joux",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 2 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/zarinovak",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/verycherrii",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 7 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/luis-miguel-mussett",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "band",
+   "rym_href": "/artist/species-infected",
+   "motivo": "lote 3: clasificación de primera pasada (band) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "band",
+   "rym_href": "/artist/hello-mr-klaus",
+   "motivo": "lote 3: clasificación de primera pasada (band) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/young-denky",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 2 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/0xtkk",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 2 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "band",
+   "rym_href": "/artist/darkohm",
+   "motivo": "lote 3: clasificación de primera pasada (band) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/ag-sixteen",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 10 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/king-stephen",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 16 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/sir-di-alex",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 2 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/the-madman-alex",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 21 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/subliminal-terry",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 3 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/maxplay",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/vincent_nuit",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 3 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/nina-romero",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 4 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/cherlatte",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 2 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/carlitos-calebra",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 2 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/agu-1",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 6 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/lolita-de-sola",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/tayko",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 18 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "band",
+   "rym_href": "/artist/nebula_karbenogg",
+   "motivo": "lote 3: clasificación de primera pasada (band) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/lyfer",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 5 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/noixes",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 4 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/rapisarda",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/kelly-abarca",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 7 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/revenue-1",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "band",
+   "rym_href": "/artist/sunset-1986",
+   "motivo": "lote 3: clasificación de primera pasada (band) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "duo",
+   "rym_href": "/artist/daylens-and-george",
+   "motivo": "lote 3: clasificación de primera pasada (duo) sobre 2 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "band",
+   "rym_href": "/artist/blure",
+   "motivo": "lote 3: clasificación de primera pasada (band) sobre 2 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/washe",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/lalter",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "band",
+   "rym_href": "/artist/vulkan-1",
+   "motivo": "lote 3: clasificación de primera pasada (band) sobre 9 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/helios-martinez-dominguez",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "band",
+   "rym_href": "/artist/belfort",
+   "motivo": "lote 3: clasificación de primera pasada (band) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "band",
+   "rym_href": "/artist/ipostal",
+   "motivo": "lote 3: clasificación de primera pasada (band) sobre 2 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/joanna_karamazov",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/doktor_rheal",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 17 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/oscarcito",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 7 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/putaliscious",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 2 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/yua-bits",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 2 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "band",
+   "rym_href": "/artist/voyager-12",
+   "motivo": "lote 3: clasificación de primera pasada (band) sobre 3 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/jorge-andres",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 4 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/andy-alent",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "band",
+   "rym_href": "/artist/royallive",
+   "motivo": "lote 3: clasificación de primera pasada (band) sobre 3 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/el-mago",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 2 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "band",
+   "rym_href": "/artist/memory-twin",
+   "motivo": "lote 3: clasificación de primera pasada (band) sobre 4 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "band",
+   "rym_href": "/artist/pico-mifes",
+   "motivo": "lote 3: clasificación de primera pasada (band) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/elvis-trofia",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/skisia2",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 29 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/otrebor",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 8 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/pedro-el-colita",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/junior-caldera",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 8 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/dj-rosmel",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/byakko",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 2 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/3m5",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 7 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/dj-sueldominimo",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 3 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "band",
+   "rym_href": "/artist/las-lineas-de-nazca",
+   "motivo": "lote 3: clasificación de primera pasada (band) sobre 5 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/juanrutina",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 13 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/oreste-2",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 2 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/kid-problema",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/sabita-seinshin",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/thealbertoz",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/vir-martialis",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 4 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "band",
+   "rym_href": "/artist/antidolby",
+   "motivo": "lote 3: clasificación de primera pasada (band) sobre 2 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "band",
+   "rym_href": "/artist/boikido",
+   "motivo": "lote 3: clasificación de primera pasada (band) sobre 6 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/jemimemu",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 2 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/yvng-tavo",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 3 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "band",
+   "rym_href": "/artist/la-serpiente-solar",
+   "motivo": "lote 3: clasificación de primera pasada (band) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/mariafer",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "band",
+   "rym_href": "/artist/the-back-room",
+   "motivo": "lote 3: clasificación de primera pasada (band) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "band",
+   "rym_href": "/artist/postales-de-amaranta",
+   "motivo": "lote 3: clasificación de primera pasada (band) sobre 7 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/okubo",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 4 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/t-izzy",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/joss-4",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 2 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/kandido",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/jeon",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 2 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "project",
+   "rym_href": "/artist/the_isle_project",
+   "motivo": "lote 3: clasificación de primera pasada (project) sobre 2 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/esmeralda-3",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 2 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/amy-sorinio",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 5 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "group",
+   "rym_href": "/artist/camerata-renacentista-de-caracas",
+   "motivo": "lote 3: clasificación de primera pasada (group) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "band",
+   "rym_href": "/artist/cinema-gore",
+   "motivo": "lote 3: clasificación de primera pasada (band) sobre 4 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/velesa",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 2 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "band",
+   "rym_href": "/artist/l-a-t",
+   "motivo": "lote 3: clasificación de primera pasada (band) sobre 3 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "band",
+   "rym_href": "/artist/hxist",
+   "motivo": "lote 3: clasificación de primera pasada (band) sobre 6 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "band",
+   "rym_href": "/artist/three-corners",
+   "motivo": "lote 3: clasificación de primera pasada (band) sobre 2 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "band",
+   "rym_href": "/artist/sikozis",
+   "motivo": "lote 3: clasificación de primera pasada (band) sobre 2 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "band",
+   "rym_href": "/artist/j_p_m_r",
+   "motivo": "lote 3: clasificación de primera pasada (band) sobre 4 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "band",
+   "rym_href": "/artist/matter-5",
+   "motivo": "lote 3: clasificación de primera pasada (band) sobre 2 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/high-drizzy",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "band",
+   "rym_href": "/artist/witchkings-of-angmar",
+   "motivo": "lote 3: clasificación de primera pasada (band) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "band",
+   "rym_href": "/artist/ancestral-warchants",
+   "motivo": "lote 3: clasificación de primera pasada (band) sobre 2 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/jessie24",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 2 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/villa-6",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/diego-barrios",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "band",
+   "rym_href": "/artist/segunda-mano",
+   "motivo": "lote 3: clasificación de primera pasada (band) sobre 4 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "band",
+   "rym_href": "/artist/carrizal",
+   "motivo": "lote 3: clasificación de primera pasada (band) sobre 2 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/leddy-manzano",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/dibo-d",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/scaper",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 3 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/gabio",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 5 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/johnny-sunrise",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 2 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/pm-7",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 26 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "band",
+   "rym_href": "/artist/anarcoguarachero",
+   "motivo": "lote 3: clasificación de primera pasada (band) sobre 4 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "band",
+   "rym_href": "/artist/la-comunidad-internacional",
+   "motivo": "lote 3: clasificación de primera pasada (band) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "band",
+   "rym_href": "/artist/southkhand",
+   "motivo": "lote 3: clasificación de primera pasada (band) sobre 1 lanzamientos"
+  },
+  {
+   "tipo": "artist",
+   "artist_type": "solo_artist",
+   "rym_href": "/artist/marcelo-beroy",
+   "motivo": "lote 3: clasificación de primera pasada (solo_artist) sobre 1 lanzamientos"
+  }
+ ]
+}

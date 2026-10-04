@@ -104,7 +104,7 @@ def main():
                     raise ValueError("sin página capturada")
                 meta = limpiar(meta) or limpiar(d["detalle_etapa2"])
                 if tipo == "artist":
-                    values = {"name": nombre, "artist_type": "band"}
+                    values = {"name": nombre, "artist_type": caso.get("artist_type") or "band"}
                     f = d.get("ev_formed")
                     if isinstance(f, int) and 1900 <= f <= 2026:
                         values["formed_year"] = f
