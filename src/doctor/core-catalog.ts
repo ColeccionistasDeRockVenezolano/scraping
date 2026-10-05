@@ -101,6 +101,28 @@ export const APPROVED_CORE_ADDITIONS: ReadonlySet<string> = new Set([
   "COL albums.release_date_text character varying(40)",
   "COL albums.catalog_id character varying(80)",
   "COL albums.media_format character varying(50)",
+  // 0039 (2026-10-04): la tabla `public.streaming_links` (enlaces a
+  // plataformas de streaming por artista/álbum; sexta excepción aprobada al
+  // core — «implementa todas las etapas» del plan de enlaces).
+  "COL streaming_links.id bigint NOT NULL IDENTITY ALWAYS",
+  "COL streaming_links.artist_id bigint",
+  "COL streaming_links.album_id bigint",
+  "COL streaming_links.platform character varying(24) NOT NULL",
+  "COL streaming_links.url text NOT NULL",
+  "COL streaming_links.external_id character varying(120)",
+  "COL streaming_links.method character varying(16) NOT NULL",
+  "COL streaming_links.source character varying(40) NOT NULL",
+  "COL streaming_links.verified boolean NOT NULL DEFAULT false",
+  "COL streaming_links.notes text",
+  "COL streaming_links.created_at timestamp with time zone NOT NULL DEFAULT now()",
+  "CONSTRAINT streaming_links.streaming_links_entity_ck CHECK ((num_nonnulls(artist_id, album_id) = 1))",
+  "CONSTRAINT streaming_links.streaming_links_artist_id_fkey FOREIGN KEY (artist_id) REFERENCES artists(id) ON DELETE CASCADE",
+  "CONSTRAINT streaming_links.streaming_links_album_id_fkey FOREIGN KEY (album_id) REFERENCES albums(id) ON DELETE CASCADE",
+  "CONSTRAINT streaming_links.streaming_links_pkey PRIMARY KEY (id)",
+  "INDEX streaming_links_artist_uk CREATE UNIQUE INDEX streaming_links_artist_uk ON public.streaming_links USING btree (artist_id, platform) WHERE (artist_id IS NOT NULL)",
+  "INDEX streaming_links_album_uk CREATE UNIQUE INDEX streaming_links_album_uk ON public.streaming_links USING btree (album_id, platform) WHERE (album_id IS NOT NULL)",
+  "INDEX streaming_links_album_idx CREATE INDEX streaming_links_album_idx ON public.streaming_links USING btree (album_id) WHERE (album_id IS NOT NULL)",
+  "INDEX streaming_links_pkey CREATE UNIQUE INDEX streaming_links_pkey ON public.streaming_links USING btree (id)",
 ]);
 
 export function diffCoreCatalog(actual: string[], expected: string[] = CORE_CATALOG.entries): CatalogDiff {

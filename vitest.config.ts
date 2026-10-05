@@ -4,6 +4,11 @@ export default defineConfig({
   test: {
     environment: "node",
     setupFiles: ["./test/unit/setup.ts"],
+    // Los worktrees de Claude Code viven en `.claude/worktrees/**` DENTRO del
+    // repo: sin excluirlos, vitest recoge los tests de OTRO worktree (con su
+    // propia versión del repo) y contamina las corridas — mismo problema que
+    // tuvo eslint (2026-10-02, eslint.config.js) y se arregla igual.
+    exclude: ["**/node_modules/**", "**/dist/**", "**/.claude/**"],
     // Los tests de contrato levantan contenedores Docker propios: no
     // paralelizar entre archivos evita agotar puertos/recursos en 1 máquina
     // (ARCHITECTURE.md §9 — sin infraestructura de test distribuida).

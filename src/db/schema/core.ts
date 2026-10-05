@@ -192,3 +192,21 @@ export const albumFormats = pgTable("album_formats", {
   filePath: text("file_path"),
   notes: text("notes"),
 });
+
+// 0039 (2026-10-04): links a plataformas de streaming por artista (perfil) o
+// por álbum (campaña de enlaces; sexta excepción aprobada al core). Mismos
+// criterios que src/doctor/core-catalog.ts: solo el vocabulario documentado
+// en la migración (platform/method/source).
+export const streamingLinks = pgTable("streaming_links", {
+  id: bigint("id", { mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
+  artistId: bigint("artist_id", { mode: "number" }).references(() => artists.id, { onDelete: "cascade" }),
+  albumId: bigint("album_id", { mode: "number" }).references(() => albums.id, { onDelete: "cascade" }),
+  platform: varchar("platform", { length: 24 }).notNull(),
+  url: text("url").notNull(),
+  externalId: varchar("external_id", { length: 120 }),
+  method: varchar("method", { length: 16 }).notNull(),
+  source: varchar("source", { length: 40 }).notNull(),
+  verified: boolean("verified").notNull().default(false),
+  notes: text("notes"),
+  createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+});
