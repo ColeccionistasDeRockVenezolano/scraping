@@ -1,21 +1,23 @@
 {
   "source": "discogs",
-  "rows": 649,
-  "entities": 649,
+  "rows": 1382,
+  "entities": 1382,
   "byKind": {
-    "artist": 415,
-    "organization": 45,
+    "artist": 846,
+    "organization": 132,
+    "person": 215,
     "album": 189
   },
-  "withText": 283,
+  "withText": 637,
   "stats": {
-    "discogs:artist": 415,
-    "discogs:sin_candidato": 1415,
-    "discogs:sin_prueba": 1502,
-    "discogs-bio:peticiones": 5810,
-    "discogs:ambiguo": 9,
-    "discogs:organization": 45,
+    "discogs:artist": 846,
+    "discogs:sin_prueba": 3030,
+    "discogs:sin_candidato": 3286,
+    "discogs:ambiguo": 14,
+    "discogs-bio:peticiones": 75,
+    "discogs:organization": 132,
+    "discogs:person": 215,
     "discogs:album": 189
   },
-  "minutes": 106.5
+  "minutes": 1.4
 }

@@ -1,15 +1,14 @@
 {
   "source": "musicbrainz",
-  "rows": 312,
-  "entities": 312,
+  "rows": 565,
+  "entities": 565,
   "byKind": {
-    "artist": 312
+    "artist": 565
   },
-  "withText": 2,
+  "withText": 6,
   "stats": {
-    "musicbrainz:artist": 312,
-    "musicbrainz-bio:peticiones": 3473,
-    "musicbrainz-bio:fallidas": 1
+    "musicbrainz:artist": 565,
+    "musicbrainz-bio:peticiones": 2506
   },
-  "minutes": 67.5
+  "minutes": 45.9
 }

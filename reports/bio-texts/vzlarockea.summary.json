@@ -1,16 +1,15 @@
 {
   "source": "vzlarockea",
-  "rows": 456,
-  "entities": 455,
+  "rows": 545,
+  "entities": 544,
   "byKind": {
-    "artist": 316,
-    "album": 140
+    "artist": 388,
+    "album": 157
   },
-  "withText": 456,
+  "withText": 545,
   "stats": {
-    "vzlarockea-bio:peticiones": 14,
-    "vzlarockea:artist": 316,
-    "vzlarockea:album": 140
+    "vzlarockea:artist": 388,
+    "vzlarockea:album": 157
   },
-  "minutes": 0.5
+  "minutes": 0.0
 }

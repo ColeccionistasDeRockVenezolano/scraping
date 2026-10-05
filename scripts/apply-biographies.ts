@@ -55,6 +55,7 @@ function invalid(item: Synth, dossier: Dossier): string | null {
   const es = text.match(ES)?.length ?? 0;
   const en = text.match(EN)?.length ?? 0;
   if (en > es * 0.25 && en >= 4) return "no parece estar en español";
+  if (/\b(?:last\.?fm|discogs|wikipedia|musicbrainz|theaudiodb|venciclopedia|lobotoradio|sincopa)\b|\bvzla\s?rockea\b/iu.test(text)) return "nombra una fuente externa en el texto";
   const refs = new Set(["catalog", "current", ...dossier.sources.map((source) => source.ref)]);
   const unknown = (item.sourcesUsed ?? []).filter((ref) => !refs.has(ref));
   if (unknown.length) return `cita fuentes inexistentes: ${unknown.join(",")}`;

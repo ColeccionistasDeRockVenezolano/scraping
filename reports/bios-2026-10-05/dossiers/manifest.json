@@ -1,0 +1,779 @@
+{
+  "summary": {
+    "postsIndexed": 4949,
+    "dossiers": 4386,
+    "batches": 103,
+    "byKind": {
+      "artist": {
+        "dossiers": 4386,
+        "withText": 3062,
+        "batches": 103
+      }
+    },
+    "skipped": {
+      "protected": [
+        "artist:1250",
+        "artist:1288",
+        "artist:1289",
+        "artist:1509",
+        "artist:1738",
+        "artist:187",
+        "artist:2137",
+        "artist:23",
+        "artist:3048",
+        "artist:3049",
+        "artist:3050",
+        "artist:3055",
+        "artist:3060",
+        "artist:3062",
+        "artist:3063",
+        "artist:3065",
+        "artist:3066",
+        "artist:3067",
+        "artist:3068",
+        "artist:3069",
+        "artist:3070",
+        "artist:3071",
+        "artist:3072",
+        "artist:3075",
+        "artist:3077",
+        "artist:3078",
+        "artist:3080",
+        "artist:3082",
+        "artist:3083",
+        "artist:3084",
+        "artist:3085",
+        "artist:3087",
+        "artist:3088",
+        "artist:3089",
+        "artist:3096",
+        "artist:3097",
+        "artist:3099",
+        "artist:3101",
+        "artist:3102",
+        "artist:3103",
+        "artist:3106",
+        "artist:3107",
+        "artist:3111",
+        "artist:3112",
+        "artist:3114",
+        "artist:3115",
+        "artist:3116",
+        "artist:3117",
+        "artist:3118",
+        "artist:3120",
+        "artist:3121",
+        "artist:3122",
+        "artist:3124",
+        "artist:3125",
+        "artist:3126",
+        "artist:3127",
+        "artist:3130",
+        "artist:3131",
+        "artist:3133",
+        "artist:3134",
+        "artist:3135",
+        "artist:3136",
+        "artist:3137",
+        "artist:3138",
+        "artist:3140",
+        "artist:3141",
+        "artist:3142",
+        "artist:3143",
+        "artist:3144",
+        "artist:3145",
+        "artist:3146",
+        "artist:3148",
+        "artist:3150",
+        "artist:3152",
+        "artist:3155",
+        "artist:3156",
+        "artist:3158",
+        "artist:3161",
+        "artist:3165",
+        "artist:3166",
+        "artist:3168",
+        "artist:3169",
+        "artist:3173",
+        "artist:3174",
+        "artist:3175",
+        "artist:3176",
+        "artist:3181",
+        "artist:3182",
+        "artist:3184",
+        "artist:3185",
+        "artist:3186",
+        "artist:3187",
+        "artist:3188",
+        "artist:3189",
+        "artist:3190",
+        "artist:3194",
+        "artist:3196",
+        "artist:3197",
+        "artist:3198",
+        "artist:3199",
+        "artist:3200",
+        "artist:3202",
+        "artist:3204",
+        "artist:3206",
+        "artist:3207",
+        "artist:3208",
+        "artist:3210",
+        "artist:3212",
+        "artist:3213",
+        "artist:3215",
+        "artist:3216",
+        "artist:3218",
+        "artist:3219",
+        "artist:3222",
+        "artist:3224",
+        "artist:3228",
+        "artist:3229",
+        "artist:3230",
+        "artist:3231",
+        "artist:3232",
+        "artist:3233",
+        "artist:3234",
+        "artist:3235",
+        "artist:3236",
+        "artist:3237",
+        "artist:3238",
+        "artist:3239",
+        "artist:3240",
+        "artist:3241",
+        "artist:3242",
+        "artist:3243",
+        "artist:3244",
+        "artist:3245",
+        "artist:3247",
+        "artist:3248",
+        "artist:511",
+        "artist:58",
+        "artist:6416",
+        "artist:6419",
+        "artist:748"
+      ],
+      "various": 1
+    }
+  },
+  "batches": [
+    {
+      "file": "artist-001.jsonl",
+      "kind": "artist",
+      "count": 21,
+      "chars": 109341
+    },
+    {
+      "file": "artist-002.jsonl",
+      "kind": "artist",
+      "count": 25,
+      "chars": 106093
+    },
+    {
+      "file": "artist-003.jsonl",
+      "kind": "artist",
+      "count": 28,
+      "chars": 107116
+    },
+    {
+      "file": "artist-004.jsonl",
+      "kind": "artist",
+      "count": 25,
+      "chars": 108008
+    },
+    {
+      "file": "artist-005.jsonl",
+      "kind": "artist",
+      "count": 18,
+      "chars": 105343
+    },
+    {
+      "file": "artist-006.jsonl",
+      "kind": "artist",
+      "count": 26,
+      "chars": 106495
+    },
+    {
+      "file": "artist-007.jsonl",
+      "kind": "artist",
+      "count": 21,
+      "chars": 107791
+    },
+    {
+      "file": "artist-008.jsonl",
+      "kind": "artist",
+      "count": 34,
+      "chars": 109378
+    },
+    {
+      "file": "artist-009.jsonl",
+      "kind": "artist",
+      "count": 20,
+      "chars": 101354
+    },
+    {
+      "file": "artist-010.jsonl",
+      "kind": "artist",
+      "count": 22,
+      "chars": 103427
+    },
+    {
+      "file": "artist-011.jsonl",
+      "kind": "artist",
+      "count": 28,
+      "chars": 109677
+    },
+    {
+      "file": "artist-012.jsonl",
+      "kind": "artist",
+      "count": 24,
+      "chars": 106090
+    },
+    {
+      "file": "artist-013.jsonl",
+      "kind": "artist",
+      "count": 32,
+      "chars": 109364
+    },
+    {
+      "file": "artist-014.jsonl",
+      "kind": "artist",
+      "count": 27,
+      "chars": 107001
+    },
+    {
+      "file": "artist-015.jsonl",
+      "kind": "artist",
+      "count": 30,
+      "chars": 107269
+    },
+    {
+      "file": "artist-016.jsonl",
+      "kind": "artist",
+      "count": 23,
+      "chars": 109506
+    },
+    {
+      "file": "artist-017.jsonl",
+      "kind": "artist",
+      "count": 21,
+      "chars": 100818
+    },
+    {
+      "file": "artist-018.jsonl",
+      "kind": "artist",
+      "count": 30,
+      "chars": 109465
+    },
+    {
+      "file": "artist-019.jsonl",
+      "kind": "artist",
+      "count": 25,
+      "chars": 101605
+    },
+    {
+      "file": "artist-020.jsonl",
+      "kind": "artist",
+      "count": 29,
+      "chars": 109428
+    },
+    {
+      "file": "artist-021.jsonl",
+      "kind": "artist",
+      "count": 31,
+      "chars": 108239
+    },
+    {
+      "file": "artist-022.jsonl",
+      "kind": "artist",
+      "count": 24,
+      "chars": 108963
+    },
+    {
+      "file": "artist-023.jsonl",
+      "kind": "artist",
+      "count": 31,
+      "chars": 108597
+    },
+    {
+      "file": "artist-024.jsonl",
+      "kind": "artist",
+      "count": 39,
+      "chars": 109235
+    },
+    {
+      "file": "artist-025.jsonl",
+      "kind": "artist",
+      "count": 32,
+      "chars": 106839
+    },
+    {
+      "file": "artist-026.jsonl",
+      "kind": "artist",
+      "count": 32,
+      "chars": 108250
+    },
+    {
+      "file": "artist-027.jsonl",
+      "kind": "artist",
+      "count": 34,
+      "chars": 105377
+    },
+    {
+      "file": "artist-028.jsonl",
+      "kind": "artist",
+      "count": 27,
+      "chars": 100517
+    },
+    {
+      "file": "artist-029.jsonl",
+      "kind": "artist",
+      "count": 16,
+      "chars": 103302
+    },
+    {
+      "file": "artist-030.jsonl",
+      "kind": "artist",
+      "count": 26,
+      "chars": 109811
+    },
+    {
+      "file": "artist-031.jsonl",
+      "kind": "artist",
+      "count": 29,
+      "chars": 108316
+    },
+    {
+      "file": "artist-032.jsonl",
+      "kind": "artist",
+      "count": 22,
+      "chars": 106264
+    },
+    {
+      "file": "artist-033.jsonl",
+      "kind": "artist",
+      "count": 21,
+      "chars": 102900
+    },
+    {
+      "file": "artist-034.jsonl",
+      "kind": "artist",
+      "count": 19,
+      "chars": 101760
+    },
+    {
+      "file": "artist-035.jsonl",
+      "kind": "artist",
+      "count": 25,
+      "chars": 96944
+    },
+    {
+      "file": "artist-036.jsonl",
+      "kind": "artist",
+      "count": 13,
+      "chars": 96924
+    },
+    {
+      "file": "artist-037.jsonl",
+      "kind": "artist",
+      "count": 19,
+      "chars": 108243
+    },
+    {
+      "file": "artist-038.jsonl",
+      "kind": "artist",
+      "count": 27,
+      "chars": 89038
+    },
+    {
+      "file": "artist-039.jsonl",
+      "kind": "artist",
+      "count": 25,
+      "chars": 99529
+    },
+    {
+      "file": "artist-040.jsonl",
+      "kind": "artist",
+      "count": 24,
+      "chars": 108391
+    },
+    {
+      "file": "artist-041.jsonl",
+      "kind": "artist",
+      "count": 73,
+      "chars": 106334
+    },
+    {
+      "file": "artist-042.jsonl",
+      "kind": "artist",
+      "count": 85,
+      "chars": 105450
+    },
+    {
+      "file": "artist-043.jsonl",
+      "kind": "artist",
+      "count": 39,
+      "chars": 107140
+    },
+    {
+      "file": "artist-044.jsonl",
+      "kind": "artist",
+      "count": 71,
+      "chars": 96188
+    },
+    {
+      "file": "artist-045.jsonl",
+      "kind": "artist",
+      "count": 89,
+      "chars": 109820
+    },
+    {
+      "file": "artist-046.jsonl",
+      "kind": "artist",
+      "count": 107,
+      "chars": 109782
+    },
+    {
+      "file": "artist-047.jsonl",
+      "kind": "artist",
+      "count": 81,
+      "chars": 109953
+    },
+    {
+      "file": "artist-048.jsonl",
+      "kind": "artist",
+      "count": 63,
+      "chars": 101916
+    },
+    {
+      "file": "artist-049.jsonl",
+      "kind": "artist",
+      "count": 34,
+      "chars": 108799
+    },
+    {
+      "file": "artist-050.jsonl",
+      "kind": "artist",
+      "count": 50,
+      "chars": 102655
+    },
+    {
+      "file": "artist-051.jsonl",
+      "kind": "artist",
+      "count": 77,
+      "chars": 102055
+    },
+    {
+      "file": "artist-052.jsonl",
+      "kind": "artist",
+      "count": 69,
+      "chars": 104866
+    },
+    {
+      "file": "artist-053.jsonl",
+      "kind": "artist",
+      "count": 36,
+      "chars": 109859
+    },
+    {
+      "file": "artist-054.jsonl",
+      "kind": "artist",
+      "count": 69,
+      "chars": 99944
+    },
+    {
+      "file": "artist-055.jsonl",
+      "kind": "artist",
+      "count": 30,
+      "chars": 100205
+    },
+    {
+      "file": "artist-056.jsonl",
+      "kind": "artist",
+      "count": 61,
+      "chars": 104899
+    },
+    {
+      "file": "artist-057.jsonl",
+      "kind": "artist",
+      "count": 19,
+      "chars": 107544
+    },
+    {
+      "file": "artist-058.jsonl",
+      "kind": "artist",
+      "count": 35,
+      "chars": 109475
+    },
+    {
+      "file": "artist-059.jsonl",
+      "kind": "artist",
+      "count": 34,
+      "chars": 108663
+    },
+    {
+      "file": "artist-060.jsonl",
+      "kind": "artist",
+      "count": 45,
+      "chars": 107413
+    },
+    {
+      "file": "artist-061.jsonl",
+      "kind": "artist",
+      "count": 48,
+      "chars": 109212
+    },
+    {
+      "file": "artist-062.jsonl",
+      "kind": "artist",
+      "count": 81,
+      "chars": 109895
+    },
+    {
+      "file": "artist-063.jsonl",
+      "kind": "artist",
+      "count": 28,
+      "chars": 94713
+    },
+    {
+      "file": "artist-064.jsonl",
+      "kind": "artist",
+      "count": 28,
+      "chars": 100599
+    },
+    {
+      "file": "artist-065.jsonl",
+      "kind": "artist",
+      "count": 26,
+      "chars": 107130
+    },
+    {
+      "file": "artist-066.jsonl",
+      "kind": "artist",
+      "count": 34,
+      "chars": 102889
+    },
+    {
+      "file": "artist-067.jsonl",
+      "kind": "artist",
+      "count": 31,
+      "chars": 109370
+    },
+    {
+      "file": "artist-068.jsonl",
+      "kind": "artist",
+      "count": 25,
+      "chars": 109505
+    },
+    {
+      "file": "artist-069.jsonl",
+      "kind": "artist",
+      "count": 52,
+      "chars": 105142
+    },
+    {
+      "file": "artist-070.jsonl",
+      "kind": "artist",
+      "count": 50,
+      "chars": 106956
+    },
+    {
+      "file": "artist-071.jsonl",
+      "kind": "artist",
+      "count": 62,
+      "chars": 105733
+    },
+    {
+      "file": "artist-072.jsonl",
+      "kind": "artist",
+      "count": 60,
+      "chars": 108624
+    },
+    {
+      "file": "artist-073.jsonl",
+      "kind": "artist",
+      "count": 30,
+      "chars": 109888
+    },
+    {
+      "file": "artist-074.jsonl",
+      "kind": "artist",
+      "count": 23,
+      "chars": 107715
+    },
+    {
+      "file": "artist-075.jsonl",
+      "kind": "artist",
+      "count": 20,
+      "chars": 98434
+    },
+    {
+      "file": "artist-076.jsonl",
+      "kind": "artist",
+      "count": 27,
+      "chars": 107630
+    },
+    {
+      "file": "artist-077.jsonl",
+      "kind": "artist",
+      "count": 93,
+      "chars": 104484
+    },
+    {
+      "file": "artist-078.jsonl",
+      "kind": "artist",
+      "count": 120,
+      "chars": 79791
+    },
+    {
+      "file": "artist-079.jsonl",
+      "kind": "artist",
+      "count": 78,
+      "chars": 109169
+    },
+    {
+      "file": "artist-080.jsonl",
+      "kind": "artist",
+      "count": 119,
+      "chars": 108286
+    },
+    {
+      "file": "artist-081.jsonl",
+      "kind": "artist",
+      "count": 71,
+      "chars": 105901
+    },
+    {
+      "file": "artist-082.jsonl",
+      "kind": "artist",
+      "count": 26,
+      "chars": 107520
+    },
+    {
+      "file": "artist-083.jsonl",
+      "kind": "artist",
+      "count": 30,
+      "chars": 107387
+    },
+    {
+      "file": "artist-084.jsonl",
+      "kind": "artist",
+      "count": 28,
+      "chars": 108320
+    },
+    {
+      "file": "artist-085.jsonl",
+      "kind": "artist",
+      "count": 87,
+      "chars": 109323
+    },
+    {
+      "file": "artist-086.jsonl",
+      "kind": "artist",
+      "count": 107,
+      "chars": 109548
+    },
+    {
+      "file": "artist-087.jsonl",
+      "kind": "artist",
+      "count": 105,
+      "chars": 108552
+    },
+    {
+      "file": "artist-088.jsonl",
+      "kind": "artist",
+      "count": 120,
+      "chars": 105361
+    },
+    {
+      "file": "artist-089.jsonl",
+      "kind": "artist",
+      "count": 120,
+      "chars": 100589
+    },
+    {
+      "file": "artist-090.jsonl",
+      "kind": "artist",
+      "count": 102,
+      "chars": 109647
+    },
+    {
+      "file": "artist-091.jsonl",
+      "kind": "artist",
+      "count": 38,
+      "chars": 106621
+    },
+    {
+      "file": "artist-092.jsonl",
+      "kind": "artist",
+      "count": 20,
+      "chars": 102610
+    },
+    {
+      "file": "artist-093.jsonl",
+      "kind": "artist",
+      "count": 33,
+      "chars": 102091
+    },
+    {
+      "file": "artist-094.jsonl",
+      "kind": "artist",
+      "count": 26,
+      "chars": 108927
+    },
+    {
+      "file": "artist-095.jsonl",
+      "kind": "artist",
+      "count": 27,
+      "chars": 105091
+    },
+    {
+      "file": "artist-096.jsonl",
+      "kind": "artist",
+      "count": 24,
+      "chars": 109351
+    },
+    {
+      "file": "artist-097.jsonl",
+      "kind": "artist",
+      "count": 34,
+      "chars": 108513
+    },
+    {
+      "file": "artist-098.jsonl",
+      "kind": "artist",
+      "count": 39,
+      "chars": 107429
+    },
+    {
+      "file": "artist-099.jsonl",
+      "kind": "artist",
+      "count": 31,
+      "chars": 107664
+    },
+    {
+      "file": "artist-100.jsonl",
+      "kind": "artist",
+      "count": 21,
+      "chars": 109683
+    },
+    {
+      "file": "artist-101.jsonl",
+      "kind": "artist",
+      "count": 29,
+      "chars": 108202
+    },
+    {
+      "file": "artist-102.jsonl",
+      "kind": "artist",
+      "count": 31,
+      "chars": 104528
+    },
+    {
+      "file": "artist-103.jsonl",
+      "kind": "artist",
+      "count": 10,
+      "chars": 50117
+    }
+  ]
+}

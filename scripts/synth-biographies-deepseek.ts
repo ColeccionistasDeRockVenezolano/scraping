@@ -11,7 +11,7 @@
 //
 // Uso: tsx scripts/synth-biographies-deepseek.ts --batches=album-025,person-031 [--limit=10] [--concurrency=8]
 //      tsx scripts/synth-biographies-deepseek.ts --kinds=artist
-import { existsSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { z } from "zod";
 import { createDeepSeekGateway } from "../src/ai/gateway.js";
@@ -88,6 +88,9 @@ function violations(dossier: Dossier, text: string | null): string | null {
   if (dossier.kind === "person" && /venezolan[oa]/iu.test(text) && !catalog["nacionalidad"] && !sourceSays) {
     problems.push("El texto llama venezolana a la persona y nada en el expediente lo afirma: quita esa nacionalidad.");
   }
+  // Fuentes nombradas en el texto: la guía lo prohíbe (la bio no debe citar Last.fm, Discogs, etc.).
+  const fuente = /\b(?:last\.?fm|discogs|wikipedia|musicbrainz|theaudiodb|venciclopedia|lobotoradio|sincopa)\b|\bvzla\s?rockea\b|seg[uú]n (?:el|la|los|las) (?:cat[aá]logo|fuentes?)/iu.exec(text);
+  if (fuente) problems.push(`El texto nombra una fuente o el catálogo («${fuente[0]}»): la guía prohíbe nombrarlos. Reescribe el texto completo sin nombrar ninguna.`);
   // Solo en reseñas: en personas y artistas las comillas también marcan discos, que la guía permite nombrar.
   const titles = text.match(/«[^»]+»/gu)?.length ?? 0;
   if (dossier.kind === "album" && titles > 4) problems.push(`El texto nombra ${titles} títulos entre comillas: deja como mucho 3 temas y resume el resto.`);
@@ -111,6 +114,7 @@ async function main(): Promise<void> {
     .filter((name) => /^(artist|album|person|organization)-\d+\.jsonl$/u.test(name) && (!kindsArg || kindsArg.includes(name.split("-")[0]!)))
     .map((name) => name.replace(/\.jsonl$/u, "")).sort();
   const instructions = rules();
+  mkdirSync(SYNTH, { recursive: true });
   const gateway = createDeepSeekGateway();
   const stats = { batches: 0, cases: 0, written: 0, noData: 0, cached: 0, retried: 0, failed: [] as Array<{ caseId: string; error: string }>, promptHashes: [] as string[] };
   let budget = limit;

@@ -1,19 +1,20 @@
 {
   "source": "lastfm",
-  "rows": 1007,
-  "entities": 774,
+  "rows": 1505,
+  "entities": 1184,
   "byKind": {
-    "artist": 951,
-    "album": 56
+    "artist": 1431,
+    "album": 74
   },
-  "withText": 835,
+  "withText": 1179,
   "stats": {
-    "lastfm:sin_marca_vz": 1362,
-    "lastfm:casados": 721,
-    "lastfm:agrupa_homonimos": 277,
-    "lastfm:resenas": 29,
-    "lastfm:sin_pagina": 259,
-    "lastfm-bio:peticiones": 8888
+    "lastfm:sin_marca_vz": 2481,
+    "lastfm:casados": 1115,
+    "lastfm:agrupa_homonimos": 346,
+    "lastfm:resenas": 38,
+    "lastfm-bio:peticiones": 12351,
+    "lastfm:sin_pagina": 582,
+    "lastfm:homonimo_catalogo": 2
   },
-  "minutes": 44.5
+  "minutes": 61.8
 }

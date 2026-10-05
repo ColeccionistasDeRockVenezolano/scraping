@@ -1,17 +1,19 @@
 {
   "source": "venciclopedia",
-  "rows": 132,
-  "entities": 132,
+  "rows": 267,
+  "entities": 267,
   "byKind": {
-    "artist": 82,
-    "person": 50
+    "artist": 145,
+    "person": 115,
+    "organization": 7
   },
-  "withText": 132,
+  "withText": 267,
   "stats": {
-    "venciclopedia:artist": 82,
-    "venciclopedia:person": 50,
-    "venciclopedia:sin_prueba": 72,
-    "venciclopedia-bio:peticiones": 262
+    "venciclopedia-bio:peticiones": 779,
+    "venciclopedia:artist": 145,
+    "venciclopedia:person": 115,
+    "venciclopedia:sin_prueba": 114,
+    "venciclopedia:organization": 7
   },
-  "minutes": 54.1
+  "minutes": 180.3
 }

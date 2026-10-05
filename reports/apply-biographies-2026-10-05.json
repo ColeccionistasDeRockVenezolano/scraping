@@ -1,0 +1,59 @@
+{
+  "mode": "confirm",
+  "runId": 16836,
+  "models": [
+    "deepseek-flash"
+  ],
+  "outputs": 17,
+  "badLines": [],
+  "applied": {
+    "artist": 1,
+    "album": 0,
+    "person": 0,
+    "organization": 0
+  },
+  "enriched": 0,
+  "created": 1,
+  "unchanged": 0,
+  "noData": 0,
+  "changedSinceExport": [
+    "artist:3711",
+    "artist:3715",
+    "artist:3716",
+    "artist:3717",
+    "artist:3718",
+    "artist:3722",
+    "artist:3724",
+    "artist:3725",
+    "artist:3727",
+    "artist:3728",
+    "artist:3729",
+    "artist:3730",
+    "artist:3731",
+    "artist:3733",
+    "artist:3736",
+    "artist:3737"
+  ],
+  "rejected": [],
+  "unknownCase": [],
+  "lostYears": [],
+  "notes": [
+    {
+      "caseId": "artist:3721",
+      "note": "El catálogo lista «Los Guaraguao (1978)» y, por separado, un disco «Por Un Nuevo Amanecer (1983) [other] — Top-Hits»; Sincopa lo data en 1983 y La Venciclopedia menciona «Nuestras manos» en 1982 y «Por un nuevo amanecer» al año siguiente. No se pudo resolver con certeza la fecha exacta de este último álbum."
+    },
+    {
+      "caseId": "artist:3725",
+      "note": "Discrepancia en el título del primer disco: la Venciclopedia y el catálogo lo llaman «Vivirás»; Discogs menciona «Volverás» como primer sencillo/álbum. Se unificó como «Vivirás» por el catálogo."
+    },
+    {
+      "caseId": "artist:3730",
+      "note": "Discrepancia en la fecha de nacimiento: el catálogo y Sincopa indican 1944 o no la fijan, mientras Discogs señala 1945. El catálogo clasifica la ficha como \"band\" pese a tratarse de una solista."
+    },
+    {
+      "caseId": "artist:3737",
+      "note": "El material de las fuentes es fundamentalmente la bio de presentación del disco; no hay datos de trayectoria ni estado actual de la orquesta."
+    }
+  ],
+  "discarded": 4
+}

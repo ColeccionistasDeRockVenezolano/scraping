@@ -1,23 +1,25 @@
 {
   "source": "wikipedia",
-  "rows": 48,
-  "entities": 47,
+  "rows": 91,
+  "entities": 91,
   "byKind": {
-    "artist": 16,
-    "person": 24,
-    "album": 8
+    "artist": 33,
+    "person": 51,
+    "organization": 2,
+    "album": 5
   },
-  "withText": 48,
+  "withText": 91,
   "stats": {
-    "wikipedia-bio-es:peticiones": 2260,
-    "wikipedia:sin_prueba": 230,
-    "wikipedia-es:artist": 10,
-    "wikipedia-es:person": 12,
-    "wikipedia-bio-en:peticiones": 1792,
-    "wikipedia-en:artist": 6,
-    "wikipedia-en:person": 12,
-    "wikipedia-es:album": 6,
+    "wikipedia-bio-es:peticiones": 5694,
+    "wikipedia-es:artist": 23,
+    "wikipedia:sin_prueba": 572,
+    "wikipedia-es:person": 33,
+    "wikipedia-bio-en:peticiones": 4550,
+    "wikipedia-en:artist": 10,
+    "wikipedia-en:organization": 2,
+    "wikipedia-en:person": 18,
+    "wikipedia-es:album": 3,
     "wikipedia-en:album": 2
   },
-  "minutes": 87.4
+  "minutes": 171.5
 }

@@ -1,22 +1,22 @@
 {
   "source": "lobotoradio",
-  "rows": 2492,
-  "entities": 2489,
+  "rows": 3150,
+  "entities": 3146,
   "byKind": {
-    "artist": 565,
-    "person": 1650,
-    "album": 277
+    "artist": 710,
+    "person": 2164,
+    "album": 276
   },
-  "withText": 97,
+  "withText": 113,
   "stats": {
-    "lobotoradio:casadas": 2154,
-    "lobotoradio:origen_no_vz": 96,
-    "lobotoradio-bio:peticiones": 2843,
-    "lobotoradio:descartadas": 757,
+    "lobotoradio:casadas": 2747,
+    "lobotoradio-bio:peticiones": 1051,
+    "lobotoradio:origen_no_vz": 138,
+    "lobotoradio:descartadas": 1112,
     "lobotoradio:sin_pagina": 1,
-    "lobotoradio:persona_sin_vinculo": 774,
-    "lobotoradio:album": 277,
+    "lobotoradio:persona_sin_vinculo": 927,
+    "lobotoradio:album": 276,
     "lobotoradio-bio:fallidas": 1
   },
-  "minutes": 484.8
+  "minutes": 181.6
 }

@@ -1,0 +1,1176 @@
+{
+  "mode": "dry-run",
+  "runId": 16834,
+  "models": [
+    "deepseek-flash"
+  ],
+  "outputs": 700,
+  "badLines": [],
+  "applied": {
+    "artist": 636,
+    "album": 0,
+    "person": 0,
+    "organization": 0
+  },
+  "enriched": 0,
+  "created": 636,
+  "unchanged": 0,
+  "noData": 23,
+  "changedSinceExport": [],
+  "rejected": [
+    {
+      "caseId": "artist:3105",
+      "batch": "artist-054",
+      "reason": "no parece estar en español"
+    },
+    {
+      "caseId": "artist:3404",
+      "batch": "artist-056",
+      "reason": "sin texto"
+    },
+    {
+      "caseId": "artist:3721",
+      "batch": "artist-064",
+      "reason": "nombra una fuente externa en el texto"
+    },
+    {
+      "caseId": "artist:4535",
+      "batch": "artist-079",
+      "reason": "texto demasiado corto"
+    },
+    {
+      "caseId": "artist:4554",
+      "batch": "artist-079",
+      "reason": "texto demasiado corto"
+    },
+    {
+      "caseId": "artist:4556",
+      "batch": "artist-079",
+      "reason": "texto demasiado corto"
+    },
+    {
+      "caseId": "artist:4577",
+      "batch": "artist-079",
+      "reason": "texto demasiado corto"
+    },
+    {
+      "caseId": "artist:4581",
+      "batch": "artist-079",
+      "reason": "texto demasiado corto"
+    },
+    {
+      "caseId": "artist:4593",
+      "batch": "artist-079",
+      "reason": "texto demasiado corto"
+    },
+    {
+      "caseId": "artist:4604",
+      "batch": "artist-080",
+      "reason": "texto demasiado corto"
+    },
+    {
+      "caseId": "artist:4611",
+      "batch": "artist-080",
+      "reason": "texto demasiado corto"
+    },
+    {
+      "caseId": "artist:4630",
+      "batch": "artist-080",
+      "reason": "texto demasiado corto"
+    },
+    {
+      "caseId": "artist:4642",
+      "batch": "artist-080",
+      "reason": "texto demasiado corto"
+    },
+    {
+      "caseId": "artist:4675",
+      "batch": "artist-080",
+      "reason": "sin texto"
+    },
+    {
+      "caseId": "artist:5791",
+      "batch": "artist-085",
+      "reason": "texto demasiado corto"
+    },
+    {
+      "caseId": "artist:5818",
+      "batch": "artist-085",
+      "reason": "texto demasiado corto"
+    },
+    {
+      "caseId": "artist:5856",
+      "batch": "artist-086",
+      "reason": "sin texto"
+    },
+    {
+      "caseId": "artist:5866",
+      "batch": "artist-086",
+      "reason": "texto demasiado corto"
+    },
+    {
+      "caseId": "artist:5872",
+      "batch": "artist-086",
+      "reason": "texto demasiado corto"
+    },
+    {
+      "caseId": "artist:5893",
+      "batch": "artist-086",
+      "reason": "sin texto"
+    },
+    {
+      "caseId": "artist:5909",
+      "batch": "artist-086",
+      "reason": "texto demasiado corto"
+    },
+    {
+      "caseId": "artist:5923",
+      "batch": "artist-086",
+      "reason": "texto demasiado corto"
+    },
+    {
+      "caseId": "artist:5940",
+      "batch": "artist-086",
+      "reason": "sin texto"
+    },
+    {
+      "caseId": "artist:5941",
+      "batch": "artist-086",
+      "reason": "sin texto"
+    },
+    {
+      "caseId": "artist:5945",
+      "batch": "artist-086",
+      "reason": "texto demasiado corto"
+    },
+    {
+      "caseId": "artist:5975",
+      "batch": "artist-087",
+      "reason": "texto demasiado corto"
+    },
+    {
+      "caseId": "artist:6004",
+      "batch": "artist-087",
+      "reason": "texto demasiado corto"
+    },
+    {
+      "caseId": "artist:6007",
+      "batch": "artist-087",
+      "reason": "texto demasiado corto"
+    },
+    {
+      "caseId": "artist:6013",
+      "batch": "artist-087",
+      "reason": "texto demasiado corto"
+    },
+    {
+      "caseId": "artist:6044",
+      "batch": "artist-088",
+      "reason": "sin texto"
+    },
+    {
+      "caseId": "artist:6048",
+      "batch": "artist-088",
+      "reason": "texto demasiado corto"
+    },
+    {
+      "caseId": "artist:6056",
+      "batch": "artist-088",
+      "reason": "texto demasiado corto"
+    },
+    {
+      "caseId": "artist:6105",
+      "batch": "artist-088",
+      "reason": "texto demasiado corto"
+    },
+    {
+      "caseId": "artist:6111",
+      "batch": "artist-088",
+      "reason": "sin texto"
+    },
+    {
+      "caseId": "artist:6167",
+      "batch": "artist-089",
+      "reason": "sin texto"
+    },
+    {
+      "caseId": "artist:6172",
+      "batch": "artist-089",
+      "reason": "no parece estar en español"
+    },
+    {
+      "caseId": "artist:6186",
+      "batch": "artist-089",
+      "reason": "texto demasiado corto"
+    },
+    {
+      "caseId": "artist:6190",
+      "batch": "artist-089",
+      "reason": "texto demasiado corto"
+    },
+    {
+      "caseId": "artist:6209",
+      "batch": "artist-089",
+      "reason": "texto demasiado corto"
+    },
+    {
+      "caseId": "artist:6225",
+      "batch": "artist-089",
+      "reason": "texto demasiado corto"
+    },
+    {
+      "caseId": "artist:6228",
+      "batch": "artist-089",
+      "reason": "sin texto"
+    }
+  ],
+  "unknownCase": [],
+  "lostYears": [],
+  "notes": [
+    {
+      "caseId": "artist:2943",
+      "note": "La fuente s1 indica que se presentaron como Trío Venezuela en 1958 y menciona la grabación de pistas en 1957, mientras el catálogo fija la formación en 1955; la discrepancia se resolvió con el catálogo. La fuente s3 registra solo a tres integrantes y no menciona a Antonio Vásquez."
+    },
+    {
+      "caseId": "artist:3057",
+      "note": "El catálogo fecha Masterpiece and Mystery en 2009, mientras que la fuente venezolana especializada lo fecha en 2004 y lo describe como EP; se usó el año del catálogo. La fuente menciona como baterista definitivo a Rony Borges, mientras el catálogo también lo lista junto a Isaac Martinez como batería actual."
+    },
+    {
+      "caseId": "artist:3061",
+      "note": "Lobotoradio clasifica a la banda como pop/rock, mientras que el catálogo la sitúa en metal progresivo, sinfónico y gótico; se mantuvo la clasificación del catálogo."
+    },
+    {
+      "caseId": "artist:3104",
+      "note": "El catálogo registra la formación en 2013, mientras que la fuente la sitúa a finales de 2014; el catálogo indica a Daniel Venom y Jhonatan Gonzales como bateristas, pero la fuente menciona a Daniel Venom y luego a Edgar Osorio, sin coincidir en todos los nombres."
+    },
+    {
+      "caseId": "artist:3220",
+      "note": "Discrepancia en la formación: el catálogo sitúa a Jesús Carmona en el bajo y a Luis Martínez en la guitarra entre 2005 y 2011, mientras que la fuente de 2005 menciona a Rafael en el bajo; se ha omitido el nombre de este último por no constar en el catálogo."
+    },
+    {
+      "caseId": "artist:3360",
+      "note": "El catálogo registra el disco Arca (2017) como «other» dentro de un apartado de discos, sin más detalle de formato; la fuente también lista Xen y Mutant, que no figuran en el catálogo. El nombre de la ficha es «Arka» y el proyecto aparece como «Arca» en la fuente."
+    },
+    {
+      "caseId": "artist:3370",
+      "note": "La fuente Lobotoradio indica fecha de nacimiento desconocida, mientras que Sincopa señala el 8 de septiembre de 1965 en Caracas; se optó por el dato de Sincopa. Las grafías del nombre varían entre «Victor Castillo» y «Víctor Castillo»."
+    },
+    {
+      "caseId": "artist:3371",
+      "note": "El catálogo lo sitúa como banda de Venezuela, pero la fuente describe un proyecto de guitarristas del Reino Unido; identidad o país a revisar."
+    },
+    {
+      "caseId": "artist:3373",
+      "note": "El catálogo data Per Aspera Ad Astra en 2004, mientras que Sincopa la sitúa en 2006. Lobotoradio clasifica el proyecto como pop/rock, en contraste con el género new age del catálogo y de Sincopa."
+    },
+    {
+      "caseId": "artist:3380",
+      "note": "MusicBrainz indica inicio en 1962 y Potenza (Italia) como zona de inicio, pero sin confirmar si es fecha de nacimiento; se omite. Discogs menciona que fue formado por otro compositor cuyo identificador no se puede resolver."
+    },
+    {
+      "caseId": "artist:3381",
+      "note": "El catálogo clasifica la ficha como «band» y el tipo de entidad es artista; las fuentes confirman que se trata de un solista. Discrepancia menor: Last.fm y Discogs sitúan el lugar de nacimiento en Carora y Sincopa en el caserío La Candelaria, cerca de Carora; se optó por la formulación de Sincopa."
+    },
+    {
+      "caseId": "artist:3389",
+      "note": "El catálogo clasifica la ficha como «band» aunque las fuentes la describen como un pianista solista; se redactó como intérprete individual. El sello de Piano Works figura como Lyric/AVR en Sincopa y como «other» en el catálogo."
+    },
+    {
+      "caseId": "artist:3394",
+      "note": "El catálogo lista «Sola (2023) [other] — Oleta Music»; Sincopa registra también «Ella (2022)» con Oleta Music, que no aparece en el catálogo."
+    },
+    {
+      "caseId": "artist:3395",
+      "note": "El catálogo no lista «Romanza» (1994), presente en Sincopa; se incluyó por provenir de la fuente especializada."
+    },
+    {
+      "caseId": "artist:3396",
+      "note": "El catálogo clasifica la ficha como banda, aunque las fuentes la describen como persona (violinista y compositor)."
+    },
+    {
+      "caseId": "artist:3398",
+      "note": "La fuente indica que el dúo está considerado uno de los mejores del mundo; se omitió por ser una valoración no atribuida a una instancia concreta."
+    },
+    {
+      "caseId": "artist:3403",
+      "note": "El catálogo clasifica a la entidad como «band»; las fuentes la describen como pianista solista (persona). La fecha de nacimiento aparece como «10 mayo de 1070» en una fuente, probable errata por 1970, que es la que consta en el catálogo y en las demás fuentes."
+    },
+    {
+      "caseId": "artist:3404",
+      "note": "El catálogo clasifica la ficha como «band» con el disco Violin Concerto (1982), mientras la única fuente describe a una persona (director y compositor venezolano); identidad y tipo de entidad dudosos, sin datos biográficos suficientes."
+    },
+    {
+      "caseId": "artist:3407",
+      "note": "El catálogo incluye algunos discos que no aparecen en la fuente y viceversa (por ejemplo, Concierto Sentimental, Dos Mundos y Avenida Venezuela solo constan en la fuente; el catálogo fecha Por Venezuela en 2012 y la fuente en 2013); se privilegiaron los datos del catálogo."
+    },
+    {
+      "caseId": "artist:3408",
+      "note": "El catálogo clasifica la ficha como banda y género música clásica, pero la fuente la describe como pianista solista de jazz; se mezclan ambas descripciones. El dato «hermana de 8281475» resulta confuso: el perfil de Discogs parece referirse a otra persona (identificador sin nombre)."
+    },
+    {
+      "caseId": "artist:3412",
+      "note": "Discrepancia de fecha de fundación: el texto de la enciclopedia sitúa la fundación en 1930 y data los primeros ensayos en 1929, mientras que Sincopa indica 1928; en el texto se usa la fecha del catálogo (1930)."
+    },
+    {
+      "caseId": "artist:3416",
+      "note": "La fuente s2 titula «Tchaikosvky Espectacular» y no indica sello en varios discos; se usó la grafía «Tchaikovsky» del catálogo. Se omite la instrumentación detallada por tratarse de metadatos técnicos."
+    },
+    {
+      "caseId": "artist:3417",
+      "note": "La fuente de Last.fm describe a la Orquesta Sinfónica de Venezuela, no a la Simón Bolívar Symphony Orchestra; no se usaron sus datos. La ficha no tiene currentText."
+    },
+    {
+      "caseId": "artist:3421",
+      "note": "Discrepancia en el año de fundación: el catálogo y Sincopa indican 1945, mientras que MusicBrainz señala 1942. También difiere la grafía del nombre de una fundadora: «Flaminia de De Sola» (Sincopa) frente a «Flaminia de Sola» (MusicBrainz)."
+    },
+    {
+      "caseId": "artist:3422",
+      "note": "Discrepancia de fechas entre el catálogo y Sincopa, que data varios volúmenes en 1991; se usaron las del catálogo."
+    },
+    {
+      "caseId": "artist:3426",
+      "note": "El catálogo la clasifica como «band» y el expediente no aporta datos sobre agrupaciones propias; la fuente solo confirma nombre, país y año de nacimiento."
+    },
+    {
+      "caseId": "artist:3431",
+      "note": "La fuente Lobotoradio le atribuye créditos en discos de jazz, rock alternativo, salsa y world fusion que no aparecen en el catálogo; no se incorporaron por posible confusión con otro artista."
+    },
+    {
+      "caseId": "artist:3438",
+      "note": "Discrepancia de años entre fuentes: las carreras en las bandas de Chucho Sanoja, Los Melódicos y Porfi Jiménez figuran con años concretos en una fuente pero no se detallan en el catálogo; se optó por mencionarlas sin fechas. El número de discos de El Trabuco varía entre fuentes (cinco de estudio y dos en vivo)."
+    },
+    {
+      "caseId": "artist:3440",
+      "note": "Discrepancia menor de años y títulos entre fuentes: el catálogo lista Alfredo Naranjo y El Guajeo (Tributo a Joe Cuba) como 2001 y Alfredo Naranjo y El Guajeo como 2006; una fuente menciona Mexico Music Fest (En Vivo) en 2011 y otra en 2012; una fuente incluye discos no presentes en el catálogo (Lado A Lado B, En la Vía, Guajeo) y otra fecha (2015). El expediente no aclara si Alfredo Naranjo es proyecto en solitario o banda; el catálogo lo marca como banda."
+    },
+    {
+      "caseId": "artist:3441",
+      "note": "El catálogo lo registra como banda y la fuente lo describe como violinista solista; se mantiene el dato de violinista y se anota la discrepancia. La fuente s1 menciona el álbum de 2013 pero no el de 2021, que solo aparece en s2."
+    },
+    {
+      "caseId": "artist:3442",
+      "note": "El catálogo solo lista Umbayé (1999), Mambo Novo (2002) y Streets (2007); Sincopa y el directorio RHV añaden Americamereida (1991) y El Bailaor Negro (1994). El catálogo indica formación en 1990 y Lobotoradio coincide; no se resuelve si la banda mantiene actividad en la actualidad."
+    },
+    {
+      "caseId": "artist:3443",
+      "note": "El catálogo describe la entidad como banda de jazz, mientras que la fuente lo presenta como artista solista de violonchelo con repertorio de balada y pop; no se resuelve la discrepancia de tipo ni la coexistencia de ambos géneros."
+    },
+    {
+      "caseId": "artist:3444",
+      "note": "Sincopa indica que comenzó en la percusión a los cuatro años y el directorio RHV a los cinco; se optó por la formulación genérica «a temprana edad»."
+    },
+    {
+      "caseId": "artist:3447",
+      "note": "Discrepancia en la fecha de nacimiento: Lobotoradio indica 1989-12-08 en los datos estructurados y 13 de agosto de 1969 en el texto; se omite la fecha. No se incluyen los créditos de Children's Christmas (2005) por tratarse de una lista de apariciones."
+    },
+    {
+      "caseId": "artist:3448",
+      "note": "La fuente s2 indica nacimiento el 6 de mayo de 1987 en Caracas, dato que no aparece en el catálogo ni en las demás fuentes; se omitió del texto. El catálogo incluye únicamente Contrastes (2009) y Reveries (2018), mientras s3 añade Casa (2022) y varias colaboraciones; se priorizó el catálogo pero se conservaron las colaboraciones. Discrepancia en la grafía de un profesor: «Marian Ember» (s1) frente a otras variantes."
+    },
+    {
+      "caseId": "artist:3450",
+      "note": "El catálogo lo registra como banda con Baden Goyo como miembro, mientras que Discogs y MusicBrainz lo describen como persona (pianista y compositor); se redactó como solista. Discogs lo llama «synth player» y MusicBrainz «pianista y compositor»; se optó por la versión de MusicBrainz y Sincopa."
+    },
+    {
+      "caseId": "artist:3453",
+      "note": "El catálogo y MusicBrainz lo clasifican como banda y artista, respectivamente; las fuentes lo describen como músico solista. Discrepancia menor de grafía entre «Christmas' Saxes» y «Christmas Saxes»."
+    },
+    {
+      "caseId": "artist:3455",
+      "note": "Discrepancia menor de grafía y de créditos entre fuentes: «Biella Da Costa» (RHV, Sincopa) frente a «Biela DaCosta» (Wikipedia en inglés); Sincopa añade participaciones no mencionadas en las demás fuentes (Elisa Rego, Floria Márquez, Hugo Fuguet)."
+    },
+    {
+      "caseId": "artist:3456",
+      "note": "Discrepancia de año y título del segundo disco: el catálogo indica Jazz & Blues (1994); una fuente lo data en 1995 y otra lo titula Jazz & Blues Classics, reeditado en 2004 como Jazz & Blues. El tercer disco figura como En Navidad (2001) en el catálogo y en dos fuentes, y como En navidad (2002) en otra. La fecha y lugar de nacimiento (20 de julio de 1960, Willemstad, Curazao) provienen de fuentes y no constan en el catálogo."
+    },
+    {
+      "caseId": "artist:3460",
+      "note": "La fuente s1 escribe el segundo disco como «Unhibited Realm»; se usa la grafía del catálogo, «Uninhibited Realm». Lobotoradio lo etiqueta como pop/rock, en contradicción con el género jazz del catálogo y del resto de fuentes."
+    },
+    {
+      "caseId": "artist:3462",
+      "note": "La fuente Sincopa dice que nació en Maracaibo y reside en Miami; el catálogo solo indica Venezuela como país."
+    },
+    {
+      "caseId": "artist:3464",
+      "note": "El catálogo solo registra el disco Son Con Pajarillo (2007); las fuentes añaden otros álbumes no listados en el catálogo. Sincopa indica residencia en Nueva York, mientras RHV señala que desarrolla su carrera en Venezuela; no se incluyó la residencia por la discrepancia."
+    },
+    {
+      "caseId": "artist:3469",
+      "note": "El catálogo indica 2009 para el disco Encuentro y la fuente señala 2010; se usó el año del catálogo."
+    },
+    {
+      "caseId": "artist:3475",
+      "note": "Lobotoradio y Sincopa difieren en el título del primer disco de Jazztá Band: el catálogo y Sincopa registran Ángeles/Angeles (1996); Lobotoradio nombra Jazz desde Aldemaro (1997), que en Sincopa figura como disco colectivo. Las fechas de estudio (1976-1977 en tres instituciones) provienen de Lobotoradio y podrían ser erróneas o aproximadas."
+    },
+    {
+      "caseId": "artist:3477",
+      "note": "Las fuentes discrepan en el año y el sello de varios discos (Nightgames: Epic/1986 en catálogo y Sincopa; Sunset Harbor: Concord Jazz en Sincopa; Double Talk: Sony International; In The Zone: 2002 según RHV frente a 2006 según Last.fm) y en los reconocimientos Grammy (s1/s2 mencionan un Grammy Latino por Mamblue; s3 menciona dos nominaciones). Se usó el catálogo. La atribución de vocalista, compositor o arreglista (s3) no consta en el catálogo."
+    },
+    {
+      "caseId": "artist:3481",
+      "note": "La fuente s2 menciona la fundación de un grupo a finales de los años 1990 y agrupaciones (Agua De Luna, Grupo Instrumental de Cámara Multifonía) no confirmadas por las fuentes venezolanas; no se incluyeron. Discrepancia menor: s1 escribe «Los Sinverguenzas» sin diéresis."
+    },
+    {
+      "caseId": "artist:3483",
+      "note": "El catálogo lista cuatro discos de estudio (hasta 1984) mientras que otras fuentes mencionan cinco discos de estudio y siete álbumes en total; no se resuelve la discrepancia. Las fechas de los discos en vivo (1981) difieren del listado del catálogo y no se detallan en el texto."
+    },
+    {
+      "caseId": "artist:3484",
+      "note": "s1 menciona un álbum previsto para 2012 que no aparece en el catálogo; no se incluye."
+    },
+    {
+      "caseId": "artist:3489",
+      "note": "El catálogo lo clasifica como banda y las fuentes lo presentan como instrumentista individual; se mantiene el nombre sin resolver la discrepancia."
+    },
+    {
+      "caseId": "artist:3498",
+      "note": "Discrepancia de fecha de nacimiento: s1 y s2 indican 1963 (28 de enero, según s1) y s4 indica 1988-09-23; se optó por omitir la fecha."
+    },
+    {
+      "caseId": "artist:3499",
+      "note": "Discrepancias menores en años de edición de algunos discos entre el catálogo y las fuentes (por ejemplo, «El Venezolano»: 2000 en catálogo, 1999 en Last.fm; «30 Aniversario» y «Chano Pozo's Music» aparecen con año 2011 en el catálogo, atribuidos a sellos distintos en Sincopa)."
+    },
+    {
+      "caseId": "artist:3502",
+      "note": "Discrepancias entre fuentes en años de edición de Caribbean Colors (1992 en catálogo y Sincopa; 1994 en RHV) y Ambiance Café (1998 en catálogo, Sincopa y RHV; 1999 en La Venciclopedia y Lobotoradio); se usaron los del catálogo. El premio por Untitled Dreams se data en 1997 (RHV) o sin año (Sincopa, Lobotoradio)."
+    },
+    {
+      "caseId": "artist:3503",
+      "note": "El catálogo data Sinergia en 2014 y una fuente en 2013; se usa el año del catálogo. Discogs lo describe como bajista venezolano-estadounidense y Last.fm lo etiqueta como pop/rock, en contraste con el perfil de jazz y música venezolana de las demás fuentes."
+    },
+    {
+      "caseId": "artist:3504",
+      "note": "Discogs lo registra con la variante gráfica «Gustavo Caruci»; se conservó la grafía del catálogo. La fuente s3 indica residencia o nacimiento en Venezuela y formación con guitarra acústica, coincidente con s1."
+    },
+    {
+      "caseId": "artist:3507",
+      "note": "El catálogo lista «Musical Trip» como 2024 y la fuente RHV lo menciona como 2023; se usa la fecha del catálogo."
+    },
+    {
+      "caseId": "artist:3509",
+      "note": "La fecha de nacimiento y la ciudad de origen (Barquisimeto, 26 de abril de 1966) provienen de Sincopa y no se incluyeron por posible discrepancia con el resto del expediente; revisar. La grafía de algunos nombres varía entre fuentes (Nina & Merge/Nima & Merge, Whitney Housto/Whitney Houston)."
+    },
+    {
+      "caseId": "artist:3510",
+      "note": "La fuente s1 indica residencia en Caracas y en Miami sin fechas; el catálogo sitúa el origen en Venezuela. s2 asocia los discos Trippy Caribbean (2016) y Sangre (2018) a su nombre, pero no se detalla su participación en Sangre, por lo que no se incluyó."
+    },
+    {
+      "caseId": "artist:3514",
+      "note": "Nacionalidad: s1 afirma que es venezolano nacido en Caracas; el catálogo no incluye el campo nacionalidad. s2 indica nacimiento el 14 de septiembre de 1954 y residencia en España, mientras que s1 señala residencia en Miami; no se incluyen estos datos por posible discrepancia. s3 aporta créditos de arreglos, orquestación y dirección no recogidos en el texto."
+    },
+    {
+      "caseId": "artist:3515",
+      "note": "El catálogo registra el disco como «Jazz Quintet Plus Mi Buenaventura» (1996, [other]) y las fuentes como «Mi Buenaventura», con año 1996 en una y 1997 en otra; se optó por no fijar año en el texto."
+    },
+    {
+      "caseId": "artist:3517",
+      "note": "El catálogo lista dos discos y Sincopa añade «Cantos Vol.1» (2023); se omite por no figurar en el catálogo."
+    },
+    {
+      "caseId": "artist:3518",
+      "note": "El catálogo lo registra como banda, mientras que las fuentes lo presentan como el guitarrista Juan Ernesto Velásquez y sus proyectos paralelos; se unificó la ficha en un solo perfil. Se recomienda revisar si existen dos entidades separadas (solista y banda)."
+    },
+    {
+      "caseId": "artist:3522",
+      "note": "Discrepancia en el año y el título exacto de la segunda producción: el directorio RHV la data en los años noventa como «1 x 1»; el catálogo solo lista Hábitat (1995) y Sincopa no la recoge."
+    },
+    {
+      "caseId": "artist:3524",
+      "note": "Discogs cita como miembros a Carlos \"Nené\" Quintero y Alejandro García, que no coinciden con la lista de instrumentistas de ese perfil."
+    },
+    {
+      "caseId": "artist:3526",
+      "note": "El sello aparece como «Doodlebug Music» en el catálogo y como «Independent» en la fuente."
+    },
+    {
+      "caseId": "artist:3528",
+      "note": "El catálogo lista cuatro discos y Sincopa añade «Stories Without Words» (2020), que no aparece en el catálogo; también hay discrepancia en el año del Boston Jazz Society Award (1996 en Last.fm, 1997 en Discogs)."
+    },
+    {
+      "caseId": "artist:3534",
+      "note": "El catálogo clasifica la ficha como banda con un único miembro; la fuente lo describe como pianista solista, por lo que se redacta como músico individual."
+    },
+    {
+      "caseId": "artist:3535",
+      "note": "El catálogo lo sitúa en Tampa (Florida) y el género es smooth jazz; Lobotoradio lo lista como banda venezolana de pop/rock, discrepancia sin resolver."
+    },
+    {
+      "caseId": "artist:3540",
+      "note": "La fuente s1 indica nacimiento el 15 de marzo de 1961 y s2 solo el año 1961; se conserva el año. s2 añade el disco «On Different Paths» (2024), ausente del catálogo."
+    },
+    {
+      "caseId": "artist:3541",
+      "note": "Discrepancia de género: el catálogo y Sincopa la clasifican como jazz, mientras que Lobotoradio la cataloga como pop/rock; se siguió el criterio del catálogo."
+    },
+    {
+      "caseId": "artist:3542",
+      "note": "El catálogo y Sincopa sitúan a la banda en el género jazz, mientras que Lobotoradio la clasifica como pop/rock; se mantiene jazz según el catálogo. Sincopa indica años de actividad de algunos miembros hasta 2008 sin precisar si la banda sigue activa."
+    },
+    {
+      "caseId": "artist:3543",
+      "note": "La Venciclopedia indica fecha de nacimiento (25 de noviembre de 1963) y parentesco con la presentadora Cynthia Lander; se omiten por no poder contrastarse con el resto de fuentes."
+    },
+    {
+      "caseId": "artist:3546",
+      "note": "El catálogo indica formación en 2002 y una fuente señala el nacimiento de la agrupación en 2003; se usó el año del catálogo."
+    },
+    {
+      "caseId": "artist:3548",
+      "note": "El catálogo fecha «Inesperado» en 2008 y Discogs en 2009; se usó el año del catálogo. MusicBrainz sitúa el inicio del grupo en 2000. Discogs lo registra como Ensamble Nuevas Almas."
+    },
+    {
+      "caseId": "artist:3553",
+      "note": "Discrepancia entre fuentes: Last.fm describe el debut como próximo lanzamiento digital, mientras Sincopa lo fecha en 2025; se usa la fecha del catálogo. Discrepancia de grafía: «Andreas Morricone» (fuentes) frente a «Ennio Morricone» u otros; no se incluye el dato."
+    },
+    {
+      "caseId": "artist:3554",
+      "note": "Las fuentes discrepan en la fecha del primer disco («Cimarroneando»): el catálogo y Sincopa indican 1996, mientras Last.fm dice 1994; se usó 1995, año en que Sincopa sitúa la grabación. También hay discrepancia en el título del segundo disco («El Buen Camino» / «Por el Buen Camino») y en la nacionalidad de la ficha, que el catálogo describe como banda aunque las fuentes presentan a Orlando Poleo como percusionista solista."
+    },
+    {
+      "caseId": "artist:3556",
+      "note": "El catálogo data «Asimetria» en 1984 y Lobotoradio en 1983; se mantiene la ortografía del catálogo y se anota la discrepancia de año."
+    },
+    {
+      "caseId": "artist:3557",
+      "note": "El expediente presenta el nombre como artista y el catálogo como banda de jazz; probablemente se trate del pianista Oscar \"El Negro\" Maggi, pero la ficha está registrada como banda. Revisar identidad y tipo de entidad. Falta fecha y lugar de residencia actual, y no se indican integrantes de la banda."
+    },
+    {
+      "caseId": "artist:3562",
+      "note": "Last.fm y Sincopa coinciden en el año de nacimiento (1959) pero difieren en el lugar de origen: Last.fm (s1/s3) dice que nació en Venezuela y Sincopa indica que nació en Caracas y reside en Los Ángeles. El dato de residencia no se incluyó por falta de confirmación en otras fuentes."
+    },
+    {
+      "caseId": "artist:3563",
+      "note": "El catálogo registra Piano En Canto Venezolano como 2006 y su segunda parte como 2008, mientras que otras fuentes dan 2007 y 2009; se usaron las fechas del catálogo. El catálogo clasifica la ficha como banda, aunque las fuentes la presentan como solista."
+    },
+    {
+      "caseId": "artist:3566",
+      "note": "El año de El radio está en la cocina difiere entre fuentes (2005 y 2006); se usó el de Sincopa. Sincopa indica residencia en Londres, Reino Unido."
+    },
+    {
+      "caseId": "artist:3573",
+      "note": "La fuente lo clasifica como pop/rock, mientras que el catálogo lo registra como jazz; se mantiene el género del catálogo."
+    },
+    {
+      "caseId": "artist:3576",
+      "note": "Discrepancia de género: el catálogo y Sincopa lo sitúan en el jazz, mientras que Lobotoradio lo clasifica como pop/rock."
+    },
+    {
+      "caseId": "artist:3585",
+      "note": "El catálogo registra un disco de 2011 titulado Theoretical & Practical, mientras las fuentes solo mencionan un demo de 2005 con ese nombre; se ha tratado como obras distintas, a revisar."
+    },
+    {
+      "caseId": "artist:3589",
+      "note": "Discrepancia de fecha de nacimiento entre Sincopa (19 de junio de 1963) y Lobotoradio (19 de junio de 1973)."
+    },
+    {
+      "caseId": "artist:3593",
+      "note": "El catálogo registra a Xavier Padilla como banda de fusión latina y jazz; las fuentes lo describen como solista y bajista, por lo que puede requerir revisión el tipo de ficha."
+    },
+    {
+      "caseId": "artist:3597",
+      "note": "El catálogo registra el país como Venezuela, mientras la fuente lo presenta como un quinteto con integrantes de Cuba, Venezuela y Canadá radicado en Vancouver; se indica la nacionalidad solo por el origen de sus miembros, no como banda venezolana."
+    },
+    {
+      "caseId": "artist:3602",
+      "note": "MusicBrainz sitúa el lugar de nacimiento en Honduras y el área en Venezuela, lo que coincide con Discogs; la fuente de Lobotoradio parece mezclar créditos de sesión con una discografía propia distinta."
+    },
+    {
+      "caseId": "artist:3610",
+      "note": "El texto de la fuente Last.fm mezcla fechas y proyectos de la carrera solista de Alfredo Naranjo con la actividad de la banda; se ha procurado distinguir ambos planos. El año del concierto «Dos grandes de la salsa y el jazz latino» (mayo de 2004) no consta verificado fuera de esa fuente."
+    },
+    {
+      "caseId": "artist:3616",
+      "note": "El catálogo lo clasifica como banda, mientras que la fuente lo presenta como artista solista; no se resuelve la discrepancia."
+    },
+    {
+      "caseId": "artist:3617",
+      "note": "El catálogo data Twenty Years Later en 1996 y la fuente en 1995; se usó el año del catálogo. La fuente menciona también el sencillo Lulu´s song (2022), no incluido por el límite de títulos."
+    },
+    {
+      "caseId": "artist:3649",
+      "note": "Discrepancia entre fuentes sobre la ciudad de residencia: algunas indican Venezuela y otras el sur de Florida o Nueva York. El catálogo lo sitúa en Venezuela; se omite la ciudad concreta de residencia actual. La fuente s1 menciona el disco como «Ninth Life» (2012) y el catálogo como «Ninth Life Acoustic Project (2012)»."
+    },
+    {
+      "caseId": "artist:3650",
+      "note": "Las fechas y títulos de la discografía de Lobotoradio (1971-1988) no coinciden con los del catálogo; se usaron solo los del catálogo."
+    },
+    {
+      "caseId": "artist:3669",
+      "note": "La fuente Lobotoradio data el disco Lunas en 1988 y lo adscribe al pop/rock, mientras el catálogo solo registra El Gallo (1995) en jazz; no se pudo resolver la discrepancia."
+    },
+    {
+      "caseId": "artist:3674",
+      "note": "Discrepancia de año de formación: el catálogo y la mayoría de las fuentes indican 1979; un comentario de Last.fm señala 1980. Discrepancia en el apellido del bajista: el catálogo usa «Carlos Puchi» y algunas fuentes «Carlos Pucci»."
+    },
+    {
+      "caseId": "artist:3679",
+      "note": "El catálogo lista a Marcial Istúriz como vocalista y a Alexis Escobar como flautista, mientras que Sincopa los sitúa como ex-miembros; se conservan en el texto como parte de la trayectoria del grupo."
+    },
+    {
+      "caseId": "artist:3680",
+      "note": "Last.fm fecha la creación del grupo entre los años 1960 y 1970, en contradicción con 1990 indicado por el catálogo y Sincopa."
+    },
+    {
+      "caseId": "artist:3693",
+      "note": "Discrepancias en los sellos de algunos discos: el catálogo atribuye Caribeña (1995) a Personal Music/Sonográfica y Mi tumbao (1987) y Daiquirí 5 (1989) sin sello, mientras Sincopa los asigna a EMI-Rodven. Lobotoradio data Caribeña en 1997 y Lo mejor de Daiquirí en 1996, y menciona un disco Caribe cubano (2020) que no aparece en el catálogo. Se usó la fecha del catálogo para la muerte de Danilo Aponte (1988), que Last.fm también indica; se omitió su mención de miembros no presentes en el catálogo (Juan Ángel Esquivel, Rubén García Toro)."
+    },
+    {
+      "caseId": "artist:3695",
+      "note": "Catálogo y Sincopa difieren en el año y sello de «Como Solíamos Cantar» (1996 sin sello frente a 1998 independiente) y de «Del Caribe Al Sur» (1997 frente a 1999); se usaron los años del catálogo. Discogs solo registra el día de nacimiento como 5 de diciembre, sin año."
+    },
+    {
+      "caseId": "artist:3697",
+      "note": "El catálogo no lista trompetas ni los vocalistas Fucho González, Hernán Omero y José Rodríguez, que sí aparecen en la fuente de Sincopa."
+    },
+    {
+      "caseId": "artist:3698",
+      "note": "Contradicción de fechas y sellos entre el catálogo y s2: el catálogo data Tiempo de Esperanza en 1988 sin sello, y s2 lo marca como independiente; s2 añade una edición de Lo Mejor de Esperanza Márquez (2000, Universal/Sonográfica) no recogida en el catálogo y da 1979 como año de El Canto de Esperanza, que coincide. Se omite la fecha de nacimiento exacta (solo s2 la aporta) y no se incluye la edición de 2000 por no figurar en el catálogo."
+    },
+    {
+      "caseId": "artist:3704",
+      "note": "El catálogo data el disco en 1967 y Lobotoradio lo sitúa en 1966; se usa el año del catálogo."
+    },
+    {
+      "caseId": "artist:3708",
+      "note": "Sincopa lista al timbalero como José \"Cheo\" Navarro, mientras el catálogo lo registra como José \"Cheo\" Rodríguez; se mantuvo la grafía del catálogo. Sincopa atribuye la compilación de 1998 a CBS-Columbia y el catálogo no indica sello."
+    },
+    {
+      "caseId": "artist:3721",
+      "note": "El catálogo lista «Los Guaraguao (1978)» y, por separado, un disco «Por Un Nuevo Amanecer (1983) [other] — Top-Hits»; Sincopa lo data en 1983 y La Venciclopedia menciona «Nuestras manos» en 1982 y «Por un nuevo amanecer» al año siguiente. No se pudo resolver con certeza la fecha exacta de este último álbum."
+    },
+    {
+      "caseId": "artist:3725",
+      "note": "Discrepancia en el título del primer disco: la Venciclopedia y el catálogo lo llaman «Vivirás»; Discogs menciona «Volverás» como primer sencillo/álbum. Se unificó como «Vivirás» por el catálogo."
+    },
+    {
+      "caseId": "artist:3730",
+      "note": "Discrepancia en la fecha de nacimiento: el catálogo y Sincopa indican 1944 o no la fijan, mientras Discogs señala 1945. El catálogo clasifica la ficha como \"band\" pese a tratarse de una solista."
+    },
+    {
+      "caseId": "artist:3737",
+      "note": "El material de las fuentes es fundamentalmente la bio de presentación del disco; no hay datos de trayectoria ni estado actual de la orquesta."
+    },
+    {
+      "caseId": "artist:3747",
+      "note": "Discrepancia en el año de fundación: el catálogo y Sincopa indican 1965, mientras que Last.fm, Discogs y MusicBrainz señalan 1962 (año de fundación del Conjunto Rítmico Juventud, antecesor). Se usó 1965 según el catálogo."
+    },
+    {
+      "caseId": "artist:3751",
+      "note": "MusicBrainz indica que el grupo terminó en 1979, dato que contradice la discografía y la actividad posterior recogida en el catálogo y en Sincopa; no se ha incluido. Hay discrepancias menores en los años de fundación (1976 en catálogo y Sincopa, 1977 en Discogs)."
+    },
+    {
+      "caseId": "artist:3752",
+      "note": "La fuente la describe como banda de pop/rock, mientras el catálogo la adscribe al pop latino y la salsa; se mantiene la clasificación del catálogo."
+    },
+    {
+      "caseId": "artist:3753",
+      "note": "Discrepancia en la fecha de nacimiento: 16 de noviembre de 1951 (Discogs, MusicBrainz) frente a 16 de noviembre de 1952 (Sincopa)."
+    },
+    {
+      "caseId": "artist:3754",
+      "note": "Discogs indica «variantes de nombre»: Canelita Medina; se trata de su madre, no de un alias de la artista, por lo que no se incluyó como dato de nombre alternativo."
+    },
+    {
+      "caseId": "artist:3759",
+      "note": "El catálogo la clasifica como banda, pero la fuente de MusicBrainz describe a Miguel Ángel Bosch como persona (artista solista) de Venezuela; identidad no resuelta."
+    },
+    {
+      "caseId": "artist:3765",
+      "note": "El catálogo registra el disco Billo's Happy Boys de 1962 mientras MusicBrainz sitúa a la orquesta entre 1937 y 1940 y la da por sucedida por Billo's Caracas Boys; la fecha del disco no encaja con ese periodo y no hay fuente que lo explique."
+    },
+    {
+      "caseId": "artist:3791",
+      "note": "El catálogo lista «La Gaita Llegó» como de 2004 y no incluye «Chispeante Maracaibo» (1965) ni «Oscar D'León y Los Blanco» (1991), presentes en fuentes; se omitieron por no figurar en el catálogo. Discrepancia en la grafía del bajista: Welkedis Salazar (catálogo) frente a Welquedis Salazas (Last.fm)."
+    },
+    {
+      "caseId": "artist:3792",
+      "note": "Discrepancia en el año de fundación: el catálogo y Sincopa indican 1966, mientras que Discogs señala 1965 y Lobotoradio menciona 1965 como inicio de actividad."
+    },
+    {
+      "caseId": "artist:3803",
+      "note": "Discrepancia en la fecha de nacimiento: Wikipedia indica el 26 de agosto de 1933, mientras que Sincopa, Discogs y MusicBrainz señalan el 22 de agosto de 1933. Se usó la fecha de Wikipedia por ser fuente en español; conviene revisar."
+    },
+    {
+      "caseId": "artist:3806",
+      "note": "El catálogo lista los discos como tipo «band», aunque las fuentes lo describen como intérprete solista; se optó por la descripción de las fuentes. Sincopa incluye un disco de 1974, «Arpa y Bandola», y otro de 1983, «Típico En Cuerdas» (Disqueras Unidas), no presentes en el catálogo."
+    },
+    {
+      "caseId": "artist:3814",
+      "note": "Discrepancia sobre el lugar de nacimiento: El Tigre (Sincopa, Discogs) frente a Margarita (Last.fm)."
+    },
+    {
+      "caseId": "artist:3820",
+      "note": "El catálogo lista un segundo disco titulado «Grupo Vera» en 1984 (Palacio De La Música) además del de 1980 (Discos Arcuamara); se mantienen ambos por figurar en catálogo y fuentes. La fuente s2 indica sede en Maracay además de la fundación en La Victoria. No consta fecha de disolución."
+    },
+    {
+      "caseId": "artist:3822",
+      "note": "Last.fm indica que nació en Ciudad Bolívar (Estado Bolívar), mientras que el catálogo, Sincopa y Discogs señalan San Tomé (Estado Anzoátegui); se optó por el dato del catálogo."
+    },
+    {
+      "caseId": "artist:3827",
+      "note": "El catálogo atribuye el Vol. 8 a «Con Venezuela 4» (1979) y la fuente a «Vol. 8 Canta Jesús Sevillano»; se opta por no nombrar ese volumen ante la discrepancia."
+    },
+    {
+      "caseId": "artist:3834",
+      "note": "La fuente de Last.fm está centrada en la trayectoria solista de Aquiles Báez y no aporta datos concretos sobre el dúo; parte de su contenido podría no corresponder al proyecto Machado & Báez."
+    },
+    {
+      "caseId": "artist:3841",
+      "note": "Last.fm data el primer disco en 2000 y Sincopa y el catálogo en 2001; se usó 2001. Last.fm nombra a Marina Bravo y Zeneida Rodríguez como vocalistas, dato que no aparece en el catálogo."
+    },
+    {
+      "caseId": "artist:3845",
+      "note": "El catálogo data los volúmenes de Palacio entre 1976 y 1992, mientras Sincopa indica fechas distintas (1974, 1975) para algunos tomos y Last.fm menciona un disco infantil de 1978 (Canción del Barco Velero) que no aparece en el catálogo; se ha dado prioridad al catálogo."
+    },
+    {
+      "caseId": "artist:3850",
+      "note": "La fuente menciona a Roselyn Rondón y Mariana Cardona en mandolina, datos ausentes del catálogo; la fecha del tercer disco figura como «200x» en la fuente, por lo que no se precisa."
+    },
+    {
+      "caseId": "artist:3859",
+      "note": "El catálogo data la formación en 1990; una fuente menciona 15 años de labor en una fecha que no se precisa y el disco 15 Años es de 2018. La fuente de Last.fm afirma que tenía cuatro discos propios en el momento de ese texto, mientras el catálogo y otras fuentes enumeran siete."
+    },
+    {
+      "caseId": "artist:3893",
+      "note": "El catálogo registra «Yo También Quiero Cantar» (1976, Divensa) y la fuente lo sitúa en 1977; se usó el año del catálogo. No consta si sigue activo."
+    },
+    {
+      "caseId": "artist:3898",
+      "note": "El catálogo lista «Valses Danzas Sueños» en 1995 y el disco dedicado a Juan B. Plaza en 1998; Sincopa los ubica en 1995 y 1998 respectivamente, pero también registra un disco de aguinaldos de 1982 que el catálogo no recoge. El vínculo familiar con el director de orquesta aparece sin nombre en la fuente de Discogs."
+    },
+    {
+      "caseId": "artist:3899",
+      "note": "El lugar de nacimiento consta en una fuente (Caracas); el catálogo no lo indica. La fuente s3 sitúa su pertenencia al Ensamble Gurrufío entre 1984 y 2014, mientras s1 lo presenta como miembro fundador sin fecha de salida."
+    },
+    {
+      "caseId": "artist:3902",
+      "note": "MusicBrainz indica 1960 como inicio de actividad; no hay más datos que lo confirmen. Lobotoradio lo vincula a Arepa 3000 (2000) y al pop/rock, en contradicción con las demás fuentes."
+    },
+    {
+      "caseId": "artist:3904",
+      "note": "Discrepancia no resuelta: una fuente indica seis discos con su agrupación «Huáscar Barradas y Maracaibo» y otra cinco; el catálogo no incluye ese repertorio, sino discos como solista. También hay discrepancia entre fuentes sobre si incluyó salsa (una) o no (otra) entre los géneros que interpreta."
+    },
+    {
+      "caseId": "artist:3906",
+      "note": "s3 (Discogs) indica que el grupo se creó en 1976 en Caracas, mientras que el catálogo y s1/s2 señalan San Cristóbal, estado Táchira; se usó el dato del catálogo."
+    },
+    {
+      "caseId": "artist:3911",
+      "note": "La fuente indica 'Estado Nueva Espada' con un posible error tipográfico ('Nueva Espaçola' en la fuente original); se ha optado por no incluir el estado en el texto para evitar errores."
+    },
+    {
+      "caseId": "artist:3914",
+      "note": "Last.fm escribe el apellido sin tilde (Cardenas) y el catálogo usa Cárdenas; se siguió la grafía del catálogo. El disco Stories Without Words (2020) aparece en Sincopa pero no en el catálogo: se omitió. No consta en el expediente si el proyecto es en solitario o con formación estable."
+    },
+    {
+      "caseId": "artist:3917",
+      "note": "El catálogo data el disco Alzheimer en 2001, mientras la fuente sitúa la formación del proyecto en 2002; no se resuelve la discrepancia."
+    },
+    {
+      "caseId": "artist:3928",
+      "note": "El catálogo clasifica el disco como «other» y de género «World ethnic», mientras Lobotoradio lo describe como synth-pop e ítalo disco; no se resuelve la discrepancia de género. El título del sencillo neerlandés aparece como «La Flor de La Montaña» en una fuente y «La flor de la montaña» en otra; se usa la grafía de la fuente."
+    },
+    {
+      "caseId": "artist:3929",
+      "note": "El catálogo clasifica la ficha como banda; las fuentes la describen como pianista y compositora solista. Se resuelve a favor de las fuentes."
+    },
+    {
+      "caseId": "artist:3930",
+      "note": "Last.fm menciona el debut como «Juegos Acústicos», lo que podría ser traducción de Acoustic Play; se usó el título del catálogo."
+    },
+    {
+      "caseId": "artist:3961",
+      "note": "La ficha figura como banda en el catálogo y como persona en MusicBrainz; el material disponible corresponde a un violonchelista solista. El lugar de nacimiento y residencia aparecen vacíos en la fuente."
+    },
+    {
+      "caseId": "artist:3965",
+      "note": "El catálogo lista a Héctor Molina como miembro de la banda del expediente y solo registra el disco C4 Trío y Desorden Público - Pa' Fuera (2016); las fuentes describen su trayectoria como solista y con otras agrupaciones. Discrepancia de año de fundación de C4 Trío: 2006 en Sincopa y 2005 en Discogs; se usó 2005. Sincopa indica que reside en Miami, Florida."
+    },
+    {
+      "caseId": "artist:3973",
+      "note": "Posible confusión en Lobotoradio: la ficha de Jorge Torres asocia bandas de hardcore punk y una producción en «Borrachos y Bolingas Vol. 2» (2005), datos que no encajan con el mandolinista de música tradicional del catálogo; conviene verificar si se trata del mismo músico."
+    },
+    {
+      "caseId": "artist:3975",
+      "note": "La fuente s3 lo vincula a El Supremo Hongo Imaginario, dato no confirmado por las demás fuentes; no se incluyó."
+    },
+    {
+      "caseId": "artist:3980",
+      "note": "Sincopa fecha la formación en 1989, mientras que el catálogo sitúa las incorporaciones de Todd y Gamboa en 1976 y 1978; no se resuelve la discrepancia."
+    },
+    {
+      "caseId": "artist:3982",
+      "note": "El catálogo y Sincopa dan el año 2011 para «Sinvergüensuranzas», mientras Discogs indica 2012; se usó el del catálogo. Discogs data «Bichoneando» en 2000 y el catálogo y Sincopa en 2001; se usó 2001. Sobre los integrantes actuales: el catálogo lista a Raúl Picón y Sergio Torres como miembros, mientras Sincopa los da como ex-miembros y añade a Heriberto Rojas; no se mencionaron instrumentistas en el texto para evitar la contradicción."
+    },
+    {
+      "caseId": "artist:3985",
+      "note": "El catálogo lo clasifica como banda, mientras que MusicBrainz lo clasifica como persona. Sincopa indica que reside en Dublín, Irlanda, pero no aclara si es su lugar de nacimiento."
+    },
+    {
+      "caseId": "artist:3988",
+      "note": "El expediente lo clasifica como banda, pero la única fuente lo describe como instrumentista (flauta y cuatro); se redacta como solista. Reside en Filadelfia según la fuente, dato omitido por posible desactualización."
+    },
+    {
+      "caseId": "artist:3991",
+      "note": "Discrepancia de grafía: el catálogo registra el disco de 1993 como «Venezolada» y la fuente Sincopa como «Venezolada»/«Venezolada»; Discogs no confirma la fecha de residencia en Madrid."
+    },
+    {
+      "caseId": "artist:3992",
+      "note": "El catálogo y Sincopa indican formación en 1996, mientras Last.fm señala inicios en 1993; se optó por la fecha del catálogo."
+    },
+    {
+      "caseId": "artist:3998",
+      "note": "El catálogo indica que el disco \"Recoveco\" es de 1997, mientras que una fuente lo sitúa en 1977; se usó la fecha del catálogo."
+    },
+    {
+      "caseId": "artist:4005",
+      "note": "Las fuentes mencionan tres producciones discográficas y una cuarta en preparación, pero el catálogo solo recoge dos discos (2009 y 2011) y no se puede confirmar la existencia de un tercer título ni de la grabación anunciada para 2010."
+    },
+    {
+      "caseId": "artist:4007",
+      "note": "La ficha usa el nombre Terracota, pero Discogs recoge la variante Terracotta para un estudio brasileño, sin relación con el grupo."
+    },
+    {
+      "caseId": "artist:4014",
+      "note": "El catálogo clasifica la ficha como «band», pero la fuente la presenta como una cantante solista; se mantiene el dato de la fuente y se deja la discrepancia para revisión."
+    },
+    {
+      "caseId": "artist:4330",
+      "note": "El catálogo clasifica la ficha como banda, pero las fuentes la describen como solista; el catálogo no indica integrantes."
+    },
+    {
+      "caseId": "artist:4337",
+      "note": "Discrepancias de año entre fuentes: «Latino» figura como 2004 en el catálogo y Sincopa, y 2005 en La Venciclopedia; «Pa' los chamos» como 2008 en catálogo y Sincopa y 2007 en La Venciclopedia. La Venciclopedia menciona el disco «Raíces y motivos» (con Hernán Gamboa) que no aparece en el catálogo."
+    },
+    {
+      "caseId": "artist:4339",
+      "note": "El catálogo registra «Salón Carmín (1991)» como disco del artista; la fuente solo menciona la formación del grupo y no detalla discografía. La tercera vocalista aparece identificada solo por un número en la fuente."
+    },
+    {
+      "caseId": "artist:4347",
+      "note": "El catálogo atribuye «Ad Libitum» (2015) y Lobotoradio registra «La quema» (2012); no se especifica en qué bandas o proyectos participó ni su rol exacto más allá de la percusión."
+    },
+    {
+      "caseId": "artist:4360",
+      "note": "Información muy escasa: solo consta que es un grupo vocal de Venezuela y un miembro. Falta trayectoria, discografía y demás integrantes."
+    },
+    {
+      "caseId": "artist:4385",
+      "note": "La fuente menciona «Octeto Académico De Caracas» como miembro (Discogs); dato ambiguo que no se incorpora al texto."
+    },
+    {
+      "caseId": "artist:4475",
+      "note": "El expediente corresponde al proyecto «Aldemaro Romero y Su Onda Nueva», pero la fuente disponible ofrece sobre todo la biografía del director, no de la agrupación."
+    },
+    {
+      "caseId": "artist:4521",
+      "note": "El catálogo registra un único disco, «Fiestón '79» (1979), mientras Last.fm menciona más de 22 grabaciones; no se resuelve la discrepancia."
+    },
+    {
+      "caseId": "artist:4530",
+      "note": "La fuente proviene de un perfil de Discogs y está redactada en primera persona y con datos poco precisos (por ejemplo, el nombre inicial «Los Propios de La Vigía» frente a «Los Propios del Vigía»). Se recomienda verificar la grafía del nombre, la formación exacta y la autoría de la información con una fuente venezolana especializada."
+    },
+    {
+      "caseId": "artist:4544",
+      "note": "El material de Last.fm describe la banda en presente, mientras que Lobotoradio sitúa su actividad entre 2006 y 2017; no hay fuente que confirme si sigue activa."
+    },
+    {
+      "caseId": "artist:4564",
+      "note": "La fuente s2 data la actividad entre 1999 y 2006, mientras el catálogo y s1 indican formación en 2000."
+    },
+    {
+      "caseId": "artist:4585",
+      "note": "La fuente lo describe como «colombiano o venezolano»; se tomó la nacionalidad venezolana del catálogo. No hay datos de integrantes, discografía ni años."
+    },
+    {
+      "caseId": "artist:4586",
+      "note": "Las fuentes no permiten confirmar si los EP y los álbumes self-released son los mismos lanzamientos; la lista del blog no aclara el formato de cada referencia."
+    },
+    {
+      "caseId": "artist:4596",
+      "note": "MusicBrainz indica 2013 como año de inicio, mientras el catálogo y Discogs señalan 2014; se usó el dato del catálogo."
+    },
+    {
+      "caseId": "artist:4598",
+      "note": "Discrepancia en el año de formación: el catálogo y MusicBrainz indican 1978, Last.fm señala 1976; también hay discrepancia en los miembros, ya que Last.fm no menciona a Gabriela Gamboa. Se usaron los datos del catálogo y de Discogs."
+    },
+    {
+      "caseId": "artist:4600",
+      "note": "La fuente s1 indica que «Falsos Hermanos» es un EP de siete canciones, mientras que s2 lo lista como álbum de 2013 junto a «Pasos Syncopados» (2017); se optó por la formulación de EP para 2013 y álbum para 2017 según s2, pero la grafía del segundo título varía entre «Pasos Sincopados» y «Pasos Syncopados»."
+    },
+    {
+      "caseId": "artist:4604",
+      "note": "La única fuente disponible no aporta datos biográficos utilizables; solo el catálogo, que indica que es una banda venezolana."
+    },
+    {
+      "caseId": "artist:4606",
+      "note": "El catálogo indica formación en 1978, mientras que Discogs la sitúa «a mediados de los setenta»; se optó por una formulación amplia y se deja constancia de la discrepancia."
+    },
+    {
+      "caseId": "artist:4610",
+      "note": "Las fuentes discrepan sobre las víctimas: la fuente en inglés afirma que murieron todos los integrantes, mientras la española indica que tres fallecieron en el lugar y el bajista después; se siguió esta última. También hay variación en la grafía del nombre del bajista (Xander/Xánder)."
+    },
+    {
+      "caseId": "artist:4613",
+      "note": "El catálogo indica formación en 1933; Discogs señala 1935. Se usó el año del catálogo. Discogs menciona a Eduardo Serrano como parte de la alineación de cuarteto, pero no lo incluye entre los miembros principales."
+    },
+    {
+      "caseId": "artist:4633",
+      "note": "Discrepancia de año de inicio: el catálogo y MusicBrainz indican 1998 y 2000 respectivamente; prevalece el del catálogo. La fecha exacta de salida del primer disco (mediados de 1999) proviene de Last.fm y no está confirmada por otras fuentes."
+    },
+    {
+      "caseId": "artist:4640",
+      "note": "La nacionalidad y la ciudad de origen no son coincidentes entre las fuentes: se presenta como «Moscow based, London born, Caracas rooted» y también como banda con base en Londres. No hay fuentes venezolanas especializadas que confirmen la identidad ni la formación."
+    },
+    {
+      "caseId": "artist:4647",
+      "note": "El catálogo indica formación en 2009, mientras que la fuente de Last.fm señala que el debut se publicó en 2020; no se aclara si son fechas compatibles (inicio del proyecto vs. primer disco)."
+    },
+    {
+      "caseId": "artist:4649",
+      "note": "Sin datos biográficos: solo consta que es un grupo venezolano; no hay trayectoria, integrantes ni discografía."
+    },
+    {
+      "caseId": "artist:4653",
+      "note": "El catálogo fea la formación en 2009, mientras una fuente menciona un premio de Canción del Año en 2006; no se resuelve la discrepancia."
+    },
+    {
+      "caseId": "artist:4658",
+      "note": "Lobotoradio lista otros integrantes (Christian Guiralt, Enzo Querci, Julio Martínez, Kino Pastor, Ricardo Toscano) y clasifica la banda como heavy metal, mientras el catálogo y Discogs la describen como grindcore; no se pudo resolver la discrepancia de formación ni de género."
+    },
+    {
+      "caseId": "artist:4660",
+      "note": "El catálogo indica formación en 1968; Discogs sitúa la actividad de 1969 a 1972 y Lobotoradio de 1969 a 1973. Se toma el dato del catálogo para la formación y se resume la actividad sin fijar fecha de disolución."
+    },
+    {
+      "caseId": "artist:4675",
+      "note": "Contradicción de país no resuelta: el catálogo indica Venezuela (formación 1997) y la única fuente la describe como banda colombiana de Bucaramanga con debut en 1999. Sin datos venezolanos que confirmen la ficha."
+    },
+    {
+      "caseId": "artist:4717",
+      "note": "El catálogo indica formación en 1967, mientras que las fuentes dan 1966."
+    },
+    {
+      "caseId": "artist:4719",
+      "note": "El expediente no aclara si Carlos Guillén (s3) forma parte estable de la banda o solo colaboró: s3 lo menciona como integrante de Mango Funk y del proyecto, mientras que s1 y s5 solo listan a los hermanos Romero como miembros."
+    },
+    {
+      "caseId": "artist:4726",
+      "note": "El catálogo y TheAudioDB sitúan la formación en 2005 o 2006, mientras Last.fm fecha el inicio profesional en 2008; se optó por mencionar el inicio profesional de 2008 sin contradecir la formación."
+    },
+    {
+      "caseId": "artist:4733",
+      "note": "La fuente de Wikipedia incluye listas extensas de integrantes y de temas por álbum, resumidas aquí; no se pudo confirmar la vigencia de la formación ni el estado actual de la banda."
+    },
+    {
+      "caseId": "artist:4735",
+      "note": "Discrepancia en el año de inicio: el catálogo indica formación en 2015 y MusicBrainz señala 2013."
+    },
+    {
+      "caseId": "artist:4737",
+      "note": "Chapter 3.0 aparece anunciado como futuro cierre de la trilogía; no consta su publicación."
+    },
+    {
+      "caseId": "artist:4738",
+      "note": "El número 4950192 que aparece en la fuente parece un identificador de otro artista de Discogs insertado por error; no se ha usado."
+    },
+    {
+      "caseId": "artist:5779",
+      "note": "La fuente s1 describe a un dramaturgo y director de teatro homónimo; se descartó por posible confusión de identidad. Solo hay datos musicales mínimos."
+    },
+    {
+      "caseId": "artist:5786",
+      "note": "Discrepancia en la fecha de nacimiento: Last.fm indica 22 de septiembre de 1934 y Lobotoradio 22 de noviembre de 1934. Se opta por la de Last.fm al no poder resolver el conflicto."
+    },
+    {
+      "caseId": "artist:5798",
+      "note": "El segundo apellido de la artista varía entre las fuentes: el catálogo no lo precisa, Last.fm indica «Reglero Montaner» y Wikipedia en español «Reglero Rodríguez». No se incluyó en el texto."
+    },
+    {
+      "caseId": "artist:5830",
+      "note": "Discrepancia menor de grafía: una fuente escribe el conjunto como 'Sentimento Apureño' y otra 'Sentimiento Apureño'; se usó la forma más probable. La frase 'En la actualidad reside en la ciudad de Barinas y continúa activo profesionalmente' de una fuente es anterior a su fallecimiento en 2002 y se omitió."
+    },
+    {
+      "caseId": "artist:5832",
+      "note": "El catálogo lo registra como solista y MusicBrainz como grupo; no hay datos sobre integrantes, ciudad, género ni trayectoria."
+    },
+    {
+      "caseId": "artist:5840",
+      "note": "Las fuentes incluyen numerosos datos biográficos y de farándula ajenos a su faceta musical (concursos de belleza, escándalos, telenovelas, películas, perfumes, maternidad); se han omitido por no ser pertinentes a una ficha musical."
+    },
+    {
+      "caseId": "artist:5846",
+      "note": "MusicBrainz lo identifica como conductor; el catálogo solo indica que es solista, sin otros datos biográficos."
+    },
+    {
+      "caseId": "artist:5849",
+      "note": "La fuente s1 describe Lara Project como banda y s3 como dúo de artistas; se optó por «proyecto musical». No consta año para la mayoría de las canciones ni para el sello LV CIUDVD."
+    },
+    {
+      "caseId": "artist:5856",
+      "note": "sin datos: solo se dispone del nombre, el tipo (solista) y el país; MusicBrainz no aporta datos biográficos verificables."
+    },
+    {
+      "caseId": "artist:5866",
+      "note": "El expediente solo aporta el nombre, el país y el tipo (solista); la fuente únicamente confirma la existencia de un perfil con ese nombre en Last.fm (78 oyentes), sin datos biográficos."
+    },
+    {
+      "caseId": "artist:5869",
+      "note": "El nombre del álbum aparece ilegible o incompleto en la fuente («?», posiblemente «?»); se reproduce tal cual. La cifra de oyentes de Last.fm se omitió por ser un dato volátil."
+    },
+    {
+      "caseId": "artist:5872",
+      "note": "Material muy escaso: la única fuente aporta solo un recuento de oyentes en Last.fm y no confirma género, ciudad ni trayectoria; el dato de etiqueta venezolana es una prueba de identidad, no un hecho biográfico."
+    },
+    {
+      "caseId": "artist:5873",
+      "note": "El expediente solo aporta el país, el tipo y dos títulos de la fuente; falta información sobre integrantes, género, trayectoria y años."
+    },
+    {
+      "caseId": "artist:5876",
+      "note": "El nombre real aparece como «Roosevelt Franklin Stuart Paredes» en Discogs y como «Franklin Stuart Paredes» en los hechos de la misma fuente."
+    },
+    {
+      "caseId": "artist:5889",
+      "note": "La fuente lo sitúa «based in Argentina» y no menciona Venezuela; el catálogo lo registra como venezolano. Discrepancia sin resolver sobre el país de residencia u origen."
+    },
+    {
+      "caseId": "artist:5893",
+      "note": "sin datos: únicamente consta el nombre, el país y el tipo de ficha; la única fuente solo indica un recuento de oyentes"
+    },
+    {
+      "caseId": "artist:5902",
+      "note": "Discrepancia en el año de edición de «Maravillosa gente»: las fuentes indican 1972 (grabación a comienzos de ese año) y 1973; se optó por 1972. Posible discrepancia menor en la grafía de «Chema Pellico» y en la pertenencia de Rafa Gálvez a Vainica Doble según Last.fm."
+    },
+    {
+      "caseId": "artist:5904",
+      "note": "Discrepancia en la fecha de nacimiento: Discogs indica 19 de septiembre de 1918, mientras que Last.fm señala 1920. La causa de la muerte descrita en Last.fm (ordenada por Marcos Pérez Jiménez) es una versión no confirmada."
+    },
+    {
+      "caseId": "artist:5905",
+      "note": "Last.fm afirma que es venezolana, dato que no consta en el catálogo más allá de la etiqueta de país; se ha dado por válido."
+    },
+    {
+      "caseId": "artist:5912",
+      "note": "Discrepancia menor: Last.fm y Discogs sitúan el fallecimiento en abril de 2000 (Discogs sin día exacto) y coinciden con La Venciclopedia en el 5 de abril de 2000; se usa la fecha de esta última. Discogs escribe erróneamente «Venezualano» y Last.fm lo llama «cubano-venezolano»; el catálogo solo indica Venezuela, sin nacionalidad explícita."
+    },
+    {
+      "caseId": "artist:5917",
+      "note": "La fuente s1 menciona que «Justicia Lirical» saldría en 2009 y «undERContruction» a finales de ese año o principios de 2010; s2 no aporta años, por lo que las fechas de esos lanzamientos no se afirman en el texto."
+    },
+    {
+      "caseId": "artist:5930",
+      "note": "La única fuente disponible es una ficha de plataforma de escucha que no aporta datos biográficos; solo consta el país y el tipo de proyecto."
+    },
+    {
+      "caseId": "artist:5936",
+      "note": "MusicBrainz indica fecha de nacimiento 1996-07-25 y Discogs 25 de junio de 1996; se omite la fecha por la discrepancia."
+    },
+    {
+      "caseId": "artist:5940",
+      "note": "sin datos musicales: la única fuente lo identifica como político venezolano y solo menciona una colaboración con la banda Enigma; identidad dudosa como artista del catálogo"
+    },
+    {
+      "caseId": "artist:5941",
+      "note": "sin datos: el expediente solo contiene el nombre, el tipo y el país; la única fuente aporta un contador de oyentes"
+    },
+    {
+      "caseId": "artist:5950",
+      "note": "La fuente menciona que fundó una agrupación en 1963 pero no aclara su nombre (aparece solo un identificador numérico); conviene revisar la identidad de ese conjunto. No hay datos de fallecimiento ni de su trayectoria posterior."
+    },
+    {
+      "caseId": "artist:5965",
+      "note": "La fuente s1 indica que nació «de padres venezolanos» pero no menciona el año de nacimiento; s2 afirma que nació en 1978, dato que no aparece en el catálogo. No se pudo confirmar la nacionalidad explícita en las fuentes más allá de la referencia al país del artista; se omitió el año de nacimiento por falta de respaldo en el catálogo."
+    },
+    {
+      "caseId": "artist:5970",
+      "note": "Discrepancia de año de nacimiento: 1874 (Last.fm en español y Discogs) frente a 1875 (Last.fm en inglés); se tomó 1874. La fuente en español menciona nacionalidad alemana, dato no confirmado por las demás fuentes."
+    },
+    {
+      "caseId": "artist:5975",
+      "note": "El expediente solo aporta el nombre, el tipo (solista) y el país; no hay datos biográficos, discografía ni trayectoria."
+    },
+    {
+      "caseId": "artist:6003",
+      "note": "La fecha de nacimiento difiere entre fuentes: Wikipedia indica 10 de mayo de 1979 y MusicBrainz 9 de mayo de 1979."
+    },
+    {
+      "caseId": "artist:6009",
+      "note": "Discrepancia de nacionalidad entre fuentes: una lo menciona como venezolano-argentino y otra lo describe como judío residente en Bruselas, Bélgica. No se incluye lo referente a la familia judía por posible sesgo/contradicción."
+    },
+    {
+      "caseId": "artist:6016",
+      "note": "La fuente indica que nació en Caracas y luego se mudó a Maracay, ambas ciudades venezolanas; no hay fecha de nacimiento ni nombre completo confirmado en fuentes venezolanas especializadas."
+    },
+    {
+      "caseId": "artist:6033",
+      "note": "Datos escasos: sin biografía disponible. La cifra de oyentes procede de una plataforma de streaming y solo consta como dato orientativo."
+    },
+    {
+      "caseId": "artist:6044",
+      "note": "sin datos: la única fuente disponible parece de otra entidad y el catálogo solo aporta país y tipo"
+    },
+    {
+      "caseId": "artist:6060",
+      "note": "Posible discrepancia en el nombre real: una fuente indica Geraldo G. Desir y otra Gregorio G. Desir. La primera fuente incluye enlaces promocionales y datos de registro de propiedad intelectual, omitidos por ruido."
+    },
+    {
+      "caseId": "artist:6061",
+      "note": "sin datos biográficos aparte del nombre y el país"
+    },
+    {
+      "caseId": "artist:6106",
+      "note": "Fuente limitada a un listado de títulos sin fechas, integrantes ni contexto; no se pudo desarrollar más la trayectoria."
+    },
+    {
+      "caseId": "artist:6111",
+      "note": "sin datos: la única fuente disponible corresponde a un conjunto argentino homónimo y no aporta datos sobre el Conjunto Santa Anita venezolano"
+    },
+    {
+      "caseId": "artist:6145",
+      "note": "Las fuentes discrepan sobre el lugar de nacimiento: una lo sitúa en Hato Corozal (Casanare) y otra en Sogamoso (Boyacá). El catálogo lo registra como artista de Venezuela, país donde desarrolló parte de su carrera."
+    },
+    {
+      "caseId": "artist:6167",
+      "note": "El catálogo lo registra como banda de Venezuela, pero la única fuente lo identifica como productor de música electrónica (persona). Identidad dudosa; sin datos biográficos utilizables."
+    },
+    {
+      "caseId": "artist:6172",
+      "note": "Datos muy limitados: no constan año de inicio, integrantes, ciudad ni sello. La fuente lista diez títulos, lo que excede el límite de tres temas nombrados."
+    },
+    {
+      "caseId": "artist:6182",
+      "note": "No consta información sobre discografía, formación ni trayectoria; «Cattleya» y «Embrujo» podrían ser discos o temas, sin datos que lo confirmen."
+    },
+    {
+      "caseId": "artist:6186",
+      "note": "Sin datos biográficos, de género, trayectoria o discografía aparte del nombre, el tipo y el país; no se pudo redactar más."
+    },
+    {
+      "caseId": "artist:6209",
+      "note": "Solo se dispone del catálogo (país y tipo) y de un recuento de oyentes en Last.fm; no hay datos sobre trayectoria, formación, género ni discografía. La fuente s1 se ha usado únicamente como confirmación de identidad, no aporta hechos biográficos."
+    },
+    {
+      "caseId": "artist:6213",
+      "note": "Discogs no aclara si «Jesus Mendez» es el nombre real del proyecto; la cifra de oyentes de Last.fm se omite por ser un dato cambiante. No hay fechas ni integrantes en las fuentes."
+    },
+    {
+      "caseId": "artist:6218",
+      "note": "El catálogo lo registra como solista; la fuente no aclara si es banda o solista y no aporta más datos biográficos (trayectoria, integrantes, fechas)."
+    },
+    {
+      "caseId": "artist:6225",
+      "note": "Sin datos biográficos, discográficos ni de trayectoria; solo consta que es un artista individual de Venezuela."
+    },
+    {
+      "caseId": "artist:6228",
+      "note": "sin datos: solo se conoce el nombre y el país; el catálogo lo lista como banda pero MusicBrainz lo clasifica como persona, identidad dudosa"
+    },
+    {
+      "caseId": "artist:862",
+      "note": "El catálogo indica Caracas como ciudad, mientras que las fuentes señalan Punto Fijo, Edo. Falcón, como lugar de origen y base; se omite la ciudad en el texto para evitar el dato contradictorio."
+    }
+  ],
+  "discarded": 188
+}
