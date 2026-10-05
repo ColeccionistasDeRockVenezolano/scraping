@@ -119,16 +119,26 @@ export async function transferGenreAssignments(
     // lado ya tiene otro principal, baja a secundario.
     const role = winner["role"] === "primary" && keepRows.some((other) => other !== twin && isPrimary(other)) ? "secondary" : winner["role"];
     await client.query(`UPDATE ${table} SET superseded_by_id=$1 WHERE superseded_by_id=$2`, [twin["id"], row["id"]]);
+    // A quién cede la fila que gana, leído de la base: un paso anterior pudo
+    // repuntarlo (la fila en memoria guarda el id de antes). Una ganadora
+    // desplazada conserva a quién cede; si no lo tiene, sigue la del gemelo.
+    const winnerSupersededBy = winner === twin ? twin["superseded_by_id"]
+      : (await client.query<{ s: string | null }>(`SELECT superseded_by_id::text AS s FROM ${table} WHERE id=$1`, [row["id"]])).rows[0]?.s ?? null;
+    const status = winner["status"] === "superseded" && winnerSupersededBy === null && twin["superseded_by_id"] === null ? twin["status"] : winner["status"];
+    const supersededBy = status === "superseded" ? (winnerSupersededBy ?? twin["superseded_by_id"]) : null;
     await client.query(`DELETE FROM ${table} WHERE id=$1`, [row["id"]]);
     await client.query(`
       UPDATE ${table} SET role=$2, status=$3, confidence=$4, source_kind=$5, source_id=$6, raw_value=$7,
              decided_by=$8, decided_at=$9, decision_rule=$10, decision_kind=$11, decision_note=$12,
-             superseded_by_id=$13, claim_ids=$14::bigint[], evidence=$15::jsonb, updated_at=now()
+             superseded_by_id=$13, claim_ids=$14::bigint[], evidence=$15::jsonb,
+             external_source_id=$16, external_ref=$17, updated_at=now()
        WHERE id=$1`, [
-      twin["id"], role, winner["status"], winner["confidence"], winner["source_kind"], winner["source_id"], winner["raw_value"],
+      twin["id"], role, status, winner["confidence"], winner["source_kind"], winner["source_id"], winner["raw_value"],
       winner["decided_by"], winner["decided_at"], winner["decision_rule"], winner["decision_kind"], winner["decision_note"],
-      winner === twin ? twin["superseded_by_id"] : null,
+      supersededBy,
       unionIds(twin["claim_ids"], row["claim_ids"]), JSON.stringify(unionEvidence(twin["evidence"], row["evidence"])),
+      // La procedencia externa viaja con la fila que gana (album_genres_external_chk).
+      winner["external_source_id"] ?? null, winner["external_ref"] ?? null,
     ]);
   }
 
