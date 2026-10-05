@@ -282,7 +282,7 @@ def _tab_datos():
     now = time.time()
     d = {"bloq15": 0, "bloq_ult": None, "ev": None, "ult_ts": 0, "run_start": 0,
          "cookies": None, "cookies_live": None, "caps_ts": [], "clicker": None,
-         "fase2_total": None, "sup_arranque": None, "sup_relanzos": 0,
+         "sup_arranque": None, "sup_relanzos": 0,
          "sup_ult": None, "latido_ts": 0, "telegram": [],
          "fase1_mark": os.path.exists("/tmp/crv-scrapling-fase1mark")}
     try:
@@ -309,9 +309,6 @@ def _tab_datos():
                     d["run_start"] = int(time.mktime(time.strptime(m.group(1), "%Y-%m-%d %H:%M:%S")))
                 except Exception:
                     pass
-            m = re.search(r"fase 2 \(discos\): (\d+) fichas", ln)
-            if m:
-                d["fase2_total"] = int(m.group(1))
     except Exception:
         pass
     try:
@@ -423,9 +420,11 @@ def tablero_html(estado, cola, nota):
                 f'<div class="sub">{sub}</div></div>')
 
     c_art = card("Artistas (fase 1)", f"{art_ok} / {tot}", f"faltan {faltan} · {pct} %", barra=pct)
-    if d.get("fase2_total"):
-        bp2 = int(rel_ok * 100 / max(d["fase2_total"], 1))
-        c_dis = card("Discos (fase 2)", f"{rel_ok} / {d['fase2_total']}", f"{bp2} % de la cola de discos", barra=bp2)
+    n_rel = len(rels)
+    if n_rel:
+        bp2 = int(rel_ok * 100 / n_rel)
+        c_dis = card("Discos (fase 2)", f"{rel_ok} / {n_rel}",
+                     f"{bp2} % de los discos conocidos · pendientes {n_rel - rel_ok}", barra=bp2)
     else:
         c_dis = card("Discos (fase 2)", "—", f"arranca al cerrar la fase 1 · faltan {faltan} artistas")
     c_rit = card("Ritmo", (f"~{rate:.1f}/min" if rate else "—"),
@@ -476,7 +475,9 @@ def tablero_html(estado, cola, nota):
             '<div class="sub">Hitos fase 1 (25/50/75 %) · resumen cada 2 h · atascos · relanzos · cierre.</div></div>')
 
     ufilas = []
-    for href, e in list(estado.items())[-9:][::-1]:
+    recientes_ev = sorted((kv for kv in estado.items() if kv[1].get("at")),
+                          key=lambda kv: _tab_epoch(kv[1]["at"]), reverse=True)[:9]
+    for href, e in recientes_ev:
         t = e.get("at") or ""
         et = _tab_epoch(t) if t else 0
         kind = "disco" if e.get("kind") == "release" else "artista"
