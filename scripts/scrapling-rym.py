@@ -353,14 +353,63 @@ def _tab_datos():
     return d
 
 
+OUTDIR_NUEVOS = "/home/brian/apps/Coleccionistas De Rock Venezolano/data/raw/fuentes-web-2026-10-01/rym-nuevos"
+
+
+def _cola_discos(estado):
+    """Cola REAL de discos: dedupe de las releases listadas en las páginas de
+    artistas capturadas, contra el estado (la misma cuenta que usa el
+    capturador). Caché de 10 min en /tmp para no leer 1.591 páginas por render."""
+    cache = "/tmp/crv-recon/cola-discos-cache.json"
+    try:
+        c = json.load(open(cache, encoding="utf-8"))
+        if time.time() - c.get("ts", 0) < 600:
+            return c
+    except Exception:
+        pass
+    from urllib.parse import unquote
+
+    def ok(e):
+        return bool(e) and (e.get("name") or e.get("og")) and (e.get("og") or e.get("nTracks", 0) or e.get("nGen", 0))
+
+    pages = os.path.join(OUTDIR_NUEVOS, "pages")
+    todas = set()
+    try:
+        nombres = os.listdir(pages)
+    except Exception:
+        nombres = []
+    for nombre in nombres:
+        if not nombre.endswith(".json") or nombre.startswith("rel_"):
+            continue
+        try:
+            d = json.load(open(os.path.join(pages, nombre), encoding="utf-8"))
+        except Exception:
+            continue
+        for r in ((d.get("rec") or {}).get("rows") or []):
+            h = unquote(r.get("h") or "")
+            if h.startswith("https://rateyourmusic.com"):
+                h = h[len("https://rateyourmusic.com"):]
+            h = h.split("?")[0].split("#")[0].rstrip("/")
+            if h:
+                todas.add(h)
+    okn = sum(1 for h in todas if ok(estado.get(h)))
+    pend = len(todas) - okn
+    sin_entry = sum(1 for h in todas if h not in estado)
+    c = {"ts": int(time.time()), "todas": len(todas), "ok": okn, "pend": pend,
+         "sin_entry": sin_entry, "con_entry": pend - sin_entry}
+    try:
+        json.dump(c, open(cache, "w", encoding="utf-8"))
+    except Exception:
+        pass
+    return c
+
+
 def tablero_html(estado, cola, nota):
     """Tablero v2: métricas globales, salud (supervisor/sesión/muros) y avisos."""
     from html import escape as esc
     now = time.time()
     tot = len(cola)
     art_ok = sum(1 for r in cola if es_ok_artista(estado.get(norm_href(r["rymHref"])) or {}))
-    rels = [e for e in estado.values() if e.get("kind") == "release"]
-    rel_ok = sum(1 for e in rels if es_ok_release(e))
     d = _tab_datos()
     ev = d.get("ev") or {}
     pct = (art_ok * 100 // tot) if tot else 0
@@ -420,11 +469,12 @@ def tablero_html(estado, cola, nota):
                 f'<div class="sub">{sub}</div></div>')
 
     c_art = card("Artistas (fase 1)", f"{art_ok} / {tot}", f"faltan {faltan} · {pct} %", barra=pct)
-    n_rel = len(rels)
-    if n_rel:
-        bp2 = int(rel_ok * 100 / n_rel)
-        c_dis = card("Discos (fase 2)", f"{rel_ok} / {n_rel}",
-                     f"{bp2} % de los discos conocidos · pendientes {n_rel - rel_ok}", barra=bp2)
+    cola_d = _cola_discos(estado)
+    if cola_d.get("todas"):
+        bp2 = int(cola_d["ok"] * 100 / cola_d["todas"])
+        c_dis = card("Discos (fase 2)", f"{cola_d['ok']} / {cola_d['todas']}",
+                     f"{bp2} % de la cola real · pendientes {cola_d['pend']} "
+                     f"(sin visitar {cola_d['sin_entry']} · reintento {cola_d['con_entry']})", barra=bp2)
     else:
         c_dis = card("Discos (fase 2)", "—", f"arranca al cerrar la fase 1 · faltan {faltan} artistas")
     c_rit = card("Ritmo", (f"~{rate:.1f}/min" if rate else "—"),
@@ -544,6 +594,10 @@ def tablero_html(estado, cola, nota):
            ".fbtn:hover{border-color:#3b5b8f}"
            "#q{background:#12171e;border:1px solid #2c3644;border-radius:7px;color:#e6e9ee;padding:5px 10px;font-size:12.5px;min-width:200px}"
            "h2{font-size:13px;margin:18px 0 8px;color:#aab6c4;font-weight:600}"
+           ".secsep{margin:30px 0 12px;padding:10px 14px;background:linear-gradient(90deg,#1a2436,#12161d);border:1px solid #2c3644;border-left:4px solid #3f7fd9;border-radius:11px;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}"
+           ".secsep .n{font-size:13px;font-weight:800;color:#9cc4ff;background:#1c2c47;border:1px solid #33507c;border-radius:8px;padding:2px 10px;flex:none}"
+           ".secsep h2{margin:0;font-size:15.5px;color:#eef2f8}"
+           ".secsep .d{color:#8b98a9;font-size:11.5px;margin-left:auto;text-align:right}"
            "#wrap{max-height:72vh;overflow:auto;border:1px solid #232b36;border-radius:10px}")
     js = ("(function(){"
           "function hace(el){var t=+el.getAttribute('data-t');if(!t){el.textContent='—';return;}"
@@ -574,8 +628,8 @@ def tablero_html(estado, cola, nota):
             f'<div class="hdr"><h1>CRV · «nuevos» — captura RYM</h1><span class="pill {pcls}">{ptxt}</span>'
             f'<span class="upd">Actualizado <span class="ago" data-t="{int(now)}">{time.strftime("%H:%M:%S")}</span> · auto-refresco 10 s</span></div>'
             + banner
+            + _sep_nuevos(art_ok, tot)
             + '<div class="grid">' + c_art + c_dis + c_rit + c_eta + c_ult + c_mur + c_ses + c_sup + c_tg + '</div>'
-            + _fragmento_extracciones()
             + '<h2>Últimas capturas</h2><div class="card"><table><tr><th>Nombre</th><th>Tipo</th><th>Hace</th></tr>'
             + "".join(ufilas) + '</table></div>'
             + f'<h2>Cola completa — artistas ({tot})</h2>'
@@ -585,16 +639,26 @@ def tablero_html(estado, cola, nota):
             + '<input id="q" placeholder="filtrar por nombre…" ><span id="cnt" class="dim"></span></div>'
             + '<div id="wrap"><table id="tbl"><thead><tr><th>Artista</th><th>Estado</th><th>Hora</th></tr></thead><tbody>'
             + "".join(filas) + '</tbody></table></div>'
+            + _fragmento_extracciones()
             + f"<script>{js}</script></body></html>")
 
 
 def _fragmento_extracciones():
-    """Sección embebida del tablero de extracciones (enlaces + bios), si existe."""
-    try:
-        with open("/tmp/crv-recon/crv-extracciones-fragmento.html", encoding="utf-8") as f:
-            return f.read()
-    except Exception:
-        return ""
+    """Secciones embebidas de enlaces y bios (tablero de extracciones), si existen."""
+    partes = []
+    for p in ("/tmp/crv-recon/crv-extracciones-fragmento-enlaces.html",
+              "/tmp/crv-recon/crv-extracciones-fragmento-bios.html"):
+        try:
+            with open(p, encoding="utf-8") as f:
+                partes.append(f.read())
+        except Exception:
+            pass
+    return "".join(partes)
+
+
+def _sep_nuevos(art_ok, tot):
+    return ('<div class="secsep"><span class="n">1</span><h2>Captura «nuevos» — artistas y discos</h2>'
+            f'<span class="d">fase 1: {art_ok}/{tot} artistas · fase 2: discos en curso</span></div>')
 
 
 def escribir_tablero(outdir, estado, cola, nota="en marcha"):
@@ -653,7 +717,9 @@ def main():
     ap.add_argument("--base-max", type=float, default=12.0)
     args = ap.parse_args()
 
+    global OUTDIR_NUEVOS
     outdir = args.outdir
+    OUTDIR_NUEVOS = outdir
     pages_dir = os.path.join(outdir, "pages")
     os.makedirs(pages_dir, exist_ok=True)
     os.makedirs("/tmp/crv-recon", exist_ok=True)

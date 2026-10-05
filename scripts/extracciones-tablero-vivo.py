@@ -23,7 +23,8 @@ REPO = "/home/brian/apps/Coleccionistas De Rock Venezolano"
 CAMP = Path(REPO) / "reports/streaming-links-2026-10-04/campana"
 BIOS = Path(REPO) / "data/raw/fuentes-web-2026-10-01/rym-bios"
 OUT_MAIN = "/tmp/crv-recon/crv-extracciones-tablero.html"
-OUT_FRAG = "/tmp/crv-recon/crv-extracciones-fragmento.html"
+OUT_FRAG_ENL = "/tmp/crv-recon/crv-extracciones-fragmento-enlaces.html"
+OUT_FRAG_BIO = "/tmp/crv-recon/crv-extracciones-fragmento-bios.html"
 OUT_COPIA = Path(REPO) / "reports/streaming-links-2026-10-04/tablero.html"
 CACHE = Path("/tmp/crv-recon/extracciones-cache.json")
 HIST = Path("/tmp/crv-recon/extracciones-hist.jsonl")
@@ -189,8 +190,11 @@ def main():
         f'<span class="{"ok" if v == "active" else "warn"}">{esc(n)}: {esc(v)}</span>' for n, v in servicios)
 
     css = """<style>
-.ex-wrap{font:13px/1.45 system-ui,'Segoe UI',Roboto,sans-serif;margin:18px 0}
-.ex-wrap h2{font-size:15px;margin:14px 0 4px;color:#e6e9ee}
+.secsep{margin:30px 0 12px;padding:10px 14px;background:linear-gradient(90deg,#1a2436,#12161d);border:1px solid #2c3644;border-left:4px solid #3f7fd9;border-radius:11px;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.secsep .n{font-size:13px;font-weight:800;color:#9cc4ff;background:#1c2c47;border:1px solid #33507c;border-radius:8px;padding:2px 10px;flex:none}
+.secsep h2{margin:0;font-size:15.5px;color:#eef2f8}
+.secsep .d{color:#8b98a9;font-size:11.5px;margin-left:auto;text-align:right}
+.ex-wrap{font:13px/1.45 system-ui,'Segoe UI',Roboto,sans-serif;margin:12px 0}
 .ex-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:10px;margin:8px 0}
 .ex-card{background:#151a21;border:1px solid #232b36;border-radius:10px;padding:11px 13px}
 .ex-card h3{margin:0 0 6px;font-size:10.5px;text-transform:uppercase;letter-spacing:.09em;color:#8b98a9;font-weight:600}
@@ -205,8 +209,10 @@ def main():
 .ex-ok{color:#6fe39a}.ex-warn{color:#ffcf6f}.ex-dim{color:#8b98a9}
 </style>"""
 
-    frag = f"""<div class="ex-wrap">{css}
-<h2>Enlaces · redes sociales y plataformas de streaming (por artista y por álbum)</h2>
+    frag_enl = f"""{css}
+<div class="secsep"><span class="n">2</span><h2>Enlaces — redes sociales y plataformas de streaming</h2>
+<span class="d">por perfil de artista y por álbum</span></div>
+<div class="ex-wrap">
 <div class="ex-grid">
   <div class="ex-card"><h3>Campaña en curso</h3><div class="ex-big">{n_camp} / {TOTAL_ART}</div>
     <div class="ex-sub">pendientes {TOTAL_ART - n_camp} · ritmo ~{f"{rate:.1f}/min" if rate else "—"} · ETA {eta or "—"} ·
@@ -223,7 +229,12 @@ def main():
 <tr><th>Plataforma</th><th>Perfiles</th><th>Álbumes</th><th>En BD</th><th>Fuzzy</th></tr>
 {"".join(filas_plat) or "<tr><td colspan=5 class=ex-dim>sin datos todavía</td></tr>"}
 </table>
-<h2>Bios · pestaña de biografía de RYM</h2>
+</div>"""
+
+    frag_bio = f"""{css}
+<div class="secsep"><span class="n">3</span><h2>Bios — biografía de RYM</h2>
+<span class="d">cola de artistas sin bio con slug RYM</span></div>
+<div class="ex-wrap">
 <div class="ex-grid">
   <div class="ex-card"><h3>Cola de bios</h3><div class="ex-big">{bios_cap} / {n_cola + bios_cap}</div>
     <div class="ex-sub">pendientes {n_cola} · {esc(bios_estado)} · solo artistas sin bio con slug RYM</div>
@@ -239,9 +250,9 @@ def main():
     doc = ("<!doctype html><meta charset=\"utf-8\"><title>CRV · extracciones — enlaces y bios</title>"
            "<meta http-equiv=\"refresh\" content=\"15\">"
            "<style>body{background:#0e1116;color:#e6e9ee;margin:0;padding:6px 18px 30px}"
-           "a{color:#6cb6ff}</style>" + frag + "</body>")
+           "a{color:#6cb6ff}</style>" + frag_enl + frag_bio + "</body>")
 
-    for p, txt in ((OUT_MAIN, doc), (OUT_FRAG, frag), (str(OUT_COPIA), doc)):
+    for p, txt in ((OUT_MAIN, doc), (OUT_FRAG_ENL, frag_enl), (OUT_FRAG_BIO, frag_bio), (str(OUT_COPIA), doc)):
         try:
             Path(p).parent.mkdir(parents=True, exist_ok=True)
             Path(p).write_text(txt, encoding="utf-8")
