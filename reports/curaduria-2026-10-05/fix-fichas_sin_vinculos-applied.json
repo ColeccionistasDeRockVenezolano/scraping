@@ -1,0 +1,274 @@
+[
+ {
+  "findingId": 464575,
+  "label": "Fundación V.E.S.",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 1793,
+   "name": "Fundación V.E.S."
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468638,
+  "label": "A&B",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 1925,
+   "name": "A&B"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468763,
+  "label": "CDDVD/Integra",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2054,
+   "name": "CDDVD/Integra"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468862,
+  "label": "Taguapica/Latin World",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2156,
+   "name": "Taguapica/Latin World"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468864,
+  "label": "Taguapica/CDDVD",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2158,
+   "name": "Taguapica/CDDVD"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468553,
+  "label": "WBG Records",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 1836,
+   "name": "WBG Records"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468665,
+  "label": "América/Promus",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 1953,
+   "name": "América/Promus"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468715,
+  "label": "BMG U.S. Latin",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2004,
+   "name": "BMG U.S. Latin"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468729,
+  "label": "LD Vzla/Pyraphon",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2018,
+   "name": "LD Vzla/Pyraphon"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468736,
+  "label": "Balboa/Cigarrón",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2025,
+   "name": "Balboa/Cigarrón"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468842,
+  "label": "CVG",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2136,
+   "name": "CVG"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468852,
+  "label": "Joropo",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2146,
+   "name": "Joropo"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468860,
+  "label": "Taguapica",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2154,
+   "name": "Taguapica"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468870,
+  "label": "Balboa/Universal",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2164,
+   "name": "Balboa/Universal"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468939,
+  "label": "Independent/Dorian",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2233,
+   "name": "Independent/Dorian"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468737,
+  "label": "Los Melódicos",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2026,
+   "name": "Los Melódicos"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ }
+]

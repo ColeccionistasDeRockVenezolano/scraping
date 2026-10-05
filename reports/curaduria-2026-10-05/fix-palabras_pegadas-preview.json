@@ -1,0 +1,1016 @@
+[
+ {
+  "findingId": 18947,
+  "label": "RawayanaLand",
+  "action": null,
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "el hallazgo no tiene una corrección disponible: hay que editar la ficha"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 2784,
+  "label": "FrancisLai",
+  "action": "separar_palabras",
+  "status": "pending",
+  "before": {
+   "field": "name",
+   "value": "FrancisLai"
+  },
+  "after": {
+   "field": "name",
+   "value": "Francis Lai"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 320925,
+  "label": "En Vivo CorpBanca",
+  "action": "separar_palabras",
+  "status": "pending",
+  "before": {
+   "field": "title",
+   "value": "En Vivo CorpBanca"
+  },
+  "after": {
+   "field": "title",
+   "value": "En Vivo Corp Banca"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 341025,
+  "label": "BlackMetal Venezuela",
+  "action": "separar_palabras",
+  "status": "pending",
+  "before": {
+   "field": "name",
+   "value": "BlackMetal Venezuela"
+  },
+  "after": {
+   "field": "name",
+   "value": "Black Metal Venezuela"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 341026,
+  "label": "NecroNauseA Records",
+  "action": "separar_palabras",
+  "status": "pending",
+  "before": {
+   "field": "name",
+   "value": "NecroNauseA Records"
+  },
+  "after": {
+   "field": "name",
+   "value": "Necro NauseA Records"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 341027,
+  "label": "NecroHell",
+  "action": null,
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "el hallazgo no tiene una corrección disponible: hay que editar la ficha"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 343639,
+  "label": "GoldChamber Mastering",
+  "action": "separar_palabras",
+  "status": "pending",
+  "before": {
+   "field": "name",
+   "value": "GoldChamber Mastering"
+  },
+  "after": {
+   "field": "name",
+   "value": "Gold Chamber Mastering"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 343640,
+  "label": "GreySun Records",
+  "action": "separar_palabras",
+  "status": "pending",
+  "before": {
+   "field": "name",
+   "value": "GreySun Records"
+  },
+  "after": {
+   "field": "name",
+   "value": "Grey Sun Records"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 343642,
+  "label": "GoreGrind DEMO",
+  "action": "separar_palabras",
+  "status": "pending",
+  "before": {
+   "field": "title",
+   "value": "GoreGrind DEMO"
+  },
+  "after": {
+   "field": "title",
+   "value": "Gore Grind DEMO"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 343643,
+  "label": "BreakOut",
+  "action": null,
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "el hallazgo no tiene una corrección disponible: hay que editar la ficha"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 343644,
+  "label": "MoshPit",
+  "action": null,
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "el hallazgo no tiene una corrección disponible: hay que editar la ficha"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 462110,
+  "label": "Alex (RicochetCcs)",
+  "action": "separar_palabras",
+  "status": "pending",
+  "before": {
+   "field": "name",
+   "value": "Alex (RicochetCcs)"
+  },
+  "after": {
+   "field": "name",
+   "value": "Alex (Ricochet Ccs)"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 462111,
+  "label": "Sergio LordDeath",
+  "action": "separar_palabras",
+  "status": "pending",
+  "before": {
+   "field": "name",
+   "value": "Sergio LordDeath"
+  },
+  "after": {
+   "field": "name",
+   "value": "Sergio Lord Death"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 462112,
+  "label": "CyberFido's",
+  "action": "separar_palabras",
+  "status": "pending",
+  "before": {
+   "field": "name",
+   "value": "CyberFido's"
+  },
+  "after": {
+   "field": "name",
+   "value": "Cyber Fido's"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 462270,
+  "label": "JeanKarlos Rodriguez",
+  "action": "separar_palabras",
+  "status": "pending",
+  "before": {
+   "field": "name",
+   "value": "JeanKarlos Rodriguez"
+  },
+  "after": {
+   "field": "name",
+   "value": "Jean Karlos Rodriguez"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 462492,
+  "label": "EtéreoPlay Sessions",
+  "action": "separar_palabras",
+  "status": "pending",
+  "before": {
+   "field": "title",
+   "value": "EtéreoPlay Sessions"
+  },
+  "after": {
+   "field": "title",
+   "value": "Etéreo Play Sessions"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 462493,
+  "label": "GypsyUno",
+  "action": null,
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "el hallazgo no tiene una corrección disponible: hay que editar la ficha"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 463154,
+  "label": "GeorgeGershwin",
+  "action": "separar_palabras",
+  "status": "pending",
+  "before": {
+   "field": "name",
+   "value": "GeorgeGershwin"
+  },
+  "after": {
+   "field": "name",
+   "value": "George Gershwin"
+  },
+  "blocked": null,
+  "warnings": [
+   "Otra ficha del mismo tipo se escribe igual sin tildes ni mayúsculas: puede quedar un duplicado."
+  ],
+  "collisions": [
+   {
+    "id": 22311,
+    "kind": "person",
+    "exact": true,
+    "label": "George Gershwin"
+   }
+  ],
+  "proposal": null
+ },
+ {
+  "findingId": 465347,
+  "label": "Jorge LuisChacín",
+  "action": "separar_palabras",
+  "status": "pending",
+  "before": {
+   "field": "name",
+   "value": "Jorge LuisChacín"
+  },
+  "after": {
+   "field": "name",
+   "value": "Jorge Luis Chacín"
+  },
+  "blocked": null,
+  "warnings": [
+   "Otra ficha del mismo tipo se escribe igual sin tildes ni mayúsculas: puede quedar un duplicado."
+  ],
+  "collisions": [
+   {
+    "id": 5149,
+    "kind": "person",
+    "exact": true,
+    "label": "Jorge Luis Chacín"
+   }
+  ],
+  "proposal": null
+ },
+ {
+  "findingId": 465348,
+  "label": "BeckerSound",
+  "action": null,
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "el hallazgo no tiene una corrección disponible: hay que editar la ficha"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465349,
+  "label": "AudioMedia",
+  "action": "separar_palabras",
+  "status": "pending",
+  "before": {
+   "field": "name",
+   "value": "AudioMedia"
+  },
+  "after": {
+   "field": "name",
+   "value": "Audio Media"
+  },
+  "blocked": null,
+  "warnings": [
+   "Otra ficha del mismo tipo se escribe igual sin tildes ni mayúsculas: puede quedar un duplicado."
+  ],
+  "collisions": [
+   {
+    "id": 33482,
+    "kind": "person",
+    "exact": true,
+    "label": "Audio Media"
+   }
+  ],
+  "proposal": null
+ },
+ {
+  "findingId": 465351,
+  "label": "BackStage Trigal",
+  "action": "separar_palabras",
+  "status": "pending",
+  "before": {
+   "field": "name",
+   "value": "BackStage Trigal"
+  },
+  "after": {
+   "field": "name",
+   "value": "Back Stage Trigal"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465352,
+  "label": "OrozcoJam",
+  "action": null,
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "el hallazgo no tiene una corrección disponible: hay que editar la ficha"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465353,
+  "label": "Los Melódicos con RobertoAntonio e...",
+  "action": "separar_palabras",
+  "status": "pending",
+  "before": {
+   "field": "title",
+   "value": "Los Melódicos con RobertoAntonio e..."
+  },
+  "after": {
+   "field": "title",
+   "value": "Los Melódicos con Roberto Antonio e..."
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465354,
+  "label": "JazzAfro",
+  "action": null,
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "el hallazgo no tiene una corrección disponible: hay que editar la ficha"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465355,
+  "label": "AguaClara",
+  "action": null,
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "el hallazgo no tiene una corrección disponible: hay que editar la ficha"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465356,
+  "label": "BossAgraz",
+  "action": null,
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "el hallazgo no tiene una corrección disponible: hay que editar la ficha"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465357,
+  "label": "OrozcoJam",
+  "action": null,
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "el hallazgo no tiene una corrección disponible: hay que editar la ficha"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465358,
+  "label": "AguaCaribe",
+  "action": null,
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "el hallazgo no tiene una corrección disponible: hay que editar la ficha"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465359,
+  "label": "MelodyBass",
+  "action": null,
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "el hallazgo no tiene una corrección disponible: hay que editar la ficha"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465360,
+  "label": "Navidad Espiritual: Noche Feliz / AdesteFideles",
+  "action": "separar_palabras",
+  "status": "pending",
+  "before": {
+   "field": "title",
+   "value": "Navidad Espiritual: Noche Feliz / AdesteFideles"
+  },
+  "after": {
+   "field": "title",
+   "value": "Navidad Espiritual: Noche Feliz / Adeste Fideles"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465361,
+  "label": "NapoliNana",
+  "action": null,
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "el hallazgo no tiene una corrección disponible: hay que editar la ficha"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 472875,
+  "label": "EntreNos",
+  "action": null,
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "el hallazgo no tiene una corrección disponible: hay que editar la ficha"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 472876,
+  "label": "Steve DodgeSpanish Ver. S. Nuñez",
+  "action": "separar_palabras",
+  "status": "pending",
+  "before": {
+   "field": "name",
+   "value": "Steve DodgeSpanish Ver. S. Nuñez"
+  },
+  "after": {
+   "field": "name",
+   "value": "Steve Dodge Spanish Ver. S. Nuñez"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 472878,
+  "label": "Angel FallsRecords",
+  "action": "separar_palabras",
+  "status": "pending",
+  "before": {
+   "field": "name",
+   "value": "Angel FallsRecords"
+  },
+  "after": {
+   "field": "name",
+   "value": "Angel Falls Records"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 478815,
+  "label": "BetaMax",
+  "action": null,
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "el hallazgo no tiene una corrección disponible: hay que editar la ficha"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480883,
+  "label": "ThisTroy",
+  "action": null,
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "el hallazgo no tiene una corrección disponible: hay que editar la ficha"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480884,
+  "label": "VinoTinto",
+  "action": null,
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "el hallazgo no tiene una corrección disponible: hay que editar la ficha"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480885,
+  "label": "Metropolis Insane (PneumaCopla)",
+  "action": "separar_palabras",
+  "status": "pending",
+  "before": {
+   "field": "title",
+   "value": "Metropolis Insane (PneumaCopla)"
+  },
+  "after": {
+   "field": "title",
+   "value": "Metropolis Insane (Pneuma Copla)"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484236,
+  "label": "VinoTinto",
+  "action": null,
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "el hallazgo no tiene una corrección disponible: hay que editar la ficha"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484237,
+  "label": "TurboLover",
+  "action": null,
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "el hallazgo no tiene una corrección disponible: hay que editar la ficha"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 485302,
+  "label": "InnerCat Music Group",
+  "action": "separar_palabras",
+  "status": "pending",
+  "before": {
+   "field": "name",
+   "value": "InnerCat Music Group"
+  },
+  "after": {
+   "field": "name",
+   "value": "Inner Cat Music Group"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 485303,
+  "label": "MindSaw Digital",
+  "action": "separar_palabras",
+  "status": "pending",
+  "before": {
+   "field": "name",
+   "value": "MindSaw Digital"
+  },
+  "after": {
+   "field": "name",
+   "value": "Mind Saw Digital"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 485304,
+  "label": "TrapMoney",
+  "action": null,
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "el hallazgo no tiene una corrección disponible: hay que editar la ficha"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 485345,
+  "label": "AudioQuest",
+  "action": null,
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "el hallazgo no tiene una corrección disponible: hay que editar la ficha"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 485832,
+  "label": "CariJazz Productions",
+  "action": "separar_palabras",
+  "status": "pending",
+  "before": {
+   "field": "name",
+   "value": "CariJazz Productions"
+  },
+  "after": {
+   "field": "name",
+   "value": "Cari Jazz Productions"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 485833,
+  "label": "HeartStrings Music",
+  "action": "separar_palabras",
+  "status": "pending",
+  "before": {
+   "field": "name",
+   "value": "HeartStrings Music"
+  },
+  "after": {
+   "field": "name",
+   "value": "Heart Strings Music"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 485834,
+  "label": "Palm AireVillage Studios",
+  "action": "separar_palabras",
+  "status": "pending",
+  "before": {
+   "field": "name",
+   "value": "Palm AireVillage Studios"
+  },
+  "after": {
+   "field": "name",
+   "value": "Palm Aire Village Studios"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 485836,
+  "label": "DodgeSongs Studios",
+  "action": "separar_palabras",
+  "status": "pending",
+  "before": {
+   "field": "name",
+   "value": "DodgeSongs Studios"
+  },
+  "after": {
+   "field": "name",
+   "value": "Dodge Songs Studios"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 485837,
+  "label": "JazzTone Studios",
+  "action": "separar_palabras",
+  "status": "pending",
+  "before": {
+   "field": "name",
+   "value": "JazzTone Studios"
+  },
+  "after": {
+   "field": "name",
+   "value": "Jazz Tone Studios"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 485839,
+  "label": "SweetSpot Studios",
+  "action": "separar_palabras",
+  "status": "pending",
+  "before": {
+   "field": "name",
+   "value": "SweetSpot Studios"
+  },
+  "after": {
+   "field": "name",
+   "value": "Sweet Spot Studios"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 485841,
+  "label": "HuascarFlauta Producciones",
+  "action": "separar_palabras",
+  "status": "pending",
+  "before": {
+   "field": "name",
+   "value": "HuascarFlauta Producciones"
+  },
+  "after": {
+   "field": "name",
+   "value": "Huascar Flauta Producciones"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 485842,
+  "label": "BeatMakers Studio",
+  "action": "separar_palabras",
+  "status": "pending",
+  "before": {
+   "field": "name",
+   "value": "BeatMakers Studio"
+  },
+  "after": {
+   "field": "name",
+   "value": "Beat Makers Studio"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 485845,
+  "label": "Cromo AudioLabs Studio",
+  "action": "separar_palabras",
+  "status": "pending",
+  "before": {
+   "field": "name",
+   "value": "Cromo AudioLabs Studio"
+  },
+  "after": {
+   "field": "name",
+   "value": "Cromo Audio Labs Studio"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 485848,
+  "label": "WatchTower (Castlevania soundtrack cover)",
+  "action": "separar_palabras",
+  "status": "pending",
+  "before": {
+   "field": "title",
+   "value": "WatchTower (Castlevania soundtrack cover)"
+  },
+  "after": {
+   "field": "title",
+   "value": "Watch Tower (Castlevania soundtrack cover)"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 488172,
+  "label": "AlterKind",
+  "action": null,
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "el hallazgo no tiene una corrección disponible: hay que editar la ficha"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 491459,
+  "label": "AlexTrip Sands",
+  "action": "separar_palabras",
+  "status": "pending",
+  "before": {
+   "field": "name",
+   "value": "AlexTrip Sands"
+  },
+  "after": {
+   "field": "name",
+   "value": "Alex Trip Sands"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 491683,
+  "label": "RoyalLive",
+  "action": null,
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "el hallazgo no tiene una corrección disponible: hay que editar la ficha"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 659069,
+  "label": "LapaMariposa",
+  "action": null,
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "el hallazgo no tiene una corrección disponible: hay que editar la ficha"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ }
+]

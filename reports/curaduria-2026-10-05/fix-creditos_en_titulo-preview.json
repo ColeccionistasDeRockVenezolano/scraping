@@ -1,0 +1,2115 @@
+[
+ {
+  "findingId": 465227,
+  "label": "Por Ti, Sin Ti (Yo Por Ti, Yo Sin Ti)",
+  "action": "extraer_autores",
+  "status": "pending",
+  "before": {
+   "title": "Por Ti, Sin Ti (Yo Por Ti, Yo Sin Ti)"
+  },
+  "after": {
+   "title": "Por Ti, Sin Ti",
+   "authors": [
+    "Yo Por Ti",
+    "Yo Sin Ti"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 472862,
+  "label": "Dejó Las Llaves (P. Dagnino)",
+  "action": "extraer_autores",
+  "status": "pending",
+  "before": {
+   "title": "Dejó Las Llaves (P. Dagnino)"
+  },
+  "after": {
+   "title": "Dejó Las Llaves",
+   "authors": [
+    "P. Dagnino"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479463,
+  "label": "Deuda De Amor (Adolfo Rodríguez/Armando Beltrán)",
+  "action": "extraer_autores",
+  "status": "pending",
+  "before": {
+   "title": "Deuda De Amor (Adolfo Rodríguez/Armando Beltrán)"
+  },
+  "after": {
+   "title": "Deuda De Amor",
+   "authors": [
+    "Adolfo Rodríguez",
+    "Armando Beltrán"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484072,
+  "label": "We Want Ca$h (feat. Sensational)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "We Want Ca$h (feat. Sensational)"
+  },
+  "after": {
+   "guest": "Sensational",
+   "title": "We Want Ca$h"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484073,
+  "label": "We Want Ca$h (feat. Sensational) [Nehuen Remix]",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "We Want Ca$h (feat. Sensational) [Nehuen Remix]"
+  },
+  "after": {
+   "guest": "Sensational",
+   "title": "We Want Ca$h [Nehuen Remix]"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484074,
+  "label": "We Want Ca$h (feat. Sensational) [Sesped Remix]",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "We Want Ca$h (feat. Sensational) [Sesped Remix]"
+  },
+  "after": {
+   "guest": "Sensational",
+   "title": "We Want Ca$h [Sesped Remix]"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484075,
+  "label": "We Want Ca$h (feat. Sensational) [Baconhead Remix]",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "We Want Ca$h (feat. Sensational) [Baconhead Remix]"
+  },
+  "after": {
+   "guest": "Sensational",
+   "title": "We Want Ca$h [Baconhead Remix]"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484076,
+  "label": "We Want Ca$h (feat. Sensational) [Instrumental]",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "We Want Ca$h (feat. Sensational) [Instrumental]"
+  },
+  "after": {
+   "guest": "Sensational",
+   "title": "We Want Ca$h [Instrumental]"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484086,
+  "label": "Refresh Mix 6 (Guitarra Española / Soy Castellana) (Medley)",
+  "action": "extraer_autores",
+  "status": "pending",
+  "before": {
+   "title": "Refresh Mix 6 (Guitarra Española / Soy Castellana) (Medley)"
+  },
+  "after": {
+   "title": "Refresh Mix 6 (Guitarra Española / Soy Castellana)",
+   "authors": [
+    "Guitarra Española",
+    "Soy Castellana"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484087,
+  "label": "Lo Que Son Las Cosas . (feat. Dayana Pereira)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Lo Que Son Las Cosas . (feat. Dayana Pereira)"
+  },
+  "after": {
+   "guest": "Dayana Pereira",
+   "title": "Lo Que Son Las Cosas ."
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484088,
+  "label": "D' PUEBLO (feat. Luis Silva)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "D' PUEBLO (feat. Luis Silva)"
+  },
+  "after": {
+   "guest": "Luis Silva",
+   "title": "D' PUEBLO"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484089,
+  "label": "MAR-A-CAIBO (feat. Huascar Barradas & Rafael \"El Pollo\" Brito)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "MAR-A-CAIBO (feat. Huascar Barradas & Rafael \"El Pollo\" Brito)"
+  },
+  "after": {
+   "guest": "Huascar Barradas & Rafael \"El Pollo\" Brito",
+   "title": "MAR-A-CAIBO"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484090,
+  "label": "Llorar y Llorar (con Carin Leon)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Llorar y Llorar (con Carin Leon)"
+  },
+  "after": {
+   "guest": "Carin Leon",
+   "title": "Llorar y Llorar"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484091,
+  "label": "No Puede Ser (con Eladio Carrion)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "No Puede Ser (con Eladio Carrion)"
+  },
+  "after": {
+   "guest": "Eladio Carrion",
+   "title": "No Puede Ser"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484092,
+  "label": "Mal Acostumbrao (con Maria Becerra)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Mal Acostumbrao (con Maria Becerra)"
+  },
+  "after": {
+   "guest": "Maria Becerra",
+   "title": "Mal Acostumbrao"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484093,
+  "label": "Bota Fuego (con Nicky Jam)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Bota Fuego (con Nicky Jam)"
+  },
+  "after": {
+   "guest": "Nicky Jam",
+   "title": "Bota Fuego"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484094,
+  "label": "EN SOLEDAD (feat. ADSO, Akapellah)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "EN SOLEDAD (feat. ADSO, Akapellah)"
+  },
+  "after": {
+   "guest": "ADSO, Akapellah",
+   "title": "EN SOLEDAD"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484095,
+  "label": "Si Quieres Decir Adiós (feat. Debi Nova)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Si Quieres Decir Adiós (feat. Debi Nova)"
+  },
+  "after": {
+   "guest": "Debi Nova",
+   "title": "Si Quieres Decir Adiós"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484096,
+  "label": "Tan Sólo Tú (feat. Alejandra Guzmán) (Franco De Vita en Primera Fila)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Tan Sólo Tú (feat. Alejandra Guzmán) (Franco De Vita en Primera Fila)"
+  },
+  "after": {
+   "guest": "Alejandra Guzmán",
+   "title": "Tan Sólo Tú (Franco De Vita en Primera Fila)"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484097,
+  "label": "Déjame Soñar (feat. India Martinez)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Déjame Soñar (feat. India Martinez)"
+  },
+  "after": {
+   "guest": "India Martinez",
+   "title": "Déjame Soñar"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484098,
+  "label": "Te Amo Hasta Siempre (feat. MR)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Te Amo Hasta Siempre (feat. MR)"
+  },
+  "after": {
+   "guest": "MR",
+   "title": "Te Amo Hasta Siempre"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484100,
+  "label": "Nostalgias (feat. Alejandro Sanz)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Nostalgias (feat. Alejandro Sanz)"
+  },
+  "after": {
+   "guest": "Alejandro Sanz",
+   "title": "Nostalgias"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484101,
+  "label": "Bandera venezolana (feat. Vasallos del Sol)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Bandera venezolana (feat. Vasallos del Sol)"
+  },
+  "after": {
+   "guest": "Vasallos del Sol",
+   "title": "Bandera venezolana"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484102,
+  "label": "Culo e' puya (feat. María Rivas y Vasallos del Sol)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Culo e' puya (feat. María Rivas y Vasallos del Sol)"
+  },
+  "after": {
+   "guest": "María Rivas y Vasallos del Sol",
+   "title": "Culo e' puya"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484103,
+  "label": "Canto de Barima (feat. Biella Da Costa)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Canto de Barima (feat. Biella Da Costa)"
+  },
+  "after": {
+   "guest": "Biella Da Costa",
+   "title": "Canto de Barima"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484105,
+  "label": "Un sangueo pa'l San Juan (feat. Celilia Todd, Francisco Pacheco & Rapsodia Coro de Cámara)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Un sangueo pa'l San Juan (feat. Celilia Todd, Francisco Pacheco & Rapsodia Coro de Cámara)"
+  },
+  "after": {
+   "guest": "Celilia Todd, Francisco Pacheco & Rapsodia Coro de Cámara",
+   "title": "Un sangueo pa'l San Juan"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484108,
+  "label": "El cocuy que alumbra - Viva Venezuela (feat. Francisco Pacheco & Rapsodia Coro de Cámara)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "El cocuy que alumbra - Viva Venezuela (feat. Francisco Pacheco & Rapsodia Coro de Cámara)"
+  },
+  "after": {
+   "guest": "Francisco Pacheco & Rapsodia Coro de Cámara",
+   "title": "El cocuy que alumbra - Viva Venezuela"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484109,
+  "label": "Vi a Rosita (con Santoral)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Vi a Rosita (con Santoral)"
+  },
+  "after": {
+   "guest": "Santoral",
+   "title": "Vi a Rosita"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484110,
+  "label": "Noches larenses (con Belkys \"Nuneka\" León y Eddy Marcano)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Noches larenses (con Belkys \"Nuneka\" León y Eddy Marcano)"
+  },
+  "after": {
+   "guest": "Belkys \"Nuneka\" León y Eddy Marcano",
+   "title": "Noches larenses"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484111,
+  "label": "Ramoncito en Cimarrona (con Tico Páez, Carota, Ñema y Tajá y Alexis Cárdenas)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Ramoncito en Cimarrona (con Tico Páez, Carota, Ñema y Tajá y Alexis Cárdenas)"
+  },
+  "after": {
+   "guest": "Tico Páez, Carota, Ñema y Tajá y Alexis Cárdenas",
+   "title": "Ramoncito en Cimarrona"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484112,
+  "label": "Ojos Marrones (Con Sebastián Yatra)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Ojos Marrones (Con Sebastián Yatra)"
+  },
+  "after": {
+   "guest": "Sebastián Yatra",
+   "title": "Ojos Marrones"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484113,
+  "label": "La Ducha Remix (con Becky G, Tini)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "La Ducha Remix (con Becky G, Tini)"
+  },
+  "after": {
+   "guest": "Becky G, Tini",
+   "title": "La Ducha Remix"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484114,
+  "label": "Parriba (feat. Trueno)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Parriba (feat. Trueno)"
+  },
+  "after": {
+   "guest": "Trueno",
+   "title": "Parriba"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484115,
+  "label": "Double Cup (feat. Trainer & Big Soto)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Double Cup (feat. Trainer & Big Soto)"
+  },
+  "after": {
+   "guest": "Trainer & Big Soto",
+   "title": "Double Cup"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484116,
+  "label": "Donde Están? (feat. Lito Kirino)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Donde Están? (feat. Lito Kirino)"
+  },
+  "after": {
+   "guest": "Lito Kirino",
+   "title": "Donde Están?"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484117,
+  "label": "Fiesta (Boombox Remix) [feat. Lil Supa]",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Fiesta (Boombox Remix) [feat. Lil Supa]"
+  },
+  "after": {
+   "guest": "Lil Supa",
+   "title": "Fiesta (Boombox Remix)"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484118,
+  "label": "Baby (feat. David Rone)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Baby (feat. David Rone)"
+  },
+  "after": {
+   "guest": "David Rone",
+   "title": "Baby"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484119,
+  "label": "Iskiusmi Panita (feat. Trainer & Adso)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Iskiusmi Panita (feat. Trainer & Adso)"
+  },
+  "after": {
+   "guest": "Trainer & Adso",
+   "title": "Iskiusmi Panita"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484121,
+  "label": "Intensa (feat. David Rone)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Intensa (feat. David Rone)"
+  },
+  "after": {
+   "guest": "David Rone",
+   "title": "Intensa"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484122,
+  "label": "Soy Tu Papá (feat. Fernando Palomo)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Soy Tu Papá (feat. Fernando Palomo)"
+  },
+  "after": {
+   "guest": "Fernando Palomo",
+   "title": "Soy Tu Papá"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484123,
+  "label": "Valle de balas - Mal bicho (Con Flavio Cianciarulo)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Valle de balas - Mal bicho (Con Flavio Cianciarulo)"
+  },
+  "after": {
+   "guest": "Flavio Cianciarulo",
+   "title": "Valle de balas - Mal bicho"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484125,
+  "label": "Wiki Wiki (feat. Jonaz & MARI)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Wiki Wiki (feat. Jonaz & MARI)"
+  },
+  "after": {
+   "guest": "Jonaz & MARI",
+   "title": "Wiki Wiki"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484126,
+  "label": "No se me Olvidó (feat. Alvaro Paiva-Bimbo)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "No se me Olvidó (feat. Alvaro Paiva-Bimbo)"
+  },
+  "after": {
+   "guest": "Alvaro Paiva-Bimbo",
+   "title": "No se me Olvidó"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484127,
+  "label": "No se me Olvidó - Extendida (feat. Alvaro Paiva-Bimbo)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "No se me Olvidó - Extendida (feat. Alvaro Paiva-Bimbo)"
+  },
+  "after": {
+   "guest": "Alvaro Paiva-Bimbo",
+   "title": "No se me Olvidó - Extendida"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484128,
+  "label": "No se me Olvidó - Acústica (feat. Alvaro Paiva-Bimbo)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "No se me Olvidó - Acústica (feat. Alvaro Paiva-Bimbo)"
+  },
+  "after": {
+   "guest": "Alvaro Paiva-Bimbo",
+   "title": "No se me Olvidó - Acústica"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484129,
+  "label": "Antes de Dormir (feat. Betsayda Machado)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Antes de Dormir (feat. Betsayda Machado)"
+  },
+  "after": {
+   "guest": "Betsayda Machado",
+   "title": "Antes de Dormir"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484132,
+  "label": "Tuyonama (feat. Charles Ans)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Tuyonama (feat. Charles Ans)"
+  },
+  "after": {
+   "guest": "Charles Ans",
+   "title": "Tuyonama"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484133,
+  "label": "Tuyonama - Extended Version (feat. Charles Ans)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Tuyonama - Extended Version (feat. Charles Ans)"
+  },
+  "after": {
+   "guest": "Charles Ans",
+   "title": "Tuyonama - Extended Version"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484134,
+  "label": "Tuyonama - Orestes Gomez Remix (feat. PASTICHO & Charles Ans)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Tuyonama - Orestes Gomez Remix (feat. PASTICHO & Charles Ans)"
+  },
+  "after": {
+   "guest": "PASTICHO & Charles Ans",
+   "title": "Tuyonama - Orestes Gomez Remix"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484135,
+  "label": "Colgando en tus manos (con Marta Sánchez)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Colgando en tus manos (con Marta Sánchez)"
+  },
+  "after": {
+   "guest": "Marta Sánchez",
+   "title": "Colgando en tus manos"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484136,
+  "label": "Nada se compara a ti (con Franco de Vita)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Nada se compara a ti (con Franco de Vita)"
+  },
+  "after": {
+   "guest": "Franco de Vita",
+   "title": "Nada se compara a ti"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484137,
+  "label": "Colgando en tus manos (con Marta Sánchez)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Colgando en tus manos (con Marta Sánchez)"
+  },
+  "after": {
+   "guest": "Marta Sánchez",
+   "title": "Colgando en tus manos"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484138,
+  "label": "Ando buscando (feat. Piso 21)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Ando buscando (feat. Piso 21)"
+  },
+  "after": {
+   "guest": "Piso 21",
+   "title": "Ando buscando"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484139,
+  "label": "¿Quién es ese? (feat. Maite Perroni & Juhn)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "¿Quién es ese? (feat. Maite Perroni & Juhn)"
+  },
+  "after": {
+   "guest": "Maite Perroni & Juhn",
+   "title": "¿Quién es ese?"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484140,
+  "label": "Tu cuerpo bailando en mi cuerpo (feat. Sohanny Prod by Maffio) (Merengue electrónico remix)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Tu cuerpo bailando en mi cuerpo (feat. Sohanny Prod by Maffio) (Merengue electrónico remix)"
+  },
+  "after": {
+   "guest": "Sohanny Prod by Maffio",
+   "title": "Tu cuerpo bailando en mi cuerpo (Merengue electrónico remix)"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484141,
+  "label": "No es para tanto (feat. Ana Mena)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "No es para tanto (feat. Ana Mena)"
+  },
+  "after": {
+   "guest": "Ana Mena",
+   "title": "No es para tanto"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484142,
+  "label": "Compro minutos (feat. Farina)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Compro minutos (feat. Farina)"
+  },
+  "after": {
+   "guest": "Farina",
+   "title": "Compro minutos"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484143,
+  "label": "Cómo decir que no (feat. María José)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Cómo decir que no (feat. María José)"
+  },
+  "after": {
+   "guest": "María José",
+   "title": "Cómo decir que no"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484145,
+  "label": "Full Day (feat. Carlitos Palmera)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Full Day (feat. Carlitos Palmera)"
+  },
+  "after": {
+   "guest": "Carlitos Palmera",
+   "title": "Full Day"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484146,
+  "label": "Before The Dawn (feat. Celldweller)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Before The Dawn (feat. Celldweller)"
+  },
+  "after": {
+   "guest": "Celldweller",
+   "title": "Before The Dawn"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484147,
+  "label": "Luz De Cumaná (feat. Manuel Alejandro Sánchez)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Luz De Cumaná (feat. Manuel Alejandro Sánchez)"
+  },
+  "after": {
+   "guest": "Manuel Alejandro Sánchez",
+   "title": "Luz De Cumaná"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484148,
+  "label": "Medley de Gaitas (Negrito Fullero/Negra Juana)",
+  "action": "extraer_autores",
+  "status": "pending",
+  "before": {
+   "title": "Medley de Gaitas (Negrito Fullero/Negra Juana)"
+  },
+  "after": {
+   "title": "Medley de Gaitas",
+   "authors": [
+    "Negrito Fullero",
+    "Negra Juana"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484149,
+  "label": "Caracas Vieja (feat. Cheo Garcia)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Caracas Vieja (feat. Cheo Garcia)"
+  },
+  "after": {
+   "guest": "Cheo Garcia",
+   "title": "Caracas Vieja"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484150,
+  "label": "Creyon de Labios (feat. Cheo Garcia)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Creyon de Labios (feat. Cheo Garcia)"
+  },
+  "after": {
+   "guest": "Cheo Garcia",
+   "title": "Creyon de Labios"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484151,
+  "label": "El Bananero (feat. Cheo Garcia)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "El Bananero (feat. Cheo Garcia)"
+  },
+  "after": {
+   "guest": "Cheo Garcia",
+   "title": "El Bananero"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484152,
+  "label": "El Disco Rayao (feat. Cheo Garcia)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "El Disco Rayao (feat. Cheo Garcia)"
+  },
+  "after": {
+   "guest": "Cheo Garcia",
+   "title": "El Disco Rayao"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484153,
+  "label": "El Son del Carnaval (feat. Cheo Garcia)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "El Son del Carnaval (feat. Cheo Garcia)"
+  },
+  "after": {
+   "guest": "Cheo Garcia",
+   "title": "El Son del Carnaval"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484154,
+  "label": "Eres Todo en Mi Vida (feat. Cheo Garcia)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Eres Todo en Mi Vida (feat. Cheo Garcia)"
+  },
+  "after": {
+   "guest": "Cheo Garcia",
+   "title": "Eres Todo en Mi Vida"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484155,
+  "label": "La Burrita de Petare (feat. Cheo Garcia)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "La Burrita de Petare (feat. Cheo Garcia)"
+  },
+  "after": {
+   "guest": "Cheo Garcia",
+   "title": "La Burrita de Petare"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484156,
+  "label": "Las Pilanderas (feat. Cheo Garcia)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Las Pilanderas (feat. Cheo Garcia)"
+  },
+  "after": {
+   "guest": "Cheo Garcia",
+   "title": "Las Pilanderas"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484157,
+  "label": "No Te Retrates (feat. Cheo Garcia)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "No Te Retrates (feat. Cheo Garcia)"
+  },
+  "after": {
+   "guest": "Cheo Garcia",
+   "title": "No Te Retrates"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484158,
+  "label": "Ojo Pelao (feat. Cheo Garcia)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Ojo Pelao (feat. Cheo Garcia)"
+  },
+  "after": {
+   "guest": "Cheo Garcia",
+   "title": "Ojo Pelao"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484159,
+  "label": "Paraíso Soñado (feat. Cheo Garcia)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Paraíso Soñado (feat. Cheo Garcia)"
+  },
+  "after": {
+   "guest": "Cheo Garcia",
+   "title": "Paraíso Soñado"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484160,
+  "label": "Zambra de Mi Soledad (feat. Cheo Garcia)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Zambra de Mi Soledad (feat. Cheo Garcia)"
+  },
+  "after": {
+   "guest": "Cheo Garcia",
+   "title": "Zambra de Mi Soledad"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484161,
+  "label": "Niño Lindo (feat. Alberto Grau & Isabel Palacios)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Niño Lindo (feat. Alberto Grau & Isabel Palacios)"
+  },
+  "after": {
+   "guest": "Alberto Grau & Isabel Palacios",
+   "title": "Niño Lindo"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484162,
+  "label": "Cantemos Alegres (feat. Alberto Grau & Isabel Palacios)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Cantemos Alegres (feat. Alberto Grau & Isabel Palacios)"
+  },
+  "after": {
+   "guest": "Alberto Grau & Isabel Palacios",
+   "title": "Cantemos Alegres"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484163,
+  "label": "Niño Venturoso (feat. Alberto Grau & Isabel Palacios)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Niño Venturoso (feat. Alberto Grau & Isabel Palacios)"
+  },
+  "after": {
+   "guest": "Alberto Grau & Isabel Palacios",
+   "title": "Niño Venturoso"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484164,
+  "label": "El Gallo (feat. Alberto Grau)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "El Gallo (feat. Alberto Grau)"
+  },
+  "after": {
+   "guest": "Alberto Grau",
+   "title": "El Gallo"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484165,
+  "label": "Aguinaldo Carupanero (feat. Alberto Grau)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Aguinaldo Carupanero (feat. Alberto Grau)"
+  },
+  "after": {
+   "guest": "Alberto Grau",
+   "title": "Aguinaldo Carupanero"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484166,
+  "label": "Al Llegar Aquí (feat. Alberto Grau)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Al Llegar Aquí (feat. Alberto Grau)"
+  },
+  "after": {
+   "guest": "Alberto Grau",
+   "title": "Al Llegar Aquí"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484167,
+  "label": "Alegres Cantemos (feat. Alberto Grau)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Alegres Cantemos (feat. Alberto Grau)"
+  },
+  "after": {
+   "guest": "Alberto Grau",
+   "title": "Alegres Cantemos"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484168,
+  "label": "Aguinaldo Larense (feat. María Guinand)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Aguinaldo Larense (feat. María Guinand)"
+  },
+  "after": {
+   "guest": "María Guinand",
+   "title": "Aguinaldo Larense"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484169,
+  "label": "Esta Bella Noche (feat. María Guinand)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Esta Bella Noche (feat. María Guinand)"
+  },
+  "after": {
+   "guest": "María Guinand",
+   "title": "Esta Bella Noche"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484170,
+  "label": "Los Pastores de San Joaquín (feat. Gilberto Rebolledo, Carolina Arnal & Carlos Méndez)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Los Pastores de San Joaquín (feat. Gilberto Rebolledo, Carolina Arnal & Carlos Méndez)"
+  },
+  "after": {
+   "guest": "Gilberto Rebolledo, Carolina Arnal & Carlos Méndez",
+   "title": "Los Pastores de San Joaquín"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484171,
+  "label": "Cantando Bajito (feat. María Guinand)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Cantando Bajito (feat. María Guinand)"
+  },
+  "after": {
+   "guest": "María Guinand",
+   "title": "Cantando Bajito"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484172,
+  "label": "Llora un Niño Triste (feat. Gilberto Rebolledo, Sahilé Gómez & Adriana Ponce)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Llora un Niño Triste (feat. Gilberto Rebolledo, Sahilé Gómez & Adriana Ponce)"
+  },
+  "after": {
+   "guest": "Gilberto Rebolledo, Sahilé Gómez & Adriana Ponce",
+   "title": "Llora un Niño Triste"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484173,
+  "label": "Qué Buena Parranda (feat. María Guinand & Roberto Pérez)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Qué Buena Parranda (feat. María Guinand & Roberto Pérez)"
+  },
+  "after": {
+   "guest": "María Guinand & Roberto Pérez",
+   "title": "Qué Buena Parranda"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484174,
+  "label": "Sobre Tus Cholitas (feat. Gilberto Rebolledo, Rosa M. Briceño & Yajaira Ortiz)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Sobre Tus Cholitas (feat. Gilberto Rebolledo, Rosa M. Briceño & Yajaira Ortiz)"
+  },
+  "after": {
+   "guest": "Gilberto Rebolledo, Rosa M. Briceño & Yajaira Ortiz",
+   "title": "Sobre Tus Cholitas"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484175,
+  "label": "Antes de Dormir (ft. Betsayda Machado)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Antes de Dormir (ft. Betsayda Machado)"
+  },
+  "after": {
+   "guest": "Betsayda Machado",
+   "title": "Antes de Dormir"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484176,
+  "label": "Envidia (ft. El Pollo Brito)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Envidia (ft. El Pollo Brito)"
+  },
+  "after": {
+   "guest": "El Pollo Brito",
+   "title": "Envidia"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484177,
+  "label": "Give us your money (ft. Superthriller)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Give us your money (ft. Superthriller)"
+  },
+  "after": {
+   "guest": "Superthriller",
+   "title": "Give us your money"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484178,
+  "label": "Como te gusta (ft. C-Funk & McKlopedia)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Como te gusta (ft. C-Funk & McKlopedia)"
+  },
+  "after": {
+   "guest": "C-Funk & McKlopedia",
+   "title": "Como te gusta"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484179,
+  "label": "Tuyonama (ft. Charles Ans)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Tuyonama (ft. Charles Ans)"
+  },
+  "after": {
+   "guest": "Charles Ans",
+   "title": "Tuyonama"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484180,
+  "label": "No se me olvidó (ft. Álvaro Paiva-Bimbo)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "No se me olvidó (ft. Álvaro Paiva-Bimbo)"
+  },
+  "after": {
+   "guest": "Álvaro Paiva-Bimbo",
+   "title": "No se me olvidó"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484181,
+  "label": "Un beso (Largo) [ft. Ben Daval]",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Un beso (Largo) [ft. Ben Daval]"
+  },
+  "after": {
+   "guest": "Ben Daval",
+   "title": "Un beso (Largo)"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484188,
+  "label": "Ariadna (feat. Chris Cuzme, Christian Coleman & Joey Johnson) [Live]",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Ariadna (feat. Chris Cuzme, Christian Coleman & Joey Johnson) [Live]"
+  },
+  "after": {
+   "guest": "Chris Cuzme, Christian Coleman & Joey Johnson",
+   "title": "Ariadna [Live]"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484189,
+  "label": "El Zar (feat. Christian Coleman, Chris Cuzme & Joey Johnson) [Live]",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "El Zar (feat. Christian Coleman, Chris Cuzme & Joey Johnson) [Live]"
+  },
+  "after": {
+   "guest": "Christian Coleman, Chris Cuzme & Joey Johnson",
+   "title": "El Zar [Live]"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484190,
+  "label": "Control (feat. Christian Coleman, Chris Cuzme & Joey Johnson) [Live]",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Control (feat. Christian Coleman, Chris Cuzme & Joey Johnson) [Live]"
+  },
+  "after": {
+   "guest": "Christian Coleman, Chris Cuzme & Joey Johnson",
+   "title": "Control [Live]"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484191,
+  "label": "Aleros / Pompeii (feat. Christian Coleman, Chris Cuzme & Joey Johnson) [Live]",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Aleros / Pompeii (feat. Christian Coleman, Chris Cuzme & Joey Johnson) [Live]"
+  },
+  "after": {
+   "guest": "Christian Coleman, Chris Cuzme & Joey Johnson",
+   "title": "Aleros / Pompeii [Live]"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484192,
+  "label": "Calle Barcelona (feat. Christian Coleman, Chris Cuzme & Joey Johnson) [Live]",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Calle Barcelona (feat. Christian Coleman, Chris Cuzme & Joey Johnson) [Live]"
+  },
+  "after": {
+   "guest": "Christian Coleman, Chris Cuzme & Joey Johnson",
+   "title": "Calle Barcelona [Live]"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 484193,
+  "label": "El Mar Caribe Es Mío (feat. Eddy Marcano)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "El Mar Caribe Es Mío (feat. Eddy Marcano)"
+  },
+  "after": {
+   "guest": "Eddy Marcano",
+   "title": "El Mar Caribe Es Mío"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 485343,
+  "label": "Quien Como Tu (F. Tourent)",
+  "action": "extraer_autores",
+  "status": "pending",
+  "before": {
+   "title": "Quien Como Tu (F. Tourent)"
+  },
+  "after": {
+   "title": "Quien Como Tu",
+   "authors": [
+    "F. Tourent"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 485812,
+  "label": "Barlovento y diversión oriental (Barlovento, Mare Mare, La burriquita) (feat. Rapsodia Coro de Cámara)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Barlovento y diversión oriental (Barlovento, Mare Mare, La burriquita) (feat. Rapsodia Coro de Cámara)"
+  },
+  "after": {
+   "guest": "Rapsodia Coro de Cámara",
+   "title": "Barlovento y diversión oriental (Barlovento, Mare Mare, La burriquita)"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 485813,
+  "label": "Estribillo y tambora (feat. Rapsodia Coro de Cámara)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Estribillo y tambora (feat. Rapsodia Coro de Cámara)"
+  },
+  "after": {
+   "guest": "Rapsodia Coro de Cámara",
+   "title": "Estribillo y tambora"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 491245,
+  "label": "La Gloria de Dios (feat. Evaluna Montaner)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "La Gloria de Dios (feat. Evaluna Montaner)"
+  },
+  "after": {
+   "guest": "Evaluna Montaner",
+   "title": "La Gloria de Dios"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 491246,
+  "label": "Solo Los Dos (Alternative Mix) [feat. Ferraz]",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Solo Los Dos (Alternative Mix) [feat. Ferraz]"
+  },
+  "after": {
+   "guest": "Ferraz",
+   "title": "Solo Los Dos (Alternative Mix)"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 491247,
+  "label": "Xocolate (feat. Ferraz)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Xocolate (feat. Ferraz)"
+  },
+  "after": {
+   "guest": "Ferraz",
+   "title": "Xocolate"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 491248,
+  "label": "Sólo los dos (ft. Ferraz)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Sólo los dos (ft. Ferraz)"
+  },
+  "after": {
+   "guest": "Ferraz",
+   "title": "Sólo los dos"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 491682,
+  "label": "Chamito Loco (feat. Trainer)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Chamito Loco (feat. Trainer)"
+  },
+  "after": {
+   "guest": "Trainer",
+   "title": "Chamito Loco"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 663008,
+  "label": "My Song (feat. Nene Quintero)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "My Song (feat. Nene Quintero)"
+  },
+  "after": {
+   "guest": "Nene Quintero",
+   "title": "My Song"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 663009,
+  "label": "Caracas a Las 11 (feat. Nene Quintero)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Caracas a Las 11 (feat. Nene Quintero)"
+  },
+  "after": {
+   "guest": "Nene Quintero",
+   "title": "Caracas a Las 11"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 663010,
+  "label": "God Bless the Child's (feat. Nene Quintero)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "God Bless the Child's (feat. Nene Quintero)"
+  },
+  "after": {
+   "guest": "Nene Quintero",
+   "title": "God Bless the Child's"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 663011,
+  "label": "Musashi (feat. Nene Quintero)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Musashi (feat. Nene Quintero)"
+  },
+  "after": {
+   "guest": "Nene Quintero",
+   "title": "Musashi"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 663012,
+  "label": "Brisas del Ávila (feat. Nene Quintero)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Brisas del Ávila (feat. Nene Quintero)"
+  },
+  "after": {
+   "guest": "Nene Quintero",
+   "title": "Brisas del Ávila"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 663013,
+  "label": "Kyngio (feat. Nene Quintero)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Kyngio (feat. Nene Quintero)"
+  },
+  "after": {
+   "guest": "Nene Quintero",
+   "title": "Kyngio"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 663014,
+  "label": "El Encuentro (feat. Nene Quintero)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "El Encuentro (feat. Nene Quintero)"
+  },
+  "after": {
+   "guest": "Nene Quintero",
+   "title": "El Encuentro"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 663015,
+  "label": "Aleluya (feat. Nene Quintero)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Aleluya (feat. Nene Quintero)"
+  },
+  "after": {
+   "guest": "Nene Quintero",
+   "title": "Aleluya"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 663016,
+  "label": "Hondo / Raices (feat. Nene Quintero)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Hondo / Raices (feat. Nene Quintero)"
+  },
+  "after": {
+   "guest": "Nene Quintero",
+   "title": "Hondo / Raices"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 663017,
+  "label": "Gaita margariteña (feat. Hernán Gamboa)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Gaita margariteña (feat. Hernán Gamboa)"
+  },
+  "after": {
+   "guest": "Hernán Gamboa",
+   "title": "Gaita margariteña"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 668120,
+  "label": "Ya no veo a nadie (B&R Gibb / C. Martin)",
+  "action": "extraer_autores",
+  "status": "pending",
+  "before": {
+   "title": "Ya no veo a nadie (B&R Gibb / C. Martin)"
+  },
+  "after": {
+   "title": "Ya no veo a nadie",
+   "authors": [
+    "B&R Gibb",
+    "C. Martin"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 668249,
+  "label": "Massive Act of Destruction (No Hope, No Future)",
+  "action": "extraer_autores",
+  "status": "pending",
+  "before": {
+   "title": "Massive Act of Destruction (No Hope, No Future)"
+  },
+  "after": {
+   "title": "Massive Act of Destruction",
+   "authors": [
+    "No Hope",
+    "No Future"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 668394,
+  "label": "Antes de Dormir (Extended) (feat. Betsayda Machado)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "Antes de Dormir (Extended) (feat. Betsayda Machado)"
+  },
+  "after": {
+   "guest": "Betsayda Machado",
+   "title": "Antes de Dormir (Extended)"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 668395,
+  "label": "No se me Olvidó (Acústica) (feat. Alvaro Paiva-Bimbo)",
+  "action": "extraer_invitado",
+  "status": "pending",
+  "before": {
+   "title": "No se me Olvidó (Acústica) (feat. Alvaro Paiva-Bimbo)"
+  },
+  "after": {
+   "guest": "Alvaro Paiva-Bimbo",
+   "title": "No se me Olvidó (Acústica)"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ }
+]

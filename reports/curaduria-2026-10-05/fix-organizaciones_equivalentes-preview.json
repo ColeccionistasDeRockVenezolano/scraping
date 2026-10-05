@@ -1,0 +1,608 @@
+[
+ {
+  "findingId": 665040,
+  "label": "Estudios Sonográfica",
+  "action": "fusionar",
+  "status": "pending",
+  "before": {
+   "drop": {
+    "id": 148,
+    "name": "Estudios Sonográfica",
+    "counts": {
+     "bands": 0,
+     "claims": 9,
+     "albumCredits": 26,
+     "trackCredits": 0,
+     "organizations": 0
+    },
+    "aliases": [
+     "Estudio Sonográfica",
+     "Estudios Sonográfica",
+     "Sonográfica Estudios"
+    ]
+   },
+   "keep": {
+    "id": 4271,
+    "name": "Sonográfica",
+    "counts": {
+     "bands": 0,
+     "claims": 941,
+     "albumCredits": 32,
+     "trackCredits": 0,
+     "organizations": 0
+    },
+    "aliases": [
+     "Sonografica",
+     "Sonográfica"
+    ]
+   }
+  },
+  "after": {
+   "keep": {
+    "id": 4271,
+    "name": "Sonográfica"
+   },
+   "removed": {
+    "id": 148,
+    "name": "Estudios Sonográfica"
+   },
+   "nameAsAlias": "Estudios Sonográfica",
+   "aliasesMoved": [
+    "Estudio Sonográfica",
+    "Estudios Sonográfica",
+    "Sonográfica Estudios"
+   ],
+   "fieldsFilled": [
+    {
+     "field": "biography",
+     "value": "Estudios Sonográfica es un estudio de grabación ubicado en Caracas, Venezuela. Grabó discos de San Francisco, Feedback, WAG y Los Buitres, entre 1983 y 1991."
+    }
+   ],
+   "fieldConflicts": [
+    {
+     "kept": "record_label",
+     "field": "organization_type",
+     "discarded": "recording_studio"
+    },
+    {
+     "kept": "Venezuela",
+     "field": "country",
+     "discarded": "Caracas, Venezuela"
+    }
+   ],
+   "recommendedKeepId": 4271
+  },
+  "blocked": null,
+  "warnings": [
+   "Valores distintos en organization_type, country: se conserva el de «Sonográfica»."
+  ],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 665041,
+  "label": "Discomoda Estudios",
+  "action": "fusionar",
+  "status": "pending",
+  "before": {
+   "drop": {
+    "id": 4272,
+    "name": "Discomoda",
+    "counts": {
+     "bands": 0,
+     "claims": 670,
+     "albumCredits": 6,
+     "trackCredits": 0,
+     "organizations": 0
+    },
+    "aliases": [
+     "Discomoda"
+    ]
+   },
+   "keep": {
+    "id": 218,
+    "name": "Discomoda Estudios",
+    "counts": {
+     "bands": 0,
+     "claims": 11,
+     "albumCredits": 11,
+     "trackCredits": 0,
+     "organizations": 0
+    },
+    "aliases": [
+     "Discomoda Estudios",
+     "Discomoda Studios",
+     "Estudios Discomoda"
+    ]
+   }
+  },
+  "after": {
+   "keep": {
+    "id": 218,
+    "name": "Discomoda Estudios"
+   },
+   "removed": {
+    "id": 4272,
+    "name": "Discomoda"
+   },
+   "nameAsAlias": "Discomoda",
+   "aliasesMoved": [
+    "Discomoda"
+   ],
+   "fieldsFilled": [],
+   "fieldConflicts": [
+    {
+     "kept": "recording_studio",
+     "field": "organization_type",
+     "discarded": "record_label"
+    },
+    {
+     "kept": "Caracas, Venezuela",
+     "field": "country",
+     "discarded": "Venezuela"
+    }
+   ],
+   "recommendedKeepId": 218
+  },
+  "blocked": null,
+  "warnings": [
+   "Valores distintos en organization_type, country: se conserva el de «Discomoda Estudios»."
+  ],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 667928,
+  "label": "Latin World Studios",
+  "action": "fusionar",
+  "status": "pending",
+  "before": {
+   "drop": {
+    "id": 4296,
+    "name": "Latin World",
+    "counts": {
+     "bands": 0,
+     "claims": 2,
+     "albumCredits": 2,
+     "trackCredits": 0,
+     "organizations": 0
+    },
+    "aliases": []
+   },
+   "keep": {
+    "id": 134,
+    "name": "Latin World Studios",
+    "counts": {
+     "bands": 0,
+     "claims": 11,
+     "albumCredits": 30,
+     "trackCredits": 5,
+     "organizations": 0
+    },
+    "aliases": [
+     "Estudios Latin World",
+     "Latin World Estudios",
+     "Latin World Studio",
+     "Latin World Studios"
+    ]
+   }
+  },
+  "after": {
+   "keep": {
+    "id": 134,
+    "name": "Latin World Studios"
+   },
+   "removed": {
+    "id": 4296,
+    "name": "Latin World"
+   },
+   "nameAsAlias": "Latin World",
+   "aliasesMoved": [],
+   "fieldsFilled": [],
+   "fieldConflicts": [
+    {
+     "kept": "recording_studio",
+     "field": "organization_type",
+     "discarded": "other"
+    }
+   ],
+   "recommendedKeepId": 134
+  },
+  "blocked": null,
+  "warnings": [
+   "Valores distintos en organization_type: se conserva el de «Latin World Studios»."
+  ],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 667929,
+  "label": "Sony Discos",
+  "action": "fusionar",
+  "status": "pending",
+  "before": {
+   "drop": {
+    "id": 2040,
+    "name": "Sony Discos",
+    "counts": {
+     "bands": 0,
+     "claims": 8,
+     "albumCredits": 0,
+     "trackCredits": 0,
+     "organizations": 0
+    },
+    "aliases": [
+     "Sony Discos"
+    ]
+   },
+   "keep": {
+    "id": 4289,
+    "name": "SONY",
+    "counts": {
+     "bands": 0,
+     "claims": 2,
+     "albumCredits": 1,
+     "trackCredits": 0,
+     "organizations": 0
+    },
+    "aliases": []
+   }
+  },
+  "after": {
+   "keep": {
+    "id": 4289,
+    "name": "SONY"
+   },
+   "removed": {
+    "id": 2040,
+    "name": "Sony Discos"
+   },
+   "nameAsAlias": "Sony Discos",
+   "aliasesMoved": [
+    "Sony Discos"
+   ],
+   "fieldsFilled": [],
+   "fieldConflicts": [
+    {
+     "kept": "other",
+     "field": "organization_type",
+     "discarded": "record_label"
+    }
+   ],
+   "recommendedKeepId": 4289
+  },
+  "blocked": null,
+  "warnings": [
+   "Valores distintos en organization_type: se conserva el de «SONY»."
+  ],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 667930,
+  "label": "Sony Studios",
+  "action": "fusionar",
+  "status": "pending",
+  "before": {
+   "drop": {
+    "id": 4289,
+    "name": "SONY",
+    "counts": {
+     "bands": 0,
+     "claims": 2,
+     "albumCredits": 1,
+     "trackCredits": 0,
+     "organizations": 0
+    },
+    "aliases": []
+   },
+   "keep": {
+    "id": 3350,
+    "name": "Sony Studios",
+    "counts": {
+     "bands": 0,
+     "claims": 2,
+     "albumCredits": 1,
+     "trackCredits": 0,
+     "organizations": 0
+    },
+    "aliases": [
+     "Sony Studios"
+    ]
+   }
+  },
+  "after": {
+   "keep": {
+    "id": 3350,
+    "name": "Sony Studios"
+   },
+   "removed": {
+    "id": 4289,
+    "name": "SONY"
+   },
+   "nameAsAlias": "SONY",
+   "aliasesMoved": [],
+   "fieldsFilled": [],
+   "fieldConflicts": [
+    {
+     "kept": "recording_studio",
+     "field": "organization_type",
+     "discarded": "other"
+    }
+   ],
+   "recommendedKeepId": 3350
+  },
+  "blocked": null,
+  "warnings": [
+   "Valores distintos en organization_type: se conserva el de «Sony Studios»."
+  ],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 667931,
+  "label": "Circo Beat Studios",
+  "action": "fusionar",
+  "status": "pending",
+  "before": {
+   "drop": {
+    "id": 4312,
+    "name": "Circo Beat",
+    "counts": {
+     "bands": 0,
+     "claims": 2,
+     "albumCredits": 1,
+     "trackCredits": 0,
+     "organizations": 0
+    },
+    "aliases": [
+     "Circo Beat"
+    ]
+   },
+   "keep": {
+    "id": 242,
+    "name": "Circo Beat Studios",
+    "counts": {
+     "bands": 0,
+     "claims": 6,
+     "albumCredits": 2,
+     "trackCredits": 0,
+     "organizations": 0
+    },
+    "aliases": [
+     "Circo Beat Studio",
+     "Circo Beat Studios"
+    ]
+   }
+  },
+  "after": {
+   "keep": {
+    "id": 242,
+    "name": "Circo Beat Studios"
+   },
+   "removed": {
+    "id": 4312,
+    "name": "Circo Beat"
+   },
+   "nameAsAlias": "Circo Beat",
+   "aliasesMoved": [
+    "Circo Beat"
+   ],
+   "fieldsFilled": [],
+   "fieldConflicts": [
+    {
+     "kept": "recording_studio",
+     "field": "organization_type",
+     "discarded": "other"
+    }
+   ],
+   "recommendedKeepId": 242
+  },
+  "blocked": null,
+  "warnings": [
+   "Valores distintos en organization_type: se conserva el de «Circo Beat Studios»."
+  ],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 667932,
+  "label": "Lemon Pie Estudios",
+  "action": "fusionar",
+  "status": "pending",
+  "before": {
+   "drop": {
+    "id": 4297,
+    "name": "Lemon Pie",
+    "counts": {
+     "bands": 0,
+     "claims": 2,
+     "albumCredits": 6,
+     "trackCredits": 0,
+     "organizations": 0
+    },
+    "aliases": []
+   },
+   "keep": {
+    "id": 3250,
+    "name": "Lemon Pie Estudios",
+    "counts": {
+     "bands": 0,
+     "claims": 10,
+     "albumCredits": 13,
+     "trackCredits": 0,
+     "organizations": 0
+    },
+    "aliases": [
+     "Estudios Lemon Pie",
+     "Lemon Pie Estudio",
+     "Lemon Pie Estudios",
+     "Lemon Pie Studio",
+     "Lemon Pie Studios"
+    ]
+   }
+  },
+  "after": {
+   "keep": {
+    "id": 3250,
+    "name": "Lemon Pie Estudios"
+   },
+   "removed": {
+    "id": 4297,
+    "name": "Lemon Pie"
+   },
+   "nameAsAlias": "Lemon Pie",
+   "aliasesMoved": [],
+   "fieldsFilled": [],
+   "fieldConflicts": [
+    {
+     "kept": "recording_studio",
+     "field": "organization_type",
+     "discarded": "other"
+    }
+   ],
+   "recommendedKeepId": 3250
+  },
+  "blocked": null,
+  "warnings": [
+   "Valores distintos en organization_type: se conserva el de «Lemon Pie Estudios»."
+  ],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 667933,
+  "label": "Polygram Records",
+  "action": "fusionar",
+  "status": "pending",
+  "before": {
+   "drop": {
+    "id": 408,
+    "name": "Polygram Records",
+    "counts": {
+     "bands": 0,
+     "claims": 107,
+     "albumCredits": 1,
+     "trackCredits": 0,
+     "organizations": 0
+    },
+    "aliases": [
+     "PolyGram",
+     "PolyGram Records",
+     "Polygram",
+     "Polygram Records"
+    ]
+   },
+   "keep": {
+    "id": 4287,
+    "name": "Polygram",
+    "counts": {
+     "bands": 0,
+     "claims": 2,
+     "albumCredits": 2,
+     "trackCredits": 0,
+     "organizations": 0
+    },
+    "aliases": []
+   }
+  },
+  "after": {
+   "keep": {
+    "id": 4287,
+    "name": "Polygram"
+   },
+   "removed": {
+    "id": 408,
+    "name": "Polygram Records"
+   },
+   "nameAsAlias": "Polygram Records",
+   "aliasesMoved": [
+    "PolyGram Records",
+    "Polygram Records"
+   ],
+   "fieldsFilled": [
+    {
+     "field": "biography",
+     "value": "Polygram Records es un sello discográfico."
+    }
+   ],
+   "fieldConflicts": [
+    {
+     "kept": "other",
+     "field": "organization_type",
+     "discarded": "record_label"
+    }
+   ],
+   "recommendedKeepId": 4287
+  },
+  "blocked": null,
+  "warnings": [
+   "Valores distintos en organization_type: se conserva el de «Polygram»."
+  ],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 667934,
+  "label": "Polygram Studios",
+  "action": "fusionar",
+  "status": "pending",
+  "before": {
+   "drop": {
+    "id": 4287,
+    "name": "Polygram",
+    "counts": {
+     "bands": 0,
+     "claims": 2,
+     "albumCredits": 2,
+     "trackCredits": 0,
+     "organizations": 0
+    },
+    "aliases": []
+   },
+   "keep": {
+    "id": 3301,
+    "name": "Polygram Studios",
+    "counts": {
+     "bands": 0,
+     "claims": 6,
+     "albumCredits": 3,
+     "trackCredits": 0,
+     "organizations": 0
+    },
+    "aliases": [
+     "Estudio Polygram",
+     "Estudios Polygram",
+     "Polygram Studios"
+    ]
+   }
+  },
+  "after": {
+   "keep": {
+    "id": 3301,
+    "name": "Polygram Studios"
+   },
+   "removed": {
+    "id": 4287,
+    "name": "Polygram"
+   },
+   "nameAsAlias": "Polygram",
+   "aliasesMoved": [],
+   "fieldsFilled": [],
+   "fieldConflicts": [
+    {
+     "kept": "recording_studio",
+     "field": "organization_type",
+     "discarded": "other"
+    }
+   ],
+   "recommendedKeepId": 3301
+  },
+  "blocked": null,
+  "warnings": [
+   "Valores distintos en organization_type: se conserva el de «Polygram Studios»."
+  ],
+  "collisions": [],
+  "proposal": null
+ }
+]

@@ -1,0 +1,345 @@
+[
+ {
+  "findingId": 668375,
+  "label": "Sin grilletes - Mundo Irracional",
+  "action": "extraer_interprete_creando",
+  "status": "pending",
+  "before": {
+   "title": "Sin grilletes - Mundo Irracional"
+  },
+  "after": {
+   "title": "Mundo Irracional",
+   "createdArtist": "Sin grilletes"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 668376,
+  "label": "Los Chaborroz punk - Capitalista explotador",
+  "action": "extraer_interprete_creando",
+  "status": "pending",
+  "before": {
+   "title": "Los Chaborroz punk - Capitalista explotador"
+  },
+  "after": {
+   "title": "Capitalista explotador",
+   "createdArtist": "Los Chaborroz punk"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 668377,
+  "label": "Koleto Rock - Auto Destruccion",
+  "action": "extraer_interprete_creando",
+  "status": "pending",
+  "before": {
+   "title": "Koleto Rock - Auto Destruccion"
+  },
+  "after": {
+   "title": "Auto Destruccion",
+   "createdArtist": "Koleto Rock"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 668378,
+  "label": "Los Dead - Fuerza Obrera",
+  "action": "extraer_interprete",
+  "status": "pending",
+  "before": {
+   "title": "Los Dead - Fuerza Obrera"
+  },
+  "after": {
+   "title": "Fuerza Obrera",
+   "credit": {
+    "role": "Intérprete",
+    "artistId": 4559,
+    "artistName": "Los Dead"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 668379,
+  "label": "PPD - Por Siempre Punks",
+  "action": "extraer_interprete_creando",
+  "status": "pending",
+  "before": {
+   "title": "PPD - Por Siempre Punks"
+  },
+  "after": {
+   "title": "Por Siempre Punks",
+   "createdArtist": "PPD"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 668380,
+  "label": "Rock & Gol! [Jamas Entenderas] - La 24",
+  "action": "extraer_interprete_creando",
+  "status": "pending",
+  "before": {
+   "title": "Rock & Gol! [Jamas Entenderas] - La 24"
+  },
+  "after": {
+   "title": "La 24",
+   "createdArtist": "Rock & Gol! [Jamas Entenderas]"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 668381,
+  "label": "Contra Marcha - Ciclon",
+  "action": "extraer_interprete_creando",
+  "status": "pending",
+  "before": {
+   "title": "Contra Marcha - Ciclon"
+  },
+  "after": {
+   "title": "Ciclon",
+   "createdArtist": "Contra Marcha"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 668382,
+  "label": "A Raiz de Nuevas Causas - Descontrol",
+  "action": "extraer_interprete",
+  "status": "pending",
+  "before": {
+   "title": "A Raiz de Nuevas Causas - Descontrol"
+  },
+  "after": {
+   "title": "Descontrol",
+   "credit": {
+    "role": "Intérprete",
+    "artistId": 446,
+    "artistName": "A Raíz de Nuevas Causas"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 668383,
+  "label": "Carajitos Grandes - Mentiras",
+  "action": "extraer_interprete_creando",
+  "status": "pending",
+  "before": {
+   "title": "Carajitos Grandes - Mentiras"
+  },
+  "after": {
+   "title": "Mentiras",
+   "createdArtist": "Carajitos Grandes"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 668384,
+  "label": "PANKemao - No Kreo",
+  "action": "extraer_interprete_creando",
+  "status": "pending",
+  "before": {
+   "title": "PANKemao - No Kreo"
+  },
+  "after": {
+   "title": "No Kreo",
+   "createdArtist": "PANKemao"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 668385,
+  "label": "Gurupera - Un dia Verde",
+  "action": "extraer_interprete_creando",
+  "status": "pending",
+  "before": {
+   "title": "Gurupera - Un dia Verde"
+  },
+  "after": {
+   "title": "Un dia Verde",
+   "createdArtist": "Gurupera"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 668386,
+  "label": "Los Mirians - Bajo el sol",
+  "action": "extraer_interprete_creando",
+  "status": "pending",
+  "before": {
+   "title": "Los Mirians - Bajo el sol"
+  },
+  "after": {
+   "title": "Bajo el sol",
+   "createdArtist": "Los Mirians"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 668387,
+  "label": "Los Dead - Descontrol",
+  "action": "extraer_interprete",
+  "status": "pending",
+  "before": {
+   "title": "Los Dead - Descontrol"
+  },
+  "after": {
+   "title": "Descontrol",
+   "credit": {
+    "role": "Intérprete",
+    "artistId": 4559,
+    "artistName": "Los Dead"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 668388,
+  "label": "Los Chaborroz Punk - Yo No Quiero Tocar",
+  "action": "extraer_interprete_creando",
+  "status": "pending",
+  "before": {
+   "title": "Los Chaborroz Punk - Yo No Quiero Tocar"
+  },
+  "after": {
+   "title": "Yo No Quiero Tocar",
+   "createdArtist": "Los Chaborroz Punk"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 668389,
+  "label": "Koleto - Siempre Igual",
+  "action": "extraer_interprete_creando",
+  "status": "pending",
+  "before": {
+   "title": "Koleto - Siempre Igual"
+  },
+  "after": {
+   "title": "Siempre Igual",
+   "createdArtist": "Koleto"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 668390,
+  "label": "PANKemao - Quien eres Fascista Maldito",
+  "action": "extraer_interprete_creando",
+  "status": "pending",
+  "before": {
+   "title": "PANKemao - Quien eres Fascista Maldito"
+  },
+  "after": {
+   "title": "Quien eres Fascista Maldito",
+   "createdArtist": "PANKemao"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 668391,
+  "label": "PPD - Siempre Fieles a Nuestro Ruido",
+  "action": "extraer_interprete_creando",
+  "status": "pending",
+  "before": {
+   "title": "PPD - Siempre Fieles a Nuestro Ruido"
+  },
+  "after": {
+   "title": "Siempre Fieles a Nuestro Ruido",
+   "createdArtist": "PPD"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 668392,
+  "label": "Boogieman's Curda - Bullet Bound",
+  "action": "extraer_interprete",
+  "status": "pending",
+  "before": {
+   "title": "Boogieman's Curda - Bullet Bound"
+  },
+  "after": {
+   "title": "Bullet Bound",
+   "credit": {
+    "role": "Intérprete",
+    "artistId": 461,
+    "artistName": "Boogieman's Curda"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 668393,
+  "label": "Brutal Nativo - Hazlo Caer",
+  "action": "extraer_interprete",
+  "status": "pending",
+  "before": {
+   "title": "Brutal Nativo - Hazlo Caer"
+  },
+  "after": {
+   "title": "Hazlo Caer",
+   "credit": {
+    "role": "Intérprete",
+    "artistId": 346,
+    "artistName": "Brutal Nativo"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ }
+]

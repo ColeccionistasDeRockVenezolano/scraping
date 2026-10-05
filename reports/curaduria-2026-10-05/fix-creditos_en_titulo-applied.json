@@ -1,0 +1,60 @@
+[
+ {
+  "findingId": 472862,
+  "label": "Dejó Las Llaves (P. Dagnino)",
+  "action": "extraer_autores",
+  "status": "pending",
+  "before": {
+   "title": "Dejó Las Llaves (P. Dagnino)"
+  },
+  "after": {
+   "title": "Dejó Las Llaves",
+   "authors": [
+    "P. Dagnino"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479463,
+  "label": "Deuda De Amor (Adolfo Rodríguez/Armando Beltrán)",
+  "action": "extraer_autores",
+  "status": "pending",
+  "before": {
+   "title": "Deuda De Amor (Adolfo Rodríguez/Armando Beltrán)"
+  },
+  "after": {
+   "title": "Deuda De Amor",
+   "authors": [
+    "Adolfo Rodríguez",
+    "Armando Beltrán"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 485343,
+  "label": "Quien Como Tu (F. Tourent)",
+  "action": "extraer_autores",
+  "status": "pending",
+  "before": {
+   "title": "Quien Como Tu (F. Tourent)"
+  },
+  "after": {
+   "title": "Quien Como Tu",
+   "authors": [
+    "F. Tourent"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ }
+]

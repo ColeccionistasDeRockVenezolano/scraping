@@ -1,0 +1,146 @@
+[
+ {
+  "findingId": 341201,
+  "label": "Dark Master Mono",
+  "action": "convertir_creando_organizacion",
+  "status": "pending",
+  "before": {
+   "name": "Dark Master Mono",
+   "personId": 13824
+  },
+  "after": {
+   "organizationType": "other",
+   "createsOrganization": "Dark Master Mono"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465400,
+  "label": "Interamericana de Grabaciones (Integra)",
+  "action": "convertir_creando_organizacion",
+  "status": "pending",
+  "before": {
+   "name": "Interamericana de Grabaciones (Integra)",
+   "personId": 26486
+  },
+  "after": {
+   "organizationType": "other",
+   "createsOrganization": "Interamericana de Grabaciones (Integra)"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465441,
+  "label": "L.P.V. Internacional",
+  "action": "convertir_creando_organizacion",
+  "status": "pending",
+  "before": {
+   "name": "L.P.V. Internacional",
+   "personId": 33781
+  },
+  "after": {
+   "organizationType": "other",
+   "createsOrganization": "L.P.V. Internacional"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 472899,
+  "label": "Uno",
+  "action": "convertir_creando_organizacion",
+  "status": "pending",
+  "before": {
+   "name": "Uno",
+   "personId": 35270
+  },
+  "after": {
+   "organizationType": "other",
+   "createsOrganization": "Uno"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 667920,
+  "label": "Nuevas Almas",
+  "action": "convertir_creando_organizacion",
+  "status": "pending",
+  "before": {
+   "name": "Nuevas Almas",
+   "personId": 15464
+  },
+  "after": {
+   "organizationType": "other",
+   "createsOrganization": "Nuevas Almas"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 667921,
+  "label": "Asociación Cultural Humbolt",
+  "action": "convertir_creando_organizacion",
+  "status": "pending",
+  "before": {
+   "name": "Asociación Cultural Humbolt",
+   "personId": 20165
+  },
+  "after": {
+   "organizationType": "other",
+   "createsOrganization": "Asociación Cultural Humbolt"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 667923,
+  "label": "Sonic Solutions-Optilaser",
+  "action": "convertir_creando_organizacion",
+  "status": "pending",
+  "before": {
+   "name": "Sonic Solutions-Optilaser",
+   "personId": 32735
+  },
+  "after": {
+   "organizationType": "other",
+   "createsOrganization": "Sonic Solutions-Optilaser"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 667925,
+  "label": "Asociación ProArte",
+  "action": "convertir_creando_organizacion",
+  "status": "pending",
+  "before": {
+   "name": "Asociación ProArte",
+   "personId": 34075
+  },
+  "after": {
+   "organizationType": "other",
+   "createsOrganization": "Asociación ProArte"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ }
+]

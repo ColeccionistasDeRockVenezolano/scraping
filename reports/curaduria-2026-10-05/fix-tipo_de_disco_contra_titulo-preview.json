@@ -1,0 +1,3794 @@
+[
+ {
+  "findingId": 343657,
+  "label": "En vivo: Contra los fieles \"San Cristobal\"",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "demo"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 345066,
+  "label": "Superpop Venezuela Remixes",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "remix"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 463328,
+  "label": "En Vivo",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 463329,
+  "label": "Antología del Carol Inglés",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "compilation"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 463330,
+  "label": "Antología Veinte Años",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "compilation"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 463336,
+  "label": "Live In Germany",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 463348,
+  "label": "Antología del Madrigal Venezolano Vol. I y Vol. II",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "compilation"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 463351,
+  "label": "Antología 30 Años Vol. 1 Música Venezolana y Latinoamericana",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "compilation"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 463352,
+  "label": "Antología 30 Años Vol. 2 Música Polifónica Universal",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "compilation"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467322,
+  "label": "Mexico Music Fest (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467323,
+  "label": "Oh Que Bueno! - En Vivo",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467327,
+  "label": "Solo Live",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467330,
+  "label": "Free Play & Love Songs (Live Vol.1)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467331,
+  "label": "Live In Vienna",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467333,
+  "label": "Quintet Live",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467334,
+  "label": "Live In Buckhead",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467335,
+  "label": "Live in La Paz, Bolivia",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467337,
+  "label": "En Vivo Poliedro de Caracas Mayo 14, 1981",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467338,
+  "label": "En Vivo Poliedro de Caracas Mayo 15, 1981",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467339,
+  "label": "A Live Story",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467340,
+  "label": "Destiny's Will Live at No Black Tie Kuala Lampur, Malaysia",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467341,
+  "label": "The Latin Jazz Band Live at Adagio Jazz Club Savannah, Georgia",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467342,
+  "label": "Live at The Open Stage Club",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467343,
+  "label": "Live in New York at Jazz Standard",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467344,
+  "label": "Alí ¡En Vivo!",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467346,
+  "label": "En Vivo Desde La Terraza del Ateneo",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467348,
+  "label": "Hits",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "compilation"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467349,
+  "label": "En Vivo",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467351,
+  "label": "En Vivo",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467355,
+  "label": "Antología De Los Terricolas",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "compilation"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467356,
+  "label": "Antología De Los Terricolas Vol. 2",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "compilation"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467359,
+  "label": "Remix II",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "remix"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467361,
+  "label": "Boleros \"En Vivo\"",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467362,
+  "label": "Constelación De Exitos",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "compilation"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467363,
+  "label": "Sólo Exitos (Serie Premium)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "compilation"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467364,
+  "label": "La Magia del Sexteto Juventud 20 Hits",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "compilation"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467365,
+  "label": "Soledad Bravo En Vivo",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467366,
+  "label": "En Vivo",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467368,
+  "label": "Antología Uno",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "compilation"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467369,
+  "label": "Antología Dos",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "compilation"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467371,
+  "label": "En Vivo",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467372,
+  "label": "Serie Premium Solo Exitos",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "compilation"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467373,
+  "label": "en Vivo / 50 Años De Vida Artística",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467375,
+  "label": "Directo Al Espíritu",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467376,
+  "label": "12 Hits Con Los Melódicos",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "compilation"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467377,
+  "label": "Mirla En Vivo - 20 Años",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467378,
+  "label": "Una Colección de Antologia Serie Para Siempre",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "compilation"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467389,
+  "label": "Antología Vol. 10 (Reissue)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "compilation"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467390,
+  "label": "Serie Premium - 16 Exitos",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "compilation"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467392,
+  "label": "Sencillo",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "single"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467393,
+  "label": "Hits",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "compilation"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467394,
+  "label": "Solo Exitos Serie Premium",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "compilation"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467397,
+  "label": "María Teresa y Sus Amigos Concierto En Vivo en el TTC",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467398,
+  "label": "Antología Vol. 1",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "compilation"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467399,
+  "label": "Antología Vol. 2",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "compilation"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467400,
+  "label": "Antología Vol. 3",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "compilation"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467401,
+  "label": "Antología Vol. 4",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "compilation"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467402,
+  "label": "Antología Vol. 5",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "compilation"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467403,
+  "label": "Antología Vol. 6",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "compilation"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467404,
+  "label": "Antología Vol. 7",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "compilation"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467405,
+  "label": "Antología Vol. 8",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "compilation"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467406,
+  "label": "Antología Vol. 9 Canciones Corales de Venezuela",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "compilation"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467407,
+  "label": "Antología Vol. 10 Aguinaldos y Parrandas Venezolanas",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "compilation"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467409,
+  "label": "Hits",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "compilation"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467410,
+  "label": "Sólo Exitos Serie Premium",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "compilation"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467413,
+  "label": "Entre Amigos 2 en vivo",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467417,
+  "label": "En Vivo - Cuatro, Maraca y Buche",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467419,
+  "label": "Solo Exitos (Serie Premium)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "compilation"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467421,
+  "label": "En Directo",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467422,
+  "label": "Recoveco Live",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467423,
+  "label": "En Vivo",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467424,
+  "label": "En Vivo",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467425,
+  "label": "Live at Music of the Americas",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467426,
+  "label": "Antología",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "compilation"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480911,
+  "label": "At The Edge Of Extinction",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "studio_album"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480912,
+  "label": "KiCk StReAm: Raw and Dirty Compilation of Unreleased Arca Songs",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "studio_album"
+  },
+  "after": {
+   "album_type": "compilation"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480913,
+  "label": "Live @ Boiler Room, Caracas, Venezuela 2024.03.16",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "compilation"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480914,
+  "label": "Split 01",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "ep"
+  },
+  "after": {
+   "album_type": "collaboration_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480915,
+  "label": "We Want Ca$h EP",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "ep"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480916,
+  "label": "It's Lover, Love Remixes",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "remix"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480917,
+  "label": "Caracas Tembló... En Vivo!",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480918,
+  "label": "En Vivo",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480919,
+  "label": "Live in Miami (En Vivo 2025)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "studio_album"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480920,
+  "label": "Lado B (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480921,
+  "label": "Frente a mi Ventana (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480922,
+  "label": "No Te Burles (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480923,
+  "label": "Tú Serás (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480924,
+  "label": "El Guateque (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480925,
+  "label": "Aquel Lugar (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480926,
+  "label": "Virgen (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480927,
+  "label": "Sinfónico (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "collaboration_album"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480928,
+  "label": "Japón (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480929,
+  "label": "Desde La Basílica (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480930,
+  "label": "Desde Maracay (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480931,
+  "label": "En Vivo Santa Rita",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480932,
+  "label": "Dame un Beso (Remix) [Feat. Juan Miguel]",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "remix"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480933,
+  "label": "Maria Rivas' 18 Greatest Hits (18 Grandes Éxitos)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "compilation"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480934,
+  "label": "Refresh Live Show",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480935,
+  "label": "Mix Selena (My Playlist: Homenaje A Selena Quintanilla) (Medley En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480936,
+  "label": "Sangre en Mi Cuerpo (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480937,
+  "label": "En Algún Rincón de Mi Alma (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480938,
+  "label": "Siempre Siempre (Sinfónico En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480939,
+  "label": "Mamita (En Vivo Sinfónico)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480940,
+  "label": "La Piernona (En Vivo Sinfónico)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480942,
+  "label": "Chino & Nacho Live (En Vivo Desde El Anfiteatro El Hatillo, Caracas-Venezuela/2014)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480943,
+  "label": "Alma Llanera / Venezuela (Live from Nobel Peace Prize 2025)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480944,
+  "label": "Wapa (Remix)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "remix"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480945,
+  "label": "Wapa (Cobuz & Bustta Remix)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "remix"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480946,
+  "label": "Verano En París (Remix)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "remix"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480947,
+  "label": "Franco de Vita & Ilan Chester En Concierto (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480948,
+  "label": "Tango (Live Session)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "ep"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480950,
+  "label": "En Vivo Desde El Teatro Caupolicán, Santiago de Chile",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480952,
+  "label": "La Ducha Remix (con Becky G, Tini)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "remix"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480953,
+  "label": "Los Mejores Años (live desde londres)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480954,
+  "label": "Rabia (live desde el baño)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480955,
+  "label": "En Directo Desde la Cabina",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480956,
+  "label": "Fiesta (Boombox Remix) [feat. Lil Supa]",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "remix"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480957,
+  "label": "En Vivo Madrid 2017",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "studio_album"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480958,
+  "label": "Pidan Bendición (Remix)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "remix"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480959,
+  "label": "La Ley (Remix)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "remix"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480960,
+  "label": "Live From La Sabana",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "ep"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480961,
+  "label": "Laberinto (Bosq Remix)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "remix"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480962,
+  "label": "Desorden Pre-Pandemic (Remixes)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "remix"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480963,
+  "label": "Desorden Mundial (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480964,
+  "label": "En Vivo en el Teatro Teresa Carreño, Vol. 1",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480965,
+  "label": "En Vivo en el Teatro Teresa Carreño, Vol. 2",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480967,
+  "label": "Amaranto (Live Version)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480968,
+  "label": "Amaranto (KINZOisHERE Remix)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "remix"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480969,
+  "label": "Loop (Remix) [Radio Edit]",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "remix"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480970,
+  "label": "Tiempo Compartido (LIVE SESSION)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480971,
+  "label": "Cementerio Del Este (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "ep"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480972,
+  "label": "Manos Arriba (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480973,
+  "label": "Calle Barcelona (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480974,
+  "label": "Kali: En Vivo Desde Buenos Aires",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480975,
+  "label": "So Many Stars (Remixes)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "remix"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480976,
+  "label": "Canción Ecológica EP",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "ep"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480977,
+  "label": "Wiki Wiki MAXI SINGLE",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "ep"
+  },
+  "after": {
+   "album_type": "single"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480978,
+  "label": "Beethoven: Symphony No. 5 (live)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "collaboration_album"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480979,
+  "label": "De Mi Puño y Letra, 30 Años Tour (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480981,
+  "label": "Colgando en Tus Manos (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480982,
+  "label": "Mi Medicina (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480983,
+  "label": "Angelito (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480984,
+  "label": "Perdimos el Control (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480985,
+  "label": "Nada Se Compara a Ti (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480986,
+  "label": "Quien Te Quiere Como Yo (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480987,
+  "label": "Te Regalo (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480988,
+  "label": "Te Quise Olvidar (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480989,
+  "label": "Me Pones Tierno (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480990,
+  "label": "El Chisme (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480991,
+  "label": "Muy Loco (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480992,
+  "label": "Esta Canción (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480993,
+  "label": "Perdimos el control (Urban Remix)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "remix"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480994,
+  "label": "Yo Quisiera Amar Como Los Sabios (Baby Noel Remix)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "remix"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480995,
+  "label": "Lo que tú quieres yo quiero (Remixes)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "remix"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480996,
+  "label": "Carledos (Remix)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "remix"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480997,
+  "label": "Xulitos (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480998,
+  "label": "En Tu Cuarto (en Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480999,
+  "label": "Salserin (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "ep"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481000,
+  "label": "Lunares (Remix)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "remix"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481001,
+  "label": "Me Duele Quererte (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481002,
+  "label": "Rumba en Mi Corazón (Live)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481003,
+  "label": "Una Fan Enamorada (Live)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481004,
+  "label": "Por Haberte Querido (Live)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481005,
+  "label": "Medley: Muchacho Solitario, Yo No Me Quería Enamorar, Te Regalo la Luna (Live)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481006,
+  "label": "Una Canción Que Te Enamore (Live)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481007,
+  "label": "Estas Hecha para Mi (Live)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481008,
+  "label": "Estás Hecha para Mi (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481009,
+  "label": "No Importa, un Amor Como el Nuestro, Yo Sin Ti, de Sol a Sol (Live)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481010,
+  "label": "Me Enamoré (Live)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481011,
+  "label": "Con Ella No (En vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481012,
+  "label": "Aliviame (Live)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481013,
+  "label": "Tengo un Corazón (Live)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481014,
+  "label": "Los Hermanos Primera (Live)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481015,
+  "label": "Te Encontré (Live)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481016,
+  "label": "Yo Quería / Si Yo Fuera Tu (Live)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481017,
+  "label": "Primer Amor (Live)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481018,
+  "label": "Dímelo (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481019,
+  "label": "Si Yo Fuera Tu (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481020,
+  "label": "Me Vas a Recordar (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481021,
+  "label": "Bendita Madre (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481022,
+  "label": "Robando Azules (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481023,
+  "label": "Una Fan Enamorada (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481024,
+  "label": "Te Encontré (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481025,
+  "label": "Salserín (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481026,
+  "label": "Antología de caricias",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "compilation"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481027,
+  "label": "Intimo (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481028,
+  "label": "Remix 2",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "remix"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481029,
+  "label": "Relevo (Demo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "demo"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481030,
+  "label": "Dime Quién (Live)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481031,
+  "label": "Tengamos Pasado (Remix)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "remix"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481032,
+  "label": "Tuvimos Futuro (Remix)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "remix"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481033,
+  "label": "Agus' Song (Mejor Dejarte Ir) (En Vivo Desde Caracas)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481034,
+  "label": "Children Of Tomorrow (Pythius Remix) (Instrumental)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "remix"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481035,
+  "label": "Takeover (Zardonic & Fickle6 VIP Remix) (Instrumental)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "remix"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481036,
+  "label": "The Storm EP",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "ep"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481037,
+  "label": "Caminando - Rock al Aire - Session Studio (Live)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481038,
+  "label": "All Right - Rock al Aire - Session Studio (Live)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481040,
+  "label": "Remix de la Obra Electronica Gran Sabana",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "remix"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481041,
+  "label": "Antología Musical",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "ep"
+  },
+  "after": {
+   "album_type": "compilation"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481042,
+  "label": "En Vivo En Argentina",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481043,
+  "label": "La Voz de Venezuela (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481044,
+  "label": "María Antonia (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481045,
+  "label": "Deja (En directo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481046,
+  "label": "Vértigo (Acústico) (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481047,
+  "label": "Ahora No (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481048,
+  "label": "Tiembla / Allá Cayó (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481049,
+  "label": "Gurrufío en Vivo 15 Años",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481050,
+  "label": "Mix Venezuela Es Una Sola (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481051,
+  "label": "Mix Homenaje a Compositores (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481053,
+  "label": "Mi Corazón en Venezuela (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481054,
+  "label": "A LAS MUJERES SE LES DÁ (Remix)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "remix"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481055,
+  "label": "Desenchufa'o (Unplugged)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481056,
+  "label": "Constelación de Éxitos",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "compilation"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481057,
+  "label": "Sana, Sana, Colita de Rana (Remix)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "remix"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481059,
+  "label": "Two Ethical Screams At Decadence",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "demo"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 481061,
+  "label": "At The Back Of The Hill",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "studio_album"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 485357,
+  "label": "En Vivo",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 488230,
+  "label": "Acoustic Live Sessions",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "ep"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 488231,
+  "label": "Demo",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "studio_album"
+  },
+  "after": {
+   "album_type": "demo"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 488232,
+  "label": "Demos 1994-2007",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "studio_album"
+  },
+  "after": {
+   "album_type": "demo"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 488233,
+  "label": "Remixes Bizarros",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "ep"
+  },
+  "after": {
+   "album_type": "remix"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 488234,
+  "label": "Subliminal Remix",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "remix"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 488235,
+  "label": "EP 2009",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "ep"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 488236,
+  "label": "Audiotree Live",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "ep"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 489219,
+  "label": "El ultimo Disaster en Caracas (En vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 489220,
+  "label": "Live From Red Lion Recording Studio",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 489221,
+  "label": "Live Session 2021",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 489222,
+  "label": "Remixes Bizarros",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "remix"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 489223,
+  "label": "Split 02",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "collaboration_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 489224,
+  "label": "Split 03",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "collaboration_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 490501,
+  "label": "Retrospectiva (Compilation Album)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "compilation"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 491108,
+  "label": "Gorilla Business (En vivo, desde Recoveco Records)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 491841,
+  "label": "Ilan Chester – En Vivo! Gira Nacional Del Amor Venezolano",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 491842,
+  "label": "Caracas en el 2000 (Remix)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "single"
+  },
+  "after": {
+   "album_type": "remix"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 491843,
+  "label": "Tambor Urbano Sinfónico Teatro Junín (En Vivo)",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "live_album"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 664148,
+  "label": "Divas - Sólo Exitos Serie Premium",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "compilation"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 664149,
+  "label": "Idolos - Sólo Exitos Serie Premium",
+  "action": "fijar_tipo_de_disco",
+  "status": "pending",
+  "before": {
+   "album_type": "other"
+  },
+  "after": {
+   "album_type": "compilation"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ }
+]

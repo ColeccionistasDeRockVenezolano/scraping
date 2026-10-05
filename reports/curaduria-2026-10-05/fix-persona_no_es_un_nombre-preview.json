@@ -1,0 +1,1180 @@
+[
+ {
+  "findingId": 343645,
+  "label": "Santa Bárbara",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "Santa Bárbara",
+   "personId": 12058,
+   "albumCredits": 0,
+   "trackCredits": 1
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 462119,
+  "label": "DD",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "DD",
+   "personId": 15496,
+   "albumCredits": 0,
+   "trackCredits": 0
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 462120,
+  "label": "Orlando",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "Orlando",
+   "personId": 16163,
+   "albumCredits": 0,
+   "trackCredits": 0
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 462122,
+  "label": "Afro",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "Afro",
+   "personId": 16439,
+   "albumCredits": 0,
+   "trackCredits": 0
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 462123,
+  "label": "JR",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "JR",
+   "personId": 17080,
+   "albumCredits": 0,
+   "trackCredits": 0
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 462124,
+  "label": "vocalista femenina",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "vocalista femenina",
+   "personId": 17258,
+   "albumCredits": 0,
+   "trackCredits": 0
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 462125,
+  "label": "gusdamian",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "gusdamian",
+   "personId": 17421,
+   "albumCredits": 0,
+   "trackCredits": 0
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 462126,
+  "label": "Eb",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "Eb",
+   "personId": 17816,
+   "albumCredits": 0,
+   "trackCredits": 0
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 462127,
+  "label": "VJ",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "VJ",
+   "personId": 17973,
+   "albumCredits": 0,
+   "trackCredits": 0
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 462248,
+  "label": "Vargas",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "Vargas",
+   "personId": 18639,
+   "albumCredits": 0,
+   "trackCredits": 0
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 462500,
+  "label": "Argentina",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "Argentina",
+   "personId": 18876,
+   "albumCredits": 1,
+   "trackCredits": 1
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 463172,
+  "label": "Design",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "Design",
+   "personId": 19753,
+   "albumCredits": 1,
+   "trackCredits": 0
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 463175,
+  "label": "Remastered",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "Remastered",
+   "personId": 8699,
+   "albumCredits": 0,
+   "trackCredits": 3
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465454,
+  "label": "Mina",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "Mina",
+   "personId": 12038,
+   "albumCredits": 0,
+   "trackCredits": 1
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465455,
+  "label": "original",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "original",
+   "personId": 18594,
+   "albumCredits": 0,
+   "trackCredits": 0
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465457,
+  "label": "72 dpi",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "72 dpi",
+   "personId": 21040,
+   "albumCredits": 3,
+   "trackCredits": 0
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465459,
+  "label": "440mastering",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "440mastering",
+   "personId": 23127,
+   "albumCredits": 2,
+   "trackCredits": 0
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465460,
+  "label": "Dimension Latina",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "Dimension Latina",
+   "personId": 27277,
+   "albumCredits": 11,
+   "trackCredits": 10
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465461,
+  "label": "Compilation",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "Compilation",
+   "personId": 27408,
+   "albumCredits": 0,
+   "trackCredits": 1
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465463,
+  "label": "Lara",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "Lara",
+   "personId": 27960,
+   "albumCredits": 0,
+   "trackCredits": 1
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465464,
+  "label": "Art",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "Art",
+   "personId": 28499,
+   "albumCredits": 2,
+   "trackCredits": 0
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465465,
+  "label": "Salvador",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "Salvador",
+   "personId": 28518,
+   "albumCredits": 1,
+   "trackCredits": 5
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465466,
+  "label": "Vargas",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "Vargas",
+   "personId": 30225,
+   "albumCredits": 0,
+   "trackCredits": 2
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465467,
+  "label": "Organización Los Cañoneros 2006 C.A.",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "Organización Los Cañoneros 2006 C.A.",
+   "personId": 31443,
+   "albumCredits": 1,
+   "trackCredits": 0
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465468,
+  "label": "Canciones de Venezuela Vol. 1",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "Canciones de Venezuela Vol. 1",
+   "personId": 31838,
+   "albumCredits": 1,
+   "trackCredits": 0
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465469,
+  "label": "Canciones de Venezuela Vol. 2",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "Canciones de Venezuela Vol. 2",
+   "personId": 31843,
+   "albumCredits": 1,
+   "trackCredits": 0
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465470,
+  "label": "Canciones de Venezuela Vol. 4",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "Canciones de Venezuela Vol. 4",
+   "personId": 31850,
+   "albumCredits": 1,
+   "trackCredits": 0
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465471,
+  "label": "1parcreativo",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "1parcreativo",
+   "personId": 32597,
+   "albumCredits": 1,
+   "trackCredits": 0
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465472,
+  "label": "Mandolin",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "Mandolin",
+   "personId": 32721,
+   "albumCredits": 1,
+   "trackCredits": 0
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465473,
+  "label": "Guitar - Pablo Picasso 1924",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "Guitar - Pablo Picasso 1924",
+   "personId": 32722,
+   "albumCredits": 1,
+   "trackCredits": 0
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465474,
+  "label": "R 2007 C.A",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "R 2007 C.A",
+   "personId": 33202,
+   "albumCredits": 2,
+   "trackCredits": 0
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465475,
+  "label": "Miami",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "Miami",
+   "personId": 33435,
+   "albumCredits": 1,
+   "trackCredits": 0
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465476,
+  "label": "Santiago",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "Santiago",
+   "personId": 33581,
+   "albumCredits": 10,
+   "trackCredits": 3
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465477,
+  "label": "Banco Mara Concert 1998",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "Banco Mara Concert 1998",
+   "personId": 34027,
+   "albumCredits": 1,
+   "trackCredits": 0
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465478,
+  "label": "Digital Post",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "Digital Post",
+   "personId": 34028,
+   "albumCredits": 1,
+   "trackCredits": 0
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465480,
+  "label": "Cumaco",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "Cumaco",
+   "personId": 5150,
+   "albumCredits": 0,
+   "trackCredits": 1
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465481,
+  "label": "English Version",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "English Version",
+   "personId": 5162,
+   "albumCredits": 0,
+   "trackCredits": 5
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465482,
+  "label": "Aquiles Báez",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "Aquiles Báez",
+   "personId": 935,
+   "albumCredits": 70,
+   "trackCredits": 124
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 472930,
+  "label": "Hard Rock Café Caracas 2011",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "Hard Rock Café Caracas 2011",
+   "personId": 35268,
+   "albumCredits": 1,
+   "trackCredits": 0
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 472932,
+  "label": "Tinajas",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "Tinajas",
+   "personId": 36352,
+   "albumCredits": 1,
+   "trackCredits": 0
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 472933,
+  "label": "Power Age 1980",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "Power Age 1980",
+   "personId": 37214,
+   "albumCredits": 0,
+   "trackCredits": 4
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 478819,
+  "label": "Servando",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "Servando",
+   "personId": 26550,
+   "albumCredits": 2,
+   "trackCredits": 6
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 478820,
+  "label": "Sounds",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "Sounds",
+   "personId": 28500,
+   "albumCredits": 2,
+   "trackCredits": 0
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 478821,
+  "label": "Florentino",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "Florentino",
+   "personId": 34387,
+   "albumCredits": 2,
+   "trackCredits": 5
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 485894,
+  "label": "Raices de Venezuela",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "Raices de Venezuela",
+   "personId": 30599,
+   "albumCredits": 0,
+   "trackCredits": 4
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 485896,
+  "label": "Sesión de Cuerdas de Caracas",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "Sesión de Cuerdas de Caracas",
+   "personId": 34435,
+   "albumCredits": 1,
+   "trackCredits": 0
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 485897,
+  "label": "Margarita Island",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "Margarita Island",
+   "personId": 39801,
+   "albumCredits": 1,
+   "trackCredits": 0
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 488173,
+  "label": "Folk",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "Folk",
+   "personId": 20342,
+   "albumCredits": 16,
+   "trackCredits": 3
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 488175,
+  "label": "Rondalla Venezolana",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "Rondalla Venezolana",
+   "personId": 31063,
+   "albumCredits": 8,
+   "trackCredits": 0
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 488179,
+  "label": "Brazilian Folk",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "Brazilian Folk",
+   "personId": 32621,
+   "albumCredits": 0,
+   "trackCredits": 1
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 488180,
+  "label": "Sono Folk",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "Sono Folk",
+   "personId": 37553,
+   "albumCredits": 1,
+   "trackCredits": 0
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 488181,
+  "label": "Jazz Club",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "Jazz Club",
+   "personId": 38282,
+   "albumCredits": 1,
+   "trackCredits": 0
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 488182,
+  "label": "kusari",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "kusari",
+   "personId": 39879,
+   "albumCredits": 0,
+   "trackCredits": 0
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 488183,
+  "label": "bearsbeetsbattlestar",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "bearsbeetsbattlestar",
+   "personId": 39884,
+   "albumCredits": 0,
+   "trackCredits": 0
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 488184,
+  "label": "bolas criollas",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "bolas criollas",
+   "personId": 39896,
+   "albumCredits": 0,
+   "trackCredits": 0
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 488185,
+  "label": "swan durh",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "swan durh",
+   "personId": 39900,
+   "albumCredits": 0,
+   "trackCredits": 0
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 488186,
+  "label": "cloudy",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "cloudy",
+   "personId": 39901,
+   "albumCredits": 0,
+   "trackCredits": 0
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 488187,
+  "label": "puertoazul",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "puertoazul",
+   "personId": 39921,
+   "albumCredits": 0,
+   "trackCredits": 0
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 491835,
+  "label": "00neaj",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "00neaj",
+   "personId": 40169,
+   "albumCredits": 0,
+   "trackCredits": 0
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 663025,
+  "label": "Billos's Caracas Boys",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "Billos's Caracas Boys",
+   "personId": 11997,
+   "albumCredits": 0,
+   "trackCredits": 1
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 663026,
+  "label": "Billo's Caracas Boys",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "Billo's Caracas Boys",
+   "personId": 26639,
+   "albumCredits": 131,
+   "trackCredits": 20
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 667223,
+  "label": "Máquina",
+  "action": "retirar_con_creditos",
+  "status": "pending",
+  "before": {
+   "name": "Máquina",
+   "personId": 9218,
+   "albumCredits": 0,
+   "trackCredits": 1
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ }
+]

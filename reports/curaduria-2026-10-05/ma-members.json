@@ -1,0 +1,111 @@
+{
+ "plans": [
+  {
+   "personId": 13378,
+   "name": "Hever Cárdenas",
+   "artistId": 1371,
+   "band": "Sanetoxic",
+   "role": "Drums",
+   "from": 2009,
+   "to": 2009,
+   "current": false
+  },
+  {
+   "personId": 13391,
+   "name": "Daniel \"Loco Loco\" Brito",
+   "artistId": 4658,
+   "band": "Xtremauncion",
+   "role": "Drums",
+   "from": null,
+   "to": null,
+   "current": false
+  },
+  {
+   "personId": 13455,
+   "name": "Luis Cedeño",
+   "artistId": 1371,
+   "band": "Sanetoxic",
+   "role": "Bass",
+   "from": 2009,
+   "to": 2009,
+   "current": false
+  },
+  {
+   "personId": 13502,
+   "name": "Gilberto Luna",
+   "artistId": 4658,
+   "band": "Xtremauncion",
+   "role": "Guitars",
+   "from": null,
+   "to": null,
+   "current": false
+  },
+  {
+   "personId": 13503,
+   "name": "Fernando Doningues",
+   "artistId": 4658,
+   "band": "Xtremauncion",
+   "role": "Vocals",
+   "from": null,
+   "to": null,
+   "current": false
+  },
+  {
+   "personId": 13504,
+   "name": "Renato Alarcon",
+   "artistId": 4658,
+   "band": "Xtremauncion",
+   "role": "Bass",
+   "from": null,
+   "to": null,
+   "current": false
+  },
+  {
+   "personId": 15280,
+   "name": "Satania",
+   "artistId": 1728,
+   "band": "Perras Malditas",
+   "role": "Vocals",
+   "from": 2002,
+   "to": 2002,
+   "current": false
+  },
+  {
+   "personId": 15367,
+   "name": "Hernán Hermida",
+   "artistId": 2340,
+   "band": "Suicide Silence",
+   "role": "Vocals",
+   "from": 2013,
+   "to": null,
+   "current": true
+  }
+ ],
+ "unmatched": [
+  "13383 Adal Barrientos",
+  "13392 Niko Orlando",
+  "13457 Kelvin Boscán",
+  "13458 Daniel Cortez",
+  "13474 Isaac Guevara",
+  "13508 Moisés Tortoza",
+  "13509 Elius Tortoza",
+  "13556 Fabian Alberto Olah",
+  "13730 Alejandro Quintiliani",
+  "13747 José Francisco Riascos",
+  "13748 Marco Antonio Freytes",
+  "13783 Lord Nebirus",
+  "13850 Larry Vargas",
+  "13851 Stefano Cibien",
+  "13852 Isaías Pèrez",
+  "14232 Mark Berserk",
+  "14362 Jonathan Dávila",
+  "14363 David Lares",
+  "14675 Juan Coronado",
+  "14676 José Barreto",
+  "14677 Jery Carrasquero",
+  "14678 Jose Gerdel",
+  "14937 Daniel Rojas",
+  "14938 Czeibyllt Capriles",
+  "15215 Sven Havlíček"
+ ]
+}

@@ -1,0 +1,59 @@
+[
+ {
+  "findingId": 667935,
+  "label": "Mermelada Bunch",
+  "action": "fusionar",
+  "status": "pending",
+  "before": {
+   "drop": {
+    "id": 338,
+    "name": "Mermelada Bunch",
+    "counts": {
+     "bands": 0,
+     "claims": 2,
+     "albumCredits": 1,
+     "trackCredits": 0,
+     "organizations": 0
+    },
+    "aliases": [
+     "Mermelada Bunch for Corporación MB"
+    ]
+   },
+   "keep": {
+    "id": 35880,
+    "name": "Mermelada Bunch",
+    "counts": {
+     "bands": 0,
+     "claims": 3,
+     "albumCredits": 3,
+     "trackCredits": 0,
+     "organizations": 0
+    },
+    "aliases": [
+     "Mermelada Bunch"
+    ]
+   }
+  },
+  "after": {
+   "keep": {
+    "id": 35880,
+    "name": "Mermelada Bunch"
+   },
+   "removed": {
+    "id": 338,
+    "name": "Mermelada Bunch"
+   },
+   "nameAsAlias": "Mermelada Bunch",
+   "aliasesMoved": [
+    "Mermelada Bunch for Corporación MB"
+   ],
+   "fieldsFilled": [],
+   "fieldConflicts": [],
+   "recommendedKeepId": 35880
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ }
+]

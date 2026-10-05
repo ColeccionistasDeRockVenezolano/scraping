@@ -1,0 +1,572 @@
+[
+ {
+  "findingId": 463149,
+  "label": "Los Cuñaos: Meiver Acuña",
+  "action": "quitar_rotulo",
+  "status": "pending",
+  "before": {
+   "field": "name",
+   "value": "Los Cuñaos: Meiver Acuña"
+  },
+  "after": {
+   "field": "name",
+   "value": "Meiver Acuña"
+  },
+  "blocked": null,
+  "warnings": [
+   "Otra ficha del mismo tipo se escribe igual sin tildes ni mayúsculas: puede quedar un duplicado."
+  ],
+  "collisions": [
+   {
+    "id": 2037,
+    "kind": "person",
+    "exact": true,
+    "label": "Meiver Acuña"
+   }
+  ],
+  "proposal": null
+ },
+ {
+  "findingId": 465258,
+  "label": "Text: Andrés Eloy Blanco",
+  "action": "quitar_rotulo",
+  "status": "pending",
+  "before": {
+   "field": "name",
+   "value": "Text: Andrés Eloy Blanco"
+  },
+  "after": {
+   "field": "name",
+   "value": "Andrés Eloy Blanco"
+  },
+  "blocked": null,
+  "warnings": [
+   "Otra ficha del mismo tipo se escribe igual sin tildes ni mayúsculas: puede quedar un duplicado."
+  ],
+  "collisions": [
+   {
+    "id": 27957,
+    "kind": "person",
+    "exact": true,
+    "label": "Andrés Eloy Blanco"
+   }
+  ],
+  "proposal": null
+ },
+ {
+  "findingId": 465263,
+  "label": "Text: Miguel Márquez",
+  "action": "quitar_rotulo",
+  "status": "pending",
+  "before": {
+   "field": "name",
+   "value": "Text: Miguel Márquez"
+  },
+  "after": {
+   "field": "name",
+   "value": "Miguel Márquez"
+  },
+  "blocked": null,
+  "warnings": [
+   "2 fichas del mismo tipo se escriben igual sin tildes ni mayúsculas: puede quedar un duplicado."
+  ],
+  "collisions": [
+   {
+    "id": 13439,
+    "kind": "person",
+    "exact": true,
+    "label": "Miguel Márquez"
+   },
+   {
+    "id": 17539,
+    "kind": "person",
+    "exact": true,
+    "label": "Miguel Márquez"
+   }
+  ],
+  "proposal": null
+ },
+ {
+  "findingId": 465266,
+  "label": "Adapt: I. Capriles",
+  "action": "quitar_rotulo",
+  "status": "pending",
+  "before": {
+   "field": "name",
+   "value": "Adapt: I. Capriles"
+  },
+  "after": {
+   "field": "name",
+   "value": "I. Capriles"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465306,
+  "label": "Henry Martínez. Arr: Klever Camero",
+  "action": "quitar_rotulo",
+  "status": "pending",
+  "before": {
+   "field": "name",
+   "value": "Henry Martínez. Arr: Klever Camero"
+  },
+  "after": {
+   "field": "name",
+   "value": "Klever Camero"
+  },
+  "blocked": null,
+  "warnings": [
+   "Otra ficha del mismo tipo se escribe igual sin tildes ni mayúsculas: puede quedar un duplicado."
+  ],
+  "collisions": [
+   {
+    "id": 30799,
+    "kind": "person",
+    "exact": true,
+    "label": "Klever Camero"
+   }
+  ],
+  "proposal": null
+ },
+ {
+  "findingId": 465307,
+  "label": "Dámaso García. Arr: Víctor E. Márquez",
+  "action": "quitar_rotulo",
+  "status": "pending",
+  "before": {
+   "field": "name",
+   "value": "Dámaso García. Arr: Víctor E. Márquez"
+  },
+  "after": {
+   "field": "name",
+   "value": "Víctor E. Márquez"
+  },
+  "blocked": null,
+  "warnings": [
+   "2 fichas del mismo tipo se escriben igual sin tildes ni mayúsculas: puede quedar un duplicado."
+  ],
+  "collisions": [
+   {
+    "id": 32731,
+    "kind": "person",
+    "exact": true,
+    "label": "Víctor E. Márquez"
+   },
+   {
+    "id": 34025,
+    "kind": "person",
+    "exact": false,
+    "label": "Victor E. Márquez"
+   }
+  ],
+  "proposal": null
+ },
+ {
+  "findingId": 465309,
+  "label": "Carnaval - Adapt: E. Ramírez",
+  "action": "quitar_rotulo",
+  "status": "pending",
+  "before": {
+   "field": "name",
+   "value": "Carnaval - Adapt: E. Ramírez"
+  },
+  "after": {
+   "field": "name",
+   "value": "E. Ramírez"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465310,
+  "label": "Special Edition for: SIDOR",
+  "action": null,
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "el hallazgo no tiene una corrección disponible: hay que editar la ficha"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465311,
+  "label": "Special Edition for: PROCESA",
+  "action": null,
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "el hallazgo no tiene una corrección disponible: hay que editar la ficha"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465312,
+  "label": "Special Edition for: Banco Occidental",
+  "action": null,
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "el hallazgo no tiene una corrección disponible: hay que editar la ficha"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479466,
+  "label": "Ver: Catako",
+  "action": "quitar_rotulo",
+  "status": "pending",
+  "before": {
+   "field": "name",
+   "value": "Ver: Catako"
+  },
+  "after": {
+   "field": "name",
+   "value": "Catako"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479475,
+  "label": "Ver: Okamura",
+  "action": "quitar_rotulo",
+  "status": "pending",
+  "before": {
+   "field": "name",
+   "value": "Ver: Okamura"
+  },
+  "after": {
+   "field": "name",
+   "value": "Okamura"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479476,
+  "label": "Ver: Simone",
+  "action": "quitar_rotulo",
+  "status": "pending",
+  "before": {
+   "field": "name",
+   "value": "Ver: Simone"
+  },
+  "after": {
+   "field": "name",
+   "value": "Simone"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479480,
+  "label": "Ver: Isaías Urbina",
+  "action": "quitar_rotulo",
+  "status": "pending",
+  "before": {
+   "field": "name",
+   "value": "Ver: Isaías Urbina"
+  },
+  "after": {
+   "field": "name",
+   "value": "Isaías Urbina"
+  },
+  "blocked": null,
+  "warnings": [
+   "2 fichas del mismo tipo se escriben igual sin tildes ni mayúsculas: puede quedar un duplicado."
+  ],
+  "collisions": [
+   {
+    "id": 1051,
+    "kind": "person",
+    "exact": true,
+    "label": "Isaías Urbina"
+   },
+   {
+    "id": 17929,
+    "kind": "person",
+    "exact": true,
+    "label": "Isaías Urbina"
+   }
+  ],
+  "proposal": null
+ },
+ {
+  "findingId": 479482,
+  "label": "Vers: Tunzi-Mendez",
+  "action": "quitar_rotulo",
+  "status": "pending",
+  "before": {
+   "field": "name",
+   "value": "Vers: Tunzi-Mendez"
+  },
+  "after": {
+   "field": "name",
+   "value": "Tunzi-Mendez"
+  },
+  "blocked": null,
+  "warnings": [
+   "Otra ficha del mismo tipo se escribe igual sin tildes ni mayúsculas: puede quedar un duplicado."
+  ],
+  "collisions": [
+   {
+    "id": 9255,
+    "kind": "person",
+    "exact": true,
+    "label": "Tunzi-Mendez"
+   }
+  ],
+  "proposal": null
+ },
+ {
+  "findingId": 479494,
+  "label": "Written: Alessi",
+  "action": null,
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "el hallazgo no tiene una corrección disponible: hay que editar la ficha"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479501,
+  "label": "Vers: Ramírez",
+  "action": "quitar_rotulo",
+  "status": "pending",
+  "before": {
+   "field": "name",
+   "value": "Vers: Ramírez"
+  },
+  "after": {
+   "field": "name",
+   "value": "Ramírez"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479502,
+  "label": "Rec: Gualberto Ibarreto",
+  "action": "quitar_rotulo",
+  "status": "pending",
+  "before": {
+   "field": "name",
+   "value": "Rec: Gualberto Ibarreto"
+  },
+  "after": {
+   "field": "name",
+   "value": "Gualberto Ibarreto"
+  },
+  "blocked": null,
+  "warnings": [
+   "Otra ficha del mismo tipo se escribe igual sin tildes ni mayúsculas: puede quedar un duplicado."
+  ],
+  "collisions": [
+   {
+    "id": 21200,
+    "kind": "person",
+    "exact": true,
+    "label": "Gualberto Ibarreto"
+   }
+  ],
+  "proposal": null
+ },
+ {
+  "findingId": 485817,
+  "label": "Rec: Grupo Luango",
+  "action": "quitar_rotulo",
+  "status": "blocked",
+  "before": {
+   "field": "name",
+   "value": "Rec: Grupo Luango"
+  },
+  "after": {
+   "field": "name",
+   "value": "Grupo Luango"
+  },
+  "blocked": {
+   "code": "collision",
+   "message": "ya existe el artista «Grupo Luango» (id 4504): el nombre es único, renombrar fallaría"
+  },
+  "warnings": [],
+  "collisions": [
+   {
+    "id": 4504,
+    "kind": "artist",
+    "exact": true,
+    "label": "Grupo Luango"
+   }
+  ],
+  "proposal": {
+   "params": {
+    "kind": "artist",
+    "dropId": 4460,
+    "keepId": 4504
+   },
+   "reason": "fusionar con «Grupo Luango», que ya tiene el nombre limpio, en lugar de renombrar",
+   "actionKey": "fusionar"
+  }
+ },
+ {
+  "findingId": 485818,
+  "label": "Rec: Grupo Candela",
+  "action": "quitar_rotulo",
+  "status": "blocked",
+  "before": {
+   "field": "name",
+   "value": "Rec: Grupo Candela"
+  },
+  "after": {
+   "field": "name",
+   "value": "Grupo Candela"
+  },
+  "blocked": {
+   "code": "collision",
+   "message": "ya existe el artista «Grupo Candela» (id 4466): el nombre es único, renombrar fallaría"
+  },
+  "warnings": [],
+  "collisions": [
+   {
+    "id": 4466,
+    "kind": "artist",
+    "exact": true,
+    "label": "Grupo Candela"
+   }
+  ],
+  "proposal": {
+   "params": {
+    "kind": "artist",
+    "dropId": 4468,
+    "keepId": 4466
+   },
+   "reason": "fusionar con «Grupo Candela», que ya tiene el nombre limpio, en lugar de renombrar",
+   "actionKey": "fusionar"
+  }
+ },
+ {
+  "findingId": 485819,
+  "label": "Grupo Madera: Marianella Villegas",
+  "action": null,
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "el hallazgo no tiene una corrección disponible: hay que editar la ficha"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 485820,
+  "label": "Jorge Spiteri L: Eloy Reverón",
+  "action": "quitar_rotulo",
+  "status": "pending",
+  "before": {
+   "field": "name",
+   "value": "Jorge Spiteri L: Eloy Reverón"
+  },
+  "after": {
+   "field": "name",
+   "value": "Eloy Reverón"
+  },
+  "blocked": null,
+  "warnings": [
+   "Otra ficha del mismo tipo se escribe igual sin tildes ni mayúsculas: puede quedar un duplicado."
+  ],
+  "collisions": [
+   {
+    "id": 38948,
+    "kind": "person",
+    "exact": true,
+    "label": "Eloy Reverón"
+   }
+  ],
+  "proposal": null
+ },
+ {
+  "findingId": 661614,
+  "label": "Rec: Un Solo Pueblo",
+  "action": "quitar_rotulo",
+  "status": "pending",
+  "before": {
+   "field": "name",
+   "value": "Rec: Un Solo Pueblo"
+  },
+  "after": {
+   "field": "name",
+   "value": "Un Solo Pueblo"
+  },
+  "blocked": null,
+  "warnings": [
+   "Otra ficha del mismo tipo se escribe igual sin tildes ni mayúsculas: puede quedar un duplicado."
+  ],
+  "collisions": [
+   {
+    "id": 20141,
+    "kind": "person",
+    "exact": true,
+    "label": "Un Solo Pueblo"
+   }
+  ],
+  "proposal": null
+ },
+ {
+  "findingId": 661615,
+  "label": "Vers: Trino Mora",
+  "action": "quitar_rotulo",
+  "status": "pending",
+  "before": {
+   "field": "name",
+   "value": "Vers: Trino Mora"
+  },
+  "after": {
+   "field": "name",
+   "value": "Trino Mora"
+  },
+  "blocked": null,
+  "warnings": [
+   "Otra ficha del mismo tipo se escribe igual sin tildes ni mayúsculas: puede quedar un duplicado."
+  ],
+  "collisions": [
+   {
+    "id": 8775,
+    "kind": "person",
+    "exact": true,
+    "label": "Trino Mora"
+   }
+  ],
+  "proposal": null
+ }
+]

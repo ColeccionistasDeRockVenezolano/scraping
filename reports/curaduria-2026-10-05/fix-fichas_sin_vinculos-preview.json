@@ -1,0 +1,8949 @@
+[
+ {
+  "findingId": 464550,
+  "label": "SAM",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 1767,
+   "name": "SAM"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 464588,
+  "label": "F.S.C.C",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 1806,
+   "name": "F.S.C.C"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 464591,
+  "label": "Fundación Schola Cantorum de Caracas",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 1809,
+   "name": "Fundación Schola Cantorum de Caracas"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 464592,
+  "label": "Venedisco/Nova",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 1811,
+   "name": "Venedisco/Nova"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 464595,
+  "label": "Vicente Emilio Sojo",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 1814,
+   "name": "Vicente Emilio Sojo"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 464599,
+  "label": "Lyric/AVR (Reissue)",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 1818,
+   "name": "Lyric/AVR (Reissue)"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468574,
+  "label": "Concord Jazz",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 1858,
+   "name": "Concord Jazz"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468592,
+  "label": "Javaanse Jongens",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 1876,
+   "name": "Javaanse Jongens"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468601,
+  "label": "Grabaciones 3500 C.A.",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 1886,
+   "name": "Grabaciones 3500 C.A."
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468619,
+  "label": "Indi/Lyric/Latin World",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 1906,
+   "name": "Indi/Lyric/Latin World"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468620,
+  "label": "Indi/Latin World",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 1907,
+   "name": "Indi/Latin World"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468624,
+  "label": "Lyric/Sony France",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 1911,
+   "name": "Lyric/Sony France"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468625,
+  "label": "Epic/Sony France",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 1912,
+   "name": "Epic/Sony France"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468640,
+  "label": "Q.A.P./Discos León",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 1927,
+   "name": "Q.A.P./Discos León"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468645,
+  "label": "Indy/Latin World",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 1933,
+   "name": "Indy/Latin World"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468655,
+  "label": "Lyric/Sony",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 1943,
+   "name": "Lyric/Sony"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468656,
+  "label": "Lyric/Sony Music",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 1944,
+   "name": "Lyric/Sony Music"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468657,
+  "label": "Epic/Sony",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 1945,
+   "name": "Epic/Sony"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468659,
+  "label": "Concord Records",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 1947,
+   "name": "Concord Records"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468664,
+  "label": "Javaanse Jongens Tracks",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 1952,
+   "name": "Javaanse Jongens Tracks"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468666,
+  "label": "Grabaciones 3500",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 1954,
+   "name": "Grabaciones 3500"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468668,
+  "label": "Musea/Latido Music",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 1956,
+   "name": "Musea/Latido Music"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468671,
+  "label": "Q.A.P./ Prod. León",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 1959,
+   "name": "Q.A.P./ Prod. León"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468691,
+  "label": "Indi",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 1980,
+   "name": "Indi"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468694,
+  "label": "El Palmas",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 1983,
+   "name": "El Palmas"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468708,
+  "label": "GMG",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 1997,
+   "name": "GMG"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468711,
+  "label": "Korta/Jaguar",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2000,
+   "name": "Korta/Jaguar"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468714,
+  "label": "G.C.",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2003,
+   "name": "G.C."
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468716,
+  "label": "Klasico Records/EMI",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2005,
+   "name": "Klasico Records/EMI"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468717,
+  "label": "Sony U.S. Latin",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2006,
+   "name": "Sony U.S. Latin"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468718,
+  "label": "DAF",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2007,
+   "name": "DAF"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468721,
+  "label": "Lassari / AVR",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2010,
+   "name": "Lassari / AVR"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468734,
+  "label": "WS Latino",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2023,
+   "name": "WS Latino"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468742,
+  "label": "A.S.Internacional",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2032,
+   "name": "A.S.Internacional"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468748,
+  "label": "TH-R",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2038,
+   "name": "TH-R"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468755,
+  "label": "Discaracas",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2045,
+   "name": "Discaracas"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468756,
+  "label": "Fonart/Top Hits",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2046,
+   "name": "Fonart/Top Hits"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468758,
+  "label": "Fonart/Sonográfica",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2048,
+   "name": "Fonart/Sonográfica"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468760,
+  "label": "Last Call/EMI Music",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2051,
+   "name": "Last Call/EMI Music"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468761,
+  "label": "Evesol",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2052,
+   "name": "Evesol"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468767,
+  "label": "Serfaty",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2058,
+   "name": "Serfaty"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468768,
+  "label": "BIV Edition",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2059,
+   "name": "BIV Edition"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468769,
+  "label": "Sidor (Private Edition)",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2060,
+   "name": "Sidor (Private Edition)"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468771,
+  "label": "GMG-Global Music Group",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2062,
+   "name": "GMG-Global Music Group"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468772,
+  "label": "Sony-Columbia",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2063,
+   "name": "Sony-Columbia"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468775,
+  "label": "Columbia/Sonorodven",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2066,
+   "name": "Columbia/Sonorodven"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468780,
+  "label": "Grabaciones Cristianas",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2072,
+   "name": "Grabaciones Cristianas"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468781,
+  "label": "Klasico Records",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2073,
+   "name": "Klasico Records"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468789,
+  "label": "West Side Latino Records Corp",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2082,
+   "name": "West Side Latino Records Corp"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468797,
+  "label": "Promus/Polygram",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2090,
+   "name": "Promus/Polygram"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468801,
+  "label": "Discaracas/Fonodisco",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2094,
+   "name": "Discaracas/Fonodisco"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468802,
+  "label": "Evesol/Corona Records",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2095,
+   "name": "Evesol/Corona Records"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468814,
+  "label": "AS",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2107,
+   "name": "AS"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468820,
+  "label": "Guacamaya Records",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2113,
+   "name": "Guacamaya Records"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468834,
+  "label": "Acqua/AVR",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2128,
+   "name": "Acqua/AVR"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468835,
+  "label": "Union Music G.",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2129,
+   "name": "Union Music G."
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468854,
+  "label": "Prod. Cacique",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2148,
+   "name": "Prod. Cacique"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468876,
+  "label": "Palacio/CDDVD",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2170,
+   "name": "Palacio/CDDVD"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468878,
+  "label": "Matecha/Latin World",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2172,
+   "name": "Matecha/Latin World"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468883,
+  "label": "Sonográfica/Colibri",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2177,
+   "name": "Sonográfica/Colibri"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468888,
+  "label": "Discos Cahilapo",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2182,
+   "name": "Discos Cahilapo"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468893,
+  "label": "Palacio/London",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2187,
+   "name": "Palacio/London"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468895,
+  "label": "Anes Records/Promus",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2189,
+   "name": "Anes Records/Promus"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468897,
+  "label": "UMI/Pattaya",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2191,
+   "name": "UMI/Pattaya"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468899,
+  "label": "Palacio/Anes Records",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2193,
+   "name": "Palacio/Anes Records"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468905,
+  "label": "Banco Largo/Venevox",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2199,
+   "name": "Banco Largo/Venevox"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468910,
+  "label": "Discorona/Paso Real",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2204,
+   "name": "Discorona/Paso Real"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468911,
+  "label": "Producciones Cacique",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2205,
+   "name": "Producciones Cacique"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468915,
+  "label": "Palacio/Universal",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2209,
+   "name": "Palacio/Universal"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468928,
+  "label": "Beta Records/Promus",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2222,
+   "name": "Beta Records/Promus"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468929,
+  "label": "Promus/Foca Records",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2223,
+   "name": "Promus/Foca Records"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468937,
+  "label": "Airo",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2231,
+   "name": "Airo"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468941,
+  "label": "Suramericana / Anes",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2235,
+   "name": "Suramericana / Anes"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468950,
+  "label": "London",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2244,
+   "name": "London"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468957,
+  "label": "Tono Cumboto Prod.",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2251,
+   "name": "Tono Cumboto Prod."
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468962,
+  "label": "Independent/Prod. Leon",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2257,
+   "name": "Independent/Prod. Leon"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 477606,
+  "label": "Sony BMG Latin",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2283,
+   "name": "Sony BMG Latin"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 477622,
+  "label": "Sonorodven/Universal",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2299,
+   "name": "Sonorodven/Universal"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 477629,
+  "label": "A&M/Sonográfica",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2306,
+   "name": "A&M/Sonográfica"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 477632,
+  "label": "Cosmos Records",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2309,
+   "name": "Cosmos Records"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 477636,
+  "label": "Sony & BMG",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2313,
+   "name": "Sony & BMG"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 477648,
+  "label": "Independent/Ariah",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2325,
+   "name": "Independent/Ariah"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 477653,
+  "label": "Palacio/Sonorodven",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2330,
+   "name": "Palacio/Sonorodven"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 477656,
+  "label": "Traffic/Sonográfica",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2333,
+   "name": "Traffic/Sonográfica"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 477667,
+  "label": "LSP Company",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2344,
+   "name": "LSP Company"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 487000,
+  "label": "BLG Studios",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 3117,
+   "name": "BLG Studios"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 486806,
+  "label": "L Producciones C.A",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 2922,
+   "name": "L Producciones C.A"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 487076,
+  "label": "Musica Reservata",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 3198,
+   "name": "Musica Reservata"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 487104,
+  "label": "Senior Studios",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 3227,
+   "name": "Senior Studios"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 487278,
+  "label": "Ra Visual Sound",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 3403,
+   "name": "Ra Visual Sound"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 487345,
+  "label": "Estudios Larain",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 3473,
+   "name": "Estudios Larain"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 487355,
+  "label": "Folklore Antillano",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 3484,
+   "name": "Folklore Antillano"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 487370,
+  "label": "Folklore Pto. Cabello",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 3499,
+   "name": "Folklore Pto. Cabello"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 487371,
+  "label": "Folklore Litoral Central",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 3500,
+   "name": "Folklore Litoral Central"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 487512,
+  "label": "Chico Buarque-Folklore",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 3649,
+   "name": "Chico Buarque-Folklore"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 487529,
+  "label": "Estudio Hallowen",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 3668,
+   "name": "Estudio Hallowen"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 487551,
+  "label": "TomMaschine Production",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 3690,
+   "name": "TomMaschine Production"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 487654,
+  "label": "Malashunta Studios",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 3797,
+   "name": "Malashunta Studios"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 487692,
+  "label": "INITA Recording Studios",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 3835,
+   "name": "INITA Recording Studios"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 487816,
+  "label": "John Blanche Audio Productions",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 3960,
+   "name": "John Blanche Audio Productions"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 487860,
+  "label": "LALH Producciones",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 4004,
+   "name": "LALH Producciones"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 487861,
+  "label": "Vintage Estudio",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 4005,
+   "name": "Vintage Estudio"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 487880,
+  "label": "Erin Hall",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 4025,
+   "name": "Erin Hall"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 487895,
+  "label": "Roc Sala",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 4040,
+   "name": "Roc Sala"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 487949,
+  "label": "Teatro Bar",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 4095,
+   "name": "Teatro Bar"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 487950,
+  "label": "Teatro Bar CCS",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 4096,
+   "name": "Teatro Bar CCS"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 488003,
+  "label": "Folklore del Callao",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 4150,
+   "name": "Folklore del Callao"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 488006,
+  "label": "Radio Clip",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 4153,
+   "name": "Radio Clip"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 474880,
+  "label": "Lawper Hyman",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 35132,
+   "name": "Lawper Hyman"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 474881,
+  "label": "S. Nicks",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 35133,
+   "name": "S. Nicks"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 340800,
+  "label": "Adal Barrientos",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 13383,
+   "name": "Adal Barrientos"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 340809,
+  "label": "Niko Orlando",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 13392,
+   "name": "Niko Orlando"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 340918,
+  "label": "Kelvin Boscán",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 13457,
+   "name": "Kelvin Boscán"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 340919,
+  "label": "Daniel Cortez",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 13458,
+   "name": "Daniel Cortez"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 340935,
+  "label": "Isaac Guevara",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 13474,
+   "name": "Isaac Guevara"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 340969,
+  "label": "Moisés Tortoza",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 13508,
+   "name": "Moisés Tortoza"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 340970,
+  "label": "Elius Tortoza",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 13509,
+   "name": "Elius Tortoza"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 341037,
+  "label": "Fabian Alberto Olah",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 13556,
+   "name": "Fabian Alberto Olah"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 341228,
+  "label": "Alejandro Quintiliani",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 13730,
+   "name": "Alejandro Quintiliani"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 341245,
+  "label": "José Francisco Riascos",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 13747,
+   "name": "José Francisco Riascos"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 341246,
+  "label": "Marco Antonio Freytes",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 13748,
+   "name": "Marco Antonio Freytes"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 341281,
+  "label": "Lord Nebirus",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 13783,
+   "name": "Lord Nebirus"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 341348,
+  "label": "Larry Vargas",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 13850,
+   "name": "Larry Vargas"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 341349,
+  "label": "Stefano Cibien",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 13851,
+   "name": "Stefano Cibien"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 341350,
+  "label": "Isaías Pèrez",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 13852,
+   "name": "Isaías Pèrez"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 341760,
+  "label": "Mark Berserk",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 14232,
+   "name": "Mark Berserk"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 341900,
+  "label": "Jonathan Dávila",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 14362,
+   "name": "Jonathan Dávila"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 341901,
+  "label": "David Lares",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 14363,
+   "name": "David Lares"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 342234,
+  "label": "Juan Coronado",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 14675,
+   "name": "Juan Coronado"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 342235,
+  "label": "José Barreto",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 14676,
+   "name": "José Barreto"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 342236,
+  "label": "Jery Carrasquero",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 14677,
+   "name": "Jery Carrasquero"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 342237,
+  "label": "Jose Gerdel",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 14678,
+   "name": "Jose Gerdel"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 342520,
+  "label": "Daniel Rojas",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 14937,
+   "name": "Daniel Rojas"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 342521,
+  "label": "Czeibyllt Capriles",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 14938,
+   "name": "Czeibyllt Capriles"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 474485,
+  "label": "Marco Minnemann Charlie Zeleny",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 34737,
+   "name": "Marco Minnemann Charlie Zeleny"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 661622,
+  "label": "Raul Renal",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 40211,
+   "name": "Raul Renal"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 661623,
+  "label": "Esther de Bessega",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 40212,
+   "name": "Esther de Bessega"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 661624,
+  "label": "César Mazo",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 40213,
+   "name": "César Mazo"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 464524,
+  "label": "V. Carucci - M. Luna",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 20591,
+   "name": "V. Carucci - M. Luna"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 464525,
+  "label": "Felipe Sosa C.",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 20592,
+   "name": "Felipe Sosa C."
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 464528,
+  "label": "Chirinos - León - Landaeta",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 20595,
+   "name": "Chirinos - León - Landaeta"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467892,
+  "label": "Derecho Popular de Cuba",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 24797,
+   "name": "Derecho Popular de Cuba"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467894,
+  "label": "Abal y Bolaños",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 24800,
+   "name": "Abal y Bolaños"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467895,
+  "label": "R. Viloria",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 24808,
+   "name": "R. Viloria"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467896,
+  "label": "D. Santos",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 24812,
+   "name": "D. Santos"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467897,
+  "label": "Derecho Popular de Aragua",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 24813,
+   "name": "Derecho Popular de Aragua"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467899,
+  "label": "Leonardo Medina Shesura",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 24950,
+   "name": "Leonardo Medina Shesura"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467900,
+  "label": "Mari Carmen Noguera",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 24951,
+   "name": "Mari Carmen Noguera"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467917,
+  "label": "H. Hupfeld",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 25424,
+   "name": "H. Hupfeld"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467918,
+  "label": "Serradell",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 25425,
+   "name": "Serradell"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467919,
+  "label": "Joao Gilberto",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 25426,
+   "name": "Joao Gilberto"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467921,
+  "label": "Márquez Tallado",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 25428,
+   "name": "Márquez Tallado"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467922,
+  "label": "O. Pérez Freire",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 25430,
+   "name": "O. Pérez Freire"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467923,
+  "label": "Dr. José A. La Riva",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 25499,
+   "name": "Dr. José A. La Riva"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467924,
+  "label": "Pedro Arcila Aponte",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 25501,
+   "name": "Pedro Arcila Aponte"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467929,
+  "label": "Dorindo Cárdenas",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 25673,
+   "name": "Dorindo Cárdenas"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467930,
+  "label": "Aniceto Molina",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 25675,
+   "name": "Aniceto Molina"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467931,
+  "label": "R. D. Salcedo",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 25678,
+   "name": "R. D. Salcedo"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467932,
+  "label": "Freddy Molina",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 25679,
+   "name": "Freddy Molina"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467933,
+  "label": "Rafael Brito Jr.",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 25724,
+   "name": "Rafael Brito Jr."
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467934,
+  "label": "Michelle Aranguibel",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 25729,
+   "name": "Michelle Aranguibel"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467935,
+  "label": "Tania Bracho",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 25730,
+   "name": "Tania Bracho"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467936,
+  "label": "Rafael \"Pollo\" Brito Hugo Fuguet",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 25731,
+   "name": "Rafael \"Pollo\" Brito Hugo Fuguet"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467937,
+  "label": "F. Reyna",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 25823,
+   "name": "F. Reyna"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467946,
+  "label": "Rita Quinteros",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 25957,
+   "name": "Rita Quinteros"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467947,
+  "label": "Cristi Tapia",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 26240,
+   "name": "Cristi Tapia"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467948,
+  "label": "J. Sosa",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 26241,
+   "name": "J. Sosa"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467949,
+  "label": "Antonio María Peñalosa",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 26244,
+   "name": "Antonio María Peñalosa"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467956,
+  "label": "José Consturssi",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 26368,
+   "name": "José Consturssi"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467963,
+  "label": "Paúl Misraky",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 26497,
+   "name": "Paúl Misraky"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467967,
+  "label": "Julio Abel Fontalvo",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 26613,
+   "name": "Julio Abel Fontalvo"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467969,
+  "label": "Antonio Fernández \"Ñico Saquito\"",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 26723,
+   "name": "Antonio Fernández \"Ñico Saquito\""
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467970,
+  "label": "Fidelino Hernández",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 26744,
+   "name": "Fidelino Hernández"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467971,
+  "label": "Aniceto Díaz",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 26745,
+   "name": "Aniceto Díaz"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467972,
+  "label": "M. Farrés",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 26748,
+   "name": "M. Farrés"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467973,
+  "label": "Emilio Fabelo",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 26749,
+   "name": "Emilio Fabelo"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467974,
+  "label": "Arturo R. Ojeda",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 26758,
+   "name": "Arturo R. Ojeda"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467975,
+  "label": "Sergio de Carlo",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 26765,
+   "name": "Sergio de Carlo"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467976,
+  "label": "Armando Orefiche",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 26767,
+   "name": "Armando Orefiche"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467977,
+  "label": "C. Soladrigas",
+  "action": "retirar_huerfana",
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "la ficha ya tiene 1 vínculos"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467978,
+  "label": "E. Lecouna",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 26773,
+   "name": "E. Lecouna"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467979,
+  "label": "A. Vailland",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 26774,
+   "name": "A. Vailland"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467980,
+  "label": "M. Valdés",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 26775,
+   "name": "M. Valdés"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467981,
+  "label": "Anselmo Sacasa",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 26776,
+   "name": "Anselmo Sacasa"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467982,
+  "label": "Ernesto Lecouna",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 26777,
+   "name": "Ernesto Lecouna"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467984,
+  "label": "A. Nuñez de Borbón",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 26798,
+   "name": "A. Nuñez de Borbón"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467985,
+  "label": "A. Mustelier",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 26799,
+   "name": "A. Mustelier"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467986,
+  "label": "V. González",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 26800,
+   "name": "V. González"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467987,
+  "label": "A. Orefiche",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 26804,
+   "name": "A. Orefiche"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467988,
+  "label": "Oswaldo Ferres",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 26805,
+   "name": "Oswaldo Ferres"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467989,
+  "label": "Manuel Palos",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 26806,
+   "name": "Manuel Palos"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467991,
+  "label": "Juan Bruno Terraza",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 26811,
+   "name": "Juan Bruno Terraza"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467992,
+  "label": "Miguel A. Valladares",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 26815,
+   "name": "Miguel A. Valladares"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467993,
+  "label": "Nuñez de Borbón",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 26817,
+   "name": "Nuñez de Borbón"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467995,
+  "label": "O. Farrés",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 26841,
+   "name": "O. Farrés"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467996,
+  "label": "Antonio Mata",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 26842,
+   "name": "Antonio Mata"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467997,
+  "label": "M. Teresa Parra",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 26856,
+   "name": "M. Teresa Parra"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467998,
+  "label": "M. Palos",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 26866,
+   "name": "M. Palos"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467999,
+  "label": "A. R. Ojeda",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 26867,
+   "name": "A. R. Ojeda"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468000,
+  "label": "Justo Quijano",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 26877,
+   "name": "Justo Quijano"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468001,
+  "label": "Rafael Blanco",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 26878,
+   "name": "Rafael Blanco"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468002,
+  "label": "Der. en Dep.",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 26887,
+   "name": "Der. en Dep."
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468003,
+  "label": "Otilio del Portal",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 26888,
+   "name": "Otilio del Portal"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468004,
+  "label": "Chapuseaux",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 26889,
+   "name": "Chapuseaux"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468007,
+  "label": "O. del Portal",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 26947,
+   "name": "O. del Portal"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468008,
+  "label": "A. Abron",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 26948,
+   "name": "A. Abron"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468010,
+  "label": "B. Capó",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 26956,
+   "name": "B. Capó"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468011,
+  "label": "Guy Durosier",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 26970,
+   "name": "Guy Durosier"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468015,
+  "label": "J. Gutiérrez",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 26992,
+   "name": "J. Gutiérrez"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468016,
+  "label": "P. B. Ruiz",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 26993,
+   "name": "P. B. Ruiz"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468018,
+  "label": "M. Desman",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 27016,
+   "name": "M. Desman"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468019,
+  "label": "L. Alcaraz",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 27031,
+   "name": "L. Alcaraz"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468020,
+  "label": "O. Portal",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 27032,
+   "name": "O. Portal"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468021,
+  "label": "J. Pardavé",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 27033,
+   "name": "J. Pardavé"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468022,
+  "label": "A. Machín",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 27053,
+   "name": "A. Machín"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468023,
+  "label": "Sergio G. Siaba",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 27069,
+   "name": "Sergio G. Siaba"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468024,
+  "label": "F. Galán",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 27079,
+   "name": "F. Galán"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468026,
+  "label": "E. Forero",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 27090,
+   "name": "E. Forero"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468027,
+  "label": "M. Recio",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 27105,
+   "name": "M. Recio"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468028,
+  "label": "J.M. Oleagoitía",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 27116,
+   "name": "J.M. Oleagoitía"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468029,
+  "label": "L.C. Meyer",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 27117,
+   "name": "L.C. Meyer"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468030,
+  "label": "Abel Dominguez",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 27122,
+   "name": "Abel Dominguez"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468031,
+  "label": "Laredo",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 27129,
+   "name": "Laredo"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468032,
+  "label": "Atolin Lenes",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 27134,
+   "name": "Atolin Lenes"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468033,
+  "label": "V. Camilo",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 27135,
+   "name": "V. Camilo"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468034,
+  "label": "El Guajiro González",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 27161,
+   "name": "El Guajiro González"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468036,
+  "label": "Enriquillo Cedrano",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 27236,
+   "name": "Enriquillo Cedrano"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468037,
+  "label": "S. A. Gámez",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 27245,
+   "name": "S. A. Gámez"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468050,
+  "label": "Angel \"Cuco\" Peña",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 27412,
+   "name": "Angel \"Cuco\" Peña"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468051,
+  "label": "O. Pozo",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 27414,
+   "name": "O. Pozo"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467832,
+  "label": "Miguel Angel Morillo",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 23135,
+   "name": "Miguel Angel Morillo"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467842,
+  "label": "Miguel Valdés",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 23848,
+   "name": "Miguel Valdés"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467843,
+  "label": "Petrona Pozo",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 23850,
+   "name": "Petrona Pozo"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467845,
+  "label": "Luis Eca",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 24310,
+   "name": "Luis Eca"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468054,
+  "label": "A. Uliches",
+  "action": "retirar_huerfana",
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "la ficha ya tiene 1 vínculos"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 463778,
+  "label": "Vivaldi",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 19530,
+   "name": "Vivaldi"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 463781,
+  "label": "De Mudarra",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 19533,
+   "name": "De Mudarra"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 464140,
+  "label": "Basílica de Santa Teresa de Caracas",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 20069,
+   "name": "Basílica de Santa Teresa de Caracas"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 464141,
+  "label": "Ateneo de Valencia",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 20070,
+   "name": "Ateneo de Valencia"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 464168,
+  "label": "Soc. Amigos Del Callao",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 20132,
+   "name": "Soc. Amigos Del Callao"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 464324,
+  "label": "Choral",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 20369,
+   "name": "Choral"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 464473,
+  "label": "Ramón E. Crassus",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 20540,
+   "name": "Ramón E. Crassus"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 464475,
+  "label": "Enrique Sarabia",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 20542,
+   "name": "Enrique Sarabia"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 464486,
+  "label": "Jesús María Rivera",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 20553,
+   "name": "Jesús María Rivera"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 464487,
+  "label": "Luis Armas-Luis Flores",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 20554,
+   "name": "Luis Armas-Luis Flores"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 475370,
+  "label": "Bradley Livingston",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 35622,
+   "name": "Bradley Livingston"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 475477,
+  "label": "Chris Glansdorp",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 35729,
+   "name": "Chris Glansdorp"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 475516,
+  "label": "Reinaldo “Pachy” López",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 35768,
+   "name": "Reinaldo “Pachy” López"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 475517,
+  "label": "Héctor E. Reglero",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 35769,
+   "name": "Héctor E. Reglero"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 475518,
+  "label": "Edwin Apolinares",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 35770,
+   "name": "Edwin Apolinares"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 475577,
+  "label": "Bienvenido Rodríguez",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 35829,
+   "name": "Bienvenido Rodríguez"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 475578,
+  "label": "Trivedi Dassi",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 35830,
+   "name": "Trivedi Dassi"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 475633,
+  "label": "Mónica Bascóm",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 35885,
+   "name": "Mónica Bascóm"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 475829,
+  "label": "Claudia Delgado Sergent",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 36081,
+   "name": "Claudia Delgado Sergent"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 475842,
+  "label": "Brandon Cores",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 36094,
+   "name": "Brandon Cores"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 475843,
+  "label": "Bebo Dumont",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 36095,
+   "name": "Bebo Dumont"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 475844,
+  "label": "Fofo Story",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 36096,
+   "name": "Fofo Story"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 475845,
+  "label": "Manuel Lara",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 36097,
+   "name": "Manuel Lara"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 475846,
+  "label": "Betomonte",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 36098,
+   "name": "Betomonte"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 475847,
+  "label": "Fux Beat",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 36099,
+   "name": "Fux Beat"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 475848,
+  "label": "Mazzarri",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 36100,
+   "name": "Mazzarri"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 475851,
+  "label": "Ben Aler",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 36103,
+   "name": "Ben Aler"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 475860,
+  "label": "Merengue",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 36112,
+   "name": "Merengue"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 475980,
+  "label": "Gun cover",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 36232,
+   "name": "Gun cover"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 475981,
+  "label": "Budgie cover",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 36233,
+   "name": "Budgie cover"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 475982,
+  "label": "Captain Beyond cover",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 36234,
+   "name": "Captain Beyond cover"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 475983,
+  "label": "Sweet cover",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 36235,
+   "name": "Sweet cover"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 475984,
+  "label": "Nazareth cover",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 36236,
+   "name": "Nazareth cover"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 475994,
+  "label": "Resistencia Cover",
+  "action": "retirar_huerfana",
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "la ficha ya tiene 1 vínculos"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 476011,
+  "label": "P. Maxwell",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 36263,
+   "name": "P. Maxwell"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 476096,
+  "label": "Richie Havens",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 36348,
+   "name": "Richie Havens"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 476097,
+  "label": "S. Stewart",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 36349,
+   "name": "S. Stewart"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 476098,
+  "label": "Robert Lamn",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 36350,
+   "name": "Robert Lamn"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 475074,
+  "label": "L. Alcala",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 35326,
+   "name": "L. Alcala"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468057,
+  "label": "Raul Guillaume",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 27561,
+   "name": "Raul Guillaume"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468058,
+  "label": "Héctor Flores",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 27567,
+   "name": "Héctor Flores"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468059,
+  "label": "Gonzalo Roy",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 27690,
+   "name": "Gonzalo Roy"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468060,
+  "label": "Ernesto Lecuna",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 27691,
+   "name": "Ernesto Lecuna"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468065,
+  "label": "J. Geinar",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 27770,
+   "name": "J. Geinar"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468066,
+  "label": "Oscar De León",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 27771,
+   "name": "Oscar De León"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468067,
+  "label": "Rafael Ither",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 27772,
+   "name": "Rafael Ither"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468076,
+  "label": "S. Campuzano",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 27893,
+   "name": "S. Campuzano"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468077,
+  "label": "Alfonso Esparza Otero",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 27916,
+   "name": "Alfonso Esparza Otero"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468078,
+  "label": "J. Prats",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 27917,
+   "name": "J. Prats"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468079,
+  "label": "Antonio Núñez",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 27927,
+   "name": "Antonio Núñez"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468080,
+  "label": "Ricardo Fabrega",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 27930,
+   "name": "Ricardo Fabrega"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468081,
+  "label": "Arturo Hassan",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 27931,
+   "name": "Arturo Hassan"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468082,
+  "label": "Carlos Almaran",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 27932,
+   "name": "Carlos Almaran"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468083,
+  "label": "A. Zacasas",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 27944,
+   "name": "A. Zacasas"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468095,
+  "label": "Guillermo S. García A.",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 28184,
+   "name": "Guillermo S. García A."
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468096,
+  "label": "D. Higuera",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 28189,
+   "name": "D. Higuera"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468097,
+  "label": "O. Oropeza",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 28190,
+   "name": "O. Oropeza"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468098,
+  "label": "Guillermo S. García",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 28191,
+   "name": "Guillermo S. García"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468102,
+  "label": "Carlos E. Almarán",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 28478,
+   "name": "Carlos E. Almarán"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468138,
+  "label": "Pepe Avila",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 28571,
+   "name": "Pepe Avila"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468141,
+  "label": "H. Hassan",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 28592,
+   "name": "H. Hassan"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468142,
+  "label": "Critóbal Pérez",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 28593,
+   "name": "Critóbal Pérez"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468143,
+  "label": "Guicho Cisneros",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 28604,
+   "name": "Guicho Cisneros"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468145,
+  "label": "Orlando Caruci",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 28634,
+   "name": "Orlando Caruci"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468146,
+  "label": "Jesús T. Rangel",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 28645,
+   "name": "Jesús T. Rangel"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468147,
+  "label": "Cristóbal Pérez",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 28647,
+   "name": "Cristóbal Pérez"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468150,
+  "label": "Chucho Monje",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 28717,
+   "name": "Chucho Monje"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468151,
+  "label": "Julian Torres",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 28718,
+   "name": "Julian Torres"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468152,
+  "label": "Hmnos. Martínez Gil",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 28719,
+   "name": "Hmnos. Martínez Gil"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468153,
+  "label": "Carlos Campillo",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 28736,
+   "name": "Carlos Campillo"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468155,
+  "label": "J. Sabre",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 28860,
+   "name": "J. Sabre"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468156,
+  "label": "Julian Falla",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 28861,
+   "name": "Julian Falla"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468157,
+  "label": "C. Acosta",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 28867,
+   "name": "C. Acosta"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468158,
+  "label": "Tony Tejera Reinoso",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 28869,
+   "name": "Tony Tejera Reinoso"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468159,
+  "label": "Antonio Pérez Díaz",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 28907,
+   "name": "Antonio Pérez Díaz"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468160,
+  "label": "Miguel Valladares",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 28908,
+   "name": "Miguel Valladares"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468161,
+  "label": "F. García",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 28955,
+   "name": "F. García"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468162,
+  "label": "Ñico Jiménez",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 28956,
+   "name": "Ñico Jiménez"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468163,
+  "label": "Will Glahe",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 28957,
+   "name": "Will Glahe"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468164,
+  "label": "Ponce Reyes",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 28958,
+   "name": "Ponce Reyes"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468165,
+  "label": "J. Rivadulla",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 28959,
+   "name": "J. Rivadulla"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468166,
+  "label": "Tito Avila",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 28968,
+   "name": "Tito Avila"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468168,
+  "label": "Domingo J. Higuera",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 28970,
+   "name": "Domingo J. Higuera"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468170,
+  "label": "Medardo Guzmán",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 29002,
+   "name": "Medardo Guzmán"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468171,
+  "label": "H. Raymont",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 29012,
+   "name": "H. Raymont"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468173,
+  "label": "Gaston Guerrero",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 29037,
+   "name": "Gaston Guerrero"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468174,
+  "label": "Moisés Vivanco",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 29042,
+   "name": "Moisés Vivanco"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468175,
+  "label": "Silvestre Ménez",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 29043,
+   "name": "Silvestre Ménez"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468177,
+  "label": "Coco Arcos",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 29074,
+   "name": "Coco Arcos"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468178,
+  "label": "A. Echevarría",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 29096,
+   "name": "A. Echevarría"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468179,
+  "label": "Román Ropaín",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 29097,
+   "name": "Román Ropaín"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468180,
+  "label": "Edrulfo Polo",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 29100,
+   "name": "Edrulfo Polo"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468181,
+  "label": "J.G. Menendez",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 29103,
+   "name": "J.G. Menendez"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468182,
+  "label": "A. Zayas",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 29111,
+   "name": "A. Zayas"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468183,
+  "label": "D. Felo",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 29114,
+   "name": "D. Felo"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468184,
+  "label": "R. Lambraño",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 29115,
+   "name": "R. Lambraño"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468185,
+  "label": "G. Buitrago",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 29116,
+   "name": "G. Buitrago"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468186,
+  "label": "Angel A. Rosado",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 29131,
+   "name": "Angel A. Rosado"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468187,
+  "label": "Tomás Rebatta",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 29132,
+   "name": "Tomás Rebatta"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468188,
+  "label": "Humberto Recoba Ch.",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 29133,
+   "name": "Humberto Recoba Ch."
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468189,
+  "label": "Salomón Díaz",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 29134,
+   "name": "Salomón Díaz"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468190,
+  "label": "Peret",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 29161,
+   "name": "Peret"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468191,
+  "label": "Marco Riviera U.",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 29183,
+   "name": "Marco Riviera U."
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468192,
+  "label": "Marco Rivera Usechi",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 29189,
+   "name": "Marco Rivera Usechi"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468193,
+  "label": "Mauro Andara",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 29195,
+   "name": "Mauro Andara"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468209,
+  "label": "Benito Jesús",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 29486,
+   "name": "Benito Jesús"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468211,
+  "label": "John Bell",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 29492,
+   "name": "John Bell"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468213,
+  "label": "Jaco Nogueira",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 29530,
+   "name": "Jaco Nogueira"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468214,
+  "label": "Jesús A.",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 29531,
+   "name": "Jesús A."
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468222,
+  "label": "Nathalie Rodriguez",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 29570,
+   "name": "Nathalie Rodriguez"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468234,
+  "label": "Eduardo Talledo",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 30094,
+   "name": "Eduardo Talledo"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468246,
+  "label": "Adolfo Depoll",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 30633,
+   "name": "Adolfo Depoll"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468275,
+  "label": "Salvador Rodríguez-Ricardo Ramos",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 30817,
+   "name": "Salvador Rodríguez-Ricardo Ramos"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468276,
+  "label": "Luis Alfonso Larrain-Angel Guanipa",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 30820,
+   "name": "Luis Alfonso Larrain-Angel Guanipa"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468297,
+  "label": "Adolfo Depol",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 30914,
+   "name": "Adolfo Depol"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468311,
+  "label": "José A. Delgado",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 31183,
+   "name": "José A. Delgado"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468347,
+  "label": "Neville Tiger Marcano",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 31488,
+   "name": "Neville Tiger Marcano"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468348,
+  "label": "María Lourdes Basanta",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 31490,
+   "name": "María Lourdes Basanta"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468368,
+  "label": "Frida Gutierrez",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 31599,
+   "name": "Frida Gutierrez"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468375,
+  "label": "Ignacio Pérez González",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 31606,
+   "name": "Ignacio Pérez González"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468376,
+  "label": "Alberto González Padrino",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 31607,
+   "name": "Alberto González Padrino"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468377,
+  "label": "Rodolfo R. Ruiz",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 31608,
+   "name": "Rodolfo R. Ruiz"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468378,
+  "label": "Taburete",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 31609,
+   "name": "Taburete"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468379,
+  "label": "José Luis Vazquez",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 31610,
+   "name": "José Luis Vazquez"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468380,
+  "label": "Adalberto",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 31611,
+   "name": "Adalberto"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468388,
+  "label": "Gabino Mijares",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 31667,
+   "name": "Gabino Mijares"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468395,
+  "label": "Pedro Zarraga Barreto",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 31889,
+   "name": "Pedro Zarraga Barreto"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468396,
+  "label": "Augusto Brant",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 31895,
+   "name": "Augusto Brant"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468397,
+  "label": "Jesús Sevilla",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 31896,
+   "name": "Jesús Sevilla"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468398,
+  "label": "Manuel E. Pérez D.",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 31897,
+   "name": "Manuel E. Pérez D."
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468399,
+  "label": "A. Escalante",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 31898,
+   "name": "A. Escalante"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468400,
+  "label": "J.D. Galavís",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 31899,
+   "name": "J.D. Galavís"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468401,
+  "label": "L. Mejías",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 31900,
+   "name": "L. Mejías"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468402,
+  "label": "E. Carrero",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 31901,
+   "name": "E. Carrero"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468404,
+  "label": "T. Carrasco",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 31903,
+   "name": "T. Carrasco"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468405,
+  "label": "P. Zárraga Barreto",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 31904,
+   "name": "P. Zárraga Barreto"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468406,
+  "label": "J. \"Pollo\" Sifontes",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 31905,
+   "name": "J. \"Pollo\" Sifontes"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468407,
+  "label": "R. Sánchez López",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 31906,
+   "name": "R. Sánchez López"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468409,
+  "label": "Chucho Mongo",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 31937,
+   "name": "Chucho Mongo"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468411,
+  "label": "F. Carreño",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 32006,
+   "name": "F. Carreño"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468412,
+  "label": "T. Castellanos",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 32022,
+   "name": "T. Castellanos"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468413,
+  "label": "Wladimir Aguilera",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 32023,
+   "name": "Wladimir Aguilera"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468420,
+  "label": "Ramón Gómez",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 32129,
+   "name": "Ramón Gómez"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468422,
+  "label": "Luis Peraza",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 32235,
+   "name": "Luis Peraza"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468423,
+  "label": "Luis Frometa",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 32246,
+   "name": "Luis Frometa"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468428,
+  "label": "Rut Torrealba",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 32338,
+   "name": "Rut Torrealba"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468459,
+  "label": "Georg Friedrich Handel",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 32435,
+   "name": "Georg Friedrich Handel"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468470,
+  "label": "Isidro Fuenmayor",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 32617,
+   "name": "Isidro Fuenmayor"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468471,
+  "label": "Rafael Barreto",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 32618,
+   "name": "Rafael Barreto"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468481,
+  "label": "Tomás Méndez",
+  "action": "retirar_huerfana",
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "la ficha ya tiene 2 vínculos"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468482,
+  "label": "H. Cordovil",
+  "action": "retirar_huerfana",
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "la ficha ya tiene 1 vínculos"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468484,
+  "label": "Laudelino Mejia",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 33105,
+   "name": "Laudelino Mejia"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468485,
+  "label": "Edgar Carreño Balza",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 33106,
+   "name": "Edgar Carreño Balza"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468486,
+  "label": "Edmundo Mingué",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 33110,
+   "name": "Edmundo Mingué"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468494,
+  "label": "Oropeza Volcán",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 33229,
+   "name": "Oropeza Volcán"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468496,
+  "label": "Joaquín Betín",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 33583,
+   "name": "Joaquín Betín"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468497,
+  "label": "Edmundo Saldívar",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 33584,
+   "name": "Edmundo Saldívar"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468498,
+  "label": "Daniel Alomias Robles",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 33585,
+   "name": "Daniel Alomias Robles"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468499,
+  "label": "Juan Carrero",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 33588,
+   "name": "Juan Carrero"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468500,
+  "label": "Manuel Machado",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 33705,
+   "name": "Manuel Machado"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468510,
+  "label": "Alvaro Córdoba",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 33779,
+   "name": "Alvaro Córdoba"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468511,
+  "label": "Eleazar Yanes",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 33780,
+   "name": "Eleazar Yanes"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468515,
+  "label": "Teofilo León",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 33812,
+   "name": "Teofilo León"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468517,
+  "label": "F. Asian",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 33816,
+   "name": "F. Asian"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468527,
+  "label": "Rafaele Alperio",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 33827,
+   "name": "Rafaele Alperio"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468528,
+  "label": "Pedro E. Sanchez",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 33828,
+   "name": "Pedro E. Sanchez"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468529,
+  "label": "Romero y Grieco",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 33833,
+   "name": "Romero y Grieco"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468532,
+  "label": "Abraham Liscano",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 33950,
+   "name": "Abraham Liscano"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468533,
+  "label": "Radamés Gnatalli",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 33982,
+   "name": "Radamés Gnatalli"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 468534,
+  "label": "Pedro José Castellano",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 33999,
+   "name": "Pedro José Castellano"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 475190,
+  "label": "Wilfrido Vargas",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 35442,
+   "name": "Wilfrido Vargas"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 477499,
+  "label": "The Butterfly Cow",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 37751,
+   "name": "The Butterfly Cow"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 476311,
+  "label": "Paul Gillman with Cactus",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 36563,
+   "name": "Paul Gillman with Cactus"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 476343,
+  "label": "Germán Wiedemer",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 36595,
+   "name": "Germán Wiedemer"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 476502,
+  "label": "Baphomet cover",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 36754,
+   "name": "Baphomet cover"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 476538,
+  "label": "Guillermo Brazón",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 36790,
+   "name": "Guillermo Brazón"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 476956,
+  "label": "Memphis",
+  "action": "retirar_huerfana",
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "la ficha ya tiene 1 vínculos"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 477001,
+  "label": "Sigur Rurikson",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 37253,
+   "name": "Sigur Rurikson"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 477003,
+  "label": "Dave Delgado",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 37255,
+   "name": "Dave Delgado"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 477004,
+  "label": "Matthias Hussmann",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 37256,
+   "name": "Matthias Hussmann"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 477005,
+  "label": "María Fernanda Cabezas. Ana Sosa",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 37257,
+   "name": "María Fernanda Cabezas. Ana Sosa"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 477006,
+  "label": "Madelein Feo",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 37258,
+   "name": "Madelein Feo"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 477008,
+  "label": "Miguel Ponte",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 37260,
+   "name": "Miguel Ponte"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 477009,
+  "label": "Claudia Amantini",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 37261,
+   "name": "Claudia Amantini"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 477010,
+  "label": "Diana Madrid",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 37262,
+   "name": "Diana Madrid"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 477011,
+  "label": "Constanza Mendoza",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 37263,
+   "name": "Constanza Mendoza"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 477012,
+  "label": "Nela Rodríguez",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 37264,
+   "name": "Nela Rodríguez"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 477018,
+  "label": "Leonardo Favio",
+  "action": "retirar_huerfana",
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "la ficha ya tiene 1 vínculos"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 477019,
+  "label": "Chelioque Sarabia",
+  "action": "retirar_huerfana",
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "la ficha ya tiene 1 vínculos"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 477047,
+  "label": "Gordon Mathew Summer",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 37299,
+   "name": "Gordon Mathew Summer"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 477245,
+  "label": "Jerome Wilson",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 37497,
+   "name": "Jerome Wilson"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479057,
+  "label": "Billy Franklin",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 38010,
+   "name": "Billy Franklin"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 463731,
+  "label": "Giuliani",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 19467,
+   "name": "Giuliani"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 463735,
+  "label": "Canonico",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 19472,
+   "name": "Canonico"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 462284,
+  "label": "Sven Havlíček",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 15215,
+   "name": "Sven Havlíček"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479919,
+  "label": "Santos Ramírez",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 38424,
+   "name": "Santos Ramírez"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479922,
+  "label": "Johnny Burker",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 38513,
+   "name": "Johnny Burker"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479923,
+  "label": "Paul Francis Welster",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 38514,
+   "name": "Paul Francis Welster"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479924,
+  "label": "Coria Peñaloza",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 38515,
+   "name": "Coria Peñaloza"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479942,
+  "label": "Alfredo Malerba",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 38675,
+   "name": "Alfredo Malerba"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479944,
+  "label": "John Cander",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 38684,
+   "name": "John Cander"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479945,
+  "label": "Salvador Rangel",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 38704,
+   "name": "Salvador Rangel"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467821,
+  "label": "Antonio Nuñez",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 22816,
+   "name": "Antonio Nuñez"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467823,
+  "label": "José Higuera",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 22833,
+   "name": "José Higuera"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467824,
+  "label": "Manuel Espada",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 22834,
+   "name": "Manuel Espada"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467825,
+  "label": "Gustavo R. García",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 22835,
+   "name": "Gustavo R. García"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467826,
+  "label": "Andrés Paz",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 22840,
+   "name": "Andrés Paz"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467756,
+  "label": "Frederlin Mayora",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 20908,
+   "name": "Frederlin Mayora"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467758,
+  "label": "C. J. Maytin",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 21271,
+   "name": "C. J. Maytin"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467760,
+  "label": "J. Sabre Marroquín",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 21322,
+   "name": "J. Sabre Marroquín"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467761,
+  "label": "E. Villamizar",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 21329,
+   "name": "E. Villamizar"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467762,
+  "label": "Arturo Ojeda",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 21385,
+   "name": "Arturo Ojeda"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467764,
+  "label": "Quincy Jones",
+  "action": "retirar_huerfana",
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "la ficha ya tiene 1 vínculos"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467827,
+  "label": "José Ramos",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 22841,
+   "name": "José Ramos"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467766,
+  "label": "Blosson Dearie - A. King",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 21637,
+   "name": "Blosson Dearie - A. King"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467767,
+  "label": "Jimmy Rowles - Norma Winstone",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 21639,
+   "name": "Jimmy Rowles - Norma Winstone"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467768,
+  "label": "Thelonious Monk - S. Swisher",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 21642,
+   "name": "Thelonious Monk - S. Swisher"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467769,
+  "label": "Jesús Sanoja Rivero",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 21682,
+   "name": "Jesús Sanoja Rivero"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467770,
+  "label": "Delia Arias",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 21685,
+   "name": "Delia Arias"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467771,
+  "label": "Palombo González",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 21753,
+   "name": "Palombo González"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467772,
+  "label": "Mario San Juan",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 22001,
+   "name": "Mario San Juan"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467773,
+  "label": "Cuchi Almeida",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 22002,
+   "name": "Cuchi Almeida"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467790,
+  "label": "Thania Sánchez",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 22387,
+   "name": "Thania Sánchez"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467793,
+  "label": "Eric Brown",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 22390,
+   "name": "Eric Brown"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467794,
+  "label": "R. Cabrera",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 22458,
+   "name": "R. Cabrera"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467795,
+  "label": "O. Bouffartique",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 22459,
+   "name": "O. Bouffartique"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467796,
+  "label": "Alfredo Núñez de Borbón",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 22504,
+   "name": "Alfredo Núñez de Borbón"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467797,
+  "label": "Alejandro Mustelier",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 22505,
+   "name": "Alejandro Mustelier"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467798,
+  "label": "Rafael Blanco Z.",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 22506,
+   "name": "Rafael Blanco Z."
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467799,
+  "label": "Antonio Guijarro Campoy",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 22508,
+   "name": "Antonio Guijarro Campoy"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467800,
+  "label": "Juan Hernández Santillán",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 22509,
+   "name": "Juan Hernández Santillán"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467801,
+  "label": "Leonard H M Rozenstraten",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 22511,
+   "name": "Leonard H M Rozenstraten"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467802,
+  "label": "Simón Gámez Acosta",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 22513,
+   "name": "Simón Gámez Acosta"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467803,
+  "label": "Ramón Farrán",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 22514,
+   "name": "Ramón Farrán"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 467804,
+  "label": "Rafael P. Ortíz",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 22515,
+   "name": "Rafael P. Ortíz"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479965,
+  "label": "Clark Kent",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 38906,
+   "name": "Clark Kent"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479987,
+  "label": "Mc Nally",
+  "action": "retirar_huerfana",
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "la ficha ya tiene 1 vínculos"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479988,
+  "label": "Mike Jagger",
+  "action": "retirar_huerfana",
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "la ficha ya tiene 1 vínculos"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479990,
+  "label": "The Doors",
+  "action": "retirar_huerfana",
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "la ficha ya tiene 1 vínculos"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479991,
+  "label": "Lope De Vega",
+  "action": "retirar_huerfana",
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "la ficha ya tiene 1 vínculos"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479993,
+  "label": "Graham Russel",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 39049,
+   "name": "Graham Russel"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479994,
+  "label": "Clive Davis",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 39050,
+   "name": "Clive Davis"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479995,
+  "label": "LAI",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 39063,
+   "name": "LAI"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479998,
+  "label": "Federico Muñoz",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 39090,
+   "name": "Federico Muñoz"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479999,
+  "label": "Carlos London",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 39091,
+   "name": "Carlos London"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480000,
+  "label": "Carlos Sicilia",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 39096,
+   "name": "Carlos Sicilia"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480003,
+  "label": "Al Bano",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 39113,
+   "name": "Al Bano"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480005,
+  "label": "Ch. Chaltikis",
+  "action": "retirar_huerfana",
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "la ficha ya tiene 1 vínculos"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480006,
+  "label": "David Lobato",
+  "action": "retirar_huerfana",
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "la ficha ya tiene 1 vínculos"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480007,
+  "label": "Esther de Bassega",
+  "action": "retirar_huerfana",
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "la ficha ya tiene 1 vínculos"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480009,
+  "label": "Written: Alessi",
+  "action": "retirar_huerfana",
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "la ficha ya tiene 1 vínculos"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480010,
+  "label": "Jimi Tunnel",
+  "action": "retirar_huerfana",
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "la ficha ya tiene 1 vínculos"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479045,
+  "label": "Mario Lomar",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 37863,
+   "name": "Mario Lomar"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479053,
+  "label": "Luky Grande",
+  "action": "retirar_huerfana",
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "la ficha ya tiene 1 vínculos"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479894,
+  "label": "Francisco Aguirre",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 38205,
+   "name": "Francisco Aguirre"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479895,
+  "label": "Griecco Laporta",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 38206,
+   "name": "Griecco Laporta"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479896,
+  "label": "Carlos Quirpa",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 38211,
+   "name": "Carlos Quirpa"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479901,
+  "label": "Jack Norworth",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 38309,
+   "name": "Jack Norworth"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479903,
+  "label": "Conquet John",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 38342,
+   "name": "Conquet John"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479904,
+  "label": "García José",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 38343,
+   "name": "García José"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479905,
+  "label": "Sammy Cahn.Axel Stordahl",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 38363,
+   "name": "Sammy Cahn.Axel Stordahl"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479906,
+  "label": "Paul Weston",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 38364,
+   "name": "Paul Weston"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479907,
+  "label": "Oscar Hammerstein II",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 38365,
+   "name": "Oscar Hammerstein II"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479887,
+  "label": "Alessandro Marcello",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 38158,
+   "name": "Alessandro Marcello"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479888,
+  "label": "Rodríguez Cárdenas",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 38161,
+   "name": "Rodríguez Cárdenas"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479889,
+  "label": "María Jiménez",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 38162,
+   "name": "María Jiménez"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479926,
+  "label": "Lino Perez",
+  "action": "retirar_huerfana",
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "la ficha ya tiene 1 vínculos"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479930,
+  "label": "Remis Favilla",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 38587,
+   "name": "Remis Favilla"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479931,
+  "label": "Testa Mongol",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 38588,
+   "name": "Testa Mongol"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479933,
+  "label": "José Conturssi",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 38598,
+   "name": "José Conturssi"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479935,
+  "label": "Nicolas Rodríguez",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 38604,
+   "name": "Nicolas Rodríguez"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479940,
+  "label": "Armando Bronca",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 38664,
+   "name": "Armando Bronca"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479941,
+  "label": "Rodolfo Sciamarella",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 38674,
+   "name": "Rodolfo Sciamarella"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479951,
+  "label": "Pablo Beltrán",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 38790,
+   "name": "Pablo Beltrán"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479955,
+  "label": "Peter Pam",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 38814,
+   "name": "Peter Pam"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479956,
+  "label": "Andrés Pas Barros",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 38819,
+   "name": "Andrés Pas Barros"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479957,
+  "label": "Esteban Montaño Polo",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 38820,
+   "name": "Esteban Montaño Polo"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479980,
+  "label": "Floating Love",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 38999,
+   "name": "Floating Love"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479981,
+  "label": "After the Rain",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 39000,
+   "name": "After the Rain"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479983,
+  "label": "Al Smith",
+  "action": "retirar_huerfana",
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "la ficha ya tiene 1 vínculos"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480024,
+  "label": "Carlos Gámez",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 39317,
+   "name": "Carlos Gámez"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480029,
+  "label": "Eddie Cochran",
+  "action": "retirar_huerfana",
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "la ficha ya tiene 2 vínculos"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480035,
+  "label": "Sedaka. Arr. Baltodano",
+  "action": "retirar_huerfana",
+  "status": "blocked",
+  "before": null,
+  "after": null,
+  "blocked": {
+   "code": "not_applicable",
+   "message": "la ficha ya tiene 1 vínculos"
+  },
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480036,
+  "label": "Let The Sunshine In",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 39402,
+   "name": "Let The Sunshine In"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480041,
+  "label": "Submarino",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 39436,
+   "name": "Submarino"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480042,
+  "label": "Asier Casalis",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 39437,
+   "name": "Asier Casalis"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480049,
+  "label": "Antonio José de Sucre",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 39469,
+   "name": "Antonio José de Sucre"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480050,
+  "label": "Luis Morales Vance",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 39471,
+   "name": "Luis Morales Vance"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480054,
+  "label": "Ramón Sanoja Medina",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 39490,
+   "name": "Ramón Sanoja Medina"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480060,
+  "label": "Ángel Palacios",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 39572,
+   "name": "Ángel Palacios"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480061,
+  "label": "Cheché Acosta Fuget",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 39577,
+   "name": "Cheché Acosta Fuget"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480063,
+  "label": "Raúl Domínguez",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 39635,
+   "name": "Raúl Domínguez"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480088,
+  "label": "Juan Coore",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 39751,
+   "name": "Juan Coore"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 491851,
+  "label": "Mike Brignola",
+  "action": "retirar_huerfana",
+  "status": "pending",
+  "before": {
+   "id": 23214,
+   "name": "Mike Brignola"
+  },
+  "after": {
+   "retired": true
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ }
+]

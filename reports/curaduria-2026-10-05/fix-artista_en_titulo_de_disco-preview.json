@@ -1,0 +1,56 @@
+[
+ {
+  "findingId": 480881,
+  "label": "Luis Silva – Sólo Éxitos",
+  "action": "quitar_prefijo_artista",
+  "status": "pending",
+  "before": {
+   "field": "title",
+   "value": "Luis Silva – Sólo Éxitos"
+  },
+  "after": {
+   "field": "title",
+   "value": "Sólo Éxitos"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480882,
+  "label": "Billo's Caracas Boys: la Mejor Salsa. Disco 1",
+  "action": "quitar_prefijo_artista",
+  "status": "pending",
+  "before": {
+   "field": "title",
+   "value": "Billo's Caracas Boys: la Mejor Salsa. Disco 1"
+  },
+  "after": {
+   "field": "title",
+   "value": "la Mejor Salsa. Disco 1"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 491830,
+  "label": "Ilan Chester – En Vivo! Gira Nacional Del Amor Venezolano",
+  "action": "quitar_prefijo_artista",
+  "status": "pending",
+  "before": {
+   "field": "title",
+   "value": "Ilan Chester – En Vivo! Gira Nacional Del Amor Venezolano"
+  },
+  "after": {
+   "field": "title",
+   "value": "En Vivo! Gira Nacional Del Amor Venezolano"
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ }
+]

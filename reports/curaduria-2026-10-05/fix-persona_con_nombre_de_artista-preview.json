@@ -1,0 +1,1342 @@
+[
+ {
+  "findingId": 343646,
+  "label": "Lord",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Lord",
+    "person": "Lord"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 462137,
+  "label": "Julia",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Julia",
+    "person": "Julia"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 462138,
+  "label": "Asmodeo",
+  "action": "convertir_en_artista",
+  "status": "pending",
+  "before": {
+   "name": "Asmodeo",
+   "personId": 15756
+  },
+  "after": {
+   "targetArtist": 920
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 462139,
+  "label": "Koko",
+  "action": "convertir_en_artista",
+  "status": "pending",
+  "before": {
+   "name": "Koko",
+   "personId": 16674
+  },
+  "after": {
+   "targetArtist": 682
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 462140,
+  "label": "Danniel Jiménez",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "DANNIEL JIMENEZ",
+    "person": "Danniel Jiménez"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 462141,
+  "label": "Lester Nava",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Lester Nava",
+    "person": "Lester Nava"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 462142,
+  "label": "Rod",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Rod",
+    "person": "Rod"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 462143,
+  "label": "Mario Romero",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Mario Romero",
+    "person": "Mario Romero"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 462511,
+  "label": "Gaélica",
+  "action": "convertir_en_artista",
+  "status": "pending",
+  "before": {
+   "name": "Gaélica",
+   "personId": 19011
+  },
+  "after": {
+   "targetArtist": 103
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 462513,
+  "label": "Odnam",
+  "action": "convertir_en_artista",
+  "status": "pending",
+  "before": {
+   "name": "Odnam",
+   "personId": 19014
+  },
+  "after": {
+   "targetArtist": 2673
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 463179,
+  "label": "Alberto Grau",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Alberto Grau",
+    "person": "Alberto Grau"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465485,
+  "label": "Antonietta",
+  "action": "convertir_en_artista",
+  "status": "pending",
+  "before": {
+   "name": "Antonietta",
+   "personId": 11935
+  },
+  "after": {
+   "targetArtist": 3678
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465488,
+  "label": "Los Naipes",
+  "action": "convertir_en_artista",
+  "status": "pending",
+  "before": {
+   "name": "Los Naipes",
+   "personId": 12025
+  },
+  "after": {
+   "targetArtist": 3724
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465492,
+  "label": "Tania",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Tania",
+    "person": "Tania"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465494,
+  "label": "Juanma Trujillo",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Juanma Trujillo",
+    "person": "Juanma Trujillo"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465499,
+  "label": "Daniel Prim",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Daniel Prim",
+    "person": "Daniel Prim"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465500,
+  "label": "Gabriel Davila",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Gabriel Dávila",
+    "person": "Gabriel Davila"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465503,
+  "label": "Nuevas Almas",
+  "action": "convertir_en_artista",
+  "status": "pending",
+  "before": {
+   "name": "Nuevas Almas",
+   "personId": 15464
+  },
+  "after": {
+   "targetArtist": 3548
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465505,
+  "label": "Miguel Hernández",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Miguel Hernández",
+    "person": "Miguel Hernández"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465508,
+  "label": "Carlos Rodríguez",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Carlos Rodríguez",
+    "person": "Carlos Rodríguez"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465510,
+  "label": "Miguel Hernández",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Miguel Hernández",
+    "person": "Miguel Hernández"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465513,
+  "label": "Miguel Hernández",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Miguel Hernández",
+    "person": "Miguel Hernández"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465517,
+  "label": "Gonzalo Grau",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Gonzalo Grau",
+    "person": "Gonzalo Grau"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465520,
+  "label": "Gerald \"Chipi\" Chacón",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Gerald \"Chipi\" Chacón",
+    "person": "Gerald \"Chipi\" Chacón"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465523,
+  "label": "Ferreira",
+  "action": "convertir_en_artista",
+  "status": "pending",
+  "before": {
+   "name": "Ferreira",
+   "personId": 20862
+  },
+  "after": {
+   "targetArtist": 2700
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465524,
+  "label": "Santa Paula",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Santa Paula",
+    "person": "Santa Paula"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465526,
+  "label": "Antonia Toro",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Antonia Toro",
+    "person": "Antonia Toro"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465533,
+  "label": "Marcus Vinicius Da Fonseca",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Marcus Vinicius Da Fonseca",
+    "person": "Marcus Vinicius Da Fonseca"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465537,
+  "label": "Javier Montilla",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Javier Montilla",
+    "person": "Javier Montilla"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465540,
+  "label": "Saxomania",
+  "action": "convertir_en_artista",
+  "status": "pending",
+  "before": {
+   "name": "Saxomania",
+   "personId": 22316
+  },
+  "after": {
+   "targetArtist": 3575
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465541,
+  "label": "Carlos Pérez",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Carlos Perez",
+    "person": "Carlos Pérez"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465542,
+  "label": "The",
+  "action": "convertir_en_artista",
+  "status": "pending",
+  "before": {
+   "name": "The",
+   "personId": 22637
+  },
+  "after": {
+   "targetArtist": 969
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465544,
+  "label": "Baden Goyo",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Baden Goyo",
+    "person": "Baden Goyo"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465550,
+  "label": "Esperanto",
+  "action": "convertir_en_artista",
+  "status": "pending",
+  "before": {
+   "name": "Esperanto",
+   "personId": 23028
+  },
+  "after": {
+   "targetArtist": 1450
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465554,
+  "label": "Gabriel Davila",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Gabriel Dávila",
+    "person": "Gabriel Davila"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465556,
+  "label": "Vagos y Maleantes",
+  "action": "convertir_en_artista",
+  "status": "pending",
+  "before": {
+   "name": "Vagos y Maleantes",
+   "personId": 24392
+  },
+  "after": {
+   "targetArtist": 256
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465557,
+  "label": "Willie Colon",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Willie Colón",
+    "person": "Willie Colon"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465560,
+  "label": "Cuarto Poder",
+  "action": "convertir_en_artista",
+  "status": "pending",
+  "before": {
+   "name": "Cuarto Poder",
+   "personId": 24836
+  },
+  "after": {
+   "targetArtist": 1905
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465561,
+  "label": "Enrique \"Culebra\" Iriarte",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Enrique \"Culebra\" Iriarte",
+    "person": "Enrique \"Culebra\" Iriarte"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465569,
+  "label": "Gisela Guedez",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Gisela Guédez",
+    "person": "Gisela Guedez"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465570,
+  "label": "Mango",
+  "action": "convertir_en_artista",
+  "status": "pending",
+  "before": {
+   "name": "Mango",
+   "personId": 26352
+  },
+  "after": {
+   "targetArtist": 2852
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465578,
+  "label": "Julia",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Julia",
+    "person": "Julia"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465579,
+  "label": "Alma",
+  "action": "convertir_en_artista",
+  "status": "pending",
+  "before": {
+   "name": "Alma",
+   "personId": 28411
+  },
+  "after": {
+   "targetArtist": 448
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465581,
+  "label": "José Enrique \"Chelique\" Sarabia",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "José Enrique \"Chelique\" Sarabia",
+    "person": "José Enrique \"Chelique\" Sarabia"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465582,
+  "label": "Zona 7",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Zona 7",
+    "person": "Zona 7"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465583,
+  "label": "Vargas",
+  "action": "convertir_en_artista",
+  "status": "pending",
+  "before": {
+   "name": "Vargas",
+   "personId": 30225
+  },
+  "after": {
+   "targetArtist": 1715
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465585,
+  "label": "Lester Paredes",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Lester Paredes",
+    "person": "Lester Paredes"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465588,
+  "label": "Angel Gómez",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Angel Gómez",
+    "person": "Angel Gómez"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465589,
+  "label": "Pomarrosa",
+  "action": "convertir_en_artista",
+  "status": "pending",
+  "before": {
+   "name": "Pomarrosa",
+   "personId": 30811
+  },
+  "after": {
+   "targetArtist": 3841
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465593,
+  "label": "Los Torrealberos Juan Vicente Torrealba",
+  "action": "convertir_en_artista",
+  "status": "pending",
+  "before": {
+   "name": "Los Torrealberos Juan Vicente Torrealba",
+   "personId": 31977
+  },
+  "after": {
+   "targetArtist": 3883
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465604,
+  "label": "Ruper Vásquez",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Rúper Vásquez",
+    "person": "Ruper Vásquez"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465609,
+  "label": "Raul Pérez",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Raúl Pérez",
+    "person": "Raul Pérez"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465610,
+  "label": "Rafael \"Gallo\" Velásquez",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Rafael \"Gallo\" Velásquez",
+    "person": "Rafael \"Gallo\" Velásquez"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465613,
+  "label": "Héctor Molina",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Héctor Molina",
+    "person": "Héctor Molina"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465616,
+  "label": "Gerald \"Chipi\" Chacón",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Gerald \"Chipi\" Chacón",
+    "person": "Gerald \"Chipi\" Chacón"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 472950,
+  "label": "Nano",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Nano",
+    "person": "Nano"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 472953,
+  "label": "Charles",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Charles",
+    "person": "Charles"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 472960,
+  "label": "Fito Paéz",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Fito Páez",
+    "person": "Fito Paéz"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 472967,
+  "label": "San Luis",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "San Luis",
+    "person": "San Luis"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 472973,
+  "label": "Separación",
+  "action": "convertir_en_artista",
+  "status": "pending",
+  "before": {
+   "name": "Separación",
+   "personId": 35277
+  },
+  "after": {
+   "targetArtist": 2176
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 472974,
+  "label": "4to. Creciente",
+  "action": "convertir_en_artista",
+  "status": "pending",
+  "before": {
+   "name": "4to. Creciente",
+   "personId": 35282
+  },
+  "after": {
+   "targetArtist": 3673
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 472985,
+  "label": "Metropolis",
+  "action": "convertir_en_artista",
+  "status": "pending",
+  "before": {
+   "name": "Metropolis",
+   "personId": 35649
+  },
+  "after": {
+   "targetArtist": 1823
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 473016,
+  "label": "La Iguana",
+  "action": "convertir_en_artista",
+  "status": "pending",
+  "before": {
+   "name": "La Iguana",
+   "personId": 36853
+  },
+  "after": {
+   "targetArtist": 2109
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 473044,
+  "label": "Farándula Popular",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Farándula Popular",
+    "person": "Farándula Popular"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 478825,
+  "label": "Caramelos de Cianuro",
+  "action": "convertir_en_artista",
+  "status": "pending",
+  "before": {
+   "name": "Caramelos de Cianuro",
+   "personId": 38001
+  },
+  "after": {
+   "targetArtist": 58
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 478826,
+  "label": "Alban Arthuan",
+  "action": "convertir_en_artista",
+  "status": "pending",
+  "before": {
+   "name": "Alban Arthuan",
+   "personId": 38002
+  },
+  "after": {
+   "targetArtist": 38
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 478827,
+  "label": "Babylon Motorhome",
+  "action": "convertir_en_artista",
+  "status": "pending",
+  "before": {
+   "name": "Babylon Motorhome",
+   "personId": 38009
+  },
+  "after": {
+   "targetArtist": 48
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 478829,
+  "label": "Rafael L. Garnica",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Rafael L. Garnica",
+    "person": "Rafael L. Garnica"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 478830,
+  "label": "Sur Carabela",
+  "action": "convertir_en_artista",
+  "status": "pending",
+  "before": {
+   "name": "Sur Carabela",
+   "personId": 38018
+  },
+  "after": {
+   "targetArtist": 234
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 478833,
+  "label": "Pablo Sánchez",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Pablo Sánchez",
+    "person": "Pablo Sánchez"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479518,
+  "label": "Vasallos Del Sol",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Vasallos Del Sol",
+    "person": "Vasallos Del Sol"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479520,
+  "label": "Sergio Muñoz",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Sergio Muñoz",
+    "person": "Sergio Muñoz"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 480601,
+  "label": "La Otra Gente",
+  "action": "convertir_en_artista",
+  "status": "pending",
+  "before": {
+   "name": "La Otra Gente",
+   "personId": 1079
+  },
+  "after": {
+   "targetArtist": 4327
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 485899,
+  "label": "Aldemaro Romero y Su Onda Nueva",
+  "action": "convertir_en_artista",
+  "status": "pending",
+  "before": {
+   "name": "Aldemaro Romero y Su Onda Nueva",
+   "personId": 12212
+  },
+  "after": {
+   "targetArtist": 4475
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 485900,
+  "label": "Demetrio Ortíz",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Demétrio Ortíz",
+    "person": "Demetrio Ortíz"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 485901,
+  "label": "Chino y Nacho",
+  "action": "vincular_como_miembro",
+  "status": "pending",
+  "before": {},
+  "after": {
+   "membership": {
+    "role": "Miembro",
+    "artist": "Chino & Nacho",
+    "person": "Chino y Nacho"
+   }
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ }
+]

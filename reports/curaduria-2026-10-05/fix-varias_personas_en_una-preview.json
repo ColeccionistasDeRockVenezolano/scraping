@@ -1,0 +1,902 @@
+[
+ {
+  "findingId": 463150,
+  "label": "José Reyna - Italo Pizzolante",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "José Reyna - Italo Pizzolante",
+   "personId": 20302
+  },
+  "after": {
+   "splitInto": [
+    "José Reyna",
+    "Italo Pizzolante"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 463151,
+  "label": "Bosquejos Peruanos - C. Levi de Stubbs",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "Bosquejos Peruanos - C. Levi de Stubbs",
+   "personId": 20509
+  },
+  "after": {
+   "splitInto": [
+    "Bosquejos Peruanos",
+    "C. Levi de Stubbs"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465313,
+  "label": "C. Curet - B. Capó",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "C. Curet - B. Capó",
+   "personId": 20679
+  },
+  "after": {
+   "splitInto": [
+    "C. Curet",
+    "B. Capó"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465317,
+  "label": "Federico Pacanins - Roberto Obeso",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "Federico Pacanins - Roberto Obeso",
+   "personId": 21648
+  },
+  "after": {
+   "splitInto": [
+    "Federico Pacanins",
+    "Roberto Obeso"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465318,
+  "label": "Elliot Levy - Musical Mind",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "Elliot Levy - Musical Mind",
+   "personId": 21660
+  },
+  "after": {
+   "splitInto": [
+    "Elliot Levy",
+    "Musical Mind"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465319,
+  "label": "R. Ruiz - C. Guerra",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "R. Ruiz - C. Guerra",
+   "personId": 22453
+  },
+  "after": {
+   "splitInto": [
+    "R. Ruiz",
+    "C. Guerra"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465320,
+  "label": "Rafael Hernández - Miguel Matamoros",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "Rafael Hernández - Miguel Matamoros",
+   "personId": 22512
+  },
+  "after": {
+   "splitInto": [
+    "Rafael Hernández",
+    "Miguel Matamoros"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465321,
+  "label": "Bill Evans - Junior Romero",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "Bill Evans - Junior Romero",
+   "personId": 23726
+  },
+  "after": {
+   "splitInto": [
+    "Bill Evans",
+    "Junior Romero"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465322,
+  "label": "G. Wood - R. Mellin",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "G. Wood - R. Mellin",
+   "personId": 23926
+  },
+  "after": {
+   "splitInto": [
+    "G. Wood",
+    "R. Mellin"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465323,
+  "label": "Chico Novarro - Julio Gutiérrez",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "Chico Novarro - Julio Gutiérrez",
+   "personId": 25869
+  },
+  "after": {
+   "splitInto": [
+    "Chico Novarro",
+    "Julio Gutiérrez"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465324,
+  "label": "Angel Solís - Osvaldo Farrés",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "Angel Solís - Osvaldo Farrés",
+   "personId": 25870
+  },
+  "after": {
+   "splitInto": [
+    "Angel Solís",
+    "Osvaldo Farrés"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465325,
+  "label": "Agustín Lara - Roberto Colé",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "Agustín Lara - Roberto Colé",
+   "personId": 25871
+  },
+  "after": {
+   "splitInto": [
+    "Agustín Lara",
+    "Roberto Colé"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465326,
+  "label": "Rafael Hernández - Félix Reina",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "Rafael Hernández - Félix Reina",
+   "personId": 25872
+  },
+  "after": {
+   "splitInto": [
+    "Rafael Hernández",
+    "Félix Reina"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465327,
+  "label": "J. Flores - P. Acevedo",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "J. Flores - P. Acevedo",
+   "personId": 28984
+  },
+  "after": {
+   "splitInto": [
+    "J. Flores",
+    "P. Acevedo"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465328,
+  "label": "Willie Colón - Vinicio Cámilo",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "Willie Colón - Vinicio Cámilo",
+   "personId": 29572
+  },
+  "after": {
+   "splitInto": [
+    "Willie Colón",
+    "Vinicio Cámilo"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465329,
+  "label": "Temática AG - Pedro Quintero",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "Temática AG - Pedro Quintero",
+   "personId": 30339
+  },
+  "after": {
+   "splitInto": [
+    "Temática AG",
+    "Pedro Quintero"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465330,
+  "label": "Lemergraph Asesores - Andreína Alarcón",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "Lemergraph Asesores - Andreína Alarcón",
+   "personId": 30669
+  },
+  "after": {
+   "splitInto": [
+    "Lemergraph Asesores",
+    "Andreína Alarcón"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465331,
+  "label": "H. Fernández - U. Acosta",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "H. Fernández - U. Acosta",
+   "personId": 30877
+  },
+  "after": {
+   "splitInto": [
+    "H. Fernández",
+    "U. Acosta"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465332,
+  "label": "Chico Novarro - Armando Manzanero",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "Chico Novarro - Armando Manzanero",
+   "personId": 30879
+  },
+  "after": {
+   "splitInto": [
+    "Chico Novarro",
+    "Armando Manzanero"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465334,
+  "label": "Omar Alfano - Luis Fonsi",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "Omar Alfano - Luis Fonsi",
+   "personId": 33204
+  },
+  "after": {
+   "splitInto": [
+    "Omar Alfano",
+    "Luis Fonsi"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465335,
+  "label": "Astor Piazzolla - Carlos Gardel",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "Astor Piazzolla - Carlos Gardel",
+   "personId": 33206
+  },
+  "after": {
+   "splitInto": [
+    "Astor Piazzolla",
+    "Carlos Gardel"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465336,
+  "label": "Manuel Alejandro - Kike Santander",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "Manuel Alejandro - Kike Santander",
+   "personId": 33207
+  },
+  "after": {
+   "splitInto": [
+    "Manuel Alejandro",
+    "Kike Santander"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465337,
+  "label": "Roxana Valdés - Corporación Optilaser",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "Roxana Valdés - Corporación Optilaser",
+   "personId": 33558
+  },
+  "after": {
+   "splitInto": [
+    "Roxana Valdés",
+    "Corporación Optilaser"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465338,
+  "label": "E. Hidalgo - J. Villarroel",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "E. Hidalgo - J. Villarroel",
+   "personId": 33576
+  },
+  "after": {
+   "splitInto": [
+    "E. Hidalgo",
+    "J. Villarroel"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465339,
+  "label": "Ricardo Pérez - Rafael Izaza",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "Ricardo Pérez - Rafael Izaza",
+   "personId": 33719
+  },
+  "after": {
+   "splitInto": [
+    "Ricardo Pérez",
+    "Rafael Izaza"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465340,
+  "label": "Rafael Izaza - Ricardo Pérez",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "Rafael Izaza - Ricardo Pérez",
+   "personId": 33720
+  },
+  "after": {
+   "splitInto": [
+    "Rafael Izaza",
+    "Ricardo Pérez"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465341,
+  "label": "J. Lozano - N. Romero",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "J. Lozano - N. Romero",
+   "personId": 33802
+  },
+  "after": {
+   "splitInto": [
+    "J. Lozano",
+    "N. Romero"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465342,
+  "label": "Pedro Sosa - Genaro Prieto",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "Pedro Sosa - Genaro Prieto",
+   "personId": 33992
+  },
+  "after": {
+   "splitInto": [
+    "Pedro Sosa",
+    "Genaro Prieto"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465343,
+  "label": "H. Hernández - U. Acosta",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "H. Hernández - U. Acosta",
+   "personId": 34068
+  },
+  "after": {
+   "splitInto": [
+    "H. Hernández",
+    "U. Acosta"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465344,
+  "label": "Alejandro Calzadilla - Wuil Alejos",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "Alejandro Calzadilla - Wuil Alejos",
+   "personId": 34109
+  },
+  "after": {
+   "splitInto": [
+    "Alejandro Calzadilla",
+    "Wuil Alejos"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 465345,
+  "label": "Alejandro Calzadilla - Liu Prato",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "Alejandro Calzadilla - Liu Prato",
+   "personId": 34110
+  },
+  "after": {
+   "splitInto": [
+    "Alejandro Calzadilla",
+    "Liu Prato"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 472870,
+  "label": "Froilan García - Pedro Cerezo",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "Froilan García - Pedro Cerezo",
+   "personId": 34522
+  },
+  "after": {
+   "splitInto": [
+    "Froilan García",
+    "Pedro Cerezo"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 472871,
+  "label": "Fernando Macero - Alexander Ardila",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "Fernando Macero - Alexander Ardila",
+   "personId": 34523
+  },
+  "after": {
+   "splitInto": [
+    "Fernando Macero",
+    "Alexander Ardila"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 472873,
+  "label": "Guillermo Sulbarán - Digital Dreams",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "Guillermo Sulbarán - Digital Dreams",
+   "personId": 34725
+  },
+  "after": {
+   "splitInto": [
+    "Guillermo Sulbarán",
+    "Digital Dreams"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 472874,
+  "label": "Juan Carlos y Fernando",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "Juan Carlos y Fernando",
+   "personId": 37409
+  },
+  "after": {
+   "splitInto": [
+    "Juan Carlos",
+    "Fernando"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479506,
+  "label": "Luis Laguna - Enrique Hidalgo",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "Luis Laguna - Enrique Hidalgo",
+   "personId": 38366
+  },
+  "after": {
+   "splitInto": [
+    "Luis Laguna",
+    "Enrique Hidalgo"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479507,
+  "label": "Víctor Mendoza - José Barros",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "Víctor Mendoza - José Barros",
+   "personId": 38512
+  },
+  "after": {
+   "splitInto": [
+    "Víctor Mendoza",
+    "José Barros"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 479508,
+  "label": "Alvaro Carrillo - Chico Novarro",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "Alvaro Carrillo - Chico Novarro",
+   "personId": 38555
+  },
+  "after": {
+   "splitInto": [
+    "Alvaro Carrillo",
+    "Chico Novarro"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 485821,
+  "label": "Mariangelina Celis y Asociados",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "Mariangelina Celis y Asociados",
+   "personId": 39767
+  },
+  "after": {
+   "splitInto": [
+    "Mariangelina Celis",
+    "Asociados"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 485822,
+  "label": "Lui Ramón y Rivera",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "Lui Ramón y Rivera",
+   "personId": 39777
+  },
+  "after": {
+   "splitInto": [
+    "Lui Ramón",
+    "Rivera"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 485823,
+  "label": "Quirino Mendoza y Cortés",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "Quirino Mendoza y Cortés",
+   "personId": 39781
+  },
+  "after": {
+   "splitInto": [
+    "Quirino Mendoza",
+    "Cortés"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 485824,
+  "label": "León Clavero y Quiroga",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "León Clavero y Quiroga",
+   "personId": 39793
+  },
+  "after": {
+   "splitInto": [
+    "León Clavero",
+    "Quiroga"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 485825,
+  "label": "Luis Ramón y Rivera",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "Luis Ramón y Rivera",
+   "personId": 39797
+  },
+  "after": {
+   "splitInto": [
+    "Luis Ramón",
+    "Rivera"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 485826,
+  "label": "Alejandro González y Fernández",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "Alejandro González y Fernández",
+   "personId": 39802
+  },
+  "after": {
+   "splitInto": [
+    "Alejandro González",
+    "Fernández"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ },
+ {
+  "findingId": 485827,
+  "label": "Sebastián Yradier y Salaverri",
+  "action": "dividir_persona",
+  "status": "pending",
+  "before": {
+   "name": "Sebastián Yradier y Salaverri",
+   "personId": 39808
+  },
+  "after": {
+   "splitInto": [
+    "Sebastián Yradier",
+    "Salaverri"
+   ]
+  },
+  "blocked": null,
+  "warnings": [],
+  "collisions": [],
+  "proposal": null
+ }
+]
