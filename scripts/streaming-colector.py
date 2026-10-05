@@ -394,19 +394,22 @@ def main():
                 c, method, score = pick_candidate(art["name"], cands)
                 if c and method:
                     add_artist({"platform": "spotify", "url": c["url"], "id": c["id"], "method": method,
-                                "source": c["source"], "score": score})
+                                "source": c["source"], "score": score, "name_plat": c.get("name")})
                     if method == "exact":
                         sp_id = c["id"]
                 rec["fuentes_ok"].append("spotify")
             except Exception as e:
                 rec["fuentes_error"].append(f"spotify: {str(e)[:80]}")
+        else:
+            # Deja marca para el rescate (--reintentar-plataforma spotify).
+            rec["fuentes_error"].append("spotify: omitido (--sin-spotify)")
         # iTunes
         try:
             cands = itunes_search_artist(art["name"])
             c, method, score = pick_candidate(art["name"], cands)
             if c and method:
                 add_artist({"platform": "apple_music", "url": c["url"], "id": c["id"], "method": method,
-                            "source": c["source"], "score": score})
+                            "source": c["source"], "score": score, "name_plat": c.get("name")})
             # álbumes iTunes
             if c and method:
                 try:
@@ -416,7 +419,8 @@ def main():
                         if m and met:
                             rec["album_links"].append({"albumId": al["id"], "platform": "apple_music",
                                                        "url": m["url"], "id": m["id"], "method": met,
-                                                       "source": m["source"], "score": sc})
+                                                       "source": m["source"], "score": sc,
+                                                       "title_plat": m.get("title"), "year_plat": m.get("year")})
                 except Exception as e:
                     rec["fuentes_error"].append(f"itunes-albums: {str(e)[:60]}")
             rec["fuentes_ok"].append("itunes")
@@ -428,7 +432,7 @@ def main():
             c, method, score = pick_candidate(art["name"], cands)
             if c and method:
                 add_artist({"platform": "deezer", "url": c["url"], "id": c["id"], "method": method,
-                            "source": c["source"], "score": score})
+                            "source": c["source"], "score": score, "name_plat": c.get("name")})
                 try:
                     dz_albums = deezer_artist_albums(c["id"])
                     for al in por_artista.get(aid, []):
@@ -436,7 +440,8 @@ def main():
                         if m and met:
                             rec["album_links"].append({"albumId": al["id"], "platform": "deezer",
                                                        "url": m["url"], "id": m["id"], "method": met,
-                                                       "source": m["source"], "score": sc})
+                                                       "source": m["source"], "score": sc,
+                                                       "title_plat": m.get("title"), "year_plat": m.get("year")})
                 except Exception as e:
                     rec["fuentes_error"].append(f"deezer-albums: {str(e)[:60]}")
             rec["fuentes_ok"].append("deezer")
@@ -451,7 +456,8 @@ def main():
                     if m and met:
                         rec["album_links"].append({"albumId": al["id"], "platform": "spotify",
                                                    "url": m["url"], "id": m["id"], "method": met,
-                                                   "source": m["source"], "score": sc})
+                                                   "source": m["source"], "score": sc,
+                                                   "title_plat": m.get("title"), "year_plat": m.get("year")})
             except Exception as e:
                 rec["fuentes_error"].append(f"spotify-albums: {str(e)[:60]}")
         # MusicBrainz
@@ -459,6 +465,7 @@ def main():
             mb_name, mb_links = mb_artist(art["name"])
             rec["mb_name"] = mb_name
             for l in mb_links:
+                l.setdefault("name_plat", mb_name)
                 add_artist(l)
             rec["fuentes_ok"].append("musicbrainz")
         except Exception as e:
