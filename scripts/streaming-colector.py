@@ -243,7 +243,11 @@ def mb_artist(name):
                        ("itunes.apple.com", "apple_music"), ("deezer.com/artist", "deezer"),
                        ("tidal.com", "tidal"), ("soundcloud.com", "soundcloud"),
                        ("bandcamp.com", "bandcamp"), ("youtube.com", "youtube"),
-                       ("amazon.", "amazon_music")):
+                       ("amazon.", "amazon_music"),
+                       # redes sociales del perfil (url-rels «social network» de MB)
+                       ("twitter.com", "twitter"), ("x.com", "twitter"),
+                       ("facebook.com", "facebook"), ("instagram.com", "instagram"),
+                       ("tiktok.com", "tiktok")):
             if dom in low:
                 plat = p
                 break

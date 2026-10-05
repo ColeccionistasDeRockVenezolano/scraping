@@ -575,6 +575,7 @@ def tablero_html(estado, cola, nota):
             f'<span class="upd">Actualizado <span class="ago" data-t="{int(now)}">{time.strftime("%H:%M:%S")}</span> · auto-refresco 10 s</span></div>'
             + banner
             + '<div class="grid">' + c_art + c_dis + c_rit + c_eta + c_ult + c_mur + c_ses + c_sup + c_tg + '</div>'
+            + _fragmento_extracciones()
             + '<h2>Últimas capturas</h2><div class="card"><table><tr><th>Nombre</th><th>Tipo</th><th>Hace</th></tr>'
             + "".join(ufilas) + '</table></div>'
             + f'<h2>Cola completa — artistas ({tot})</h2>'
@@ -585,6 +586,15 @@ def tablero_html(estado, cola, nota):
             + '<div id="wrap"><table id="tbl"><thead><tr><th>Artista</th><th>Estado</th><th>Hora</th></tr></thead><tbody>'
             + "".join(filas) + '</tbody></table></div>'
             + f"<script>{js}</script></body></html>")
+
+
+def _fragmento_extracciones():
+    """Sección embebida del tablero de extracciones (enlaces + bios), si existe."""
+    try:
+        with open("/tmp/crv-recon/crv-extracciones-fragmento.html", encoding="utf-8") as f:
+            return f.read()
+    except Exception:
+        return ""
 
 
 def escribir_tablero(outdir, estado, cola, nota="en marcha"):
