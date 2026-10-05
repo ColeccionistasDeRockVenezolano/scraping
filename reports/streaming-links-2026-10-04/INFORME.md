@@ -67,14 +67,18 @@ Oberto»↔«Luis Roberto», «Sabotaje»↔«SAIBOTAJE», «Beraca»↔«Beraca
   2. para la campaña grande, el mismo pase sobre `campana/` cuando termine
      (comando en el README de abajo).
 
-## Bios de RYM (dato faltante, preparado)
+## Bios de RYM (dato faltante, en marcha automática)
 
 - Cola lista: **774 pendientes** de las 1.591 fichas de «nuevos» (817 ya tienen
   bio) — `data/raw/fuentes-web-2026-10-01/rym-bios/cola-bios.jsonl`.
-- Capturador `scripts/rym-bios-auto.py` (pestaña `/artist/<slug>/biography`,
-  mismo motor marionette, ritmo humano). **Se lanza cuando cierre la fase 2 de
-  «nuevos»** (una sola sesión RYM a la vez), p. ej.:
-  `systemd-run --user --collect --unit=crv-rym-bios python3 scripts/rym-bios-auto.py`
+- Capturador `scripts/scrapling-bios.py` (mismo motor Scrapling + cookies del
+  dueño; extrae la sección de biografía; crudo a `rym-bios/pages/`). Probado en
+  vivo (bio real de Desorden Público ✓).
+- **Lanzador automático** `crv-bios-lanzador.service` (activo): espera el cierre
+  de «nuevos» (una sola sesión RYM a la vez), lanza el capturador y lo mantiene
+  vivo. El progreso sale en el tablero de extracciones y avisa por Telegram.
+- El viejo `scripts/rym-bios-auto.py` (marionette) quedó retirado: la máquina
+  ya no usa marionette.
 
 ## Comandos útiles
 
