@@ -1,0 +1,1351 @@
+{
+ "discos": 134,
+ "pistas": 339,
+ "anios": 18,
+ "portadas": 48,
+ "generos": 42,
+ "candidatas": 85,
+ "detalle": [
+  {
+   "albumId": 13835,
+   "titulo": "The Good Trip",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17830
+  },
+  {
+   "albumId": 25708,
+   "titulo": "Las gaitas de Joselo y Hugo Blanco 1986",
+   "pistas": 4,
+   "anio": 0,
+   "portada": 1,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17830
+  },
+  {
+   "albumId": 21740,
+   "titulo": "Anakena (Acústico)",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17830
+  },
+  {
+   "albumId": 25755,
+   "titulo": "Morella Muñoz",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17830
+  },
+  {
+   "albumId": 13749,
+   "titulo": "Double Cup (feat. Trainer & Big Soto)",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 1,
+   "candidatas": 1,
+   "runId": 17830
+  },
+  {
+   "albumId": 25776,
+   "titulo": "Una película de Willie DeVille (Acto II: Ebriedad)",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 2,
+   "runId": 17830
+  },
+  {
+   "albumId": 25805,
+   "titulo": "Victor Piñero",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 2,
+   "runId": 17830
+  },
+  {
+   "albumId": 25819,
+   "titulo": "Synth Destruction Two",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17830
+  },
+  {
+   "albumId": 25854,
+   "titulo": "Evidence (Napolian Remix)",
+   "pistas": 2,
+   "anio": 0,
+   "portada": 1,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17830
+  },
+  {
+   "albumId": 26850,
+   "titulo": "The Piano Concertos",
+   "pistas": 0,
+   "anio": 1,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17830
+  },
+  {
+   "albumId": 25892,
+   "titulo": "Mi motoneta",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17830
+  },
+  {
+   "albumId": 25896,
+   "titulo": "Traicionera",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17830
+  },
+  {
+   "albumId": 9203,
+   "titulo": "Juan Galea De Novela",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17830
+  },
+  {
+   "albumId": 5782,
+   "titulo": "Concierto De Aranjuez",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 2,
+   "runId": 17830
+  },
+  {
+   "albumId": 26858,
+   "titulo": "Vuelven los Terrícolas 55 años después Vol. 1",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 1,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17830
+  },
+  {
+   "albumId": 26863,
+   "titulo": "Me fui",
+   "pistas": 1,
+   "anio": 0,
+   "portada": 1,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17830
+  },
+  {
+   "albumId": 14680,
+   "titulo": "El disco de oro de Ángel C. Loyola",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 1,
+   "candidatas": 1,
+   "runId": 17830
+  },
+  {
+   "albumId": 25982,
+   "titulo": "The Sinistah Album I",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17830
+  },
+  {
+   "albumId": 22063,
+   "titulo": "Un boleta enamorado",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17830
+  },
+  {
+   "albumId": 22076,
+   "titulo": "mekieromorir",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17830
+  },
+  {
+   "albumId": 13717,
+   "titulo": "Respira (Deluxe)",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 2,
+   "candidatas": 1,
+   "runId": 17830
+  },
+  {
+   "albumId": 12973,
+   "titulo": "Persona ideal",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17830
+  },
+  {
+   "albumId": 12993,
+   "titulo": "Tengo un Amor (Salsa Internacional)",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17830
+  },
+  {
+   "albumId": 22216,
+   "titulo": "Caracas",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17830
+  },
+  {
+   "albumId": 15213,
+   "titulo": "Vivo para Ti (En Vivo)",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17830
+  },
+  {
+   "albumId": 22247,
+   "titulo": "Vagaciones",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17830
+  },
+  {
+   "albumId": 22336,
+   "titulo": "La voz de los '80",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17830
+  },
+  {
+   "albumId": 22339,
+   "titulo": "Corazones",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17830
+  },
+  {
+   "albumId": 26901,
+   "titulo": "RainyNights pt2",
+   "pistas": 11,
+   "anio": 0,
+   "portada": 1,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17830
+  },
+  {
+   "albumId": 22450,
+   "titulo": "Hiperlove",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17830
+  },
+  {
+   "albumId": 7796,
+   "titulo": "Soledad Bravo Canta",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 3,
+   "runId": 17830
+  },
+  {
+   "albumId": 7797,
+   "titulo": "Soledad",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 3,
+   "runId": 17830
+  },
+  {
+   "albumId": 8417,
+   "titulo": "Canciones De La Nueva Trova Cubana Vol. 2",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17830
+  },
+  {
+   "albumId": 7820,
+   "titulo": "Cantos de Venezuela Vol. I",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17830
+  },
+  {
+   "albumId": 26916,
+   "titulo": "Metapolemos II - The Spiritual Aesthetics of War",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 1,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17830
+  },
+  {
+   "albumId": 26180,
+   "titulo": "Ruin It",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17830
+  },
+  {
+   "albumId": 26922,
+   "titulo": "Se acabó (Versión merengue urbano)",
+   "pistas": 1,
+   "anio": 2,
+   "portada": 1,
+   "generos": 2,
+   "candidatas": 0,
+   "runId": 17830
+  },
+  {
+   "albumId": 13278,
+   "titulo": "Andas en mi cabeza (remix)",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 4,
+   "candidatas": 1,
+   "runId": 17830
+  },
+  {
+   "albumId": 9427,
+   "titulo": "Música Popular y Folclórica de Venezuela Volumen 2",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17830
+  },
+  {
+   "albumId": 8264,
+   "titulo": "Germán, Niro, Chucho y Emilita",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17830
+  },
+  {
+   "albumId": 8270,
+   "titulo": "12 Hits Con Los Melódicos",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17831
+  },
+  {
+   "albumId": 8316,
+   "titulo": "Lo Mejor De Verónica Rey con Los Melódicos Los Melódicos",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17831
+  },
+  {
+   "albumId": 8292,
+   "titulo": "Recuerdos Vol. II",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17831
+  },
+  {
+   "albumId": 8293,
+   "titulo": "Lucerito",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17831
+  },
+  {
+   "albumId": 8286,
+   "titulo": "Recuerdos",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17831
+  },
+  {
+   "albumId": 8309,
+   "titulo": "Album Homenaje a Los 30 Años de Victor Piñero Los Melódicos",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17831
+  },
+  {
+   "albumId": 8337,
+   "titulo": "El Sonido St.",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17831
+  },
+  {
+   "albumId": 7895,
+   "titulo": "Los Kenya Vol.2",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17831
+  },
+  {
+   "albumId": 26236,
+   "titulo": "Concierto en la llanura: Vol. 3",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17831
+  },
+  {
+   "albumId": 27179,
+   "titulo": "Concierto en la llanura",
+   "pistas": 12,
+   "anio": 1,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17831
+  },
+  {
+   "albumId": 26936,
+   "titulo": "Sin tabú (Remix)",
+   "pistas": 1,
+   "anio": 1,
+   "portada": 1,
+   "generos": 1,
+   "candidatas": 0,
+   "runId": 17831
+  },
+  {
+   "albumId": 13408,
+   "titulo": "Dime cuantas veces (remix)",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 2,
+   "candidatas": 1,
+   "runId": 17831
+  },
+  {
+   "albumId": 13192,
+   "titulo": "En Algún Rincón de Mi Alma (En Vivo)",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 1,
+   "candidatas": 1,
+   "runId": 17831
+  },
+  {
+   "albumId": 13672,
+   "titulo": "los mejores años (notas de diario)",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 2,
+   "candidatas": 1,
+   "runId": 17831
+  },
+  {
+   "albumId": 6206,
+   "titulo": "El Trabuco Venezolano",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 2,
+   "runId": 17831
+  },
+  {
+   "albumId": 7768,
+   "titulo": "Guasancó",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17831
+  },
+  {
+   "albumId": 8391,
+   "titulo": "Sexteto Juventud",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17831
+  },
+  {
+   "albumId": 26947,
+   "titulo": "La Crítica",
+   "pistas": 8,
+   "anio": 0,
+   "portada": 1,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17831
+  },
+  {
+   "albumId": 26946,
+   "titulo": "Oscar D'Leon presenta \"La Critica\" con Wladimir y Teo",
+   "pistas": 8,
+   "anio": 0,
+   "portada": 1,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17831
+  },
+  {
+   "albumId": 26948,
+   "titulo": "Madera para el Amor",
+   "pistas": 9,
+   "anio": 0,
+   "portada": 1,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17831
+  },
+  {
+   "albumId": 26949,
+   "titulo": "Música para abrir el cielo: Act 2",
+   "pistas": 11,
+   "anio": 0,
+   "portada": 1,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17831
+  },
+  {
+   "albumId": 13331,
+   "titulo": "No Puede Ser (con Eladio Carrion)",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17831
+  },
+  {
+   "albumId": 14446,
+   "titulo": "Berlin Chronicles EP",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 1,
+   "candidatas": 1,
+   "runId": 17831
+  },
+  {
+   "albumId": 14436,
+   "titulo": "Katarsis EP",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 2,
+   "candidatas": 1,
+   "runId": 17831
+  },
+  {
+   "albumId": 14457,
+   "titulo": "Interstellar EP",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 1,
+   "candidatas": 1,
+   "runId": 17831
+  },
+  {
+   "albumId": 14438,
+   "titulo": "Number's EP",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17831
+  },
+  {
+   "albumId": 14445,
+   "titulo": "Immersion EP",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17831
+  },
+  {
+   "albumId": 14442,
+   "titulo": "Repeat EP",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17831
+  },
+  {
+   "albumId": 14451,
+   "titulo": "Time Traveler EP",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 1,
+   "generos": 1,
+   "candidatas": 0,
+   "runId": 17831
+  },
+  {
+   "albumId": 14455,
+   "titulo": "In Our Town - EP",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17831
+  },
+  {
+   "albumId": 12749,
+   "titulo": "KICK ii",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17831
+  },
+  {
+   "albumId": 5941,
+   "titulo": "Aguinaldos Venezolanos Vol. I",
+   "pistas": 12,
+   "anio": 0,
+   "portada": 1,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17831
+  },
+  {
+   "albumId": 5950,
+   "titulo": "Antología del Madrigal Venezolano Vol. I y Vol. II",
+   "pistas": 25,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17831
+  },
+  {
+   "albumId": 26965,
+   "titulo": "Carita feliz | Carita triste (Deluxe)",
+   "pistas": 7,
+   "anio": 0,
+   "portada": 1,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17831
+  },
+  {
+   "albumId": 26959,
+   "titulo": "Carita Triste",
+   "pistas": 7,
+   "anio": 1,
+   "portada": 1,
+   "generos": 6,
+   "candidatas": 0,
+   "runId": 17831
+  },
+  {
+   "albumId": 26962,
+   "titulo": "Guayaba (Acústica)",
+   "pistas": 1,
+   "anio": 1,
+   "portada": 1,
+   "generos": 1,
+   "candidatas": 0,
+   "runId": 17831
+  },
+  {
+   "albumId": 22970,
+   "titulo": "Cinco",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17831
+  },
+  {
+   "albumId": 26963,
+   "titulo": "Saudade (Acústica)",
+   "pistas": 0,
+   "anio": 2,
+   "portada": 1,
+   "generos": 2,
+   "candidatas": 0,
+   "runId": 17831
+  },
+  {
+   "albumId": 26964,
+   "titulo": "No hay peligro (Ferraz Remix)",
+   "pistas": 0,
+   "anio": 2,
+   "portada": 1,
+   "generos": 1,
+   "candidatas": 0,
+   "runId": 17831
+  },
+  {
+   "albumId": 26966,
+   "titulo": "Strangers (Do You Remember)",
+   "pistas": 1,
+   "anio": 1,
+   "portada": 1,
+   "generos": 1,
+   "candidatas": 0,
+   "runId": 17831
+  },
+  {
+   "albumId": 26968,
+   "titulo": "La quema de la bestia, parte II",
+   "pistas": 10,
+   "anio": 0,
+   "portada": 1,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17832
+  },
+  {
+   "albumId": 26971,
+   "titulo": "All Black (Remix)",
+   "pistas": 1,
+   "anio": 0,
+   "portada": 1,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17832
+  },
+  {
+   "albumId": 26978,
+   "titulo": "The Journey",
+   "pistas": 4,
+   "anio": 1,
+   "portada": 1,
+   "generos": 1,
+   "candidatas": 0,
+   "runId": 17832
+  },
+  {
+   "albumId": 26982,
+   "titulo": "Zumba Lumba",
+   "pistas": 2,
+   "anio": 0,
+   "portada": 1,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17832
+  },
+  {
+   "albumId": 6444,
+   "titulo": "Piano En Canto Venezolano",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17832
+  },
+  {
+   "albumId": 26997,
+   "titulo": "triste pero siempre mami (acústico)",
+   "pistas": 13,
+   "anio": 2,
+   "portada": 1,
+   "generos": 5,
+   "candidatas": 0,
+   "runId": 17832
+  },
+  {
+   "albumId": 27005,
+   "titulo": "Quimeras Vol. II",
+   "pistas": 10,
+   "anio": 0,
+   "portada": 1,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17832
+  },
+  {
+   "albumId": 27192,
+   "titulo": "Septiembre Piano Sessions",
+   "pistas": 18,
+   "anio": 0,
+   "portada": 1,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17832
+  },
+  {
+   "albumId": 27007,
+   "titulo": "im not rly giving a shit 2",
+   "pistas": 8,
+   "anio": 0,
+   "portada": 1,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17832
+  },
+  {
+   "albumId": 27196,
+   "titulo": "Bad Boyz 2",
+   "pistas": 6,
+   "anio": 0,
+   "portada": 1,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17832
+  },
+  {
+   "albumId": 27013,
+   "titulo": "éramos muchos y parió la abuela (Sesión en casa)",
+   "pistas": 8,
+   "anio": 1,
+   "portada": 1,
+   "generos": 2,
+   "candidatas": 0,
+   "runId": 17832
+  },
+  {
+   "albumId": 27014,
+   "titulo": "Con Cariño Remezclas",
+   "pistas": 4,
+   "anio": 0,
+   "portada": 1,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17832
+  },
+  {
+   "albumId": 26110,
+   "titulo": "Zarbak",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17832
+  },
+  {
+   "albumId": 8964,
+   "titulo": "Rondalla Venezolana Vol.2",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17832
+  },
+  {
+   "albumId": 9071,
+   "titulo": "La Música de Un Solo Pueblo Vol. 1",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17832
+  },
+  {
+   "albumId": 14940,
+   "titulo": "La Música de un Solo Pueblo",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17832
+  },
+  {
+   "albumId": 9077,
+   "titulo": "La Música de Un Solo Pueblo Vol. 5",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17832
+  },
+  {
+   "albumId": 9085,
+   "titulo": "Venezuela Un Solo Pueblo",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17832
+  },
+  {
+   "albumId": 9086,
+   "titulo": "La Música de Venezuela",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17832
+  },
+  {
+   "albumId": 8783,
+   "titulo": "Lilia Vera",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 3,
+   "runId": 17832
+  },
+  {
+   "albumId": 6001,
+   "titulo": "Baroque Improvisations",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17832
+  },
+  {
+   "albumId": 8780,
+   "titulo": "Parranda",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17832
+  },
+  {
+   "albumId": 27199,
+   "titulo": "Quien sera / El ermitaño",
+   "pistas": 12,
+   "anio": 0,
+   "portada": 1,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17832
+  },
+  {
+   "albumId": 27115,
+   "titulo": "Báilame",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17832
+  },
+  {
+   "albumId": 8513,
+   "titulo": "Venezuela Canta",
+   "pistas": 10,
+   "anio": 0,
+   "portada": 1,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17832
+  },
+  {
+   "albumId": 14214,
+   "titulo": "Carledos (Remix)",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17832
+  },
+  {
+   "albumId": 27027,
+   "titulo": "Casoneo",
+   "pistas": 1,
+   "anio": 0,
+   "portada": 1,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17832
+  },
+  {
+   "albumId": 27029,
+   "titulo": "Fun Slaughter (Demo Version)",
+   "pistas": 6,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17832
+  },
+  {
+   "albumId": 27030,
+   "titulo": "Violin Sonatas Nos. 1-3",
+   "pistas": 11,
+   "anio": 0,
+   "portada": 1,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17832
+  },
+  {
+   "albumId": 27032,
+   "titulo": "Poemas prohibidos",
+   "pistas": 12,
+   "anio": 0,
+   "portada": 1,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17832
+  },
+  {
+   "albumId": 27033,
+   "titulo": "EDGY MUZIK 2: THE RETURN",
+   "pistas": 16,
+   "anio": 0,
+   "portada": 1,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17832
+  },
+  {
+   "albumId": 27036,
+   "titulo": "Otokonoko's Harem 2",
+   "pistas": 10,
+   "anio": 0,
+   "portada": 1,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17832
+  },
+  {
+   "albumId": 14990,
+   "titulo": "La Maquina del Sabor '90",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 2,
+   "candidatas": 2,
+   "runId": 17832
+  },
+  {
+   "albumId": 27204,
+   "titulo": "Chuca Chuca II",
+   "pistas": 11,
+   "anio": 0,
+   "portada": 1,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17832
+  },
+  {
+   "albumId": 27047,
+   "titulo": "Heavenly",
+   "pistas": 1,
+   "anio": 0,
+   "portada": 1,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17832
+  },
+  {
+   "albumId": 13146,
+   "titulo": "Diveana",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17832
+  },
+  {
+   "albumId": 7748,
+   "titulo": "Roberto Antonio II",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 2,
+   "runId": 17832
+  },
+  {
+   "albumId": 27055,
+   "titulo": "Ritmo y color de Venezuela",
+   "pistas": 0,
+   "anio": 1,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17832
+  },
+  {
+   "albumId": 27073,
+   "titulo": "Leo Diaz",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 1,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17832
+  },
+  {
+   "albumId": 27060,
+   "titulo": "Los Master's #12",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 1,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17832
+  },
+  {
+   "albumId": 6607,
+   "titulo": "Passion Reverence Transcendence: The Music of McCoy",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17833
+  },
+  {
+   "albumId": 7295,
+   "titulo": "Los Blanco",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17833
+  },
+  {
+   "albumId": 7308,
+   "titulo": "Dando En El Blanco",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17833
+  },
+  {
+   "albumId": 27064,
+   "titulo": "Gaiteros de Pillopo '87",
+   "pistas": 11,
+   "anio": 0,
+   "portada": 1,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17833
+  },
+  {
+   "albumId": 27077,
+   "titulo": "Es Que La Vida Es Un Ratito (Demitos)",
+   "pistas": 5,
+   "anio": 0,
+   "portada": 1,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17833
+  },
+  {
+   "albumId": 27080,
+   "titulo": "Lipstick (Lawrent Remix)",
+   "pistas": 1,
+   "anio": 1,
+   "portada": 1,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17833
+  },
+  {
+   "albumId": 27083,
+   "titulo": "Bendishon disfrasá (Blessing in Disguise)",
+   "pistas": 11,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17833
+  },
+  {
+   "albumId": 27085,
+   "titulo": "Machika (Dillon Francis Remix)",
+   "pistas": 1,
+   "anio": 0,
+   "portada": 1,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17833
+  },
+  {
+   "albumId": 24290,
+   "titulo": "El Grupo V",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17833
+  },
+  {
+   "albumId": 27090,
+   "titulo": "Calypsorama",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17833
+  },
+  {
+   "albumId": 24329,
+   "titulo": "Black is Beautiful",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17833
+  },
+  {
+   "albumId": 24535,
+   "titulo": "RIP LATINCORE 2K24",
+   "pistas": 0,
+   "anio": 0,
+   "portada": 0,
+   "generos": 0,
+   "candidatas": 1,
+   "runId": 17833
+  },
+  {
+   "albumId": 27211,
+   "titulo": "Ya no somos los mismos (comienzo)",
+   "pistas": 14,
+   "anio": 0,
+   "portada": 1,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17833
+  },
+  {
+   "albumId": 27210,
+   "titulo": "La ventana (reymixes)",
+   "pistas": 1,
+   "anio": 0,
+   "portada": 1,
+   "generos": 0,
+   "candidatas": 0,
+   "runId": 17833
+  }
+ ],
+ "errores": []
+}

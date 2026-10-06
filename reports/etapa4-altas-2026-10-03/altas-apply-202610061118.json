@@ -1,0 +1,379 @@
+{
+ "generado": "2026-10-06T11:18:26.857Z",
+ "plan": "reports/rym-nuevos-aplicacion-2026-10-05/plan-altas-prefijos.jsonl",
+ "runs": [
+  17835
+ ],
+ "creadas": [
+  {
+   "clave": "rym:nuevos:album:_release_album_chico-y-porfi_juntos-otra-vez",
+   "tipo": "album",
+   "id": 27217,
+   "nombre": "Juntos otra vez"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_single_moroka_ja",
+   "tipo": "album",
+   "id": 27218,
+   "nombre": "Ja"
+  }
+ ],
+ "review": [
+  {
+   "clave": "rym:nuevos:album:_release_album_big-soto_the-good-trip-deluxe",
+   "score": 0.8194,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_rada_impressiones-etnosonicas",
+   "existingId": 2932,
+   "detalle": "ya existe (ER)"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_los-dementes_ialerta-mundo-llegan-the-crazy-men",
+   "existingId": 8227,
+   "detalle": "ya existe (ER)"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_single_akapellah_double-cup",
+   "score": 0.77812,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_big-soto_sotorious",
+   "existingId": 13836,
+   "detalle": "ya existe (ER)"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_juan-galea_juan-galea",
+   "score": 0.802,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_orquesta-nacional-de-espana-rafael-fruhbeck-de-burgos-alirio-diaz_concierto",
+   "score": 0.78036,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_comp_orquesta-nacional-de-espana-orchestre-de-la-societe-des-concerts-du-conserva",
+   "score": 0.79371,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_comp_angel-custodio-loyola_el-disco-de-oro",
+   "score": 0.79673,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_akapellah_respira",
+   "score": 0.802,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_single_adolescents-orquesta_persona-ideal-mi-error",
+   "score": 0.81254,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_daniel-calveti_vivo-para-ti",
+   "score": 0.8136,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_single_esos-cubos__",
+   "existingId": 22275,
+   "detalle": "ya existe (ER)"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_single_sigmatus_----",
+   "existingId": 26046,
+   "detalle": "ya existe (ER)"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_soledad-bravo_soledad-bravo-vol-3",
+   "score": 0.82337,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_soledad-bravo_volumen-4",
+   "existingId": 8416,
+   "detalle": "ya existe (ER)"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_single_chino-y-nacho_andas-en-mi-cabeza",
+   "score": 0.831,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_los-melodicos_german-niro-chucho-y-emilita-con-los-melodicos",
+   "score": 0.81461,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_orquesta-los-melodicos_12-hits",
+   "existingId": 8270,
+   "detalle": "ya existe (ER)"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_los-melodicos_lucerito-y-los-melodicos",
+   "score": 0.78267,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_los-melodicos_album-homenaje-a-los-30-anos-de-victor-pinero",
+   "score": 0.83247,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_los-melodicos_el-sonido",
+   "score": 0.831,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_comp_los-melodicos_orquesta-de-los-exitos",
+   "existingId": 8297,
+   "detalle": "ya existe (ER)"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_single_micro-tdh_dime-cuantas-veces",
+   "score": 0.831,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_single_suei-micro-tdh_",
+   "existingId": 22842,
+   "detalle": "ya existe (ER)"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_miguel-moly_en-algun-rincon-de-mi-alma",
+   "score": 0.83271,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_el-trabuco-venezolano_el-trabuco-venezolano-vol-ii",
+   "score": 0.831,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_el-trabuco-venezolano_el-trabuco-venezolano-vol-iii",
+   "score": 0.828,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_sexteto-juventud_sexteto-juventud-y-su-nuevo-sonido",
+   "score": 0.79859,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_single_sexteto-juventud_guasanco-cautivo",
+   "score": 0.802,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_single_mau-y-ricky-eladio-carrion_no-puede-ser",
+   "score": 0.7889,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_ep_fur_coat_berlin_chronicles",
+   "score": 0.8426,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_ep_fur_coat_katarsis",
+   "score": 0.82836,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_ep_fur-coat_interstellar",
+   "score": 0.8368,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_ep_fur-coat_numbers",
+   "score": 0.8252,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_ep_fur-coat_immersion",
+   "score": 0.831,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_ep_fur-coat_repeat",
+   "score": 0.82133,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_ep_fur-coat_time-traveler",
+   "score": 0.83825,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_ep_fur-coat-avidus_in-our-town",
+   "score": 0.83514,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_mixtape_arca_andandandandand",
+   "existingId": 12755,
+   "detalle": "ya existe (ER)"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_single_arca__",
+   "existingId": 22951,
+   "detalle": "ya existe (ER)"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_single_arca_ritual",
+   "existingId": 12741,
+   "detalle": "ya existe (ER)"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_djmix_arca__-1",
+   "existingId": 22951,
+   "detalle": "ya existe (ER)"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_unauth_arca__",
+   "existingId": 22951,
+   "detalle": "ya existe (ER)"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_unauth_arca__-1",
+   "existingId": 22951,
+   "detalle": "ya existe (ER)"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_unauth_arca__-2",
+   "existingId": 22951,
+   "detalle": "ya existe (ER)"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_schola-cantorum-de-venezuela_aguinaldos-venezolanos",
+   "score": 0.83514,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_schola-cantorum-de-venezuela_antologia-del-madrigal-venezolano",
+   "score": 0.82375,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_un-solo-pueblo_la-musica-de-un-solo-pueblo-vol-5-20-anos-de-vigencia",
+   "score": 0.81623,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_venezuela-un-solo-pueblo_la-musica-de-venezuela-un-solo-pueblo",
+   "score": 0.82,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_comp_un-solo-pueblo_venezuela-un-solo-pueblo-exitos",
+   "score": 0.83381,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_lilia-vera_lilia-vera-y-su-nuevo-canto",
+   "score": 0.82,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_gabriela-montero_baroque",
+   "score": 0.82,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_la-sardina-de-naiguata__parranda-venezuelan-carnival-music",
+   "score": 0.77129,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_mario-suarez-hector-cabrera-adilia-castillo_venezuela-canta-y-baila",
+   "score": 0.81965,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_single_irepelusa_carledos",
+   "score": 0.81029,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_comp_dell-soda__",
+   "existingId": 23837,
+   "detalle": "ya existe (ER)"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_gran-coquivacoa_la-maquina-del-sabor",
+   "score": 0.84487,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_gran-coquivacoa_la-maquina-del-sabor-1",
+   "score": 0.84487,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_ep_sr-presidente_",
+   "existingId": 26644,
+   "detalle": "ya existe (ER)"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_comp_diveana_diveana-mix",
+   "score": 0.81782,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_benito-gonzalez-gerry-gibbs-essiet-okon-essiet_passion-reverence-transcende",
+   "score": 0.84757,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_los-blanco_los-blanco-en-accion",
+   "score": 0.83323,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_los-blanco_dando-en-el-blanco-con-los-blanco",
+   "score": 0.82,
+   "detalle": "ER la marca como posible duplicado; queda en cola"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_los-blanco_la-fiesta-caliente",
+   "existingId": 7315,
+   "detalle": "ya existe (ER)"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_djmix_wight-garden_----------",
+   "existingId": 24032,
+   "detalle": "ya existe (ER)"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_djmix_wight-garden_--",
+   "existingId": 24033,
+   "detalle": "ya existe (ER)"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_djmix_wight-garden_--",
+   "existingId": 27074,
+   "detalle": "ya existe (ER)"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_rincon-morales_gaiteros-de-la-nueva-ola",
+   "existingId": 15026,
+   "detalle": "ya existe (ER)"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_single_kyrie-seiko___",
+   "existingId": 24052,
+   "detalle": "ya existe (ER)"
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_edward-simon-magos-herrera_femininas",
+   "existingId": 6195,
+   "detalle": "ya existe (ER)"
+  }
+ ],
+ "errors": []
+}

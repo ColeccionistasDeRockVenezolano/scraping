@@ -1,0 +1,1432 @@
+{
+ "generado": "2026-10-06T11:15:34.694Z",
+ "plan": "reports/rym-nuevos-aplicacion-2026-10-05/plan-altas-prefijos.jsonl",
+ "modo": "dry-run",
+ "items": [
+  {
+   "clave": "rym:nuevos:album:_release_album_big-soto_the-good-trip-deluxe",
+   "tipo": "album",
+   "nombre": "The Good Trip Deluxe",
+   "values": {
+    "title": "The Good Trip Deluxe",
+    "release_year": 2021,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «The Good Trip Deluxe»: POSSIBLE_MATCH: no se modifica el canonico",
+    "score": 0.8194,
+    "candidatos": [
+     "The Good Trip",
+     "The Right Move EP",
+     "The Geometry of Silence"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_rada_impressiones-etnosonicas",
+   "tipo": "album",
+   "nombre": "Impressiones Etnosonicas",
+   "values": {
+    "title": "Impressiones Etnosonicas",
+    "release_year": 1988,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "ya_existe",
+    "detalle": "album ya existe en el catálogo (id 2932)",
+    "existingId": 2932
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_los-dementes_ialerta-mundo-llegan-the-crazy-men",
+   "tipo": "album",
+   "nombre": "iAlerta mundo! llegan: The Crazy Men",
+   "values": {
+    "title": "iAlerta mundo! llegan: The Crazy Men",
+    "release_year": 1966,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "ya_existe",
+    "detalle": "album ya existe en el catálogo (id 8227)",
+    "existingId": 8227
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_chico-y-porfi_juntos-otra-vez",
+   "tipo": "album",
+   "nombre": "Juntos otra vez",
+   "values": {
+    "title": "Juntos otra vez",
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "crearia",
+    "id": 27215
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_single_akapellah_double-cup",
+   "tipo": "album",
+   "nombre": "Double Cup",
+   "values": {
+    "title": "Double Cup",
+    "release_year": 2017,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «Double Cup»: POSSIBLE_MATCH: no se modifica el canonico",
+    "score": 0.77812,
+    "candidatos": [
+     "Double Cup (feat. Trainer & Big Soto)",
+     "Doubletalk",
+     "Doble Play"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_big-soto_sotorious",
+   "tipo": "album",
+   "nombre": "Sotorious",
+   "values": {
+    "title": "Sotorious",
+    "release_year": 2024,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "ya_existe",
+    "detalle": "album ya existe en el catálogo (id 13836)",
+    "existingId": 13836
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_juan-galea_juan-galea",
+   "tipo": "album",
+   "nombre": "Juan Galea",
+   "values": {
+    "title": "Juan Galea",
+    "release_year": 1992,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «Juan Galea»: REVIEW: no se modifica el canonico",
+    "score": 0.802,
+    "candidatos": [
+     "Juan Galea De Novela",
+     "Juan Galea y Su Grupo",
+     "Juan Galea Con Los Niños"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_orquesta-nacional-de-espana-rafael-fruhbeck-de-burgos-alirio-diaz_concierto",
+   "tipo": "album",
+   "nombre": "Concierto de Aranjuez / Concerto for Guitar, Strings, and Timpani, Op. 30",
+   "values": {
+    "title": "Concierto de Aranjuez / Concerto for Guitar, Strings, and Timpani, Op. 30",
+    "release_year": 1967,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «Concierto de Aranjuez / Concerto for Guitar, Strings, and Timpani, Op. 30»: REVIEW: no se modifica el canonico",
+    "score": 0.78036,
+    "candidatos": [
+     "Concierto De Aranjuez",
+     "Concierto Para Guitarra y Orquesta",
+     "Concierto De Otoño"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_comp_orquesta-nacional-de-espana-orchestre-de-la-societe-des-concerts-du-conserva",
+   "tipo": "album",
+   "nombre": "Concierto de Aranjuez / Nächte in spanischen Gärten",
+   "values": {
+    "title": "Concierto de Aranjuez / Nächte in spanischen Gärten",
+    "album_type": "compilation"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «Concierto de Aranjuez / Nächte in spanischen Gärten»: REVIEW: no se modifica el canonico",
+    "score": 0.79371,
+    "candidatos": [
+     "Concierto De Aranjuez",
+     "Concierto Para Guitarra y Orquesta",
+     "Concierto Sentimental Para Piano y Orquesta"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_comp_angel-custodio-loyola_el-disco-de-oro",
+   "tipo": "album",
+   "nombre": "El disco de oro",
+   "values": {
+    "title": "El disco de oro",
+    "release_year": 1976,
+    "album_type": "compilation"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «El disco de oro»: REVIEW: no se modifica el canonico",
+    "score": 0.79673,
+    "candidatos": [
+     "El disco de oro de Ángel C. Loyola",
+     "El sancocho / La paraulata",
+     "El Disco De Oro De..."
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_akapellah_respira",
+   "tipo": "album",
+   "nombre": "Respira",
+   "values": {
+    "title": "Respira",
+    "release_year": 2022,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «Respira»: POSSIBLE_MATCH: no se modifica el canonico",
+    "score": 0.802,
+    "candidatos": [
+     "Respira (Deluxe)",
+     "Espiral",
+     "Espiral"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_single_adolescents-orquesta_persona-ideal-mi-error",
+   "tipo": "album",
+   "nombre": "Persona ideal / Mi error",
+   "values": {
+    "title": "Persona ideal / Mi error",
+    "release_year": 1998,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «Persona ideal / Mi error»: POSSIBLE_MATCH: no se modifica el canonico",
+    "score": 0.81254,
+    "candidatos": [
+     "Persona ideal",
+     "Personal",
+     "Personal Demons"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_daniel-calveti_vivo-para-ti",
+   "tipo": "album",
+   "nombre": "Vivo para Ti",
+   "values": {
+    "title": "Vivo para Ti",
+    "release_year": 2004,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «Vivo para Ti»: POSSIBLE_MATCH: no se modifica el canonico",
+    "score": 0.8136,
+    "candidatos": [
+     "Vivo para Ti (En Vivo)",
+     "Viva!",
+     "Voy Por Tí"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_single_esos-cubos__",
+   "tipo": "album",
+   "nombre": "...",
+   "values": {
+    "title": "...",
+    "release_year": 2020,
+    "album_type": "single"
+   },
+   "avisos": [
+    "el artista 4529 ya tiene un disco con ese título (clave compacta)"
+   ],
+   "sondaER": {
+    "resultado": "ya_existe",
+    "detalle": "album ya existe en el catálogo (id 22275)",
+    "existingId": 22275
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_single_sigmatus_----",
+   "tipo": "album",
+   "nombre": "ජියෝවානි ජෝජියෝ පීට් බලු පැටවුන්",
+   "values": {
+    "title": "ජියෝවානි ජෝජියෝ පීට් බලු පැටවුන්",
+    "release_year": 2020,
+    "album_type": "single"
+   },
+   "avisos": [
+    "el artista 6687 ya tiene un disco con ese título (clave compacta)"
+   ],
+   "sondaER": {
+    "resultado": "ya_existe",
+    "detalle": "album ya existe en el catálogo (id 26046)",
+    "existingId": 26046
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_soledad-bravo_soledad-bravo-vol-3",
+   "tipo": "album",
+   "nombre": "Soledad Bravo Vol. 3",
+   "values": {
+    "title": "Soledad Bravo Vol. 3",
+    "release_year": 1970,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «Soledad Bravo Vol. 3»: REVIEW: no se modifica el canonico",
+    "score": 0.82337,
+    "candidatos": [
+     "Soledad Bravo",
+     "Vol. 3",
+     "Soledad Bravo En Vivo"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_soledad-bravo_volumen-4",
+   "tipo": "album",
+   "nombre": "Volumen 4",
+   "values": {
+    "title": "Volumen 4",
+    "release_year": 1972,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "ya_existe",
+    "detalle": "album ya existe en el catálogo (id 8416)",
+    "existingId": 8416
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_single_chino-y-nacho_andas-en-mi-cabeza",
+   "tipo": "album",
+   "nombre": "Andas en mi cabeza",
+   "values": {
+    "title": "Andas en mi cabeza",
+    "release_year": 2016,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «Andas en mi cabeza»: POSSIBLE_MATCH: no se modifica el canonico",
+    "score": 0.831,
+    "candidatos": [
+     "Andas en mi cabeza (remix)",
+     "Voces En Mi Cabeza",
+     "Andina"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_los-melodicos_german-niro-chucho-y-emilita-con-los-melodicos",
+   "tipo": "album",
+   "nombre": "German, Niro, Chucho y Emilita con Los Melódicos",
+   "values": {
+    "title": "German, Niro, Chucho y Emilita con Los Melódicos",
+    "release_year": 1960,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «German, Niro, Chucho y Emilita con Los Melódicos»: POSSIBLE_MATCH: no se modifica el canonico",
+    "score": 0.81461,
+    "candidatos": [
+     "Germán, Niro, Chucho y Emilita",
+     "Germán Freytes",
+     "Germán Freytes"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_orquesta-los-melodicos_12-hits",
+   "tipo": "album",
+   "nombre": "12 Hits",
+   "values": {
+    "title": "12 Hits",
+    "release_year": 1962,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "ya_existe",
+    "detalle": "album ya existe en el catálogo (id 8270)",
+    "existingId": 8270
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_los-melodicos_lucerito-y-los-melodicos",
+   "tipo": "album",
+   "nombre": "Lucerito y Los Melódicos",
+   "values": {
+    "title": "Lucerito y Los Melódicos",
+    "release_year": 1968,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «Lucerito y Los Melódicos»: REVIEW: no se modifica el canonico",
+    "score": 0.78267,
+    "candidatos": [
+     "Lucerito",
+     "Liz Con Los Melódicos",
+     "Lucero"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_los-melodicos_album-homenaje-a-los-30-anos-de-victor-pinero",
+   "tipo": "album",
+   "nombre": "Album homenaje a los 30 años de Víctor Piñero",
+   "values": {
+    "title": "Album homenaje a los 30 años de Víctor Piñero",
+    "release_year": 1974,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «Album homenaje a los 30 años de Víctor Piñero»: POSSIBLE_MATCH: no se modifica el canonico",
+    "score": 0.83247,
+    "candidatos": [
+     "Album Homenaje a Los 30 Años de Victor Piñero Los Melódicos",
+     "A Los 30 Años De Victor Piñero",
+     "Album de Oro, 16 Grandes Exitos"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_los-melodicos_el-sonido",
+   "tipo": "album",
+   "nombre": "El sonido",
+   "values": {
+    "title": "El sonido",
+    "release_year": 1988,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «El sonido»: REVIEW: no se modifica el canonico",
+    "score": 0.831,
+    "candidatos": [
+     "El Sonido St.",
+     "El Sabor Tentador de...",
+     "El Swing de Los Melódicos"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_comp_los-melodicos_orquesta-de-los-exitos",
+   "tipo": "album",
+   "nombre": "Orquesta de los exitos",
+   "values": {
+    "title": "Orquesta de los exitos",
+    "release_year": 1969,
+    "album_type": "compilation"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "ya_existe",
+    "detalle": "album ya existe en el catálogo (id 8297)",
+    "existingId": 8297
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_single_micro-tdh_dime-cuantas-veces",
+   "tipo": "album",
+   "nombre": "Dime cuantas veces",
+   "values": {
+    "title": "Dime cuantas veces",
+    "release_year": 2019,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «Dime cuantas veces»: POSSIBLE_MATCH: no se modifica el canonico",
+    "score": 0.831,
+    "candidatos": [
+     "Dime cuantas veces (remix)",
+     "Dime Cuantos",
+     "Dime tú"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_single_suei-micro-tdh_",
+   "tipo": "album",
+   "nombre": "お前がこれからどうなろうと、俺はお前をずっと愛している",
+   "values": {
+    "title": "お前がこれからどうなろうと、俺はお前をずっと愛している",
+    "release_year": 2025,
+    "album_type": "single"
+   },
+   "avisos": [
+    "el artista 4251 ya tiene un disco con ese título (clave compacta)"
+   ],
+   "sondaER": {
+    "resultado": "ya_existe",
+    "detalle": "album ya existe en el catálogo (id 22842)",
+    "existingId": 22842
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_miguel-moly_en-algun-rincon-de-mi-alma",
+   "tipo": "album",
+   "nombre": "En algun rincon de mi alma",
+   "values": {
+    "title": "En algun rincon de mi alma",
+    "release_year": 1991,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «En algun rincon de mi alma»: POSSIBLE_MATCH: no se modifica el canonico",
+    "score": 0.83271,
+    "candidatos": [
+     "En Algún Rincón de Mi Alma (En Vivo)",
+     "En La Dimensión Latina",
+     "En Las Nubes - Con Mis Panas"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_el-trabuco-venezolano_el-trabuco-venezolano-vol-ii",
+   "tipo": "album",
+   "nombre": "El Trabuco Venezolano Vol. II",
+   "values": {
+    "title": "El Trabuco Venezolano Vol. II",
+    "release_year": 1979,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «El Trabuco Venezolano Vol. II»: REVIEW: no se modifica el canonico",
+    "score": 0.831,
+    "candidatos": [
+     "El Trabuco Venezolano",
+     "El Trabuco Venezolano 2",
+     "El Trabuco Venezolano 3"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_el-trabuco-venezolano_el-trabuco-venezolano-vol-iii",
+   "tipo": "album",
+   "nombre": "El Trabuco Venezolano Vol. III",
+   "values": {
+    "title": "El Trabuco Venezolano Vol. III",
+    "release_year": 1981,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «El Trabuco Venezolano Vol. III»: REVIEW: no se modifica el canonico",
+    "score": 0.828,
+    "candidatos": [
+     "El Trabuco Venezolano",
+     "El Trabuco Venezolano 2",
+     "El Trabuco Venezolano 3"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_sexteto-juventud_sexteto-juventud-y-su-nuevo-sonido",
+   "tipo": "album",
+   "nombre": "Sexteto Juventud y su nuevo sonido",
+   "values": {
+    "title": "Sexteto Juventud y su nuevo sonido",
+    "release_year": 1976,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «Sexteto Juventud y su nuevo sonido»: POSSIBLE_MATCH: no se modifica el canonico",
+    "score": 0.79859,
+    "candidatos": [
+     "Sexteto Juventud",
+     "Sexo",
+     "Sex"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_single_sexteto-juventud_guasanco-cautivo",
+   "tipo": "album",
+   "nombre": "Guasancó / Cautivo",
+   "values": {
+    "title": "Guasancó / Cautivo",
+    "release_year": 1967,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «Guasancó / Cautivo»: POSSIBLE_MATCH: no se modifica el canonico",
+    "score": 0.802,
+    "candidatos": [
+     "Guasancó",
+     "Guaco",
+     "Guaco"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_single_mau-y-ricky-eladio-carrion_no-puede-ser",
+   "tipo": "album",
+   "nombre": "No puede ser",
+   "values": {
+    "title": "No puede ser",
+    "release_year": 2022,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «No puede ser»: REVIEW: no se modifica el canonico",
+    "score": 0.7889,
+    "candidatos": [
+     "No Puede Ser (con Eladio Carrion)",
+     "No puedo olvidarte",
+     "No Puedes Ver"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_ep_fur_coat_berlin_chronicles",
+   "tipo": "album",
+   "nombre": "Berlin Chronicles",
+   "values": {
+    "title": "Berlin Chronicles",
+    "release_year": 2015,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «Berlin Chronicles»: POSSIBLE_MATCH: no se modifica el canonico",
+    "score": 0.8426,
+    "candidatos": [
+     "Berlin Chronicles EP",
+     "Bertalina",
+     "Bélica"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_ep_fur_coat_katarsis",
+   "tipo": "album",
+   "nombre": "Katarsis",
+   "values": {
+    "title": "Katarsis",
+    "release_year": 2015,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «Katarsis»: POSSIBLE_MATCH: no se modifica el canonico",
+    "score": 0.82836,
+    "candidatos": [
+     "Katarsis EP",
+     "Catharsis",
+     "Cata(rsis)"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_ep_fur-coat_interstellar",
+   "tipo": "album",
+   "nombre": "Interstellar",
+   "values": {
+    "title": "Interstellar",
+    "release_year": 2016,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «Interstellar»: POSSIBLE_MATCH: no se modifica el canonico",
+    "score": 0.8368,
+    "candidatos": [
+     "Interstellar EP",
+     "Interestelar",
+     "Intercell.049"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_ep_fur-coat_numbers",
+   "tipo": "album",
+   "nombre": "Numbers",
+   "values": {
+    "title": "Numbers",
+    "release_year": 2016,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «Numbers»: POSSIBLE_MATCH: no se modifica el canonico",
+    "score": 0.8252,
+    "candidatos": [
+     "Number's EP",
+     "Numb",
+     "Numbers (Intro)"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_ep_fur-coat_immersion",
+   "tipo": "album",
+   "nombre": "Immersion",
+   "values": {
+    "title": "Immersion",
+    "release_year": 2018,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «Immersion»: POSSIBLE_MATCH: no se modifica el canonico",
+    "score": 0.831,
+    "candidatos": [
+     "Immersion EP",
+     "IMMATERIAL",
+     "Imperia"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_ep_fur-coat_repeat",
+   "tipo": "album",
+   "nombre": "Repeat",
+   "values": {
+    "title": "Repeat",
+    "release_year": 2018,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «Repeat»: POSSIBLE_MATCH: no se modifica el canonico",
+    "score": 0.82133,
+    "candidatos": [
+     "Repeat EP",
+     "Repeat After Me",
+     "Reset"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_ep_fur-coat_time-traveler",
+   "tipo": "album",
+   "nombre": "Time Traveler",
+   "values": {
+    "title": "Time Traveler",
+    "release_year": 2021,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «Time Traveler»: POSSIBLE_MATCH: no se modifica el canonico",
+    "score": 0.83825,
+    "candidatos": [
+     "Time Traveler EP",
+     "Timeless Motion",
+     "Time"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_ep_fur-coat-avidus_in-our-town",
+   "tipo": "album",
+   "nombre": "In Our Town",
+   "values": {
+    "title": "In Our Town",
+    "release_year": 2022,
+    "album_type": "ep"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «In Our Town»: POSSIBLE_MATCH: no se modifica el canonico",
+    "score": 0.83514,
+    "candidatos": [
+     "In Our Town - EP",
+     "In The Zone",
+     "In Memorian"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_mixtape_arca_andandandandand",
+   "tipo": "album",
+   "nombre": "&&&&&",
+   "values": {
+    "title": "&&&&&",
+    "release_year": 2013,
+    "album_type": "other"
+   },
+   "avisos": [
+    "el artista 4235 ya tiene un disco con ese título (clave compacta)"
+   ],
+   "sondaER": {
+    "resultado": "ya_existe",
+    "detalle": "album ya existe en el catálogo (id 12755)",
+    "existingId": 12755
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_single_arca__",
+   "tipo": "album",
+   "nombre": "@@@@@",
+   "values": {
+    "title": "@@@@@",
+    "release_year": 2020,
+    "album_type": "single"
+   },
+   "avisos": [
+    "el artista 4235 ya tiene un disco con ese título (clave compacta)"
+   ],
+   "sondaER": {
+    "resultado": "ya_existe",
+    "detalle": "album ya existe en el catálogo (id 22951)",
+    "existingId": 22951
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_single_arca_ritual",
+   "tipo": "album",
+   "nombre": "Ritual",
+   "values": {
+    "title": "Ritual",
+    "release_year": 2023,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "ya_existe",
+    "detalle": "album ya existe en el catálogo (id 12741)",
+    "existingId": 12741
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_djmix_arca__-1",
+   "tipo": "album",
+   "nombre": "^^^^^",
+   "values": {
+    "title": "^^^^^",
+    "release_year": 2020,
+    "album_type": "other"
+   },
+   "avisos": [
+    "el artista 4235 ya tiene un disco con ese título (clave compacta)"
+   ],
+   "sondaER": {
+    "resultado": "ya_existe",
+    "detalle": "album ya existe en el catálogo (id 22951)",
+    "existingId": 22951
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_unauth_arca__",
+   "tipo": "album",
+   "nombre": "$$$$$",
+   "values": {
+    "title": "$$$$$",
+    "release_year": 2020,
+    "album_type": "other"
+   },
+   "avisos": [
+    "el artista 4235 ya tiene un disco con ese título (clave compacta)"
+   ],
+   "sondaER": {
+    "resultado": "ya_existe",
+    "detalle": "album ya existe en el catálogo (id 22951)",
+    "existingId": 22951
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_unauth_arca__-1",
+   "tipo": "album",
+   "nombre": "#####",
+   "values": {
+    "title": "#####",
+    "release_year": 2020,
+    "album_type": "other"
+   },
+   "avisos": [
+    "el artista 4235 ya tiene un disco con ese título (clave compacta)"
+   ],
+   "sondaER": {
+    "resultado": "ya_existe",
+    "detalle": "album ya existe en el catálogo (id 22951)",
+    "existingId": 22951
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_unauth_arca__-2",
+   "tipo": "album",
+   "nombre": "^^^^^",
+   "values": {
+    "title": "^^^^^",
+    "release_year": 2020,
+    "album_type": "other"
+   },
+   "avisos": [
+    "el artista 4235 ya tiene un disco con ese título (clave compacta)"
+   ],
+   "sondaER": {
+    "resultado": "ya_existe",
+    "detalle": "album ya existe en el catálogo (id 22951)",
+    "existingId": 22951
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_schola-cantorum-de-venezuela_aguinaldos-venezolanos",
+   "tipo": "album",
+   "nombre": "Aguinaldos Venezolanos",
+   "values": {
+    "title": "Aguinaldos Venezolanos",
+    "release_year": 1969,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «Aguinaldos Venezolanos»: REVIEW: no se modifica el canonico",
+    "score": 0.83514,
+    "candidatos": [
+     "Aguinaldos Venezolanos Vol. I",
+     "Aguinaldos Venezolanos / Villancicos Vol. I",
+     "Aguinaldos Venezolanos / Villancicos Vol. II"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_schola-cantorum-de-venezuela_antologia-del-madrigal-venezolano",
+   "tipo": "album",
+   "nombre": "Antología del madrigal Venezolano",
+   "values": {
+    "title": "Antología del madrigal Venezolano",
+    "release_year": 1975,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «Antología del madrigal Venezolano»: REVIEW: no se modifica el canonico",
+    "score": 0.82375,
+    "candidatos": [
+     "Antología del Madrigal Venezolano Vol. I y Vol. II",
+     "Antología 30 Años Vol. 1 Música Venezolana y Latinoamericana",
+     "Antología 30 Años Vol. 2 Música Polifónica Universal"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_single_moroka_ja",
+   "tipo": "album",
+   "nombre": "Ja",
+   "values": {
+    "title": "Ja",
+    "release_year": 2016,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "crearia",
+    "id": 27216
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_un-solo-pueblo_la-musica-de-un-solo-pueblo-vol-5-20-anos-de-vigencia",
+   "tipo": "album",
+   "nombre": "La música de Un Solo Pueblo Vol. 5: 20 años de vigencia",
+   "values": {
+    "title": "La música de Un Solo Pueblo Vol. 5: 20 años de vigencia",
+    "release_year": 1983,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «La música de Un Solo Pueblo Vol. 5: 20 años de vigencia»: REVIEW: no se modifica el canonico",
+    "score": 0.81623,
+    "candidatos": [
+     "La Música de Un Solo Pueblo Vol. 2",
+     "La Música de Un Solo Pueblo Vol. 5",
+     "La Música de Un Solo Pueblo Vol. 1"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_venezuela-un-solo-pueblo_la-musica-de-venezuela-un-solo-pueblo",
+   "tipo": "album",
+   "nombre": "La música de Venezuela Un Solo Pueblo",
+   "values": {
+    "title": "La música de Venezuela Un Solo Pueblo",
+    "release_year": 1990,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «La música de Venezuela Un Solo Pueblo»: REVIEW: no se modifica el canonico",
+    "score": 0.82,
+    "candidatos": [
+     "La Música de Venezuela",
+     "La Música de un Solo Pueblo",
+     "La Música Navideña de Un Solo Pueblo"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_comp_un-solo-pueblo_venezuela-un-solo-pueblo-exitos",
+   "tipo": "album",
+   "nombre": "Venezuela un solo pueblo exitos",
+   "values": {
+    "title": "Venezuela un solo pueblo exitos",
+    "release_year": 1992,
+    "album_type": "compilation"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «Venezuela un solo pueblo exitos»: REVIEW: no se modifica el canonico",
+    "score": 0.83381,
+    "candidatos": [
+     "Venezuela Un Solo Pueblo",
+     "Venezuela Un Solo Pueblo",
+     "Venezuela en Cuatro Voces"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_lilia-vera_lilia-vera-y-su-nuevo-canto",
+   "tipo": "album",
+   "nombre": "Lilia Vera y Su Nuevo Canto",
+   "values": {
+    "title": "Lilia Vera y Su Nuevo Canto",
+    "release_year": 1979,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «Lilia Vera y Su Nuevo Canto»: REVIEW: no se modifica el canonico",
+    "score": 0.82,
+    "candidatos": [
+     "Y Su Nuevo Canto",
+     "Lilia Vera",
+     "Lilia Vera Volumen 5"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_gabriela-montero_baroque",
+   "tipo": "album",
+   "nombre": "Baroque",
+   "values": {
+    "title": "Baroque",
+    "release_year": 2007,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «Baroque»: POSSIBLE_MATCH: no se modifica el canonico",
+    "score": 0.82,
+    "candidatos": [
+     "Baroque Improvisations",
+     "Baroque Recital Vol. I",
+     "Baroque Recital Vol. II"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_la-sardina-de-naiguata__parranda-venezuelan-carnival-music",
+   "tipo": "album",
+   "nombre": "¡Parranda! Venezuelan Carnival Music",
+   "values": {
+    "title": "¡Parranda! Venezuelan Carnival Music",
+    "release_year": 2012,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «¡Parranda! Venezuelan Carnival Music»: REVIEW: no se modifica el canonico",
+    "score": 0.77129,
+    "candidatos": [
+     "Parranda",
+     "Parranda! (USA Edition)",
+     "Parranda! Smithsonian Folkways"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_mario-suarez-hector-cabrera-adilia-castillo_venezuela-canta-y-baila",
+   "tipo": "album",
+   "nombre": "Venezuela canta y baila",
+   "values": {
+    "title": "Venezuela canta y baila",
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «Venezuela canta y baila»: POSSIBLE_MATCH: no se modifica el canonico",
+    "score": 0.81965,
+    "candidatos": [
+     "Venezuela Canta",
+     "Venezuela: Habla cantando",
+     "Venezuela"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_single_irepelusa_carledos",
+   "tipo": "album",
+   "nombre": "Carledos",
+   "values": {
+    "title": "Carledos",
+    "release_year": 2019,
+    "album_type": "single"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «Carledos»: REVIEW: no se modifica el canonico",
+    "score": 0.81029,
+    "candidatos": [
+     "Carledos (Remix)",
+     "CARIÑO",
+     "CARLITOS"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_comp_dell-soda__",
+   "tipo": "album",
+   "nombre": "!",
+   "values": {
+    "title": "!",
+    "release_year": 2019,
+    "album_type": "compilation"
+   },
+   "avisos": [
+    "el artista 5869 ya tiene un disco con ese título (clave compacta)"
+   ],
+   "sondaER": {
+    "resultado": "ya_existe",
+    "detalle": "album ya existe en el catálogo (id 23837)",
+    "existingId": 23837
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_gran-coquivacoa_la-maquina-del-sabor",
+   "tipo": "album",
+   "nombre": "La máquina del sabor",
+   "values": {
+    "title": "La máquina del sabor",
+    "release_year": 1988,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «La máquina del sabor»: REVIEW: no se modifica el canonico",
+    "score": 0.84487,
+    "candidatos": [
+     "La Maquina del Sabor '90",
+     "La Maquina del Sabor '91",
+     "La Maquina del Sabor '88"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_gran-coquivacoa_la-maquina-del-sabor-1",
+   "tipo": "album",
+   "nombre": "La maquina del sabor",
+   "values": {
+    "title": "La maquina del sabor",
+    "release_year": 1991,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «La maquina del sabor»: REVIEW: no se modifica el canonico",
+    "score": 0.84487,
+    "candidatos": [
+     "La Maquina del Sabor '90",
+     "La Maquina del Sabor '91",
+     "La Maquina del Sabor '88"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_ep_sr-presidente_",
+   "tipo": "album",
+   "nombre": "コンコルド",
+   "values": {
+    "title": "コンコルド",
+    "release_year": 2022,
+    "album_type": "ep"
+   },
+   "avisos": [
+    "el artista 6806 ya tiene un disco con ese título (clave compacta)"
+   ],
+   "sondaER": {
+    "resultado": "ya_existe",
+    "detalle": "album ya existe en el catálogo (id 26644)",
+    "existingId": 26644
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_comp_diveana_diveana-mix",
+   "tipo": "album",
+   "nombre": "Diveana Mix",
+   "values": {
+    "title": "Diveana Mix",
+    "release_year": 1992,
+    "album_type": "compilation"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «Diveana Mix»: POSSIBLE_MATCH: no se modifica el canonico",
+    "score": 0.81782,
+    "candidatos": [
+     "Diveana",
+     "Dive",
+     "Diversidad"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_benito-gonzalez-gerry-gibbs-essiet-okon-essiet_passion-reverence-transcende",
+   "tipo": "album",
+   "nombre": "Passion Reverence Transcendence: The Music of McCoy Tyner",
+   "values": {
+    "title": "Passion Reverence Transcendence: The Music of McCoy Tyner",
+    "release_year": 2018,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «Passion Reverence Transcendence: The Music of McCoy Tyner»: POSSIBLE_MATCH: no se modifica el canonico",
+    "score": 0.84757,
+    "candidatos": [
+     "Passion Reverence Transcendence: The Music of McCoy",
+     "Past",
+     "Starting Point"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_los-blanco_los-blanco-en-accion",
+   "tipo": "album",
+   "nombre": "Los Blanco en acción",
+   "values": {
+    "title": "Los Blanco en acción",
+    "release_year": 1967,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «Los Blanco en acción»: REVIEW: no se modifica el canonico",
+    "score": 0.83323,
+    "candidatos": [
+     "Los Blanco En Acción Vol. 1",
+     "Los Blanco En Acción Vol. 2",
+     "Los Blanco En Acción Vol. 3"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_los-blanco_dando-en-el-blanco-con-los-blanco",
+   "tipo": "album",
+   "nombre": "Dando en el blanco con Los Blanco",
+   "values": {
+    "title": "Dando en el blanco con Los Blanco",
+    "release_year": 1976,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "quedaria_en_cola_revision",
+    "detalle": "el catálogo no autoriza crear album «Dando en el blanco con Los Blanco»: POSSIBLE_MATCH: no se modifica el canonico",
+    "score": 0.82,
+    "candidatos": [
+     "Dando En El Blanco",
+     "20 Años Bailando Con Los Blanco",
+     "Dando la Cara"
+    ]
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_los-blanco_la-fiesta-caliente",
+   "tipo": "album",
+   "nombre": "La fiesta caliente",
+   "values": {
+    "title": "La fiesta caliente",
+    "release_year": 1980,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "ya_existe",
+    "detalle": "album ya existe en el catálogo (id 7315)",
+    "existingId": 7315
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_djmix_wight-garden_----------",
+   "tipo": "album",
+   "nombre": "【 无 感 转 场 】【 提 高 审 美 】【看着看着就没了】",
+   "values": {
+    "title": "【 无 感 转 场 】【 提 高 审 美 】【看着看着就没了】",
+    "release_year": 2021,
+    "album_type": "other"
+   },
+   "avisos": [
+    "el artista 6118 ya tiene un disco con ese título (clave compacta)"
+   ],
+   "sondaER": {
+    "resultado": "ya_existe",
+    "detalle": "album ya existe en el catálogo (id 24032)",
+    "existingId": 24032
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_djmix_wight-garden_--",
+   "tipo": "album",
+   "nombre": "仙灵虫 收集 ~爱情塔罗占卜~",
+   "values": {
+    "title": "仙灵虫 收集 ~爱情塔罗占卜~",
+    "release_year": 2021,
+    "album_type": "other"
+   },
+   "avisos": [
+    "el artista 6118 ya tiene un disco con ese título (clave compacta)",
+    "el artista 6118 ya tiene un disco con ese título (clave compacta)"
+   ],
+   "sondaER": {
+    "resultado": "ya_existe",
+    "detalle": "album ya existe en el catálogo (id 27074)",
+    "existingId": 27074
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_djmix_wight-garden_--",
+   "tipo": "album",
+   "nombre": "仙灵虫 收集 ~流星蝴蝶剑~",
+   "values": {
+    "title": "仙灵虫 收集 ~流星蝴蝶剑~",
+    "release_year": 2021,
+    "album_type": "other"
+   },
+   "avisos": [
+    "el artista 6118 ya tiene un disco con ese título (clave compacta)",
+    "el artista 6118 ya tiene un disco con ese título (clave compacta)"
+   ],
+   "sondaER": {
+    "resultado": "ya_existe",
+    "detalle": "album ya existe en el catálogo (id 27074)",
+    "existingId": 27074
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_rincon-morales_gaiteros-de-la-nueva-ola",
+   "tipo": "album",
+   "nombre": "Gaiteros de la nueva ola",
+   "values": {
+    "title": "Gaiteros de la nueva ola",
+    "release_year": 1963,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "ya_existe",
+    "detalle": "album ya existe en el catálogo (id 15026)",
+    "existingId": 15026
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_single_kyrie-seiko___",
+   "tipo": "album",
+   "nombre": "(･ω<)☆",
+   "values": {
+    "title": "(･ω<)☆",
+    "release_year": 2025,
+    "album_type": "single"
+   },
+   "avisos": [
+    "el artista 6121 ya tiene un disco con ese título (clave compacta)"
+   ],
+   "sondaER": {
+    "resultado": "ya_existe",
+    "detalle": "album ya existe en el catálogo (id 24052)",
+    "existingId": 24052
+   }
+  },
+  {
+   "clave": "rym:nuevos:album:_release_album_edward-simon-magos-herrera_femininas",
+   "tipo": "album",
+   "nombre": "Femininas",
+   "values": {
+    "title": "Femininas",
+    "release_year": 2024,
+    "album_type": "studio_album"
+   },
+   "avisos": [],
+   "sondaER": {
+    "resultado": "ya_existe",
+    "detalle": "album ya existe en el catálogo (id 6195)",
+    "existingId": 6195
+   }
+  }
+ ]
+}

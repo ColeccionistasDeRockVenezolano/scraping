@@ -1,0 +1,2423 @@
+{
+  "mode": "confirm",
+  "runId": 17810,
+  "candidates": 209,
+  "accepted": [
+    {
+      "caseId": "rym-nuevos:rel_album_ray-perez-y-sus-dementes_el-dictador",
+      "title": "El dictador",
+      "source": "rateyourmusic",
+      "raw": [
+        "Salsa",
+        "Porro",
+        "Guaracha",
+        "Son cubano",
+        "Merengue"
+      ],
+      "primary": "salsa",
+      "secondaries": [
+        "musica-tropical",
+        "guaracha",
+        "son",
+        "merengue"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_alirio-diaz-y-morella-munoz_canciones-tonadas-y-aguinaldos-venezolanos",
+      "title": "Canciones, Tonadas y Aguinaldos Venezolanos",
+      "source": "rateyourmusic",
+      "raw": [
+        "Hispanic American Folk Music",
+        "Spanish Classical Music"
+      ],
+      "primary": "musica-tradicional",
+      "secondaries": [
+        "musica-clasica"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_cline-giffoni-licht-ranaldo_nothing-makes-any-sense",
+      "title": "Nothing Makes Any Sense",
+      "source": "rateyourmusic",
+      "raw": [
+        "Noise"
+      ],
+      "primary": "noise",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_ep_carlos-giffoni-lee-ranaldo-jim-orourke_north-six",
+      "title": "North Six",
+      "source": "rateyourmusic",
+      "raw": [
+        "Noise",
+        "Free Improvisation"
+      ],
+      "primary": "noise",
+      "secondaries": [
+        "avant-garde"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_ep_carlos_giffoni_the_absence_of_essence",
+      "title": "The Absence of Essence",
+      "source": "rateyourmusic",
+      "raw": [
+        "Noise"
+      ],
+      "primary": "noise",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_suei_no-pienso-llamarte",
+      "title": "No Pienso Llamarte",
+      "source": "rateyourmusic",
+      "raw": [
+        "Contemporary R&B",
+        "Chillwave"
+      ],
+      "primary": "r-and-b",
+      "secondaries": [
+        "chillwave"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_suei_no-me-dejes-ir",
+      "title": "No Me Dejes Ir",
+      "source": "rateyourmusic",
+      "raw": [
+        "Alternative R&B",
+        "Trap"
+      ],
+      "primary": "r-and-b",
+      "secondaries": [
+        "trap"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_simon-bolivar-symphony-orchestra-of-venezuela-gustavo-dudamel_beethoven-3-eroica-ove",
+      "title": "Beethoven 3: \"Eroica\"; Overtures",
+      "source": "rateyourmusic",
+      "raw": [
+        "Classical Period",
+        "Orchestral Music",
+        "Symphony"
+      ],
+      "primary": "musica-clasica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_los-angeles-philharmonic-gustavo-dudamel_mahler-9",
+      "title": "Mahler 9",
+      "source": "rateyourmusic",
+      "raw": [
+        "Symphony",
+        "Romanticism",
+        "Modern Classical"
+      ],
+      "primary": "musica-clasica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_los-angeles-philharmonic-los-angeles-master-chorale-gustavo-dudamel_the-gospel-accor",
+      "title": "The Gospel According to the Other Mary",
+      "source": "rateyourmusic",
+      "raw": [
+        "Modern Classical",
+        "Oratorio"
+      ],
+      "primary": "musica-sacra",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_los-angeles-philharmonic-gustavo-dudamel_the-nutcracker",
+      "title": "The Nutcracker",
+      "source": "rateyourmusic",
+      "raw": [
+        "Romanticism",
+        "Orchestral Music",
+        "Christmas Music"
+      ],
+      "primary": "musica-clasica",
+      "secondaries": [
+        "musica-navidena"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_berliner-philharmoniker-gustavo-dudamel_mahler-symphony-no-5",
+      "title": "Mahler: Symphony No. 5",
+      "source": "rateyourmusic",
+      "raw": [
+        "Romanticism",
+        "Symphony"
+      ],
+      "primary": "musica-clasica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_gustavo-dudamel-los-angeles-philharmonic_the-complete-symphonies",
+      "title": "The Complete Symphonies",
+      "source": "rateyourmusic",
+      "raw": [
+        "Romanticism",
+        "Symphony"
+      ],
+      "primary": "musica-clasica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_orquesta-sinfonica-simon-bolivar-gustavo-dudamel_tchaikovsky-5",
+      "title": "Tchaikovsky 5",
+      "source": "rateyourmusic",
+      "raw": [
+        "Symphony",
+        "Romanticism",
+        "Orchestral Music",
+        "Tone Poem"
+      ],
+      "primary": "musica-clasica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_simon-bolivar-symphony-orchestra-gustavo-dudamel-yuja-wang_piano-concertos",
+      "title": "Piano Concertos",
+      "source": "rateyourmusic",
+      "raw": [
+        "Modern Classical",
+        "Concerto",
+        "Romanticism"
+      ],
+      "primary": "musica-clasica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_staatskapelle-berlin-gustavo-dudamel-daniel-barenboim_the-piano-concertos",
+      "title": "The Piano Concertos",
+      "source": "rateyourmusic",
+      "raw": [
+        "Romanticism",
+        "Concerto"
+      ],
+      "primary": "musica-clasica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_comp_berliner-philharmoniker-claudio-abbado-gustavo-dudamel-bernard-haitink-daniel-harding",
+      "title": "Symphonien 1-10",
+      "source": "rateyourmusic",
+      "raw": [
+        "Romanticism",
+        "Symphony",
+        "Choral Symphony"
+      ],
+      "primary": "musica-clasica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_daniela-padron-olga-lopez_latam",
+      "title": "Latam",
+      "source": "rateyourmusic",
+      "raw": [
+        "Modern Classical"
+      ],
+      "primary": "musica-clasica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_empty-stomach_empty-stomach-sleep-aid",
+      "title": "Empty Stomach Sleep Aid!",
+      "source": "rateyourmusic",
+      "raw": [
+        "Electronic",
+        "Glitch"
+      ],
+      "primary": "glitch",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_comp_mc-ardilla_mc-ardilla-vol-1",
+      "title": "MC Ardilla vol. 1",
+      "source": "rateyourmusic",
+      "raw": [
+        "Gangsta Rap"
+      ],
+      "primary": "gangsta-rap",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_alirio_diaz_four_centuries_of_the_classic_spanish_guitar",
+      "title": "Four Centuries of the Classic Spanish Guitar",
+      "source": "rateyourmusic",
+      "raw": [
+        "Spanish Classical Music"
+      ],
+      "primary": "musica-clasica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_alirio-diaz_the-art-of-the-spanish-guitar",
+      "title": "The Art Of The Spanish Guitar",
+      "source": "rateyourmusic",
+      "raw": [
+        "Spanish Classical Music"
+      ],
+      "primary": "musica-clasica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_comp_alirio_diaz_the_guitar_artistry_of_alirio_diaz",
+      "title": "The Guitar Artistry of Alirio Diaz",
+      "source": "rateyourmusic",
+      "raw": [
+        "Spanish Classical Music"
+      ],
+      "primary": "musica-clasica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_los-terricolas_vuelven-los-terricolas-55-anos-despues",
+      "title": "Vuelven los Terrícolas 55 años después Vol. 1",
+      "source": "rateyourmusic",
+      "raw": [
+        "Bolero-Beat"
+      ],
+      "primary": "bolero",
+      "secondaries": [
+        "beat"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_comp_los-terricolas_los-exitos-de-los-terricolas",
+      "title": "Los exitos de Los Terricolas",
+      "source": "rateyourmusic",
+      "raw": [
+        "Bolero-Beat",
+        "Canción melódica"
+      ],
+      "primary": "bolero",
+      "secondaries": [
+        "beat",
+        "balada"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_comp_los_terricolas_lo_mejor_de_los_terricolas",
+      "title": "Lo Mejor de Los Terricolas",
+      "source": "rateyourmusic",
+      "raw": [
+        "Bolero-Beat"
+      ],
+      "primary": "bolero",
+      "secondaries": [
+        "beat"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_el-carrao-de-palmarito-con-los-llaneros-del-oeste_llanura-yo-soy-tu-hijo",
+      "title": "Llanura, yo soy tu hijo",
+      "source": "rateyourmusic",
+      "raw": [
+        "Música llanera"
+      ],
+      "primary": "joropo",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_ep_emily-galaviz_popurri-02-hazanas-de-un-llanero-el-hombre-que-tanto-ame-por-ese-suspiro-",
+      "title": "Popurrí 02: Hazañas de un llanero / El hombre que tanto amé / Por ese suspiro / Juanita / Mi caballo y yo / Kirpa Altanera / Chipola del sig",
+      "source": "rateyourmusic",
+      "raw": [
+        "Música llanera"
+      ],
+      "primary": "joropo",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_reymar-perdomo_me-fui",
+      "title": "Me fui",
+      "source": "rateyourmusic",
+      "raw": [
+        "Latin Pop"
+      ],
+      "primary": "pop-latino",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_angel-c-loyola_el-guariqueno-si-sabe",
+      "title": "El guariqueño sí sabe",
+      "source": "rateyourmusic",
+      "raw": [
+        "Joropo",
+        "Música llanera"
+      ],
+      "primary": "joropo",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_djmix_lexestasolo_el-set-del-angel",
+      "title": "El Set Del Angel",
+      "source": "rateyourmusic",
+      "raw": [
+        "Hardcore [EDM]",
+        "Acid Breaks",
+        "Breakcore",
+        "Latin Electronic",
+        "Hyperpop",
+        "Mashup",
+        "Reggaetón",
+        "Drill and Bass",
+        "Deconstructed Club",
+        "Digital Hardcore"
+      ],
+      "primary": "latin-electronic-fusion",
+      "secondaries": [
+        "electropop",
+        "reggaeton"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_chico-salas-y-los-peniques_chico-salas-y-los-peniques",
+      "title": "Chico Salas y Los Peniques",
+      "source": "rateyourmusic",
+      "raw": [
+        "Caribbean Music"
+      ],
+      "primary": "musica-tropical",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_ep_yung-iverson_el-preciso",
+      "title": "El PRECISO",
+      "source": "rateyourmusic",
+      "raw": [
+        "Trap",
+        "PluggnB"
+      ],
+      "primary": "trap",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_ep_rawayana-akapellah__que-vuelvan-los-matine",
+      "title": "¡Que vuelvan los matiné!",
+      "source": "rateyourmusic",
+      "raw": [
+        "Changa tuki"
+      ],
+      "primary": "changa-tuki",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_akapellah-fat-joe_los-gordos",
+      "title": "Los gordos",
+      "source": "rateyourmusic",
+      "raw": [
+        "Trap"
+      ],
+      "primary": "trap",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_yoss-bones-akapellah_no-soy-criminal",
+      "title": "No soy criminal",
+      "source": "rateyourmusic",
+      "raw": [
+        "Hip Hop"
+      ],
+      "primary": "hip-hop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_akapellah-oldtape_no-eres-rapero",
+      "title": "No Eres Rapero",
+      "source": "rateyourmusic",
+      "raw": [
+        "Boom Bap",
+        "Hardcore Hip Hop"
+      ],
+      "primary": "boom-bap",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_djmix_waru7k_y2magichyperfunk-playlist-dj-mix",
+      "title": "Y2MagicHyperFunk Playlist Dj Mix",
+      "source": "rateyourmusic",
+      "raw": [
+        "HexD"
+      ],
+      "primary": "electronica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_djmix_weed420_american-eagle",
+      "title": "american eagle",
+      "source": "rateyourmusic",
+      "raw": [
+        "Salsa romántica",
+        "Latin Electronic",
+        "Hypnagogic Pop",
+        "Mashup",
+        "Epic Collage",
+        "Reggaetón",
+        "Chopped and Screwed",
+        "Trip Hop",
+        "Latin Freestyle",
+        "Vaporwave",
+        "Cloud Rap",
+        "HexD"
+      ],
+      "primary": "salsa-romantica",
+      "secondaries": [
+        "latin-electronic-fusion",
+        "chillwave",
+        "reggaeton",
+        "trip-hop",
+        "hip-hop"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_hellvete-bear-bones-lay-low_spliff-tape",
+      "title": "Spliff Tape",
+      "source": "rateyourmusic",
+      "raw": [
+        "Drone",
+        "Krautrock",
+        "Space Ambient"
+      ],
+      "primary": "drone-metal",
+      "secondaries": [
+        "rock-experimental",
+        "ambient"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_king-stephen_metanoia",
+      "title": "Metanoia",
+      "source": "rateyourmusic",
+      "raw": [
+        "Electro House",
+        "Darksynth"
+      ],
+      "primary": "house",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_los-prisioneros_el-baile-de-los-que-sobran-por-favor",
+      "title": "El baile de los que sobran / Por favor",
+      "source": "rateyourmusic",
+      "raw": [
+        "Synthpop",
+        "New Wave",
+        "Dance-Pop",
+        "Hi-NRG",
+        "Animal Sounds"
+      ],
+      "primary": "synth-pop",
+      "secondaries": [
+        "new-wave",
+        "dance"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_los-prisioneros_sexo-muevan-las-industrias",
+      "title": "Sexo / Muevan las industrias",
+      "source": "rateyourmusic",
+      "raw": [
+        "New Wave",
+        "Synthpop",
+        "2 Tone",
+        "Post-Punk"
+      ],
+      "primary": "new-wave",
+      "secondaries": [
+        "synth-pop",
+        "post-punk"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_los-prisioneros_sexo-nunca-quedas-mal-con-nadie",
+      "title": "Sexo / Nunca quedas mal con nadie",
+      "source": "rateyourmusic",
+      "raw": [
+        "New Wave",
+        "Alternative Rock",
+        "2 Tone"
+      ],
+      "primary": "new-wave",
+      "secondaries": [
+        "rock-alternativo"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_los-prisioneros_el-muro",
+      "title": "El muro",
+      "source": "rateyourmusic",
+      "raw": [
+        "Pop Rock"
+      ],
+      "primary": "pop-rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_comp_los-prisioneros_sexo",
+      "title": "Sexo",
+      "source": "rateyourmusic",
+      "raw": [
+        "New Wave",
+        "Post-Punk",
+        "Synthpop"
+      ],
+      "primary": "new-wave",
+      "secondaries": [
+        "post-punk",
+        "synth-pop"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_comp_los-prisioneros_ni-por-la-razon-ni-por-la-fuerza",
+      "title": "Ni por la razón, ni por la fuerza",
+      "source": "rateyourmusic",
+      "raw": [
+        "New Wave",
+        "Punk Rock",
+        "Synthpop",
+        "Psychobilly",
+        "Ska Punk",
+        "Post-Punk",
+        "Dance-Pop",
+        "Ska",
+        "Rockabilly",
+        "Comedy Rock",
+        "Alternative Rock"
+      ],
+      "primary": "new-wave",
+      "secondaries": [
+        "punk-rock",
+        "synth-pop",
+        "psychobilly",
+        "ska-punk",
+        "post-punk",
+        "dance",
+        "ska",
+        "rockabilly",
+        "rock-alternativo"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_rakky-ripper-oh_dulceari_love",
+      "title": "LOVE!!!!!!!!!!!!!!!!!!!!!!",
+      "source": "rateyourmusic",
+      "raw": [
+        "Hyperpop",
+        "Bubblegum Bass",
+        "Digicore",
+        "Hardbass"
+      ],
+      "primary": "electropop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_soledad-bravo_canta-a-pablo-milanes-sings-pablo-milanes-trova-de-amor",
+      "title": "Canta a Pablo Milanés / Sings Pablo Milanés: Trova de amor",
+      "source": "rateyourmusic",
+      "raw": [
+        "Nueva trova"
+      ],
+      "primary": "nueva-trova",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_big-soto_party",
+      "title": "Party",
+      "source": "rateyourmusic",
+      "raw": [
+        "Trap"
+      ],
+      "primary": "trap",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_nichess-one-3m5-lil-supa_metal",
+      "title": "Metal",
+      "source": "rateyourmusic",
+      "raw": [
+        "Hardcore Hip Hop",
+        "Boom Bap",
+        "Conscious Hip Hop",
+        "Gangsta Rap",
+        "Drumless"
+      ],
+      "primary": "boom-bap",
+      "secondaries": [
+        "gangsta-rap"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_dj-sueldominimo_el-raptor",
+      "title": "EL RAPTOR",
+      "source": "rateyourmusic",
+      "raw": [
+        "Changa tuki"
+      ],
+      "primary": "changa-tuki",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_vir-martialis_metapolemos-the-metaphysics-of-war",
+      "title": "Metapolemos II - The Spiritual Aesthetics of War",
+      "source": "rateyourmusic",
+      "raw": [
+        "Martial Industrial"
+      ],
+      "primary": "industrial",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_additional_san_paralelos",
+      "title": "PARALELOS",
+      "source": "rateyourmusic",
+      "raw": [
+        "Dream Pop",
+        "Indietronica",
+        "Singer-Songwriter",
+        "Indie Folk",
+        "Ambient Pop",
+        "Downtempo",
+        "Folktronica"
+      ],
+      "primary": "dream-pop",
+      "secondaries": [
+        "downtempo",
+        "cantautor"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_ep_sendero-veneco_preludio-2_0-el-helicoide-de-la-suprema-felicidad",
+      "title": "Preludio 2.0: \"El Helicoide de la suprema felicidad\"",
+      "source": "rateyourmusic",
+      "raw": [
+        "Noisecore",
+        "Noisegrind"
+      ],
+      "primary": "noisecore",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_kid606_down-with-the-scene",
+      "title": "Down With the Scene",
+      "source": "rateyourmusic",
+      "raw": [
+        "Glitch",
+        "Drill and Bass",
+        "IDM",
+        "Breakcore",
+        "Noise",
+        "Plunderphonics"
+      ],
+      "primary": "glitch",
+      "secondaries": [
+        "idm",
+        "noise",
+        "electroacustica"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_kid606_ps-you-love-me",
+      "title": "PS You Love Me",
+      "source": "rateyourmusic",
+      "raw": [
+        "Ambient",
+        "IDM",
+        "Microhouse",
+        "Ambient Techno",
+        "Dub Techno",
+        "Glitch"
+      ],
+      "primary": "ambient",
+      "secondaries": [
+        "idm",
+        "techno",
+        "glitch"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_kid606_recollected-ambient-works-vol-1-bored-of-excitement",
+      "title": "Recollected Ambient Works Vol. 1: Bored of Excitement",
+      "source": "rateyourmusic",
+      "raw": [
+        "Ambient"
+      ],
+      "primary": "ambient",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_kid606_recollected-ambient-works-vol-2-escape-to-los-angeles",
+      "title": "Recollected Ambient Works, Vol. 2: Escape to Los Angeles",
+      "source": "rateyourmusic",
+      "raw": [
+        "Ambient",
+        "Progressive Electronic"
+      ],
+      "primary": "ambient",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_ep_kid606_the-soccergirl-ep",
+      "title": "The Soccergirl EP",
+      "source": "rateyourmusic",
+      "raw": [
+        "Ambient",
+        "Ambient Techno",
+        "Glitch"
+      ],
+      "primary": "ambient",
+      "secondaries": [
+        "techno",
+        "glitch"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_ep_kid606-joseph-nothing_-vol-4",
+      "title": "$ Vol. 4",
+      "source": "rateyourmusic",
+      "raw": [
+        "Glitch Hop",
+        "Mashup"
+      ],
+      "primary": "electronica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_ep_kid606_ps-i-dub-ya-ep",
+      "title": "PS I Dub Ya EP",
+      "source": "rateyourmusic",
+      "raw": [
+        "IDM",
+        "Minimal Techno",
+        "Tech House"
+      ],
+      "primary": "idm",
+      "secondaries": [
+        "techno",
+        "tech-house"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_ep_kid606_kill-soundboy-kill",
+      "title": "Kill Soundboy Kill",
+      "source": "rateyourmusic",
+      "raw": [
+        "Fidget House",
+        "Dubstep"
+      ],
+      "primary": "dubstep",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_kid606-tigerboy_attitude",
+      "title": "Attitude",
+      "source": "rateyourmusic",
+      "raw": [
+        "Glitch Hop",
+        "Glitch",
+        "Noise"
+      ],
+      "primary": "glitch",
+      "secondaries": [
+        "noise"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_kid606-timeblind_-vol-3",
+      "title": "$ Vol. 3",
+      "source": "rateyourmusic",
+      "raw": [
+        "Glitch Hop",
+        "Breakcore"
+      ],
+      "primary": "electronica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_kid606-the-posterboys-of-the-apocalypse_-vol-5",
+      "title": "$ Vol. 5",
+      "source": "rateyourmusic",
+      "raw": [
+        "Glitch Hop"
+      ],
+      "primary": "electronica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_kid606-dj-rupture_-vol-7",
+      "title": "$ Vol. 7",
+      "source": "rateyourmusic",
+      "raw": [
+        "Glitch Hop"
+      ],
+      "primary": "electronica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_electric-company-and-kid606-kevin-blechdom_-vol-6",
+      "title": "$ Vol. 6",
+      "source": "rateyourmusic",
+      "raw": [
+        "Glitch Hop"
+      ],
+      "primary": "electronica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_kid606-xanopticon_-vol-10",
+      "title": "$ Vol. 10",
+      "source": "rateyourmusic",
+      "raw": [
+        "Experimental Hip Hop",
+        "Breakcore",
+        "Flashcore",
+        "Glitch Hop",
+        "Industrial Hip Hop"
+      ],
+      "primary": "rap-experimental",
+      "secondaries": [
+        "electronica"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_kid606-stars-as-eyes_-vol-9",
+      "title": "$ Vol. 9",
+      "source": "rateyourmusic",
+      "raw": [
+        "Glitch Hop",
+        "Hardcore [EDM]"
+      ],
+      "primary": "electronica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_kid606_the-illness",
+      "title": "The Illness",
+      "source": "rateyourmusic",
+      "raw": [
+        "Hardcore [EDM]",
+        "Glitch",
+        "Breakcore",
+        "IDM"
+      ],
+      "primary": "glitch",
+      "secondaries": [
+        "idm"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_sebastian-bauza-bueno_san-cristobal-cabezaeperro-retazos-inconclusos",
+      "title": "San Cristóbal Cabezaeperro (retazos inconclusos)",
+      "source": "rateyourmusic",
+      "raw": [
+        "Avant-Folk",
+        "Sound Collage",
+        "Dark Ambient"
+      ],
+      "primary": "folk",
+      "secondaries": [
+        "electroacustica",
+        "dark-ambient"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_ep_sebastian-bauza-bueno_demos-iii",
+      "title": "Demos III",
+      "source": "rateyourmusic",
+      "raw": [
+        "Avant-Folk",
+        "Singer-Songwriter"
+      ],
+      "primary": "cantautor",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_sanluis-chino-y-nacho_se-acabo",
+      "title": "Se acabó (Versión merengue urbano)",
+      "source": "rateyourmusic",
+      "raw": [
+        "Latin Pop",
+        "Reggaetón"
+      ],
+      "primary": "pop-latino",
+      "secondaries": [
+        "reggaeton"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_calle-ciega_mas-caliente",
+      "title": "Más Caliente",
+      "source": "rateyourmusic",
+      "raw": [
+        "Latin Pop",
+        "Reggaetón",
+        "Merengue"
+      ],
+      "primary": "pop-latino",
+      "secondaries": [
+        "reggaeton",
+        "merengue"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_quinteto-contrapunto_musica-popular-y-folklorica-de-venezuela-vol-4",
+      "title": "Musica popular y folklorica de Venezuela: Vol. 4",
+      "source": "rateyourmusic",
+      "raw": [
+        "Joropo",
+        "Vocal Group"
+      ],
+      "primary": "joropo",
+      "secondaries": [
+        "pop"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_los-torrealberos_concierto-en-la-llanura-vol-2-1",
+      "title": "Concierto en la llanura",
+      "source": "rateyourmusic",
+      "raw": [
+        "Joropo",
+        "Música llanera"
+      ],
+      "primary": "joropo",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_grupo-mango_grupo-mango",
+      "title": "Grupo Mango",
+      "source": "rateyourmusic",
+      "raw": [
+        "Salsa"
+      ],
+      "primary": "salsa",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_rvssian-danny-ocean-sean-paul_no-me-controles",
+      "title": "No me controles",
+      "source": "rateyourmusic",
+      "raw": [
+        "Reggaetón"
+      ],
+      "primary": "reggaeton",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_nakary_sin-tabu",
+      "title": "Sin tabú (Remix)",
+      "source": "rateyourmusic",
+      "raw": [
+        "Reggaetón"
+      ],
+      "primary": "reggaeton",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_mixtape_neutro-shorty_5-historias-mixtape",
+      "title": "5 Historias Mixtape",
+      "source": "rateyourmusic",
+      "raw": [
+        "Conscious Hip Hop"
+      ],
+      "primary": "hip-hop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_neutro-shorty_el-coco",
+      "title": "El coco",
+      "source": "rateyourmusic",
+      "raw": [
+        "Trap",
+        "Hardcore Hip Hop",
+        "Horrorcore"
+      ],
+      "primary": "trap",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_djmix_lan-liu_el-vacio-te-devuelve-la-mirada",
+      "title": "El Vacío Te Devuelve la Mirada",
+      "source": "rateyourmusic",
+      "raw": [
+        "Plunderphonics",
+        "Industrial Rock",
+        "Post-Industrial",
+        "Sound Collage",
+        "Ambient",
+        "Drone",
+        "Noise",
+        "EBM",
+        "Post-Rock",
+        "Dark Ambient",
+        "Trip Hop",
+        "Outsider House",
+        "Martial Industrial",
+        "Industrial Hip Hop",
+        "HexD",
+        "Chopped and Screwed"
+      ],
+      "primary": "electroacustica",
+      "secondaries": [
+        "industrial",
+        "ambient",
+        "drone-metal",
+        "noise",
+        "ebm",
+        "post-rock",
+        "dark-ambient",
+        "trip-hop",
+        "rap-experimental"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_rawayana-mr-eazi-micro-tdh_dame-un-break-remix",
+      "title": "Dame un break (Remix)",
+      "source": "rateyourmusic",
+      "raw": [
+        "Afrobeats"
+      ],
+      "primary": "pop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_ep_joaquina_los-mejores-anos",
+      "title": "los mejores años (notas de diario)",
+      "source": "rateyourmusic",
+      "raw": [
+        "Indie Pop",
+        "Singer-Songwriter",
+        "Alt-Pop",
+        "Bedroom Pop"
+      ],
+      "primary": "pop",
+      "secondaries": [
+        "cantautor"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_irakere-trabuco_en-vivo-poliedro-de-caracas-mayo-15-81",
+      "title": "En vivo, Poliedro de Caracas, Mayo 15 '81",
+      "source": "rateyourmusic",
+      "raw": [
+        "Latin Jazz",
+        "Afro-Cuban Jazz",
+        "Conga",
+        "Son cubano"
+      ],
+      "primary": "jazz-latino",
+      "secondaries": [
+        "jazz-afrocubano",
+        "son"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_la-critica_oscar-dleon-presenta-la-critica",
+      "title": "Oscar D'Leon presenta \"La Critica\" con Wladimir y Teo",
+      "source": "rateyourmusic",
+      "raw": [
+        "Salsa"
+      ],
+      "primary": "salsa",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_maye_musica-para-abrir-el-cielo",
+      "title": "Música para abrir el cielo: Act 2",
+      "source": "rateyourmusic",
+      "raw": [
+        "Latin Pop",
+        "Sophisti-Pop",
+        "Bedroom Pop",
+        "Contemporary R&B",
+        "Neo-Psychedelia"
+      ],
+      "primary": "pop-latino",
+      "secondaries": [
+        "r-and-b",
+        "rock-psicodelico"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_thalia-mau-y-ricky_ya-tu-me-conoces",
+      "title": "Ya tú me conoces",
+      "source": "rateyourmusic",
+      "raw": [
+        "Reggaetón"
+      ],
+      "primary": "reggaeton",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_lali-mau-y-ricky_no-puedo-olvidarte",
+      "title": "No puedo olvidarte",
+      "source": "rateyourmusic",
+      "raw": [
+        "Latin Pop",
+        "Reggaetón"
+      ],
+      "primary": "pop-latino",
+      "secondaries": [
+        "reggaeton"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_djmix_arca_moma-ps1-warm-up-mix",
+      "title": "MoMA PS1 Warm Up Mix",
+      "source": "rateyourmusic",
+      "raw": [
+        "Glitch Hop",
+        "Wonky",
+        "Experimental Hip Hop"
+      ],
+      "primary": "electronica",
+      "secondaries": [
+        "rap-experimental"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_anakena_carita-feliz",
+      "title": "Carita feliz | Carita triste (Deluxe)",
+      "source": "rateyourmusic",
+      "raw": [
+        "Latin Pop",
+        "Latin Alternative",
+        "Folk Pop",
+        "Merengue",
+        "Reggae",
+        "Tropical Rock"
+      ],
+      "primary": "pop-latino",
+      "secondaries": [
+        "rock-latino",
+        "folk",
+        "merengue",
+        "reggae"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_anakena_carita-triste",
+      "title": "Carita Triste",
+      "source": "rateyourmusic",
+      "raw": [
+        "Latin Pop",
+        "Latin Alternative",
+        "Folk Pop",
+        "Bachata",
+        "Merengue",
+        "Salsa",
+        "Tropical Rock"
+      ],
+      "primary": "pop-latino",
+      "secondaries": [
+        "rock-latino",
+        "folk",
+        "bachata",
+        "merengue",
+        "salsa"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_anakena_guayaba-acustica",
+      "title": "Guayaba (Acústica)",
+      "source": "rateyourmusic",
+      "raw": [
+        "Bachata"
+      ],
+      "primary": "bachata",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_anakena_saudade",
+      "title": "Saudade (Acústica)",
+      "source": "rateyourmusic",
+      "raw": [
+        "Indie Pop",
+        "Bolero"
+      ],
+      "primary": "pop",
+      "secondaries": [
+        "bolero"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_anakena_no-hay-peligro",
+      "title": "No hay peligro (Ferraz Remix)",
+      "source": "rateyourmusic",
+      "raw": [
+        "Indie Pop"
+      ],
+      "primary": "pop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_francis-mercier-david-tort-markem_strangers-do-you-remember",
+      "title": "Strangers (Do You Remember)",
+      "source": "rateyourmusic",
+      "raw": [
+        "Afro House"
+      ],
+      "primary": "house",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_comp_capella-cordina-alejandro-planchart_missa-se-la-face-ay-pale-chansons-missa-sancti-ja",
+      "title": "Missa \"Se la face ay pale\"; Chansons; Missa Sancti Jacobi; Rite maiorem; Ecclesiae militantis",
+      "source": "rateyourmusic",
+      "raw": [
+        "Renaissance Music",
+        "Choral"
+      ],
+      "primary": "musica-antigua",
+      "secondaries": [
+        "musica-coral"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_andres-levell_la-quema-de-la-bestia-parte-i",
+      "title": "La quema de la bestia, parte II",
+      "source": "rateyourmusic",
+      "raw": [
+        "Free Improvisation"
+      ],
+      "primary": "avant-garde",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_djmix_cardopusher-safety-trance_boiler-room-caracas",
+      "title": "Boiler Room: Caracas",
+      "source": "rateyourmusic",
+      "raw": [
+        "Hardcore [EDM]",
+        "Neoperreo",
+        "Hardstyle",
+        "Nu Style Gabber"
+      ],
+      "primary": "electronica",
+      "secondaries": [
+        "reggaeton"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_simon-bolivar-symphony-orchestra-of-venezuela-eduardo-mata_latin-american-ballets",
+      "title": "Latin American Ballets",
+      "source": "rateyourmusic",
+      "raw": [
+        "Latin American Classical Music",
+        "Orchestral Music",
+        "Ballet",
+        "Brazilian Classical Music"
+      ],
+      "primary": "musica-clasica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_simon-bolivar-symphonic-orchestra-of-venezuela-enrique-arturo-diemecke-andres-diaz_s",
+      "title": "Symphony No. 4; Cello Concerto No. 2; Amazonas",
+      "source": "rateyourmusic",
+      "raw": [
+        "Modern Classical",
+        "Brazilian Classical Music",
+        "Concerto",
+        "Symphony"
+      ],
+      "primary": "musica-clasica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_simon-bolivar-orchestra-of-venezuela-goteborg-wind-orchestra-christian-lindberg_symp",
+      "title": "Symphony No. I & II",
+      "source": "rateyourmusic",
+      "raw": [
+        "Modern Classical",
+        "Symphony"
+      ],
+      "primary": "musica-clasica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_ep_dj-babatr_the-tribe-baila",
+      "title": "The Tribe (Baila)",
+      "source": "rateyourmusic",
+      "raw": [
+        "Changa tuki"
+      ],
+      "primary": "changa-tuki",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_ep_dj-babatr-dj-deep-rh_the-express",
+      "title": "The Express",
+      "source": "rateyourmusic",
+      "raw": [
+        "Changa tuki"
+      ],
+      "primary": "changa-tuki",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_ep_dj-babatr_the-journey",
+      "title": "The Journey",
+      "source": "rateyourmusic",
+      "raw": [
+        "Changa tuki"
+      ],
+      "primary": "changa-tuki",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_dj-babatr_las-lomas-imaabs-remix",
+      "title": "Las Lomas (Imaabs Remix)",
+      "source": "rateyourmusic",
+      "raw": [
+        "Deconstructed Club",
+        "Gabber",
+        "Industrial Techno",
+        "Changa tuki"
+      ],
+      "primary": "techno",
+      "secondaries": [
+        "changa-tuki"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_dj-babatr_zumba-lumba-boom-shack",
+      "title": "Zumba Lumba",
+      "source": "rateyourmusic",
+      "raw": [
+        "Changa tuki"
+      ],
+      "primary": "changa-tuki",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_dj-gigola-dj-babatr_la-batteria-dj-babatr-remix",
+      "title": "La Batteria (Dj Babatr Remix)",
+      "source": "rateyourmusic",
+      "raw": [
+        "Peak Time Techno",
+        "Acid Techno"
+      ],
+      "primary": "techno",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_djmix_dj-baba_the-godfather-of-raptor-house",
+      "title": "The Godfather of Raptor House",
+      "source": "rateyourmusic",
+      "raw": [
+        "Changa tuki",
+        "Kuduro",
+        "House"
+      ],
+      "primary": "changa-tuki",
+      "secondaries": [
+        "house"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_djmix_dj-babatr_nts-radio",
+      "title": "NTS Radio",
+      "source": "rateyourmusic",
+      "raw": [
+        "Changa tuki"
+      ],
+      "primary": "changa-tuki",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_djmix_dj-babatr_boiler-room-caracas",
+      "title": "Boiler Room: Caracas",
+      "source": "rateyourmusic",
+      "raw": [
+        "Changa tuki"
+      ],
+      "primary": "changa-tuki",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_comp_dj-baba_the-best-of-street-house-venezuela",
+      "title": "The Best of Street House Venezuela",
+      "source": "rateyourmusic",
+      "raw": [
+        "Changa tuki"
+      ],
+      "primary": "changa-tuki",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_comp_la-seguridad-nacional_la-seguridad-nacional-1983-1993",
+      "title": "La seguridad nacional - 1983-1993",
+      "source": "rateyourmusic",
+      "raw": [
+        "New Wave",
+        "Post-Punk",
+        "Blues Rock",
+        "Punk Rock",
+        "Gothic Rock"
+      ],
+      "primary": "new-wave",
+      "secondaries": [
+        "post-punk",
+        "blues-rock",
+        "punk-rock",
+        "rock-gotico"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_los-colores_la-receta",
+      "title": "La receta",
+      "source": "rateyourmusic",
+      "raw": [
+        "Indie Pop"
+      ],
+      "primary": "pop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_luis-felipe-gonzalez_salsa-and-aji",
+      "title": "Salsa & ají",
+      "source": "rateyourmusic",
+      "raw": [
+        "Salsa"
+      ],
+      "primary": "salsa",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_nani_katan",
+      "title": "Katan",
+      "source": "rateyourmusic",
+      "raw": [
+        "Reggaetón",
+        "Alternative R&B"
+      ],
+      "primary": "reggaeton",
+      "secondaries": [
+        "r-and-b"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_odense-symfoniorkester-jan-wagner-susanne-resmark_symphony-no-7-klein-idas-blumen-ge",
+      "title": "Symphony No. 7; Klein Idas Blumen; Gespräche mit dem Tod; Jahrmarkt bei London",
+      "source": "rateyourmusic",
+      "raw": [
+        "Romanticism",
+        "Orchestral Music",
+        "Lied",
+        "Modern Classical",
+        "Symphony"
+      ],
+      "primary": "musica-clasica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_corina-smith_triste-pero-siempre-mami",
+      "title": "triste pero siempre mami (acústico)",
+      "source": "rateyourmusic",
+      "raw": [
+        "Pop Rap",
+        "Contemporary R&B",
+        "Reggaetón",
+        "Latin Pop",
+        "Trap Soul",
+        "Singer-Songwriter"
+      ],
+      "primary": "hip-hop",
+      "secondaries": [
+        "r-and-b",
+        "reggaeton",
+        "pop-latino",
+        "cantautor"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_mixtape_dj-loopy_vol-2",
+      "title": "Vol. 2",
+      "source": "rateyourmusic",
+      "raw": [
+        "Breakbeat"
+      ],
+      "primary": "electronica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_mixtape_dj-loopy_vol-3",
+      "title": "Vol. 3",
+      "source": "rateyourmusic",
+      "raw": [
+        "Breakbeat"
+      ],
+      "primary": "electronica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_mixtape_dj-loopy_vol-4",
+      "title": "Vol. 4",
+      "source": "rateyourmusic",
+      "raw": [
+        "Breakbeat"
+      ],
+      "primary": "electronica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_mixtape_dj-loopy_vol-5",
+      "title": "Vol. 5",
+      "source": "rateyourmusic",
+      "raw": [
+        "Breakbeat"
+      ],
+      "primary": "electronica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_mixtape_dj-loopy_volume-d",
+      "title": "Volume D",
+      "source": "rateyourmusic",
+      "raw": [
+        "Breakbeat"
+      ],
+      "primary": "electronica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_mixtape_dj-loopy_volume-j",
+      "title": "Volume J",
+      "source": "rateyourmusic",
+      "raw": [
+        "Breakbeat"
+      ],
+      "primary": "electronica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_weed420_esto-no-es-un-show",
+      "title": "Esto no es un show",
+      "source": "rateyourmusic",
+      "raw": [
+        "Neo-Psychedelia",
+        "Latin Electronic",
+        "Post-Rock",
+        "Experimental Rock",
+        "Noise Rock",
+        "Sound Collage",
+        "Ambient",
+        "Turntable Music",
+        "Shoegaze",
+        "Noise",
+        "Industrial Rock",
+        "Drone Metal",
+        "Synth Punk"
+      ],
+      "primary": "rock-psicodelico",
+      "secondaries": [
+        "latin-electronic-fusion",
+        "post-rock",
+        "rock-experimental",
+        "electroacustica",
+        "ambient",
+        "shoegaze",
+        "noise",
+        "drone-metal",
+        "punk"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_mikel-erentxun_el-ultimo-vuelo-del-hombre-bala",
+      "title": "El último vuelo del hombre bala",
+      "source": "rateyourmusic",
+      "raw": [
+        "Pop Rock"
+      ],
+      "primary": "pop-rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_mikel-erentxun_septiembre",
+      "title": "Septiembre Piano Sessions",
+      "source": "rateyourmusic",
+      "raw": [
+        "Pop Rock",
+        "Piano Rock",
+        "Psychedelic Pop",
+        "Rock & Roll"
+      ],
+      "primary": "pop-rock",
+      "secondaries": [
+        "pop-psicodelico",
+        "rock-and-roll"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_ep_mikel-erentxun_corazon-salvaje",
+      "title": "Corazón salvaje",
+      "source": "rateyourmusic",
+      "raw": [
+        "Pop Rock",
+        "Power Pop"
+      ],
+      "primary": "pop-rock",
+      "secondaries": [
+        "power-pop"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_mikel-erentxun_angel-en-llamas",
+      "title": "Ángel en llamas",
+      "source": "rateyourmusic",
+      "raw": [
+        "Pop Rock"
+      ],
+      "primary": "pop-rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_mikel-erentxun_esos-ojos-negros",
+      "title": "Esos ojos negros",
+      "source": "rateyourmusic",
+      "raw": [
+        "Country Pop"
+      ],
+      "primary": "country",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_ep_kaydy-cain-el-mini_bad-boyz",
+      "title": "Bad Boyz 2",
+      "source": "rateyourmusic",
+      "raw": [
+        "Neoperreo",
+        "Alternative R&B"
+      ],
+      "primary": "reggaeton",
+      "secondaries": [
+        "r-and-b"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_daniella-barbarito_eramos-muchos-y-pario-la-abuela",
+      "title": "éramos muchos y parió la abuela (Sesión en casa)",
+      "source": "rateyourmusic",
+      "raw": [
+        "Singer-Songwriter",
+        "Joropo",
+        "Chamber Folk"
+      ],
+      "primary": "cantautor",
+      "secondaries": [
+        "joropo"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_ep_mj-nebreda-danny-from-miami_con-carino",
+      "title": "Con Cariño Remezclas",
+      "source": "rateyourmusic",
+      "raw": [
+        "Changa tuki",
+        "Neoperreo"
+      ],
+      "primary": "changa-tuki",
+      "secondaries": [
+        "reggaeton"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_mj-nebreda-ms-nina-invt_arepa",
+      "title": "Arepa",
+      "source": "rateyourmusic",
+      "raw": [
+        "Neoperreo"
+      ],
+      "primary": "reggaeton",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_nirse-gonzalez_guitar-music-of-venezuela",
+      "title": "Guitar Music of Venezuela",
+      "source": "rateyourmusic",
+      "raw": [
+        "Latin American Classical Music",
+        "Romanticism",
+        "Joropo",
+        "Modern Classical",
+        "Vals venezolano",
+        "Sonata",
+        "Merengue",
+        "Serenade"
+      ],
+      "primary": "musica-clasica",
+      "secondaries": [
+        "joropo",
+        "vals-venezolano",
+        "merengue"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_yoa-orchestra-of-the-americas-carlos-miguel-prieto-gabriela-montero_piano-concerto-n",
+      "title": "Piano Concerto No. 2 / Ex patria; Improvisations",
+      "source": "rateyourmusic",
+      "raw": [
+        "Romanticism",
+        "Orchestral Music",
+        "Concerto"
+      ],
+      "primary": "musica-clasica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_the-orchestra-of-the-americas-carlos-miguel-prieto-gabriela-montero_piano-concerto-n",
+      "title": "Piano Concerto No.1, 'Latin' Concerto / Piano Concerto in G major",
+      "source": "rateyourmusic",
+      "raw": [
+        "Impressionism",
+        "Concerto"
+      ],
+      "primary": "musica-clasica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_nelson-pinedo-sonora-matancera__quien-sera",
+      "title": "Quien sera / El ermitaño",
+      "source": "rateyourmusic",
+      "raw": [
+        "Bolero",
+        "Mambo",
+        "Chachachá",
+        "Guaracha",
+        "Porro"
+      ],
+      "primary": "bolero",
+      "secondaries": [
+        "mambo",
+        "cha-cha-cha",
+        "guaracha",
+        "musica-tropical"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_nacho_folklore",
+      "title": "Folklore",
+      "source": "rateyourmusic",
+      "raw": [
+        "Música llanera"
+      ],
+      "primary": "joropo",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_nacho_bailame",
+      "title": "Báilame",
+      "source": "rateyourmusic",
+      "raw": [
+        "Latin Pop",
+        "Reggaetón"
+      ],
+      "primary": "pop-latino",
+      "secondaries": [
+        "reggaeton"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_giovanni-guzzo-anne-lovett_violin-sonatas",
+      "title": "Violin Sonatas Nos. 1-3",
+      "source": "rateyourmusic",
+      "raw": [
+        "Sonata",
+        "Chamber Music",
+        "Romanticism",
+        "Impressionism"
+      ],
+      "primary": "musica-de-camara",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_dell-soda_edgy-muzik-3",
+      "title": "EDGY MUZIK 3",
+      "source": "rateyourmusic",
+      "raw": [
+        "Instrumental Hip Hop",
+        "Trap",
+        "Cloud Rap"
+      ],
+      "primary": "trap",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_dell-soda_otokonokos-harem",
+      "title": "Otokonoko's Harem 2",
+      "source": "rateyourmusic",
+      "raw": [
+        "Breakcore"
+      ],
+      "primary": "electronica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_dell-soda_otokonokos-harem-3",
+      "title": "Otokonoko's Harem 3",
+      "source": "rateyourmusic",
+      "raw": [
+        "Atmospheric Drum and Bass",
+        "Dark Ambient"
+      ],
+      "primary": "drum-and-bass",
+      "secondaries": [
+        "dark-ambient"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_jorge-ostos_music-for-a-sidereal-voyage",
+      "title": "Music for a Sidereal Voyage",
+      "source": "rateyourmusic",
+      "raw": [
+        "Ambient",
+        "Progressive Electronic",
+        "Space Ambient"
+      ],
+      "primary": "ambient",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_le-concert-dastree-emmanuelle-haim-camilla-tilling-kate-royal-sonia-prina-toby-spenc",
+      "title": "La Resurrezione",
+      "source": "rateyourmusic",
+      "raw": [
+        "Baroque Music",
+        "Oratorio"
+      ],
+      "primary": "musica-antigua",
+      "secondaries": [
+        "musica-sacra"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_cheo-hurtado-jose-archila_music-of-the-cuatro-and-the-arpa",
+      "title": "Music of the Cuatro and the Arpa",
+      "source": "rateyourmusic",
+      "raw": [
+        "Hispanic American Folk Music",
+        "Joropo"
+      ],
+      "primary": "musica-tradicional",
+      "secondaries": [
+        "joropo"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_cheo_hurtado_cuatro_arpas_y_un_cuatro",
+      "title": "Cuatro arpas y un cuatro",
+      "source": "rateyourmusic",
+      "raw": [
+        "Joropo"
+      ],
+      "primary": "joropo",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_sr-presidente_chuca-chuca",
+      "title": "Chuca Chuca II",
+      "source": "rateyourmusic",
+      "raw": [
+        "Art Pop",
+        "Indietronica"
+      ],
+      "primary": "art-pop",
+      "secondaries": [
+        "electronica"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_pm_heavenly",
+      "title": "Heavenly",
+      "source": "rateyourmusic",
+      "raw": [
+        "IDM",
+        "Atmospheric Drum and Bass",
+        "Jungle",
+        "Breakcore"
+      ],
+      "primary": "idm",
+      "secondaries": [
+        "drum-and-bass"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_pm_legacy",
+      "title": "L E G A C Y",
+      "source": "rateyourmusic",
+      "raw": [
+        "Atmospheric Drum and Bass",
+        "Breakcore"
+      ],
+      "primary": "drum-and-bass",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_djmix_pm_be-alive-vol-3",
+      "title": "be alive vol. 3",
+      "source": "rateyourmusic",
+      "raw": [
+        "Atmospheric Drum and Bass",
+        "Breakcore",
+        "Ambient",
+        "Liquid Drum and Bass"
+      ],
+      "primary": "drum-and-bass",
+      "secondaries": [
+        "ambient"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_diveana-free-cover-venezuela_mix-diveana",
+      "title": "Mix Diveana",
+      "source": "rateyourmusic",
+      "raw": [
+        "Merengue"
+      ],
+      "primary": "merengue",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_gaiteros-de-pillopo_gaiteros-de-pillopo",
+      "title": "Gaiteros de Pillopo '87",
+      "source": "rateyourmusic",
+      "raw": [
+        "Gaita zuliana"
+      ],
+      "primary": "gaita",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_el-club-de-amigos-los-mejores-del-amor_volumen-2",
+      "title": "Volumen 2",
+      "source": "rateyourmusic",
+      "raw": [
+        "Psychedelic Pop",
+        "Hypnagogic Pop",
+        "Bedroom Pop",
+        "Slacker Rock",
+        "Jangle Pop"
+      ],
+      "primary": "pop-psicodelico",
+      "secondaries": [
+        "chillwave",
+        "indie-rock",
+        "jangle-pop"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_el-club-de-amigos-los-mejores-del-amor_volumen-iii",
+      "title": "Volumen III",
+      "source": "rateyourmusic",
+      "raw": [
+        "Slacker Rock",
+        "Bedroom Pop",
+        "Power Pop",
+        "Psychedelic Pop"
+      ],
+      "primary": "indie-rock",
+      "secondaries": [
+        "power-pop",
+        "pop-psicodelico"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_el-club-de-amigos-los-mejores-del-amor_vol-4-nuestro-triceratops",
+      "title": "Vol. 4: Nuestro triceratops",
+      "source": "rateyourmusic",
+      "raw": [
+        "Psychedelic Pop",
+        "Bedroom Pop",
+        "Slacker Rock",
+        "Jangle Pop"
+      ],
+      "primary": "pop-psicodelico",
+      "secondaries": [
+        "indie-rock",
+        "jangle-pop"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_cardenales-del-exito_volumen-3",
+      "title": "Volumen 3",
+      "source": "rateyourmusic",
+      "raw": [
+        "Gaita zuliana"
+      ],
+      "primary": "gaita",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_cardenales-del-exito-lila-morillo_la-soberana-en-gaitas",
+      "title": "La soberana en gaitas",
+      "source": "rateyourmusic",
+      "raw": [
+        "Gaita zuliana"
+      ],
+      "primary": "gaita",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_cardenales-del-exito_esplendor-gaitero",
+      "title": "Esplendor gaitero",
+      "source": "rateyourmusic",
+      "raw": [
+        "Gaita zuliana"
+      ],
+      "primary": "gaita",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_cardenales-del-exito_la-pelea",
+      "title": "La Pelea",
+      "source": "rateyourmusic",
+      "raw": [
+        "Gaita zuliana"
+      ],
+      "primary": "gaita",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_comp_cardenales-del-exito_gaitas-para-la-eternidad",
+      "title": "Gaitas para la eternidad",
+      "source": "rateyourmusic",
+      "raw": [
+        "Gaita zuliana"
+      ],
+      "primary": "gaita",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_ep_bucle-lunar_es-que-la-vida-es-un-ratito",
+      "title": "Es Que La Vida Es Un Ratito (Demitos)",
+      "source": "rateyourmusic",
+      "raw": [
+        "Dream Pop",
+        "Indie Pop",
+        "Latin Alternative",
+        "Chamber Pop"
+      ],
+      "primary": "dream-pop",
+      "secondaries": [
+        "rock-latino",
+        "art-pop"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_scott-colley-edward-simon-brian-blade_three-visitors",
+      "title": "Three Visitors",
+      "source": "rateyourmusic",
+      "raw": [
+        "Jazz",
+        "Post-Bop"
+      ],
+      "primary": "jazz",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_cloudy__dj112dirtbag-cloudy-x-o-meu-pau-ta-chorando-funkcarioca-epiccollage-128-bpm",
+      "title": "(@dj112dirtbag) cloudy x \"O MEU PAU TA CHORANDO\" #FunkCarioca #EpicCollage 【128 BPM】",
+      "source": "rateyourmusic",
+      "raw": [
+        "Funk brasileiro"
+      ],
+      "primary": "urbano-latino",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_alexandra-stan-patricia-zavala_lipstick",
+      "title": "Lipstick (Lawrent Remix)",
+      "source": "rateyourmusic",
+      "raw": [
+        "Europop",
+        "Dance-Pop",
+        "Electro Swing",
+        "Romanian Popcorn"
+      ],
+      "primary": "dance",
+      "secondaries": [
+        "pop"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_oswin_chin_behilia_live",
+      "title": "Live",
+      "source": "rateyourmusic",
+      "raw": [
+        "Caribbean Folk Music"
+      ],
+      "primary": "musica-tradicional",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_comp_oswin-chin-behilia_bendishon-disfrasa-blessing-in-disguise",
+      "title": "Bendishon disfrasá (Blessing in Disguise)",
+      "source": "rateyourmusic",
+      "raw": [
+        "Caribbean Folk Music",
+        "Son cubano",
+        "Guajira"
+      ],
+      "primary": "musica-tradicional",
+      "secondaries": [
+        "son"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_wim-statius-muller_antillean-treasures",
+      "title": "Antillean Treasures",
+      "source": "rateyourmusic",
+      "raw": [
+        "Waltz",
+        "Tumba"
+      ],
+      "primary": "musica-tradicional",
+      "secondaries": [
+        "musica-tropical"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_j-balvin-jeon-anitta_machika",
+      "title": "Machika (Dillon Francis Remix)",
+      "source": "rateyourmusic",
+      "raw": [
+        "Reggaetón",
+        "Bubbling",
+        "Moombahton",
+        "Electropop",
+        "Bubbling House",
+        "Latin Rap"
+      ],
+      "primary": "reggaeton",
+      "secondaries": [
+        "electropop",
+        "house",
+        "hip-hop"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_lord-brynner_the-wayward-boy-african-safari",
+      "title": "The Wayward Boy / African Safari",
+      "source": "rateyourmusic",
+      "raw": [
+        "Calypso"
+      ],
+      "primary": "calipso",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_machel-montano-superblue_soca-kingdom",
+      "title": "Soca Kingdom",
+      "source": "rateyourmusic",
+      "raw": [
+        "Power Soca"
+      ],
+      "primary": "soca",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_blue_boy_soca_baptiste",
+      "title": "Soca Baptiste",
+      "source": "rateyourmusic",
+      "raw": [
+        "Soca"
+      ],
+      "primary": "soca",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_sundar-popo_hot-and-sweet",
+      "title": "Hot and Sweet",
+      "source": "rateyourmusic",
+      "raw": [
+        "Chutney"
+      ],
+      "primary": "soca",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_comp_sundar-popo_greatest-hits-vol-1",
+      "title": "Greatest Hits Vol. 1",
+      "source": "rateyourmusic",
+      "raw": [
+        "Chutney"
+      ],
+      "primary": "soca",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_crrdr_latinx-core",
+      "title": "Latinx Core",
+      "source": "rateyourmusic",
+      "raw": [
+        "Hardcore [EDM]",
+        "Latin Electronic",
+        "Gabber",
+        "Neoperreo",
+        "Dembow",
+        "Mashup",
+        "Hard Techno",
+        "Changa tuki",
+        "Guaracha [EDM]"
+      ],
+      "primary": "latin-electronic-fusion",
+      "secondaries": [
+        "reggaeton",
+        "techno",
+        "changa-tuki"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_ep_crrdr_i-3-latincore",
+      "title": "I <3 Latincore",
+      "source": "rateyourmusic",
+      "raw": [
+        "Techno",
+        "Latin Electronic",
+        "Neoperreo",
+        "Hard Techno"
+      ],
+      "primary": "techno",
+      "secondaries": [
+        "latin-electronic-fusion",
+        "reggaeton"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_crrdr_sobelo-drift",
+      "title": "Sobelo Drift",
+      "source": "rateyourmusic",
+      "raw": [
+        "Changa tuki",
+        "Guaracha [EDM]"
+      ],
+      "primary": "changa-tuki",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_elsa-y-elmar_ya-no-somos-los-mismos",
+      "title": "Ya no somos los mismos (comienzo)",
+      "source": "rateyourmusic",
+      "raw": [
+        "Latin Pop",
+        "Alt-Pop",
+        "Alternative R&B",
+        "Folk Pop",
+        "Bachata"
+      ],
+      "primary": "pop-latino",
+      "secondaries": [
+        "r-and-b",
+        "folk",
+        "bachata"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_elsa-y-elmar-bruses_que-voy-a-hacer-conmigo",
+      "title": "Qué voy a hacer conmigo???",
+      "source": "rateyourmusic",
+      "raw": [
+        "Dance-Pop",
+        "Pop Rock",
+        "Teen Pop"
+      ],
+      "primary": "dance",
+      "secondaries": [
+        "pop",
+        "pop-rock"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_last-tyrant_the-end-of-the-holy-legacy",
+      "title": "The End of the Holy Legacy",
+      "source": "rateyourmusic",
+      "raw": [
+        "Black Metal"
+      ],
+      "primary": "black-metal",
+      "secondaries": []
+    }
+  ],
+  "alreadyClassified": [
+    "rym-nuevos:rel_album_los-angeles-philharmonic-gustavo-dudamel-yuja-wang_the-piano-concertos-and-paganini-",
+    "rym-nuevos:rel_ep_los-terricolas_vuelven-los-terricolas-55-anos-despues-vol-1",
+    "rym-nuevos:rel_album_vir-martialis_metapolemos-ii-the-spiritual-aesthetics-of-war",
+    "rym-nuevos:rel_single_sanluis-chino-y-nacho_se-acabo-version-merengue-urbano",
+    "rym-nuevos:rel_single_nakary-zion-noriel_sin-tabu-remix",
+    "rym-nuevos:rel_single_anakena_carita-triste",
+    "rym-nuevos:rel_single_anakena_saudade-acustica",
+    "rym-nuevos:rel_single_anakena-ferraz_no-hay-peligro-ferraz-remix",
+    "rym-nuevos:rel_album_andres-levell_la-quema-de-la-bestia-parte-ii",
+    "rym-nuevos:rel_album_andres-levell_la-quema-de-la-bestia-parte-iii",
+    "rym-nuevos:rel_single_dj-babatr_the-journey",
+    "rym-nuevos:rel_album_corina-smith_triste-pero-siempre-mami-acustico",
+    "rym-nuevos:rel_ep_el-mini-kaydy-cain_bad-boyz-2",
+    "rym-nuevos:rel_single_daniella-barbarito_eramos-muchos-y-pario-la-abuela-sesion-en-casa",
+    "rym-nuevos:rel_single_nacho-yandel-and-bad-bunny_bailame-remix",
+    "rym-nuevos:rel_album_giovanni-guzzo-zoltan-fejervari_violin-sonatas-nos-1-3",
+    "rym-nuevos:rel_album_dell-soda_otokonokos-harem-2",
+    "rym-nuevos:rel_single_sanluis_se-acabo-version-salsa",
+    "rym-nuevos:rel_album_gaiteros-de-pillopo_gaiteros-de-pillopo-87",
+    "rym-nuevos:rel_single_alexandra-stan-patricia-zavala_lipstick-lawrent-remix",
+    "rym-nuevos:rel_single_alexandra-stan-patricia-zavala_lipstick-marco-generani-remix",
+    "rym-nuevos:rel_single_j-balvin-jeon-anitta_machika-dillon-francis-remix"
+  ],
+  "unresolved": [
+    {
+      "caseId": "rym-nuevos:rel_ep_contemplando-el-cielo_untitled-field-recordings",
+      "source": "rateyourmusic",
+      "raw": [
+        "Field Recording",
+        "Nature Recordings"
+      ],
+      "fragments": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_comp_los-melodicos-los-hermanos-flores_el-baile-del-ano",
+      "source": "rateyourmusic",
+      "raw": [
+        "Cumbia salvadoreña"
+      ],
+      "fragments": [
+        "Cumbia salvadoreña"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_ep_samuel-sahlieh_arashiyama",
+      "source": "rateyourmusic",
+      "raw": [
+        "Field Recording"
+      ],
+      "fragments": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_clive-alexander-annise-hadeed-and-the-gayap-music-workshop-trinidad-and-tobago_pan-j",
+      "source": "rateyourmusic",
+      "raw": [
+        "Cool Jazz",
+        "Steel Band"
+      ],
+      "fragments": [
+        "Cool Jazz",
+        "Steel Band"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_southkhand_mater",
+      "source": "rateyourmusic",
+      "raw": [
+        "Wave"
+      ],
+      "fragments": [
+        "Wave"
+      ]
+    }
+  ],
+  "errors": [],
+  "moreSpecificExists": []
+}

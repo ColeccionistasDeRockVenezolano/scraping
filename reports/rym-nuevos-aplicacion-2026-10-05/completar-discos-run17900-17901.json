@@ -1,0 +1,23 @@
+{
+  "modo": "aplicado",
+  "runId": "17900-17901",
+  "entrada": {
+    "pistas": 31,
+    "anios": 17
+  },
+  "vigentes": {
+    "pistas": 31,
+    "anios": 17
+  },
+  "discos_con_pistas": 30,
+  "pistas": 183,
+  "pistas_error": 1,
+  "años": 17,
+  "años_error": 0,
+  "errores": [
+    {
+      "albumId": 27074,
+      "error": "la posición 1-1 ya la ocupa «仙灵虫 收集 ~流星蝴蝶剑~»"
+    }
+  ]
+}

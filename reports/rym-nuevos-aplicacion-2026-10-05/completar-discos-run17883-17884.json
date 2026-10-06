@@ -1,0 +1,23 @@
+{
+  "modo": "aplicado",
+  "runId": "17883-17884",
+  "entrada": {
+    "pistas": 109,
+    "anios": 61
+  },
+  "vigentes": {
+    "pistas": 109,
+    "anios": 61
+  },
+  "discos_con_pistas": 108,
+  "pistas": 603,
+  "pistas_error": 1,
+  "años": 61,
+  "años_error": 0,
+  "errores": [
+    {
+      "albumId": 26980,
+      "error": "la posición 1-1 ya la ocupa «The Journey»"
+    }
+  ]
+}

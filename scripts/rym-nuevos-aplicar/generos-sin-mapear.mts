@@ -1,4 +1,5 @@
 // RYM «nuevos» · géneros que quedaron sin mapear tras el run 16902 (Brian 2026-10-06: «crear 2 +
+// 2.ª pasada (2026-10-06, tras la corrección por prefijo): Cumbia salvadoreña, Cool Jazz, Steel Band y Wave.
 // alias al padre»). Se crean «Changa tuki» (género caraqueño, 57 fichas) y «Emo»; el resto pasa
 // como alias al género existente más cercano y lo que no es música queda `not_a_genre`.
 // Un run de taxonomía; sin --confirm se revierte. Después: apply-source-genres con los mismos libros.
@@ -20,7 +21,7 @@ const MAPA: Record<string, string[]> = {
   "pop": ["Bedroom Pop", "Adult Contemporary", "Afrobeats", "Levenslied", "Vocal Group", "Musical Parody"],
   "electronica": ["Synthwave", "Darksynth", "Horror Synth", "Chillsynth", "Vaporwave", "Hardvapour", "Progressive Electronic",
     "Berlin School", "Trap [EDM]", "HexD", "Kuduro", "Future Bass", "Future Garage", "Jersey Club", "Breakbeat Hardcore",
-    "Speedcore", "Early Hardstyle", "Neo Rave", "Indietronica", "Mashup"],
+    "Speedcore", "Early Hardstyle", "Neo Rave", "Indietronica", "Mashup", "Wave"],
   "darkwave": ["Minimal Synth"],
   "dark-ambient": ["Dungeon Synth"],
   "chillwave": ["Hypnagogic Pop"],
@@ -37,7 +38,7 @@ const MAPA: Record<string, string[]> = {
   "noise": ["Harsh Noise", "Harsh Noise Wall", "Ambient Noise Wall", "Power Electronics"],
   "industrial": ["Power Noise", "Death Industrial"],
   "spoken-word": ["Poetry", "Jazz Poetry"],
-  "jazz": ["Jazz Pop", "Vocal Jazz", "New Jazz", "Avant-Garde Jazz", "Jazz manouche"],
+  "jazz": ["Jazz Pop", "Vocal Jazz", "New Jazz", "Avant-Garde Jazz", "Jazz manouche", "Cool Jazz"],
   "big-band": ["Swing Revival"],
   "easy-listening": ["Exotica", "Light Music"],
   "soft-rock": ["Yacht Rock"],
@@ -54,10 +55,10 @@ const MAPA: Record<string, string[]> = {
   "musica-tropical": ["Caribbean Music", "Plena", "Bomba", "Tamborera", "Tumba", "Cadence lypso"],
   "world-ethnic": ["Tassa", "Hindustani Classical Music"],
   "son": ["Cuban Music", "Son cubano", "Guajira"],
-  "cumbia": ["Cumbia colombiana", "Cumbia peruana", "Merecumbé"],
+  "cumbia": ["Cumbia colombiana", "Cumbia peruana", "Merecumbé", "Cumbia salvadoreña"],
   "pop-latino": ["Tropipop", "Tejano Music"],
   "malaguena": ["Malagueña venezolana"],
-  "calipso": ["Calipso venezolano"],
+  "calipso": ["Calipso venezolano", "Steel Band"],
   "salsa": ["Salsa dura"],
   "urbano-latino": ["Mambo urbano", "Corrido tumbado", "Funk brasileiro", "Funk mandelão", "Funk 150 bpm", "Moombahton"],
   "tecnomerengue": ["Merenhouse"],
@@ -86,8 +87,11 @@ const MAPA: Record<string, string[]> = {
   "not_a_genre": ["Field Recording", "Nature Recordings", "Animal Sounds", "Comedy", "Stand-Up Comedy"],
 };
 const notes = "término de Rate Your Music sin mapear tras el run 16902 (Brian 2026-10-06: alias al padre más cercano)";
-const ops: TaxonomyOperation[] = [...NUEVOS, ...Object.entries(MAPA).flatMap(([target, terms]) =>
-  terms.map((alias) => ({ op: "set_alias" as const, alias, target, notes })))];
+// --segunda: solo los alias de la 2.ª pasada (crear géneros no es idempotente).
+const SEGUNDA = new Set(["Cumbia salvadoreña", "Cool Jazz", "Steel Band", "Wave"]);
+const segunda = process.argv.includes("--segunda");
+const ops: TaxonomyOperation[] = [...(segunda ? [] : NUEVOS), ...Object.entries(MAPA).flatMap(([target, terms]) =>
+  terms.filter((alias) => !segunda || SEGUNDA.has(alias)).map((alias) => ({ op: "set_alias" as const, alias, target, notes })))];
 const report = await applyTaxonomyOperations(ops, {
   actor: "claude-code (delegado por Brian)",
   reason: "Géneros de RYM «nuevos» sin mapear: se crean Changa tuki y Emo; el resto como alias al padre más cercano (Brian 2026-10-06)",

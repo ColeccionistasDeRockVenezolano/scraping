@@ -10,7 +10,11 @@ import { writeFileSync } from "node:fs";
 import { closeDb, getPool } from "../../src/db/client.js";
 import { acceptReview, rejectReview } from "../../src/review/operator-review.js";
 
-const MISMOS = new Set([1836043, 1836044, 1836051, 1836216, 1836484, 1836502, 1836522, 1847265, 1847282, 1847297, 1847300]);
+// --mismos=1,2,3 sustituye la lista (2.ª tanda, tras revertir-prefijos.mts: mismo año y tipo, el título solo
+// añade «EP», «feat.», el artista o viene truncado).
+const arg = process.argv.find((a) => a.startsWith("--mismos="))?.slice(9);
+const MISMOS = new Set(arg ? arg.split(",").map(Number)
+  : [1836043, 1836044, 1836051, 1836216, 1836484, 1836502, 1836522, 1847265, 1847282, 1847297, 1847300]);
 const confirm = process.argv.includes("--confirm");
 const operator = "claude-code (delegado por Brian)";
 
@@ -26,7 +30,7 @@ for (const row of rows) {
   if (!confirm) { (mismo ? informe.mismos : informe.distintos).push({ id, title: row.title, candidate: row.candidate }); continue; }
   try {
     const note = mismo
-      ? "RYM «nuevos» 2026-10-06: mismo disco (título igual salvo mayúsculas/tildes/artículo, mismo año); se funde en la ficha existente"
+      ? "RYM «nuevos» 2026-10-06: mismo disco (mismo año y tipo; el título solo cambia en mayúsculas/tildes/artículo, «EP», «feat.», el artista o viene truncado); se funde en la ficha existente"
       : "RYM «nuevos» 2026-10-06: disco distinto del candidato (otro volumen, parte, versión o título); se crea";
     const r = mismo ? await acceptReview(id, { operator, note }) : await rejectReview(id, { operator, note });
     (mismo ? informe.mismos : informe.distintos).push({ id, title: row.title, candidate: row.candidate, runId: r.runId, detail: r.detail });
@@ -34,7 +38,7 @@ for (const row of rows) {
     informe.errores.push({ id, title: row.title, error: error instanceof Error ? error.message.slice(0, 200) : String(error) });
   }
 }
-writeFileSync(`reports/rym-nuevos-aplicacion-2026-10-05/album-match-${confirm ? "aplicado" : "ensayo"}.json`, JSON.stringify(informe, null, 1));
+writeFileSync(`reports/rym-nuevos-aplicacion-2026-10-05/album-match-${arg ? "2-" : ""}${confirm ? "aplicado" : "ensayo"}.json`, JSON.stringify(informe, null, 1));
 console.log(JSON.stringify({ modo: confirm ? "aplicado" : "ensayo", mismos: informe.mismos.length, distintos: informe.distintos.length,
   errores: informe.errores.length, ejemplos: informe.errores.slice(0, 3) }));
 await closeDb();

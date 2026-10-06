@@ -63,6 +63,12 @@ def compact(s):
     return re.sub(r"[^a-z0-9]+", "", s)
 
 
+def clave_titulo(s):
+    """compact(); si el título no tiene letras latinas ni cifras («^^^^^», CJK), el literal sin espacios
+    (compact los dejaba vacíos y nunca casaban)."""
+    return compact(s) or re.sub(r"\s+", "", unicodedata.normalize("NFKC", s or "")).casefold()
+
+
 def texto(fragmento):
     return re.sub(r"\s+", " ", htmllib.unescape(re.sub(r"<[^>]+>", " ", fragmento))).strip()
 
@@ -141,14 +147,14 @@ def cargar_catalogo():
     for r in sql("SELECT artist_id, alias FROM ingest.artist_aliases"):
         por_nombre.setdefault(compact(r[1]), int(r[0]))
     albumes = collections.defaultdict(list)
-    for r in sql("""SELECT a.id, a.artist_id, a.title, coalesce(a.release_year::text,''),
+    for r in sql("""SELECT a.id, a.artist_id, a.title, coalesce(a.release_year::text,''), a.album_type,
                            (a.cover_url IS NOT NULL AND btrim(a.cover_url)<>''),
                            EXISTS (SELECT 1 FROM public.tracks t WHERE t.album_id=a.id),
                            EXISTS (SELECT 1 FROM ingest.album_genres g WHERE g.album_id=a.id AND g.role='primary' AND g.status='confirmed')
                     FROM public.albums a"""):
-        albumes[int(r[1])].append({"id": int(r[0]), "title": r[2], "c": compact(r[2]),
-                                   "year": int(r[3]) if r[3] else None, "cover": r[4] == "t",
-                                   "tracks": r[5] == "t", "genre": r[6] == "t"})
+        albumes[int(r[1])].append({"id": int(r[0]), "title": r[2], "c": clave_titulo(r[2]), "type": r[4],
+                                   "year": int(r[3]) if r[3] else None, "cover": r[5] == "t",
+                                   "tracks": r[6] == "t", "genre": r[7] == "t"})
     return artistas, redir, por_nombre, albumes
 
 
@@ -239,6 +245,7 @@ def main():
 
     plan, cont, motivos = [], collections.Counter(), collections.Counter()
     pistas_out, anios_out, portadas_out, generos_out, casos = [], [], [], [], []
+    usadas = set()
     for rel, fs in filas.items():
         e = estado.get(rel) or {}
         base = {"rym_href": rel, "url": BASE + rel}
@@ -279,20 +286,23 @@ def main():
         og = rec.get("og") or ""
         tipo = fila[2]
 
-        # ¿ya existe? bajo el dueño o bajo cualquier coautor con ficha
-        k = compact(titulo)
+        # ¿ya existe? bajo el dueño o bajo cualquier coautor con ficha. Solo título IGUAL (el de la página o
+        # el de la lista de discografía): el cruce por prefijo casaba remixes, demos, volúmenes y partes con
+        # otro disco (corregido el 2026-10-06, ver revertir-prefijos.mts).
+        # Con dos fichas del mismo título (EP y sencillo «The Journey»), una libre y del mismo tipo.
+        claves = {c for c in (clave_titulo(titulo), clave_titulo(fila[3])) if c}
         hit = None
         for _, (_, cid, _) in con_ficha:
-            for a in albumes.get(cid, []):
-                if k and (k == a["c"] or (len(a["c"]) >= 6 and len(k) >= 6 and (k.startswith(a["c"]) or a["c"].startswith(k)))):
-                    hit = a
-                    break
+            iguales = [a for a in albumes.get(cid, []) if a["c"] in claves]
+            iguales.sort(key=lambda a: (a["id"] in usadas, a["type"] != MAPA_TIPO.get(fila[2])))
+            hit = iguales[0] if iguales else None
             if hit:
                 break
-        item = {**base, "titulo": titulo, "artista_id": aid, "artista": artistas[aid], "via": via,
+        item = {**base, "titulo": titulo, "titulo_lista": fila[3], "artista_id": aid, "artista": artistas[aid], "via": via,
                 "tipo_rym": tipo, "anio": anio, "n_pistas": len(pistas or []), "pistas_motivo": pistas_motivo,
                 "generos": generos, "portada": og, "colab": colab}
         if hit:
+            usadas.add(hit["id"])
             item.update(estado="ya_existe", album_id=hit["id"], album_titulo=hit["title"])
             cont["ya_existe"] += 1
             if pistas and not hit["tracks"]:

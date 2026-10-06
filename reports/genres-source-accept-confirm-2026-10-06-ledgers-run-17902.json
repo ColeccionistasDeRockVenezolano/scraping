@@ -1,0 +1,428 @@
+{
+  "mode": "confirm",
+  "runId": 17902,
+  "candidates": 31,
+  "accepted": [
+    {
+      "caseId": "rym-nuevos:rel_additional_los-prisioneros_la-voz-de-los-80-los-demos",
+      "title": "La voz de los '80 (Los demos)",
+      "source": "rateyourmusic",
+      "raw": [
+        "New Wave",
+        "2 Tone",
+        "Power Pop",
+        "Post-Punk"
+      ],
+      "primary": "new-wave",
+      "secondaries": [
+        "power-pop",
+        "post-punk"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_bill_quick_maravillosa_gente__beautiful_people____only_the_weather",
+      "title": "Maravillosa Gente (Beautiful People) / Only the Weather",
+      "source": "rateyourmusic",
+      "raw": [
+        "Folk Rock"
+      ],
+      "primary": "folk-rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_oh_dulceari_hello-kitty-remix",
+      "title": "Hello Kitty (Remix)",
+      "source": "rateyourmusic",
+      "raw": [
+        "Trap",
+        "Cloud Rap",
+        "Digicore",
+        "Euro Trance"
+      ],
+      "primary": "trap",
+      "secondaries": [
+        "electropop"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_comp_kid606_dont-sweat-the-technics-1997-1998",
+      "title": "Don't Sweat the Technics++ (1997-1998)",
+      "source": "rateyourmusic",
+      "raw": [
+        "IDM",
+        "Hardcore [EDM]",
+        "Breakcore",
+        "Techno",
+        "Power Noise",
+        "Glitch",
+        "Gabber"
+      ],
+      "primary": "idm",
+      "secondaries": [
+        "techno",
+        "industrial",
+        "glitch"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_sanluis-chino-y-nacho_se-acabo-version-merengue-urbano",
+      "title": "Se acabó (Versión merengue urbano)",
+      "source": "rateyourmusic",
+      "raw": [
+        "Latin Pop",
+        "Mambo urbano"
+      ],
+      "primary": "pop-latino",
+      "secondaries": [
+        "urbano-latino"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_comp_los-melodicos-los-hermanos-flores_el-baile-del-ano",
+      "title": "El baile del año",
+      "source": "rateyourmusic",
+      "raw": [
+        "Cumbia salvadoreña"
+      ],
+      "primary": "cumbia",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_nakary-zion-noriel_sin-tabu-remix",
+      "title": "Sin tabú (Remix)",
+      "source": "rateyourmusic",
+      "raw": [
+        "Reggaetón"
+      ],
+      "primary": "reggaeton",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_mixtape_arca_andandandandand",
+      "title": "&&&&&",
+      "source": "rateyourmusic",
+      "raw": [
+        "Glitch Hop",
+        "Wonky",
+        "UK Bass",
+        "Deconstructed Club",
+        "Instrumental Hip Hop",
+        "Post-Dubstep"
+      ],
+      "primary": "dubstep",
+      "secondaries": [
+        "hip-hop"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_arca__",
+      "title": "@@@@@",
+      "source": "rateyourmusic",
+      "raw": [
+        "Deconstructed Club",
+        "Epic Collage",
+        "Glitch",
+        "IDM",
+        "Latin Electronic",
+        "Wonky",
+        "Glitch Hop",
+        "Ambient Pop",
+        "Impressionism",
+        "Progressive Electronic"
+      ],
+      "primary": "glitch",
+      "secondaries": [
+        "idm",
+        "latin-electronic-fusion",
+        "musica-clasica"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_djmix_arca__-1",
+      "title": "^^^^^",
+      "source": "rateyourmusic",
+      "raw": [
+        "Deconstructed Club",
+        "Glitch",
+        "IDM",
+        "Spoken Word",
+        "Ambient",
+        "Ambient Pop",
+        "Glitch Hop",
+        "Dark Ambient",
+        "Latin Electronic",
+        "Experimental"
+      ],
+      "primary": "glitch",
+      "secondaries": [
+        "idm",
+        "spoken-word",
+        "ambient",
+        "dark-ambient",
+        "latin-electronic-fusion",
+        "experimental"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_unauth_arca__",
+      "title": "$$$$$",
+      "source": "rateyourmusic",
+      "raw": [
+        "Latin Electronic"
+      ],
+      "primary": "latin-electronic-fusion",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_unauth_arca__-1",
+      "title": "#####",
+      "source": "rateyourmusic",
+      "raw": [
+        "Deconstructed Club",
+        "Electronic",
+        "Glitch",
+        "Epic Collage",
+        "Experimental Hip Hop",
+        "Neo-Psychedelia"
+      ],
+      "primary": "glitch",
+      "secondaries": [
+        "rap-experimental",
+        "rock-psicodelico"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_unauth_arca__-2",
+      "title": "^^^^^",
+      "source": "rateyourmusic",
+      "raw": [
+        "Ambient",
+        "IDM",
+        "Deconstructed Club"
+      ],
+      "primary": "ambient",
+      "secondaries": [
+        "idm"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_anakena_carita-triste",
+      "title": "Carita Triste",
+      "source": "rateyourmusic",
+      "raw": [
+        "Bachata"
+      ],
+      "primary": "bachata",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_anakena_guayaba-acustica",
+      "title": "Guayaba (Acústica)",
+      "source": "rateyourmusic",
+      "raw": [
+        "Bachata"
+      ],
+      "primary": "bachata",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_anakena_saudade-acustica",
+      "title": "Saudade (Acústica)",
+      "source": "rateyourmusic",
+      "raw": [
+        "Singer-Songwriter"
+      ],
+      "primary": "cantautor",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_anakena-ferraz_no-hay-peligro-ferraz-remix",
+      "title": "No hay peligro (Ferraz Remix)",
+      "source": "rateyourmusic",
+      "raw": [
+        "Alternative R&B"
+      ],
+      "primary": "r-and-b",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_francis-mercier-david-tort-markem_strangers-do-you-remember",
+      "title": "Strangers (Do You Remember)",
+      "source": "rateyourmusic",
+      "raw": [
+        "Afro House"
+      ],
+      "primary": "house",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_dj-babatr_the-journey",
+      "title": "The Journey",
+      "source": "rateyourmusic",
+      "raw": [
+        "Changa tuki"
+      ],
+      "primary": "changa-tuki",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_corina-smith_triste-pero-siempre-mami-acustico",
+      "title": "triste pero siempre mami (acústico)",
+      "source": "rateyourmusic",
+      "raw": [
+        "Singer-Songwriter",
+        "Contemporary R&B",
+        "Alt-Pop",
+        "Bedroom Pop"
+      ],
+      "primary": "cantautor",
+      "secondaries": [
+        "r-and-b",
+        "pop"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_daniella-barbarito_eramos-muchos-y-pario-la-abuela-sesion-en-casa",
+      "title": "éramos muchos y parió la abuela (Sesión en casa)",
+      "source": "rateyourmusic",
+      "raw": [
+        "Singer-Songwriter"
+      ],
+      "primary": "cantautor",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_nacho-wisin-noriel_no-te-vas-remix",
+      "title": "No te vas (Remix)",
+      "source": "rateyourmusic",
+      "raw": [
+        "Latin Pop",
+        "Reggaetón",
+        "Pop Rap"
+      ],
+      "primary": "pop-latino",
+      "secondaries": [
+        "reggaeton",
+        "hip-hop"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_showtek-belinda-nacho_una-mamacita-the-remixes",
+      "title": "Una Mamacita (The Remixes)",
+      "source": "rateyourmusic",
+      "raw": [
+        "Moombahton",
+        "Tropical House"
+      ],
+      "primary": "urbano-latino",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_comp_dell-soda__",
+      "title": "!",
+      "source": "rateyourmusic",
+      "raw": [
+        "Experimental Hip Hop",
+        "Noise",
+        "Contemporary R&B",
+        "Experimental"
+      ],
+      "primary": "rap-experimental",
+      "secondaries": [
+        "noise",
+        "r-and-b"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_gran-coquivacoa_la-maquina-del-sabor",
+      "title": "La maquina del sabor",
+      "source": "rateyourmusic",
+      "raw": [
+        "Gaita zuliana",
+        "Calypso"
+      ],
+      "primary": "gaita",
+      "secondaries": [
+        "calipso"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_djmix_wight-garden_----------",
+      "title": "【 无 感 转 场 】【 提 高 审 美 】【看着看着就没了】",
+      "source": "rateyourmusic",
+      "raw": [
+        "Hardcore [EDM]",
+        "Hard Trance",
+        "Speedcore",
+        "Freeform Hardcore",
+        "HexD",
+        "Power Noise"
+      ],
+      "primary": "industrial",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_djmix_wight-garden_--",
+      "title": "仙灵虫 收集 ~流星蝴蝶剑~",
+      "source": "rateyourmusic",
+      "raw": [
+        "Trance",
+        "Freeform Hardcore",
+        "Hard Trance",
+        "Tech Trance",
+        "Acidcore",
+        "HexD",
+        "Power Noise"
+      ],
+      "primary": "trance",
+      "secondaries": [
+        "industrial"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_album_clive-alexander-annise-hadeed-and-the-gayap-music-workshop-trinidad-and-tobago_pan-j",
+      "title": "Pan Jazz Conversations",
+      "source": "rateyourmusic",
+      "raw": [
+        "Cool Jazz",
+        "Steel Band"
+      ],
+      "primary": "jazz",
+      "secondaries": [
+        "calipso"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:rel_single_southkhand_mater",
+      "title": "Mäter",
+      "source": "rateyourmusic",
+      "raw": [
+        "Wave"
+      ],
+      "primary": "electronica",
+      "secondaries": []
+    }
+  ],
+  "alreadyClassified": [],
+  "unresolved": [
+    {
+      "caseId": "rym-nuevos:rel_ep_contemplando-el-cielo_untitled-field-recordings",
+      "source": "rateyourmusic",
+      "raw": [
+        "Field Recording",
+        "Nature Recordings"
+      ],
+      "fragments": []
+    },
+    {
+      "caseId": "rym-nuevos:rel_ep_samuel-sahlieh_arashiyama",
+      "source": "rateyourmusic",
+      "raw": [
+        "Field Recording"
+      ],
+      "fragments": []
+    }
+  ],
+  "errors": [],
+  "moreSpecificExists": []
+}
