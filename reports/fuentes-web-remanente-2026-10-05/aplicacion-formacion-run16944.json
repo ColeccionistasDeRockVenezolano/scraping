@@ -1,0 +1,59 @@
+{
+  "modo": "aplicado",
+  "runId": 16944,
+  "resumen": {
+    "creadas": 0,
+    "cola": 0,
+    "ya_existe": 0,
+    "errores": 0,
+    "aplicadas": 8,
+    "saltadas": 0
+  },
+  "creadas": [],
+  "cola": [],
+  "ya_existe": [],
+  "errores": [],
+  "aplicadas": [
+    {
+      "artistId": 61,
+      "artist": "Charliepapa",
+      "year": 2001
+    },
+    {
+      "artistId": 1463,
+      "artist": "Domingo En Llamas",
+      "year": 2005
+    },
+    {
+      "artistId": 1954,
+      "artist": "La Gran Fogata",
+      "year": 1970
+    },
+    {
+      "artistId": 144,
+      "artist": "Las Cuatro Monedas",
+      "year": 1966
+    },
+    {
+      "artistId": 192,
+      "artist": "PapaShanty Saund System",
+      "year": 2002
+    },
+    {
+      "artistId": 2016,
+      "artist": "Sikem",
+      "year": 2003
+    },
+    {
+      "artistId": 2017,
+      "artist": "Sin Dirección",
+      "year": 2006
+    },
+    {
+      "artistId": 266,
+      "artist": "Zapato 3",
+      "year": 1983
+    }
+  ],
+  "saltadas": []
+}

@@ -1,0 +1,84 @@
+{
+  "modo": "aplicado",
+  "runId": 16903,
+  "resumen": {
+    "creadas": 0,
+    "cola": 0,
+    "ya_existe": 0,
+    "errores": 0,
+    "aplicadas": 13,
+    "saltadas": 0
+  },
+  "creadas": [],
+  "cola": [],
+  "ya_existe": [],
+  "errores": [],
+  "aplicadas": [
+    {
+      "artistId": 1620,
+      "artist": "Acero Plastico",
+      "year": 2001
+    },
+    {
+      "artistId": 3238,
+      "artist": "Urbanda",
+      "year": 1987
+    },
+    {
+      "artistId": 4247,
+      "artist": "Chino & Nacho",
+      "year": 2007
+    },
+    {
+      "artistId": 4385,
+      "artist": "Orquesta Sinfónica Municipal de Caracas",
+      "year": 1979
+    },
+    {
+      "artistId": 4297,
+      "artist": "Grupo Madera",
+      "year": 1977
+    },
+    {
+      "artistId": 4282,
+      "artist": "Fur Coat",
+      "year": 2004
+    },
+    {
+      "artistId": 1730,
+      "artist": "Compay Son",
+      "year": 2010
+    },
+    {
+      "artistId": 4279,
+      "artist": "Los Fantasmas del Caribe",
+      "year": 1989
+    },
+    {
+      "artistId": 4332,
+      "artist": "La Banda Municipal",
+      "year": 1973
+    },
+    {
+      "artistId": 4322,
+      "artist": "La Rondallita",
+      "year": 1975
+    },
+    {
+      "artistId": 1550,
+      "artist": "Holy Sexy Bastards",
+      "year": 2011
+    },
+    {
+      "artistId": 3734,
+      "artist": "Orquesta Batakum",
+      "year": 1982
+    },
+    {
+      "artistId": 4308,
+      "artist": "Cardenales del Éxito",
+      "year": 1962
+    }
+  ],
+  "saltadas": []
+}

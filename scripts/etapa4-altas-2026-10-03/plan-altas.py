@@ -30,7 +30,7 @@ RYM_ET3 = f"{ROOT}/data/raw/fuentes-web-2026-10-01/rym-etapa3"
 MAPA_TIPO = {"Album": "studio_album", "Single": "single", "EP": "ep", "Compilation": "compilation",
              "V/A Compilation": "compilation", "Live Album": "live_album", "Demo": "demo",
              "Remix": "remix", "Mixtape": "other", "DJ Mix": "other", "Additional release": "other",
-             "Video": None, "Music video": None, "Appears On": None}
+             "Bootleg / Unauthorized": "other", "Video": None, "Music video": None, "Appears On": None}
 
 
 def norm_href(h):
@@ -132,8 +132,10 @@ def main():
                 if isinstance(anio, int) and 1950 <= anio <= 2026:
                     values["release_year"] = anio
                 tipo_rym = d.get("tipo_rym") or ""
-                at = MAPA_TIPO.get(tipo_rym) or d.get("album_type_sug") or None
-                if at:
+                # El tipo que manda es el de la fila del dueño (caso["album_type"]); la del dossier
+                # puede venir de otro padre donde el disco es «Appears On» («na» no es un album_type).
+                at = caso.get("album_type") or MAPA_TIPO.get(tipo_rym) or d.get("album_type_sug") or None
+                if at and at != "na":
                     values["album_type"] = at
                 parent = {}
                 if origen == "ledger":

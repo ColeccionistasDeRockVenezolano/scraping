@@ -1,18 +1,18 @@
 {
- "generado": "2026-10-03 20:58:16",
+ "generado": "2026-10-05 13:55:22",
  "seccion_222": {
   "filas": 547,
-  "fuera": 504,
+  "ya_en_catalogo": 332,
   "capturado": 547,
-  "ya_en_catalogo": 43
+  "fuera": 215
  },
  "seccion_nuevos": {
   "filas": 8164,
   "listados_fase2": 8164,
-  "artista_fuera": 6665,
-  "ya_en_catalogo": 604,
-  "fuera": 895,
-  "capturado": 151
+  "artista_fuera": 2694,
+  "capturado": 8164,
+  "fuera": 4848,
+  "ya_en_catalogo": 622
  },
  "nota": "seccion_nuevos se completa al terminar la fase 2 (re-ejecutar este script)"
 }

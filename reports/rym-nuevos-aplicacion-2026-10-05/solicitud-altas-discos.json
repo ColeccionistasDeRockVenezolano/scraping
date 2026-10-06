@@ -1,0 +1,3101 @@
+{
+ "nota": "Altas de discos RYM «nuevos» (decisión de Brian 2026-10-05: completar + altas)",
+ "casos": [
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/rada/impressiones-etnosonicas",
+   "parent_href": "/artist/rada",
+   "artist_id": 1738,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Rada» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/ep/joselo/la-gaita-del-mendigo",
+   "parent_href": "/artist/joselo-1",
+   "artist_id": 6626,
+   "album_type": "ep",
+   "motivo": "Discografía RYM de «Joselo» (EP), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/los-dementes/ialerta-mundo-llegan-the-crazy-men",
+   "parent_href": "/artist/los-dementes",
+   "artist_id": 3792,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Los Dementes» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/ray-perez-y-sus-dementes/el-dictador",
+   "parent_href": "/artist/ray-perez",
+   "artist_id": 6792,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Ray Pérez» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/chico-y-porfi/juntos-otra-vez",
+   "parent_href": "/artist/chico-salas",
+   "artist_id": 6677,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Chico Salas» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/el-otro-polo/luz-claridad",
+   "parent_href": "/artist/el-otro-polo",
+   "artist_id": 6629,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «El Otro Polo» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/alirio-diaz-y-morella-munoz/canciones-tonadas-y-aguinaldos-venezolanos",
+   "parent_href": "/artist/morella-munoz",
+   "artist_id": 6631,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Morella Muñoz» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/akapellah-big-soto-trainer/come-on",
+   "parent_href": "/artist/big-soto",
+   "artist_id": 4257,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Big Soto» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/big-soto/sotorious",
+   "parent_href": "/artist/big-soto",
+   "artist_id": 4257,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Big Soto» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/victor-pinero-los-melodicos/recordando-al-rey-del-merecumbe-vol-2",
+   "parent_href": "/artist/victor-pinero",
+   "artist_id": 6636,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Victor Piñero» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/comp/los-melodicos-de-renato-capriles-vs-billos-caracas-boys/gran-mano-a-mano-musical-vol-1",
+   "parent_href": "/artist/los-melodicos",
+   "artist_id": 3794,
+   "album_type": "compilation",
+   "motivo": "Discografía RYM de «Los Melódicos» (Compilation), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/cline-giffoni-licht-ranaldo/nothing-makes-any-sense",
+   "parent_href": "/artist/carlos_giffoni",
+   "artist_id": 6639,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Carlos Giffoni» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/ep/carlos-giffoni-lee-ranaldo-jim-orourke/north-six",
+   "parent_href": "/artist/carlos_giffoni",
+   "artist_id": 6639,
+   "album_type": "ep",
+   "motivo": "Discografía RYM de «Carlos Giffoni» (EP), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/ep/carlos_giffoni/the_absence_of_essence",
+   "parent_href": "/artist/carlos_giffoni",
+   "artist_id": 6639,
+   "album_type": "ep",
+   "motivo": "Discografía RYM de «Carlos Giffoni» (EP), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/suei/no-pienso-llamarte",
+   "parent_href": "/artist/suei",
+   "artist_id": 5805,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «suei» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/suei/no-me-dejes-ir",
+   "parent_href": "/artist/suei",
+   "artist_id": 5805,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «suei» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/suei/y-te-vas-p",
+   "parent_href": "/artist/suei",
+   "artist_id": 5805,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «suei» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/suei-ag-sixteen/no-tengp-plat-a",
+   "parent_href": "/artist/suei",
+   "artist_id": 5805,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «suei» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/additional/ag-sixteen-suei/frio-demo",
+   "parent_href": "/artist/ag-sixteen",
+   "artist_id": 6171,
+   "album_type": "other",
+   "motivo": "Discografía RYM de «AG SixTeen» (Additional release), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/simon-bolivar-symphony-orchestra-of-venezuela-gustavo-dudamel/beethoven-3-eroica-overtures",
+   "parent_href": "/artist/gustavo-dudamel",
+   "artist_id": 4271,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Gustavo Dudamel» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/los-angeles-philharmonic-gustavo-dudamel/mahler-9",
+   "parent_href": "/artist/gustavo-dudamel",
+   "artist_id": 4271,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Gustavo Dudamel» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/los-angeles-philharmonic-los-angeles-master-chorale-gustavo-dudamel/the-gospel-according-to-the-other-mary",
+   "parent_href": "/artist/gustavo-dudamel",
+   "artist_id": 4271,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Gustavo Dudamel» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/los-angeles-philharmonic-gustavo-dudamel/the-nutcracker",
+   "parent_href": "/artist/gustavo-dudamel",
+   "artist_id": 4271,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Gustavo Dudamel» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/los-angeles-philharmonic-gustavo-dudamel/mahler-symphony-no-8-in-e-flat-major-symphony-of-a-thousand",
+   "parent_href": "/artist/gustavo-dudamel",
+   "artist_id": 4271,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Gustavo Dudamel» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/berliner-philharmoniker-gustavo-dudamel/mahler-symphony-no-5",
+   "parent_href": "/artist/gustavo-dudamel",
+   "artist_id": 4271,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Gustavo Dudamel» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/gustavo-dudamel-los-angeles-philharmonic/the-complete-symphonies",
+   "parent_href": "/artist/gustavo-dudamel",
+   "artist_id": 4271,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Gustavo Dudamel» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/orquesta-sinfonica-simon-bolivar-gustavo-dudamel/tchaikovsky-5",
+   "parent_href": "/artist/orquesta-sinfonica-simon-bolivar",
+   "artist_id": 4371,
+   "album_type": "live_album",
+   "motivo": "Discografía RYM de «Orquesta Sinfónica Simón Bolívar» (Live Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/simon-bolivar-symphony-orchestra-gustavo-dudamel-yuja-wang/piano-concertos",
+   "parent_href": "/artist/gustavo-dudamel",
+   "artist_id": 4271,
+   "album_type": "live_album",
+   "motivo": "Discografía RYM de «Gustavo Dudamel» (Live Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/staatskapelle-berlin-gustavo-dudamel-daniel-barenboim/the-piano-concertos",
+   "parent_href": "/artist/gustavo-dudamel",
+   "artist_id": 4271,
+   "album_type": "live_album",
+   "motivo": "Discografía RYM de «Gustavo Dudamel» (Live Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/los-angeles-philharmonic-gustavo-dudamel-yuja-wang/the-piano-concertos-and-paganini-rhapsody",
+   "parent_href": "/artist/gustavo-dudamel",
+   "artist_id": 4271,
+   "album_type": "live_album",
+   "motivo": "Discografía RYM de «Gustavo Dudamel» (Live Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/comp/berliner-philharmoniker-claudio-abbado-gustavo-dudamel-bernard-haitink-daniel-harding-andris-nelsons-yannick-nezet-seguin-kirill-petrenko-sir-simon-rattle/symphonien-1-10",
+   "parent_href": "/artist/gustavo-dudamel",
+   "artist_id": 4271,
+   "album_type": "compilation",
+   "motivo": "Discografía RYM de «Gustavo Dudamel» (Compilation), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/daniela-padron-olga-lopez/latam",
+   "parent_href": "/artist/olga-lopez",
+   "artist_id": 6643,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Olga López» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/motherflowers-underaiki-boston-rex/rock-i-rojo-sangre",
+   "parent_href": "/artist/motherflowers",
+   "artist_id": 4274,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Motherflowers» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/empty-stomach/empty-stomach-sleep-aid",
+   "parent_href": "/artist/empty-stomach",
+   "artist_id": 5823,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Empty Stomach» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/empty-stomach/empty-stomach-yearns-to-be-something-more",
+   "parent_href": "/artist/empty-stomach",
+   "artist_id": 5823,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Empty Stomach» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/empty-stomach/my-boy-twin-fantasy",
+   "parent_href": "/artist/empty-stomach",
+   "artist_id": 5823,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Empty Stomach» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/capitan-mostacho/wdk-we-dont-know",
+   "parent_href": "/artist/capitan-mostacho",
+   "artist_id": 5825,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Capitán Mostacho» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/pastor-lopez/la-venezolana",
+   "parent_href": "/artist/pastor-lopez",
+   "artist_id": 6648,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Pastor López» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/pastor-lopez/el-exitoso",
+   "parent_href": "/artist/pastor-lopez",
+   "artist_id": 6648,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Pastor López» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/pastor-lopez/el-inigualable-sabor-de-pastor-lopez",
+   "parent_href": "/artist/pastor-lopez",
+   "artist_id": 6648,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Pastor López» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/pastor-lopez/para-mi-colombia",
+   "parent_href": "/artist/pastor-lopez",
+   "artist_id": 6648,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Pastor López» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/pastor-lopez/el-insuperable",
+   "parent_href": "/artist/pastor-lopez",
+   "artist_id": 6648,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Pastor López» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/pastor-lopez/el-incontenible",
+   "parent_href": "/artist/pastor-lopez",
+   "artist_id": 6648,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Pastor López» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/pastor-lopez/el-pobre-leandro-el-halconcito",
+   "parent_href": "/artist/pastor-lopez",
+   "artist_id": 6648,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Pastor López» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/comp/pastor-lopez-y-su-combo/pastor-lopez-y-sus-exitos",
+   "parent_href": "/artist/pastor-lopez",
+   "artist_id": 6648,
+   "album_type": "compilation",
+   "motivo": "Discografía RYM de «Pastor López» (Compilation), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/comp/pastor-lopez/el-inigualable-pastor",
+   "parent_href": "/artist/pastor-lopez",
+   "artist_id": 6648,
+   "album_type": "compilation",
+   "motivo": "Discografía RYM de «Pastor López» (Compilation), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/comp/mc-ardilla/mc-ardilla-vol-1",
+   "parent_href": "/artist/mc-ardilla",
+   "artist_id": 6650,
+   "album_type": "compilation",
+   "motivo": "Discografía RYM de «MC Ardilla» (Compilation), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/alirio_diaz/four_centuries_of_the_classic_spanish_guitar",
+   "parent_href": "/artist/alirio_diaz",
+   "artist_id": 3381,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Alirio Díaz» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/alirio-diaz/the-art-of-the-spanish-guitar",
+   "parent_href": "/artist/alirio_diaz",
+   "artist_id": 3381,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Alirio Díaz» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/comp/alirio_diaz/the_guitar_artistry_of_alirio_diaz",
+   "parent_href": "/artist/alirio_diaz",
+   "artist_id": 3381,
+   "album_type": "compilation",
+   "motivo": "Discografía RYM de «Alirio Díaz» (Compilation), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/comp/los-terricolas/los-exitos-de-los-terricolas",
+   "parent_href": "/artist/los_terricolas",
+   "artist_id": 3725,
+   "album_type": "compilation",
+   "motivo": "Discografía RYM de «Los Terrícolas» (Compilation), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/comp/los_terricolas/lo_mejor_de_los_terricolas",
+   "parent_href": "/artist/los_terricolas",
+   "artist_id": 3725,
+   "album_type": "compilation",
+   "motivo": "Discografía RYM de «Los Terrícolas» (Compilation), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/el-carrao-de-palmarito-con-los-llaneros-del-oeste/llanura-yo-soy-tu-hijo",
+   "parent_href": "/artist/el-carrao-de-palmarito",
+   "artist_id": 5830,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «El Carrao de Palmarito» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/ep/emily-galaviz/popurri-02-hazanas-de-un-llanero-el-hombre-que-tanto-ame-por-ese-suspiro-juanita-mi-caballo-y-yo-kirpa-altanera-chipola-del-siglo-xx-catira-marmolena-gaban-peligroso-donde-estan-los-gallos-en-vivo",
+   "parent_href": "/artist/emily-galaviz",
+   "artist_id": 5809,
+   "album_type": "ep",
+   "motivo": "Discografía RYM de «Emily Galaviz» (EP), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/reymar-perdomo/me-fui-en-vivo",
+   "parent_href": "/artist/reymar-perdomo",
+   "artist_id": 5791,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Reymar Perdomo» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/reymar-perdomo/me-fui",
+   "parent_href": "/artist/reymar-perdomo",
+   "artist_id": 5791,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Reymar Perdomo» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/angel-c-loyola/el-guariqueno-si-sabe",
+   "parent_href": "/artist/angel-custodio-loyola",
+   "artist_id": 4287,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Ángel Custodio Loyola» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/chuchu-bermudas/la-celda-de-bob-cypher-002",
+   "parent_href": "/artist/chuchu-bermudas",
+   "artist_id": 6675,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Chuchú Bermudas» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/djmix/lexestasolo/el-set-del-angel",
+   "parent_href": "/artist/lexestasolo",
+   "artist_id": 6153,
+   "album_type": "other",
+   "motivo": "Discografía RYM de «lexestasolo» (DJ Mix), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/chico-salas-chucho-sanoja-y-su-orquesta/chico-sensacion-salas",
+   "parent_href": "/artist/chico-salas",
+   "artist_id": 6677,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Chico Salas» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/chico-salas-y-los-peniques/chico-salas-y-los-peniques",
+   "parent_href": "/artist/chico-salas",
+   "artist_id": 6677,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Chico Salas» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/yung-iverson/el-flex",
+   "parent_href": "/artist/yung-iverson",
+   "artist_id": 5794,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Yung Iverson» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/ep/yung-iverson/el-preciso",
+   "parent_href": "/artist/yung-iverson",
+   "artist_id": 5794,
+   "album_type": "ep",
+   "motivo": "Discografía RYM de «Yung Iverson» (EP), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/ep/rawayana-akapellah/_que-vuelvan-los-matine",
+   "parent_href": "/artist/akapellah",
+   "artist_id": 4255,
+   "album_type": "ep",
+   "motivo": "Discografía RYM de «Akapellah» (EP), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/akapellah-fat-joe/los-gordos",
+   "parent_href": "/artist/akapellah",
+   "artist_id": 4255,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Akapellah» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/yoss-bones-akapellah/no-soy-criminal",
+   "parent_href": "/artist/akapellah",
+   "artist_id": 4255,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Akapellah» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/akapellah-oldtape/no-eres-rapero",
+   "parent_href": "/artist/akapellah",
+   "artist_id": 4255,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Akapellah» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/djmix/waru7k/y2magichyperfunk-playlist-dj-mix",
+   "parent_href": "/artist/waru7k",
+   "artist_id": 5843,
+   "album_type": "other",
+   "motivo": "Discografía RYM de «Waru7k» (DJ Mix), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/gilberto-perez/gilberto-perez-y-su-conjunto",
+   "parent_href": "/artist/gilberto-perez",
+   "artist_id": 5804,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Gilberto Perez» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/gilberto-perez/gilberto-perez-y-sus-compadres",
+   "parent_href": "/artist/gilberto-perez",
+   "artist_id": 5804,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Gilberto Perez» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/gilberto-perez/con-cancines-te-quise-maria-luisa",
+   "parent_href": "/artist/gilberto-perez",
+   "artist_id": 5804,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Gilberto Perez» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/priska/ethos",
+   "parent_href": "/artist/priska-1",
+   "artist_id": 4528,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Priska» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/djmix/weed420/american-eagle",
+   "parent_href": "/artist/weed420",
+   "artist_id": 6017,
+   "album_type": "other",
+   "motivo": "Discografía RYM de «Weed420» (DJ Mix), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/ep/_dlm/late-night-2",
+   "parent_href": "/artist/_dlm",
+   "artist_id": 5814,
+   "album_type": "ep",
+   "motivo": "Discografía RYM de «DLM» (EP), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/hellvete-bear-bones-lay-low/spliff-tape",
+   "parent_href": "/artist/bear_bones__lay_low",
+   "artist_id": 6154,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Bear Bones, Lay Low» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/esos-cubos/_",
+   "parent_href": "/artist/esos-cubos",
+   "artist_id": 4529,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Esos... Cubos» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/sigmatus/ජියෝවානි-ජෝජියෝ-පීට්-බලු-පැටවුන්",
+   "parent_href": "/artist/sigmatus",
+   "artist_id": 6687,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Sigmatus» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/djmix/sigmatus/sigmatus-liveset-noisefest-4",
+   "parent_href": "/artist/sigmatus",
+   "artist_id": 6687,
+   "album_type": "other",
+   "motivo": "Discografía RYM de «Sigmatus» (DJ Mix), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/djmix/sigmatus/sigmatus-1gec-live_leklub-with-hypercore-25_10_2024",
+   "parent_href": "/artist/sigmatus",
+   "artist_id": 6687,
+   "album_type": "other",
+   "motivo": "Discografía RYM de «Sigmatus» (DJ Mix), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/djmix/sigmatus/sigmatus-dj-set-pointe-lafayette-with-silence-kills-13_01_2023",
+   "parent_href": "/artist/sigmatus",
+   "artist_id": 6687,
+   "album_type": "other",
+   "motivo": "Discografía RYM de «Sigmatus» (DJ Mix), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/mixtape/king-pride/real",
+   "parent_href": "/artist/king-pride",
+   "artist_id": 5817,
+   "album_type": "other",
+   "motivo": "Discografía RYM de «King Pride» (Mixtape), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/ep/king-stephen/of-embers-and-stars",
+   "parent_href": "/artist/king-stephen",
+   "artist_id": 6172,
+   "album_type": "ep",
+   "motivo": "Discografía RYM de «King Stephen» (EP), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/king-stephen/metanoia",
+   "parent_href": "/artist/king-stephen",
+   "artist_id": 6172,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «King Stephen» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/king-stephen/the-midnight-feast",
+   "parent_href": "/artist/king-stephen",
+   "artist_id": 6172,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «King Stephen» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/ep/agu/9-1-1-ep",
+   "parent_href": "/artist/agu-1",
+   "artist_id": 6181,
+   "album_type": "ep",
+   "motivo": "Discografía RYM de «AGU!» (EP), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/nathanielknows-x-purowuan-x-cuzzins/molly-nathanielknows-x-purowuan-x-cuzzins-remix",
+   "parent_href": "/artist/vulkan-1",
+   "artist_id": 6195,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «VulKan» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/los-prisioneros/el-baile-de-los-que-sobran-por-favor",
+   "parent_href": "/artist/los-prisioneros",
+   "artist_id": 4588,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Los Prisioneros» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/los-prisioneros/sexo-muevan-las-industrias",
+   "parent_href": "/artist/los-prisioneros",
+   "artist_id": 4588,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Los Prisioneros» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/los-prisioneros/sexo-nunca-quedas-mal-con-nadie",
+   "parent_href": "/artist/los-prisioneros",
+   "artist_id": 4588,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Los Prisioneros» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/los-prisioneros/el-muro",
+   "parent_href": "/artist/los-prisioneros",
+   "artist_id": 4588,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Los Prisioneros» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/comp/los-prisioneros/sexo",
+   "parent_href": "/artist/los-prisioneros",
+   "artist_id": 4588,
+   "album_type": "compilation",
+   "motivo": "Discografía RYM de «Los Prisioneros» (Compilation), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/comp/los-prisioneros/ni-por-la-razon-ni-por-la-fuerza",
+   "parent_href": "/artist/los-prisioneros",
+   "artist_id": 4588,
+   "album_type": "compilation",
+   "motivo": "Discografía RYM de «Los Prisioneros» (Compilation), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/ep/doktor-rheal/output_pt2",
+   "parent_href": "/artist/doktor_rheal",
+   "artist_id": 6200,
+   "album_type": "ep",
+   "motivo": "Discografía RYM de «Doktor Rheal» (EP), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/ep/doktor_rheal/underwater_ep",
+   "parent_href": "/artist/doktor_rheal",
+   "artist_id": 6200,
+   "album_type": "ep",
+   "motivo": "Discografía RYM de «Doktor Rheal» (EP), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/alfredo-sadel/canta-arpa",
+   "parent_href": "/artist/alfredo_sadel",
+   "artist_id": 3676,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Alfredo Sadel» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/alfredo-sadel/alfredo-sadel-interpreta-agustin-lara",
+   "parent_href": "/artist/alfredo_sadel",
+   "artist_id": 3676,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Alfredo Sadel» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/alfredo-sadel/canta-a-agustin-lara",
+   "parent_href": "/artist/alfredo_sadel",
+   "artist_id": 3676,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Alfredo Sadel» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/ep/alfredo-sadel-aldemaro-romero/fiesta-hispano-americana",
+   "parent_href": "/artist/alfredo_sadel",
+   "artist_id": 3676,
+   "album_type": "ep",
+   "motivo": "Discografía RYM de «Alfredo Sadel» (EP), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/rakky-ripper-oh_dulceari/love",
+   "parent_href": "/artist/oh_dulceari",
+   "artist_id": 5905,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «OH!DULCEARi» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/soledad-bravo/volumen-4",
+   "parent_href": "/artist/soledad-bravo",
+   "artist_id": 3749,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Soledad Bravo» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/soledad-bravo/canta-a-pablo-milanes-sings-pablo-milanes-trova-de-amor",
+   "parent_href": "/artist/soledad-bravo",
+   "artist_id": 3749,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Soledad Bravo» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/additional/pico-mifes/lagar-demos",
+   "parent_href": "/artist/pico-mifes",
+   "artist_id": 6210,
+   "album_type": "other",
+   "motivo": "Discografía RYM de «Pico Mifés» (Additional release), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/big-soto/cali",
+   "parent_href": "/artist/big-soto",
+   "artist_id": 4257,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Big Soto» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/big-soto/party",
+   "parent_href": "/artist/big-soto",
+   "artist_id": 4257,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Big Soto» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/jotaerre-big-soto-ecko-lil-joujou/la-demon",
+   "parent_href": "/artist/big-soto",
+   "artist_id": 4257,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Big Soto» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/nichess-one-3m5-lil-supa/metal",
+   "parent_href": "/artist/nichess-one",
+   "artist_id": 6703,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Nichess One» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/dj-sueldominimo/el-raptor",
+   "parent_href": "/artist/dj-sueldominimo",
+   "artist_id": 6219,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «DJ SUELDOminimo» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/vir-martialis/metapolemos-ii-the-spiritual-aesthetics-of-war",
+   "parent_href": "/artist/vir-martialis",
+   "artist_id": 6226,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Vir Martialis» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/additional/san/tres-2022",
+   "parent_href": "/artist/san-11",
+   "artist_id": 6715,
+   "album_type": "other",
+   "motivo": "Discografía RYM de «SAN» (Additional release), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/additional/san/paralelos",
+   "parent_href": "/artist/san-11",
+   "artist_id": 6715,
+   "album_type": "other",
+   "motivo": "Discografía RYM de «SAN» (Additional release), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/ep/sendero-veneco/preludio-2_0-el-helicoide-de-la-suprema-felicidad",
+   "parent_href": "/artist/sendero-veneco",
+   "artist_id": 4592,
+   "album_type": "ep",
+   "motivo": "Discografía RYM de «Sendero Veneco» (EP), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/kid606/down-with-the-scene",
+   "parent_href": "/artist/kid606",
+   "artist_id": 6719,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Kid606» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/kid606/ps-you-love-me",
+   "parent_href": "/artist/kid606",
+   "artist_id": 6719,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Kid606» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/kid606/recollected-ambient-works-vol-1-bored-of-excitement",
+   "parent_href": "/artist/kid606",
+   "artist_id": 6719,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Kid606» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/kid606/recollected-ambient-works-vol-2-escape-to-los-angeles",
+   "parent_href": "/artist/kid606",
+   "artist_id": 6719,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Kid606» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/ep/kid606/the-soccergirl-ep",
+   "parent_href": "/artist/kid606",
+   "artist_id": 6719,
+   "album_type": "ep",
+   "motivo": "Discografía RYM de «Kid606» (EP), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/ep/kid606-joseph-nothing/-vol-4",
+   "parent_href": "/artist/kid606",
+   "artist_id": 6719,
+   "album_type": "ep",
+   "motivo": "Discografía RYM de «Kid606» (EP), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/ep/kid606/ps-i-dub-ya-ep",
+   "parent_href": "/artist/kid606",
+   "artist_id": 6719,
+   "album_type": "ep",
+   "motivo": "Discografía RYM de «Kid606» (EP), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/ep/kid606/done-with-the-scene",
+   "parent_href": "/artist/kid606",
+   "artist_id": 6719,
+   "album_type": "ep",
+   "motivo": "Discografía RYM de «Kid606» (EP), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/ep/kid606/kill-soundboy-kill",
+   "parent_href": "/artist/kid606",
+   "artist_id": 6719,
+   "album_type": "ep",
+   "motivo": "Discografía RYM de «Kid606» (EP), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/kid606-tigerboy/attitude",
+   "parent_href": "/artist/kid606",
+   "artist_id": 6719,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Kid606» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/kid606-timeblind/-vol-3",
+   "parent_href": "/artist/kid606",
+   "artist_id": 6719,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Kid606» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/kid606-the-posterboys-of-the-apocalypse/-vol-5",
+   "parent_href": "/artist/kid606",
+   "artist_id": 6719,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Kid606» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/kid606-dj-rupture/-vol-7",
+   "parent_href": "/artist/kid606",
+   "artist_id": 6719,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Kid606» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/electric-company-and-kid606-kevin-blechdom/-vol-6",
+   "parent_href": "/artist/kid606",
+   "artist_id": 6719,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Kid606» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/kid606-xanopticon/-vol-10",
+   "parent_href": "/artist/kid606",
+   "artist_id": 6719,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Kid606» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/kid606-stars-as-eyes/-vol-9",
+   "parent_href": "/artist/kid606",
+   "artist_id": 6719,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Kid606» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/kid606/the-illness",
+   "parent_href": "/artist/kid606",
+   "artist_id": 6719,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Kid606» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/sebastian-bauza-bueno/san-cristobal-cabezaeperro-retazos-inconclusos",
+   "parent_href": "/artist/sebastian-bauza-bueno",
+   "artist_id": 5918,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Sebastián Bauza-Bueno» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/ep/sebastian-bauza-bueno/demos-iii",
+   "parent_href": "/artist/sebastian-bauza-bueno",
+   "artist_id": 5918,
+   "album_type": "ep",
+   "motivo": "Discografía RYM de «Sebastián Bauza-Bueno» (EP), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/sebastian-bauza-bueno/ojos-demo",
+   "parent_href": "/artist/sebastian-bauza-bueno",
+   "artist_id": 5918,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Sebastián Bauza-Bueno» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/la-zaga/el-octavo",
+   "parent_href": "/artist/la-zaga",
+   "artist_id": 6721,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «La Zaga» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/ep/gypsyska-sexteto/ep1",
+   "parent_href": "/artist/gypsyska_orquesta",
+   "artist_id": 1678,
+   "album_type": "ep",
+   "motivo": "Discografía RYM de «Gypsy Ska Orquesta» (EP), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/ep/gypsyska-orquesta/ep2",
+   "parent_href": "/artist/gypsyska_orquesta",
+   "artist_id": 1678,
+   "album_type": "ep",
+   "motivo": "Discografía RYM de «Gypsy Ska Orquesta» (EP), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/calle-ciega/mas-caliente",
+   "parent_href": "/artist/calle-ciega",
+   "artist_id": 6724,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Calle Ciega» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/quinteto-contrapunto/musica-popular-y-folklorica-de-venezuela-vol-4",
+   "parent_href": "/artist/quinteto-contrapunto",
+   "artist_id": 3843,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Quinteto Contrapunto» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/cherry-navarro-los-melodicos/recordando-a-cherry-con-los-melodicos",
+   "parent_href": "/artist/los-melodicos",
+   "artist_id": 3794,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Los Melódicos» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/liz-con-los-melodicos/la-sabrosita",
+   "parent_href": "/artist/los-melodicos",
+   "artist_id": 3794,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Los Melódicos» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/los-melodicos/el-mondongo-cuatro-cirios",
+   "parent_href": "/artist/los-melodicos",
+   "artist_id": 3794,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Los Melódicos» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/comp/los-melodicos/orquesta-de-los-exitos",
+   "parent_href": "/artist/los-melodicos",
+   "artist_id": 3794,
+   "album_type": "compilation",
+   "motivo": "Discografía RYM de «Los Melódicos» (Compilation), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/comp/los-melodicos/exito-tras-exito-vol-2",
+   "parent_href": "/artist/los-melodicos",
+   "artist_id": 3794,
+   "album_type": "compilation",
+   "motivo": "Discografía RYM de «Los Melódicos» (Compilation), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/comp/los-melodicos-los-hermanos-flores/el-baile-del-ano",
+   "parent_href": "/artist/los-melodicos",
+   "artist_id": 3794,
+   "album_type": "compilation",
+   "motivo": "Discografía RYM de «Los Melódicos» (Compilation), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/comp/los-melodicos/solo-melodicos",
+   "parent_href": "/artist/los-melodicos",
+   "artist_id": 3794,
+   "album_type": "compilation",
+   "motivo": "Discografía RYM de «Los Melódicos» (Compilation), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/comp/los-melodicos/clasicos-de-oro-de-los-melodicos",
+   "parent_href": "/artist/los-melodicos",
+   "artist_id": 3794,
+   "album_type": "compilation",
+   "motivo": "Discografía RYM de «Los Melódicos» (Compilation), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/los-torrealberos/concierto-en-la-llanura-vol-2-1",
+   "parent_href": "/artist/los-torrealberos",
+   "artist_id": 6725,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Los Torrealberos» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/comp/mario-suarez-hector-cabrera-rafael-montano-los-torrealberos/llano-querido-las-mejores-composiciones-de-juan-vicente-torrealba-en-las-voces-de-sus-mejores-interpretes",
+   "parent_href": "/artist/rafael-montano",
+   "artist_id": 6726,
+   "album_type": "compilation",
+   "motivo": "Discografía RYM de «Rafael Montaño» (Compilation), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/grupo-mango/grupo-mango",
+   "parent_href": "/artist/grupo-mango",
+   "artist_id": 3708,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Grupo Mango» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/porfi-jimenez-y-su-orquesta/porfi-85",
+   "parent_href": "/artist/porfi-jimenez-y-su-orquesta",
+   "artist_id": 4595,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Porfi Jiménez y Su Orquesta» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/porfi-jimenez/a-bailar-conmigo",
+   "parent_href": "/artist/porfi-jimenez-y-su-orquesta",
+   "artist_id": 4595,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Porfi Jiménez y Su Orquesta» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/ep/porfi-jimenez-y-su-orquesta/a-bailar-cumbia",
+   "parent_href": "/artist/porfi-jimenez-y-su-orquesta",
+   "artist_id": 4595,
+   "album_type": "ep",
+   "motivo": "Discografía RYM de «Porfi Jiménez y Su Orquesta» (EP), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/rvssian-danny-ocean-sean-paul/no-me-controles",
+   "parent_href": "/artist/danny-ocean",
+   "artist_id": 4249,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Danny Ocean» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/mixtape/neutro-shorty/5-historias-mixtape",
+   "parent_href": "/artist/neutro-shorty",
+   "artist_id": 4256,
+   "album_type": "other",
+   "motivo": "Discografía RYM de «Neutro Shorty» (Mixtape), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/neutro-shorty/el-coco",
+   "parent_href": "/artist/neutro-shorty",
+   "artist_id": 4256,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Neutro Shorty» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/elena-rose-neutro-shorty/catira",
+   "parent_href": "/artist/neutro-shorty",
+   "artist_id": 4256,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Neutro Shorty» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/djmix/lan-liu/el-vacio-te-devuelve-la-mirada",
+   "parent_href": "/artist/lan-liu",
+   "artist_id": 5927,
+   "album_type": "other",
+   "motivo": "Discografía RYM de «Lan Liu» (DJ Mix), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/marc-segui-micro-tdh/la-culpa",
+   "parent_href": "/artist/micro-tdh",
+   "artist_id": 4251,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Micro TDH» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/rawayana-mr-eazi-micro-tdh/dame-un-break-remix",
+   "parent_href": "/artist/micro-tdh",
+   "artist_id": 4251,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Micro TDH» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/suei-micro-tdh/お前がこれからどうなろうと、俺はお前をずっと愛している",
+   "parent_href": "/artist/micro-tdh",
+   "artist_id": 4251,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Micro TDH» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/ep/gustavo-casas-y-los-que-buscan/ep-azul",
+   "parent_href": "/artist/gustavo-casas-y-los-que-buscan",
+   "artist_id": 5777,
+   "album_type": "ep",
+   "motivo": "Discografía RYM de «Gustavo Casas y los Que Buscan» (EP), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/irakere-trabuco/en-vivo-poliedro-de-caracas-mayo-15-81",
+   "parent_href": "/artist/el-trabuco-venezolano",
+   "artist_id": 3483,
+   "album_type": "live_album",
+   "motivo": "Discografía RYM de «El Trabuco Venezolano» (Live Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/comp/ray-perez-y-el-grupo-casabe/ray-perez-y-el-grupo-casabe",
+   "parent_href": "/artist/ray-perez-y-su-orquesta",
+   "artist_id": 4605,
+   "album_type": "compilation",
+   "motivo": "Discografía RYM de «Ray Pérez y su Orquesta» (Compilation), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/maye/la-maquina",
+   "parent_href": "/artist/maye",
+   "artist_id": 5932,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Maye» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/ep/mr-pauer/dare-remixes",
+   "parent_href": "/artist/mr-pauer",
+   "artist_id": 5883,
+   "album_type": "ep",
+   "motivo": "Discografía RYM de «Mr. Pauer» (EP), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/thalia-mau-y-ricky/ya-tu-me-conoces",
+   "parent_href": "/artist/mau-y-ricky",
+   "artist_id": 4248,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Mau y Ricky» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/lali-mau-y-ricky/no-puedo-olvidarte",
+   "parent_href": "/artist/mau-y-ricky",
+   "artist_id": 4248,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Mau y Ricky» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/mau-y-ricky/miami",
+   "parent_href": "/artist/mau-y-ricky",
+   "artist_id": 4248,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Mau y Ricky» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/ep/fur-coat/the-right-move-ep",
+   "parent_href": "/artist/fur_coat",
+   "artist_id": 4282,
+   "album_type": "ep",
+   "motivo": "Discografía RYM de «Fur Coat» (EP), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/ep/fur-coat-alfa-romero/antigones-dream",
+   "parent_href": "/artist/fur_coat",
+   "artist_id": 4282,
+   "album_type": "ep",
+   "motivo": "Discografía RYM de «Fur Coat» (EP), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/mixtape/arca/andandandandand",
+   "parent_href": "/artist/arca-1",
+   "artist_id": 4235,
+   "album_type": "other",
+   "motivo": "Discografía RYM de «Arca» (Mixtape), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/arca/_",
+   "parent_href": "/artist/arca-1",
+   "artist_id": 4235,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Arca» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/arca/ritual",
+   "parent_href": "/artist/arca-1",
+   "artist_id": 4235,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Arca» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/djmix/arca/moma-ps1-warm-up-mix",
+   "parent_href": "/artist/arca-1",
+   "artist_id": 4235,
+   "album_type": "other",
+   "motivo": "Discografía RYM de «Arca» (DJ Mix), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/djmix/arca/_-1",
+   "parent_href": "/artist/arca-1",
+   "artist_id": 4235,
+   "album_type": "other",
+   "motivo": "Discografía RYM de «Arca» (DJ Mix), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/unauth/arca/_",
+   "parent_href": "/artist/arca-1",
+   "artist_id": 4235,
+   "album_type": "other",
+   "motivo": "Discografía RYM de «Arca» (Bootleg / Unauthorized), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/unauth/arca/_-1",
+   "parent_href": "/artist/arca-1",
+   "artist_id": 4235,
+   "album_type": "other",
+   "motivo": "Discografía RYM de «Arca» (Bootleg / Unauthorized), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/unauth/arca/_-2",
+   "parent_href": "/artist/arca-1",
+   "artist_id": 4235,
+   "album_type": "other",
+   "motivo": "Discografía RYM de «Arca» (Bootleg / Unauthorized), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/unauth/arca/live-at-coachella-2025-weekend-1",
+   "parent_href": "/artist/arca-1",
+   "artist_id": 4235,
+   "album_type": "other",
+   "motivo": "Discografía RYM de «Arca» (Bootleg / Unauthorized), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/unauth/arca/live-at-coachella-2025-weekend-2",
+   "parent_href": "/artist/arca-1",
+   "artist_id": 4235,
+   "album_type": "other",
+   "motivo": "Discografía RYM de «Arca» (Bootleg / Unauthorized), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/anakena/carita-triste",
+   "parent_href": "/artist/anakena",
+   "artist_id": 4524,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Anakena» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/anakena/carita-triste",
+   "parent_href": "/artist/anakena",
+   "artist_id": 4524,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Anakena» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/victor-drija/unica-number-one",
+   "parent_href": "/artist/victor-drija",
+   "artist_id": 6729,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Víctor Drija» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/victor-drija/un-poquito-mas",
+   "parent_href": "/artist/victor-drija",
+   "artist_id": 6729,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Víctor Drija» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/victor-drija/tu-culpa",
+   "parent_href": "/artist/victor-drija",
+   "artist_id": 6729,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Víctor Drija» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/berliner-symphoniker-eduardo-marturet/symphony-no-2-in-d-major-op-73",
+   "parent_href": "/artist/eduardo-marturet",
+   "artist_id": 6737,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Eduardo Marturet» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/comp/capella-cordina-alejandro-planchart/missa-se-la-face-ay-pale-chansons-missa-sancti-jacobi-rite-maiorem-ecclesiae-militantis",
+   "parent_href": "/artist/alejandro-planchart",
+   "artist_id": 5950,
+   "album_type": "compilation",
+   "motivo": "Discografía RYM de «Alejandro Planchart» (Compilation), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/moroka/ja",
+   "parent_href": "/artist/orestes-gomez",
+   "artist_id": 6680,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Orestes Gómez» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/djmix/cardopusher-safety-trance/boiler-room-caracas",
+   "parent_href": "/artist/safety-trance",
+   "artist_id": 5961,
+   "album_type": "other",
+   "motivo": "Discografía RYM de «Safety Trance» (DJ Mix), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/victor-porfidio/paradise",
+   "parent_href": "/artist/victor-porfidio",
+   "artist_id": 5963,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Victor Porfidio» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/simon-bolivar-symphony-orchestra-of-venezuela-eduardo-mata/latin-american-ballets",
+   "parent_href": "/artist/orquesta-sinfonica-simon-bolivar",
+   "artist_id": 4371,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Orquesta Sinfónica Simón Bolívar» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/simon-bolivar-symphonic-orchestra-of-venezuela-enrique-arturo-diemecke-andres-diaz/symphony-no-4-cello-concerto-no-2-amazonas",
+   "parent_href": "/artist/orquesta-sinfonica-simon-bolivar",
+   "artist_id": 4371,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Orquesta Sinfónica Simón Bolívar» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/simon-bolivar-orchestra-of-venezuela-goteborg-wind-orchestra-christian-lindberg/symphony-no-i-and-ii",
+   "parent_href": "/artist/orquesta-sinfonica-simon-bolivar",
+   "artist_id": 4371,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Orquesta Sinfónica Simón Bolívar» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/ep/dj-babatr/the-tribe-baila",
+   "parent_href": "/artist/dj-babatr-1",
+   "artist_id": 4237,
+   "album_type": "ep",
+   "motivo": "Discografía RYM de «DJ Babatr» (EP), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/ep/dj-babatr-dj-deep-rh/the-express",
+   "parent_href": "/artist/dj-babatr-1",
+   "artist_id": 4237,
+   "album_type": "ep",
+   "motivo": "Discografía RYM de «DJ Babatr» (EP), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/ep/dj-babatr/the-journey",
+   "parent_href": "/artist/dj-babatr-1",
+   "artist_id": 4237,
+   "album_type": "ep",
+   "motivo": "Discografía RYM de «DJ Babatr» (EP), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/dj-babatr/the-journey",
+   "parent_href": "/artist/dj-babatr-1",
+   "artist_id": 4237,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «DJ Babatr» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/dj-gigola-dj-babatr/la-batteria-dj-babatr-remix",
+   "parent_href": "/artist/dj-babatr-1",
+   "artist_id": 4237,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «DJ Babatr» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/dj-babatr/its-you-radio-edit",
+   "parent_href": "/artist/dj-babatr-1",
+   "artist_id": 4237,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «DJ Babatr» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/didi-han-dj-babatr/i-sing-dj-babatr-remix",
+   "parent_href": "/artist/dj-babatr-1",
+   "artist_id": 4237,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «DJ Babatr» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/djmix/dj-baba/the-godfather-of-raptor-house",
+   "parent_href": "/artist/dj-babatr-1",
+   "artist_id": 4237,
+   "album_type": "other",
+   "motivo": "Discografía RYM de «DJ Babatr» (DJ Mix), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/djmix/dj-babatr/nts-radio",
+   "parent_href": "/artist/dj-babatr-1",
+   "artist_id": 4237,
+   "album_type": "other",
+   "motivo": "Discografía RYM de «DJ Babatr» (DJ Mix), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/djmix/dj-babatr/boiler-room-caracas",
+   "parent_href": "/artist/dj-babatr-1",
+   "artist_id": 4237,
+   "album_type": "other",
+   "motivo": "Discografía RYM de «DJ Babatr» (DJ Mix), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/comp/dj-baba/the-best-of-street-house-venezuela",
+   "parent_href": "/artist/dj-babatr-1",
+   "artist_id": 4237,
+   "album_type": "compilation",
+   "motivo": "Discografía RYM de «DJ Babatr» (Compilation), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/comp/dj-babatr/raptor-compilation",
+   "parent_href": "/artist/dj-babatr-1",
+   "artist_id": 4237,
+   "album_type": "compilation",
+   "motivo": "Discografía RYM de «DJ Babatr» (Compilation), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/comp/la-seguridad-nacional/la-seguridad-nacional-1983-1993",
+   "parent_href": "/artist/la_seguridad_nacional",
+   "artist_id": 218,
+   "album_type": "compilation",
+   "motivo": "Discografía RYM de «Seguridad Nacional» (Compilation), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/todo-bien-todo-mal/quiero-que-me-comas-la-boca",
+   "parent_href": "/artist/todo-bien-todo-mal",
+   "artist_id": 4630,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Todo Bien Todo Mal» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/isra/no-aguanto-mas",
+   "parent_href": "/artist/isra",
+   "artist_id": 6747,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Isra» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/zamora/instrumental-oasis-vol-6",
+   "parent_href": "/artist/zamora-2",
+   "artist_id": 5973,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Zamora» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/los-colores/quemas",
+   "parent_href": "/artist/los-colores-2",
+   "artist_id": 4631,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Los Colores» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/los-colores/la-receta",
+   "parent_href": "/artist/los-colores-2",
+   "artist_id": 4631,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Los Colores» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/los-colores/la-catastrofe",
+   "parent_href": "/artist/los-colores-2",
+   "artist_id": 4631,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Los Colores» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/comp/carlos-quintana/tabaco-1974-1985",
+   "parent_href": "/artist/carlos-quintana",
+   "artist_id": 6749,
+   "album_type": "compilation",
+   "motivo": "Discografía RYM de «Carlos Quintana» (Compilation), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/luis-felipe-gonzalez/salsa-and-aji",
+   "parent_href": "/artist/luis-felipe-gonzalez",
+   "artist_id": 6750,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Luis Felipe González» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/nani/katan",
+   "parent_href": "/artist/nani-2",
+   "artist_id": 5975,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Nani» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/odense-symfoniorkester-jan-wagner-susanne-resmark/symphony-no-7-klein-idas-blumen-gesprache-mit-dem-tod-jahrmarkt-bei-london",
+   "parent_href": "/artist/jan_wagner",
+   "artist_id": 6007,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Jan Wagner» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/iran/the-rock-i-a-sisyphus-kind-of-tale",
+   "parent_href": "/artist/iran-2",
+   "artist_id": 6694,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Irán» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/iran/salir-es-entrar",
+   "parent_href": "/artist/iran-2",
+   "artist_id": 6694,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Irán» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/mixtape/dj-loopy/vol-2",
+   "parent_href": "/artist/dj-loopy",
+   "artist_id": 6016,
+   "album_type": "other",
+   "motivo": "Discografía RYM de «DJ Loopy» (Mixtape), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/mixtape/dj-loopy/vol-3",
+   "parent_href": "/artist/dj-loopy",
+   "artist_id": 6016,
+   "album_type": "other",
+   "motivo": "Discografía RYM de «DJ Loopy» (Mixtape), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/mixtape/dj-loopy/vol-4",
+   "parent_href": "/artist/dj-loopy",
+   "artist_id": 6016,
+   "album_type": "other",
+   "motivo": "Discografía RYM de «DJ Loopy» (Mixtape), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/mixtape/dj-loopy/vol-5",
+   "parent_href": "/artist/dj-loopy",
+   "artist_id": 6016,
+   "album_type": "other",
+   "motivo": "Discografía RYM de «DJ Loopy» (Mixtape), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/mixtape/dj-loopy/volume-d",
+   "parent_href": "/artist/dj-loopy",
+   "artist_id": 6016,
+   "album_type": "other",
+   "motivo": "Discografía RYM de «DJ Loopy» (Mixtape), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/mixtape/dj-loopy/volume-j",
+   "parent_href": "/artist/dj-loopy",
+   "artist_id": 6016,
+   "album_type": "other",
+   "motivo": "Discografía RYM de «DJ Loopy» (Mixtape), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/weed420/esto-no-es-un-show",
+   "parent_href": "/artist/weed420",
+   "artist_id": 6017,
+   "album_type": "live_album",
+   "motivo": "Discografía RYM de «Weed420» (Live Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/mikel-erentxun/el-ultimo-vuelo-del-hombre-bala",
+   "parent_href": "/artist/mikel-erentxun",
+   "artist_id": 6758,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Mikel Erentxun» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/ep/mikel-erentxun/corazon-salvaje",
+   "parent_href": "/artist/mikel-erentxun",
+   "artist_id": 6758,
+   "album_type": "ep",
+   "motivo": "Discografía RYM de «Mikel Erentxun» (EP), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/mikel-erentxun/el-cielo-es-del-color-de-las-hormigas",
+   "parent_href": "/artist/mikel-erentxun",
+   "artist_id": 6758,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Mikel Erentxun» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/mikel-erentxun/angel-en-llamas",
+   "parent_href": "/artist/mikel-erentxun",
+   "artist_id": 6758,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Mikel Erentxun» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/mikel-erentxun/esos-ojos-negros",
+   "parent_href": "/artist/mikel-erentxun",
+   "artist_id": 6758,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Mikel Erentxun» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/eseig-saint-laurent-x-yung-beef-x-el-mini-el-mini/dinero_f_fmusica-para-sogniar",
+   "parent_href": "/artist/el-mini",
+   "artist_id": 6763,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «El Mini» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/moisturisinmini-x-fernandito-kitkat-x-eseigsaint-laurent/mda-muerto_de_amor",
+   "parent_href": "/artist/el-mini",
+   "artist_id": 6763,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «El Mini» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/ep/north-95/demo-2",
+   "parent_href": "/artist/north-95",
+   "artist_id": 1402,
+   "album_type": "ep",
+   "motivo": "Discografía RYM de «North95» (EP), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/san-tome/la-culpa-y-la-verdad",
+   "parent_href": "/artist/san-tome",
+   "artist_id": 4646,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «San Tomé» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/san-tome/la-despedida",
+   "parent_href": "/artist/san-tome",
+   "artist_id": 4646,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «San Tomé» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/san-tome/la-montana",
+   "parent_href": "/artist/san-tome",
+   "artist_id": 4646,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «San Tomé» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/arturo-annecchino/mid-piano-3",
+   "parent_href": "/artist/arturo-annecchino",
+   "artist_id": 6026,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Arturo Annecchino» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/mj-nebreda-ms-nina-invt/arepa",
+   "parent_href": "/artist/mj-nebreda",
+   "artist_id": 6035,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «MJ Nebreda» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/grupo-treo/pegado-a-tu-boca",
+   "parent_href": "/artist/grupo-treo",
+   "artist_id": 4653,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Grupo Treo» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/un-solo-pueblo/la-primera-pelicula-musical-venezolana",
+   "parent_href": "/artist/un_solo_pueblo",
+   "artist_id": 3857,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Un Solo Pueblo» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/un-solo-pueblo/vol-12-1",
+   "parent_href": "/artist/un_solo_pueblo",
+   "artist_id": 3857,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Un Solo Pueblo» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/nirse-gonzalez/guitar-music-of-venezuela",
+   "parent_href": "/artist/nirse-gonzalez",
+   "artist_id": 6048,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Nirse González» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/van-der-dijs/vendetta",
+   "parent_href": "/artist/van-der-dijs",
+   "artist_id": 4610,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Van Der Dijs» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/yoa-orchestra-of-the-americas-carlos-miguel-prieto-gabriela-montero/piano-concerto-no-2-ex-patria-improvisations",
+   "parent_href": "/artist/gabriela-montero",
+   "artist_id": 3403,
+   "album_type": "live_album",
+   "motivo": "Discografía RYM de «Gabriela Montero» (Live Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/the-orchestra-of-the-americas-carlos-miguel-prieto-gabriela-montero/piano-concerto-no_1-latin-concerto-piano-concerto-in-g-major",
+   "parent_href": "/artist/gabriela-montero",
+   "artist_id": 3403,
+   "album_type": "live_album",
+   "motivo": "Discografía RYM de «Gabriela Montero» (Live Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/comp/martha-argerich-nelson-goerner-lilya-zilberstein-gabriela-montero-daniel-gerzenberg-anton-gerzenberg-alexander-mogilevsky/rachmaninov-music-for-two-pianos",
+   "parent_href": "/artist/gabriela-montero",
+   "artist_id": 3403,
+   "album_type": "compilation",
+   "motivo": "Discografía RYM de «Gabriela Montero» (Compilation), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/nelson-pinedo/el-chevrolito",
+   "parent_href": "/artist/nelson-pinedo",
+   "artist_id": 6783,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Nelson Pinedo» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/ep/alleh-yorghaki/la-formula",
+   "parent_href": "/artist/alleh",
+   "artist_id": 6160,
+   "album_type": "ep",
+   "motivo": "Discografía RYM de «Alleh» (EP), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/alleh-yorghaki/capaz-merengueton",
+   "parent_href": "/artist/alleh",
+   "artist_id": 6160,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Alleh» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/alleh-yorghaki/la-culpa-track-11",
+   "parent_href": "/artist/alleh",
+   "artist_id": 6160,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Alleh» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/orquesta-la-tremenda/fieston-en-colombia",
+   "parent_href": "/artist/orquesta-la-tremenda",
+   "artist_id": 4521,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Orquesta La Tremenda» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/niko-la-fabrica-motherflowers/fugaz-remix",
+   "parent_href": "/artist/niko-la-fabrica",
+   "artist_id": 5878,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Niko la Fábrica» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/nacho/folklore",
+   "parent_href": "/artist/nacho",
+   "artist_id": 6630,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Nacho» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/nacho/bailame",
+   "parent_href": "/artist/nacho",
+   "artist_id": 6630,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Nacho» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/nacho-yandel-and-bad-bunny/bailame-remix",
+   "parent_href": "/artist/nacho",
+   "artist_id": 6630,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Nacho» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/venesti-nacho-maffio/no-es-normal",
+   "parent_href": "/artist/nacho",
+   "artist_id": 6630,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Nacho» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/nacho/bizum-que-tienen-tus-ojos",
+   "parent_href": "/artist/nacho",
+   "artist_id": 6630,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Nacho» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/claudia-leitte-nacho/una-cosa-loca",
+   "parent_href": "/artist/nacho",
+   "artist_id": 6630,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Nacho» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/veztalone/chow-mein",
+   "parent_href": "/artist/veztalone",
+   "artist_id": 6691,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Veztalone» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/migliz-tayko/garua-sabor-a-querer",
+   "parent_href": "/artist/tayko",
+   "artist_id": 6183,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Tayko» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/salas/5-am-radio-edit",
+   "parent_href": "/artist/salas-1",
+   "artist_id": 5885,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «SALAS» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/omar-rudberg/omar-covers",
+   "parent_href": "/artist/omar-rudberg",
+   "artist_id": 6800,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Omar Rudberg» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/the-madman-alex/yami-demo",
+   "parent_href": "/artist/the-madman-alex",
+   "artist_id": 6174,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «The Madman Alex» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/luis-edgardo-ramirez/el-regreso-a-la-madre",
+   "parent_href": "/artist/luis-edgardo-ramirez",
+   "artist_id": 5871,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Luis Edgardo Ramírez» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/no_ram/goma-disco-a",
+   "parent_href": "/artist/no_ram",
+   "artist_id": 6801,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «nO_ram» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/no_ram/goma-disco-b",
+   "parent_href": "/artist/no_ram",
+   "artist_id": 6801,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «nO_ram» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/dell-soda/white-desert-glass-island",
+   "parent_href": "/artist/dell-soda",
+   "artist_id": 5869,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Dell Soda» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/comp/dell-soda/_",
+   "parent_href": "/artist/dell-soda",
+   "artist_id": 5869,
+   "album_type": "compilation",
+   "motivo": "Discografía RYM de «Dell Soda» (Compilation), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/cesar-castro/cesar-castro-y-sus-cumbiamberos",
+   "parent_href": "/artist/cesar-castro",
+   "artist_id": 5887,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «César Castro» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/gretchen-g/soltera",
+   "parent_href": "/artist/gretchen-g",
+   "artist_id": 5888,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Gretchen G» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/jorge-ostos/music-for-a-sidereal-voyage",
+   "parent_href": "/artist/jorge-ostos",
+   "artist_id": 5889,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Jorge Ostos» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/le-concert-dastree-emmanuelle-haim-camilla-tilling-kate-royal-sonia-prina-toby-spence-luca-pisaroni/la-resurrezione",
+   "parent_href": "/artist/luca_pisaroni",
+   "artist_id": 5891,
+   "album_type": "live_album",
+   "motivo": "Discografía RYM de «Luca Pisaroni» (Live Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/cheo-hurtado-jose-archila/music-of-the-cuatro-and-the-arpa",
+   "parent_href": "/artist/jose-archila",
+   "artist_id": 6821,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «José Archila» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/cheo_hurtado/cuatro_arpas_y_un_cuatro",
+   "parent_href": "/artist/cheo_hurtado",
+   "artist_id": 3905,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Cheo Hurtado» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/vera-delacruz/al-verte",
+   "parent_href": "/artist/vera-delacruz",
+   "artist_id": 5893,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Vera Delacruz» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/ep/sr-presidente/コンコルド",
+   "parent_href": "/artist/sr-presidente",
+   "artist_id": 6806,
+   "album_type": "ep",
+   "motivo": "Discografía RYM de «Sr. Presidente» (EP), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/manao/onca002",
+   "parent_href": "/artist/manao",
+   "artist_id": 6807,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Manao» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/pm/re_verse",
+   "parent_href": "/artist/pm-7",
+   "artist_id": 6265,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «pm» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/djmix/pm/be-alive-vol-3",
+   "parent_href": "/artist/pm-7",
+   "artist_id": 6265,
+   "album_type": "other",
+   "motivo": "Discografía RYM de «pm» (DJ Mix), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/ep/yojaira-saudita/desaira",
+   "parent_href": "/artist/yojaira-saudita",
+   "artist_id": 6793,
+   "album_type": "ep",
+   "motivo": "Discografía RYM de «Yojaira Saudita» (EP), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/yojaira/f18-theme-song",
+   "parent_href": "/artist/yojaira-saudita",
+   "artist_id": 6793,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Yojaira Saudita» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/annia-linares/annia-canta-a-piloto-y-vera",
+   "parent_href": "/artist/annia-linares",
+   "artist_id": 6107,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Annia Linares» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/la-gallera-social-club/ecos-del-tercer-mundo-vol-2",
+   "parent_href": "/artist/la-gallera-social-club",
+   "artist_id": 4719,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «La Gallera Social Club» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/diveana-free-cover-venezuela/mix-diveana",
+   "parent_href": "/artist/diveana",
+   "artist_id": 4244,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Diveana» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/super-combo-los-tropicales/superbailable",
+   "parent_href": "/artist/super-combo-los-tropicales",
+   "artist_id": 4723,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Super Combo Los Tropicales» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/super-combo-los-tropicales/super",
+   "parent_href": "/artist/super-combo-los-tropicales",
+   "artist_id": 4723,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Super Combo Los Tropicales» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/willy-quintero/la-gatica",
+   "parent_href": "/artist/willy-quintero",
+   "artist_id": 6809,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Willy Quintero» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/los-imperials/ritmo-y-sabor",
+   "parent_href": "/artist/los-imperials",
+   "artist_id": 4522,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Los Imperial's» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/los-imperials/ritmo-y-color-de-venezuela",
+   "parent_href": "/artist/los-imperials",
+   "artist_id": 4522,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Los Imperial's» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/los-imperials/ritmo-y-color",
+   "parent_href": "/artist/los-imperials",
+   "artist_id": 4522,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Los Imperial's» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/los-imperials/a-ritmo-con-los-imperials",
+   "parent_href": "/artist/los-imperials",
+   "artist_id": 4522,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Los Imperial's» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/los-imperials/ritmo-candente-con-los-imperials",
+   "parent_href": "/artist/los-imperials",
+   "artist_id": 4522,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Los Imperial's» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/los-masters/masters-11",
+   "parent_href": "/artist/los-masters",
+   "artist_id": 4725,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Los Master's» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/los-masters/vol-15-la-muneca",
+   "parent_href": "/artist/los-masters",
+   "artist_id": 4725,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Los Master's» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/neblinna-flor-de-rap/un-angel",
+   "parent_href": "/artist/neblinna",
+   "artist_id": 1831,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Neblina» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/los-blanco/la-fiesta-caliente",
+   "parent_href": "/artist/los-blanco",
+   "artist_id": 3791,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Los Blanco» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/el-club-de-amigos-los-mejores-del-amor/volumen-2",
+   "parent_href": "/artist/el-club-de-amigos-los-mejores-del-amor",
+   "artist_id": 4729,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «El Club de Amigos Los Mejores del Amor» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/el-club-de-amigos-los-mejores-del-amor/volumen-iii",
+   "parent_href": "/artist/el-club-de-amigos-los-mejores-del-amor",
+   "artist_id": 4729,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «El Club de Amigos Los Mejores del Amor» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/el-club-de-amigos-los-mejores-del-amor/vol-4-nuestro-triceratops",
+   "parent_href": "/artist/el-club-de-amigos-los-mejores-del-amor",
+   "artist_id": 4729,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «El Club de Amigos Los Mejores del Amor» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/nelson-henriquez/venezuela-74",
+   "parent_href": "/artist/nelson-henriquez",
+   "artist_id": 6816,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Nelson Henriquez» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/cardenales-del-exito/volumen-3",
+   "parent_href": "/artist/cardenales-del-exito",
+   "artist_id": 4308,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Cardenales del Éxito» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/cardenales-del-exito-lila-morillo/la-soberana-en-gaitas",
+   "parent_href": "/artist/cardenales-del-exito",
+   "artist_id": 4308,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Cardenales del Éxito» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/cardenales-del-exito/esplendor-gaitero",
+   "parent_href": "/artist/cardenales-del-exito",
+   "artist_id": 4308,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Cardenales del Éxito» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/cardenales-del-exito/la-pelea",
+   "parent_href": "/artist/cardenales-del-exito",
+   "artist_id": 4308,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Cardenales del Éxito» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/comp/cardenales-del-exito/gaitas-para-la-eternidad",
+   "parent_href": "/artist/cardenales-del-exito",
+   "artist_id": 4308,
+   "album_type": "compilation",
+   "motivo": "Discografía RYM de «Cardenales del Éxito» (Compilation), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/djmix/wight-garden/【-无-感-转-场-】【-提-高-审-美-】【看着看着就没了】",
+   "parent_href": "/artist/wight-garden",
+   "artist_id": 6118,
+   "album_type": "other",
+   "motivo": "Discografía RYM de «Wight Garden» (DJ Mix), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/djmix/wight-garden/仙灵虫-收集-爱情塔罗占卜",
+   "parent_href": "/artist/wight-garden",
+   "artist_id": 6118,
+   "album_type": "other",
+   "motivo": "Discografía RYM de «Wight Garden» (DJ Mix), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/djmix/wight-garden/仙灵虫-收集-流星蝴蝶剑",
+   "parent_href": "/artist/wight-garden",
+   "artist_id": 6118,
+   "album_type": "other",
+   "motivo": "Discografía RYM de «Wight Garden» (DJ Mix), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/rincon-morales/gaiteros-de-la-nueva-ola",
+   "parent_href": "/artist/rincon-morales",
+   "artist_id": 4312,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Rincón Morales» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/rincon-morales/gaitas-1980",
+   "parent_href": "/artist/rincon-morales",
+   "artist_id": 4312,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Rincón Morales» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/conjunto-rincon-morales/gaitas-candela-y-salsa",
+   "parent_href": "/artist/rincon-morales",
+   "artist_id": 4312,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Rincón Morales» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/kyrie-seiko/_･ω_☆",
+   "parent_href": "/artist/kyrie-seiko",
+   "artist_id": 6121,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Kyrie Seiko» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/kyrie-seiko/я-вернусь-с-икером-касильясом",
+   "parent_href": "/artist/kyrie-seiko",
+   "artist_id": 6121,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Kyrie Seiko» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/ep/lyfer/mars-attack-ep",
+   "parent_href": "/artist/lyfer",
+   "artist_id": 6185,
+   "album_type": "ep",
+   "motivo": "Discografía RYM de «Lyfer» (EP), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/scott-colley-edward-simon-brian-blade/three-visitors",
+   "parent_href": "/artist/edward_simon",
+   "artist_id": 3480,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Edward Simon» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/edward-simon-magos-herrera/femininas",
+   "parent_href": "/artist/edward_simon",
+   "artist_id": 3480,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Edward Simon» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/cloudy/تسجيل-الدخول-باستخدام-الفيسبوك-log-in-with-facebook",
+   "parent_href": "/artist/cloudy-2",
+   "artist_id": 6823,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «cloudy» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/cloudy/_dj112dirtbag-cloudy-x-o-meu-pau-ta-chorando-funkcarioca-epiccollage-【128-bpm】",
+   "parent_href": "/artist/cloudy-2",
+   "artist_id": 6823,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «cloudy» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/oswin_chin_behilia/live",
+   "parent_href": "/artist/oswin_chin_behilia",
+   "artist_id": 6084,
+   "album_type": "live_album",
+   "motivo": "Discografía RYM de «Oswin Chin Behilia» (Live Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/wim-statius-muller/antillean-treasures",
+   "parent_href": "/artist/wim_statius_muller",
+   "artist_id": 6098,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Wim Statius Muller» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/lucas-eli/a-few-more-changes-2",
+   "parent_href": "/artist/lucas-eli",
+   "artist_id": 6103,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Lucas Eli» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/kris-berry/now-namelessly-objectifying-wonder",
+   "parent_href": "/artist/kris-berry",
+   "artist_id": 6104,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Kris Berry» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/ep/juan-serrano/don-juan-serrano",
+   "parent_href": "/artist/juan-serrano",
+   "artist_id": 5984,
+   "album_type": "ep",
+   "motivo": "Discografía RYM de «Juan Serrano» (EP), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/greg-hobson/loves-gonna-get-you-serious-love",
+   "parent_href": "/artist/greg-hobson",
+   "artist_id": 5996,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Greg Hobson» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/amy-sorinio/amy-sorinio-vol-2",
+   "parent_href": "/artist/amy-sorinio",
+   "artist_id": 6242,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Amy Sorinio» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/lord_brynner/calypsorama",
+   "parent_href": "/artist/lord_brynner",
+   "artist_id": 6130,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Lord Brynner» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/lord_brynner/calypsorama_in_jamaica",
+   "parent_href": "/artist/lord_brynner",
+   "artist_id": 6130,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Lord Brynner» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/lord-brynner/calypso-in-steel",
+   "parent_href": "/artist/lord_brynner",
+   "artist_id": 6130,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Lord Brynner» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/lord-brynner/the-wayward-boy-african-safari",
+   "parent_href": "/artist/lord_brynner",
+   "artist_id": 6130,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Lord Brynner» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/comp/lord_brynner/the_best_of_lord_brynner",
+   "parent_href": "/artist/lord_brynner",
+   "artist_id": 6130,
+   "album_type": "compilation",
+   "motivo": "Discografía RYM de «Lord Brynner» (Compilation), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/machel-montano-superblue/soca-kingdom",
+   "parent_href": "/artist/superblue",
+   "artist_id": 6136,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Superblue» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/blue_boy/soca_baptiste",
+   "parent_href": "/artist/blue_boy",
+   "artist_id": 6137,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Blue Boy» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/clive-alexander-annise-hadeed-and-the-gayap-music-workshop-trinidad-and-tobago/pan-jazz-conversations",
+   "parent_href": "/artist/clive-zanda-alexander",
+   "artist_id": 6139,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Clive \"Zanda\" Alexander» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/sundar-popo/hot-and-sweet",
+   "parent_href": "/artist/sundar-popo",
+   "artist_id": 6143,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Sundar Popo» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/comp/sundar-popo/greatest-hits-vol-1",
+   "parent_href": "/artist/sundar-popo",
+   "artist_id": 6143,
+   "album_type": "compilation",
+   "motivo": "Discografía RYM de «Sundar Popo» (Compilation), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/jessi-uribe/si-ya-me-voy",
+   "parent_href": "/artist/jessi-uribe",
+   "artist_id": 6072,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Jessi Uribe» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/crrdr/latinx-core",
+   "parent_href": "/artist/crrdr",
+   "artist_id": 6077,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «CRRDR» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/ep/crrdr/i-3-latincore",
+   "parent_href": "/artist/crrdr",
+   "artist_id": 6077,
+   "album_type": "ep",
+   "motivo": "Discografía RYM de «CRRDR» (EP), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/crrdr-rouborgen/cheat-code",
+   "parent_href": "/artist/crrdr",
+   "artist_id": 6077,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «CRRDR» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/crrdr/sobelo-drift",
+   "parent_href": "/artist/crrdr",
+   "artist_id": 6077,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «CRRDR» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/crrdr/chama-crrdr-latincore-remix",
+   "parent_href": "/artist/crrdr",
+   "artist_id": 6077,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «CRRDR» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/crrdr-freebot/tri-tek",
+   "parent_href": "/artist/crrdr",
+   "artist_id": 6077,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «CRRDR» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/djmix/crrdr/crrdr-presents-latincore",
+   "parent_href": "/artist/crrdr",
+   "artist_id": 6077,
+   "album_type": "other",
+   "motivo": "Discografía RYM de «CRRDR» (DJ Mix), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/comp/crrdr/crrdr-greatest-hits",
+   "parent_href": "/artist/crrdr",
+   "artist_id": 6077,
+   "album_type": "compilation",
+   "motivo": "Discografía RYM de «CRRDR» (Compilation), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/single/elsa-y-elmar-bruses/que-voy-a-hacer-conmigo",
+   "parent_href": "/artist/elsa_y_elmar",
+   "artist_id": 6826,
+   "album_type": "single",
+   "motivo": "Discografía RYM de «Elsa y Elmar» (Single), decisión «completar + altas» de Brian 2026-10-05"
+  },
+  {
+   "tipo": "album",
+   "origen": "nuevos",
+   "rym_href": "/release/album/last-tyrant/the-end-of-the-holy-legacy",
+   "parent_href": "/artist/last_tyrant",
+   "artist_id": 4709,
+   "album_type": "studio_album",
+   "motivo": "Discografía RYM de «Last Tyrant» (Album), decisión «completar + altas» de Brian 2026-10-05"
+  }
+ ]
+}

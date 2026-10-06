@@ -1,0 +1,1350 @@
+{
+  "modo": "aplicado",
+  "runId": 16943,
+  "resumen": {
+    "creadas": 81,
+    "cola": 101,
+    "ya_existe": 17,
+    "errores": 0,
+    "aplicadas": 0,
+    "saltadas": 0
+  },
+  "creadas": [
+    {
+      "id": 26751,
+      "artistId": 3897,
+      "title": "Brisa Brasilera",
+      "source": "musicavenezuela"
+    },
+    {
+      "id": 26752,
+      "artistId": 3440,
+      "title": "Lado A Lado B",
+      "source": "musicavenezuela"
+    },
+    {
+      "id": 26753,
+      "artistId": 3440,
+      "title": "A las 6 es la cita (Tributo a Joe Cuba)",
+      "source": "musicavenezuela"
+    },
+    {
+      "id": 26754,
+      "artistId": 3676,
+      "title": "Caminos de mi tierra",
+      "source": "musicavenezuela"
+    },
+    {
+      "id": 26755,
+      "artistId": 3676,
+      "title": "4 AM con Sadel",
+      "source": "musicavenezuela"
+    },
+    {
+      "id": 26756,
+      "artistId": 3677,
+      "title": "Por Si No Lo Sabía",
+      "source": "musicavenezuela"
+    },
+    {
+      "id": 26757,
+      "artistId": 3381,
+      "title": "Alirio Díaz",
+      "source": "musicavenezuela"
+    },
+    {
+      "id": 26758,
+      "artistId": 3446,
+      "title": "The Composer & The Arranger",
+      "source": "musicavenezuela"
+    },
+    {
+      "id": 26759,
+      "artistId": 3446,
+      "title": "Salsa Dura & Descarga",
+      "source": "musicavenezuela"
+    },
+    {
+      "id": 26760,
+      "artistId": 3456,
+      "title": "Biella Da Costa en Navidad",
+      "source": "musicavenezuela"
+    },
+    {
+      "id": 26761,
+      "artistId": 3764,
+      "title": "11 Intérpretes de Billo",
+      "source": "musicavenezuela"
+    },
+    {
+      "id": 26762,
+      "artistId": 3764,
+      "title": "Y Para Todo el Año – Disqueras Unidas – Velvet",
+      "source": "musicavenezuela"
+    },
+    {
+      "id": 26763,
+      "artistId": 3764,
+      "title": "A Gozar Muchachos – Disqueras Unidas – Velvet",
+      "source": "musicavenezuela"
+    },
+    {
+      "id": 26764,
+      "artistId": 3764,
+      "title": "Que Siga La Fiesta – Disqueras Unidas – Velvet",
+      "source": "musicavenezuela"
+    },
+    {
+      "id": 26765,
+      "artistId": 3764,
+      "title": "50 Aniversario (La noche del Gran Salón) – Disqueras Unidas – Ve",
+      "source": "musicavenezuela"
+    },
+    {
+      "id": 26766,
+      "artistId": 3816,
+      "title": "Diversidad",
+      "source": "musicavenezuela"
+    },
+    {
+      "id": 26767,
+      "artistId": 3816,
+      "title": "30 Años De Tradición",
+      "source": "musicavenezuela"
+    },
+    {
+      "id": 26768,
+      "artistId": 3816,
+      "title": "Raíces",
+      "source": "musicavenezuela"
+    },
+    {
+      "id": 26769,
+      "artistId": 3816,
+      "title": "Francisco Pacheco y su Pueblo",
+      "source": "musicavenezuela"
+    },
+    {
+      "id": 26770,
+      "artistId": 3832,
+      "title": "Serie 32, Venezuela y sus canciones",
+      "source": "musicavenezuela"
+    },
+    {
+      "id": 26771,
+      "artistId": 3558,
+      "title": "Otmaro Ruiz plays Ryuich Sakamoto",
+      "source": "musicavenezuela"
+    },
+    {
+      "id": 26772,
+      "artistId": 4003,
+      "title": "Saul Vera y su Ensamble",
+      "source": "musicavenezuela"
+    },
+    {
+      "id": 26773,
+      "artistId": 521,
+      "title": "Sentimiento Muerto",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26774,
+      "artistId": 521,
+      "title": "El amor ya no existe",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26775,
+      "artistId": 521,
+      "title": "Sin sombra no hay luz",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26776,
+      "artistId": 521,
+      "title": "Infecto de afecto",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26777,
+      "artistId": 521,
+      "title": "La violó, la mató, la picó",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26778,
+      "artistId": 521,
+      "title": "PAN",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26779,
+      "artistId": 521,
+      "title": "Música para los apóstoles madres",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26780,
+      "artistId": 702,
+      "title": "Calor Humano",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26781,
+      "artistId": 4,
+      "title": "La nave del olvido",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26782,
+      "artistId": 116,
+      "title": "Sony Music",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26783,
+      "artistId": 116,
+      "title": "Universal Music",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26784,
+      "artistId": 116,
+      "title": "EMI",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26785,
+      "artistId": 116,
+      "title": "BBC",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26786,
+      "artistId": 116,
+      "title": "Rudy Márquez",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26787,
+      "artistId": 116,
+      "title": "Daiquirí",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26788,
+      "artistId": 116,
+      "title": "Yordano",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26789,
+      "artistId": 116,
+      "title": "Jugando conmigo",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26790,
+      "artistId": 116,
+      "title": "Evio di Marzo",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26791,
+      "artistId": 116,
+      "title": "Aditus",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26792,
+      "artistId": 116,
+      "title": "Lunas",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26793,
+      "artistId": 116,
+      "title": "Cecilia Todd",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26794,
+      "artistId": 116,
+      "title": "Guillermo Carrasco",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26795,
+      "artistId": 116,
+      "title": "Wilkins",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26796,
+      "artistId": 116,
+      "title": "Ricardo Montaner",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26797,
+      "artistId": 116,
+      "title": "Willy Chirino",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26798,
+      "artistId": 116,
+      "title": "Simón Díaz",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26799,
+      "artistId": 116,
+      "title": "Huáscar Barradas",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26800,
+      "artistId": 116,
+      "title": "Voz Veis",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26801,
+      "artistId": 932,
+      "title": "EP",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26802,
+      "artistId": 932,
+      "title": "Split",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26803,
+      "artistId": 3244,
+      "title": "El mundo cambió",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26804,
+      "artistId": 3245,
+      "title": "Ángeles de la Oscuridad",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26805,
+      "artistId": 3245,
+      "title": "Código de Barra",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26806,
+      "artistId": 3245,
+      "title": "Oscuro Atardecer",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26807,
+      "artistId": 3245,
+      "title": "Quenta Tabernillion",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26808,
+      "artistId": 3245,
+      "title": "Ninraeth Arnoediad",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26809,
+      "artistId": 3245,
+      "title": "Ave Fénix",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26810,
+      "artistId": 3245,
+      "title": "Fenyx Revolution",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26811,
+      "artistId": 3245,
+      "title": "En los Abismos de Nen-Girith",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26812,
+      "artistId": 3245,
+      "title": "Canon en Re Mayor",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26813,
+      "artistId": 3245,
+      "title": "Relatos desde un Mundo en crepúsculos",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26814,
+      "artistId": 3245,
+      "title": "Anochecer",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26815,
+      "artistId": 3245,
+      "title": "Blues, Heavy Metal y Rock & Roll",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26816,
+      "artistId": 3247,
+      "title": "Rolling Band Más que un recuerdo",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26817,
+      "artistId": 3247,
+      "title": "Trino Mora y La Rolling Band Navidad Entre Amigos",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26818,
+      "artistId": 2004,
+      "title": "1964:",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26819,
+      "artistId": 2004,
+      "title": "1971:",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26820,
+      "artistId": 2004,
+      "title": "1980:",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26821,
+      "artistId": 2004,
+      "title": "2017:",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26822,
+      "artistId": 2031,
+      "title": "1967:",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26823,
+      "artistId": 2031,
+      "title": "1980:",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26824,
+      "artistId": 2031,
+      "title": "1991:",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26825,
+      "artistId": 2031,
+      "title": "2013:",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26826,
+      "artistId": 261,
+      "title": "Maracaibo",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26827,
+      "artistId": 264,
+      "title": "Daiquirí",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26828,
+      "artistId": 264,
+      "title": "Luz Marina",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26829,
+      "artistId": 264,
+      "title": "Colina",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26830,
+      "artistId": 264,
+      "title": "Guaco",
+      "source": "wikipedia"
+    },
+    {
+      "id": 26831,
+      "artistId": 264,
+      "title": "Simón Díaz",
+      "source": "wikipedia"
+    }
+  ],
+  "cola": [
+    {
+      "artistId": 36,
+      "artist": "Aditus",
+      "title": "Aditus en concierto en este país",
+      "source": "musicavenezuela",
+      "detalle": "el catálogo no autoriza crear album «Aditus en concierto en este país»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "artistId": 3897,
+      "artist": "Aldemaro Romero",
+      "title": "40 años de éxitos",
+      "source": "musicavenezuela",
+      "detalle": "el catálogo no autoriza crear album «40 años de éxitos»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 3676,
+      "artist": "Alfredo Sadel",
+      "title": "Sadel en Cuba",
+      "source": "musicavenezuela",
+      "detalle": "el catálogo no autoriza crear album «Sadel en Cuba»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "artistId": 3676,
+      "artist": "Alfredo Sadel",
+      "title": "Sadel canta a Agustín Lara",
+      "source": "musicavenezuela",
+      "detalle": "el catálogo no autoriza crear album «Sadel canta a Agustín Lara»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "artistId": 3676,
+      "artist": "Alfredo Sadel",
+      "title": "Sadel a media voz",
+      "source": "musicavenezuela",
+      "detalle": "el catálogo no autoriza crear album «Sadel a media voz»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "artistId": 3676,
+      "artist": "Alfredo Sadel",
+      "title": "Nocturnal",
+      "source": "musicavenezuela",
+      "detalle": "el catálogo no autoriza crear album «Nocturnal»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 3676,
+      "artist": "Alfredo Sadel",
+      "title": "Canta Arpa",
+      "source": "musicavenezuela",
+      "detalle": "el catálogo no autoriza crear album «Canta Arpa»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "artistId": 3676,
+      "artist": "Alfredo Sadel",
+      "title": "Fiesta Latinoamericana",
+      "source": "musicavenezuela",
+      "detalle": "el catálogo no autoriza crear album «Fiesta Latinoamericana»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 152,
+      "artist": "Los Amigos Invisibles",
+      "title": "Rapeat After Me",
+      "source": "musicavenezuela",
+      "detalle": "el catálogo no autoriza crear album «Rapeat After Me»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 152,
+      "artist": "Los Amigos Invisibles",
+      "title": "The Venezuelan Zinga Son, Vol. 1",
+      "source": "musicavenezuela",
+      "detalle": "el catálogo no autoriza crear album «The Venezuelan Zinga Son, Vol. 1»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "artistId": 152,
+      "artist": "Los Amigos Invisibles",
+      "title": "A Typical and Autoctonal Venenezuelan Dance Band",
+      "source": "musicavenezuela",
+      "detalle": "el catálogo no autoriza crear album «A Typical and Autoctonal Venenezuelan Dance Band»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "artistId": 3446,
+      "artist": "Andy Durán",
+      "title": "Latin Music's Moods & Styles",
+      "source": "musicavenezuela",
+      "detalle": "el catálogo no autoriza crear album «Latin Music's Moods & Styles»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "artistId": 3446,
+      "artist": "Andy Durán",
+      "title": "Latin Light Jazz",
+      "source": "musicavenezuela",
+      "detalle": "el catálogo no autoriza crear album «Latin Light Jazz»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "artistId": 3446,
+      "artist": "Andy Durán",
+      "title": "Mambo-Salsa!",
+      "source": "musicavenezuela",
+      "detalle": "el catálogo no autoriza crear album «Mambo-Salsa!»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 46,
+      "artist": "Arkangel",
+      "title": "No Más Apariencia (Maxi single)",
+      "source": "musicavenezuela",
+      "detalle": "el catálogo no autoriza crear album «No Más Apariencia (Maxi single)»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 3764,
+      "artist": "Billo's Caracas Boys",
+      "title": "Epoca de Oro de Billo (5 volúmenes) – RCA Victor",
+      "source": "musicavenezuela",
+      "detalle": "el catálogo no autoriza crear album «Epoca de Oro de Billo (5 volúmenes) – RCA Victor»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 3764,
+      "artist": "Billo's Caracas Boys",
+      "title": "Aquellos Boleros de Billo – RCA Victor",
+      "source": "musicavenezuela",
+      "detalle": "el catálogo no autoriza crear album «Aquellos Boleros de Billo – RCA Victor»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 3764,
+      "artist": "Billo's Caracas Boys",
+      "title": "Canciones de ayer, hoy y siempre",
+      "source": "musicavenezuela",
+      "detalle": "el catálogo no autoriza crear album «Canciones de ayer, hoy y siempre»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 3764,
+      "artist": "Billo's Caracas Boys",
+      "title": "Recordando a Felipe Pirela con Billo",
+      "source": "musicavenezuela",
+      "detalle": "el catálogo no autoriza crear album «Recordando a Felipe Pirela con Billo»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "artistId": 3764,
+      "artist": "Billo's Caracas Boys",
+      "title": "Lo Mejor de la Más Popular de Venezuela",
+      "source": "musicavenezuela",
+      "detalle": "el catálogo no autoriza crear album «Lo Mejor de la Más Popular de Venezuela»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "artistId": 3764,
+      "artist": "Billo's Caracas Boys",
+      "title": "Billo Ayer, Hoy y Siempre – Disqueras Unidas – Velvet",
+      "source": "musicavenezuela",
+      "detalle": "el catálogo no autoriza crear album «Billo Ayer, Hoy y Siempre – Disqueras Unidas – Velvet»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "artistId": 3764,
+      "artist": "Billo's Caracas Boys",
+      "title": "Billo es Billo – Disqueras Unidas – Velvet",
+      "source": "musicavenezuela",
+      "detalle": "el catálogo no autoriza crear album «Billo es Billo – Disqueras Unidas – Velvet»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "artistId": 3764,
+      "artist": "Billo's Caracas Boys",
+      "title": "La Nota de Billo – Disqueras Unidas – Velvet",
+      "source": "musicavenezuela",
+      "detalle": "el catálogo no autoriza crear album «La Nota de Billo – Disqueras Unidas – Velvet»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "artistId": 3764,
+      "artist": "Billo's Caracas Boys",
+      "title": "La Verdad Billo es Billo – Disqueras Unidas – Velvet",
+      "source": "musicavenezuela",
+      "detalle": "el catálogo no autoriza crear album «La Verdad Billo es Billo – Disqueras Unidas – Velvet»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "artistId": 3764,
+      "artist": "Billo's Caracas Boys",
+      "title": "A Gozar Muchachos, Volumen II – Disqueras Unidas – Velvet",
+      "source": "musicavenezuela",
+      "detalle": "el catálogo no autoriza crear album «A Gozar Muchachos, Volumen II – Disqueras Unidas – Velvet»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 3764,
+      "artist": "Billo's Caracas Boys",
+      "title": "Juntos De Nuevo Los Grandes Del Baile – Disqueras Unidas – Velve",
+      "source": "musicavenezuela",
+      "detalle": "el catálogo no autoriza crear album «Juntos De Nuevo Los Grandes Del Baile – Disqueras Unidas – Velve»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 3764,
+      "artist": "Billo's Caracas Boys",
+      "title": "El Sonido de Billo / La Medallita – Disqueras Unidas – Velvet",
+      "source": "musicavenezuela",
+      "detalle": "el catálogo no autoriza crear album «El Sonido de Billo / La Medallita – Disqueras Unidas – Velvet»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 55,
+      "artist": "Candy66",
+      "title": "Bitsessions",
+      "source": "musicavenezuela",
+      "detalle": "el catálogo no autoriza crear album «Bitsessions»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 55,
+      "artist": "Candy66",
+      "title": "B side",
+      "source": "musicavenezuela",
+      "detalle": "el catálogo no autoriza crear album «B side»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 58,
+      "artist": "Caramelos De Cianuro",
+      "title": "Mis Mujerzuela",
+      "source": "musicavenezuela",
+      "detalle": "el catálogo no autoriza crear album «Mis Mujerzuela»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 3950,
+      "artist": "Ensamble Gurrufío",
+      "title": "El Reto",
+      "source": "musicavenezuela",
+      "detalle": "el catálogo no autoriza crear album «El Reto»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "artistId": 3950,
+      "artist": "Ensamble Gurrufío",
+      "title": "Serenata con Gurrufío (Con Serenata Guayanesa)",
+      "source": "musicavenezuela",
+      "detalle": "el catálogo no autoriza crear album «Serenata con Gurrufío (Con Serenata Guayanesa)»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 3703,
+      "artist": "Floria Márquez",
+      "title": "Diez Años de Amor",
+      "source": "musicavenezuela",
+      "detalle": "el catálogo no autoriza crear album «Diez Años de Amor»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 3801,
+      "artist": "Los Cuñaos",
+      "title": "Volumen 7",
+      "source": "musicavenezuela",
+      "detalle": "el catálogo no autoriza crear album «Volumen 7»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 3801,
+      "artist": "Los Cuñaos",
+      "title": "Volumen 6",
+      "source": "musicavenezuela",
+      "detalle": "el catálogo no autoriza crear album «Volumen 6»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 3801,
+      "artist": "Los Cuñaos",
+      "title": "Volumen 5",
+      "source": "musicavenezuela",
+      "detalle": "el catálogo no autoriza crear album «Volumen 5»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 3801,
+      "artist": "Los Cuñaos",
+      "title": "Volumen 4",
+      "source": "musicavenezuela",
+      "detalle": "el catálogo no autoriza crear album «Volumen 4»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 277,
+      "artist": "Los Mentas",
+      "title": "Unidad Educativa Los Mentas",
+      "source": "musicavenezuela",
+      "detalle": "el catálogo no autoriza crear album «Unidad Educativa Los Mentas»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 3749,
+      "artist": "Soledad Bravo",
+      "title": "Volúmen 3",
+      "source": "musicavenezuela",
+      "detalle": "el catálogo no autoriza crear album «Volúmen 3»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 4610,
+      "artist": "Van Der Dijs",
+      "title": "VENDETTA",
+      "source": "musicavenezuela",
+      "detalle": "el catálogo no autoriza crear album «VENDETTA»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 4610,
+      "artist": "Van Der Dijs",
+      "title": "Némesis",
+      "source": "musicavenezuela",
+      "detalle": "el catálogo no autoriza crear album «Némesis»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 4610,
+      "artist": "Van Der Dijs",
+      "title": "Wakanda (Ft. Chxrlie)",
+      "source": "musicavenezuela",
+      "detalle": "el catálogo no autoriza crear album «Wakanda (Ft. Chxrlie)»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 76,
+      "artist": "Dermis Tatú",
+      "title": "La violó, la mató, la picó",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «La violó, la mató, la picó»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 4,
+      "artist": "Henry Stephen",
+      "title": "Conozca Los Impala",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «Conozca Los Impala»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 116,
+      "artist": "Ilan Chester",
+      "title": "Sólo faltas tú",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «Sólo faltas tú»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "artistId": 116,
+      "artist": "Ilan Chester",
+      "title": "Opus n.º 10",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «Opus n.º 10»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 116,
+      "artist": "Ilan Chester",
+      "title": "Tesoros de la música venezolana: Zulia",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «Tesoros de la música venezolana: Zulia»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "artistId": 116,
+      "artist": "Ilan Chester",
+      "title": "Tesoros de la música venezolana: Llanos",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «Tesoros de la música venezolana: Llanos»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "artistId": 116,
+      "artist": "Ilan Chester",
+      "title": "Tesoros de la música venezolana: Lara",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «Tesoros de la música venezolana: Lara»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "artistId": 116,
+      "artist": "Ilan Chester",
+      "title": "Tesoros de la música venezolana: Andes",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «Tesoros de la música venezolana: Andes»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "artistId": 116,
+      "artist": "Ilan Chester",
+      "title": "Tesoros de la música venezolana: Caracas",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «Tesoros de la música venezolana: Caracas»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "artistId": 116,
+      "artist": "Ilan Chester",
+      "title": "Franco de Vita",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «Franco de Vita»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 116,
+      "artist": "Ilan Chester",
+      "title": "Colina",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «Colina»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 116,
+      "artist": "Ilan Chester",
+      "title": "Frank Quintero",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «Frank Quintero»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 1954,
+      "artist": "La Gran Fogata",
+      "title": "Lo Mejor de Carlos Moreno y La Gran Fogata",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «Lo Mejor de Carlos Moreno y La Gran Fogata»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 158,
+      "artist": "Los Impala",
+      "title": "Impala '66",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «Impala '66»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "artistId": 277,
+      "artist": "Los Mentas",
+      "title": "U.E.L.M.",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «U.E.L.M.»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 278,
+      "artist": "Los Paranoias",
+      "title": "Aquí",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «Aquí»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 278,
+      "artist": "Los Paranoias",
+      "title": "Leslie Sessions EP",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «Leslie Sessions EP»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 164,
+      "artist": "Malanga",
+      "title": "Señor Malanga",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «Señor Malanga»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 3247,
+      "artist": "Rolling Band",
+      "title": "Rolling Band Tus Mejores Recuerdos",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «Rolling Band Tus Mejores Recuerdos»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 3247,
+      "artist": "Rolling Band",
+      "title": "Rolling Band La Gran Fiesta",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «Rolling Band La Gran Fiesta»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 3247,
+      "artist": "Rolling Band",
+      "title": "Rolling Band y sus Amigos",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «Rolling Band y sus Amigos»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 3247,
+      "artist": "Rolling Band",
+      "title": "Rolling Band y sus Amigos Vol.2",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «Rolling Band y sus Amigos Vol.2»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 3247,
+      "artist": "Rolling Band",
+      "title": "Rolling Band y sus Amigos Vol.3",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «Rolling Band y sus Amigos Vol.3»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 2004,
+      "artist": "Rudy Márquez",
+      "title": "1965:",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «1965:»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 2004,
+      "artist": "Rudy Márquez",
+      "title": "1966:",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «1966:»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 2004,
+      "artist": "Rudy Márquez",
+      "title": "1967:",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «1967:»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 2004,
+      "artist": "Rudy Márquez",
+      "title": "1968:",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «1968:»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 2004,
+      "artist": "Rudy Márquez",
+      "title": "1969:",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «1969:»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 2004,
+      "artist": "Rudy Márquez",
+      "title": "1972:",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «1972:»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 2004,
+      "artist": "Rudy Márquez",
+      "title": "1973:",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «1973:»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 2004,
+      "artist": "Rudy Márquez",
+      "title": "1974:",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «1974:»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "artistId": 2004,
+      "artist": "Rudy Márquez",
+      "title": "1975:",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «1975:»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 2004,
+      "artist": "Rudy Márquez",
+      "title": "1976:",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «1976:»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "artistId": 2004,
+      "artist": "Rudy Márquez",
+      "title": "1977:",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «1977:»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 2004,
+      "artist": "Rudy Márquez",
+      "title": "1978:",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «1978:»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 2004,
+      "artist": "Rudy Márquez",
+      "title": "1979:",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «1979:»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 2004,
+      "artist": "Rudy Márquez",
+      "title": "1981:",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «1981:»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "artistId": 2004,
+      "artist": "Rudy Márquez",
+      "title": "1982:",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «1982:»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 2004,
+      "artist": "Rudy Márquez",
+      "title": "1983:",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «1983:»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 2004,
+      "artist": "Rudy Márquez",
+      "title": "1984:",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «1984:»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "artistId": 2004,
+      "artist": "Rudy Márquez",
+      "title": "1985:",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «1985:»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 2004,
+      "artist": "Rudy Márquez",
+      "title": "1986:",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «1986:»: REVIEW: no se modifica el canonico"
+    },
+    {
+      "artistId": 2004,
+      "artist": "Rudy Márquez",
+      "title": "1988:",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «1988:»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 1604,
+      "artist": "Sexta Legión",
+      "title": "Comienza la Leyenda",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «Comienza la Leyenda»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 2031,
+      "artist": "Trino Mora",
+      "title": "1968:",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «1968:»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 2031,
+      "artist": "Trino Mora",
+      "title": "1969:",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «1969:»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 2031,
+      "artist": "Trino Mora",
+      "title": "1970:",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «1970:»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 2031,
+      "artist": "Trino Mora",
+      "title": "1972:",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «1972:»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 2031,
+      "artist": "Trino Mora",
+      "title": "1973:",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «1973:»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 2031,
+      "artist": "Trino Mora",
+      "title": "1974:",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «1974:»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 2031,
+      "artist": "Trino Mora",
+      "title": "1975:",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «1975:»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 2031,
+      "artist": "Trino Mora",
+      "title": "1976:",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «1976:»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 2031,
+      "artist": "Trino Mora",
+      "title": "1977:",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «1977:»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 2031,
+      "artist": "Trino Mora",
+      "title": "1978:",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «1978:»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 2031,
+      "artist": "Trino Mora",
+      "title": "1979:",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «1979:»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 2031,
+      "artist": "Trino Mora",
+      "title": "1982:",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «1982:»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 2031,
+      "artist": "Trino Mora",
+      "title": "1984:",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «1984:»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 2031,
+      "artist": "Trino Mora",
+      "title": "1995:",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «1995:»: POSSIBLE_MATCH: no se modifica el canonico"
+    },
+    {
+      "artistId": 2031,
+      "artist": "Trino Mora",
+      "title": "1999:",
+      "source": "wikipedia",
+      "detalle": "el catálogo no autoriza crear album «1999:»: POSSIBLE_MATCH: no se modifica el canonico"
+    }
+  ],
+  "ya_existe": [
+    {
+      "artistId": 4255,
+      "artist": "Akapellah",
+      "title": "16 Millas",
+      "source": "musicavenezuela",
+      "detalle": "album ya existe en el catálogo (id 22104)",
+      "existingId": 22104
+    },
+    {
+      "artistId": 152,
+      "artist": "Los Amigos Invisibles",
+      "title": "Los Amigos Invisibles, Acústico",
+      "source": "musicavenezuela",
+      "detalle": "album ya existe en el catálogo (id 3797)",
+      "existingId": 3797
+    },
+    {
+      "artistId": 55,
+      "artist": "Candy66",
+      "title": "A+ — Latin World Productions",
+      "source": "musicavenezuela",
+      "detalle": "album ya existe en el catálogo (id 131)",
+      "existingId": 131
+    },
+    {
+      "artistId": 58,
+      "artist": "Caramelos De Cianuro",
+      "title": "Acústico Retrovisor",
+      "source": "musicavenezuela",
+      "detalle": "album ya existe en el catálogo (id 3847)",
+      "existingId": 3847
+    },
+    {
+      "artistId": 58,
+      "artist": "Caramelos De Cianuro",
+      "title": "Live From Paris - Lado A",
+      "source": "musicavenezuela",
+      "detalle": "album ya existe en el catálogo (id 3584)",
+      "existingId": 3584
+    },
+    {
+      "artistId": 58,
+      "artist": "Caramelos De Cianuro",
+      "title": "Live From Paris - Lado B",
+      "source": "musicavenezuela",
+      "detalle": "album ya existe en el catálogo (id 3708)",
+      "existingId": 3708
+    },
+    {
+      "artistId": 3950,
+      "artist": "Ensamble Gurrufío",
+      "title": "Ensamble Gurrufío en vivo",
+      "source": "musicavenezuela",
+      "detalle": "album ya existe en el catálogo (id 9822)",
+      "existingId": 9822
+    },
+    {
+      "artistId": 3801,
+      "artist": "Los Cuñaos",
+      "title": "Volumen 3",
+      "source": "musicavenezuela",
+      "detalle": "album ya existe en el catálogo (id 8499)",
+      "existingId": 8499
+    },
+    {
+      "artistId": 3749,
+      "artist": "Soledad Bravo",
+      "title": "Volumen 4",
+      "source": "musicavenezuela",
+      "detalle": "album ya existe en el catálogo (id 8416)",
+      "existingId": 8416
+    },
+    {
+      "artistId": 4610,
+      "artist": "Van Der Dijs",
+      "title": "DOBLE CARA",
+      "source": "musicavenezuela",
+      "detalle": "album ya existe en el catálogo (id 23458)",
+      "existingId": 23458
+    },
+    {
+      "artistId": 4610,
+      "artist": "Van Der Dijs",
+      "title": "15 Minutos",
+      "source": "musicavenezuela",
+      "detalle": "album ya existe en el catálogo (id 23459)",
+      "existingId": 23459
+    },
+    {
+      "artistId": 4610,
+      "artist": "Van Der Dijs",
+      "title": "¿DÓNDE ESTÁN?",
+      "source": "musicavenezuela",
+      "detalle": "album ya existe en el catálogo (id 23456)",
+      "existingId": 23456
+    },
+    {
+      "artistId": 4610,
+      "artist": "Van Der Dijs",
+      "title": "VENPAKA",
+      "source": "musicavenezuela",
+      "detalle": "album ya existe en el catálogo (id 23457)",
+      "existingId": 23457
+    },
+    {
+      "artistId": 1617,
+      "artist": "Víctor Cuica",
+      "title": "Víctor Cuica & Alberto Lazo",
+      "source": "musicavenezuela",
+      "detalle": "album ya existe en el catálogo (id 2931)",
+      "existingId": 2931
+    },
+    {
+      "artistId": 3242,
+      "artist": "Cuásar",
+      "title": "En la vía",
+      "source": "wikipedia",
+      "detalle": "album ya existe en el catálogo (id 21868)",
+      "existingId": 21868
+    },
+    {
+      "artistId": 277,
+      "artist": "Los Mentas",
+      "title": "El museo de los pillos",
+      "source": "wikipedia",
+      "detalle": "album ya existe en el catálogo (id 5551)",
+      "existingId": 5551
+    },
+    {
+      "artistId": 1951,
+      "artist": "Paul Gillman",
+      "title": "Más Vivo y en Vivo",
+      "source": "wikipedia",
+      "detalle": "album ya existe en el catálogo (id 4153)",
+      "existingId": 4153
+    }
+  ],
+  "errores": [],
+  "aplicadas": [],
+  "saltadas": []
+}

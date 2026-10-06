@@ -1,0 +1,487 @@
+{
+  "modo": "aplicado",
+  "runId": "16876-16901",
+  "entrada": {
+    "pistas": 3671,
+    "anios": 11
+  },
+  "vigentes": {
+    "pistas": 3671,
+    "anios": 11
+  },
+  "discos_con_pistas": 3554,
+  "pistas": 20697,
+  "pistas_error": 117,
+  "años": 11,
+  "años_error": 0,
+  "errores": [
+    {
+      "albumId": 25708,
+      "error": "la posición 1-1 ya la ocupa «Las gaitas de las locas #8»"
+    },
+    {
+      "albumId": 21745,
+      "error": "la posición 1-1 ya la ocupa «Tetrix»"
+    },
+    {
+      "albumId": 25755,
+      "error": "la posición 1-1 ya la ocupa «Yo me quedé triste y mudo»"
+    },
+    {
+      "albumId": 25805,
+      "error": "la posición 1-1 ya la ocupa «Veneración»"
+    },
+    {
+      "albumId": 25805,
+      "error": "la posición 1-1 ya la ocupa «Veneración»"
+    },
+    {
+      "albumId": 25819,
+      "error": "la posición 1-1 ya la ocupa «Synth Destruction Two»"
+    },
+    {
+      "albumId": 25854,
+      "error": "la posición 1-1 ya la ocupa «Evidence»"
+    },
+    {
+      "albumId": 21868,
+      "error": "la posición 1-1 ya la ocupa «Super nova»"
+    },
+    {
+      "albumId": 25892,
+      "error": "la posición 1-1 ya la ocupa «El halconcito»"
+    },
+    {
+      "albumId": 25896,
+      "error": "la posición 1-1 ya la ocupa «Traicionera»"
+    },
+    {
+      "albumId": 25932,
+      "error": "la posición 1-1 ya la ocupa «Bienvenido a mi habitación»"
+    },
+    {
+      "albumId": 25982,
+      "error": "la posición 1-1 ya la ocupa «Intro»"
+    },
+    {
+      "albumId": 22008,
+      "error": "la posición 1-1 ya la ocupa «I»"
+    },
+    {
+      "albumId": 22047,
+      "error": "la posición 1-1 ya la ocupa «La cotorra criolla»"
+    },
+    {
+      "albumId": 22063,
+      "error": "la posición 1-1 ya la ocupa «Ven»"
+    },
+    {
+      "albumId": 22076,
+      "error": "la posición 1-1 ya la ocupa «mekieromorir»"
+    },
+    {
+      "albumId": 22216,
+      "error": "la posición 1-1 ya la ocupa «Santa Paula»"
+    },
+    {
+      "albumId": 22231,
+      "error": "la posición 1-1 ya la ocupa «Amén»"
+    },
+    {
+      "albumId": 22247,
+      "error": "la posición 1-1 ya la ocupa «Mehdbeat»"
+    },
+    {
+      "albumId": 25776,
+      "error": "la posición 1-1 ya la ocupa «Alfie Salomon (Interlude)»"
+    },
+    {
+      "albumId": 25776,
+      "error": "la posición 1-1 ya la ocupa «Alfie Salomon (Interlude)»"
+    },
+    {
+      "albumId": 25995,
+      "error": "la posición 1-1 ya la ocupa «País burdel»"
+    },
+    {
+      "albumId": 21740,
+      "error": "la posición 1-1 ya la ocupa «Sanguchito»"
+    },
+    {
+      "albumId": 22336,
+      "error": "la posición 1-1 ya la ocupa «La voz de los '80»"
+    },
+    {
+      "albumId": 22339,
+      "error": "la posición 1-1 ya la ocupa «Tren al sur»"
+    },
+    {
+      "albumId": 22365,
+      "error": "la posición 1-1 ya la ocupa «Las sierras eléctricas (Versión 2001)»"
+    },
+    {
+      "albumId": 22340,
+      "error": "la posición 1-1 ya la ocupa «Ultra derecha»"
+    },
+    {
+      "albumId": 22363,
+      "error": "la posición 1-1 ya la ocupa «Generación de mierda»"
+    },
+    {
+      "albumId": 22336,
+      "error": "la posición 1-1 ya la ocupa «La voz de los '80»"
+    },
+    {
+      "albumId": 22392,
+      "error": "la posición 1-1 ya la ocupa «Take Me Away»"
+    },
+    {
+      "albumId": 22450,
+      "error": "la posición 1-1 ya la ocupa «OK!»"
+    },
+    {
+      "albumId": 22453,
+      "error": "la posición 1-1 ya la ocupa «Hello Kitty»"
+    },
+    {
+      "albumId": 22483,
+      "error": "la posición 1-1 ya la ocupa «Mano a mano»"
+    },
+    {
+      "albumId": 22512,
+      "error": "la posición 1-1 ya la ocupa «Nuestra cita»"
+    },
+    {
+      "albumId": 26180,
+      "error": "la posición 1-1 ya la ocupa «Ruin It, Ruin Them, Ruin Yourself Then Ruin Me (Dälek remix)»"
+    },
+    {
+      "albumId": 26175,
+      "error": "la posición 1-1 ya la ocupa «Dodgy»"
+    },
+    {
+      "albumId": 26157,
+      "error": "la posición 1-1 ya la ocupa «[untitled]»"
+    },
+    {
+      "albumId": 22719,
+      "error": "la posición 1-1 ya la ocupa «Se acabó»"
+    },
+    {
+      "albumId": 26228,
+      "error": "la posición 1-1 ya la ocupa «San Fernando»"
+    },
+    {
+      "albumId": 26228,
+      "error": "la posición 1-1 ya la ocupa «San Fernando»"
+    },
+    {
+      "albumId": 26228,
+      "error": "la posición 1-1 ya la ocupa «San Fernando»"
+    },
+    {
+      "albumId": 26228,
+      "error": "la posición 1-1 ya la ocupa «San Fernando»"
+    },
+    {
+      "albumId": 26228,
+      "error": "la posición 1-1 ya la ocupa «San Fernando»"
+    },
+    {
+      "albumId": 26236,
+      "error": "la posición 1-1 ya la ocupa «Las caricias de Cristina»"
+    },
+    {
+      "albumId": 22790,
+      "error": "la posición 1-1 ya la ocupa «Sin tabú»"
+    },
+    {
+      "albumId": 22872,
+      "error": "la posición 1-1 ya la ocupa «Pruebe candela»"
+    },
+    {
+      "albumId": 22871,
+      "error": "la posición 1-1 ya la ocupa «Se necesita rumbero»"
+    },
+    {
+      "albumId": 22886,
+      "error": "la posición 1-1 ya la ocupa «Open the Sky»"
+    },
+    {
+      "albumId": 22964,
+      "error": "la posición 1-1 ya la ocupa «Clara»"
+    },
+    {
+      "albumId": 26257,
+      "error": "la posición 1-1 ya la ocupa «Hace lo que le da la gana»"
+    },
+    {
+      "albumId": 23001,
+      "error": "la posición 1-1 ya la ocupa «Strangers»"
+    },
+    {
+      "albumId": 23032,
+      "error": "la posición 1-1 ya la ocupa «Último fuego. Dedicado a Juana de Arco»"
+    },
+    {
+      "albumId": 23032,
+      "error": "la posición 1-1 ya la ocupa «Último fuego. Dedicado a Juana de Arco»"
+    },
+    {
+      "albumId": 23079,
+      "error": "la posición 1-1 ya la ocupa «All Black»"
+    },
+    {
+      "albumId": 23106,
+      "error": "la posición 1-1 ya la ocupa «Las Lomas»"
+    },
+    {
+      "albumId": 23125,
+      "error": "la posición 1-1 ya la ocupa «Zumba Lumba»"
+    },
+    {
+      "albumId": 23162,
+      "error": "la posición 1-1 ya la ocupa «- C'est sa banlieue»"
+    },
+    {
+      "albumId": 23244,
+      "error": "la posición 1-1 ya la ocupa «Allegramente work»"
+    },
+    {
+      "albumId": 23251,
+      "error": "la posición 1-1 ya la ocupa «psicópata»"
+    },
+    {
+      "albumId": 23273,
+      "error": "la posición 1-1 ya la ocupa «[untitled]»"
+    },
+    {
+      "albumId": 23298,
+      "error": "la posición 1-1 ya la ocupa «How to Become a socialité»"
+    },
+    {
+      "albumId": 23298,
+      "error": "la posición 1-1 ya la ocupa «How to Become a socialité»"
+    },
+    {
+      "albumId": 26376,
+      "error": "la posición 1-1 ya la ocupa «A la luz de las farolas»"
+    },
+    {
+      "albumId": 26382,
+      "error": "la posición 1-1 ya la ocupa «A un minuto de ti»"
+    },
+    {
+      "albumId": 23312,
+      "error": "la posición 1-1 ya la ocupa «wdw negative death grips fever aura»"
+    },
+    {
+      "albumId": 26436,
+      "error": "la posición 1-1 ya la ocupa «Asesina»"
+    },
+    {
+      "albumId": 23328,
+      "error": "la posición 1-1 ya la ocupa «Nada es igual»"
+    },
+    {
+      "albumId": 23367,
+      "error": "la posición 1-1 ya la ocupa «Penélope»"
+    },
+    {
+      "albumId": 23374,
+      "error": "la posición 1-1 ya la ocupa «Arquitecto»"
+    },
+    {
+      "albumId": 26110,
+      "error": "la posición 1-1 ya la ocupa «Zarbak»"
+    },
+    {
+      "albumId": 23427,
+      "error": "la posición 1-1 ya la ocupa «El burrito de Belén»"
+    },
+    {
+      "albumId": 23438,
+      "error": "la posición 1-1 ya la ocupa «B-Sides»"
+    },
+    {
+      "albumId": 23501,
+      "error": "la posición 1-1 ya la ocupa «Buscame»"
+    },
+    {
+      "albumId": 26519,
+      "error": "la posición 1-1 ya la ocupa «¿Quien sera?»"
+    },
+    {
+      "albumId": 23526,
+      "error": "la posición 1-1 ya la ocupa «La ciudad»"
+    },
+    {
+      "albumId": 23574,
+      "error": "la posición 1-1 ya la ocupa «Inolvidable»"
+    },
+    {
+      "albumId": 23680,
+      "error": "la posición 1-1 ya la ocupa «Dentro»"
+    },
+    {
+      "albumId": 25740,
+      "error": "la posición 1-1 ya la ocupa «No te vas»"
+    },
+    {
+      "albumId": 25749,
+      "error": "la posición 1-1 ya la ocupa «Una Mamacita»"
+    },
+    {
+      "albumId": 23750,
+      "error": "la posición 1-1 ya la ocupa «CASONEO PT. 3»"
+    },
+    {
+      "albumId": 23764,
+      "error": "la posición 1-1 ya la ocupa «Akuma (ft. Vitor Moreira from»"
+    },
+    {
+      "albumId": 23766,
+      "error": "la posición 1-1 ya la ocupa «Nippa Slaughter»"
+    },
+    {
+      "albumId": 23762,
+      "error": "la posición 1-1 ya la ocupa «Shogun's Madness (Intro)»"
+    },
+    {
+      "albumId": 23764,
+      "error": "la posición 1-1 ya la ocupa «Akuma (ft. Vitor Moreira from»"
+    },
+    {
+      "albumId": 23762,
+      "error": "la posición 1-1 ya la ocupa «Shogun's Madness (Intro)»"
+    },
+    {
+      "albumId": 23777,
+      "error": "la posición 1-1 ya la ocupa «i Allegro molto work»"
+    },
+    {
+      "albumId": 23783,
+      "error": "la posición 1-1 ya la ocupa «Si tu te quedaras ciega»"
+    },
+    {
+      "albumId": 23810,
+      "error": "la posición 1-1 ya la ocupa «PALKIA ON LEAN (INTRO)»"
+    },
+    {
+      "albumId": 23810,
+      "error": "la posición 1-1 ya la ocupa «PALKIA ON LEAN (INTRO)»"
+    },
+    {
+      "albumId": 23819,
+      "error": "la posición 1-1 ya la ocupa «Intro»"
+    },
+    {
+      "albumId": 23819,
+      "error": "la posición 1-1 ya la ocupa «Intro»"
+    },
+    {
+      "albumId": 26640,
+      "error": "la posición 1-1 ya la ocupa «Miseridad»"
+    },
+    {
+      "albumId": 23926,
+      "error": "la posición 1-1 ya la ocupa «heaven»"
+    },
+    {
+      "albumId": 23932,
+      "error": "la posición 1-1 ya la ocupa «L E G A C Y»"
+    },
+    {
+      "albumId": 23961,
+      "error": "la posición 1-1 ya la ocupa «Bruce Lee»"
+    },
+    {
+      "albumId": 23970,
+      "error": "la posición 1-1 ya la ocupa «Achichipachi»"
+    },
+    {
+      "albumId": 22719,
+      "error": "la posición 1-1 ya la ocupa «Se acabó»"
+    },
+    {
+      "albumId": 24010,
+      "error": "la posición 1-1 ya la ocupa «La piñata»"
+    },
+    {
+      "albumId": 23795,
+      "error": "la posición 1-1 ya la ocupa «Meruva Sessions - Mon Amour - En Vivo»"
+    },
+    {
+      "albumId": 23804,
+      "error": "la posición 1-1 ya la ocupa «Lucy»"
+    },
+    {
+      "albumId": 24077,
+      "error": "la posición 1-1 ya la ocupa «Labios de papel»"
+    },
+    {
+      "albumId": 24145,
+      "error": "la posición 1-1 ya la ocupa «Lipstick»"
+    },
+    {
+      "albumId": 24145,
+      "error": "la posición 1-1 ya la ocupa «Lipstick»"
+    },
+    {
+      "albumId": 24152,
+      "error": "la posición 1-1 ya la ocupa «Bendishon Disfrasá»"
+    },
+    {
+      "albumId": 24165,
+      "error": "la posición 1-1 ya la ocupa «Blackout»"
+    },
+    {
+      "albumId": 24222,
+      "error": "la posición 1-1 ya la ocupa «Machika»"
+    },
+    {
+      "albumId": 24229,
+      "error": "la posición 1-1 ya la ocupa «Hi Please to Meet You»"
+    },
+    {
+      "albumId": 26017,
+      "error": "la posición 1-1 ya la ocupa «Amanecer (como la música de antes)»"
+    },
+    {
+      "albumId": 24329,
+      "error": "la posición 1-1 ya la ocupa «Black is Beautiful»"
+    },
+    {
+      "albumId": 24356,
+      "error": "la posición 1-1 ya la ocupa «Flag Party»"
+    },
+    {
+      "albumId": 24535,
+      "error": "la posición 1-1 ya la ocupa «Todo tiene su final»"
+    },
+    {
+      "albumId": 26725,
+      "error": "la posición 1-1 ya la ocupa «La ventana»"
+    },
+    {
+      "albumId": 26726,
+      "error": "la posición 1-1 ya la ocupa «Payaso»"
+    },
+    {
+      "albumId": 26731,
+      "error": "la posición 1-1 ya la ocupa «Nadie va»"
+    },
+    {
+      "albumId": 26732,
+      "error": "la posición 1-1 ya la ocupa «Ojos noche»"
+    },
+    {
+      "albumId": 26716,
+      "error": "la posición 1-1 ya la ocupa «Amantes y amigos»"
+    },
+    {
+      "albumId": 26721,
+      "error": "la posición 1-1 ya la ocupa «Atravesao»"
+    }
+  ]
+}

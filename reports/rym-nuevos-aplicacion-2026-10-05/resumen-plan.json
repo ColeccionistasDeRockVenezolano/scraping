@@ -1,0 +1,54 @@
+{
+ "generado": "2026-10-05 20:43:32",
+ "discos_capturados_unicos": 7255,
+ "aplicables": 5018,
+ "ya_existe": 4674,
+ "año distinto (no se toca)": 98,
+ "alta": 344,
+ "pistas rechazadas (66)": 1,
+ "pistas rechazadas (72)": 2,
+ "pistas rechazadas (122)": 1,
+ "pistas rechazadas (876)": 1,
+ "pistas rechazadas (137)": 1,
+ "fuera": {
+  "Appears On / V/A / video": 1655,
+  "dueño person": 285,
+  "vacío en RYM": 147,
+  "dueño sin_ficha": 150
+ },
+ "completar_existentes": {
+  "pistas (discos sin pistas)": 3671,
+  "pistas totales": 21380,
+  "años (discos sin año)": 11,
+  "portadas: ficha vacía → se fija": 3816,
+  "portadas: ficha con imagen → candidata": 522,
+  "géneros (discos sin principal)": 2092
+ },
+ "altas": {
+  "discos": 344,
+  "por_tipo": {
+   "Single": 118,
+   "Album": 115,
+   "EP": 37,
+   "Compilation": 28,
+   "DJ Mix": 18,
+   "Live Album": 10,
+   "Mixtape": 9,
+   "Bootleg / Unauthorized": 5,
+   "Additional release": 4
+  },
+  "con_pistas": 290,
+  "con_portada": 320,
+  "con_géneros": 179,
+  "con_año": 325,
+  "colaboraciones": 19
+ },
+ "dueño_resuelto_por": {
+  "alta etapa 4": 3975,
+  "dossier (compacto)": 1012,
+  "alias (OK de Brian)": 4,
+  "dossier (alias)": 24,
+  "nombre exacto": 2,
+  "revisión ER": 1
+ }
+}

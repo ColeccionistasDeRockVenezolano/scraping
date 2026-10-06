@@ -1,0 +1,30 @@
+{
+  "mode": "confirm",
+  "runId": 16949,
+  "models": [
+    "deepseek-flash"
+  ],
+  "outputs": 1,
+  "badLines": [],
+  "applied": {
+    "artist": 1,
+    "album": 0,
+    "person": 0,
+    "organization": 0
+  },
+  "enriched": 0,
+  "created": 1,
+  "unchanged": 0,
+  "noData": 0,
+  "changedSinceExport": [],
+  "rejected": [],
+  "unknownCase": [],
+  "lostYears": [],
+  "notes": [
+    {
+      "caseId": "artist:3952",
+      "note": "La fuente indica que el proyecto surgió el 27 de noviembre de 2000; el catálogo no registra fecha de fundación. No se detallan los integrantes actuales ni la formación completa."
+    }
+  ],
+  "discarded": 0
+}

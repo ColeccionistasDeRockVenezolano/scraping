@@ -1,0 +1,4897 @@
+{
+  "mode": "dry-run",
+  "runId": 16840,
+  "candidates": 465,
+  "accepted": [
+    {
+      "caseId": "rym-nuevos:artist:5820",
+      "title": "Adso Alejandro",
+      "source": "rateyourmusic",
+      "raw": [
+        "Trap"
+      ],
+      "primary": "trap",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5805",
+      "title": "suei",
+      "source": "rateyourmusic",
+      "raw": [
+        "Alternative R&B",
+        "Pop Rap",
+        "Contemporary R&B"
+      ],
+      "primary": "hip-hop",
+      "secondaries": [
+        "r-and-b"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:5806",
+      "title": "El Café Atómico",
+      "source": "rateyourmusic",
+      "raw": [
+        "Experimental Rock",
+        "Neo-Psychedelia",
+        "Tropicanibalismo",
+        "Psychedelic Rock",
+        "Psychedelic Folk",
+        "Freak Folk"
+      ],
+      "primary": "rock-experimental",
+      "secondaries": [
+        "rock-psicodelico"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:5780",
+      "title": "LILATARI",
+      "source": "rateyourmusic",
+      "raw": [
+        "Trap"
+      ],
+      "primary": "trap",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4538",
+      "title": "Niño Nuclear y los Mutantes de Saturno",
+      "source": "rateyourmusic",
+      "raw": [
+        "Alternative Rock"
+      ],
+      "primary": "rock-alternativo",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5823",
+      "title": "Empty Stomach",
+      "source": "rateyourmusic",
+      "raw": [
+        "Experimental"
+      ],
+      "primary": "experimental",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5824",
+      "title": "Rosa Esber",
+      "source": "rateyourmusic",
+      "raw": [
+        "Indie Pop"
+      ],
+      "primary": "pop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4543",
+      "title": "Dragón Blanco",
+      "source": "rateyourmusic",
+      "raw": [
+        "Power Metal"
+      ],
+      "primary": "power-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5825",
+      "title": "Capitán Mostacho",
+      "source": "rateyourmusic",
+      "raw": [
+        "Indie Rock"
+      ],
+      "primary": "indie-rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5827",
+      "title": "Chivin",
+      "source": "rateyourmusic",
+      "raw": [
+        "Reggaetón",
+        "Hip Hop"
+      ],
+      "primary": "reggaeton",
+      "secondaries": [
+        "hip-hop"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:4544",
+      "title": "Ababajah",
+      "source": "rateyourmusic",
+      "raw": [
+        "Reggae"
+      ],
+      "primary": "reggae",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5785",
+      "title": "STANGAH",
+      "source": "rateyourmusic",
+      "raw": [
+        "Pop"
+      ],
+      "primary": "pop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4545",
+      "title": "YMTQDasai",
+      "source": "rateyourmusic",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6165",
+      "title": "Luis Miguel Mussett",
+      "source": "rateyourmusic",
+      "raw": [
+        "Música llanera"
+      ],
+      "primary": "joropo",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5795",
+      "title": "Vicentico Rodríguez",
+      "source": "rateyourmusic",
+      "raw": [
+        "Música llanera"
+      ],
+      "primary": "joropo",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5829",
+      "title": "Yoangel Torrealba",
+      "source": "rateyourmusic",
+      "raw": [
+        "Música llanera"
+      ],
+      "primary": "joropo",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5852",
+      "title": "Tar Majenye",
+      "source": "rateyourmusic",
+      "raw": [
+        "Folk"
+      ],
+      "primary": "folk",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4562",
+      "title": "Rafa y Sus Diamantes",
+      "source": "rateyourmusic",
+      "raw": [
+        "Cumbia"
+      ],
+      "primary": "cumbia",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5830",
+      "title": "El Carrao de Palmarito",
+      "source": "rateyourmusic",
+      "raw": [
+        "Música llanera",
+        "Joropo"
+      ],
+      "primary": "joropo",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5831",
+      "title": "Tripulangel",
+      "source": "rateyourmusic",
+      "raw": [
+        "Pop"
+      ],
+      "primary": "pop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4549",
+      "title": "Eustace",
+      "source": "rateyourmusic",
+      "raw": [
+        "Garage Rock"
+      ],
+      "primary": "garage-rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5789",
+      "title": "Replinter",
+      "source": "rateyourmusic",
+      "raw": [
+        "Experimental"
+      ],
+      "primary": "experimental",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5778",
+      "title": "Nelson Morales",
+      "source": "rateyourmusic",
+      "raw": [
+        "Folk"
+      ],
+      "primary": "folk",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5809",
+      "title": "Emily Galaviz",
+      "source": "rateyourmusic",
+      "raw": [
+        "Música llanera"
+      ],
+      "primary": "joropo",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5832",
+      "title": "Moncho y su Banda",
+      "source": "rateyourmusic",
+      "raw": [
+        "Salsa"
+      ],
+      "primary": "salsa",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4550",
+      "title": "Fakboi",
+      "source": "rateyourmusic",
+      "raw": [
+        "Alternative Rock"
+      ],
+      "primary": "rock-alternativo",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6166",
+      "title": "Species Infected",
+      "source": "rateyourmusic",
+      "raw": [
+        "Acoustic Rock"
+      ],
+      "primary": "rock-acustico",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6167",
+      "title": "Hello Mr. Klaus",
+      "source": "rateyourmusic",
+      "raw": [
+        "Electronic",
+        "Experimental"
+      ],
+      "primary": "electronica",
+      "secondaries": [
+        "experimental"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6168",
+      "title": "Young Denky",
+      "source": "rateyourmusic",
+      "raw": [
+        "Experimental"
+      ],
+      "primary": "experimental",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4541",
+      "title": "Los Delorean",
+      "source": "rateyourmusic",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4546",
+      "title": "Caimanera",
+      "source": "rateyourmusic",
+      "raw": [
+        "Avant-Folk"
+      ],
+      "primary": "folk",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5796",
+      "title": "satosgang",
+      "source": "rateyourmusic",
+      "raw": [
+        "Drum and Bass"
+      ],
+      "primary": "drum-and-bass",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6147",
+      "title": "Lienzos",
+      "source": "rateyourmusic",
+      "raw": [
+        "Dream Pop",
+        "Bedroom Pop",
+        "Slacker Rock"
+      ],
+      "primary": "dream-pop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5792",
+      "title": "The Cure for Anxiety",
+      "source": "rateyourmusic",
+      "raw": [
+        "Ambient"
+      ],
+      "primary": "ambient",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5787",
+      "title": "XIX",
+      "source": "rateyourmusic",
+      "raw": [
+        "Techno"
+      ],
+      "primary": "techno",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6149",
+      "title": "rip_sakura",
+      "source": "rateyourmusic",
+      "raw": [
+        "Ambient"
+      ],
+      "primary": "ambient",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6150",
+      "title": "sunn",
+      "source": "rateyourmusic",
+      "raw": [
+        "Experimental"
+      ],
+      "primary": "experimental",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5793",
+      "title": "Doráncel Daga",
+      "source": "rateyourmusic",
+      "raw": [
+        "Indie Rock"
+      ],
+      "primary": "indie-rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5794",
+      "title": "Yung Iverson",
+      "source": "rateyourmusic",
+      "raw": [
+        "Trap"
+      ],
+      "primary": "trap",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5802",
+      "title": "Yadam",
+      "source": "rateyourmusic",
+      "raw": [
+        "Alt-Pop"
+      ],
+      "primary": "pop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5833",
+      "title": "Michi Sanz",
+      "source": "rateyourmusic",
+      "raw": [
+        "Singer-Songwriter"
+      ],
+      "primary": "cantautor",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5834",
+      "title": "Friman",
+      "source": "rateyourmusic",
+      "raw": [
+        "Trap"
+      ],
+      "primary": "trap",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5838",
+      "title": "Miguelito Díaz",
+      "source": "rateyourmusic",
+      "raw": [
+        "Joropo"
+      ],
+      "primary": "joropo",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5839",
+      "title": "Guillermo William Márquez Corao",
+      "source": "rateyourmusic",
+      "raw": [
+        "Nueva canción latinoamericana"
+      ],
+      "primary": "nueva-cancion",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:3240",
+      "title": "Los NoName",
+      "source": "rateyourmusic",
+      "raw": [
+        "Alternative Rock"
+      ],
+      "primary": "rock-alternativo",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5842",
+      "title": "Samuel Acosta",
+      "source": "rateyourmusic",
+      "raw": [
+        "Indie Rock"
+      ],
+      "primary": "indie-rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4551",
+      "title": "Vision Real",
+      "source": "rateyourmusic",
+      "raw": [
+        "Metal"
+      ],
+      "primary": "metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5803",
+      "title": "Celestial Theory",
+      "source": "rateyourmusic",
+      "raw": [
+        "Symphonic Metal",
+        "Melodic Death Metal"
+      ],
+      "primary": "metal-sinfonico",
+      "secondaries": [
+        "death-metal-melodico"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:4528",
+      "title": "Priska",
+      "source": "rateyourmusic",
+      "raw": [
+        "Metalcore"
+      ],
+      "primary": "metalcore",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4542",
+      "title": "Orquesta La Recopilacion",
+      "source": "rateyourmusic",
+      "raw": [
+        "Salsa"
+      ],
+      "primary": "salsa",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4525",
+      "title": "Aura Spei",
+      "source": "rateyourmusic",
+      "raw": [
+        "Indie Rock"
+      ],
+      "primary": "indie-rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4526",
+      "title": "Mon Carrillo y Su Sexteto",
+      "source": "rateyourmusic",
+      "raw": [
+        "Salsa"
+      ],
+      "primary": "salsa",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5788",
+      "title": "Feral Nox",
+      "source": "rateyourmusic",
+      "raw": [
+        "Experimental"
+      ],
+      "primary": "experimental",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5813",
+      "title": "Orquesta Pasión Juvenil",
+      "source": "rateyourmusic",
+      "raw": [
+        "Salsa"
+      ],
+      "primary": "salsa",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5814",
+      "title": "DLM",
+      "source": "rateyourmusic",
+      "raw": [
+        "Dreampunk",
+        "Ambient"
+      ],
+      "primary": "ambient",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5799",
+      "title": "La Torre de Babiel",
+      "source": "rateyourmusic",
+      "raw": [
+        "Experimental"
+      ],
+      "primary": "experimental",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6154",
+      "title": "Bear Bones, Lay Low",
+      "source": "rateyourmusic",
+      "raw": [
+        "Drone",
+        "Progressive Electronic",
+        "Tribal Ambient",
+        "Ambient",
+        "Space Ambient",
+        "Hypnagogic Pop"
+      ],
+      "primary": "drone-metal",
+      "secondaries": [
+        "ambient"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:4529",
+      "title": "Esos... Cubos",
+      "source": "rateyourmusic",
+      "raw": [
+        "Alternative Rock"
+      ],
+      "primary": "rock-alternativo",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4556",
+      "title": "Wannamaker",
+      "source": "rateyourmusic",
+      "raw": [
+        "Jazz Fusion"
+      ],
+      "primary": "jazz-fusion",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6181",
+      "title": "AGU!",
+      "source": "rateyourmusic",
+      "raw": [
+        "Electronic"
+      ],
+      "primary": "electronica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6193",
+      "title": "Washé",
+      "source": "rateyourmusic",
+      "raw": [
+        "Electronic"
+      ],
+      "primary": "electronica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6195",
+      "title": "VulKan",
+      "source": "rateyourmusic",
+      "raw": [
+        "Trap"
+      ],
+      "primary": "trap",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6196",
+      "title": "Helios Martinez Dominguez",
+      "source": "rateyourmusic",
+      "raw": [
+        "Experimental"
+      ],
+      "primary": "experimental",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4583",
+      "title": "π XPRNC",
+      "source": "rateyourmusic",
+      "raw": [
+        "Progressive Rock"
+      ],
+      "primary": "rock-progresivo",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5901",
+      "title": "Contemplando el Cielo",
+      "source": "rateyourmusic",
+      "raw": [
+        "Ambient",
+        "Drone"
+      ],
+      "primary": "ambient",
+      "secondaries": [
+        "drone-metal"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6198",
+      "title": "Ipostal",
+      "source": "rateyourmusic",
+      "raw": [
+        "Electronic"
+      ],
+      "primary": "electronica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4588",
+      "title": "Los Prisioneros",
+      "source": "rateyourmusic",
+      "raw": [
+        "New Wave",
+        "Synthpop",
+        "Pop Rock",
+        "Post-Punk",
+        "2 Tone",
+        "Dance-Pop"
+      ],
+      "primary": "new-wave",
+      "secondaries": [
+        "pop-rock",
+        "post-punk",
+        "dance",
+        "pop"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:4589",
+      "title": "cats! and beloved pets",
+      "source": "rateyourmusic",
+      "raw": [
+        "Indietronica",
+        "Bedroom Pop",
+        "Indie Pop"
+      ],
+      "primary": "pop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5902",
+      "title": "Bill Quick",
+      "source": "rateyourmusic",
+      "raw": [
+        "Contemporary Folk",
+        "Singer-Songwriter"
+      ],
+      "primary": "cantautor",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6203",
+      "title": "Yua Bits",
+      "source": "rateyourmusic",
+      "raw": [
+        "Hip Hop"
+      ],
+      "primary": "hip-hop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5905",
+      "title": "OH!DULCEARi",
+      "source": "rateyourmusic",
+      "raw": [
+        "Digicore",
+        "Trap",
+        "Cloud Rap",
+        "Emo Rap"
+      ],
+      "primary": "trap",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5906",
+      "title": "YUNGLiAN MEDiOCRE BROKE BOi",
+      "source": "rateyourmusic",
+      "raw": [
+        "Hip Hop"
+      ],
+      "primary": "hip-hop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6205",
+      "title": "jorge andrés",
+      "source": "rateyourmusic",
+      "raw": [
+        "Indie Rock"
+      ],
+      "primary": "indie-rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5907",
+      "title": "Eldese",
+      "source": "rateyourmusic",
+      "raw": [
+        "Experimental"
+      ],
+      "primary": "experimental",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6210",
+      "title": "Pico Mifés",
+      "source": "rateyourmusic",
+      "raw": [
+        "Singer-Songwriter"
+      ],
+      "primary": "cantautor",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6212",
+      "title": "Skisia2",
+      "source": "rateyourmusic",
+      "raw": [
+        "Trap"
+      ],
+      "primary": "trap",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6214",
+      "title": "Pedro el Colita",
+      "source": "rateyourmusic",
+      "raw": [
+        "Flamenco"
+      ],
+      "primary": "flamenco",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6218",
+      "title": "3m5",
+      "source": "rateyourmusic",
+      "raw": [
+        "Boom Bap",
+        "Hardcore Hip Hop"
+      ],
+      "primary": "boom-bap",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6220",
+      "title": "Las Lineas de Nazca",
+      "source": "rateyourmusic",
+      "raw": [
+        "Singer-Songwriter"
+      ],
+      "primary": "cantautor",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6221",
+      "title": "juanrutina",
+      "source": "rateyourmusic",
+      "raw": [
+        "Hip Hop"
+      ],
+      "primary": "hip-hop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6222",
+      "title": "Oreste",
+      "source": "rateyourmusic",
+      "raw": [
+        "Deep House",
+        "Progressive House"
+      ],
+      "primary": "house",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6225",
+      "title": "THEALBERTOZ",
+      "source": "rateyourmusic",
+      "raw": [
+        "Electronic"
+      ],
+      "primary": "electronica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6227",
+      "title": "Antidolby",
+      "source": "rateyourmusic",
+      "raw": [
+        "Minimal Synth",
+        "Post-Punk",
+        "Coldwave",
+        "Synth Punk"
+      ],
+      "primary": "post-punk",
+      "secondaries": [
+        "coldwave"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6229",
+      "title": "Jemimemu",
+      "source": "rateyourmusic",
+      "raw": [
+        "Pop"
+      ],
+      "primary": "pop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6231",
+      "title": "La Serpiente Solar",
+      "source": "rateyourmusic",
+      "raw": [
+        "Alternative Metal"
+      ],
+      "primary": "metal-alternativo",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6232",
+      "title": "Mariafer",
+      "source": "rateyourmusic",
+      "raw": [
+        "Singer-Songwriter"
+      ],
+      "primary": "cantautor",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4591",
+      "title": "Magnifilium",
+      "source": "rateyourmusic",
+      "raw": [
+        "Nu Metal"
+      ],
+      "primary": "nu-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4592",
+      "title": "Sendero Veneco",
+      "source": "rateyourmusic",
+      "raw": [
+        "Noisecore",
+        "Noisegrind"
+      ],
+      "primary": "noisecore",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4593",
+      "title": "La Danta",
+      "source": "rateyourmusic",
+      "raw": [
+        "Experimental"
+      ],
+      "primary": "experimental",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5917",
+      "title": "NK Profeta",
+      "source": "rateyourmusic",
+      "raw": [
+        "Hip Hop"
+      ],
+      "primary": "hip-hop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5918",
+      "title": "Sebastián Bauza-Bueno",
+      "source": "rateyourmusic",
+      "raw": [
+        "Avant-Folk",
+        "Singer-Songwriter",
+        "Experimental",
+        "Free Folk",
+        "Glitch",
+        "Modern Classical"
+      ],
+      "primary": "cantautor",
+      "secondaries": [
+        "experimental",
+        "glitch"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:4595",
+      "title": "Porfi Jiménez y Su Orquesta",
+      "source": "rateyourmusic",
+      "raw": [
+        "Big Band"
+      ],
+      "primary": "big-band",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4596",
+      "title": "Arawato",
+      "source": "rateyourmusic",
+      "raw": [
+        "Indie Rock",
+        "Alternative Rock"
+      ],
+      "primary": "indie-rock",
+      "secondaries": [
+        "rock-alternativo"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:5920",
+      "title": "Gona",
+      "source": "rateyourmusic",
+      "raw": [
+        "Hip Hop"
+      ],
+      "primary": "hip-hop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4598",
+      "title": "Musikautomatika",
+      "source": "rateyourmusic",
+      "raw": [
+        "Electroacoustic",
+        "Progressive Electronic"
+      ],
+      "primary": "electroacustica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5922",
+      "title": "Samy Hawk",
+      "source": "rateyourmusic",
+      "raw": [
+        "Pop Rap"
+      ],
+      "primary": "hip-hop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4599",
+      "title": "Colérico Espín",
+      "source": "rateyourmusic",
+      "raw": [
+        "Folk"
+      ],
+      "primary": "folk",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5927",
+      "title": "Lan Liu",
+      "source": "rateyourmusic",
+      "raw": [
+        "Post-Industrial",
+        "Sound Collage",
+        "Plunderphonics"
+      ],
+      "primary": "industrial",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4605",
+      "title": "Ray Pérez y su Orquesta",
+      "source": "rateyourmusic",
+      "raw": [
+        "Salsa"
+      ],
+      "primary": "salsa",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4606",
+      "title": "La Crítica",
+      "source": "rateyourmusic",
+      "raw": [
+        "Salsa"
+      ],
+      "primary": "salsa",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4607",
+      "title": "Nati y Su Orquesta",
+      "source": "rateyourmusic",
+      "raw": [
+        "Salsa"
+      ],
+      "primary": "salsa",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5932",
+      "title": "Maye",
+      "source": "rateyourmusic",
+      "raw": [
+        "Bedroom Pop",
+        "Latin Pop",
+        "Neo-Soul"
+      ],
+      "primary": "pop-latino",
+      "secondaries": [
+        "soul"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:5933",
+      "title": "AS1",
+      "source": "rateyourmusic",
+      "raw": [
+        "Electro",
+        "Techno"
+      ],
+      "primary": "techno",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5935",
+      "title": "Verkhead",
+      "source": "rateyourmusic",
+      "raw": [
+        "Noise"
+      ],
+      "primary": "noise",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5936",
+      "title": "Lele Pons",
+      "source": "rateyourmusic",
+      "raw": [
+        "Reggaetón",
+        "Latin Pop"
+      ],
+      "primary": "reggaeton",
+      "secondaries": [
+        "pop-latino"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:4609",
+      "title": "Le' Cinema",
+      "source": "rateyourmusic",
+      "raw": [
+        "Indie Rock"
+      ],
+      "primary": "indie-rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4524",
+      "title": "Anakena",
+      "source": "rateyourmusic",
+      "raw": [
+        "Latin Alternative",
+        "Latin Pop",
+        "Bachata"
+      ],
+      "primary": "rock-latino",
+      "secondaries": [
+        "pop-latino",
+        "bachata"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:5941",
+      "title": "Markem",
+      "source": "rateyourmusic",
+      "raw": [
+        "House"
+      ],
+      "primary": "house",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5951",
+      "title": "Nombres Ocultos",
+      "source": "rateyourmusic",
+      "raw": [
+        "Psychedelic Pop"
+      ],
+      "primary": "pop-psicodelico",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4616",
+      "title": "Rótival",
+      "source": "rateyourmusic",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4623",
+      "title": "Retrovyzor",
+      "source": "rateyourmusic",
+      "raw": [
+        "Alternative Rock"
+      ],
+      "primary": "rock-alternativo",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4624",
+      "title": "Kemawan",
+      "source": "rateyourmusic",
+      "raw": [
+        "Reggae"
+      ],
+      "primary": "reggae",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4625",
+      "title": "Escritores de Salem",
+      "source": "rateyourmusic",
+      "raw": [
+        "Alternative Rock"
+      ],
+      "primary": "rock-alternativo",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4626",
+      "title": "Nueve Noventa",
+      "source": "rateyourmusic",
+      "raw": [
+        "Alternative Rock"
+      ],
+      "primary": "rock-alternativo",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4627",
+      "title": "Grupo Pepper",
+      "source": "rateyourmusic",
+      "raw": [
+        "Pop"
+      ],
+      "primary": "pop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4628",
+      "title": "La Gran Banda de Venezuela",
+      "source": "rateyourmusic",
+      "raw": [
+        "Salsa"
+      ],
+      "primary": "salsa",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5965",
+      "title": "Banny Kosta",
+      "source": "rateyourmusic",
+      "raw": [
+        "Salsa"
+      ],
+      "primary": "salsa",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4371",
+      "title": "Orquesta Sinfónica Simón Bolívar",
+      "source": "rateyourmusic",
+      "raw": [
+        "Modern Classical",
+        "Orchestral Music",
+        "Romanticism",
+        "Latin American Classical Music",
+        "Symphony",
+        "Choral"
+      ],
+      "primary": "musica-coral",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4629",
+      "title": "Soires Naes",
+      "source": "rateyourmusic",
+      "raw": [
+        "Hip Hop"
+      ],
+      "primary": "hip-hop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5969",
+      "title": "Hein van der Gaag",
+      "source": "rateyourmusic",
+      "raw": [
+        "Jazz"
+      ],
+      "primary": "jazz",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4630",
+      "title": "Todo Bien Todo Mal",
+      "source": "rateyourmusic",
+      "raw": [
+        "Indie Rock",
+        "Emo-Pop",
+        "Post-Hardcore"
+      ],
+      "primary": "indie-rock",
+      "secondaries": [
+        "pop",
+        "post-hardcore"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:5973",
+      "title": "Zamora",
+      "source": "rateyourmusic",
+      "raw": [
+        "New Age"
+      ],
+      "primary": "new-age",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4631",
+      "title": "Los Colores",
+      "source": "rateyourmusic",
+      "raw": [
+        "Indie Rock",
+        "Pop Rock"
+      ],
+      "primary": "indie-rock",
+      "secondaries": [
+        "pop-rock"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:4632",
+      "title": "Rumberos del Callejón",
+      "source": "rateyourmusic",
+      "raw": [
+        "Salsa"
+      ],
+      "primary": "salsa",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5976",
+      "title": "ahvistetabien",
+      "source": "rateyourmusic",
+      "raw": [
+        "Experimental"
+      ],
+      "primary": "experimental",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4640",
+      "title": "Laps Around the Sun",
+      "source": "rateyourmusic",
+      "raw": [
+        "Post-Rock",
+        "Noise"
+      ],
+      "primary": "post-rock",
+      "secondaries": [
+        "noise"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6011",
+      "title": "Desidere",
+      "source": "rateyourmusic",
+      "raw": [
+        "Alternative Rock"
+      ],
+      "primary": "rock-alternativo",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6012",
+      "title": "Corina Smith",
+      "source": "rateyourmusic",
+      "raw": [
+        "Contemporary R&B",
+        "Latin Pop",
+        "Pop Rap",
+        "Reggaetón"
+      ],
+      "primary": "r-and-b",
+      "secondaries": [
+        "pop-latino",
+        "hip-hop",
+        "reggaeton"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6014",
+      "title": "andremustdie",
+      "source": "rateyourmusic",
+      "raw": [
+        "Singer-Songwriter"
+      ],
+      "primary": "cantautor",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4642",
+      "title": "Raúl Monsalve y Los Forajidos",
+      "source": "rateyourmusic",
+      "raw": [
+        "Afrobeat",
+        "Jazz Fusion",
+        "Latin Jazz",
+        "Jazz-Funk",
+        "Latin Electronic"
+      ],
+      "primary": "jazz-fusion",
+      "secondaries": [
+        "jazz-latino",
+        "jazz-funk"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:4643",
+      "title": "The Baby Factory",
+      "source": "rateyourmusic",
+      "raw": [
+        "Folk Rock"
+      ],
+      "primary": "folk-rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6017",
+      "title": "Weed420",
+      "source": "rateyourmusic",
+      "raw": [
+        "Latin Electronic",
+        "Epic Collage",
+        "Neo-Psychedelia",
+        "Experimental Rock",
+        "Hypnagogic Pop",
+        "Post-Rock"
+      ],
+      "primary": "rock-psicodelico",
+      "secondaries": [
+        "rock-experimental",
+        "post-rock"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6018",
+      "title": "Marianella",
+      "source": "rateyourmusic",
+      "raw": [
+        "Salsa"
+      ],
+      "primary": "salsa",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6019",
+      "title": "Elizabeth Ayoub",
+      "source": "rateyourmusic",
+      "raw": [
+        "Singer-Songwriter"
+      ],
+      "primary": "cantautor",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6020",
+      "title": "DN Tato",
+      "source": "rateyourmusic",
+      "raw": [
+        "Reggaetón"
+      ],
+      "primary": "reggaeton",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6024",
+      "title": "Alberto Conde",
+      "source": "rateyourmusic",
+      "raw": [
+        "Jazz"
+      ],
+      "primary": "jazz",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4645",
+      "title": "Zoundcolector",
+      "source": "rateyourmusic",
+      "raw": [
+        "Electronic"
+      ],
+      "primary": "electronica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6025",
+      "title": "Jorge Sánchez-Chiong",
+      "source": "rateyourmusic",
+      "raw": [
+        "Experimental"
+      ],
+      "primary": "experimental",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4646",
+      "title": "San Tomé",
+      "source": "rateyourmusic",
+      "raw": [
+        "Pop"
+      ],
+      "primary": "pop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4647",
+      "title": "Roboto",
+      "source": "rateyourmusic",
+      "raw": [
+        "Alternative Rock"
+      ],
+      "primary": "rock-alternativo",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4648",
+      "title": "Orquesta Sans Souci",
+      "source": "rateyourmusic",
+      "raw": [
+        "Dance"
+      ],
+      "primary": "dance",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6028",
+      "title": "OOYAH",
+      "source": "rateyourmusic",
+      "raw": [
+        "Alt-Pop"
+      ],
+      "primary": "pop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4650",
+      "title": "Franco y Oscarcito",
+      "source": "rateyourmusic",
+      "raw": [
+        "Pop"
+      ],
+      "primary": "pop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6029",
+      "title": "Osos del sol",
+      "source": "rateyourmusic",
+      "raw": [
+        "Electronic"
+      ],
+      "primary": "electronica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6032",
+      "title": "El Forever",
+      "source": "rateyourmusic",
+      "raw": [
+        "Singer-Songwriter"
+      ],
+      "primary": "cantautor",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4651",
+      "title": "Príncipe y Su Sexteto",
+      "source": "rateyourmusic",
+      "raw": [
+        "Salsa"
+      ],
+      "primary": "salsa",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4652",
+      "title": "La Melodía Perfecta",
+      "source": "rateyourmusic",
+      "raw": [
+        "Latin Pop"
+      ],
+      "primary": "pop-latino",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6034",
+      "title": "Daniella Barbarito",
+      "source": "rateyourmusic",
+      "raw": [
+        "Singer-Songwriter"
+      ],
+      "primary": "cantautor",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6035",
+      "title": "MJ Nebreda",
+      "source": "rateyourmusic",
+      "raw": [
+        "Neoperreo",
+        "Changa tuki",
+        "Deep House"
+      ],
+      "primary": "house",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6038",
+      "title": "Kai Tak",
+      "source": "rateyourmusic",
+      "raw": [
+        "Electronic"
+      ],
+      "primary": "electronica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6040",
+      "title": "Lasmanz",
+      "source": "rateyourmusic",
+      "raw": [
+        "Electronic"
+      ],
+      "primary": "electronica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6041",
+      "title": "Dave Ruthwell",
+      "source": "rateyourmusic",
+      "raw": [
+        "House"
+      ],
+      "primary": "house",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6042",
+      "title": "Peche",
+      "source": "rateyourmusic",
+      "raw": [
+        "Pop"
+      ],
+      "primary": "pop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6043",
+      "title": "Jhoanypz Jhoanypz",
+      "source": "rateyourmusic",
+      "raw": [
+        "Electronic"
+      ],
+      "primary": "electronica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6044",
+      "title": "Orquesta Discotheque",
+      "source": "rateyourmusic",
+      "raw": [
+        "Latin Pop"
+      ],
+      "primary": "pop-latino",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4653",
+      "title": "Grupo Treo",
+      "source": "rateyourmusic",
+      "raw": [
+        "Pop"
+      ],
+      "primary": "pop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4655",
+      "title": "Los Cadillac's",
+      "source": "rateyourmusic",
+      "raw": [
+        "Pop"
+      ],
+      "primary": "pop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4656",
+      "title": "Nomásté",
+      "source": "rateyourmusic",
+      "raw": [
+        "Jazz Fusion"
+      ],
+      "primary": "jazz-fusion",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6046",
+      "title": "Mida",
+      "source": "rateyourmusic",
+      "raw": [
+        "Pop"
+      ],
+      "primary": "pop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4657",
+      "title": "Camargo",
+      "source": "rateyourmusic",
+      "raw": [
+        "Indie Pop"
+      ],
+      "primary": "pop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6049",
+      "title": "Mañana el Espacio",
+      "source": "rateyourmusic",
+      "raw": [
+        "Indie Pop",
+        "Jangle Pop"
+      ],
+      "primary": "jangle-pop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4658",
+      "title": "Xtremauncion",
+      "source": "rateyourmusic",
+      "raw": [
+        "Death Metal"
+      ],
+      "primary": "death-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6052",
+      "title": "Sarc The East Face",
+      "source": "rateyourmusic",
+      "raw": [
+        "Singer-Songwriter"
+      ],
+      "primary": "cantautor",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4660",
+      "title": "Sky's White Meditation",
+      "source": "rateyourmusic",
+      "raw": [
+        "Hard Rock"
+      ],
+      "primary": "hard-rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4610",
+      "title": "Van Der Dijs",
+      "source": "rateyourmusic",
+      "raw": [
+        "Rap Metal"
+      ],
+      "primary": "rap-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6054",
+      "title": "Chantals",
+      "source": "rateyourmusic",
+      "raw": [
+        "Alternative Rock"
+      ],
+      "primary": "rock-alternativo",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6055",
+      "title": "la niña brava",
+      "source": "rateyourmusic",
+      "raw": [
+        "Singer-Songwriter"
+      ],
+      "primary": "cantautor",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6056",
+      "title": "AlexTrip Sands",
+      "source": "rateyourmusic",
+      "raw": [
+        "Salsa"
+      ],
+      "primary": "salsa",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6057",
+      "title": "Orquesta La Junior's",
+      "source": "rateyourmusic",
+      "raw": [
+        "Salsa romántica"
+      ],
+      "primary": "salsa-romantica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4662",
+      "title": "Tropic-Zulia",
+      "source": "rateyourmusic",
+      "raw": [
+        "Gaita zuliana"
+      ],
+      "primary": "gaita",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4663",
+      "title": "Guasinca Zuliana",
+      "source": "rateyourmusic",
+      "raw": [
+        "Gaita zuliana"
+      ],
+      "primary": "gaita",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4665",
+      "title": "Koonze Family",
+      "source": "rateyourmusic",
+      "raw": [
+        "Latin Pop"
+      ],
+      "primary": "pop-latino",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6058",
+      "title": "Yeyo y Los Simepagan Boys",
+      "source": "rateyourmusic",
+      "raw": [
+        "Post-Punk"
+      ],
+      "primary": "post-punk",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6059",
+      "title": "Louis BPM",
+      "source": "rateyourmusic",
+      "raw": [
+        "Trap"
+      ],
+      "primary": "trap",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4666",
+      "title": "Unos Panas Ahí",
+      "source": "rateyourmusic",
+      "raw": [
+        "Alternative Rock"
+      ],
+      "primary": "rock-alternativo",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6062",
+      "title": "Lexxter",
+      "source": "rateyourmusic",
+      "raw": [
+        "Alternative R&B",
+        "Reggaetón"
+      ],
+      "primary": "reggaeton",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6065",
+      "title": "BULANGER",
+      "source": "rateyourmusic",
+      "raw": [
+        "Experimental"
+      ],
+      "primary": "experimental",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6066",
+      "title": "Cordillera 905",
+      "source": "rateyourmusic",
+      "raw": [
+        "Reggaetón"
+      ],
+      "primary": "reggaeton",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5908",
+      "title": "Realengos",
+      "source": "rateyourmusic",
+      "raw": [
+        "Hip Hop"
+      ],
+      "primary": "hip-hop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6158",
+      "title": "Cinema Doom",
+      "source": "rateyourmusic",
+      "raw": [
+        "Heavy Metal"
+      ],
+      "primary": "heavy-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6160",
+      "title": "Alleh",
+      "source": "rateyourmusic",
+      "raw": [
+        "Reggaetón"
+      ],
+      "primary": "reggaeton",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5815",
+      "title": "Yorghaki",
+      "source": "rateyourmusic",
+      "raw": [
+        "Latin Pop"
+      ],
+      "primary": "pop-latino",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6161",
+      "title": "Contra Marcha Punk HxC",
+      "source": "rateyourmusic",
+      "raw": [
+        "Hardcore Punk"
+      ],
+      "primary": "hardcore-punk",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6162",
+      "title": "Joux",
+      "source": "rateyourmusic",
+      "raw": [
+        "Electronic"
+      ],
+      "primary": "electronica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4521",
+      "title": "Orquesta La Tremenda",
+      "source": "rateyourmusic",
+      "raw": [
+        "Bolero"
+      ],
+      "primary": "bolero",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4536",
+      "title": "Frailes",
+      "source": "rateyourmusic",
+      "raw": [
+        "Psychedelic Rock"
+      ],
+      "primary": "rock-psicodelico",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4537",
+      "title": "Kurikos Suin",
+      "source": "rateyourmusic",
+      "raw": [
+        "Cumbia"
+      ],
+      "primary": "cumbia",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5816",
+      "title": "Emmanuel Abraham",
+      "source": "rateyourmusic",
+      "raw": [
+        "Experimental"
+      ],
+      "primary": "experimental",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5819",
+      "title": "Alaya",
+      "source": "rateyourmusic",
+      "raw": [
+        "Latin Pop"
+      ],
+      "primary": "pop-latino",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5848",
+      "title": "Vict Molina",
+      "source": "rateyourmusic",
+      "raw": [
+        "Pop"
+      ],
+      "primary": "pop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5849",
+      "title": "Lara Project",
+      "source": "rateyourmusic",
+      "raw": [
+        "Synthpop",
+        "Dance-Pop"
+      ],
+      "primary": "dance",
+      "secondaries": [
+        "pop"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:4555",
+      "title": "Los Coveros",
+      "source": "rateyourmusic",
+      "raw": [
+        "Punk Rock"
+      ],
+      "primary": "punk-rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4559",
+      "title": "Los Dead",
+      "source": "rateyourmusic",
+      "raw": [
+        "Oi!"
+      ],
+      "primary": "oi",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4560",
+      "title": "Sr. Falla de Origen",
+      "source": "rateyourmusic",
+      "raw": [
+        "Post-Punk"
+      ],
+      "primary": "post-punk",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4554",
+      "title": "The Viridian Groove",
+      "source": "rateyourmusic",
+      "raw": [
+        "Experimental Rock"
+      ],
+      "primary": "rock-experimental",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5877",
+      "title": "Robert Tiamo",
+      "source": "rateyourmusic",
+      "raw": [
+        "Hip Hop"
+      ],
+      "primary": "hip-hop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4570",
+      "title": "Torrecè",
+      "source": "rateyourmusic",
+      "raw": [
+        "Indie Rock"
+      ],
+      "primary": "indie-rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5879",
+      "title": "Alboa",
+      "source": "rateyourmusic",
+      "raw": [
+        "House"
+      ],
+      "primary": "house",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6188",
+      "title": "Kelly Abarca",
+      "source": "rateyourmusic",
+      "raw": [
+        "Singer-Songwriter"
+      ],
+      "primary": "cantautor",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4571",
+      "title": "Niños con Pistolas",
+      "source": "rateyourmusic",
+      "raw": [
+        "Garage Rock",
+        "Post-Punk"
+      ],
+      "primary": "garage-rock",
+      "secondaries": [
+        "post-punk"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:4572",
+      "title": "sentimentals",
+      "source": "rateyourmusic",
+      "raw": [
+        "Post-Punk"
+      ],
+      "primary": "post-punk",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4573",
+      "title": "Pólyman",
+      "source": "rateyourmusic",
+      "raw": [
+        "Indie Pop"
+      ],
+      "primary": "pop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4574",
+      "title": "Tripland",
+      "source": "rateyourmusic",
+      "raw": [
+        "Pop Rock"
+      ],
+      "primary": "pop-rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4575",
+      "title": "Musanostra",
+      "source": "rateyourmusic",
+      "raw": [
+        "Indie Pop"
+      ],
+      "primary": "pop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4577",
+      "title": "No Light No Water",
+      "source": "rateyourmusic",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5885",
+      "title": "SALAS",
+      "source": "rateyourmusic",
+      "raw": [
+        "Electronic"
+      ],
+      "primary": "electronica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5855",
+      "title": "Badborn",
+      "source": "rateyourmusic",
+      "raw": [
+        "Experimental"
+      ],
+      "primary": "experimental",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5864",
+      "title": "Cornelio Salazar",
+      "source": "rateyourmusic",
+      "raw": [
+        "Folk"
+      ],
+      "primary": "folk",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6174",
+      "title": "The Madman Alex",
+      "source": "rateyourmusic",
+      "raw": [
+        "Slam Death Metal",
+        "Deathcore"
+      ],
+      "primary": "deathcore",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5865",
+      "title": "Giovanni Guzzo",
+      "source": "rateyourmusic",
+      "raw": [
+        "Chamber Music",
+        "Romanticism"
+      ],
+      "primary": "musica-de-camara",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6175",
+      "title": "Subliminal Terry",
+      "source": "rateyourmusic",
+      "raw": [
+        "Trip Hop"
+      ],
+      "primary": "trip-hop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4563",
+      "title": "Virtual Animal",
+      "source": "rateyourmusic",
+      "raw": [
+        "Electronic"
+      ],
+      "primary": "electronica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6176",
+      "title": "Maxplay",
+      "source": "rateyourmusic",
+      "raw": [
+        "House",
+        "Trance"
+      ],
+      "primary": "house",
+      "secondaries": [
+        "trance"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6178",
+      "title": "Nina Romero",
+      "source": "rateyourmusic",
+      "raw": [
+        "Indie Pop"
+      ],
+      "primary": "pop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6179",
+      "title": "Cherlatte",
+      "source": "rateyourmusic",
+      "raw": [
+        "Funk"
+      ],
+      "primary": "funk",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6180",
+      "title": "Carlitos Calebra",
+      "source": "rateyourmusic",
+      "raw": [
+        "Hip Hop"
+      ],
+      "primary": "hip-hop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4564",
+      "title": "Creática",
+      "source": "rateyourmusic",
+      "raw": [
+        "Alternative Metal"
+      ],
+      "primary": "metal-alternativo",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5886",
+      "title": "Fabro",
+      "source": "rateyourmusic",
+      "raw": [
+        "Reggaetón"
+      ],
+      "primary": "reggaeton",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5887",
+      "title": "César Castro",
+      "source": "rateyourmusic",
+      "raw": [
+        "Vallenato"
+      ],
+      "primary": "vallenato",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4579",
+      "title": "Colibrí",
+      "source": "rateyourmusic",
+      "raw": [
+        "Indie Rock"
+      ],
+      "primary": "indie-rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4581",
+      "title": "Pez Volador",
+      "source": "rateyourmusic",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5890",
+      "title": "Manu Heredia",
+      "source": "rateyourmusic",
+      "raw": [
+        "Electronic"
+      ],
+      "primary": "electronica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6191",
+      "title": "Daylens & George",
+      "source": "rateyourmusic",
+      "raw": [
+        "Reggaetón"
+      ],
+      "primary": "reggaeton",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5891",
+      "title": "Luca Pisaroni",
+      "source": "rateyourmusic",
+      "raw": [
+        "Classical Period",
+        "Opera",
+        "Opera buffa",
+        "Baroque Music",
+        "Romanticism",
+        "Mass"
+      ],
+      "primary": "opera",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5892",
+      "title": "Manira",
+      "source": "rateyourmusic",
+      "raw": [
+        "Singer-Songwriter"
+      ],
+      "primary": "cantautor",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5894",
+      "title": "Scarlett Linares",
+      "source": "rateyourmusic",
+      "raw": [
+        "Folk"
+      ],
+      "primary": "folk",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5895",
+      "title": "Francelín Casañas",
+      "source": "rateyourmusic",
+      "raw": [
+        "Joropo"
+      ],
+      "primary": "joropo",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6245",
+      "title": "Velesa",
+      "source": "rateyourmusic",
+      "raw": [
+        "Latin Pop"
+      ],
+      "primary": "pop-latino",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6262",
+      "title": "Scäper",
+      "source": "rateyourmusic",
+      "raw": [
+        "Dubstep"
+      ],
+      "primary": "dubstep",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4716",
+      "title": "Mario y Sus Diamantes",
+      "source": "rateyourmusic",
+      "raw": [
+        "Cumbia"
+      ],
+      "primary": "cumbia",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6105",
+      "title": "Hotel",
+      "source": "rateyourmusic",
+      "raw": [
+        "Singer-Songwriter",
+        "Contemporary Folk"
+      ],
+      "primary": "cantautor",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6264",
+      "title": "Johnny Sunrise",
+      "source": "rateyourmusic",
+      "raw": [
+        "Dream Pop"
+      ],
+      "primary": "dream-pop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6106",
+      "title": "Menoles",
+      "source": "rateyourmusic",
+      "raw": [
+        "Bedroom Pop",
+        "Art Rock"
+      ],
+      "primary": "art-rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6267",
+      "title": "La Comunidad Internacional",
+      "source": "rateyourmusic",
+      "raw": [
+        "Noise"
+      ],
+      "primary": "noise",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4717",
+      "title": "Los Satélites",
+      "source": "rateyourmusic",
+      "raw": [
+        "Salsa"
+      ],
+      "primary": "salsa",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4718",
+      "title": "Los Universales de Maracaibo",
+      "source": "rateyourmusic",
+      "raw": [
+        "Cumbia"
+      ],
+      "primary": "cumbia",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4719",
+      "title": "La Gallera Social Club",
+      "source": "rateyourmusic",
+      "raw": [
+        "Folk"
+      ],
+      "primary": "folk",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4721",
+      "title": "Orquesta la Combinación",
+      "source": "rateyourmusic",
+      "raw": [
+        "Salsa"
+      ],
+      "primary": "salsa",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4722",
+      "title": "Paisaje Local",
+      "source": "rateyourmusic",
+      "raw": [
+        "Dream Pop"
+      ],
+      "primary": "dream-pop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4723",
+      "title": "Super Combo Los Tropicales",
+      "source": "rateyourmusic",
+      "raw": [
+        "Dance"
+      ],
+      "primary": "dance",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4522",
+      "title": "Los Imperial's",
+      "source": "rateyourmusic",
+      "raw": [
+        "Cumbia"
+      ],
+      "primary": "cumbia",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4724",
+      "title": "Clan Coral",
+      "source": "rateyourmusic",
+      "raw": [
+        "Dream Pop"
+      ],
+      "primary": "dream-pop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6111",
+      "title": "Conjunto Santa Anita",
+      "source": "rateyourmusic",
+      "raw": [
+        "Gaita zuliana"
+      ],
+      "primary": "gaita",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6112",
+      "title": "Molero",
+      "source": "rateyourmusic",
+      "raw": [
+        "Progressive Electronic",
+        "Berlin School",
+        "Ambient"
+      ],
+      "primary": "ambient",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4727",
+      "title": "Los Casinos",
+      "source": "rateyourmusic",
+      "raw": [
+        "Dance"
+      ],
+      "primary": "dance",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4728",
+      "title": "Gaiteros de Pillopo",
+      "source": "rateyourmusic",
+      "raw": [
+        "Gaita zuliana"
+      ],
+      "primary": "gaita",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4729",
+      "title": "El Club de Amigos Los Mejores del Amor",
+      "source": "rateyourmusic",
+      "raw": [
+        "Bedroom Pop",
+        "Psychedelic Pop",
+        "Hypnagogic Pop"
+      ],
+      "primary": "pop-psicodelico",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4731",
+      "title": "Technicolor",
+      "source": "rateyourmusic",
+      "raw": [
+        "Indie Rock"
+      ],
+      "primary": "indie-rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6114",
+      "title": "Carlos Trewher",
+      "source": "rateyourmusic",
+      "raw": [
+        "Alternative Rock"
+      ],
+      "primary": "rock-alternativo",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6115",
+      "title": "emnl",
+      "source": "rateyourmusic",
+      "raw": [
+        "Instrumental Hip Hop",
+        "Boom Bap"
+      ],
+      "primary": "boom-bap",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6116",
+      "title": "The Slow Glow",
+      "source": "rateyourmusic",
+      "raw": [
+        "Singer-Songwriter"
+      ],
+      "primary": "cantautor",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6117",
+      "title": "Annybell",
+      "source": "rateyourmusic",
+      "raw": [
+        "Pop"
+      ],
+      "primary": "pop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4733",
+      "title": "Bacanos",
+      "source": "rateyourmusic",
+      "raw": [
+        "Latin Pop",
+        "Vallenato"
+      ],
+      "primary": "pop-latino",
+      "secondaries": [
+        "vallenato"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6118",
+      "title": "Wight Garden",
+      "source": "rateyourmusic",
+      "raw": [
+        "Electronic",
+        "Experimental"
+      ],
+      "primary": "electronica",
+      "secondaries": [
+        "experimental"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:4734",
+      "title": "VHG",
+      "source": "rateyourmusic",
+      "raw": [
+        "Gaita zuliana"
+      ],
+      "primary": "gaita",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6119",
+      "title": "Mary'O",
+      "source": "rateyourmusic",
+      "raw": [
+        "Salsa romántica"
+      ],
+      "primary": "salsa-romantica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6121",
+      "title": "Kyrie Seiko",
+      "source": "rateyourmusic",
+      "raw": [
+        "Experimental"
+      ],
+      "primary": "experimental",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6123",
+      "title": "Date X Muerto",
+      "source": "rateyourmusic",
+      "raw": [
+        "Post-Punk"
+      ],
+      "primary": "post-punk",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4738",
+      "title": "Conjunto Saladillo",
+      "source": "rateyourmusic",
+      "raw": [
+        "Gaita zuliana"
+      ],
+      "primary": "gaita",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5872",
+      "title": "Meruva",
+      "source": "rateyourmusic",
+      "raw": [
+        "Indie Pop"
+      ],
+      "primary": "pop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4565",
+      "title": "Afrochill",
+      "source": "rateyourmusic",
+      "raw": [
+        "Funk"
+      ],
+      "primary": "funk",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4566",
+      "title": "Bucle Lunar",
+      "source": "rateyourmusic",
+      "raw": [
+        "Indie Pop",
+        "Bedroom Pop"
+      ],
+      "primary": "pop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4567",
+      "title": "Insok",
+      "source": "rateyourmusic",
+      "raw": [
+        "Alternative Rock"
+      ],
+      "primary": "rock-alternativo",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4582",
+      "title": "Merida Swing Boys",
+      "source": "rateyourmusic",
+      "raw": [
+        "Guaguancó",
+        "Salsa"
+      ],
+      "primary": "guaguanco",
+      "secondaries": [
+        "salsa"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6237",
+      "title": "Joss",
+      "source": "rateyourmusic",
+      "raw": [
+        "Singer-Songwriter"
+      ],
+      "primary": "cantautor",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4568",
+      "title": "Holy Hands",
+      "source": "rateyourmusic",
+      "raw": [
+        "Post-Punk"
+      ],
+      "primary": "post-punk",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4569",
+      "title": "Coral Falcón",
+      "source": "rateyourmusic",
+      "raw": [
+        "Choral"
+      ],
+      "primary": "musica-coral",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5873",
+      "title": "Aún no Hija",
+      "source": "rateyourmusic",
+      "raw": [
+        "Experimental Hip Hop"
+      ],
+      "primary": "rap-experimental",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5943",
+      "title": "Vodini",
+      "source": "rateyourmusic",
+      "raw": [
+        "Ambient",
+        "Jungle"
+      ],
+      "primary": "ambient",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4611",
+      "title": "Audiospray",
+      "source": "rateyourmusic",
+      "raw": [
+        "Indie Rock"
+      ],
+      "primary": "indie-rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4612",
+      "title": "Japanese Scarf",
+      "source": "rateyourmusic",
+      "raw": [
+        "Ambient",
+        "Psychedelic Folk"
+      ],
+      "primary": "ambient",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5944",
+      "title": "Ártico",
+      "source": "rateyourmusic",
+      "raw": [
+        "Electronic"
+      ],
+      "primary": "electronica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5945",
+      "title": "Jambene",
+      "source": "rateyourmusic",
+      "raw": [
+        "Latin Pop"
+      ],
+      "primary": "pop-latino",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5947",
+      "title": "Zen P",
+      "source": "rateyourmusic",
+      "raw": [
+        "Boom Bap"
+      ],
+      "primary": "boom-bap",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5948",
+      "title": "UNDYING TRUTH",
+      "source": "rateyourmusic",
+      "raw": [
+        "Electronic"
+      ],
+      "primary": "electronica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4712",
+      "title": "Apotheose",
+      "source": "rateyourmusic",
+      "raw": [
+        "Psychedelic Rock"
+      ],
+      "primary": "rock-psicodelico",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4713",
+      "title": "Morto Kacho",
+      "source": "rateyourmusic",
+      "raw": [
+        "Death Metal"
+      ],
+      "primary": "death-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4714",
+      "title": "Pearl Ash",
+      "source": "rateyourmusic",
+      "raw": [
+        "Jazz-Rock",
+        "Blues",
+        "Funk"
+      ],
+      "primary": "jazz-rock",
+      "secondaries": [
+        "blues",
+        "funk"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6092",
+      "title": "Bboy Puff",
+      "source": "rateyourmusic",
+      "raw": [
+        "Pop Rap",
+        "Dance-Pop"
+      ],
+      "primary": "hip-hop",
+      "secondaries": [
+        "dance",
+        "pop"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6093",
+      "title": "Gideon Luciana",
+      "source": "rateyourmusic",
+      "raw": [
+        "Singer-Songwriter"
+      ],
+      "primary": "cantautor",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6240",
+      "title": "The Isle Project",
+      "source": "rateyourmusic",
+      "raw": [
+        "Metal"
+      ],
+      "primary": "metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5979",
+      "title": "Zuri Nativa",
+      "source": "rateyourmusic",
+      "raw": [
+        "Singer-Songwriter"
+      ],
+      "primary": "cantautor",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5980",
+      "title": "Susan Cagle",
+      "source": "rateyourmusic",
+      "raw": [
+        "Singer-Songwriter"
+      ],
+      "primary": "cantautor",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5982",
+      "title": "Lesley Vos",
+      "source": "rateyourmusic",
+      "raw": [
+        "Soul"
+      ],
+      "primary": "soul",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4635",
+      "title": "Los Aventureros",
+      "source": "rateyourmusic",
+      "raw": [
+        "Bolero"
+      ],
+      "primary": "bolero",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5988",
+      "title": "Paul Connor",
+      "source": "rateyourmusic",
+      "raw": [
+        "Soul"
+      ],
+      "primary": "soul",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5989",
+      "title": "The Rabbit Hole Project",
+      "source": "rateyourmusic",
+      "raw": [
+        "Nu Metal",
+        "Noise Rock"
+      ],
+      "primary": "nu-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5991",
+      "title": "Smiley",
+      "source": "rateyourmusic",
+      "raw": [
+        "Reggae"
+      ],
+      "primary": "reggae",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5993",
+      "title": "Roykey Wydh",
+      "source": "rateyourmusic",
+      "raw": [
+        "Jazz Fusion"
+      ],
+      "primary": "jazz-fusion",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5995",
+      "title": "Susan Justice",
+      "source": "rateyourmusic",
+      "raw": [
+        "Singer-Songwriter"
+      ],
+      "primary": "cantautor",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4637",
+      "title": "This Will Be No More",
+      "source": "rateyourmusic",
+      "raw": [
+        "Metal"
+      ],
+      "primary": "metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4638",
+      "title": "I Saw the Deep",
+      "source": "rateyourmusic",
+      "raw": [
+        "Stoner Rock",
+        "Alternative Rock"
+      ],
+      "primary": "stoner-rock",
+      "secondaries": [
+        "rock-alternativo"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:4639",
+      "title": "The Revoir",
+      "source": "rateyourmusic",
+      "raw": [
+        "Alternative Rock"
+      ],
+      "primary": "rock-alternativo",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5997",
+      "title": "Lloyd and the Joys",
+      "source": "rateyourmusic",
+      "raw": [
+        "Funk"
+      ],
+      "primary": "funk",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6242",
+      "title": "Amy Sorinio",
+      "source": "rateyourmusic",
+      "raw": [
+        "Jazz"
+      ],
+      "primary": "jazz",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4585",
+      "title": "Grupo V",
+      "source": "rateyourmusic",
+      "raw": [
+        "Salsa"
+      ],
+      "primary": "salsa",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4586",
+      "title": "Joudy",
+      "source": "rateyourmusic",
+      "raw": [
+        "Experimental Rock"
+      ],
+      "primary": "rock-experimental",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5899",
+      "title": "CORINGTA",
+      "source": "rateyourmusic",
+      "raw": [
+        "New Wave",
+        "Synthpop"
+      ],
+      "primary": "new-wave",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6000",
+      "title": "García Gomez",
+      "source": "rateyourmusic",
+      "raw": [
+        "Anti-Folk"
+      ],
+      "primary": "folk",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6132",
+      "title": "Sandra Browne",
+      "source": "rateyourmusic",
+      "raw": [
+        "Opera"
+      ],
+      "primary": "opera",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6133",
+      "title": "Naya George",
+      "source": "rateyourmusic",
+      "raw": [
+        "Soca"
+      ],
+      "primary": "soca",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6134",
+      "title": "Fay-Ann Lyons",
+      "source": "rateyourmusic",
+      "raw": [
+        "Soca",
+        "Power Soca"
+      ],
+      "primary": "soca",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6135",
+      "title": "Earl Rodney",
+      "source": "rateyourmusic",
+      "raw": [
+        "Jazz-Funk"
+      ],
+      "primary": "jazz-funk",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6138",
+      "title": "Iwer George",
+      "source": "rateyourmusic",
+      "raw": [
+        "Soca"
+      ],
+      "primary": "soca",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6140",
+      "title": "Vilma Ali",
+      "source": "rateyourmusic",
+      "raw": [
+        "Calypso"
+      ],
+      "primary": "calipso",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4741",
+      "title": "Scorched Earth",
+      "source": "rateyourmusic",
+      "raw": [
+        "Rock"
+      ],
+      "primary": "rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6246",
+      "title": "L A T",
+      "source": "rateyourmusic",
+      "raw": [
+        "Trap"
+      ],
+      "primary": "trap",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6248",
+      "title": "Three Corners",
+      "source": "rateyourmusic",
+      "raw": [
+        "Electronic"
+      ],
+      "primary": "electronica",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6251",
+      "title": "Matter",
+      "source": "rateyourmusic",
+      "raw": [
+        "Trap",
+        "Hip Hop"
+      ],
+      "primary": "trap",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6252",
+      "title": "high drizzy",
+      "source": "rateyourmusic",
+      "raw": [
+        "Trap",
+        "Plugg"
+      ],
+      "primary": "trap",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4668",
+      "title": "Ignis Haereticum",
+      "source": "rateyourmusic",
+      "raw": [
+        "Black Metal",
+        "Dissonant Black Metal"
+      ],
+      "primary": "black-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4669",
+      "title": "Bastard Cruciatu",
+      "source": "rateyourmusic",
+      "raw": [
+        "Black Metal"
+      ],
+      "primary": "black-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6070",
+      "title": "Uzur",
+      "source": "rateyourmusic",
+      "raw": [
+        "Pop"
+      ],
+      "primary": "pop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4670",
+      "title": "Lord Thanatos",
+      "source": "rateyourmusic",
+      "raw": [
+        "Metal"
+      ],
+      "primary": "metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4671",
+      "title": "FIRE",
+      "source": "rateyourmusic",
+      "raw": [
+        "Thrash Metal"
+      ],
+      "primary": "thrash-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4672",
+      "title": "Faster",
+      "source": "rateyourmusic",
+      "raw": [
+        "Thrash Metal"
+      ],
+      "primary": "thrash-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4673",
+      "title": "Curse",
+      "source": "rateyourmusic",
+      "raw": [
+        "Thrash Metal"
+      ],
+      "primary": "thrash-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6074",
+      "title": "Juan Pablo Cediel",
+      "source": "rateyourmusic",
+      "raw": [
+        "Jazz"
+      ],
+      "primary": "jazz",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6253",
+      "title": "Witchkings of Angmar",
+      "source": "rateyourmusic",
+      "raw": [
+        "Dark Ambient",
+        "Dungeon Synth"
+      ],
+      "primary": "dark-ambient",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6254",
+      "title": "Ancestral Warchants",
+      "source": "rateyourmusic",
+      "raw": [
+        "Ambient",
+        "Dungeon Synth"
+      ],
+      "primary": "ambient",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4675",
+      "title": "Dark Manthra",
+      "source": "rateyourmusic",
+      "raw": [
+        "Black Metal"
+      ],
+      "primary": "black-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4676",
+      "title": "ADS",
+      "source": "rateyourmusic",
+      "raw": [
+        "Speed Metal"
+      ],
+      "primary": "speed-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6256",
+      "title": "Villa",
+      "source": "rateyourmusic",
+      "raw": [
+        "Dream Pop"
+      ],
+      "primary": "dream-pop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6257",
+      "title": "Diego Barrios",
+      "source": "rateyourmusic",
+      "raw": [
+        "Jazz"
+      ],
+      "primary": "jazz",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6258",
+      "title": "Segunda mano",
+      "source": "rateyourmusic",
+      "raw": [
+        "Post-Rock"
+      ],
+      "primary": "post-rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4678",
+      "title": "Francamente Ya No Sé",
+      "source": "rateyourmusic",
+      "raw": [
+        "Alternative Rock"
+      ],
+      "primary": "rock-alternativo",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4679",
+      "title": "Auschwitz",
+      "source": "rateyourmusic",
+      "raw": [
+        "Death Metal"
+      ],
+      "primary": "death-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4680",
+      "title": "Bonestorm",
+      "source": "rateyourmusic",
+      "raw": [
+        "Death Metal"
+      ],
+      "primary": "death-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4681",
+      "title": "Rotten Spirit",
+      "source": "rateyourmusic",
+      "raw": [
+        "Death Metal"
+      ],
+      "primary": "death-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4682",
+      "title": "I.M.R.I.",
+      "source": "rateyourmusic",
+      "raw": [
+        "Thrash Metal"
+      ],
+      "primary": "thrash-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4683",
+      "title": "Kathreptis",
+      "source": "rateyourmusic",
+      "raw": [
+        "Grindcore"
+      ],
+      "primary": "grindcore",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4684",
+      "title": "Los Embajadores Vallenatos",
+      "source": "rateyourmusic",
+      "raw": [
+        "Vallenato"
+      ],
+      "primary": "vallenato",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4685",
+      "title": "Hex Crow",
+      "source": "rateyourmusic",
+      "raw": [
+        "Speed Metal"
+      ],
+      "primary": "speed-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4686",
+      "title": "Hatred",
+      "source": "rateyourmusic",
+      "raw": [
+        "Heavy Metal"
+      ],
+      "primary": "heavy-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4687",
+      "title": "Cataleptic",
+      "source": "rateyourmusic",
+      "raw": [
+        "Death Metal"
+      ],
+      "primary": "death-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4688",
+      "title": "Nuctemeron",
+      "source": "rateyourmusic",
+      "raw": [
+        "Death Metal"
+      ],
+      "primary": "death-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4691",
+      "title": "Kull Trigger",
+      "source": "rateyourmusic",
+      "raw": [
+        "Heavy Metal"
+      ],
+      "primary": "heavy-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4692",
+      "title": "Perpetual",
+      "source": "rateyourmusic",
+      "raw": [
+        "Melodic Death Metal"
+      ],
+      "primary": "death-metal-melodico",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4693",
+      "title": "Sinner Serpent",
+      "source": "rateyourmusic",
+      "raw": [
+        "Black Metal"
+      ],
+      "primary": "black-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4695",
+      "title": "Virgin Killer",
+      "source": "rateyourmusic",
+      "raw": [
+        "Speed Metal"
+      ],
+      "primary": "speed-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4696",
+      "title": "Supercuates",
+      "source": "rateyourmusic",
+      "raw": [
+        "Punk Rock",
+        "Pop Punk"
+      ],
+      "primary": "punk-rock",
+      "secondaries": [
+        "pop-punk"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:4697",
+      "title": "Kroniker",
+      "source": "rateyourmusic",
+      "raw": [
+        "Death Metal"
+      ],
+      "primary": "death-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4698",
+      "title": "La Manigua",
+      "source": "rateyourmusic",
+      "raw": [
+        "Folk Rock"
+      ],
+      "primary": "folk-rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4699",
+      "title": "Bañista Lunar",
+      "source": "rateyourmusic",
+      "raw": [
+        "Post-Hardcore",
+        "Alternative Rock"
+      ],
+      "primary": "post-hardcore",
+      "secondaries": [
+        "rock-alternativo"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:4700",
+      "title": "Möthiis Dominiüm",
+      "source": "rateyourmusic",
+      "raw": [
+        "Experimental"
+      ],
+      "primary": "experimental",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6078",
+      "title": "Santa Trinidad Rap",
+      "source": "rateyourmusic",
+      "raw": [
+        "Hip Hop"
+      ],
+      "primary": "hip-hop",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4701",
+      "title": "Borroza",
+      "source": "rateyourmusic",
+      "raw": [
+        "Death Metal",
+        "Thrash Metal"
+      ],
+      "primary": "death-metal",
+      "secondaries": [
+        "thrash-metal"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6080",
+      "title": "Oscar Acevedo",
+      "source": "rateyourmusic",
+      "raw": [
+        "Jazz"
+      ],
+      "primary": "jazz",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6081",
+      "title": "Lunalé",
+      "source": "rateyourmusic",
+      "raw": [
+        "Singer-Songwriter"
+      ],
+      "primary": "cantautor",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4702",
+      "title": "Eden",
+      "source": "rateyourmusic",
+      "raw": [
+        "Thrash Metal",
+        "Death Metal"
+      ],
+      "primary": "thrash-metal",
+      "secondaries": [
+        "death-metal"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:4703",
+      "title": "Caos",
+      "source": "rateyourmusic",
+      "raw": [
+        "Death Metal"
+      ],
+      "primary": "death-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4704",
+      "title": "Hola Amiga ¿Cómo Estás?",
+      "source": "rateyourmusic",
+      "raw": [
+        "Indie Rock"
+      ],
+      "primary": "indie-rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4705",
+      "title": "Asteriom",
+      "source": "rateyourmusic",
+      "raw": [
+        "Melodic Black Metal"
+      ],
+      "primary": "black-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4706",
+      "title": "Menos Días Soleados",
+      "source": "rateyourmusic",
+      "raw": [
+        "Indie Rock"
+      ],
+      "primary": "indie-rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4707",
+      "title": "Velandia y la Tigra",
+      "source": "rateyourmusic",
+      "raw": [
+        "Art Rock"
+      ],
+      "primary": "art-rock",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4708",
+      "title": "Supremacia Satanica",
+      "source": "rateyourmusic",
+      "raw": [
+        "Black Metal"
+      ],
+      "primary": "black-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4710",
+      "title": "Old Betrayer",
+      "source": "rateyourmusic",
+      "raw": [
+        "Black Metal"
+      ],
+      "primary": "black-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4711",
+      "title": "Nostos",
+      "source": "rateyourmusic",
+      "raw": [
+        "Black Metal"
+      ],
+      "primary": "black-metal",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6260",
+      "title": "Leddy Manzano",
+      "source": "rateyourmusic",
+      "raw": [
+        "Latin Pop"
+      ],
+      "primary": "pop-latino",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6082",
+      "title": "Yolanda Pérez Manzano",
+      "source": "rateyourmusic",
+      "raw": [
+        "Bolero"
+      ],
+      "primary": "bolero",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6083",
+      "title": "Lafér",
+      "source": "rateyourmusic",
+      "raw": [
+        "Folk"
+      ],
+      "primary": "folk",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:4739",
+      "title": "Chimó Psicodélico",
+      "source": "rateyourmusic",
+      "raw": [
+        "Folk Rock",
+        "Latin Rock",
+        "Latin Alternative"
+      ],
+      "primary": "folk-rock",
+      "secondaries": [
+        "rock-latino"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6127",
+      "title": "Juan Farfán",
+      "source": "rateyourmusic",
+      "raw": [
+        "Joropo"
+      ],
+      "primary": "joropo",
+      "secondaries": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6268",
+      "title": "Söuthkhänd",
+      "source": "rateyourmusic",
+      "raw": [
+        "Trap"
+      ],
+      "primary": "trap",
+      "secondaries": []
+    }
+  ],
+  "alreadyClassified": [],
+  "unresolved": [
+    {
+      "caseId": "rym-nuevos:artist:6169",
+      "source": "rateyourmusic",
+      "raw": [
+        "Breakcore"
+      ],
+      "fragments": [
+        "Breakcore"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6170",
+      "source": "rateyourmusic",
+      "raw": [
+        "Psytrance"
+      ],
+      "fragments": [
+        "Psytrance"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6156",
+      "source": "rateyourmusic",
+      "raw": [
+        "Hyperpop"
+      ],
+      "fragments": [
+        "Hyperpop"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:5807",
+      "source": "rateyourmusic",
+      "raw": [
+        "Indie Folk"
+      ],
+      "fragments": [
+        "Indie Folk"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:4531",
+      "source": "rateyourmusic",
+      "raw": [
+        "Indie Folk"
+      ],
+      "fragments": [
+        "Indie Folk"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:5784",
+      "source": "rateyourmusic",
+      "raw": [
+        "Cloud Rap"
+      ],
+      "fragments": [
+        "Cloud Rap"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:4548",
+      "source": "rateyourmusic",
+      "raw": [
+        "Indie Folk"
+      ],
+      "fragments": [
+        "Indie Folk"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:5790",
+      "source": "rateyourmusic",
+      "raw": [
+        "Indie Folk"
+      ],
+      "fragments": [
+        "Indie Folk"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:4539",
+      "source": "rateyourmusic",
+      "raw": [
+        "Comedy Rock"
+      ],
+      "fragments": [
+        "Comedy Rock"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6153",
+      "source": "rateyourmusic",
+      "raw": [
+        "Latin Electronic"
+      ],
+      "fragments": [
+        "Latin Electronic"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:5797",
+      "source": "rateyourmusic",
+      "raw": [
+        "Slacker Rock"
+      ],
+      "fragments": [
+        "Slacker Rock"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:5782",
+      "source": "rateyourmusic",
+      "raw": [
+        "Deep Tech"
+      ],
+      "fragments": [
+        "Deep Tech"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6146",
+      "source": "rateyourmusic",
+      "raw": [
+        "Emo"
+      ],
+      "fragments": [
+        "Emo"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:5786",
+      "source": "rateyourmusic",
+      "raw": [
+        "Latin Rap"
+      ],
+      "fragments": [
+        "Latin Rap"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:5836",
+      "source": "rateyourmusic",
+      "raw": [
+        "Pep Band"
+      ],
+      "fragments": [
+        "Pep Band"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:5843",
+      "source": "rateyourmusic",
+      "raw": [
+        "HexD",
+        "Digital Hardcore"
+      ],
+      "fragments": [
+        "HexD",
+        "Digital Hardcore"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:4552",
+      "source": "rateyourmusic",
+      "raw": [
+        "Emo"
+      ],
+      "fragments": [
+        "Emo"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:5810",
+      "source": "rateyourmusic",
+      "raw": [
+        "Mariachi"
+      ],
+      "fragments": [
+        "Mariachi"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:5811",
+      "source": "rateyourmusic",
+      "raw": [
+        "Tejano Music"
+      ],
+      "fragments": [
+        "Tejano Music"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6172",
+      "source": "rateyourmusic",
+      "raw": [
+        "Darksynth",
+        "Electro House",
+        "Synthwave",
+        "Horror Synth"
+      ],
+      "fragments": [
+        "Darksynth",
+        "Electro House",
+        "Synthwave",
+        "Horror Synth"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:4558",
+      "source": "rateyourmusic",
+      "raw": [
+        "Free Jazz"
+      ],
+      "fragments": [
+        "Free Jazz"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6192",
+      "source": "rateyourmusic",
+      "raw": [
+        "Electronic Dance Music"
+      ],
+      "fragments": [
+        "Electronic Dance Music"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6194",
+      "source": "rateyourmusic",
+      "raw": [
+        "Lo-Fi Hip Hop"
+      ],
+      "fragments": [
+        "Lo",
+        "Fi Hip Hop"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6197",
+      "source": "rateyourmusic",
+      "raw": [
+        "Electronic Dance Music"
+      ],
+      "fragments": [
+        "Electronic Dance Music"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:5903",
+      "source": "rateyourmusic",
+      "raw": [
+        "Changa tuki"
+      ],
+      "fragments": [
+        "Changa tuki"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6202",
+      "source": "rateyourmusic",
+      "raw": [
+        "Hardvapour"
+      ],
+      "fragments": [
+        "Hardvapour"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6204",
+      "source": "rateyourmusic",
+      "raw": [
+        "Chillsynth"
+      ],
+      "fragments": [
+        "Chillsynth"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6209",
+      "source": "rateyourmusic",
+      "raw": [
+        "Bedroom Pop"
+      ],
+      "fragments": [
+        "Bedroom Pop"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6213",
+      "source": "rateyourmusic",
+      "raw": [
+        "Synthwave"
+      ],
+      "fragments": [
+        "Synthwave"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:4590",
+      "source": "rateyourmusic",
+      "raw": [
+        "Midwest Emo",
+        "Bedroom Pop",
+        "Screamo",
+        "Slacker Rock",
+        "Emo"
+      ],
+      "fragments": [
+        "Midwest Emo",
+        "Bedroom Pop",
+        "Screamo",
+        "Slacker Rock",
+        "Emo"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6226",
+      "source": "rateyourmusic",
+      "raw": [
+        "Martial Industrial"
+      ],
+      "fragments": [
+        "Martial Industrial"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6230",
+      "source": "rateyourmusic",
+      "raw": [
+        "Phonk"
+      ],
+      "fragments": [
+        "Phonk"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:5915",
+      "source": "rateyourmusic",
+      "raw": [
+        "Cloud Rap"
+      ],
+      "fragments": [
+        "Cloud Rap"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6233",
+      "source": "rateyourmusic",
+      "raw": [
+        "Indie Folk"
+      ],
+      "fragments": [
+        "Indie Folk"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:4523",
+      "source": "rateyourmusic",
+      "raw": [
+        "Free Jazz"
+      ],
+      "fragments": [
+        "Free Jazz"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6236",
+      "source": "rateyourmusic",
+      "raw": [
+        "Math Rock"
+      ],
+      "fragments": [
+        "Math Rock"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:4594",
+      "source": "rateyourmusic",
+      "raw": [
+        "Avant-Garde Metal"
+      ],
+      "fragments": [
+        "Avant",
+        "Garde Metal"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:5919",
+      "source": "rateyourmusic",
+      "raw": [
+        "Neoperreo",
+        "Latin Electronic",
+        "UK Bass"
+      ],
+      "fragments": [
+        "Neoperreo",
+        "Latin Electronic",
+        "UK Bass"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:4600",
+      "source": "rateyourmusic",
+      "raw": [
+        "Indie Folk"
+      ],
+      "fragments": [
+        "Indie Folk"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:4602",
+      "source": "rateyourmusic",
+      "raw": [
+        "Pop Reggae"
+      ],
+      "fragments": [
+        "Pop Reggae"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:4603",
+      "source": "rateyourmusic",
+      "raw": [
+        "Horrorcore"
+      ],
+      "fragments": [
+        "Horrorcore"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:5928",
+      "source": "rateyourmusic",
+      "raw": [
+        "Progressive House"
+      ],
+      "fragments": [
+        "Progressive House"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:5929",
+      "source": "rateyourmusic",
+      "raw": [
+        "Synthwave"
+      ],
+      "fragments": [
+        "Synthwave"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:4604",
+      "source": "rateyourmusic",
+      "raw": [
+        "Synthpop"
+      ],
+      "fragments": [
+        "Synthpop"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:5938",
+      "source": "rateyourmusic",
+      "raw": [
+        "Avant-Garde Metal"
+      ],
+      "fragments": [
+        "Avant",
+        "Garde Metal"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:4613",
+      "source": "rateyourmusic",
+      "raw": [
+        "Classical Music"
+      ],
+      "fragments": [
+        "Classical Music"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:4614",
+      "source": "rateyourmusic",
+      "raw": [
+        "Afrobeat"
+      ],
+      "fragments": [
+        "Afrobeat"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:5952",
+      "source": "rateyourmusic",
+      "raw": [
+        "Conscious Hip Hop"
+      ],
+      "fragments": [
+        "Conscious Hip Hop"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:5956",
+      "source": "rateyourmusic",
+      "raw": [
+        "Euskal kantagintza berria"
+      ],
+      "fragments": [
+        "Euskal kantagintza berria"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:5958",
+      "source": "rateyourmusic",
+      "raw": [
+        "Euskal kantagintza berria"
+      ],
+      "fragments": [
+        "Euskal kantagintza berria"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:5961",
+      "source": "rateyourmusic",
+      "raw": [
+        "Latin Electronic",
+        "Neoperreo",
+        "Deconstructed Club"
+      ],
+      "fragments": [
+        "Latin Electronic",
+        "Neoperreo",
+        "Deconstructed Club"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:5963",
+      "source": "rateyourmusic",
+      "raw": [
+        "Progressive House"
+      ],
+      "fragments": [
+        "Progressive House"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:5975",
+      "source": "rateyourmusic",
+      "raw": [
+        "Alternative R&B"
+      ],
+      "fragments": [
+        "Alternative R&B"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:4633",
+      "source": "rateyourmusic",
+      "raw": [
+        "Boy Band",
+        "Teen Pop"
+      ],
+      "fragments": [
+        "Boy Band",
+        "Teen Pop"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6006",
+      "source": "rateyourmusic",
+      "raw": [
+        "Modern Classical"
+      ],
+      "fragments": [
+        "Modern Classical"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6007",
+      "source": "rateyourmusic",
+      "raw": [
+        "Orchestral Music"
+      ],
+      "fragments": [
+        "Orchestral Music"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6009",
+      "source": "rateyourmusic",
+      "raw": [
+        "Romanticism"
+      ],
+      "fragments": [
+        "Romanticism"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6016",
+      "source": "rateyourmusic",
+      "raw": [
+        "Breakbeat"
+      ],
+      "fragments": [
+        "Breakbeat"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:4644",
+      "source": "rateyourmusic",
+      "raw": [
+        "Midwest Emo"
+      ],
+      "fragments": [
+        "Midwest Emo"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:1402",
+      "source": "rateyourmusic",
+      "raw": [
+        "Emocore"
+      ],
+      "fragments": [
+        "Emocore"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6045",
+      "source": "rateyourmusic",
+      "raw": [
+        "Romanticism"
+      ],
+      "fragments": [
+        "Romanticism"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6050",
+      "source": "rateyourmusic",
+      "raw": [
+        "Classical Music"
+      ],
+      "fragments": [
+        "Classical Music"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:4659",
+      "source": "rateyourmusic",
+      "raw": [
+        "Emo",
+        "Math Rock"
+      ],
+      "fragments": [
+        "Emo",
+        "Math Rock"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:4661",
+      "source": "rateyourmusic",
+      "raw": [
+        "Noise Rock"
+      ],
+      "fragments": [
+        "Noise Rock"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6053",
+      "source": "rateyourmusic",
+      "raw": [
+        "Canción melódica"
+      ],
+      "fragments": [
+        "Canción melódica"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:4664",
+      "source": "rateyourmusic",
+      "raw": [
+        "Murga"
+      ],
+      "fragments": [
+        "Murga"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6244",
+      "source": "rateyourmusic",
+      "raw": [
+        "Plunderphonics"
+      ],
+      "fragments": [
+        "Plunderphonics"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6206",
+      "source": "rateyourmusic",
+      "raw": [
+        "Electronic Dance Music"
+      ],
+      "fragments": [
+        "Electronic Dance Music"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:5880",
+      "source": "rateyourmusic",
+      "raw": [
+        "Comedy"
+      ],
+      "fragments": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:5881",
+      "source": "rateyourmusic",
+      "raw": [
+        "Indie Folk"
+      ],
+      "fragments": [
+        "Indie Folk"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:5884",
+      "source": "rateyourmusic",
+      "raw": [
+        "Romanticism"
+      ],
+      "fragments": [
+        "Romanticism"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6173",
+      "source": "rateyourmusic",
+      "raw": [
+        "Slacker Rock"
+      ],
+      "fragments": [
+        "Slacker Rock"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:5871",
+      "source": "rateyourmusic",
+      "raw": [
+        "Música gaúcha"
+      ],
+      "fragments": [
+        "Música gaúcha"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6177",
+      "source": "rateyourmusic",
+      "raw": [
+        "Synthwave"
+      ],
+      "fragments": [
+        "Synthwave"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:5869",
+      "source": "rateyourmusic",
+      "raw": [
+        "Funk 150 bpm"
+      ],
+      "fragments": [
+        "Funk 150 bpm"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6190",
+      "source": "rateyourmusic",
+      "raw": [
+        "Synthwave"
+      ],
+      "fragments": [
+        "Synthwave"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:4720",
+      "source": "rateyourmusic",
+      "raw": [
+        "Afrobeat"
+      ],
+      "fragments": [
+        "Afrobeat"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6113",
+      "source": "rateyourmusic",
+      "raw": [
+        "Norteño"
+      ],
+      "fragments": [
+        "Norteño"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6185",
+      "source": "rateyourmusic",
+      "raw": [
+        "Hardcore [EDM]"
+      ],
+      "fragments": [
+        "Hardcore [EDM]"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:5946",
+      "source": "rateyourmusic",
+      "raw": [
+        "Alternative R&B"
+      ],
+      "fragments": [
+        "Alternative R&B"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6238",
+      "source": "rateyourmusic",
+      "raw": [
+        "Emo Rap"
+      ],
+      "fragments": [
+        "Emo Rap"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6084",
+      "source": "rateyourmusic",
+      "raw": [
+        "Caribbean Folk Music"
+      ],
+      "fragments": [
+        "Caribbean Folk Music"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6085",
+      "source": "rateyourmusic",
+      "raw": [
+        "Stand-Up Comedy"
+      ],
+      "fragments": [
+        "Stand",
+        "Up Comedy"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6088",
+      "source": "rateyourmusic",
+      "raw": [
+        "Electronic Dance Music"
+      ],
+      "fragments": [
+        "Electronic Dance Music"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6096",
+      "source": "rateyourmusic",
+      "raw": [
+        "Vocal Group"
+      ],
+      "fragments": []
+    },
+    {
+      "caseId": "rym-nuevos:artist:6098",
+      "source": "rateyourmusic",
+      "raw": [
+        "Waltz"
+      ],
+      "fragments": [
+        "Waltz"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6099",
+      "source": "rateyourmusic",
+      "raw": [
+        "Tumba"
+      ],
+      "fragments": [
+        "Tumba"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6101",
+      "source": "rateyourmusic",
+      "raw": [
+        "Cadence lypso"
+      ],
+      "fragments": [
+        "Cadence lypso"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6104",
+      "source": "rateyourmusic",
+      "raw": [
+        "Jazz Pop"
+      ],
+      "fragments": [
+        "Jazz Pop"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:5994",
+      "source": "rateyourmusic",
+      "raw": [
+        "Caribbean Music"
+      ],
+      "fragments": [
+        "Caribbean Music"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6129",
+      "source": "rateyourmusic",
+      "raw": [
+        "Parang"
+      ],
+      "fragments": [
+        "Parang"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6139",
+      "source": "rateyourmusic",
+      "raw": [
+        "Post-Bop"
+      ],
+      "fragments": [
+        "Post",
+        "Bop"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6142",
+      "source": "rateyourmusic",
+      "raw": [
+        "Chutney Soca"
+      ],
+      "fragments": [
+        "Chutney Soca"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6143",
+      "source": "rateyourmusic",
+      "raw": [
+        "Chutney"
+      ],
+      "fragments": [
+        "Chutney"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6144",
+      "source": "rateyourmusic",
+      "raw": [
+        "Chutney"
+      ],
+      "fragments": [
+        "Chutney"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6247",
+      "source": "rateyourmusic",
+      "raw": [
+        "Industrial Techno"
+      ],
+      "fragments": [
+        "Industrial Techno"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6249",
+      "source": "rateyourmusic",
+      "raw": [
+        "Cloud Rap"
+      ],
+      "fragments": [
+        "Cloud Rap"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:4674",
+      "source": "rateyourmusic",
+      "raw": [
+        "Death Doom Metal"
+      ],
+      "fragments": [
+        "Death Doom Metal"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6259",
+      "source": "rateyourmusic",
+      "raw": [
+        "Cloud Rap"
+      ],
+      "fragments": [
+        "Cloud Rap"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6077",
+      "source": "rateyourmusic",
+      "raw": [
+        "Latin Electronic",
+        "Hardcore [EDM]",
+        "Guaracha [EDM]",
+        "Dembow",
+        "Changa tuki"
+      ],
+      "fragments": [
+        "Latin Electronic",
+        "Hardcore [EDM]",
+        "Guaracha [EDM]",
+        "Dembow",
+        "Changa tuki"
+      ]
+    },
+    {
+      "caseId": "rym-nuevos:artist:6269",
+      "source": "rateyourmusic",
+      "raw": [
+        "Traditional Folk Music"
+      ],
+      "fragments": [
+        "Traditional Folk Music"
+      ]
+    }
+  ],
+  "errors": [],
+  "moreSpecificExists": []
+}
