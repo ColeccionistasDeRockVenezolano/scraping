@@ -210,3 +210,19 @@ export const streamingLinks = pgTable("streaming_links", {
   notes: text("notes"),
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
 });
+
+// 0040 (2026-10-05): redes sociales del artista en su propio campo (séptima
+// excepción aprobada al core). Hermana de streaming_links; vocabulario de
+// `platform` cerrado por CHECK en la migración.
+export const socialLinks = pgTable("social_links", {
+  id: bigint("id", { mode: "number" }).primaryKey().generatedAlwaysAsIdentity(),
+  artistId: bigint("artist_id", { mode: "number" }).notNull().references(() => artists.id, { onDelete: "cascade" }),
+  platform: varchar("platform", { length: 24 }).notNull(),
+  url: text("url").notNull(),
+  handle: varchar("handle", { length: 120 }),
+  method: varchar("method", { length: 16 }).notNull(),
+  source: varchar("source", { length: 40 }).notNull(),
+  verified: boolean("verified").notNull().default(false),
+  notes: text("notes"),
+  createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+});

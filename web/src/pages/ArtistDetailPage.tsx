@@ -24,6 +24,7 @@ import { ARTIST_FIELDS } from "../lib/entityFields";
 import { EntityInfo, type InfoGroup, type InfoItem } from "../components/EntityInfo";
 import { EntityTabs, TabEmpty, type TabSpec } from "../components/EntityTabs";
 import { ExpandableText } from "../components/ExpandableText";
+import { PlatformLinks } from "../components/PlatformLinks";
 import { albumTypeLabel, artistTypeLabel } from "../lib/labels";
 import { ageText, formatDate } from "../lib/format";
 import { TITULAR_ROLE, type ArtistMember, type ArtistRelation, type RelatedArtist, type RelatedRule, type SimilarArtist, type SimilarRule } from "../lib/types";
@@ -324,6 +325,12 @@ export function ArtistDetailPage() {
         <div className="artist-profile__content">
           <h1 className="entity-hero__title">{artist.name}<DeceasedMark deceased={artist.isDeceased} /></h1>
           <EntityInfo items={[]} groups={infoGroups} />
+          {artist.platforms?.length ? (
+            <div className="platform-block"><h2>Escuchar en</h2><PlatformLinks links={artist.platforms} subject={artist.name} /></div>
+          ) : null}
+          {artist.socials?.length ? (
+            <div className="platform-block"><h2>Redes</h2><PlatformLinks links={artist.socials} subject={artist.name} /></div>
+          ) : null}
           <div className="artist-profile__aliases">
             <h2>Alias</h2>
             <AliasEditor path="artists" entityId={artist.id} aliases={artist.aliases} onChanged={reload} compactTypeLabels />

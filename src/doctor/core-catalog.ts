@@ -123,6 +123,24 @@ export const APPROVED_CORE_ADDITIONS: ReadonlySet<string> = new Set([
   "INDEX streaming_links_album_uk CREATE UNIQUE INDEX streaming_links_album_uk ON public.streaming_links USING btree (album_id, platform) WHERE (album_id IS NOT NULL)",
   "INDEX streaming_links_album_idx CREATE INDEX streaming_links_album_idx ON public.streaming_links USING btree (album_id) WHERE (album_id IS NOT NULL)",
   "INDEX streaming_links_pkey CREATE UNIQUE INDEX streaming_links_pkey ON public.streaming_links USING btree (id)",
+  // 0040 (2026-10-05): la tabla `public.social_links` (redes sociales del
+  // artista en su propio campo; séptima excepción aprobada al core — Brian:
+  // «las redes sociales deben tener su campo en la base de datos»).
+  "COL social_links.id bigint NOT NULL IDENTITY ALWAYS",
+  "COL social_links.artist_id bigint NOT NULL",
+  "COL social_links.platform character varying(24) NOT NULL",
+  "COL social_links.url text NOT NULL",
+  "COL social_links.handle character varying(120)",
+  "COL social_links.method character varying(16) NOT NULL",
+  "COL social_links.source character varying(40) NOT NULL",
+  "COL social_links.verified boolean NOT NULL DEFAULT false",
+  "COL social_links.notes text",
+  "COL social_links.created_at timestamp with time zone NOT NULL DEFAULT now()",
+  "CONSTRAINT social_links.social_links_platform_ck CHECK (((platform)::text = ANY ((ARRAY['instagram'::character varying, 'facebook'::character varying, 'x'::character varying, 'tiktok'::character varying, 'threads'::character varying, 'bluesky'::character varying])::text[])))",
+  "CONSTRAINT social_links.social_links_artist_id_fkey FOREIGN KEY (artist_id) REFERENCES artists(id) ON DELETE CASCADE",
+  "CONSTRAINT social_links.social_links_pkey PRIMARY KEY (id)",
+  "INDEX social_links_artist_uk CREATE UNIQUE INDEX social_links_artist_uk ON public.social_links USING btree (artist_id, platform)",
+  "INDEX social_links_pkey CREATE UNIQUE INDEX social_links_pkey ON public.social_links USING btree (id)",
 ]);
 
 export function diffCoreCatalog(actual: string[], expected: string[] = CORE_CATALOG.entries): CatalogDiff {

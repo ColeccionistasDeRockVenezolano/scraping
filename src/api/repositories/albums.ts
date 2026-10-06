@@ -141,6 +141,8 @@ export interface AlbumDetail {
   formats: Array<{ id: number; format: string; quality: string | null; archiveStatus: string; filePath: string | null; notes: string | null }>;
   aliases: Array<{ id: number; alias: string; aliasType: string; isPrimary: boolean }>;
   youtubeLinks: Array<{ videoId: string; title: string | null; kind: string; isPrimaryLink: boolean }>;
+  /** El disco en plataformas de escucha (streaming_links, 0039); solo los de identidad verificada. */
+  platforms: Array<{ platform: string; url: string }>;
 }
 
 const CREDIT_FIELDS = `jsonb_build_object(
@@ -230,7 +232,11 @@ export async function getAlbumDetail(id: number): Promise<AlbumDetail | null> {
          ) ORDER BY va.is_primary_link DESC, v.published_at)
          FROM media.video_albums va JOIN media.youtube_videos v ON v.id = va.video_id
          WHERE va.album_id = al.id
-       ), '[]'::jsonb) AS youtube_links
+       ), '[]'::jsonb) AS youtube_links,
+       COALESCE((
+         SELECT jsonb_agg(jsonb_build_object('platform', sl.platform, 'url', sl.url) ORDER BY sl.platform)
+           FROM public.streaming_links sl WHERE sl.album_id = al.id AND sl.verified
+       ), '[]'::jsonb) AS platforms
      FROM public.albums al
      JOIN public.artists ar ON ar.id = al.artist_id
      LEFT JOIN public.organizations lbl ON lbl.id = al.label_id
@@ -273,5 +279,6 @@ export async function getAlbumDetail(id: number): Promise<AlbumDetail | null> {
     formats: row["formats"] as AlbumDetail["formats"],
     aliases: row["aliases"] as AlbumDetail["aliases"],
     youtubeLinks: row["youtube_links"] as AlbumDetail["youtubeLinks"],
+    platforms: row["platforms"] as AlbumDetail["platforms"],
   };
 }

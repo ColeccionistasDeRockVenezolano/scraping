@@ -62,12 +62,13 @@ async function pgDumpPublic(containerName: string): Promise<string> {
     // …y si las columnas quitadas eran las últimas (albums), la columna previa
     // queda con una coma colgando antes de `);`: se normaliza igual en ambos dumps.
     .replace(/,(\n\);)/gu, "$1")
-    // La sexta excepción (0039): la tabla `public.streaming_links`. Se
+    // La sexta y la séptima excepción (0039, 0040): las tablas
+    // `public.streaming_links` y `public.social_links`. Se
     // descartan sus bloques completos (CREATE TABLE, constraints e índices;
     // su disparador del diario ya lo quita el filtro genérico de arriba)
     // para que «antes» y «después» de migrar sigan coincidiendo.
     .split("--\n-- Name: ")
-    .filter((bloque, i) => i === 0 || !bloque.startsWith("streaming_links"))
+    .filter((bloque, i) => i === 0 || !/^(streaming|social)_links/u.test(bloque))
     .join("--\n-- Name: ");
 }
 
@@ -111,7 +112,7 @@ describe("contrato del core + migraciones (Drizzle/TS)", () => {
       "0014_entity_redirects", "0015_review_kind_person_duplicate", "0016_person_duplicate_pair_uk",
       "0017_curation_findings", "0018_curation_finding_fixes", "0019_curation_scan_resolution", "0020_curation_durable_decisions",
       "0021_curation_fix_batches", "0022_er_decisions_retention", "0023_curation_incremental", "0024_curation_autofix",
-      "0025_seed_upload_order_optional", "0026_claims_identity_idx", "0027_genre_taxonomy", "0028_change_journal", "0029_persons_venezuelan_tristate", "0030_merge_traces", "0031_genre_external_sources", "0032_persons_deceased", "0033_core_ma_fields", "0034_text_rewrites", "0035_artist_relations", "0036_artist_genres_from_albums", "0037_genre_subgenres", "0038_image_candidates", "0039_streaming_links",
+      "0025_seed_upload_order_optional", "0026_claims_identity_idx", "0027_genre_taxonomy", "0028_change_journal", "0029_persons_venezuelan_tristate", "0030_merge_traces", "0031_genre_external_sources", "0032_persons_deceased", "0033_core_ma_fields", "0034_text_rewrites", "0035_artist_relations", "0036_artist_genres_from_albums", "0037_genre_subgenres", "0038_image_candidates", "0039_streaming_links", "0040_social_links",
     ]);
     const second = await migrateUp();
     expect(second.applied).toEqual([]);
@@ -244,7 +245,7 @@ describe("contrato del core + migraciones (Drizzle/TS)", () => {
 
     const result = await migrateDownAll();
     expect(result.reverted).toEqual([
-      "0039_streaming_links", "0038_image_candidates", "0037_genre_subgenres", "0036_artist_genres_from_albums", "0035_artist_relations", "0034_text_rewrites", "0033_core_ma_fields", "0032_persons_deceased", "0031_genre_external_sources", "0030_merge_traces", "0029_persons_venezuelan_tristate", "0028_change_journal", "0027_genre_taxonomy", "0026_claims_identity_idx", "0025_seed_upload_order_optional",
+      "0040_social_links", "0039_streaming_links", "0038_image_candidates", "0037_genre_subgenres", "0036_artist_genres_from_albums", "0035_artist_relations", "0034_text_rewrites", "0033_core_ma_fields", "0032_persons_deceased", "0031_genre_external_sources", "0030_merge_traces", "0029_persons_venezuelan_tristate", "0028_change_journal", "0027_genre_taxonomy", "0026_claims_identity_idx", "0025_seed_upload_order_optional",
       "0024_curation_autofix", "0023_curation_incremental", "0022_er_decisions_retention", "0021_curation_fix_batches", "0020_curation_durable_decisions", "0019_curation_scan_resolution", "0018_curation_finding_fixes", "0017_curation_findings", "0016_person_duplicate_pair_uk", "0015_review_kind_person_duplicate",
       "0014_entity_redirects", "0013_fk_indexes", "0012_ambiguity_resolutions", "0011_album_classifications", "0010_review_decisions", "0009_media_link_constraints", "0008_media_link_claims",
       "0007_entity_resolution_ai", "0006_youtube_pipeline", "0005_raw_pages_run", "0004_review_kinds", "0003_ingest_claims_identity", "0002_media", "0001_ingest_core",

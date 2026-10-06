@@ -23,6 +23,7 @@ import { initialOf } from "../components/EntityCard";
 import { ALBUM_FIELDS, TRACK_FIELDS } from "../lib/entityFields";
 import { albumTypeLabel, formatDuration } from "../lib/labels";
 import type { AlbumFormat, Track } from "../lib/types";
+import { PlatformLinks } from "../components/PlatformLinks";
 
 const CREDIT_SECTIONS: ReadonlyArray<{ title: string; types: readonly string[] }> = [
   { title: "Músicos", types: ["musician"] },
@@ -86,6 +87,7 @@ export function AlbumDetailPage() {
             {album.genreByLaya ? <span className="badge badge--amber" title="Género principal elegido por Laya (último recurso). Solo visible con sesión iniciada.">Género por Laya</span> : null}
             {album.label ? <Link to={`/organizaciones/${album.label.id}`} className="badge badge--violet">{album.label.name}</Link> : null}
           </div>
+          <PlatformLinks links={album.platforms ?? []} subject={`«${album.title}»`} />
           {album.description ? <p className="entity-hero__desc">{album.description}</p> : null}
           <RewritePendingMark kind="album" id={album.id} onDone={reload} />
         </div>

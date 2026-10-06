@@ -81,11 +81,17 @@ export interface ArtistDetail extends ArtistListItem {
   /** Sello del disco más reciente que lo declara (derivado). */
   lastLabel: { id: number; name: string } | null;
   links: ArtistLink[];
+  /** Perfiles en plataformas de escucha (solo identidad verificada). La API vieja no los manda. */
+  platforms?: PlatformLink[];
+  /** Redes sociales (solo identidad verificada). */
+  socials?: PlatformLink[];
   related: RelatedArtist[];
   /** Década de arranque (formación o primer disco); null si no hay año. */
   similarDecade: number | null;
   similar: SimilarArtist[];
 }
+
+export interface PlatformLink { platform: string; url: string; handle?: string | null; }
 
 export interface ArtistLink { platform: "youtube" | "instagram" | "wordpress"; url: string; albumId: number; albumTitle: string; }
 export type ArtistRelationType = "successor" | "ex_member_project" | "temporary_name";
@@ -240,6 +246,8 @@ export interface AlbumDetail {
   formats: AlbumFormat[];
   aliases: Alias[];
   youtubeLinks: YoutubeLink[];
+  /** El disco en plataformas de escucha (solo identidad verificada). */
+  platforms?: PlatformLink[];
 }
 
 // ---------- persons ----------

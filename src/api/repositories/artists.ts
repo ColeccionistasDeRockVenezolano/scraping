@@ -104,6 +104,10 @@ export interface ArtistDetail {
   lastLabel: { id: number; name: string } | null;
   /** Enlaces públicos de sus discos (YouTube, Instagram, WordPress), uno por disco y plataforma. */
   links: Array<{ platform: "youtube" | "instagram" | "wordpress"; url: string; albumId: number; albumTitle: string }>;
+  /** Perfiles de escucha del artista (streaming_links, 0039); solo los de identidad verificada. */
+  platforms: Array<{ platform: string; url: string }>;
+  /** Redes sociales del artista (social_links, 0040); solo las de identidad verificada. */
+  socials: Array<{ platform: string; url: string; handle: string | null }>;
   /**
    * Bandas relacionadas por reglas en orden (artist-neighbors.ts): linaje
    * documentado, integrantes en común, proyecto solista, colaboración,
@@ -154,7 +158,15 @@ export async function getArtistDetail(id: number): Promise<ArtistDetail | null> 
                CROSS JOIN LATERAL (VALUES ('youtube', al.youtube_url), ('instagram', al.instagram_url), ('wordpress', al.wordpress_url)) AS x(platform, url)
               WHERE al.artist_id = a.id AND x.url IS NOT NULL AND x.url <> ''
            ) l
-       ), '[]'::jsonb) AS links
+       ), '[]'::jsonb) AS links,
+       COALESCE((
+         SELECT jsonb_agg(jsonb_build_object('platform', sl.platform, 'url', sl.url) ORDER BY sl.platform)
+           FROM public.streaming_links sl WHERE sl.artist_id = a.id AND sl.verified
+       ), '[]'::jsonb) AS platforms,
+       COALESCE((
+         SELECT jsonb_agg(jsonb_build_object('platform', so.platform, 'url', so.url, 'handle', so.handle) ORDER BY so.platform)
+           FROM public.social_links so WHERE so.artist_id = a.id AND so.verified
+       ), '[]'::jsonb) AS socials
      FROM public.artists a
      WHERE a.id = $1`,
     [id],
@@ -184,6 +196,8 @@ export async function getArtistDetail(id: number): Promise<ArtistDetail | null> 
     aliases: row["aliases"] as ArtistDetail["aliases"],
     lastLabel: row["last_label"] as ArtistDetail["lastLabel"],
     links: row["links"] as ArtistDetail["links"],
+    platforms: row["platforms"] as ArtistDetail["platforms"],
+    socials: row["socials"] as ArtistDetail["socials"],
     related,
     // Lo que ya es relacionado no se repite en similares.
     ...await similarArtists(id, genres.primaryGenre, related.map((item) => item.id)),

@@ -88,6 +88,8 @@ const albumDetailSchema = z.object({
   youtubeLinks: z.array(z.object({
     videoId: z.string(), title: z.string().nullable(), kind: z.string(), isPrimaryLink: z.boolean(),
   })),
+  platforms: z.array(z.object({ platform: z.string(), url: z.string() }))
+    .describe("El disco en plataformas de escucha (Spotify, Apple Music, Deezer…); solo los de identidad verificada."),
 });
 
 const listQuerySchema = paginationQuerySchema.extend({

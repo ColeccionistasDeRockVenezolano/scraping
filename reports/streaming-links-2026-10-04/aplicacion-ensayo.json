@@ -1,0 +1,68 @@
+{
+  "filas": 13482,
+  "resumen": {
+    "streaming:artista:deezer": {
+      "total": 2776,
+      "verificados": 900
+    },
+    "streaming:disco:apple_music": {
+      "total": 3059,
+      "verificados": 2774
+    },
+    "streaming:disco:deezer": {
+      "total": 4250,
+      "verificados": 4089
+    },
+    "streaming:artista:bandcamp": {
+      "total": 325,
+      "verificados": 173
+    },
+    "streaming:artista:spotify": {
+      "total": 607,
+      "verificados": 267
+    },
+    "streaming:artista:youtube": {
+      "total": 364,
+      "verificados": 180
+    },
+    "social:artista:x": {
+      "total": 305,
+      "verificados": 189
+    },
+    "social:artista:facebook": {
+      "total": 488,
+      "verificados": 238
+    },
+    "social:artista:instagram": {
+      "total": 347,
+      "verificados": 186
+    },
+    "streaming:artista:tidal": {
+      "total": 272,
+      "verificados": 125
+    },
+    "streaming:artista:soundcloud": {
+      "total": 237,
+      "verificados": 130
+    },
+    "streaming:artista:apple_music": {
+      "total": 375,
+      "verificados": 163
+    },
+    "social:artista:tiktok": {
+      "total": 31,
+      "verificados": 7
+    },
+    "streaming:artista:amazon_music": {
+      "total": 46,
+      "verificados": 27
+    }
+  },
+  "cuenta": {
+    "deezer: perfil re-elegido": 60,
+    "saltado: disco movido de artista": 143,
+    "saltado: duplicado interno": 3,
+    "saltado: artista ya no existe": 16
+  },
+  "artistasConVisibles": 1142
+}
