@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-05 20:43:32",
+ "generado": "2026-10-05 23:33:54",
  "discos_capturados_unicos": 7255,
  "aplicables": 5018,
- "ya_existe": 4674,
- "año distinto (no se toca)": 98,
- "alta": 344,
+ "ya_existe": 4965,
+ "año distinto (no se toca)": 83,
+ "alta": 53,
  "pistas rechazadas (66)": 1,
  "pistas rechazadas (72)": 2,
  "pistas rechazadas (122)": 1,
@@ -17,31 +17,30 @@
   "dueño sin_ficha": 150
  },
  "completar_existentes": {
-  "pistas (discos sin pistas)": 3671,
-  "pistas totales": 21380,
-  "años (discos sin año)": 11,
-  "portadas: ficha vacía → se fija": 3816,
-  "portadas: ficha con imagen → candidata": 522,
-  "géneros (discos sin principal)": 2092
+  "pistas (discos sin pistas)": 326,
+  "pistas totales": 2183,
+  "años (discos sin año)": 369,
+  "portadas: ficha vacía → se fija": 365,
+  "portadas: ficha con imagen → candidata": 4243,
+  "géneros (discos sin principal)": 209
  },
  "altas": {
-  "discos": 344,
+  "discos": 53,
   "por_tipo": {
-   "Single": 118,
-   "Album": 115,
-   "EP": 37,
-   "Compilation": 28,
-   "DJ Mix": 18,
-   "Live Album": 10,
-   "Mixtape": 9,
-   "Bootleg / Unauthorized": 5,
-   "Additional release": 4
+   "Single": 25,
+   "Album": 12,
+   "DJ Mix": 4,
+   "Additional release": 3,
+   "EP": 3,
+   "Bootleg / Unauthorized": 3,
+   "Compilation": 2,
+   "Mixtape": 1
   },
-  "con_pistas": 290,
-  "con_portada": 320,
-  "con_géneros": 179,
-  "con_año": 325,
-  "colaboraciones": 19
+  "con_pistas": 47,
+  "con_portada": 50,
+  "con_géneros": 24,
+  "con_año": 51,
+  "colaboraciones": 6
  },
  "dueño_resuelto_por": {
   "alta etapa 4": 3975,
